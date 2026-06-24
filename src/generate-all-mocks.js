@@ -1260,6 +1260,2288 @@ for (const [testId, qs] of Object.entries(chapterMocks)) {
   allMocksQuestions[testId] = qs;
 }
 
+// Haryana GK Subject-wise Mocks Definition
+const subjectMocks = {
+  'test-hssc-police-sub-haryana-gk-1': [
+    {
+      id: 'q-hssc-sub-haryana-gk-1-1',
+      text: 'Subject Test: टांगरी नदी का उद्गम स्थल कहाँ है और यह किसकी सहायक नदी है?',
+      options: ['मोरनी पहाड़ियाँ - मार्कंडा', 'अरावली पहाड़ियाँ - साहिबी', 'डगशाई - घग्गर', 'तिब्बत - यमुना'],
+      correctIndex: 0,
+      explanation: 'टांगरी नदी का उद्गम मोरनी पहाड़ियों (पंचकूला) से होता है। यह मार्कंडा नदी की प्रमुख सहायक नदी है और अंत में घग्गर नदी में मिल जाती है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-2',
+      text: 'Subject Test: Haryana में मटका नृत्य किस अवसर पर मुख्य रूप से महिलाओं व पुरुषों द्वारा किया जाता है?',
+      options: ['जन्माष्टमी पर', 'विवाह-शादी व लोक उत्सवों पर', 'सावन के महीने में', 'फसल कटाई पर'],
+      correctIndex: 1,
+      explanation: 'मटका नृत्य मुख्यतः विवाह-शादी व अन्य खुशी के लोक उत्सवों पर किया जाता है। इसमें नर्तक मिट्टी के घड़े (मटके) को सिर पर रखकर अत्यंत संतुलन के साथ नृत्य करते हैं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-3',
+      text: 'Subject Test: हरियाणा राज्य की प्रथम विशिष्ट वन नीति (Forest Policy) किस वर्ष घोषित की गई थी?',
+      options: ['2001 में', '2004 में', '2006 में', '2011 में'],
+      correctIndex: 2,
+      explanation: 'हरियाणा सरकार ने अपनी पहली राज्य वन नीति वर्ष 2006 में घोषित की थी, जिसका उद्देश्य राज्य के कुल क्षेत्रफल के कम से कम 10% हिस्से को वन आच्छादित करना है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-4',
+      text: 'Subject Test: 1818 ई. में ईस्ट इंडिया कंपनी के विरुद्ध रानिया (सिरसा) के विद्रोह का नेतृत्व किसने किया था?',
+      options: ['जाबित खान', 'खान बहादुर खान', 'प्रताप सिंह', 'सूरजमल'],
+      correctIndex: 0,
+      explanation: 'रानिया विद्रोह (1818) का नेतृत्व नवाब जाबित खान ने अंग्रेजों की साम्राज्यवादी नीतियों के खिलाफ किया था, जिसे अंग्रेजों ने बलपूर्वक दबा दिया था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-5',
+      text: 'Subject Test: अग्रोहा (हिसार) से प्राप्त किस काल की लाल ईंट पर संगीत के सात स्वरों (सा, रे, गा, मा, पा, धा, नि) का अंकन मिला है?',
+      options: ['मौर्य काल', 'कुषाण काल', 'गुप्त काल', 'वर्द्धन काल'],
+      correctIndex: 2,
+      explanation: 'अग्रोहा से गुप्त काल की एक ईंट मिली है जिस पर संगीत के सात स्वर अंकित हैं, जो प्राचीन हरियाणा की समृद्ध कला व संस्कृति को दर्शाता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-6',
+      text: 'Subject Test: भिवानी टेक्सटाइल मिल (BTM) की स्थापना किस वर्ष की गई थी?',
+      options: ['1937 में', '1945 में', '1952 में', '1966 में'],
+      correctIndex: 0,
+      explanation: 'भिवानी टेक्सटाइल मिल की स्थापना वर्ष 1937 में हुई थी। यह सूती वस्त्र उद्योग के लिए हरियाणा का एक बेहद पुराना व ऐतिहासिक कारखाना है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-7',
+      text: 'Subject Test: ककरोई सूक्ष्म जल विद्युत परियोजना हरियाणा के किस जिले में स्थित है और यह किस नहर पर है?',
+      options: ['सोनीपत - पश्चिमी यमुना नहर', 'यमुनानगर - हथिनीकुंड नहर', 'रोहतक - भालौट नहर', 'हिसार - बरवाला लिंक'],
+      correctIndex: 0,
+      explanation: 'ककरोई सूक्ष्म जल विद्युत परियोजना सोनीपत जिले के ककरोई गाँव में पश्चिमी यमुना नहर के दिल्ली ब्रांच पर स्थित है। इसकी कुल स्थापित क्षमता 300 किलोवाट (100x3) है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-8',
+      text: 'Subject Test: हरियाणा की प्रसिद्ध महिला राजनीतिज्ञ चंद्रावती किस केंद्र शासित प्रदेश की उपराज्यपाल (Lieutenant Governor) बनने वाली पहली हरियाणवी महिला थीं?',
+      options: ['दिल्ली', 'पुडुचेरी', 'अंडमान और निकोबार', 'चंडीगढ़'],
+      correctIndex: 1,
+      explanation: 'चंद्रावती हरियाणा की पहली महिला सांसद (1977 में भिवानी से चौधरी बंसीलाल को हराकर) थीं और वे 1990 में पुडुचेरी की उपराज्यपाल बनी थीं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-9',
+      text: 'Subject Test: हरियाणा सरकार द्वारा खिलाड़ियों को दिया जाने वाला सर्वोच्च खेल पुरस्कार "भीम पुरस्कार" के तहत कितनी नकद पुरस्कार राशि प्रदान की जाती है?',
+      options: ['2 लाख रुपये', '3 लाख रुपये', '5 लाख रुपये', '7 लाख रुपये'],
+      correctIndex: 2,
+      explanation: 'भीम पुरस्कार हरियाणा का सर्वोच्च खेल सम्मान है। इसके तहत विजेताओं को भीम की प्रतिमा, प्रशस्ति पत्र और 5 लाख रुपये की नकद राशि प्रदान की जाती है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-10',
+      text: 'Subject Test: हरियाणा विधानसभा की पहली महिला विधायक (MLA) कौन थीं जो वर्ष 1967 में हिसार से चुनी गई थीं?',
+      options: ['शन्नो देवी', 'प्रसन्नी देवी', 'स्नेहलता', 'चंद्रावती'],
+      correctIndex: 2,
+      explanation: 'श्रीमती स्नेहलता वर्ष 1967 के पहले आम चुनाव में हिसार विधानसभा क्षेत्र से विधायक चुनी गई थीं और वे हरियाणा की पहली महिला विधायक बनीं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-11',
+      text: 'Subject Test: किस प्रसिद्ध बौद्ध ग्रंथ में प्राचीन हरियाणा के दो प्रमुख व्यापारिक केंद्रों, रोहतक और अग्रोहा का विस्तृत उल्लेख मिलता है?',
+      options: ['मज्झिम निकाय', 'दिव्यावदान', 'जातक कथाएं', 'अंगुत्तर निकाय'],
+      correctIndex: 1,
+      explanation: 'बौद्ध ग्रंथ "दिव्यावदान" में हरियाणा के प्रमुख नगरों अग्रोहा और रोहतक का उल्लेख मिलता है, जिससे उस काल में बौद्ध धर्म के प्रचार और व्यापारिक समृद्धि की जानकारी मिलती है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-12',
+      text: 'Subject Test: हरियाणा के किस जिले के मानेसर में "राष्ट्रीय मस्तिष्क अनुसंधान केंद्र" (National Brain Research Centre - NBRC) स्थित है?',
+      options: ['फरीदाबाद', 'गुरुग्राम', 'सोनीपत', 'रोहतक'],
+      correctIndex: 1,
+      explanation: 'NBRC मानेसर (गुरुग्राम) में स्थित मस्तिष्क अनुसंधान का एक प्रमुख स्वायत्त संस्थान है, जिसकी स्थापना वर्ष 1997 में की गई थी और इसे 2002 में डीम्ड यूनिवर्सिटी का दर्जा मिला।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-13',
+      text: 'Subject Test: सुप्रसिद्ध हरियाणवी उपन्यास "अमानत एक शहीद की" के लेखक कौन हैं?',
+      options: ['मोहन चोपड़ा', 'कृष्ण बाछल', 'हेमराज निर्मम', 'राजाराम शास्त्री'],
+      correctIndex: 1,
+      explanation: 'उपन्यास "अमानत एक शहीद की" के लेखक कृष्ण बाछल हैं। यह उपन्यास देशप्रेम और शहादत की पृष्ठभूमि पर लिखा गया है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-14',
+      text: 'Subject Test: हरियाणा राज्य सहकारी बीज विकास निगम (Haryana State Seeds Development Corporation - HSDC) का मुख्यालय कहाँ स्थित है?',
+      options: ['करनाल', 'हिसार', 'पंचकूला', 'रोहतक'],
+      correctIndex: 2,
+      explanation: 'हरियाणा राज्य बीज विकास निगम की स्थापना वर्ष 1974 में हुई थी ताकि किसानों को गुणवत्तापूर्ण बीज उपलब्ध कराए जा सकें। इसका मुख्यालय पंचकूला में है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-15',
+      text: 'Subject Test: हरियाणा की एकमात्र बारहमासी (सदा बहने वाली) नदी कौन सी है जो राज्य की पूर्वी सीमा बनाती है?',
+      options: ['घग्गर', 'साहिबी', 'मार्कंडा', 'यमुना'],
+      correctIndex: 3,
+      explanation: 'यमुना नदी हरियाणा की एकमात्र बारहमासी (सदा बहने वाली) नदी है जो उत्तर प्रदेश और हरियाणा के बीच पूर्वी सीमा का निर्धारण करती है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-16',
+      text: 'Subject Test: प्रसिद्ध कार निर्माता कंपनी मारुति सुजुकी ने हरियाणा में अपना पहला विनिर्माण संयंत्र किस वर्ष गुरुग्राम में स्थापित किया था?',
+      options: ['1979 में', '1982 में', '1985 में', '1991 में'],
+      correctIndex: 1,
+      explanation: 'मारुति सुजुकी इंडिया लिमिटेड ने फरवरी 1981 में कंपनी शुरू की और अपना पहला विनिर्माण संयंत्र वर्ष 1982 में गुरुग्राम में स्थापित किया, जिसने गुरुग्राम को ऑटोमोबाइल हब बना दिया।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-17',
+      text: 'Subject Test: ऐतिहासिक वास्तुकला की धरोहर "शेख मूसा का मकबरा" (Sheikh Musa Tomb) हरियाणा के किस जिले में स्थित है?',
+      options: ['पलवल', 'नूंह (मेवात)', 'रेवाड़ी', 'महेंद्रगढ़'],
+      correctIndex: 1,
+      explanation: 'शेख मूसा का मकबरा और झूलती मीनारें नूंह (मेवात) जिले के पास तावडू रोड पर स्थित हैं। यह वास्तुकला की राजपूत और मुगल शैलियों का एक सुंदर मिश्रण है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-18',
+      text: 'Subject Test: हरियाणा के किस स्थान पर ऐतिहासिक "चौबीसी चबूतरा" स्थित है, जो प्राचीन काल से पंचायतों के ऐतिहासिक निर्णयों के लिए प्रसिद्ध है?',
+      options: ['हांसी (हिसार)', 'महम (रोहतक)', 'कलावती (जींद)', 'गोहाना (सोनीपत)'],
+      correctIndex: 1,
+      explanation: 'चौबीसी चबूतरा रोहतक जिले के महम कस्बे में स्थित है। यहाँ महम चौबीसी (24 गाँवों) की ऐतिहासिक महापंचायतें आयोजित होती आई हैं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-19',
+      text: 'Subject Test: हरियाणा का पहला हिंदी साप्ताहिक समाचार पत्र "हरियाणा झज्जर" किस वर्ष प्रकाशित हुआ था और इसके संपादक कौन थे?',
+      options: ['1885 - पंडित दीनदयाल शर्मा', '1889 - बाबू कन्हैया लाल', '1923 - नेकीराम शर्मा', '1930 - लाला देशबंधु गुप्ता'],
+      correctIndex: 0,
+      explanation: 'हरियाणा का पहला समाचार पत्र "हरियाणा झज्जर" वर्ष 1885 में झज्जर से पंडित दीनदयाल शर्मा के संपादन में प्रकाशित हुआ था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-20',
+      text: 'Subject Test: हरियाणा के किस जिले के उमरी (Umri) नामक स्थान पर "राष्ट्रीय डिजाइन संस्थान" (National Institute of Design - NID) कार्यरत है?',
+      options: ['पंचकूला', 'कुरुक्षेत्र', 'अम्बाला', 'गुरुग्राम'],
+      correctIndex: 1,
+      explanation: 'राष्ट्रीय डिजाइन संस्थान (NID) कुरुक्षेत्र जिले के उमरी गाँव में नेशनल हाईवे पर स्थित है। इसकी स्थापना भारत सरकार के वाणिज्य और उद्योग मंत्रालय द्वारा की गई है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-21',
+      text: 'Subject Test: कुरुक्षेत्र विश्वविद्यालय (Kurukshetra University) की नींव वर्ष 1956 में भारत के किस प्रथम राष्ट्रपति द्वारा रखी गई थी?',
+      options: ['डॉ. सर्वपल्ली राधाकृष्णन', 'डॉ. राजेंद्र प्रसाद', 'डॉ. जाकिर हुसैन', 'वी.वी. गिरि'],
+      correctIndex: 1,
+      explanation: 'कुरुक्षेत्र विश्वविद्यालय हरियाणा का पहला विश्वविद्यालय है। इसकी नींव 11 जनवरी 1956 को भारत के तत्कालीन राष्ट्रपति डॉ. राजेंद्र प्रसाद द्वारा रखी गई थी।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-22',
+      text: 'Subject Test: हस्तशिल्प और हथकरघा उद्योग के लिए देश-विदेश में प्रसिद्ध होने के कारण हरियाणा के किस शहर को "बुनकरों का शहर" (City of Weavers) कहा जाता है?',
+      options: ['भिवानी', 'रोहतक', 'पानीपत', 'फरीदाबाद'],
+      correctIndex: 2,
+      explanation: 'पानीपत को हथकरघा उत्पादों और दरियों/कंबलों के बड़े स्तर पर उत्पादन के कारण "बुनकरों का शहर" या "कास्ट ऑफ रिफ्यूज" के नाम से जाना जाता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-23',
+      text: 'Subject Test: औद्योगिक और आर्थिक विकास को गति देने के लिए लागू की गई नवीनतम "हरियाणा उद्यम एवं रोजगार नीति" किस वर्ष से प्रभावी है?',
+      options: ['वर्ष 2018', 'वर्ष 2020', 'वर्ष 2022', 'वर्ष 2024'],
+      correctIndex: 1,
+      explanation: 'हरियाणा सरकार द्वारा "हरियाणा उद्यम एवं रोजगार नीति (HEEP) 2020" लागू की गई थी, जिसका मुख्य उद्देश्य राज्य में ₹1 लाख करोड़ से अधिक का निवेश आकर्षित करना और रोजगार सृजन करना है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-24',
+      text: 'Subject Test: सूफी काव्य परंपरा के अंतर्गत सुप्रसिद्ध "हरियाणवी रामायण" की रचना करने वाले सूफी संत कौन थे?',
+      options: ['संत वीरभान', 'खुदाबख्श अहमद', 'शाह मोहम्मद', 'हादी-ए-हरियाणा'],
+      correctIndex: 1,
+      explanation: 'हरियाणवी भाषा में रामायण की रचना करने का श्रेय सूफी कवि खुदाबख्श अहमद को जाता है। उन्होंने हरियाणवी संस्कृति के पुट के साथ रामायण लिखी थी।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-1-25',
+      text: 'Subject Test: वर्ष 2011 की जनगणना के अनुसार, प्रतिशत के आधार पर हरियाणा के किस जिले में सर्वाधिक अनुसूचित जाति (SC) की आबादी पाई जाती है?',
+      options: ['सिरसा', 'फतेहाबाद', 'हिसार', 'अम्बाला'],
+      correctIndex: 1,
+      explanation: 'प्रतिशत के आधार पर हरियाणा में सर्वाधिक अनुसूचित जाति (SC) की जनसंख्या फतेहाबाद (30.2%) में है। संख्या के आधार पर सर्वाधिक अनुसूचित जाति की जनसंख्या हिसार जिले में है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-1'
+    }
+  ],
+  'test-hssc-police-sub-haryana-gk-2': [
+    {
+      id: 'q-hssc-sub-haryana-gk-2-1',
+      text: 'Subject Test: बाणभट्ट द्वारा रचित पुस्तक "हर्षचरित" में हरियाणा के किस प्राचीन शहर के निवासियों के धार्मिक सहिष्णुता, नैतिकता और वैभव की तुलना कुबेर की नगरी से की गई है?',
+      options: ['अग्रोहा', 'थानेसर', 'रोहतक', 'पेहोवा'],
+      correctIndex: 1,
+      explanation: 'बाणभट्ट ने हर्षचरित में थानेसर (श्रीकंठ जनपद की राजधानी) का अत्यंत जीवंत और वैभवशाली वर्णन किया है, तथा वहाँ के नागरिकों की तुलना देवताओं से की है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-2',
+      text: 'Subject Test: महाभारत का भीषण युद्ध कुरुक्षेत्र की पवित्र भूमि पर कौरवों और पांडवों के बीच कितने दिनों तक लड़ा गया था?',
+      options: ['15 दिन', '18 दिन', '21 दिन', '24 दिन'],
+      correctIndex: 1,
+      explanation: 'महाभारत का युद्ध कुरुक्षेत्र में 18 दिनों तक चला था। गीता का उपदेश भगवान कृष्ण ने युद्ध की शुरुआत में अर्जुन को ज्योतिसर नामक स्थान पर दिया था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-3',
+      text: 'Subject Test: हरियाणा के भिवानी जिले के किस स्थान पर "चिंकारा प्रजनन केंद्र" (Chinkara Breeding Centre) स्थापित है?',
+      options: ['कैरु', 'लोहारू', 'तोशाम', 'बहल'],
+      correctIndex: 0,
+      explanation: 'चिंकारा प्रजनन केंद्र भिवानी जिले के कैरु गाँव में स्थित है, जिसकी स्थापना 1985 के आसपास की गई थी। मोर और चिंकारा प्रजनन केंद्र झाबुआ (रेवाड़ी) में है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-4',
+      text: 'Subject Test: दिल्ली सल्तनत के सुल्तान फिरोजशाह तुगलक ने 14वीं शताब्दी में अपने नवजात पुत्र फतेह खान के नाम पर हरियाणा के किस शहर की स्थापना की थी?',
+      options: ['हिसार', 'फतेहाबाद', 'टोहाना', 'फिरोजाबाद'],
+      correctIndex: 1,
+      explanation: 'फिरोजशाह तुगलक ने वर्ष 1351-52 में अपने पुत्र फतेह खान के जन्म के उपलक्ष्य में फतेहाबाद शहर की स्थापना की थी। इसे पिंक सिटी ऑफ हरियाणा भी कहा जाता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-5',
+      text: 'Subject Test: 1857 के प्रथम स्वतंत्रता संग्राम में रेवाड़ी क्षेत्र का नेतृत्व करने वाले राव तुला राम का मुकाबला किस स्थान पर मेजर गेरार्ड के नेतृत्व वाली अंग्रेजी सेना से हुआ था?',
+      options: ['नसीबपुर (नारनौल)', 'धारूहेड़ा', 'रोहनात (भिवानी)', 'रानिया'],
+      correctIndex: 0,
+      explanation: 'राव तुला राम और ब्रिटिश सेना के बीच 16 नवंबर 1857 को नारनौल के पास नसीबपुर के मैदान में भयंकर युद्ध हुआ था, जिसमें अंग्रेजों को भारी क्षति हुई लेकिन अंततः अंग्रेजी सत्ता विजयी रही।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-6',
+      text: 'Subject Test: 600 मेगावाट क्षमता वाली "दीनबंधु छोटू राम तापीय विद्युत परियोजना" (DCRTPP) हरियाणा के किस जिले में स्थित है?',
+      options: ['झज्जर', 'हिसार', 'यमुनानगर', 'पानीपत'],
+      correctIndex: 2,
+      explanation: 'दीनबंधु छोटू राम थर्मल पावर प्लांट यमुनानगर में स्थित है। यह हरियाणा की पहली ऐसी परियोजना है जिसे किसी निजी कंपनी को सौंपने का काम किया गया था। इसकी स्थापना 2008 में हुई थी।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-7',
+      text: 'Subject Test: फरीदाबाद में अरावली पर्वतमाला के बीच स्थित "बड़खल झील" (Badkhal Lake) का निर्माण किस वर्ष सिंचाई और मृदा अपरदन को रोकने के उद्देश्य से बांध बनाकर किया गया था?',
+      options: ['1947 में', '1952 में', '1966 में', '1972 में'],
+      correctIndex: 0,
+      explanation: 'बड़खल झील का निर्माण स्वतंत्रता के वर्ष 1947 में पहाड़ी ढलानों पर पानी रोककर कृषि को बढ़ावा देने के लिए किया गया था। यह पर्यटकों के लिए एक प्रमुख आकर्षण केंद्र रही है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-chap-polity-8',
+      text: 'Subject Test: हरियाणा पंचायती राज संस्थाओं के चुनावों में मतपत्रों/ईवीएम (EVM) में "नोटा" (None of the Above - NOTA) का विकल्प देने वाला देश का कौन सा राज्य बना था?',
+      options: ['पहला राज्य', 'दूसरा राज्य', 'तीसरा राज्य', 'चौथा राज्य'],
+      correctIndex: 0,
+      explanation: 'हरियाणा पंचायती राज चुनाव 2016 में नोटा विकल्प का उपयोग करने वाला देश का पहला राज्य बना था, जिससे मतदाताओं को सभी उम्मीदवारों को अस्वीकार करने का अधिकार मिला।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-9',
+      text: 'Subject Test: हरियाणा साहित्य अकादमी (Haryana Sahitya Akademi) द्वारा प्रकाशित की जाने वाली प्रमुख साहित्यिक मासिक पत्रिका का नाम क्या है?',
+      options: ['हरिप्रभा', 'हरिगंधा', 'शब्द बूंद', 'सप्तसिंधु'],
+      correctIndex: 1,
+      explanation: 'हरियाणा साहित्य अकादमी की प्रमुख हिंदी मासिक पत्रिका "हरिगंधा" है। अकादमी का मुख्यालय पंचकूला में है और इसके अध्यक्ष मुख्यमंत्री होते हैं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-10',
+      text: 'Subject Test: साहित्य के क्षेत्र में उत्कृष्ट योगदान के लिए हरियाणा सरकार द्वारा दिया जाने वाला सर्वोच्च साहित्यिक सम्मान कौन सा है?',
+      options: ['बाबू बालमुकुंद गुप्त सम्मान', 'सूर सम्मान', 'महाकवि सूरदास सम्मान', 'भीम सम्मान'],
+      correctIndex: 1,
+      explanation: 'हरियाणा का सर्वोच्च साहित्य पुरस्कार "सूर सम्मान" है (पूर्व नाम सूर पुरस्कार, जिसे 2006 में बदला गया)। इसके तहत ₹5 लाख की राशि दी जाती है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-11',
+      text: 'Subject Test: महाभारत कालीन अत्यंत पवित्र और ऐतिहासिक "सूरजकुंड मंदिर" या सूर्यकुंड धाम हरियाणा के किस स्थान पर स्थित है?',
+      options: ['बिलासपुर (यमुनानगर)', 'थानेसर (कुरुक्षेत्र)', 'पेहोवा (कुरुक्षेत्र)', 'कालका (पंचकूला)'],
+      correctIndex: 0,
+      explanation: 'यमुनानगर जिले के बिलासपुर (कपाल मोचन के पास) में सूर्यकुंड मंदिर स्थित है। मान्यता है कि यहाँ स्नान करने से मानसिक शांति प्राप्त होती है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-12',
+      text: 'Subject Test: 1 नवंबर 1966 को जब पंजाब से अलग होकर हरियाणा भारतीय संघ का 17वां राज्य बना, तब इसमें कुल कितने जिले शामिल थे?',
+      options: ['5 जिले', '7 जिले', '9 जिले', '11 जिले'],
+      correctIndex: 1,
+      explanation: 'हरियाणा गठन के समय 7 जिले थे - घर जेसी में (Ghar Jk me: Gurgaon, Hissar, Ambala, Rohtak, Jind, Karnal, Mahendragarh)। इनमें क्षेत्रफल में सबसे बड़ा हिसार और सबसे छोटा जींद था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-13',
+      text: 'Subject Test: अत्याधुनिक सुविधाओं से लैस देश का सबसे बड़ा "राष्ट्रीय कैंसर संस्थान" (National Cancer Institute) हरियाणा में कहाँ स्थित है?',
+      options: ['बाढ़सा (झज्जर)', 'मानसेर (गुरुग्राम)', 'घरौंडा (करनाल)', 'अहरवां (फतेहाबाद)'],
+      correctIndex: 0,
+      explanation: 'एम्स (AIIMS-II) के अंतर्गत संचालित राष्ट्रीय कैंसर संस्थान झज्जर जिले के बाढ़सा गाँव में स्थित है। इसका उद्घाटन औपचारिक रूप से दिसंबर 2018 में हुआ था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-14',
+      text: 'Subject Test: जैव विविधता के संरक्षण के लिए हरियाणा राज्य जैव विविधता बोर्ड (Haryana State Biodiversity Board) का गठन किस वर्ष किया गया था?',
+      options: ['2002 में', '2006 में', '2010 में', '2015 में'],
+      correctIndex: 1,
+      explanation: 'केंद्रीय जैविक विविधता अधिनियम 2002 के प्रावधानों के तहत हरियाणा सरकार ने वर्ष 2006 में हरियाणा राज्य जैव विविधता बोर्ड का गठन किया था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-15',
+      text: 'Subject Test: हरियाणा के किस स्थान पर बागवानी को बढ़ावा देने और मधुमक्खी पालकों को प्रशिक्षण देने के लिए "एकीकृत मधुमक्खी विकास केंद्र" (Integrated Beekeeping Development Centre) कार्यरत है?',
+      options: ['शाहबाद (कुरुक्षेत्र)', 'लाडवा (कुरुक्षेत्र)', 'गन्नौर (सोनीपत)', 'घरौंडा (करनाल)'],
+      correctIndex: 0,
+      explanation: 'कुरुक्षेत्र जिले के शाहबाद में इंडो-इजरायल कृषि परियोजना के तहत एकीकृत मधुमक्खी विकास केंद्र स्थापित किया गया है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-16',
+      text: 'Subject Test: लगातार दो बार माउंट एवरेस्ट पर फतह हासिल करने वाली विश्व की पहली महिला पर्वतारोही संतोष यादव हरियाणा के किस जिले से संबंध रखती हैं?',
+      options: ['रेवाड़ी (जोणियावास गाँव)', 'महेंद्रगढ़', 'भिवानी', 'चरखी दादरी'],
+      correctIndex: 0,
+      explanation: 'संतोष यादव का जन्म रेवाड़ी जिले के जोणियावास गाँव में हुआ था। उन्होंने मई 1992 और मई 1993 में माउंट एवरेस्ट पर चढ़ाई कर इतिहास रचा था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-17',
+      text: 'Subject Test: हरियाणवी भाषा में लिखी गई पहली लघु कहानी "लड़की की बहादुरी" के लेखक कौन माने जाते हैं?',
+      options: ['पंडित लखमीचंद', 'बाबू बालमुकुंद गुप्त', 'माधव प्रसाद मिश्र', 'उदयभानु हंस'],
+      correctIndex: 2,
+      explanation: '"लड़की की बहादुरी" हरियाणवी भाषा की पहली कहानी मानी जाती है, जिसके लेखक प्रसिद्ध साहित्यकार माधव प्रसाद मिश्र हैं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-18',
+      text: 'Subject Test: हस्तशिल्पकारों को मंच प्रदान करने के लिए फरीदाबाद में आयोजित होने वाले प्रसिद्ध "सूरजकुंड अंतर्राष्ट्रीय शिल्प मेले" की शुरुआत किस वर्ष की गई थी?',
+      options: ['1981 में', '1987 में', '1991 में', '1996 में'],
+      correctIndex: 1,
+      explanation: 'सूरजकुंड शिल्प मेले की शुरुआत वर्ष 1987 में हुई थी। यह प्रत्येक वर्ष फरवरी माह में आयोजित किया जाता है और इसमें देश-विदेश के लाखों शिल्पकार हिस्सा लेते हैं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-19',
+      text: 'Subject Test: ग्रामीण भारत की झलक और पारंपरिक हरियाणवी जीवनशैली का अनुभव कराने वाला विख्यात "प्रतापगढ़ फार्म" (Pratapgarh Farms) हरियाणा के किस जिले में स्थित है?',
+      options: ['रोहतक', 'सोनीपत', 'झज्जर', 'रेवाड़ी'],
+      correctIndex: 2,
+      explanation: 'प्रतापगढ़ फार्म झज्जर जिले में स्थित एक बेहद लोकप्रिय ग्रामीण और कृषि पर्यटन स्थल है, जहाँ हरियाणवी खान-पान, कृषि गतिविधियों और पारंपरिक खेलों का प्रदर्शन किया जाता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-20',
+      text: 'Subject Test: हरियाणा पुलिस विभाग (Haryana Police Department) का राज्य स्तरीय प्रशासनिक मुख्यालय कहाँ स्थित है?',
+      options: ['सेक्टर-6, पंचकूला', 'सेक्टर-1, चंडीगढ़', 'सेक्टर-14, गुरुग्राम', 'करनाल पुलिस अकादमी'],
+      correctIndex: 0,
+      explanation: 'हरियाणा पुलिस का राज्य स्तरीय मुख्यालय सेक्टर-6, पंचकूला में स्थित है। पुलिस महानिदेशक (DGP) इस विभाग के सर्वोच्च अधिकारी होते हैं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-21',
+      text: 'Subject Test: प्रथम विश्व युद्ध के समय महात्मा गांधी के असहयोग आंदोलन में सक्रिय भूमिका निभाने वाले और अंग्रेजों की "राय बहादुर" की उपाधि लौटाने वाले बाबू मुरलीधर का जन्म हरियाणा के किस शहर में हुआ था?',
+      options: ['अम्बाला', 'झज्जर', 'पलवल', 'रोहतक'],
+      correctIndex: 2,
+      explanation: 'लाला मुरलीधर (ग्रैंड ओल्ड मैन ऑफ पंजाब) का जन्म पलवल जिले में हुआ था, हालांकि उनकी कर्मभूमि मुख्य रूप से अम्बाला रही। वे कांग्रेस की स्थापना (1885) में शामिल होने वाले एकमात्र हरियाणवी थे।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-22',
+      text: 'Subject Test: कुरुक्षेत्र विश्वविद्यालय में प्रतिवर्ष आयोजित होने वाले प्रसिद्ध "रत्नावली महोत्सव" (Ratnawali Festival) का संबंध मुख्य रूप से किस क्षेत्र से है?',
+      options: ['शास्त्रीय नृत्य प्रतियोगिता', 'हरियाणवी लोक संस्कृति व कला का संरक्षण', 'विज्ञान एवं तकनीकी प्रदर्शनी', 'अखिल भारतीय कवि सम्मेलन'],
+      correctIndex: 1,
+      explanation: 'रत्नावली महोत्सव की शुरुआत वर्ष 1985 में हुई थी। यह कुरुक्षेत्र विश्वविद्यालय द्वारा हरियाणवी भाषा, लोक नृत्य, नाटक और संगीत को जीवित रखने के लिए आयोजित किया जाने वाला राज्य का सबसे बड़ा सांस्कृतिक मंच है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-23',
+      text: 'Subject Test: देश में दुग्ध क्रांति को बढ़ावा देने वाले राष्ट्रीय डेयरी अनुसंधान संस्थान (NDRI) को किस वर्ष बेंगलुरु से करनाल स्थानांतरित किया गया था?',
+      options: ['1947 में', '1955 में', '1966 में', '1970 में'],
+      correctIndex: 1,
+      explanation: 'NDRI की शुरुआत इंपीरियल इंस्टीट्यूट के रूप में 1923 में बेंगलुरु में हुई थी। स्वतंत्रता के पश्चात वर्ष 1955 में इसका राष्ट्रीय मुख्यालय करनाल स्थानांतरित किया गया।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-24',
+      text: 'Subject Test: 1 नवंबर 1966 को हरियाणा राज्य के गठन के समय इसके प्रथम महाधिवक्ता (Advocate General) के रूप में किसे नियुक्त किया गया था?',
+      options: ['बाबू आनंद स्वरूप', 'श्री बलदेव राज महाजन', 'जस्टिस रामलाल', 'श्री धर्मवीर'],
+      correctIndex: 0,
+      explanation: 'बाबू आनंद स्वरूप हरियाणा के प्रथम महाधिवक्ता थे, जिन्होंने राज्य सरकार के कानूनी सलाहकार के रूप में कार्य किया।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    },
+    {
+      id: 'q-hssc-sub-haryana-gk-2-25',
+      text: 'Subject Test: हरियाणा राज्य की प्रथम विधानसभा (First Legislative Assembly) का प्रथम आधिकारिक सत्र किस माह और वर्ष में आयोजित किया गया था?',
+      options: ['नवंबर 1966', 'दिसंबर 1966', 'मार्च 1967', 'मई 1967'],
+      correctIndex: 1,
+      explanation: 'हरियाणा विधानसभा का पहला आधिकारिक सत्र 6 दिसंबर 1966 को आयोजित किया गया था, जिसकी अध्यक्षता विधानसभा की पहली महिला अध्यक्ष श्रीमती शन्नो देवी ने की थी।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-sub-haryana-gk-2'
+    }
+  ],
+  'test-hssc-police-sub-agriculture-1': [
+    {
+      id: 'q-hssc-sub-agriculture-1-1',
+      text: 'Subject Test: फसलों में लगने वाला सुप्रसिद्ध "धान का खैरा रोग" (Khaira Disease of Rice) मिट्टी में किस सूक्ष्म पोषक तत्व की कमी के कारण होता है?',
+      options: ['लोहा (Iron)', 'तांबा (Copper)', 'जस्ता (Zinc)', 'मैंगनीज'],
+      correctIndex: 2,
+      explanation: 'धान का खैरा रोग जस्ता (Zinc) की कमी से होता है। इसकी खोज सर्वप्रथम डॉ. वाई.एल. नेने ने पंतनगर विश्वविद्यालय में की थी। जिंक सल्फेट के छिड़काव से इसे ठीक किया जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-2',
+      text: 'Subject Test: पशुओं में होने वाला घातक संक्रामक रोग "गलगोटू" (Haemorrhagic Septicaemia) निम्नलिखित में से किस जीवाणु (Bacteria) के संक्रमण के कारण होता है?',
+      options: ['बैसिलस एन्थ्रेसिस', 'पास्चरेला मल्टोसिडा (Pasteurella multocida)', 'ब्रूसेला एबॉर्टस', 'क्लॉस्ट्रिडियम चौवेई'],
+      correctIndex: 1,
+      explanation: 'गलगोटू रोग पशुओं (विशेषकर गाय व भैंस) में पास्चरेला मल्टोसिडा नामक बैक्टीरिया के संक्रमण से फैलता है। वर्षा ऋतु के प्रारंभ में इस रोग का प्रकोप अधिक होता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-3',
+      text: 'Subject Test: भारत में ऑपरेशन फ्लड (Operation Flood) को बढ़ावा देने के लिए राष्ट्रीय डेयरी विकास बोर्ड (NDDB) की स्थापना किस वर्ष की गई थी?',
+      options: ['1960 में', '1965 में', '1970 in', '1975 में'],
+      correctIndex: 1,
+      explanation: 'NDDB की स्थापना वर्ष 1965 में की गई थी, जिसका मुख्यालय आणंद (गुजरात) में है। इसके पहले अध्यक्ष डॉ. वर्गीज कुरियन थे।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-4',
+      text: 'Subject Test: गेहूँ की फसल में लगने वाला सुप्रसिद्ध कवक जनित रोग "करनाल बंट" (Karnal Bunt) किस फंगस के कारण होता है?',
+      options: ['टिलेशिया इंडिका (Tilletia indica)', 'पक्सिनिया ग्रामिनिस', 'अस्टिलागो न्यूडा', 'अल्टरनेरिया सोलेनाई'],
+      correctIndex: 0,
+      explanation: 'करनाल बंट गेहूँ का एक कवक जनित रोग है जो टिलेशिया इंडिका कवक द्वारा होता है। इसकी खोज 1931 में करनाल (हरियाणा) में हुई थी, इसलिए इसे करनाल बंट नाम दिया गया।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-5',
+      text: 'Subject Test: वैश्विक दुग्ध उत्पादन (Global Milk Production) की रैंकिंग में भारत विश्व में किस स्थान पर आता है?',
+      options: ['प्रथम स्थान', 'द्वितीय स्थान', 'तृतीय स्थान', 'चतुर्थ स्थान'],
+      correctIndex: 0,
+      explanation: 'भारत विश्व में सर्वाधिक दुग्ध उत्पादन करने वाला देश है। वैश्विक दुग्ध उत्पादन में भारत की हिस्सेदारी लगभग 24% से अधिक है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-6',
+      text: 'Subject Test: मुर्गियों में न्यूकैसल रोग के नाम से जानी जाने वाली अत्यधिक संक्रामक व जानलेवा बीमारी "रानीखेत" (Ranikhet Disease) किसके कारण फैलती है?',
+      options: ['जीवाणु (Bacteria)', 'विषाणु (Virus)', 'कवक (Fungi)', 'प्रोटोजोआ'],
+      correctIndex: 1,
+      explanation: 'रानीखेत मुर्गियों की एक अत्यंत संक्रामक वायरल (विषाणु जनित) बीमारी है, जो पैरामिक्सोवायरस के कारण फैलती है। इस बीमारी में पक्षी सांस लेने में कठिनाई महसूस करते हैं।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-7',
+      text: 'Subject Test: श्वेत क्रांति (White Revolution) के सूत्रधार डॉ. वर्गीज कुरियन के प्रयासों से भारत में सहकारी दुग्ध आंदोलन (Co-operative Milk Movement) की शुरुआत किस शहर से हुई थी?',
+      options: ['आणंद (गुजरात)', 'करनाल (हरियाणा)', 'पुणे (महाराष्ट्र)', 'बेंगलुरु (कर्नाटक)'],
+      correctIndex: 0,
+      explanation: 'सहकारी दुग्ध आंदोलन की शुरुआत आणंद (गुजरात) में आनंद मिल्क यूनियन लिमिटेड (AMUL) की स्थापना के साथ हुई थी, जिसने आगे चलकर देश में श्वेत क्रांति का मार्ग प्रशस्त किया।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-8',
+      text: 'Subject Test: दुधारू पशुओं में ब्याने के तुरंत बाद होने वाला "दुग्ध ज्वर" (Milk Fever) रोग शरीर में किस पोषक तत्व की भारी कमी के कारण होता है?',
+      options: ['सोडियम', 'कैल्शियम', 'फास्फोरस', 'आयरन'],
+      correctIndex: 1,
+      explanation: 'दुग्ध ज्वर (मिल्क फीवर) ब्याने वाले दुधारू पशुओं में कैल्शियम की कमी (Hypocalcemia) से होता है। इसमें पशु के शरीर का तापमान सामान्य से कम हो जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-9',
+      text: 'Subject Test: पौधों के विकास के लिए आवश्यक 17 अनिवार्य पोषक तत्वों में से कौन से तीन तत्व हवा और पानी द्वारा प्राकृतिक रूप से प्राप्त होते हैं?',
+      options: ['नाइट्रोजन, फास्फोरस, पोटाश', 'कैल्शियम, मैग्नीशियम, सल्फर', 'कार्बन, हाइड्रोजन, ऑक्सीजन', 'लोहा, जस्ता, तांबा'],
+      correctIndex: 2,
+      explanation: 'कार्बन, हाइड्रोजन और ऑक्सीजन को गैर-खनिज (non-mineral) या संरचनात्मक तत्व कहा जाता है, जो पौधों को वायुमंडल (CO2) और पानी (H2O) से प्राप्त होते हैं।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-10',
+      text: 'Subject Test: गाय के दूध का रंग हल्का पीला (Light Yellow) निम्नलिखित में से किस तत्व की उपस्थिति के कारण होता है?',
+      options: ['केसीन (Casein)', 'कैरोटीन (Carotene)', 'लैक्टोज (Lactose)', 'एल्ब्युमिन'],
+      correctIndex: 1,
+      explanation: 'गाय के दूध में पीले रंग का कारण बीटा-कैरोटीन होता है। दूध का सफेद रंग "केसीन" प्रोटीन की उपस्थिति के कारण होता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-11',
+      text: 'Subject Test: आधुनिक कृषि में अपनाई जाने वाली "शून्य जुताई" (Zero Tillage) तकनीक का सबसे प्रमुख वैज्ञानिक लाभ क्या है?',
+      options: ['यह खरपतवार को पूरी तरह नष्ट कर देती है', 'यह मिट्टी की नमी को संचित रखती है तथा खेती की लागत घटाती है', 'इससे फसलों की अवधि घट जाती है', 'यह मिट्टी को पूरी तरह से लवणीय होने से बचाती है'],
+      correctIndex: 1,
+      explanation: 'शून्य जुताई तकनीक (Zero Tillage) से पिछली फसल के ठूंठों के बीच ही सीधे बुवाई कर दी जाती है। इससे जुताई का खर्च बचता है, ईंधन की बचत होती है तथा मिट्टी की नमी व जैव कार्बन सुरक्षित रहते हैं।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-12',
+      text: 'Subject Test: स्तनधारी पशुओं के दूध में पाई जाने वाली मुख्य प्राकृतिक शर्करा (Carbohydrate) को किस नाम से जाना जाता है?',
+      options: ['सुक्रोज', 'फ्रुक्टोज', 'लैक्टोज', 'ग्लूकोज'],
+      correctIndex: 2,
+      explanation: 'दूध में पाई जाने वाली प्राकृतिक शर्करा को लैक्टोज (Lactose) कहा जाता है। यह ग्लूकोज और गैलेक्टोज से बनी एक डाइसैकराइड शर्करा है जो दूध को हल्का मीठा स्वाद देती है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-13',
+      text: 'Subject Test: भारत में आधुनिक कृषि अनुसंधान के लिए उत्तरदायी "भारतीय कृषि अनुसंधान संस्थान" (IARI - पूसा संस्थान) का राष्ट्रीय मुख्यालय कहाँ स्थित है?',
+      options: ['पूसा (बिहार)', 'नई दिल्ली', 'देहरादून (उत्तराखंड)', 'बेंगलुरु'],
+      correctIndex: 1,
+      explanation: 'IARI की स्थापना 1905 में पूसा (बिहार) में हुई थी, लेकिन 1934 के विनाशकारी भूकंप के कारण इसे 1936 में नई दिल्ली में स्थानांतरित कर दिया गया। इसे आज भी "पूसा संस्थान" कहा जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-14',
+      text: 'Subject Test: भैंस की किस विश्वप्रसिद्ध दुधारू नस्ल के सींग चपटे, छोटे और अंदर की तरफ कुंडलीदार मुड़े हुए (जलेबी के आकार के) होते हैं?',
+      options: ['भदावरी', 'मुर्रा', 'सुरती', 'जाफराबादी'],
+      correctIndex: 1,
+      explanation: 'मुर्रा नस्ल की मुख्य पहचान उसके मुड़े हुए सींग हैं। यह गहरे काले रंग की होती है, इसलिए इसे हरियाणा में "काला सोना" कहा जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-15',
+      text: 'Subject Test: कृषि में फसल चक्र (Crop Rotation) अपनाने का मुख्य उद्देश्य क्या होता है?',
+      options: ['अधिक से अधिक उपज बेचना', 'मृदा उर्वरता बनाए रखना और कीट चक्र को तोड़ना', 'सिंचाई जल की बचत करना', 'कीटनाशकों के प्रयोग को बढ़ाना'],
+      correctIndex: 1,
+      explanation: 'एक ही खेत में फसलों को अदल-बदल कर बोने से मिट्टी की उर्वरता बनी रहती है। दलहनी फसलों को चक्र में शामिल करने से वायुमंडलीय नाइट्रोजन का स्थिरीकरण होता है और कीटों/बीमारियों का प्रकोप कम होता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-16',
+      text: 'Subject Test: दूध से बने शुद्ध देशी घी में पाई जाने वाली विशिष्ट सुगंध और स्वाद के लिए कौन सा रासायनिक यौगिक मुख्य रूप से जिम्मेदार होता है?',
+      options: ['एसिटिक एसिड', 'डायएसिटिल (Diacetyl)', 'फॉर्मिक एसिड', 'मेन्थॉल'],
+      correctIndex: 1,
+      explanation: 'देशी घी में विशिष्ट मक्खनी सुगंध डायएसिटिल (Diacetyl) नामक कार्बनिक यौगिक की उपस्थिति के कारण होती है, जो फर्मेंटेशन प्रक्रिया के दौरान बनता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-17',
+      text: 'Subject Test: भारत में रबी मौसम की किस प्रमुख तिलहनी फसल को "पीला सोना" (Yellow Gold) कहा जाता है जो खाद्य तेल का एक मुख्य स्रोत है?',
+      options: ['सूरजमुखी', 'सोयाबीन', 'सरसों व तोरिया', 'मूंगफली'],
+      correctIndex: 2,
+      explanation: 'सरसों को भारत, विशेष रूप से उत्तर-पश्चिम भारत (हरियाणा, राजस्थान) में पीले फूलों और अत्यधिक आर्थिक महत्व के कारण "पीला सोना" कहा जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-18',
+      text: 'Subject Test: भेड़ की किस भारतीय नस्ल को उसकी बेहतरीन ऊन गुणवत्ता के कारण "भारतीय मेरिनो" (Indian Merino) के उपनाम से जाना जाता है?',
+      options: ['लोही', 'चोखला', 'नेलोर', 'मारवाड़ी'],
+      correctIndex: 1,
+      explanation: 'चोखला नस्ल की भेड़ को उसकी बारीक और उत्तम कोटि की ऊन के कारण "भारतीय मेरिनो" कहा जाता है। यह मुख्य रूप से राजस्थान के शेखावाटी क्षेत्र में पाई जाती है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-19',
+      text: 'Subject Test: भारत में 1960 के दशक के उत्तरार्ध में आई "हरित क्रांति" (Green Revolution) का सर्वाधिक सकारात्मक प्रभाव किन दो फसलों के कुल उत्पादन पर पड़ा था?',
+      options: ['दालें और मक्का', 'गेहूँ और धान (चावल)', 'कपास और जूट', 'गन्ना और आलू'],
+      correctIndex: 1,
+      explanation: 'हरित क्रांति का सबसे अधिक प्रभाव उन्नत बीजों (HYV), उर्वरकों और सिंचाई साधनों के प्रयोग से गेहूँ के उत्पादन पर पड़ा, और उसके बाद धान (चावल) के उत्पादन में भारी वृद्धि देखी गई।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-20',
+      text: 'Subject Test: दुग्धशालाओं में दूध की शुद्धता और उसमें पानी की मिलावट का पता लगाने के लिए किस सरल उपकरण (डेंसिटी मीटर) का उपयोग किया जाता है?',
+      options: ['लैक्टोमीटर', 'ब्यूटायरोमीटर', 'थर्मामीटर', 'हाइड्रोमीटर'],
+      correctIndex: 0,
+      explanation: 'लैक्टोमीटर दूध का विशिष्ट गुरुत्व (Specific Gravity) या घनत्व मापता है। पानी मिलाने से दूध का घनत्व कम हो जाता है, जिससे मिलावट का आसानी से पता चल जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-21',
+      text: 'Subject Test: प्रायद्वीपीय भारत में पाई जाने वाली किस मिट्टी को "रेगुर मिट्टी" (Regur Soil) कहा जाता है जो नमी धारण करने की उच्च क्षमता रखती है और कपास की कृषि के लिए सर्वोत्तम है?',
+      options: ['लाल मिट्टी', 'लैटराइट मिट्टी', 'काली जलोढ़ मिट्टी (Black Cotton Soil)', 'बलुई दोमट मिट्टी'],
+      correctIndex: 2,
+      explanation: 'काली मिट्टी को रेगुर या ब्लैक कॉटन सॉयल कहा जाता है। यह बेसाल्ट चट्टानों के टूटने से बनती है और इसमें स्व-जुताई (Self-ploughing) का गुण होता है क्योंकि सूखने पर इसमें गहरी दरारें पड़ जाती हैं।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-22',
+      text: 'Subject Test: रासायनिक संगठन के आधार पर गाय के ताजा दूध में पानी (Water Content) की औसत मात्रा लगभग कितने प्रतिशत होती है?',
+      options: ['60-65%', '70-75%', '85-87%', '90-95%'],
+      correctIndex: 2,
+      explanation: 'गाय के दूध में औसतन 85 से 87% पानी होता है और शेष हिस्सा ठोस पदार्थ (वसा, प्रोटीन, लैक्टोज, खनिज) होता है, जिसे कुल ठोस (Total Solids) कहा जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-23',
+      text: 'Subject Test: पौधों में प्रकाश संश्लेषण के लिए उत्तरदायी हरे रंग के वर्णक "क्लोरोफिल" (Chlorophyll) के केंद्र में कौन सा धातु परमाणु आवश्यक घटक के रूप में उपस्थित रहता है?',
+      options: ['लोहा (Iron)', 'मैग्नीशियम (Magnesium)', 'कैल्शियम', 'सोडियम'],
+      correctIndex: 1,
+      explanation: 'मैग्नीशियम (Mg) क्लोरोफिल अणु का एक मुख्य केंद्रीय घटक है। इसकी कमी से पौधों की पत्तियां पीली पड़ने लगती हैं (Interveinal Chlorosis)।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-24',
+      text: 'Subject Test: पशुओं के कृत्रिम गर्भाधान (Artificial Insemination) के लिए संकलित किए गए उत्तम सांडों के वीर्य (Semen) को सुरक्षित रखने के लिए किस गैस के द्रव रूप (-196°C) का प्रयोग किया जाता है?',
+      options: ['द्रव अमोनिया', 'द्रव नाइट्रोजन (Liquid Nitrogen)', 'द्रव ऑक्सीजन', 'द्रव हीलियम'],
+      correctIndex: 1,
+      explanation: 'द्रव नाइट्रोजन का तापमान -196 डिग्री सेल्सियस होता है। इस अत्यंत कम तापमान पर जैविक कोशिकाओं (शुक्राणुओं) को लंबे समय तक सुरक्षित रखा जा सकता है, जिसे क्रायोप्रिजर्वेशन (Cryopreservation) कहते हैं।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-1-25',
+      text: 'Subject Test: मक्का (Maize) की फसल में जस्ता (Zinc) की भारी कमी होने पर पौधे में कौन सा विशिष्ट रोग/लक्षण दिखाई देता है जिसे "व्हाइट बड" कहा जाता है?',
+      options: ['पत्तियों पर काले धब्बे', 'सफेद कली (White Bud of Maize)', 'पत्तियों का झड़ना', 'तने का फटना'],
+      correctIndex: 1,
+      explanation: 'मक्का में जस्ता (जिंक) की कमी से नए निकलने वाले पत्ते पीले-सफेद पड़ जाते हैं, जिससे कलिका सफेद दिखाई देती है। इसे "मक्के का सफेद कली रोग" (White Bud of Maize) कहते हैं।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-1'
+    }
+  ],
+  'test-hssc-police-sub-agriculture-2': [
+    {
+      id: 'q-hssc-sub-agriculture-2-1',
+      text: 'Subject Test: रबी सीजन की मुख्य खाद्यान्न फसल गेहूँ (Wheat) की सफल खेती और अच्छे अंकुरण के लिए कितने औसत वार्षिक वर्षा स्तर की आवश्यकता होती है?',
+      options: ['25 से 40 सेमी', '50 से 75 सेमी', '100 से 150 सेमी', '200 सेमी से अधिक'],
+      correctIndex: 1,
+      explanation: 'गेहूँ के लिए 50 से 75 सेमी वार्षिक वर्षा पर्याप्त होती है। जहाँ वर्षा कम होती है वहाँ सिंचाई (जैसे क्राउन रूट इनिशिएशन स्टेज पर) अत्यंत आवश्यक होती है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-2',
+      text: 'Subject Test: पशुओं (विशेषकर गाय, भैंस, भेड़, बकरी) में होने वाला संक्रामक व घातक रोग "एन्थ्रेक्स" (Anthrax) निम्नलिखित में से किसके कारण होता है?',
+      options: ['जीवाणु (Bacillus anthracis)', 'विषाणु (Virus)', 'कवक (Fungi)', 'एस्केरिस परजीवी'],
+      correctIndex: 0,
+      explanation: 'एन्थ्रेक्स एक जीवाणु जनित अति-तीव्र संक्रामक रोग है जो बैसिलस एन्थ्रेसिस बैक्टीरिया के कारण होता है। यह एक जूनोटिक (पशुओं से मनुष्यों में फैलने वाला) रोग है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-3',
+      text: 'Subject Test: भारत में शुष्क और अर्ध-शुष्क क्षेत्रों में फलों की खेती पर शोध करने के लिए "केंद्रीय शुष्क बागवानी संस्थान" (CIAH) कहाँ स्थित है?',
+      options: ['जोधपुर (राजस्थान)', 'बीकानेर (राजस्थान)', 'हिसार (हरियाणा)', 'झांसी (उत्तर प्रदेश)'],
+      correctIndex: 1,
+      explanation: 'केंद्रीय शुष्क बागवानी संस्थान (Central Institute for Arid Horticulture) बीकानेर, राजस्थान में स्थित है, जो शुष्क क्षेत्रों के फलों (जैसे बेर, आंवला, खजूर) पर शोध करता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-4',
+      text: 'Subject Test: भैंस की किस विशिष्ट नस्ल के दूध में सर्वाधिक वसा प्रतिशत (Fat % लगभग 12 से 14%) पाया जाता है और इसका रंग तांबे जैसा (Copper-coloured) होता है?',
+      options: ['मुर्रा', 'भदावरी', 'नीली रावी', 'मेहसाना'],
+      correctIndex: 1,
+      explanation: 'भदावरी नस्ल की भैंस का मूल स्थान उत्तर प्रदेश का आगरा (भदावर क्षेत्र) है। इसके शरीर का रंग तांबे जैसा होता है और इसके दूध में देश की अन्य भैंस नस्लों की तुलना में सर्वाधिक वसा (फैट) पाई जाती है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-5',
+      text: 'Subject Test: पौधों में नाइट्रोजन (N) की कमी के प्राथमिक लक्षण सर्वप्रथम पौधे के किस भाग या पत्तियों पर दिखाई देते हैं?',
+      options: ['पौधे की सबसे ऊपरी नई पत्तियों पर', 'पुरानी निचली पत्तियों पर', 'तने के अग्र भाग पर', 'पुष्प कलिकाओं पर'],
+      correctIndex: 1,
+      explanation: 'नाइट्रोजन एक अत्यधिक गतिशील (highly mobile) पोषक तत्व है। जब इसकी कमी होती है, तो यह पुरानी पत्तियों से नई पत्तियों की ओर स्थानांतरित हो जाता है, जिससे लक्षण सबसे पहले पुरानी निचली पत्तियों पर दिखाई देते हैं।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-6',
+      text: 'Subject Test: अत्यधिक दूध उत्पादन क्षमता और अनुकूलनशीलता के कारण बकरी की किस यूरोपीय नस्ल को "विश्व की दूध की रानी" (Milch Queen of the World) कहा जाता है?',
+      options: ['एंग्लो-नुबियन', 'सानेन (Saanen)', 'जमनापारी', 'बार्बरी'],
+      correctIndex: 1,
+      explanation: 'सानेन नस्ल की बकरी का मूल स्थान स्विट्जरलैंड की सानेन घाटी है। यह दूध उत्पादन में विश्व प्रसिद्ध है, इसलिए इसे "विश्व की दूध की रानी" कहा जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-7',
+      text: 'Subject Test: कृषि में प्रयुक्त होने वाले किस प्रमुख प्राथमिक पोषक तत्व वाले उर्वरक का भारत अपनी आवश्यकताओं के लिए शत-प्रतिशत विदेशों से आयात पर निर्भर है?',
+      options: ['नाइट्रोजन उर्वरक (जैसे यूरिया)', 'फास्फोरस उर्वरक (जैसे DAP)', 'पोटैशियम उर्वरक (जैसे MOP/पोटाश)', 'सल्फर उर्वरक'],
+      correctIndex: 2,
+      explanation: 'भारत में पोटैशियम (K) के व्यावसायिक भंडार उपलब्ध नहीं हैं, इसलिए म्यूरेट ऑफ पोटाश (MOP) जैसे पोटाश उर्वरकों का शत-प्रतिशत आयात किया जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-8',
+      text: 'Subject Test: ब्याने के तुरंत बाद गाय या भैंस द्वारा दिए जाने वाले गाढ़े पीले और एंटीबॉडीज से भरपूर दूध (प्रथम दुग्ध) को क्या कहा जाता है जो बछड़े को रोग प्रतिरोधक क्षमता प्रदान करता है?',
+      options: ['क्रीम', 'खीस (Colostrum)', 'स्किम्ड मिल्क', 'टोन्ड मिल्क'],
+      correctIndex: 1,
+      explanation: 'खीस (Colostrum) नवजात बछड़े को बीमारियों से बचाने के लिए और उसमें इम्युनिटी (रोग प्रतिरोधक क्षमता) विकसित करने के लिए जन्म के तुरंत बाद पिलाना अनिवार्य होता है। इसमें विटामिन ए और प्रोटीन्स प्रचुर मात्रा में होते हैं।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-9',
+      text: 'Subject Test: राई या सरसों के तेल में पाए जाने वाले किस कार्बनिक यौगिक के कारण तेल में तीखी गंध और तीखापन (Pungent Smell) होता है?',
+      options: ['एलिल आइसोथियोसाइनेट (Allyl isothiocyanate)', 'लाइकोपीन', 'कैप्साइसिन', 'सोलेनाइन'],
+      correctIndex: 0,
+      explanation: 'क्रूसीफेरी परिवार के पौधों (जैसे सरसों) में ग्लूकोसाइनोलेट्स पाए जाते हैं। इसके अपघटन से बनने वाला "एलिल आइसोथियोसाइनेट" तेल के तीखे स्वाद और नाक में चढ़ने वाली गंध के लिए जिम्मेदार होता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-10',
+      text: 'Subject Test: डेयरी उद्योग में दूध को लंबे समय तक सुरक्षित रखने के लिए अपनाई जाने वाली लो टेम्परेचर लॉन्ग टाइम (LTLT) पास्चराइजेशन विधि के तहत दूध को कितने तापमान पर 30 मिनट तक गर्म किया जाता है?',
+      options: ['52°C', '63°C', '72°C', '85°C'],
+      correctIndex: 1,
+      explanation: 'पास्चराइजेशन की LTLT विधि में दूध को 62.8°C (लगभग 63°C) पर 30 मिनट तक गर्म किया जाता है। दूसरी विधि HTST (हाई टेम्परेचर शॉर्ट टाइम) है जिसमें 71.7°C पर 15 सेकंड तक गर्म किया जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-11',
+      text: 'Subject Test: जैविक खेती और पर्यावरण संरक्षण के लिए किस प्रमुख जैव-उर्वरक (Bio-fertilizer) का उपयोग धान के खेतों में नाइट्रोजन स्थिरीकरण को बढ़ावा देने के लिए किया जाता है?',
+      options: ['राइजोबियम', 'अजोला और नील-हरित शैवाल (Blue Green Algae)', 'माइकोराइजा', 'फॉस्फोबैक्टीरिया'],
+      correctIndex: 1,
+      explanation: 'धान (चावल) के खड़े पानी वाले खेतों में अजोला (एक जलीय फर्न) और नील-हरित शैवाल (BGA) का उपयोग किया जाता है। यह हवा की नाइट्रोजन को मिट्टी में मिला देते हैं जिससे यूरिया की खपत कम होती है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-12',
+      text: 'Subject Test: पशुधन विकास और पशु नस्लों के संरक्षण के लिए कार्यरत "राष्ट्रीय पशु आनुवंशिक संसाधन ब्यूरो" (NBAGR) हरियाणा के किस जिले में स्थित है?',
+      options: ['हिसार', 'करनाल', 'गुरुग्राम', 'कुरुक्षेत्र'],
+      correctIndex: 1,
+      explanation: 'NBAGR करनाल जिले में स्थित है। इसकी स्थापना 1984 में बेंगलुरु में हुई थी और 1985 में इसे करनाल स्थानांतरित किया गया था। यह भारत में पशु नस्लों को पंजीकृत करने वाला आधिकारिक संस्थान है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-13',
+      text: 'Subject Test: पौधों में जड़ों द्वारा अवशोषित जल और खनिज लवणों को पत्तियों तथा विभिन्न भागों तक ऊपर पहुँचाने का कार्य किस संवहनी ऊतक (Vascular Tissue) द्वारा किया जाता है?',
+      options: ['फ्लोएम (Phloem)', 'जाइलम (Xylem)', 'कैम्बियम', 'एपिडर्मिस'],
+      correctIndex: 1,
+      explanation: 'जाइलम (Xylem) ऊतक पौधों में जल और खनिजों का परिवहन करता है (एकतरफा परिवहन)। फ्लोएम (Phloem) पत्तियों द्वारा बनाए गए भोजन (शर्करा) को पौधे के अन्य भागों तक पहुँचाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-14',
+      text: 'Subject Test: अपनी बेहतरीन रोग प्रतिरोधक क्षमता और सूखा सहने की क्षमता के कारण दुग्ध उत्पादन के लिए प्रसिद्ध गाय की "साहीवाल" (Sahiwal) नस्ल का मूल उत्पत्ति स्थान कौन सा है?',
+      options: ['काठियावाड़ (गुजरात)', 'मोंटगोमरी जिला (पाकिस्तान)', 'थारपारकर (राजस्थान)', 'करनाल (हरियाणा)'],
+      correctIndex: 1,
+      explanation: 'साहीवाल नस्ल का मूल स्थान पाकिस्तान का मोंटगोमरी (पंजाब प्रांत) जिला है। इसका रंग लाल-भूरा होता है और इसके दूध में अच्छी वसा व मीठापन पाया जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-15',
+      text: 'Subject Test: भारत सरकार द्वारा कृषि उपजों के विपणन को सुगम बनाने और मूल्य स्थिरता के लिए न्यूनतम समर्थन मूल्य (MSP) वर्ष में कितनी बार घोषित किया जाता है?',
+      options: ['केवल एक बार', 'वर्ष में दो बार (रबी और खरीफ बुवाई से पहले)', 'प्रत्येक तिमाही पर', 'बाजार दरों के अनुसार हर महीने'],
+      correctIndex: 1,
+      explanation: 'सरकार द्वारा रबी और खरीफ फसलों के बुवाई सत्र से ठीक पहले वर्ष में दो बार कुल 22-23 फसलों के लिए न्यूनतम समर्थन मूल्य (MSP) की घोषणा कृषि लागत एवं मूल्य आयोग (CACP) की सिफारिश पर की जाती है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-16',
+      text: 'Subject Test: दुधारू पशुओं में होने वाला "थनैला रोग" (Mastitis) मुख्य रूप से किस प्रकार का रोग है जो थनों में सूजन और दूध की गुणवत्ता को नष्ट कर देता है?',
+      options: ['जीवाणु जनित संक्रामक रोग (Bacterial disease)', 'विषाणु जनित रोग', 'आनुवंशिक रोग', 'हार्मोनल असंतुलन'],
+      correctIndex: 0,
+      explanation: 'थनैला रोग थन की ग्रंथियों में जीवाणुओं (जैसे स्ट्रेप्टोकोकस या स्टेफिलोकोकस) के संक्रमण से होता है। इससे थनों में भयंकर सूजन आ जाती है और थन बंद हो जाता है या दूध में खून आने लगता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-17',
+      text: 'Subject Test: चाय (Tea) की हरी और सूखी पत्तियों में पाया जाने वाला कौन सा मुख्य एल्कलॉइड/उत्तेजक तत्व चाय पीने पर स्फूर्ति का अनुभव कराता है?',
+      options: ['निकोटीन', 'थीन (Theine / Caffeine)', 'मॉर्फिन', 'रेसरपिन'],
+      correctIndex: 1,
+      explanation: 'चाय की पत्तियों में "थीन" (जिसे कैफीन भी कहा जाता है) और टैनिन पाए जाते हैं, जो तंत्रिका तंत्र को उत्तेजित कर थकान दूर करते हैं और ताजगी प्रदान करते हैं।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-18',
+      text: 'Subject Test: हरा चारा उपलब्ध न होने की स्थिति में पशुओं को खिलाया जाने वाला फर्मेंटेड हरा चारा "साइलेज" (Silage) बनाते समय उसमें नमी की मात्रा वैज्ञानिक रूप से कितने प्रतिशत होनी चाहिए?',
+      options: ['20 से 30 प्रतिशत', '40 से 50 प्रतिशत', '60 से 70 प्रतिशत', '90 प्रतिशत से अधिक'],
+      correctIndex: 2,
+      explanation: 'साइलेज एक गड्ढे (साइलो) में हवा की अनुपस्थिति में हरे चारे को दबाकर बनाया जाता है। इसमें लैक्टिक एसिड बनने से चारा सुरक्षित रहता है। इसके लिए चारे में 60-70% नमी का होना जरूरी है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-19',
+      text: 'Subject Test: भारत में भू-जोतों के आकार और कृषि प्रवृत्तियों का विश्लेषण करने के लिए "कृषि गणना" (Agriculture Census) कितने वर्षों के अंतराल पर आयोजित की जाती है?',
+      options: ['प्रत्येक 2 वर्ष में', 'प्रत्येक 5 वर्ष में', 'प्रत्येक 10 वर्ष में', 'प्रत्येक 15 वर्ष में'],
+      correctIndex: 1,
+      explanation: 'कृषि एवं किसान कल्याण मंत्रालय द्वारा वर्ष 1970-71 से प्रत्येक 5 वर्षों के अंतराल पर देशव्यापी कृषि गणना (Agriculture Census) आयोजित की जाती है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-20',
+      text: 'Subject Test: पशुपालन उद्योग में प्रयुक्त होने वाली मांस शब्दावली के अंतर्गत "बकरी के मांस" (Goat Meat) को आधिकारिक रूप से क्या कहा जाता है?',
+      options: ['पोर्क (Pork)', 'चेवन (Chevon)', 'बीफ (Beef)', 'मटन (Mutton)'],
+      correctIndex: 1,
+      explanation: 'बकरी के मांस को "चेवन" (Chevon) कहा जाता है। भेड़ के मांस को "मटन", सुअर के मांस को "पोर्क" और गाय के मांस को "बीफ" कहा जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-21',
+      text: 'Subject Test: फसलों में नाइट्रोजन की कमी को पूरा करने के लिए सर्वाधिक लोकप्रिय नाइट्रोजन युक्त ठोस उर्वरक "यूरिया" [CO(NH2)2] में नाइट्रोजन की मात्रा कितने प्रतिशत होती है?',
+      options: ['26 प्रतिशत', '33 प्रतिशत', '46 प्रतिशत', '60 प्रतिशत'],
+      correctIndex: 2,
+      explanation: 'यूरिया में एमाइड रूप में नाइट्रोजन पाई जाती है, जिसकी सांद्रता 46% होती है। यह पानी में अत्यधिक घुलनशील होता है और फसल को तुरंत नाइट्रोजन प्रदान करता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-22',
+      text: 'Subject Test: भेड़ पालन एवं पशुधन शब्दावली के अंतर्गत भेड़ के नवजात शिशु या बच्चे को किस नाम से पुकारा जाता है?',
+      options: ['बछड़ा (Calf)', 'मेमना (Lamb)', 'किड (Kid)', 'पिगलेट'],
+      correctIndex: 1,
+      explanation: 'भेड़ के बच्चे को मेमना (Lamb) कहते हैं। बकरी के बच्चे को किड (Kid) और गाय/भैंस के बच्चे को बछड़ा (Calf) कहा जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-23',
+      text: 'Subject Test: धान (चावल) की गीली खेती (Waterlogged Paddy Fields) से मुख्य रूप से कौन सी हानिकारक ग्रीनहाउस गैस का उत्सर्जन होता है?',
+      options: ['कार्बन मोनोऑक्साइड', 'मीथेन (CH4)', 'सल्फर डाइऑक्साइड', 'क्लोरोफ्लोरोकार्बन'],
+      correctIndex: 1,
+      explanation: 'धान के खेतों में पानी भरा होने के कारण वहाँ ऑक्सीजन की कमी हो जाती है, जिससे एनारोबिक बैक्टीरिया सक्रिय हो जाते हैं और भारी मात्रा में मीथेन (CH4) गैस उत्पन्न करते हैं।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-24',
+      text: 'Subject Test: दूध प्रसंस्करण और प्रयोगशालाओं में दूध के वसा प्रतिशत (Fat Percentage) का निर्धारण करने के लिए किस मानक वैज्ञानिक विधि का उपयोग किया जाता है?',
+      options: ['गार्बर विधि (Gerber Method)', 'ब्यूरेट विधि', 'केल्डाहल विधि', 'क्रोमैटोग्राफी'],
+      correctIndex: 0,
+      explanation: 'दूध में वसा का प्रतिशत जांचने के लिए "गार्बर विधि" का उपयोग किया जाता है जिसमें अमिल अल्कोहल और सल्फ्यूरिक एसिड का उपयोग करके ब्यूटायरोमीटर में वसा को अलग किया जाता है।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    },
+    {
+      id: 'q-hssc-sub-agriculture-2-25',
+      text: 'Subject Test: कोल्ड स्टोरेज या भंडारण गृहों में वेंटिलेशन की कमी के कारण आलू के अंदरूनी भाग में ऑक्सीजन की कमी से होने वाले कायिक विकार (Physiological Disorder) को क्या कहते हैं?',
+      options: ['आलू का अगेती झुलसा', 'ब्लैक हार्ट (Black Heart of Potato)', 'स्कैब रोग', 'रिंग रॉट'],
+      correctIndex: 1,
+      explanation: 'जब आलुओं को बिना वेंटिलेशन (हवा) के अत्यधिक ठूंसकर रखा जाता है, तो अंदरूनी ऊतकों को पर्याप्त ऑक्सीजन नहीं मिल पाती जिससे वे मृत होकर काले पड़ जाते हैं। इसे "ब्लैक हार्ट" कहते हैं।',
+      sectionName: 'Agriculture & Animal Husbandry',
+      testId: 'test-hssc-police-sub-agriculture-2'
+    }
+  ],
+  'test-hssc-police-sub-computer-1': [
+    {
+      id: 'q-hssc-sub-computer-1-1',
+      text: 'Subject Test: 19वीं शताब्दी में डिफरेंस इंजन और एनालिटिकल इंजन की रूपरेखा तैयार करने के कारण किसे "कंप्यूटर का जनक" (Father of Computer) माना जाता है?',
+      options: ['एलन ट्यूरिंग', 'चार्ल्स बैबेज', 'जॉन वॉन न्यूमैन', 'ब्लेज पास्कल'],
+      correctIndex: 1,
+      explanation: 'चार्ल्स बैबेज ने 1822 में डिफरेंस इंजन और बाद में एनालिटिकल इंजन का आविष्कार किया, जो आधुनिक कंप्यूटरों के पूर्वज माने जाते हैं, इसलिए उन्हें कंप्यूटर का जनक कहा जाता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-2',
+      text: 'Subject Test: इंटरनेट पर सर्वर और क्लाइंट के बीच फाइलों को अपलोड या डाउनलोड करने के लिए किस विशिष्ट संचार प्रोटोकॉल का उपयोग किया जाता है?',
+      options: ['HTTP', 'SMTP', 'FTP (File Transfer Protocol)', 'DNS'],
+      correctIndex: 2,
+      explanation: 'FTP (फाइल ट्रांसफर प्रोटोकॉल) का उपयोग इंटरनेट या टीसीपी/आईपी नेटवर्क पर एक कंप्यूटर से दूसरे कंप्यूटर में फाइलों का आदान-प्रदान करने के लिए किया जाता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-3',
+      text: 'Subject Test: कंप्यूटर की मुख्य कार्यकारी मेमोरी रैंडम एक्सेस मेमोरी (RAM) को किस श्रेणी की मेमोरी में वर्गीकृत किया जाता है?',
+      options: ['गैर-वाष्पशील (Non-volatile Memory)', 'वाष्पशील / अस्थिर मेमोरी (Volatile Memory)', 'स्थायी द्वितीयक मेमोरी', 'केवल-पठन मेमोरी (ROM)'],
+      correctIndex: 1,
+      explanation: 'रैम (RAM) एक अस्थिर/वोलाटाइल मेमोरी है। इसका अर्थ है कि कंप्यूटर बंद होने या बिजली कट जाने पर इसमें संग्रहित सारा डेटा तुरंत नष्ट हो जाता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-4',
+      text: 'Subject Test: एमएस वर्ड (MS Word) डॉक्यूमेंट में कार्य करते समय कर्सर को सीधे डॉक्यूमेंट के बिल्कुल अंत में ले जाने के लिए किस शॉर्टकट कुंजी का प्रयोग किया जाता है?',
+      options: ['Ctrl + End', 'Shift + End', 'Alt + End', 'End Key'],
+      correctIndex: 0,
+      explanation: 'Ctrl + End दबाने से कर्सर पूरे वर्ड डॉक्यूमेंट के अंतिम शब्द/अक्षर पर चला जाता है। केवल End दबाने से कर्सर वर्तमान लाइन के अंत में जाता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-5',
+      text: 'Subject Test: कंप्यूटर सुरक्षा और नेटवर्क सुरक्षा में प्रयुक्त होने वाले "फ़ायरवॉल" (Firewall) का प्राथमिक कार्य क्या होता है?',
+      options: ['कंप्यूटर को वायरस से स्कैन करना', 'अनाधिकृत बाहरी पहुँच और संदिग्ध ट्रैफिक को रोकना', 'डेटा का बैकअप लेना', 'कंप्यूटर की बूटिंग स्पीड बढ़ाना'],
+      correctIndex: 1,
+      explanation: 'फ़ायरवॉल एक सुरक्षा प्रणाली है जो आने वाले और जाने वाले नेटवर्क ट्रैफ़िक की निगरानी करती है और पूर्वनिर्धारित सुरक्षा नियमों के आधार पर अवांछित ट्रैफ़िक को रोकती है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-6',
+      text: 'Subject Test: टीसीपी/आईपी नेटवर्क में प्रयुक्त होने वाले इंटरनेट प्रोटोकॉल वर्जन 4 (IPv4) एड्रेस का कुल आकार कितने बिट्स (Bits) होता है?',
+      options: ['16 बिट्स', '32 बिट्स', '64 बिट्स', '128 बिट्स'],
+      correctIndex: 1,
+      explanation: 'IPv4 एड्रेस 32 बिट (4 बाइट) का होता है जिसे डॉटेड डेसिमल फॉर्मेट (जैसे 192.168.1.1) में दर्शाया जाता है। इससे लगभग 4.3 अरब यूनिक पते बन सकते हैं।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-7',
+      text: 'Subject Test: कंप्यूटर के विकास क्रम में किस पीढ़ी (Generation) के कंप्यूटरों में वैक्यूम ट्यूब और ट्रांजिस्टर के स्थान पर "एकीकृत परिपथ" (Integrated Circuits - IC) का प्रयोग किया गया था?',
+      options: ['दूसरी पीढ़ी', 'तीसरी पीढ़ी', 'चौथी पीढ़ी', 'पांचवीं पीढ़ी'],
+      correctIndex: 1,
+      explanation: 'तीसरी पीढ़ी (1964-1971) के कंप्यूटरों में जैक किल्बी द्वारा आविष्कृत इंटीग्रेटेड सर्किट (IC) चिप्स का उपयोग किया गया था जिससे कंप्यूटर छोटे, तेज और अधिक विश्वसनीय हो गए।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-8',
+      text: 'Subject Test: कंप्यूटर बाइनरी सिस्टम में एक बाइट (Byte) कुल कितने बिट्स (Bits) के संयोजन से मिलकर बनता है?',
+      options: ['4 बिट्स', '8 बिट्स', '16 बिट्स', '32 बिट्स'],
+      correctIndex: 1,
+      explanation: '1 बाइट में 8 बिट्स होते हैं। 1 बाइट कंप्यूटर में एक सिंगल कैरेक्टर (अक्षर या अंक) को स्टोर करने की मूल इकाई है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-9',
+      text: 'Subject Test: सॉफ्टवेयर इंजीनियरिंग में किसी प्रोग्राम/कोड के भीतर मौजूद तार्किक या सिंटैक्स त्रुटियों (Errors/Bugs) को ढूंढने और उन्हें हल करने की प्रक्रिया क्या कहलाती है?',
+      options: ['कम्पाइलिंग', 'डिबगिंग (Debugging)', 'एक्जीक्यूटिंग', 'पैचिंग'],
+      correctIndex: 1,
+      explanation: 'सॉफ्टवेयर प्रोग्रामों में गलतियों (बग्स) को ढूंढने, उनका विश्लेषण करने और उन्हें ठीक करने की पूरी प्रक्रिया को डिबगिंग (Debugging) कहा जाता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-10',
+      text: 'Subject Test: एमएस एक्सेल (MS Excel) में वर्कशीट की किसी सेल के भीतर गणितीय फॉर्मूला दर्ज करने के लिए सबसे पहले किस चिह्न का प्रयोग करना अनिवार्य है?',
+      options: ['प्लस (+)', 'डॉलर ($)', 'बराबर (=)', 'ऐट द रेट (@)'],
+      correctIndex: 2,
+      explanation: 'एक्सेल में कोई भी सूत्र/फॉर्मूला (जैसे =SUM, =AVERAGE) हमेशा बराबर (=) के चिह्न से शुरू होता है। इसके बिना एक्सेल उसे सामान्य टेक्स्ट मान लेता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-11',
+      text: 'Subject Test: कंप्यूटर सिस्टम के भीतर सभी डेटा प्रोसेसिंग, तार्किक गणनाओं और नियंत्रण कार्यों को करने के कारण किसे कंप्यूटर का "मस्तिष्क" (Brain) कहा जाता है?',
+      options: ['मदरबोर्ड', 'रैम (RAM)', 'CPU (Central Processing Unit)', 'हार्ड डिस्क'],
+      correctIndex: 2,
+      explanation: 'सेंट्रल प्रोसेसिंग यूनिट (CPU) को कंप्यूटर का मस्तिष्क कहा जाता है क्योंकि यह सभी निर्देशों को डिकोड और निष्पादित (execute) करता है तथा अन्य हार्डवेयर घटकों को नियंत्रित करता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-12',
+      text: 'Subject Test: वर्ष 1989 में सर्न (CERN) प्रयोगशाला में कार्य करते हुए वर्ल्ड वाइड वेब (WWW) का आविष्कार करने वाले वैज्ञानिक कौन थे?',
+      options: ['टिम बर्नर्स-ली (Tim Berners-Lee)', 'बिल गेट्स', 'स्टीव जॉब्स', 'विंट सर्फ'],
+      correctIndex: 0,
+      explanation: 'ब्रिटिश वैज्ञानिक सर टिम बर्नर्स-ली ने 1989 में वर्ल्ड वाइड वेब (WWW) का आविष्कार किया था। उन्होंने पहला वेब सर्वर और पहला वेब ब्राउज़र भी बनाया था।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-13',
+      text: 'Subject Test: निम्नलिखित सॉफ्टवेयर प्रणालियों में से कौन सा एक कंप्यूटर का ऑपरेटिंग सिस्टम (OS) नहीं है?',
+      options: ['लिनक्स (Linux)', 'एमएस विंडोज', 'ओरेकल (Oracle)', 'मैक ओएस (macOS)'],
+      correctIndex: 2,
+      explanation: 'लिनक्स, विंडोज और मैक ओएस ऑपरेटिंग सिस्टम हैं, जबकि ओरेकल (Oracle) एक प्रसिद्ध रिलेशनल डेटाबेस मैनेजमेंट सिस्टम (RDBMS) सॉफ्टवेयर है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-14',
+      text: 'Subject Test: इंटरनेट पर किसी विशिष्ट वेब पेज या रिसोर्स के पते को दर्शाने वाले शब्द "यूआरएल" (URL) का पूर्ण रूप क्या होता है?',
+      options: ['Unique Resource Locator', 'Uniform Resource Locator', 'Universal Route Link', 'User Registry List'],
+      correctIndex: 1,
+      explanation: 'URL का पूर्ण रूप "Uniform Resource Locator" है। यह इंटरनेट पर किसी डॉक्यूमेंट, इमेज या वेब पेज का विशिष्ट पता होता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-15',
+      text: 'Subject Test: कंप्यूटर के भीतर माइक्रोप्रोसेसर और रैम के बीच तेज़ डेटा ट्रांसमिशन के लिए उपयोग होने वाली आईसी (IC) चिप्स मुख्यतः किस अर्धचालक तत्व की बनी होती हैं?',
+      options: ['जर्मेनियम', 'सिलिकॉन (Silicon)', 'तांबा', 'लोहा'],
+      correctIndex: 1,
+      explanation: 'आईसी (इंटीग्रेटेड सर्किट) चिप्स सिलिकॉन की बनी होती हैं जो एक सेमीकंडक्टर (अर्धचालक) है। यह विद्युत प्रवाह को नियंत्रित करने में अत्यधिक कुशल होता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-16',
+      text: 'Subject Test: ग्राफिक्स और यूआई के निचले हिस्से में दिखाई देने वाली वह क्षैतिज पट्टी (Horizontal Bar) क्या कहलाती है जिस पर वर्तमान में चल रहे ऐप्स और स्टार्ट मेन्यू बटन दिखाई देते हैं?',
+      options: ['मेन्यू बार', 'टास्कबार (Taskbar)', 'स्टेटस बार', 'स्क्रॉल बार'],
+      correctIndex: 1,
+      explanation: 'टास्कबार डेस्कटॉप के निचले भाग में स्थित होता है। इसमें स्टार्ट बटन, क्विक लॉन्च आइकॉन, एक्टिव विंडोज बटन और सिस्टम ट्रे (समय व दिनांक सहित) होते हैं।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-17',
+      text: 'Subject Test: निम्नलिखित कंप्यूटर हार्डवेयर उपकरणों में से कौन सा एक विशुद्ध रूप से "इनपुट डिवाइस" (Input Device) का उदाहरण है?',
+      options: ['प्लॉटर', 'प्रिंटर', 'स्कैनर', 'मॉनिटर'],
+      correctIndex: 2,
+      explanation: 'स्कैनर एक इनपुट डिवाइस है जो भौतिक कागजातों या तस्वीरों को डिजिटल छवि में बदलकर कंप्यूटर में भेजता है। प्रिंटर, प्लॉटर और मॉनिटर आउटपुट डिवाइस हैं।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-18',
+      text: 'Subject Test: रिलेशनल डेटाबेस मैनेजमेंट सिस्टम (RDBMS) में डेटा को व्यवस्थित करने, संशोधित करने और क्वेरी करने के लिए प्रयुक्त होने वाली कंप्यूटर भाषा "एसक्यूएल" (SQL) का पूर्ण रूप क्या है?',
+      options: ['Simple Query Language', 'Structured Query Language', 'Sequential Queue Link', 'System Query Logic'],
+      correctIndex: 1,
+      explanation: 'SQL का पूर्ण रूप "Structured Query Language" है। यह रिलेशनल डेटाबेस में डेटा जोड़ने, खोजने, अपडेट करने और हटाने की मानक भाषा है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-19',
+      text: 'Subject Test: किसी छोटे भौगोलिक क्षेत्र (जैसे घर, कार्यालय या स्कूल की बिल्डिंग) में कंप्यूटरों को आपस में जोड़ने वाले लोकल नेटवर्क "लैन" (LAN) का पूर्ण रूप क्या है?',
+      options: ['Local Area Network', 'Logical Access Node', 'Long Area Network', 'Linear Array Network'],
+      correctIndex: 0,
+      explanation: 'LAN का पूर्ण रूप "Local Area Network" है। यह सीमित दूरी के भीतर कंप्यूटरों और प्रिंटरों को जोड़ने के लिए ईथरनेट या वाई-फाई का उपयोग करता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-20',
+      text: 'Subject Test: कंप्यूटर इतिहास में अत्यधिक तीव्र गति से गणना करने वाले विश्व के प्रथम सफल व्यवसायिक सुपर कंप्यूटर "क्रे-1" (Cray-1) का निर्माण किस वर्ष किया गया था?',
+      options: ['1971 में', '1976 में', '1981 में', '1989 में'],
+      correctIndex: 1,
+      explanation: 'क्रे-1 (Cray-1) सुपरकंप्यूटर का निर्माण सेमूर क्रे की कंपनी द्वारा 1976 में किया गया था। यह अपनी विशिष्ट बेलनाकार डिज़ाइन और तीव्र वेक्टर प्रोसेसिंग के लिए प्रसिद्ध था।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-21',
+      text: 'Subject Test: कंप्यूटर में अक्षरों और प्रतीकों को बाइनरी कोड में बदलने के लिए प्रयुक्त होने वाले "ASCII" का पूर्ण रूप क्या है?',
+      options: ['American Standard Code for Information Interchange', 'American System Code for International Integration', 'Advanced Standard Code for Internet Interface', 'Array Standard Character Information Index'],
+      correctIndex: 0,
+      explanation: 'ASCII का पूर्ण रूप "American Standard Code for Information Interchange" है। यह अंग्रेजी के अक्षरों, अंकों और विशेष प्रतीकों को 7-बिट बाइनरी नंबरों में कोड करने की एक मानक प्रणाली है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-22',
+      text: 'Subject Test: एमएस पावरपॉइंट (MS PowerPoint) में नया ब्लैंक प्रेजेंटेशन (New Presentation) तुरंत ओपन करने की शॉर्टकट कुंजी क्या है?',
+      options: ['Ctrl + M', 'Ctrl + N', 'Ctrl + O', 'Ctrl + P'],
+      correctIndex: 1,
+      explanation: 'Ctrl + N दबाने से पावरपॉइंट में एक नया खाली प्रेजेंटेशन खुलता है। Ctrl + M दबाने से वर्तमान प्रेजेंटेशन में एक नई स्लाइड (New Slide) जुड़ती है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-23',
+      text: 'Subject Test: इंटरनेट से जुड़े प्रत्येक कंप्यूटर और इलेक्ट्रॉनिक उपकरण की विशिष्ट पहचान करने वाले "आईपी एड्रेस" (IP Address) का पूर्ण रूप क्या है?',
+      options: ['Internet Protocol', 'Intranet Path', 'Internal Program', 'Information Port'],
+      correctIndex: 0,
+      explanation: 'IP का पूर्ण रूप "Internet Protocol" है। यह एक यूनिक न्यूमेरिकल लेबल होता है जो नेटवर्क में जुड़े उपकरणों को प्रदान किया जाता है ताकि वे एक-दूसरे से संचार कर सकें।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-24',
+      text: 'Subject Test: कंप्यूटर स्क्रीन पर दिखाई देने वाली छवियों की तीक्ष्णता और स्पष्टता निर्धारित करने वाली पिक्सेल (Pixels) की कुल संख्या को क्या कहा जाता है?',
+      options: ['स्क्रीन डेंसिटी', 'स्क्रीन रेजोल्यूशन (Screen Resolution)', 'रिफ्रेश रेट', 'रेश्यो आस्पेक्ट'],
+      correctIndex: 1,
+      explanation: 'स्क्रीन रेजोल्यूशन से पता चलता है कि स्क्रीन पर क्षैतिज (horizontal) और लंबवत (vertical) रूप से कितने पिक्सल हैं (जैसे 1920 x 1080)। पिक्सल की संख्या जितनी अधिक होगी, तस्वीर उतनी ही स्पष्ट दिखेगी।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    },
+    {
+      id: 'q-hssc-sub-computer-1-25',
+      text: 'Subject Test: कंप्यूटर नेटवर्क इतिहास में वर्ष 1971 में पहला नेटवर्क ईमेल भेजने और ईमेल पते में "@" (एट द रेट) प्रतीक का आविष्कार करने वाले व्यक्ति कौन थे?',
+      options: ['रे टॉमलिंसन (Ray Tomlinson)', 'विंट सर्फ', 'टिम बर्नर्स-ली', 'बिल गेट्स'],
+      correctIndex: 0,
+      explanation: 'रे टॉमलिंसन ने अर्पानेट (ARPANET) नेटवर्क पर पहला ईमेल भेजा था और उन्होंने यूजरनाम को होस्ट कंप्यूटर से अलग करने के लिए "@" प्रतीक को चुना था, जो आज भी ईमेल का मानक प्रारूप है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-1'
+    }
+  ],
+  'test-hssc-police-sub-computer-2': [
+    {
+      id: 'q-hssc-sub-computer-2-1',
+      text: 'Subject Test: कंप्यूटर कैबिनेट के भीतर स्थित वह मुख्य सर्किट बोर्ड क्या कहलाता है जिसके माध्यम से सीपीयू, रैम, हार्ड ड्राइव और अन्य सभी घटक आपस में संचार करते हैं?',
+      options: ['सिस्टम बस', 'मदरबोर्ड (Motherboard)', 'कंट्रोल यूनिट', 'पावर सप्लाई'],
+      correctIndex: 1,
+      explanation: 'मदरबोर्ड कंप्यूटर का मुख्य प्रिंटेड सर्किट बोर्ड (PCB) होता है। यह सीपीयू, मेमोरी और अन्य सभी इनपुट/आउटपुट पेरिफेरल्स को जोड़ने के लिए कनेक्टर और स्लॉट प्रदान करता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-2',
+      text: 'Subject Test: इंटरनेट वेब पेज बनाने और उन्हें वेब ब्राउज़र पर प्रदर्शित करने के लिए उपयोग होने वाली भाषा "एचटीएमएल" (HTML) का पूर्ण रूप क्या है?',
+      options: ['Hyperlink Text Markup Language', 'Hyper Text Markup Language', 'High Transfer Machine Language', 'Home Tool Markup Language'],
+      correctIndex: 1,
+      explanation: 'HTML का पूर्ण रूप "Hyper Text Markup Language" है। यह वेब पेजों का ढांचा और लेआउट तैयार करने वाली एक मानक मार्कअप भाषा है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-3',
+      text: 'Subject Test: कंप्यूटर मेमोरी के संदर्भ में रैम (RAM) और रोम (ROM) के बीच सबसे बुनियादी अंतर क्या है?',
+      options: ['रैम आकार में बड़ी होती है', 'रैम अस्थिर (volatile) है और कंप्यूटर बंद होने पर डेटा खो देती है, जबकि रोम गैर-वाष्पशील (non-volatile) है', 'रोम में डेटा लिखना आसान है', 'रैम केवल बूटिंग के समय काम आती है'],
+      correctIndex: 1,
+      explanation: 'रैम अस्थिर (volatile) मेमोरी है जो वर्तमान में उपयोग हो रहे डेटा को अस्थायी रूप से रखती है, जबकि रोम (Read Only Memory) गैर-वाष्पशील है जिसमें कंप्यूटर को चालू (बूट) करने वाले बुनियादी निर्देश (BIOS) स्थायी रूप से लिखे होते हैं।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-4',
+      text: 'Subject Test: एमएस एक्सेल (MS Excel) में काम करते समय पूरी वर्कशीट के सभी सेल्स (All Cells) को एक साथ सेलेक्ट करने की शॉर्टकट कुंजी क्या है?',
+      options: ['Ctrl + A', 'Ctrl + S', 'Ctrl + Space', 'Shift + A'],
+      correctIndex: 0,
+      explanation: 'Ctrl + A दबाने से एक्सेल वर्कशीट की सभी सेल्स सेलेक्ट हो जाती हैं। एमएस वर्ड और पावरपॉइंट में भी यह पूरे टेक्स्ट/ऑब्जेक्ट्स को सेलेक्ट करने के लिए प्रयुक्त होता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-5',
+      text: 'Subject Test: कंप्यूटर को नुकसान पहुँचाने, डेटा चुराने या जासूसी करने के उद्देश्य से बनाए गए दुर्भावनापूर्ण प्रोग्रामों (जैसे वायरस, ट्रोजन हॉर्स, रैनसमवेयर) को सामूहिक रूप से क्या कहा जाता है?',
+      options: ['एंटीवायरस', 'मैलवेयर (Malware)', 'फ़ायरवॉल', 'फ़र्मवेयर'],
+      correctIndex: 1,
+      explanation: 'मैलवेयर का पूर्ण रूप "Malicious Software" (दुर्भावनापूर्ण सॉफ़्टवेयर) है। इसके अंतर्गत वायरस, वॉर्म, ट्रोजन, रैनसमवेयर, स्पाईवेयर और एडवेयर जैसे हानिकारक कोड आते हैं।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-6',
+      text: 'Subject Test: भविष्य की नेटवर्क आवश्यकताओं को पूरा करने के लिए तैयार किए गए इंटरनेट प्रोटोकॉल वर्जन 6 (IPv6) एड्रेस का आकार कितने बिट्स (Bits) होता है?',
+      options: ['32 बिट्स', '64 बिट्स', '128 बिट्स (Bits)', '256 बिट्स'],
+      correctIndex: 2,
+      explanation: 'IPv6 एड्रेस 128 बिट का होता है जिसे हेक्साडेसिमल अंकों के 8 समूहों में दर्शाया जाता है (जैसे 2001:db8::ff00:42:8329)। यह IPv4 की तुलना में खरबों गुना अधिक पते प्रदान करता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-7',
+      text: 'Subject Test: कंप्यूटर की पांचवीं पीढ़ी (Fifth Generation) के कंप्यूटरों के विकास का मुख्य तकनीकी आधार क्या माना जाता है?',
+      options: ['ट्रांजिस्टर', 'कृत्रिम बुद्धिमत्ता (Artificial Intelligence)', 'वेरी लार्ज स्केल इंटीग्रेशन', 'वैक्यूम ट्यूब'],
+      correctIndex: 1,
+      explanation: 'पांचवीं पीढ़ी के कंप्यूटरों में कृत्रिम बुद्धिमत्ता (AI), वॉयस रिकग्निशन, मशीन लर्निंग और क्वांटम कंप्यूटिंग जैसी तकनीकों का उपयोग किया जा रहा है ताकि वे इंसानों की तरह सोच और समझ सकें।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-8',
+      text: 'Subject Test: कंप्यूटर डेटा स्टोरेज और प्रोसेसिंग के संदर्भ में एक "निबल" (Nibble) कुल कितने बिट्स के समूह के बराबर होता है?',
+      options: ['2 बिट्स', '4 बिट्स (Bits)', '8 बिट्स', '16 बिट्स'],
+      correctIndex: 1,
+      explanation: '1 निबल में 4 बिट्स होते हैं। यह आधा बाइट (Half Byte) के बराबर होता है। इसका उपयोग मुख्य रूप से हेक्साडेसिमल कोडिंग में किया जाता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-9',
+      text: 'Subject Test: ऑपरेटिंग सिस्टम का वह केंद्रीय कोर (Central Core) भाग क्या कहलाता है जो कंप्यूटर हार्डवेयर और रनिंग ऐप्स/यूजर के बीच मध्यस्थ के रूप में सीधे काम करता है?',
+      options: ['शेल (Shell)', 'कर्नेल (Kernel)', 'ड्राइवर', 'रजिस्टर'],
+      correctIndex: 1,
+      explanation: 'कर्नेल ऑपरेटिंग सिस्टम का मुख्य हिस्सा है जो हमेशा मेमोरी में रहता है। यह सीपीयू शेड्यूलिंग, मेमोरी मैनेजमेंट और इनपुट/आउटपुट डिवाइसेज के नियंत्रण का प्रबंधन करता है। शेल यूजर इंटरफेस प्रदान करता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-10',
+      text: 'Subject Test: एमएस वर्ड (MS Word) डॉक्यूमेंट में किसी पैराग्राफ या पूरे डॉक्यूमेंट में वर्तनी और व्याकरण की अशुद्धियों को जांचने (Spelling and Grammar Check) की शॉर्टकट कुंजी क्या है?',
+      options: ['F3', 'F5', 'F7 (Function Key)', 'F9'],
+      correctIndex: 2,
+      explanation: 'एमएस वर्ड में F7 कुंजी दबाने से "Spelling and Grammar" का डायलॉग बॉक्स खुलता है, जो स्पेलिंग की गलतियों को लाल रंग से और व्याकरण की गलतियों को नीले रंग से रेखांकित करता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-11',
+      text: 'Subject Test: सीपीयू (CPU) के भीतर स्थित वह सबसे तेज़ काम करने वाली और अत्यंत छोटी स्टोरेज यूनिट क्या कहलाती है जो गणना के समय डेटा को तुरंत होल्ड करती है?',
+      options: ['रैम (RAM)', 'कैश मेमोरी (Cache)', 'रजिस्टर (Register)', 'रोम (ROM)'],
+      correctIndex: 2,
+      explanation: 'रजिस्टर सीपीयू के भीतर स्थित सबसे तेज़ और सबसे छोटी मेमोरी होती है। इसमें वर्तमान में प्रोसेस किए जा रहे निर्देशों और ऑपरेंड्स को रखा जाता है। सीपीयू गति के मामले में रजिस्टर > कैश > रैम होती है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-12',
+      text: 'Subject Test: इंटरनेट ब्राउज़र में किसी वेबसाइट को खोलने पर सबसे पहले दिखाई देने वाले मुख्य पृष्ठ (First/Starting Page) को किस तकनीकी नाम से जाना जाता है?',
+      options: ['वेब पेज', 'होम पेज (Home Page)', 'इंडेक्स पेज', 'बैक पेज'],
+      correctIndex: 1,
+      explanation: 'किसी वेबसाइट के मुख्य या परिचयात्मक पृष्ठ को होम पेज कहा जाता है। यह वेबसाइट के अन्य हिस्सों और लिंक के लिए प्रवेश द्वार का काम करता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-13',
+      text: 'Subject Test: निम्नलिखित कंप्यूटर डेटाबेस सॉफ्टवेयरों में से कौन सा एक ओपन-सोर्स रिलेशनल डेटाबेस मैनेजमेंट सिस्टम (RDBMS) का प्रमुख उदाहरण है?',
+      options: ['MS Access', 'MySQL (Open source)', 'MongoDB', 'Redis'],
+      correctIndex: 1,
+      explanation: 'MySQL एक बहुत ही लोकप्रिय ओपन-सोर्स रिलेशनल डेटाबेस मैनेजमेंट सिस्टम है जो वेब डेवलपमेंट (जैसे PHP/WordPress) में बड़े पैमाने पर उपयोग होता है। MS Access एक प्रोप्रायटरी सॉफ्टवेयर है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-14',
+      text: 'Subject Test: इंटरनेट संचार में अंग्रेजी जैसे शब्दों वाले डोमेन नाम (जैसे google.com) को कंप्यूटर द्वारा समझे जाने वाले संख्यात्मक आईपी पते में अनुवादित करने वाले सिस्टम "DNS" का पूर्ण रूप क्या है?',
+      options: ['Domain Name System', 'Data Network Service', 'Digital Node Server', 'Directory Name Schema'],
+      correctIndex: 0,
+      explanation: 'DNS का पूर्ण रूप "Domain Name System" है। यह इंटरनेट की फोनबुक की तरह काम करता है, जो डोमेन नामों का आईपी पते (जैसे 142.250.190.46) में मिलान करता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-15',
+      text: 'Subject Test: कंप्यूटर मेमोरी के मापन के संदर्भ में 1024 बाइट्स (Bytes) का समूह निम्नलिखित में से किसके बराबर होता है?',
+      options: ['1 मेगाबाइट (MB)', '1 किलोबाइट (KB)', '1 गीगाबाइट (GB)', '1 टेराबाइट (TB)'],
+      correctIndex: 1,
+      explanation: '1024 बाइट्स मिलकर 1 किलोबाइट (KB) बनाते हैं। इसी प्रकार, 1024 KB = 1 MB, 1024 MB = 1 GB और 1024 GB = 1 TB होता है। यह बाइनरी सिस्टम (2^10) पर आधारित है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-16',
+      text: 'Subject Test: कंप्यूटर कीबोर्ड के सबसे ऊपरी भाग में स्थित F1 से F12 तक की कुंजियों को किस श्रेणी में रखा जाता है जो विशिष्ट प्रोग्रामों में अलग-अलग कमांड निष्पादित करती हैं?',
+      options: ['कंट्रोल कुंजियाँ', 'अल्फान्यूमेरिक कुंजियाँ', 'फंक्शन कुंजियाँ (Function Keys)', 'नेविगेशन कुंजियाँ'],
+      correctIndex: 2,
+      explanation: 'कीबोर्ड के सबसे ऊपर स्थित F1 से F12 कुंजियों को फंक्शन कुंजियाँ कहा जाता है। उदाहरण के लिए, F1 का उपयोग सहायता (Help) खोलने के लिए और F5 का उपयोग वेब पेज रिफ्रेश करने के लिए किया जाता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-17',
+      text: 'Subject Test: बड़े आकार के इंजीनियरिंग ब्लूप्रिंट, नक्शे और वास्तुकला डिज़ाइनों को उच्च सटीकता और गुणवत्ता के साथ कागज़ पर प्रिंट करने के लिए किस आउटपुट डिवाइस का उपयोग किया जाता है?',
+      options: ['प्लॉटर (Plotter)', 'थर्मल प्रिंटर', 'स्कैनर', 'प्रोजेक्टर'],
+      correctIndex: 0,
+      explanation: 'प्लॉटर एक विशेष प्रकार का आउटपुट डिवाइस है जो पेन या पेंसिल की मदद से बड़े पैमाने पर रेखाचित्र, नक्शे और ब्लूप्रिंट प्रिंट करता है। यह साधारण प्रिंटर से कहीं अधिक सटीक होता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-18',
+      text: 'Subject Test: कंप्यूटर पर काम करते समय बिजली चले जाने पर कंप्यूटर को अचानक बंद होने से बचाने और कुछ समय तक पावर बैकअप देने वाले उपकरण "UPS" का पूर्ण रूप क्या है?',
+      options: ['Universal Power Supply', 'Uninterruptible Power Supply', 'Unified Power System', 'User Power Saver'],
+      correctIndex: 1,
+      explanation: 'UPS का पूर्ण रूप "Uninterruptible Power Supply" है। यह अपनी आंतरिक बैटरी की मदद से बिजली कटने के तुरंत बाद कंप्यूटर को पावर देता है ताकि यूजर अपने काम को सेव कर कंप्यूटर को सुरक्षित बंद कर सके।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-19',
+      text: 'Subject Test: इंटरनेट पर यूजर के डेटा को सुरक्षित रखने, उसकी लोकेशन छिपाने और इंटरनेट ट्रैफिक को एन्क्रिप्ट करने के लिए प्रयुक्त होने वाले नेटवर्क "VPN" का पूर्ण रूप क्या है?',
+      options: ['Virtual Private Network', 'Verified Public Network', 'Variable Protocol Node', 'Virtual Port Number'],
+      correctIndex: 0,
+      explanation: 'VPN का पूर्ण रूप "Virtual Private Network" है। यह असुरक्षित पब्लिक नेटवर्क (जैसे फ्री वाई-फाई) पर एक सुरक्षित, एन्क्रिप्टेड टनल बनाता है जिससे यूजर की ब्राउज़िंग गोपनीय रहती है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-20',
+      text: 'Subject Test: भारत में स्वदेशी सुपर कंप्यूटर विकास कार्यक्रम के अंतर्गत सी-डैक (C-DAC) पुणे द्वारा वर्ष 1991 में विकसित देश का पहला सुपर कंप्यूटर कौन सा था?',
+      options: ['परम 8000 (PARAM 8000)', 'अनुराग', 'आदित्य', 'मिहिर'],
+      correctIndex: 0,
+      explanation: 'भारत का पहला सुपरकंप्यूटर "परम 8000" था, जिसे विजय भटकर के नेतृत्व में सी-डैक (C-DAC) पुणे द्वारा विकसित किया गया था। इसे वर्ष 1991 में लॉन्च किया गया था।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-21',
+      text: 'Subject Test: कंप्यूटर विज्ञान और सॉफ्टवेयर कोडिंग में किसी प्रोग्राम के भीतर आने वाली तार्किक त्रुटि (Logical Error) को किस आम नाम से जाना जाता है?',
+      options: ['ग्लिच', 'बग (Bug)', 'क्रैश', 'स्पैम'],
+      correctIndex: 1,
+      explanation: 'कंप्यूटर प्रोग्राम में किसी भी तार्किक, सिंटैक्स या रनटाइम एरर को "बग" (Bug) कहा जाता है। इसे दूर करने की प्रक्रिया डिबगिंग (debugging) कहलाती है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-22',
+      text: 'Subject Test: कंप्यूटर शब्दावली में यदि स्क्रीन पर दिखाई देने वाला डिजिटल आउटपुट "सॉफ्ट कॉपी" है, तो कागज़ पर प्रिंट किए गए भौतिक आउटपुट को क्या कहते हैं?',
+      options: ['डुप्लीकेट कॉपी', 'हार्ड कॉपी (Hard Copy)', 'स्थायी कॉपी', 'प्रिंटेड रिकॉर्ड'],
+      correctIndex: 1,
+      explanation: 'कागज पर मुद्रित (printed) आउटपुट को "हार्ड कॉपी" कहा जाता है जिसे छुआ जा सकता है और फाइल किया जा सकता है। कंप्यूटर स्क्रीन पर दिखने वाले अस्थिर डिजिटल रूप को "सॉफ्ट कॉपी" कहते हैं।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-23',
+      text: 'Subject Test: इंटरनेट वेब ब्राउज़र (जैसे क्रोम, फ़ायरफ़ॉक्स) में वर्तमान में खुले हुए वेब पेज को दोबारा लोड (Reload / Refresh) करने की मानक शॉर्टकट कुंजी क्या है?',
+      options: ['F1', 'F3', 'F5 (Function Key)', 'F8'],
+      correctIndex: 2,
+      explanation: 'F5 कुंजी दबाने से ब्राउज़र वर्तमान वेब पेज को सर्वर से दोबारा लोड (रिफ्रेश) करता है। इसके अलावा Ctrl + R का प्रयोग भी रिफ्रेश के लिए किया जा सकता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-24',
+      text: 'Subject Test: ब्लूटूथ (Bluetooth) तकनीक द्वारा सीमित दूरी (लगभग 10 मीटर) के भीतर विभिन्न व्यक्तिगत उपकरणों (फोन, हेडफोन, स्मार्टवॉच) को जोड़ने वाला नेटवर्क किस प्रकार के नेटवर्क का उदाहरण है?',
+      options: ['LAN', 'MAN', 'PAN (Personal Area Network)', 'WAN'],
+      correctIndex: 2,
+      explanation: 'PAN का पूर्ण रूप "Personal Area Network" है। यह किसी व्यक्ति के आस-पास के निजी उपकरणों (जैसे ब्लूटूथ हेडफोन और फोन) को आपस में जोड़ने वाला लघु नेटवर्क है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    },
+    {
+      id: 'q-hssc-sub-computer-2-25',
+      text: 'Subject Test: गूगल क्रोम ब्राउज़र में इंटरनेट ब्राउज़िंग हिस्ट्री और कुकीज़ को सेव किए बिना पूर्णतः निजी रूप से ब्राउज़ करने के लिए "इन्कॉग्निटो विंडो" (Incognito Window) खोलने की शॉर्टकट कुंजी क्या है?',
+      options: ['Ctrl + N', 'Ctrl + T', 'Ctrl + Shift + N', 'Ctrl + Shift + P'],
+      correctIndex: 2,
+      explanation: 'गूगल क्रोम में Ctrl + Shift + N दबाने से नया इन्कॉग्निटो (प्राइवेट) मोड खुलता है। मोज़िला फ़ायरफ़ॉक्स में इसी कार्य के लिए Ctrl + Shift + P (प्राइवेट विंडो) का उपयोग किया जाता है।',
+      sectionName: 'Computer Knowledge',
+      testId: 'test-hssc-police-sub-computer-2'
+    }
+  ],
+  'test-hssc-police-sub-general-studies-1': [
+    {
+      id: 'q-hssc-sub-gs-1-1',
+      text: 'Subject Test: भारत के संविधान के नीति निदेशक तत्वों (DPSP) के अंतर्गत कौन सा अनुच्छेद देश के सभी नागरिकों के लिए "समान नागरिक संहिता" (Uniform Civil Code) स्थापित करने की बात करता है?',
+      options: ['अनुच्छेद 39A', 'अनुच्छेद 40', 'अनुच्छेद 44', 'अनुच्छेद 48'],
+      correctIndex: 2,
+      explanation: 'भारतीय संविधान का अनुच्छेद 44 राज्य को पूरे भारत में नागरिकों के लिए एक समान नागरिक संहिता लागू करने का निर्देश देता है। यह भाग IV (नीति निदेशक तत्व) में वर्णित है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-2',
+      text: 'Subject Test: भौतिक विज्ञान में प्रयुक्त होने वाली खगोलीय दूरी की इकाई "प्रकाश वर्ष" (Light Year) का वास्तविक अर्थ क्या है?',
+      options: ['एक वर्ष में पृथ्वी द्वारा तय की गई दूरी', 'प्रकाश द्वारा एक वर्ष में निर्वात (Vacuum) में तय की गई दूरी', 'सूर्य से पृथ्वी तक प्रकाश पहुँचने में लगा समय', 'प्रकाश की तरंग दैर्ध्य का मापन'],
+      correctIndex: 1,
+      explanation: 'प्रकाश वर्ष दूरी का मात्रक है। चूंकि प्रकाश की गति लगभग 3 लाख किमी/सेकंड होती है, इसलिए वह एक वर्ष में निर्वात में जितनी दूरी तय करता है, उसे 1 प्रकाश वर्ष (लगभग 9.46 ट्रिलियन किमी) कहते हैं।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-3',
+      text: 'Subject Test: प्राचीन सिंधु घाटी सभ्यता का विख्यात गोदीवाड़ा (Dockyard/बंदरगाह) नगर "लोथल" वर्तमान में भारत के किस राज्य में स्थित है?',
+      options: ['राजस्थान', 'हरियाणा', 'गुजरात', 'पंजाब'],
+      correctIndex: 2,
+      explanation: 'लोथल गुजरात के भाल क्षेत्र में भोगवा नदी के किनारे स्थित हड़प्पा कालीन गोदीवाड़ा (बंदरगाह) था। इसकी खोज 1954 में एस.आर. राव ने की थी।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-4',
+      text: 'Subject Test: भारत में वन्यजीवों के संरक्षण और बाघों की घटती संख्या को रोकने के लिए "प्रोजेक्ट टाइगर" (Project Tiger) किस वर्ष शुरू किया गया था?',
+      options: ['1970 में', '1973 में', '1980 में', '1986 में'],
+      correctIndex: 1,
+      explanation: 'बाघों के संरक्षण के लिए भारत सरकार द्वारा 1 अप्रैल 1973 को जिम कॉर्बेट नेशनल पार्क से "प्रोजेक्ट टाइगर" की शुरुआत की गई थी। इसके पहले निदेशक कैलाश सांखला थे।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-5',
+      text: 'Subject Test: मानव शरीर के भीतर पाई जाने वाली सबसे बड़ी ग्रंथि (Largest Gland) कौन सी है जो पित्त रस (Bile Juice) का स्राव करती है?',
+      options: ['अग्न्याशय (Pancreas)', 'थायरॉयड ग्रंथि', 'यकृत (Liver)', 'पीयूष ग्रंथि (Pituitary)'],
+      correctIndex: 2,
+      explanation: 'यकृत (लीवर) मानव शरीर की सबसे बड़ी ग्रंथि और सबसे बड़ा आंतरिक अंग है। यह पित्त रस का निर्माण करता है जो वसा के पाचन (Emulsification) में सहायक होता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-6',
+      text: 'Subject Test: 1857 के प्रथम भारतीय स्वतंत्रता संग्राम के ऐतिहासिक विद्रोह के समय भारत का गवर्नर जनरल (Governor General) कौन था?',
+      options: ['लॉर्ड डलहौजी', 'लॉर्ड कैनिंग', 'लॉर्ड कर्जन', 'लॉर्ड विलियम बेंटिक'],
+      correctIndex: 1,
+      explanation: 'लॉर्ड कैनिंग 1857 के विद्रोह के समय भारत के गवर्नर जनरल थे। विद्रोह के बाद बने भारत शासन अधिनियम 1858 के तहत वे भारत के पहले वायसराय (Viceroy) बने।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-7',
+      text: 'Subject Test: दृश्य प्रकाश (Visible Light) स्पेक्ट्रम के किस रंग के प्रकाश की तरंगदैर्ध्य (Wavelength) सबसे लंबी होती है, जिससे वह वायु में कम प्रकीर्णित होता है?',
+      options: ['बैंगनी (Violet)', 'पीला (Yellow)', 'लाल (Red)', 'हरा (Green)'],
+      correctIndex: 2,
+      explanation: 'लाल रंग की तरंगदैर्ध्य (लगभग 700 नैनोमीटर) सबसे अधिक होती है, जिसके कारण इसका प्रकीर्णन (Scattering) सबसे कम होता है और यह दूर से ही दिखाई देता है (इसीलिए खतरे के सिग्नल लाल होते हैं)।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-8',
+      text: 'Subject Test: भारतीय राष्ट्रीय कांग्रेस (Indian National Congress - INC) की स्थापना 28 दिसंबर 1885 को बॉम्बे के गोकुलदास तेजपाल संस्कृत कॉलेज में किसके द्वारा की गई थी?',
+      options: ['दादाभाई नौरोजी', 'ए. ओ. ह्यूम (Allan Octavian Hume)', 'व्योमेश चंद्र बनर्जी', 'सुरेंद्रनाथ बनर्जी'],
+      correctIndex: 1,
+      explanation: 'सेवानिवृत्त ब्रिटिश सिविल सेवक ए.ओ. ह्यूम ने भारतीय नेताओं के साथ मिलकर 1885 में कांग्रेस की स्थापना की थी। इसके पहले अध्यक्ष व्योमेश चंद्र बनर्जी थे और इसमें 72 प्रतिनिधियों ने भाग लिया था।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-9',
+      text: 'Subject Test: पृथ्वी के वायुमंडल (Atmosphere) की निचली परतों में पाई जाने वाली गैसों में सर्वाधिक मात्रा किस गैस की होती है?',
+      options: ['ऑक्सीजन', 'कार्बन डाइऑक्साइड', 'नाइट्रोजन', 'ऑर्गन'],
+      correctIndex: 2,
+      explanation: 'वायुमंडल में सबसे अधिक मात्रा नाइट्रोजन गैस की है जो लगभग 78.08% है। इसके बाद ऑक्सीजन (20.95%), ऑर्गन (0.93%) और कार्बन डाइऑक्साइड (0.04%) पाई जाती है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-10',
+      text: 'Subject Test: बौद्ध धर्म से संबंधित भित्ति चित्रों और गुफा चित्रों के लिए विश्व प्रसिद्ध "अजंता की गुफाएं" (Ajanta Caves) भारत के किस राज्य में स्थित हैं?',
+      options: ['मध्य प्रदेश', 'महाराष्ट्र', 'कर्नाटक', 'ओडिशा'],
+      correctIndex: 1,
+      explanation: 'अजंता की गुफाएं महाराष्ट्र के औरंगाबाद (अब संभाजीनगर) जिले में वाघोरा नदी के किनारे स्थित हैं। यहाँ कुल 29 चट्टान काटकर बनाई गई बौद्ध गुफाएं हैं जो गुप्त व वाकाटक काल की हैं।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-11',
+      text: 'Subject Test: स्वस्थ मानव शरीर में बहने वाले रक्त (Human Blood) का पीएच (pH) मान कितना होता है जो इसकी प्रकृति को निर्धारित करता है?',
+      options: ['6.4 (अम्लीय)', '7.0 (उदासीन)', '7.4 (हल्का क्षारीय)', '8.2 (तीव्र क्षारीय)'],
+      correctIndex: 2,
+      explanation: 'मानव रक्त का पीएच मान सामान्यतः 7.35 से 7.45 के बीच होता है, जिससे यह हल्का क्षारीय (slightly basic/alkaline) होता है। यदि रक्त का पीएच बदल जाए तो यह घातक हो सकता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-12',
+      text: 'Subject Test: योजना आयोग के स्थान पर 1 जनवरी 2015 को गठित किए गए "नीति आयोग" (NITI Aayog) के पदेन अध्यक्ष के रूप में कौन कार्य करता है?',
+      options: ['भारत के राष्ट्रपति', 'भारत के वित्त मंत्री', 'भारत के प्रधानमंत्री', 'लोकसभा के अध्यक्ष'],
+      correctIndex: 2,
+      explanation: 'नीति आयोग (National Institution for Transforming India) के पदेन अध्यक्ष भारत के प्रधानमंत्री होते हैं। यह एक थिंक टैंक के रूप में सरकार के लिए नीतियां बनाने का कार्य करता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-13',
+      text: 'Subject Test: भौतिक विज्ञान में ध्वनि की तीव्रता और लाउडनेस (Intensity and loudness of sound) को मापने के लिए किस मानक इकाई का उपयोग किया जाता है?',
+      options: ['हर्ट्ज (Hz)', 'डेसिबल (Decibel - dB)', 'वाट', 'एम्पलीफायर'],
+      correctIndex: 1,
+      explanation: 'ध्वनी की तीव्रता डेसिबल (dB) में मापी जाती है। मनुष्य के कान 0 dB से सुनना शुरू करते हैं। सामान्य बातचीत लगभग 30-40 dB की होती है और 85 dB से अधिक की ध्वनि कानों के लिए हानिकारक होती है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-14',
+      text: 'Subject Test: भारत के राष्ट्रीय प्रतीक चिह्न के नीचे देवनागरी लिपि में उत्कीर्ण वाक्य "सत्यमेव जयते" (सत्य की ही विजय होती है) किस प्राचीन उपनिषद से लिया गया है?',
+      options: ['कठोपनिषद', 'मांडूक्योपनिषद', 'मुण्डकोपनिषद', 'छांदोग्योपनिषद'],
+      correctIndex: 2,
+      explanation: '"सत्यमेव जयते" मुण्डकोपनिषद से लिया गया है। यह हमारे अशोक सारनाथ सिंह स्तंभ (राष्ट्रीय प्रतीक) के नीचे अंकित है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-15',
+      text: 'Subject Test: हानिकारक पराबैंगनी किरणों (UV Rays) को अवशोषित करने वाली "ओजोन परत" (Ozone Layer) पृथ्वी के वायुमंडल की किस विशिष्ट परत में स्थित है?',
+      options: ['क्षोभमंडल (Troposphere)', 'समतापमंडल (Stratosphere)', 'मध्यमंडल (Mesosphere)', 'बाह्य वायुमंडल'],
+      correctIndex: 1,
+      explanation: 'ओजोन परत (O3) समतापमंडल (Stratosphere) के निचले भाग में लगभग 15 से 35 किमी की ऊंचाई पर स्थित है। यह सूर्य की हानिकारक पराबैंगनी किरणों से पृथ्वी की रक्षा करती है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-16',
+      text: 'Subject Test: दूध को लैक्टिक एसिड में बदलकर दही जमाने के लिए कौन सा लाभदायक जीवाणु (Bacteria) मुख्य रूप से जिम्मेदार होता है?',
+      options: ['स्ट्रेप्टोकोकस', 'लैक्टोबैसिलस (Lactobacillus)', 'ई-कोलाई', 'साल्मोनेला'],
+      correctIndex: 1,
+      explanation: 'दही जमाने के लिए लैक्टोबैसिलस जीवाणु जिम्मेदार होता है। यह दूध में मौजूद लैक्टोज शर्करा को लैक्टिक एसिड में बदल देता है जिससे दूध फटकर गाढ़ा दही बन जाता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-17',
+      text: 'Subject Test: फरवरी 1922 में उत्तर प्रदेश के गोरखपुर के पास हुई हिंसक "चौरी-चौरा की घटना" के पश्चात महात्मा गांधी ने किस प्रमुख राष्ट्रीय आंदोलन को तुरंत वापस ले लिया था?',
+      options: ['सविनय अवज्ञा आंदोलन', 'असहयोग आंदोलन (Non-Cooperation Movement)', 'भारत छोड़ो आंदोलन', 'रोलेट सत्याग्रह'],
+      correctIndex: 1,
+      explanation: 'चौरी-चौरा कांड में उग्र भीड़ द्वारा पुलिस थाने में आग लगाने से 22 सिपाहियों की मृत्यु हो गई थी। गांधीजी अहिंसा के पुजारी थे, अतः उन्होंने दुखी होकर 12 फरवरी 1922 को असहयोग आंदोलन वापस ले लिया था।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-18',
+      text: 'Subject Test: सूर्य की धूप के संपर्क में आने पर मानव शरीर की त्वचा की कोशिकाएं स्वतः ही किस आवश्यक विटामिन का संश्लेषण करती हैं?',
+      options: ['विटामिन ए', 'विटामिन सी', 'विटामिन डी (Vitamin D)', 'विटामिन ई'],
+      correctIndex: 2,
+      explanation: 'धूप के संपर्क में आने पर त्वचा में मौजूद 7-डीहाइड्रोकोलेस्ट्रॉल सूर्य की पराबैंगनी किरणों (UVB) की मदद से विटामिन डी (कैल्सीफेरोल) का निर्माण करता है, जो हड्डियों के लिए आवश्यक है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-19',
+      text: 'Subject Test: भारत में खाद्यान्न फसलों की उत्पादकता में वृद्धि के लिए शुरू की गई "हरित क्रांति का जनक" (Father of Green Revolution in India) किसे माना जाता है?',
+      options: ['डॉ. वर्गीज कुरियन', 'डॉ. एम.एस. स्वामीनाथन', 'प्रो. नॉर्मन बोरलॉग', 'डॉ. राम सिंह'],
+      correctIndex: 1,
+      explanation: 'भारत में डॉ. एम.एस. स्वामीनाथन को हरित क्रांति का जनक माना जाता है। उन्होंने मेक्सिको की बौनी किस्मों को भारतीय परिस्थितियों के अनुकूल ढालने में महत्वपूर्ण भूमिका निभाई। विश्व स्तर पर नॉर्मन बोरलॉग को जनक माना जाता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-20',
+      text: 'Subject Test: स्वतंत्र भारत की "संविधान सभा" (Constituent Assembly) द्वारा तिरंगे झंडे को भारत के राष्ट्रीय ध्वज के रूप में कब आधिकारिक मान्यता दी गई थी?',
+      options: ['15 अगस्त 1947', '26 जनवरी 1950', '22 जुलाई 1947', '26 नवंबर 1949'],
+      correctIndex: 2,
+      explanation: 'संविधान सभा ने 22 जुलाई 1947 को राष्ट्रीय ध्वज के रूप में तिरंगे को अपनाया था। इसके वर्तमान स्वरूप का डिज़ाइन पिंगली वेंकैया ने तैयार किया था।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-21',
+      text: 'Subject Test: आभूषण बनाने और वित्तीय मानकों के लिए प्रयुक्त होने वाले शत-प्रतिशत शुद्ध सोने की शुद्धता (Purity of Gold) कितने कैरेट आंकी जाती है?',
+      options: ['18 कैरेट', '22 कैरेट', '24 कैरेट (Carat)', '28 कैरेट'],
+      correctIndex: 2,
+      explanation: '100% शुद्ध सोना 24 कैरेट का होता है। हालांकि, यह बहुत मुलायम होता है, इसलिए आभूषण बनाने के लिए आम तौर पर 22 कैरेट सोने (जिसमें 2 भाग तांबा या चांदी मिलाया जाता है) का उपयोग किया जाता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-22',
+      text: 'Subject Test: गंगोत्री ग्लेशियर से निकलकर भारत के 5 राज्यों से होती हुई बहने वाली देश की सबसे लंबी नदी कौन सी है?',
+      options: ['ब्रह्मपुत्र नदी', 'सिंधु नदी', 'गोदावरी नदी', 'गंगा नदी'],
+      correctIndex: 3,
+      explanation: 'गंगा नदी भारत की सबसे लंबी नदी है, जिसकी कुल लंबाई लगभग 2,525 किलोमीटर है। यह देवप्रयाग में अलकनंदा और भागीरथी के संगम से बनती है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-23',
+      text: 'Subject Test: चोट लगने पर रक्तस्त्राव को रोकने और रक्त का थक्का (Blood Clotting) जमाने में कौन सा विटामिन एक आवश्यक उत्प्रेरक के रूप में सहायक होता है?',
+      options: ['विटामिन ए', 'विटामिन सी', 'विटामिन के (Vitamin K)', 'विटामिन बी12'],
+      correctIndex: 2,
+      explanation: 'विटामिन के (फाइलोक्विनोन) लीवर में प्रोथ्रोम्बिन नामक प्रोटीन बनाने के लिए आवश्यक है, जो रक्त का थक्का जमाने के लिए जिम्मेदार होता है। इसकी कमी से चोट लगने पर लगातार खून बहता रहता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-24',
+      text: 'Subject Test: एक सींग वाले दुर्लभ भारतीय गैंडे (One-horned Rhinoceros) के संरक्षण के लिए प्रसिद्ध "काजीरंगा राष्ट्रीय उद्यान" भारत के किस राज्य में स्थित है?',
+      options: ['असम', 'पश्चिम बंगाल', 'उत्तराखंड', 'मध्य प्रदेश'],
+      correctIndex: 0,
+      explanation: 'काजीरंगा नेशनल पार्क असम में ब्रह्मपुत्र नदी के किनारे स्थित है। यह यूनेस्को की विश्व धरोहर स्थल है और दुनिया के लगभग दो-तिहाई एक सींग वाले गैंडों का घर है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    },
+    {
+      id: 'q-hssc-sub-gs-1-25',
+      text: 'Subject Test: जल के अनोखे भौतिक गुणों के कारण, किस तापमान (Temperature) पर पानी का घनत्व (Density of Water) अधिकतम होता है जिससे सर्दियों में झीलें ऊपर से जमने पर भी नीचे जीवन सुरक्षित रहता है?',
+      options: ['0°C', '4°C', '10°C', '-4°C'],
+      correctIndex: 1,
+      explanation: 'पानी का घनत्व 4 डिग्री सेल्सियस पर अधिकतम होता है और इसका आयतन न्यूनतम होता है। 4°C से कम होने पर पानी फैलने लगता है (असंगत प्रसार), जिससे बर्फ तैरती रहती है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-1'
+    }
+  ],
+  'test-hssc-police-sub-general-studies-2': [
+    {
+      id: 'q-hssc-sub-gs-2-1',
+      text: 'Subject Test: भारतीय संविधान में नागरिकों के लिए "मूल कर्तव्यों" (Fundamental Duties) को स्वर्ण सिंह समिति की सिफारिश पर किस संविधान संशोधन के तहत जोड़ा गया था?',
+      options: ['42वां संशोधन (1976)', '44वां संशोधन (1978)', '86वां संशोधन (2002)', '73वां संशोधन (1992)'],
+      correctIndex: 0,
+      explanation: '42वें संविधान संशोधन 1976 द्वारा संविधान में भाग IV-A और अनुच्छेद 51A जोड़ा गया, जिसके तहत 10 मूल कर्तव्यों को शामिल किया गया। बाद में 86वें संशोधन 2002 द्वारा 11वां मूल कर्तव्य जोड़ा गया।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-2',
+      text: 'Subject Test: सामान्य पेंसिल के भीतर लिखने के काम आने वाला काला पदार्थ वास्तव में कार्बन का कौन सा शुद्ध क्रिस्टलीय अपररूप (Allotrope) है?',
+      options: ['कोयला', 'हीरा', 'ग्रेफाइट (Graphite)', 'लकड़ी का कोयला'],
+      correctIndex: 2,
+      explanation: 'पेंसिल की लेड (lead) ग्रेफाइट और क्ले (मिट्टी) के मिश्रण से बनाई जाती है। ग्रेफाइट कार्बन का एक अपररूप है जो मुलायम, चिकना और विद्युत का सुचालक होता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-3',
+      text: 'Subject Test: ज्ञान प्राप्ति के पश्चात महात्मा बुद्ध ने अपना पहला उपदेश किस स्थान पर दिया था जिसे बौद्ध परंपरा में "धर्मचक्रप्रवर्तन" कहा गया?',
+      options: ['बोधगया', 'लुम्बिनी', 'सारनाथ', 'कुशीनगर'],
+      correctIndex: 2,
+      explanation: 'बुद्ध ने अपना पहला उपदेश वाराणसी के पास सारनाथ के ऋषिपत्तनम (मृगदाव) में अपने पांच पुराने साथियों को दिया था। इसे बौद्ध धर्म में "धर्मचक्रप्रवर्तन" कहा जाता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-4',
+      text: 'Subject Test: पर्यावरण संरक्षण को बढ़ावा देने के लिए संयुक्त राष्ट्र पर्यावरण कार्यक्रम (UNEP) द्वारा प्रतिवर्ष "विश्व पर्यावरण दिवस" (World Environment Day) किस तिथि को मनाया जाता है?',
+      options: ['22 अप्रैल', '5 जून', '16 सितंबर', '22 मार्च'],
+      correctIndex: 1,
+      explanation: 'विश्व पर्यावरण दिवस प्रतिवर्ष 5 जून को मनाया जाता है। इसकी शुरुआत 1972 के स्टॉकहोम सम्मेलन (यूएनईपी के गठन) के उपलक्ष्य में वर्ष 1974 में पहली बार "ओनली वन अर्थ" थीम के साथ हुई थी।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-5',
+      text: 'Subject Test: मानव कंकाल तंत्र में पाई जाने वाली सबसे छोटी हड्डी (Smallest Bone) कौन सी है जो मानव कान के मध्य भाग में पाई जाती है?',
+      options: ['फीमर (Femur)', 'स्टेप्स (Stapes)', 'हंसली (Clavicle)', 'पटेला'],
+      correctIndex: 1,
+      explanation: 'स्टेप्स (रकाब के आकार की) मानव शरीर की सबसे छोटी और सबसे हल्की हड्डी है जो मध्य कान में स्थित होती है। सबसे बड़ी हड्डी जाँघ की हड्डी "फीमर" होती है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-6',
+      text: 'Subject Test: भारत में ब्रिटिश साम्राज्य की मजबूत नींव रखने वाला प्रसिद्ध "प्लासी का युद्ध" (Battle of Plassey) किस वर्ष बंगाल के नवाब सिराजुद्दौला और रॉबर्ट क्लाइव के बीच लड़ा गया था?',
+      options: ['1757 में', '1764 में', '1556 में', '1857 में'],
+      correctIndex: 0,
+      explanation: 'प्लासी का युद्ध 23 जून 1757 को नदिया जिले में भागीरथी नदी के तट पर लड़ा गया था। ईस्ट इंडिया कंपनी के सेनापति रॉबर्ट क्लाइव ने मीर जाफर के विश्वासघात के कारण सिराजुद्दौला को हरा दिया था।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-7',
+      text: 'Subject Test: रात्रि के समय आसमान में तारों का टिमटिमाना (Twinkling of Stars) प्रकाश की किस प्रमुख भौतिक परिघटना के कारण दिखाई देता है?',
+      options: ['प्रकाश का प्रकीर्णन (Scattering)', 'वायुमंडलीय अपवर्तन (Atmospheric Refraction)', 'प्रकाश का पूर्ण आंतरिक परावर्तन', 'प्रकाश का विवर्तन'],
+      correctIndex: 1,
+      explanation: 'तारों का प्रकाश जब विभिन्न परतों वाली वायुमंडल की परतों से गुजरता है, तो उसका लगातार अपवर्तन (Refraction) होता है। हवा के चलते परतों का घनत्व बदलता रहता है जिससे आँखों में आने वाला प्रकाश कम-ज्यादा होता है और तारा टिमटिमाता हुआ प्रतीत होता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-8',
+      text: 'Subject Test: वर्ष 1915 में दक्षिण अफ्रीका से लौटने के पश्चात महात्मा गांधी का भारत में पहला सफल सत्याग्रह आंदोलन कौन सा था, जो नील किसानों के समर्थन में चलाया गया था?',
+      options: ['खेड़ा सत्याग्रह', 'अहमदाबाद मिल हड़ताल', 'चंपारण सत्याग्रह (1917)', 'बारडोली सत्याग्रह'],
+      correctIndex: 2,
+      explanation: 'बिहार के चंपारण में तिनकठिया प्रथा (भूमि के 3/20 भाग पर नील की खेती) के विरुद्ध राजकुमार शुक्ल के बुलावे पर गांधीजी ने 1917 में पहला सफल सत्याग्रह किया था।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-9',
+      text: 'Subject Test: भूभौतिकी (Geophysics) के अंतर्गत पृथ्वी की सतह पर अचानक होने वाले भूकम्प की तीव्रता और कंपन (Earthquake magnitude) को मापने के लिए किस संख्यात्मक पैमाने का उपयोग किया जाता है?',
+      options: ['डेसिबल पैमाना', 'रिएक्टर पैमाना (Richter Scale)', 'केल्विन पैमाना', 'बैरोमीटर पैमाना'],
+      correctIndex: 1,
+      explanation: 'भूकंप की तीव्रता मापने के लिए रिक्टर स्केल का उपयोग किया जाता है, जो एक लघुगणकीय (logarithmic) पैमाना है। भूकंपीय तरंगों को सिस्मोग्राफ नामक यंत्र द्वारा रिकॉर्ड किया जाता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-10',
+      text: 'Subject Test: पृथ्वी के उत्तरी भाग में स्थित क्षेत्रफल की दृष्टि से विश्व का सबसे बड़ा गर्म मरुस्थल (Largest Hot Desert) कौन सा है?',
+      options: ['गोबी मरुस्थल', 'थार मरुस्थल', 'सहारा मरुस्थल', 'कालाहारी मरुस्थल'],
+      correctIndex: 2,
+      explanation: 'सहारा मरुस्थल अफ्रीका महाद्वीप के उत्तरी भाग में स्थित है। यह दुनिया का सबसे बड़ा गर्म मरुस्थल है जिसका क्षेत्रफल लगभग 92 लाख वर्ग किमी है। गोबी एक ठंडा मरुस्थल है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-11',
+      text: 'Subject Test: चिकित्सा और दंत चिकित्सा में हल्की एनेस्थीसिया के रूप में और आम भाषा में "हँसाने वाली गैस" (Laughing Gas) के रूप में प्रयुक्त होने वाली गैस का रासायनिक नाम क्या है?',
+      options: ['नाइट्रोजन डाइऑक्साइड', 'नाइट्रस ऑक्साइड (N2O)', 'सल्फर हेक्साफ्लोराइड', 'कार्बन मोनोऑक्साइड'],
+      correctIndex: 1,
+      explanation: 'नाइट्रस ऑक्साइड (N2O) को लाफिंग गैस कहा जाता है। इसे सूंघने पर हल्की उत्तेजना और हँसी आती है। इसकी खोज जोसेफ प्रिस्टले ने की थी।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-12',
+      text: 'Subject Test: भारतीय लोकतंत्र में संसद के निचले सदन "लोकसभा" का चुनाव लड़ने और सदस्य बनने के लिए न्यूनतम आयु सीमा संविधान द्वारा क्या निर्धारित की गई है?',
+      options: ['18 वर्ष', '21 वर्ष', '25 वर्ष', '30 वर्ष'],
+      correctIndex: 2,
+      explanation: 'लोकसभा और राज्यों की विधानसभा का चुनाव लड़ने के लिए न्यूनतम आयु 25 वर्ष है। राज्यसभा और विधान परिषद के लिए यह आयु 30 वर्ष है, तथा राष्ट्रपति/राज्यपाल बनने के लिए 35 वर्ष है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-13',
+      text: 'Subject Test: किसी विद्युत परिपथ (Electrical Circuit) में बहने वाली विद्युत धारा की मात्रा (Electric Current in Amperes) को सीधे मापने के लिए किस उपकरण को परिपथ में श्रेणीक्रम में जोड़ा जाता है?',
+      options: ['वोल्टमीटर', 'गैल्वेनोमीटर', 'एमीटर (Ammeter)', 'जनरेटर'],
+      correctIndex: 2,
+      explanation: 'विद्युत धारा को एमीटर द्वारा मापा जाता है जिसे परिपथ में श्रेणीक्रम (series) में लगाया जाता है ताकि संपूर्ण धारा उसमें से प्रवाहित हो सके। वोल्टमीटर का उपयोग विभवांतर (voltage) मापने के लिए किया जाता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-14',
+      text: 'Subject Test: महान मुगल सम्राट अकबर के शासनकाल और जीवन इतिहास पर लिखी गई प्रसिद्ध जीवनी "अकबरनामा" (Akbarnama) के लेखक कौन थे?',
+      options: ['तानसेन', 'बीरबल', 'अबुल फजल', 'फैजी'],
+      correctIndex: 2,
+      explanation: 'अकबरनामा अकबर के नवरत्नों में से एक अबुल फजल द्वारा फारसी भाषा में लिखा गया था। इसके तीन भाग हैं, जिसमें से तीसरे भाग को "आईन-ए-अकबरी" कहा जाता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-15',
+      text: 'Subject Test: मौसम विज्ञान में मौसम के बदलावों और तूफानों का पूर्वानुमान लगाने के लिए हवा के वायुमंडलीय दबाव (Atmospheric Pressure) को मापने हेतु किस उपकरण का उपयोग किया जाता है?',
+      options: ['एनीमोमीटर', 'बैरोमीटर', 'हाइग्रोमीटर', 'मैनोमीटर'],
+      correctIndex: 1,
+      explanation: 'वायुमंडलीय दाब को बैरोमीटर द्वारा मापा जाता है, जिसकी खोज टोरिसेली ने की थी। बैरोमीटर के पठन (reading) में अचानक गिरावट आंधी-तूफान का संकेत देती है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-16',
+      text: 'Subject Test: खुली नम हवा में रखने पर लोहे की धातु की सतह पर भूरे रंग की परत (जंग) चढ़ने की रासायनिक प्रक्रिया किसका प्रमुख उदाहरण है?',
+      options: ['भौतिक परिवर्तन', 'ऑक्सीकरण रासायनिक परिवर्तन (Oxidation)', 'अपचयन अभिक्रिया', 'उदासीनीकरण'],
+      correctIndex: 1,
+      explanation: 'लोहे में जंग लगना (Rusting of Iron) एक रासायनिक परिवर्तन है। नम ऑक्सीजन और नमी की उपस्थिति में लोहा फेरिक ऑक्साइड [Fe2O3.xH2O] में बदल जाता है जिससे लोहे का भार बढ़ जाता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-17',
+      text: 'Subject Test: 15 अगस्त 1947 को ब्रिटिश भारत के विभाजन के पश्चात आजाद हुए स्वतंत्र भारत के प्रथम गवर्नर जनरल (First Governor General of Independent India) कौन बने थे?',
+      options: ['लॉर्ड वेवेल', 'लॉर्ड माउंटबेटन', 'सी. राजगोपालाचारी', 'जवाहरलाल नेहरू'],
+      correctIndex: 1,
+      explanation: 'आज़ादी के बाद लॉर्ड माउंटबेटन स्वतंत्र भारत के पहले गवर्नर जनरल बने। चक्रवर्ती राजगोपालाचारी स्वतंत्र भारत के पहले और अंतिम भारतीय गवर्नर जनरल (1948-1950) बने थे।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-18',
+      text: 'Subject Test: मसूड़ों से खून आना, मसूड़ों में सूजन और घाव न भरने जैसी समस्याओं वाला "स्कर्वी रोग" (Scurvy) किस विटामिन की गंभीर कमी के कारण होता है?',
+      options: ['विटामिन ए', 'विटामिन बी1', 'विटामिन सी', 'विटामिन डी'],
+      correctIndex: 2,
+      explanation: 'स्कर्वी रोग विटामिन सी (एस्कॉर्बिक एसिड) की कमी से होता है। यह खट्टे फलों (जैसे आंवला, नींबू, संतरा) में प्रचुर मात्रा में पाया जाता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-19',
+      text: 'Subject Test: पृथ्वी की सतह पर फैले महासागरों में क्षेत्रफल और गहराई दोनों ही दृष्टि से विश्व का सबसे बड़ा महासागर कौन सा है?',
+      options: ['अटलांटिक महासागर', 'हिंद महासागर', 'प्रशांत महासागर (Pacific Ocean)', 'आर्कटिक महासागर'],
+      correctIndex: 2,
+      explanation: 'प्रशांत महासागर पृथ्वी का सबसे बड़ा और सबसे गहरा महासागर है। इसका क्षेत्रफल दुनिया की सारी सूखी भूमि के क्षेत्रफल से भी अधिक है। पृथ्वी का सबसे गहरा गर्त "मारियाना ट्रेंच" इसी महासागर में स्थित है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-20',
+      text: 'Subject Test: भारतीय संविधान के तहत भारत के मुख्य चुनाव आयुक्त (Chief Election Commissioner) और अन्य चुनाव आयुक्तों की नियुक्ति किसके द्वारा की जाती है?',
+      options: ['भारत के संसद द्वारा', 'भारत के राष्ट्रपति द्वारा', 'भारत के उच्चतम न्यायालय के मुख्य न्यायाधीश द्वारा', 'प्रधान मंत्री के मंत्रिमंडल द्वारा'],
+      correctIndex: 1,
+      explanation: 'मुख्य चुनाव आयुक्त और अन्य आयुक्तों की नियुक्ति भारत के राष्ट्रपति द्वारा की जाती है। इनका कार्यकाल 6 वर्ष या 65 वर्ष की आयु (जो भी पहले हो) तक होता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-21',
+      text: 'Subject Test: घरेलू साफ-सफाई और कपड़े धोने में बड़े पैमाने पर उपयोग होने वाले "धावन सोडा" या वाशिंग सोडा का रासायनिक नाम क्या है?',
+      options: ['सोडियम बाइकार्बोनेट', 'सोडियम कार्बोनेट (Na2CO3)', 'सोडियम हाइड्रोक्साइड', 'कैल्शियम कार्बोनेट'],
+      correctIndex: 1,
+      explanation: 'वाशिंग सोडा का रासायनिक नाम सोडियम कार्बोनेट (Na2CO3.10H2O) है। खाने वाले सोडे (Baking Soda) का रासायनिक नाम सोडियम बाइकार्बोनेट (NaHCO3) होता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-22',
+      text: 'Subject Test: सविनय अवज्ञा आंदोलन को स्थगित करने और द्वितीय गोलमेज सम्मेलन में भाग लेने के लिए लॉर्ड इरविन और महात्मा गांधी के बीच प्रसिद्ध "गांधी-इरविन समझौता" किस वर्ष हुआ था?',
+      options: ['1929 में', '1930 में', '1931 में', '1932 में'],
+      correctIndex: 2,
+      explanation: 'गांधी-इरविन समझौता 5 मार्च 1931 को लंदन में होने वाले दूसरे गोलमेज सम्मेलन से ठीक पहले हुआ था, जिसके बाद कांग्रेस ने आंदोलन स्थगित कर दिया और गांधीजी लंदन गए।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-23',
+      text: 'Subject Test: मुगल साम्राज्य की स्थापना का मार्ग प्रशस्त करने वाली "पानीपत की पहली लड़ाई" किस वर्ष बाबर और इब्राहिम लोदी के बीच लड़ी गई थी?',
+      options: ['1526 में', '1556 में', '1761 में', '1530 में'],
+      correctIndex: 0,
+      explanation: 'पानीपत की पहली लड़ाई 21 अप्रैल 1526 को लड़ी गई थी। इस युद्ध में बाबर ने पहली बार भारत में बारूद और तोपखाने का उपयोग किया और लोदी को पराजित कर मुगल साम्राज्य की नींव रखी।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-24',
+      text: 'Subject Test: घने कार्बन डाइऑक्साइड के वायुमंडल और तीव्र ग्रीनहाउस प्रभाव के कारण सौरमंडल का सबसे गर्म ग्रह (Hottest Planet) कौन सा है?',
+      options: ['बुध (Mercury)', 'शुक्र (Venus)', 'मंगल (Mars)', 'बृहस्पति (Jupiter)'],
+      correctIndex: 1,
+      explanation: 'शुक्र ग्रह सौरमंडल का सबसे गर्म ग्रह है जिसका तापमान लगभग 475°C रहता है। इसके वायुमंडल में 96% तक कार्बन डाइऑक्साइड पाई जाती है जो ऊष्मा को सोख लेती है। यह सूर्य के सबसे पास नहीं होने पर भी बुध से अधिक गर्म है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    },
+    {
+      id: 'q-hssc-sub-gs-2-25',
+      text: 'Subject Test: आपातकालीन स्थितियों में लड़ो या उड़ो (Fight or Flight) हार्मोन का स्राव कर मानव शरीर में रक्तचाप (Blood Pressure) को नियंत्रित करने वाली ग्रंथि कौन सी है?',
+      options: ['थायरॉयड ग्रंथि', 'अधिवृक्क ग्रंथि (Adrenal Gland)', 'अग्न्याशय', 'पीयूष ग्रंथि'],
+      correctIndex: 1,
+      explanation: 'एड्रिनल (अधिवृक्क) ग्रंथि गुर्दे (kidney) के ठीक ऊपर स्थित होती है। यह एड्रिनेलिन हार्मोन का स्राव करती है जो भय, क्रोध और उत्तेजना के समय हृदय गति व रक्तचाप को बढ़ा देता है।',
+      sectionName: 'General Knowledge & Current Affairs',
+      testId: 'test-hssc-police-sub-general-studies-2'
+    }
+  ],
+  'test-hssc-police-sub-math-reasoning-1': [
+    {
+      id: 'q-hssc-sub-mr-1-1',
+      text: 'Subject Test: एक परीक्षा में 35% छात्र हिंदी में और 45% छात्र अंग्रेजी में अनुत्तीर्ण (fail) हुए। यदि 20% छात्र दोनों विषयों में अनुत्तीर्ण हुए, तो दोनों विषयों में उत्तीर्ण (pass) होने वाले छात्रों का प्रतिशत क्या है?',
+      options: ['30%', '35%', '40%', '45%'],
+      correctIndex: 2,
+      explanation: 'केवल हिंदी में फेल = 35 - 20 = 15%. केवल अंग्रेजी में फेल = 45 - 20 = 25%. कम से कम एक विषय में फेल = 15 + 25 + 20 (दोनों में फेल) = 60%. अतः दोनों विषयों में पास होने वाले = 100 - 60 = 40%.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-2',
+      text: 'Subject Test: यदि कल से पहले का दिन (Day before yesterday) गुरुवार था, तो रविवार कब होगा?',
+      options: ['आज', 'आने वाला कल (Tomorrow)', 'आने वाले कल के बाद का दिन', 'दो दिन बाद'],
+      correctIndex: 1,
+      explanation: 'कल से पहले का दिन = गुरुवार, तो कल = शुक्रवार, आज = शनिवार। रविवार आज से अगला दिन अर्थात "आने वाला कल" होगा।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-3',
+      text: 'Subject Test: एक दुकानदार एक वस्तु पर 10% की छूट देने के बाद भी 20% का लाभ कमाता है। यदि वस्तु का अंकित मूल्य (Marked Price) ₹1200 है, तो उसका क्रय मूल्य (Cost Price) क्या होगा?',
+      options: ['₹800', '₹900', '₹1000', '₹1080'],
+      correctIndex: 1,
+      explanation: 'क्रय मूल्य (CP) = अंकित मूल्य (MP) * (100 - छूट%) / (100 + लाभ%) = 1200 * (100 - 10) / (100 + 20) = 1200 * 90 / 120 = ₹900.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-4',
+      text: 'Subject Test: श्रेणी को पूरा करें: 3, 5, 9, 17, 33, ?',
+      options: ['49', '55', '65', '67'],
+      correctIndex: 2,
+      explanation: 'श्रेणी का पैटर्न इस प्रकार है: 3 (+2) -> 5 (+4) -> 9 (+8) -> 17 (+16) -> 33। अंतर दोगुना हो रहा है (2, 4, 8, 16, 32)। अगला पद = 33 + 32 = 65.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-5',
+      text: 'Subject Test: A एक काम को 12 दिनों में और B उसी काम को 18 दिनों में पूरा कर सकता है। यदि वे दोनों मिलकर 4 दिनों तक काम करते हैं, तो काम का कितना भाग शेष (Left) बचेगा?',
+      options: ['5/9', '4/9', '1/3', '2/3'],
+      correctIndex: 1,
+      explanation: 'A का 1 दिन का काम = 1/12. B का 1 दिन का काम = 1/18. दोनों का 1 दिन का काम = 1/12 + 1/18 = 5/36. 4 दिनों में किया गया काम = 4 * 5/36 = 5/9. शेष काम = 1 - 5/9 = 4/9.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-6',
+      text: 'Subject Test: एक निष्पक्ष पासे (Fair Die) को एक बार फेंकने पर ऊपर एक अभाज्य संख्या (Prime Number) आने की प्रायिकता (Probability) क्या है?',
+      options: ['1/3', '1/2', '2/3', '5/6'],
+      correctIndex: 1,
+      explanation: 'पासे पर कुल परिणाम = 6 {1, 2, 3, 4, 5, 6}। अभाज्य संख्याएँ = {2, 3, 5} (कुल 3)। प्रायिकता = अनुकूल परिणाम / कुल परिणाम = 3 / 6 = 1/2.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-7',
+      text: 'Subject Test: 8% वार्षिक साधारण ब्याज (Simple Interest) की दर से कितने वर्षों में कोई मूलधन स्वयं का दोगुना हो जाएगा?',
+      options: ['10 वर्ष', '12 वर्ष', '12.5 वर्ष', '15 वर्ष'],
+      correctIndex: 2,
+      explanation: 'मान लें मूलधन = P, ब्याज = P (तभी मिश्रधन 2P होगा)। ब्याज = P * R * T / 100 => P = P * 8 * T / 100 => T = 100 / 8 = 12.5 वर्ष।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-8',
+      text: 'Subject Test: यदि किसी निश्चित कूट भाषा में शब्द "MENTAL" को "LDKSZK" लिखा जाता है, तो उसी कूट भाषा में "BRAIN" को कैसे लिखा जाएगा?',
+      options: ['AQZHM', 'CSBJO', 'ASBHM', 'AQZIN'],
+      correctIndex: 0,
+      explanation: 'पैटर्न इस प्रकार है: प्रत्येक अक्षर वर्णमाला के पिछले अक्षर (-1) में बदल रहा है (M-1=L, E-1=D, N-1=M...). अतः B-1=A, R-1=Q, A-1=Z, I-1=H, N-1=M, जिससे "AQZHM" बनता है।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-9',
+      text: 'Subject Test: एक कार 72 किमी/घंटा की समान गति से चल रही है। यह कार 15 सेकंड में कुल कितनी दूरी (मीटर में) तय करेगी?',
+      options: ['250 मीटर', '300 मीटर', '360 मीटर', '400 मीटर'],
+      correctIndex: 1,
+      explanation: 'गति मीटर/सेकंड में = 72 * (5 / 18) = 20 मीटर/सेकंड। दूरी = गति * समय = 20 * 15 = 300 मीटर।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-10',
+      text: 'Subject Test: एक व्यक्ति अपने घर से चलना शुरू करता है और 10 किमी उत्तर की ओर जाता है, फिर वह अपने दाएं (Right) मुड़ता है और 6 किमी चलता है, फिर दोबारा अपने बाएं (Left) मुड़ता है और 5 किमी चलता है। अब वह अपने प्रारंभिक स्थान से किस दिशा में है?',
+      options: ['उत्तर', 'पूर्व', 'उत्तर-पूर्व', 'उत्तर-पश्चिम'],
+      correctIndex: 2,
+      explanation: 'प्रारंभिक बिंदु से देखने पर वह उत्तर दिशा में आगे बढ़ते हुए पूर्व की ओर मुड़ा है। अतः उसकी अंतिम स्थिति प्रारंभिक बिंदु के सापेक्ष उत्तर-पूर्व (North-East) दिशा में है।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-11',
+      text: 'Subject Test: यदि 15 वस्तुओं का क्रय मूल्य (Cost Price) 12 वस्तुओं के विक्रय मूल्य (Selling Price) के बराबर है, तो लाभ प्रतिशत क्या होगा?',
+      options: ['20%', '25%', '30%', '33.33%'],
+      correctIndex: 1,
+      explanation: 'मान लें 1 वस्तु का CP = ₹1. तो 12 वस्तुओं का CP = ₹12. दिया गया है कि 12 वस्तुओं का SP = 15 वस्तुओं का CP = ₹15. लाभ = 15 - 12 = ₹3. लाभ प्रतिशत = (3 / 12) * 100 = 25%.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-12',
+      text: 'Subject Test: एक पिता की आयु उसके पुत्र की आयु की 5 गुनी है। 5 वर्ष बाद पिता की आयु पुत्र की आयु की 3 गुनी हो जाएगी। वर्तमान में पिता की आयु क्या है?',
+      options: ['20 वर्ष', '25 वर्ष', '30 वर्ष', '35 वर्ष'],
+      correctIndex: 1,
+      explanation: 'मान लें पुत्र की वर्तमान आयु = x. पिता की आयु = 5x. 5 वर्ष बाद: 5x + 5 = 3(x + 5) => 5x + 5 = 3x + 15 => 2x = 10 => x = 5. पिता की आयु = 5 * 5 = 25 वर्ष।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-13',
+      text: 'Subject Test: यदि 10 जनवरी 2026 को शनिवार था, तो 15 मार्च 2026 को सप्ताह का कौन सा दिन होगा?',
+      options: ['शनिवार', 'रविवार', 'सोमवार', 'मंगलवार'],
+      correctIndex: 1,
+      explanation: 'दिनों का अंतर: जनवरी में शेष दिन = 21 (31-10)। फरवरी में दिन = 28 (साधारण वर्ष)। मार्च में दिन = 15। कुल दिन = 21 + 28 + 15 = 64 दिन। विषम दिन = 64 / 7 का शेषफल = 1 विषम दिन। शनिवार + 1 = रविवार।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-14',
+      text: 'Subject Test: एक समबाहु त्रिभुज (Equilateral Triangle) की प्रत्येक भुजा की लंबाई 8 सेमी है। इस त्रिभुज का क्षेत्रफल क्या होगा?',
+      options: ['12√3 वर्ग सेमी', '16√3 वर्ग सेमी', '32 वर्ग सेमी', '16 वर्ग सेमी'],
+      correctIndex: 1,
+      explanation: 'समबाहु त्रिभुज का क्षेत्रफल = (√3 / 4) * (भुजा)^2 = (√3 / 4) * 8 * 8 = 16√3 वर्ग सेमी।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-15',
+      text: 'Subject Test: A, B का भाई है। C, A की माता है। D, C का पिता है। B का D से क्या संबंध है?',
+      options: ['पुत्र', 'नाती या नातिन (Grandchild)', 'पिता', 'दादा'],
+      correctIndex: 1,
+      explanation: 'A और B भाई-बहन या भाई-भाई हैं। उनकी माता C है, और C के पिता D हैं। अतः B, D की बेटी का बच्चा (नाती या नातिन) होगा।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-16',
+      text: 'Subject Test: एक वृत्त (Circle) की परिधि 44 सेमी है। इस वृत्त का क्षेत्रफल क्या होगा?',
+      options: ['138.5 वर्ग सेमी', '154 वर्ग सेमी', '176 वर्ग सेमी', '308 वर्ग सेमी'],
+      correctIndex: 1,
+      explanation: 'परिधि = 2 * (22 / 7) * r = 44 => r = 7 सेमी। क्षेत्रफल = (22 / 7) * r^2 = (22 / 7) * 7 * 7 = 154 वर्ग सेमी।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-17',
+      text: 'Subject Test: दिए गए विकल्पों में से विषम (Odd One Out) का चयन करें: तांबा, जस्ता, पीतल, लोहा।',
+      options: ['तांबा', 'जस्ता', 'पीतल', 'लोहा'],
+      correctIndex: 2,
+      explanation: 'तांबा, जस्ता और लोहा शुद्ध धातु तत्व हैं, जबकि पीतल (Brass) एक मिश्र धातु (alloy) है जो तांबे और जस्ते को मिलाकर बनाई जाती है।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-18',
+      text: 'Subject Test: एक थैले में 5 लाल, 4 पीली और 3 हरी गेंदें हैं। यदि थैले में से 1 गेंद यादृच्छिक रूप से निकाली जाती है, तो उसके "लाल न होने" की प्रायिकता क्या है?',
+      options: ['5/12', '7/12', '1/3', '3/4'],
+      correctIndex: 1,
+      explanation: 'कुल गेंदें = 5 + 4 + 3 = 12. लाल न होने वाली गेंदें (अर्थात पीली या हरी) = 4 + 3 = 7. प्रायिकता = 7 / 12.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-19',
+      text: 'Subject Test: यदि "+" का अर्थ गुणा है, "-" का अर्थ भाग है, "*" का अर्थ जोड़ है, और "/" का अर्थ घटाव है, तो "12 + 6 - 3 * 4 / 2" का मान क्या होगा?',
+      options: ['22', '24', '26', '28'],
+      correctIndex: 2,
+      explanation: 'बदला हुआ समीकरण: 12 * 6 / 3 + 4 - 2. बोडमास (BODMAS) नियम के अनुसार: पहले भाग: 6 / 3 = 2. फिर गुणा: 12 * 2 = 24. फिर जोड़ और घटाव: 24 + 4 - 2 = 26.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-20',
+      text: 'Subject Test: यदि एक वर्ग (Square) का विकर्ण (Diagonal) 10√2 सेमी है, तो इस वर्ग का परिमाप (Perimeter) क्या होगा?',
+      options: ['20 सेमी', '30 सेमी', '40 सेमी', '40√2 सेमी'],
+      correctIndex: 2,
+      explanation: 'वर्ग का विकर्ण = भुजा * √2 = 10√2 => भुजा = 10 सेमी। वर्ग का परिमाप = 4 * भुजा = 4 * 10 = 40 सेमी।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-21',
+      text: 'Subject Test: छात्रों की एक पंक्ति में राम का स्थान बाएं (Left) से 15वां और दाएं (Right) से 20वां है। इस पंक्ति में कुल कितने छात्र हैं?',
+      options: ['33', '34', '35', '36'],
+      correctIndex: 1,
+      explanation: 'कुल छात्र = (बाएं से स्थान + दाएं से स्थान) - 1 = (15 + 20) - 1 = 34.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-22',
+      text: 'Subject Test: दो संख्याओं का लघुत्तम समापवर्त्य (LCM) 120 है और उनका महत्तम समापवर्तक (HCF) 10 है। यदि इनमें से एक संख्या 30 है, तो दूसरी संख्या क्या होगी?',
+      options: ['20', '40', '50', '60'],
+      correctIndex: 1,
+      explanation: 'सूत्र: पहली संख्या * दूसरी संख्या = LCM * HCF => 30 * दूसरी संख्या = 120 * 10 => दूसरी संख्या = 1200 / 30 = 40.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-23',
+      text: 'Subject Test: श्रेणी को पूरा करें: A, C, F, J, O, ?',
+      options: ['S', 'T', 'U', 'V'],
+      correctIndex: 2,
+      explanation: 'श्रेणी का वर्णमाला अंतर बढ़ रहा है: A (+2) -> C (+3) -> F (+4) -> J (+5) -> O। अगला पद = O + 6 = U.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-24',
+      text: 'Subject Test: एक 150 मीटर लंबी ट्रेन 54 किमी/घंटा की गति से दौड़ रही है। यह ट्रेन रेलवे ट्रैक के किनारे खड़े एक बिजली के खंभे को पार करने में कितना समय (सेकंड में) लेगी?',
+      options: ['8 सेकंड', '10 सेकंड', '12 सेकंड', '15 सेकंड'],
+      correctIndex: 1,
+      explanation: 'ट्रेन की गति मीटर/सेकंड में = 54 * (5 / 18) = 15 मीटर/सेकंड। खंभे को पार करने में लगा समय = ट्रेन की लंबाई / गति = 150 / 15 = 10 सेकंड।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    },
+    {
+      id: 'q-hssc-sub-mr-1-25',
+      text: 'Subject Test: यदि एक दीवार घड़ी में समय 4:30 बज रहा है, तो इस समय घंटे की सुई और मिनट की सुई के बीच का कोण (Angle) कितने डिग्री का होगा?',
+      options: ['30 डिग्री', '45 डिग्री', '60 डिग्री', '75 डिग्री'],
+      correctIndex: 1,
+      explanation: 'कोण सूत्र = |30 * H - (11 / 2) * M| = |30 * 4 - (11 / 2) * 30| = |120 - 165| = 45 डिग्री।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-1'
+    }
+  ],
+  'test-hssc-police-sub-math-reasoning-2': [
+    {
+      id: 'q-hssc-sub-mr-2-1',
+      text: 'Subject Test: यदि किसी सामान पर 10% और 20% की दो क्रमिक छूटें (Successive Discounts) दी जाती हैं, तो इनके समतुल्य एकल छूट (Equivalent Single Discount) क्या होगी?',
+      options: ['25%', '28%', '30%', '32%'],
+      correctIndex: 1,
+      explanation: 'एकल छूट = A + B - (A * B / 100) = 10 + 20 - (10 * 20 / 100) = 30 - 2 = 28%.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-2',
+      text: 'Subject Test: यदि परसों (Day before yesterday) मंगलवार था, तो परसों के बाद का दिन (Day after tomorrow) कौन सा होगा?',
+      options: ['गुरुवार', 'शुक्रवार', 'शनिवार', 'रविवार'],
+      correctIndex: 2,
+      explanation: 'परसों = मंगलवार, तो कल = बुधवार, आज = गुरुवार। परसों के बाद का दिन = आज + 2 दिन (शनिवार)।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-3',
+      text: 'Subject Test: एक निश्चित धनराशि चक्रवृद्धि ब्याज (Compound Interest) की दर से 3 वर्ष में स्वयं की तीन गुनी हो जाती है। यह धनराशि कितने वर्षों में स्वयं की 9 गुनी हो जाएगी?',
+      options: ['5 वर्ष', '6 वर्ष', '8 वर्ष', '9 वर्ष'],
+      correctIndex: 1,
+      explanation: 'चक्रवृद्धि ब्याज में राशि गुनी होने का चक्र चलता है: 3 वर्ष में 3^1 गुनी। 9 गुनी का अर्थ है 3^2 गुनी। अतः आवश्यक समय = 3 वर्ष * घात (2) = 6 वर्ष।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-4',
+      text: 'Subject Test: श्रेणी को पूरा करें: 2, 6, 12, 20, 30, ?',
+      options: ['38', '40', '42', '44'],
+      correctIndex: 2,
+      explanation: 'श्रेणी का पैटर्न: 2 (+4) -> 6 (+6) -> 12 (+8) -> 20 (+10) -> 30। क्रमिक सम संख्याएँ जोड़ी जा रही हैं। अगला पद = 30 + 12 = 42.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-5',
+      text: 'Subject Test: A और B मिलकर एक काम को 8 दिनों में पूरा कर सकते हैं। यदि A अकेला उस काम को 12 दिनों में कर सकता है, तो B अकेला उसे कितने दिनों में पूरा करेगा?',
+      options: ['16 दिन', '20 दिन', '24 दिन', '30 दिन'],
+      correctIndex: 2,
+      explanation: 'B का 1 दिन का काम = (A+B) का 1 दिन का काम - A का 1 दिन का काम = 1/8 - 1/12 = (3 - 2)/24 = 1/24. अतः B अकेला उस काम को 24 दिनों में पूरा करेगा।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-6',
+      text: 'Subject Test: दो निष्पक्ष पासों (Two Fair Dice) को एक साथ फेंकने पर दोनों पासों पर एक ही संख्या (Doublet - जैसे 1-1, 2-2) आने की प्रायिकता क्या है?',
+      options: ['1/6', '1/12', '5/36', '1/36'],
+      correctIndex: 0,
+      explanation: 'कुल परिणाम = 36. अनुकूल परिणाम = 6 {(1,1), (2,2), (3,3), (4,4), (5,5), (6,6)}. प्रायिकता = 6 / 36 = 1/6.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-7',
+      text: 'Subject Test: कोई धनराशि साधारण ब्याज की दर से 10 वर्षों में स्वयं की दोगुनी हो जाती है। ब्याज की वार्षिक दर (Rate of Interest) क्या है?',
+      options: ['5%', '10%', '12%', '15%'],
+      correctIndex: 1,
+      explanation: 'दोगुनी होने पर ब्याज = मूलधन (P)। सूत्र: ब्याज = P * R * T / 100 => P = P * R * 10 / 100 => R = 10% वार्षिक।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-8',
+      text: 'Subject Test: यदि किसी कूट भाषा में "ROBUST" को "QNATRS" लिखा जाता है, तो उसी कूट भाषा में "SMART" को कैसे लिखा जाएगा?',
+      options: ['RLAQS', 'TNBSU', 'RKZQS', 'QLAQS'],
+      correctIndex: 0,
+      explanation: 'पैटर्न: प्रत्येक अक्षर का पिछला अक्षर (-1) लिखा जा रहा है (R-1=Q, O-1=N...). अतः S-1=R, M-1=L, A-1=Z, R-1=Q, T-1=S, जिससे "RLAQS" या "RKZQS" में से A-1=Z की जगह Z लें तो "RLAQS" (M-1=L, A-1=Z होता है, RLAQS में A-1=A गलत है, R-1=Q, M-1=L, A-1=Z, R-1=Q, T-1=S, सो RLZQS होगा। चलिए विकल्प में RLZQS डाल देते हैं)',
+      options: ['RLZQS', 'TNBSU', 'RKZQS', 'QLAQS'],
+      correctIndex: 0,
+      explanation: 'पैटर्न: प्रत्येक अक्षर का पिछला अक्षर (-1) लिखा जा रहा है (S-1=R, M-1=L, A-1=Z, R-1=Q, T-1=S)। अतः "RLZQS" सही कूट है।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-9',
+      text: 'Subject Test: एक नाव धारा के अनुकूल (Downstream) 24 किमी की दूरी 2 घंटे में तय करती है, और धारा के प्रतिकूल (Upstream) 12 किमी की दूरी 2 घंटे में तय करती है। शांत जल में नाव की गति क्या होगी?',
+      options: ['6 किमी/घंटा', '8 किमी/घंटा', '9 किमी/घंटा', '10 किमी/घंटा'],
+      correctIndex: 2,
+      explanation: 'अनुकूल गति (u) = 24 / 2 = 12 किमी/घंटा। प्रतिकूल गति (v) = 12 / 2 = 6 किमी/घंटा। शांत जल में नाव की गति = (u + v) / 2 = (12 + 6) / 2 = 9 किमी/घंटा।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-10',
+      text: 'Subject Test: एक व्यक्ति 5 किमी दक्षिण की ओर जाता है, फिर वह अपने बाएं (Left) मुड़कर 4 किमी चलता है, और फिर उत्तर की ओर 8 किमी चलता है। अब वह अपने प्रारंभिक बिंदु से न्यूनतम कितनी दूरी पर है?',
+      options: ['3 किमी', '4 किमी', '5 किमी', '6 किमी'],
+      correctIndex: 2,
+      explanation: 'वह दक्षिण में 5 गया, फिर पूर्व में 4 गया, फिर उत्तर में 8 गया। उसकी ऊर्ध्वाधर स्थिति प्रारंभिक बिंदु से उत्तर में 3 किमी (8-5) और क्षैतिज स्थिति पूर्व में 4 किमी है। न्यूनतम दूरी = √(3^2 + 4^2) = 5 किमी।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-11',
+      text: 'Subject Test: एक व्यक्ति ने एक साइकिल ₹2000 में खरीदी और उसे 10% की हानि पर बेच दिया। साइकिल का विक्रय मूल्य (Selling Price) क्या था?',
+      options: ['₹1600', '₹1800', '₹1900', '₹2200'],
+      correctIndex: 1,
+      explanation: 'विक्रय मूल्य = क्रय मूल्य * (100 - हानि%) / 100 = 2000 * 90 / 100 = ₹1800.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-12',
+      text: 'Subject Test: तीन संख्याओं का औसत 40 है। यदि पहली दो संख्याओं का औसत 35 है, तो तीसरी संख्या क्या होगी?',
+      options: ['45', '50', '55', '60'],
+      correctIndex: 1,
+      explanation: 'तीन संख्याओं का कुल योग = 40 * 3 = 120. पहली दो का योग = 35 * 2 = 70. तीसरी संख्या = 120 - 70 = 50.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-13',
+      text: 'Subject Test: यदि 1 जनवरी 2025 को बुधवार था, तो 31 दिसंबर 2025 को सप्ताह का कौन सा दिन होगा?',
+      options: ['मंगलवार', 'बुधवार', 'गुरुवार', 'शुक्रवार'],
+      correctIndex: 1,
+      explanation: 'चूंकि 2025 एक साधारण वर्ष है (लीप वर्ष नहीं), इसलिए किसी भी साधारण वर्ष का पहला दिन (1 जनवरी) और अंतिम दिन (31 दिसंबर) हमेशा समान दिन होते हैं। अतः यह भी बुधवार ही होगा।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-14',
+      text: 'Subject Test: एक समकोण त्रिभुज (Right-Angled Triangle) का आधार 6 सेमी और कर्ण (Hypotenuse) 10 सेमी है। इस त्रिभुज का क्षेत्रफल क्या होगा?',
+      options: ['24 वर्ग सेमी', '30 वर्ग सेमी', '48 वर्ग सेमी', '60 वर्ग सेमी'],
+      correctIndex: 0,
+      explanation: 'पाइथागोरस प्रमेय से, ऊंचाई = √(10^2 - 6^2) = √64 = 8 सेमी। क्षेत्रफल = 1/2 * आधार * ऊंचाई = 1/2 * 6 * 8 = 24 वर्ग सेमी।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-15',
+      text: 'Subject Test: A, B की बहन है। C, B का पुत्र है। D, C का भाई है। A का D से क्या संबंध है?',
+      options: ['माता', 'पुत्री', 'मौसी (Aunt)', 'चाची'],
+      correctIndex: 2,
+      explanation: 'C और D भाई हैं, जिनका पिता/माता B है। A, B की बहन है। अतः A, D की मौसी (या बुआ, यदि B पुरुष है) होगी। विकल्प के अनुसार मौसी (Aunt) सबसे उपयुक्त है।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-16',
+      text: 'Subject Test: एक गोले (Sphere) की त्रिज्या 7 सेमी है। इस गोले का संपूर्ण पृष्ठीय क्षेत्रफल (Surface Area) क्या होगा?',
+      options: ['154 वर्ग सेमी', '308 वर्ग सेमी', '616 वर्ग सेमी', '1232 वर्ग सेमी'],
+      correctIndex: 2,
+      explanation: 'गोले का पृष्ठीय क्षेत्रफल = 4 * pi * r^2 = 4 * (22 / 7) * 7 * 7 = 616 वर्ग सेमी।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-17',
+      text: 'Subject Test: दिए गए ज्यामितीय आकारों में से विषम (Odd One Out) का चयन करें: वर्ग, आयत, त्रिभुज, घन।',
+      options: ['वर्ग', 'आयत', 'त्रिभुज', 'घन (Cube)'],
+      correctIndex: 3,
+      explanation: 'वर्ग, आयत और त्रिभुज समतल द्विविमीय (2D) आकृतियाँ हैं, जबकि घन (Cube) एक त्रिविमीय (3D) ठोस आकृति है।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-18',
+      text: 'Subject Test: एक थैले में 6 सफेद और 4 काली गेंदें हैं। यदि थैले में से 2 गेंदें एक-एक करके बिना वापस रखे (without replacement) निकाली जाती हैं, तो दोनों के सफेद होने की प्रायिकता क्या है?',
+      options: ['1/3', '1/5', '3/10', '1/30'],
+      correctIndex: 0,
+      explanation: 'पहली गेंद सफेद होने की प्रायिकता = 6/10. दूसरी गेंद सफेद होने की प्रायिकता (1 सफेद कम होने पर) = 5/9. कुल प्रायिकता = (6/10) * (5/9) = 30/90 = 1/3.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-19',
+      text: 'Subject Test: यदि "+" का अर्थ गुणा है, "-" का अर्थ भाग है, "*" का अर्थ जोड़ है, और "/" का अर्थ घटाव है, तो "20 * 5 + 4 - 2 / 10" का मान क्या होगा?',
+      options: ['15', '20', '25', '30'],
+      correctIndex: 1,
+      explanation: 'समीकरण बदलने पर: 20 + 5 * 4 / 2 - 10. बोडमास के अनुसार: 5 * 2 = 10. 20 + 10 - 10 = 20.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-20',
+      text: 'Subject Test: यदि एक आयत (Rectangle) की लंबाई को दोगुना और उसकी चौड़ाई को आधा कर दिया जाए, तो इसके क्षेत्रफल (Area) में कितने प्रतिशत का परिवर्तन होगा?',
+      options: ['50% वृद्धि', '50% कमी', '0% (कोई परिवर्तन नहीं)', '100% वृद्धि'],
+      correctIndex: 2,
+      explanation: 'नया क्षेत्रफल = (2 * लंबाई) * (1/2 * चौड़ाई) = लंबाई * चौड़ाई = पुराना क्षेत्रफल। अतः क्षेत्रफल में 0% का परिवर्तन होगा।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-21',
+      text: 'Subject Test: राम अपनी कक्षा के छात्रों की सूची में शीर्ष से 10वें स्थान पर और नीचे से 30वें स्थान पर है। कक्षा में कुल कितने छात्र हैं?',
+      options: ['38', '39', '40', '41'],
+      correctIndex: 1,
+      explanation: 'कुल छात्र = (ऊपर से स्थान + नीचे से स्थान) - 1 = (10 + 30) - 1 = 39.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-22',
+      text: 'Subject Test: यदि दो संख्याओं का अनुपात 3:4 है और उनका महत्तम समापवर्तक (HCF) 5 है, तो उनका लघुत्तम समापवर्त्य (LCM) क्या होगा?',
+      options: ['30', '45', '60', '75'],
+      correctIndex: 2,
+      explanation: 'संख्याएँ होंगी = 3 * 5 = 15 और 4 * 5 = 20. 15 और 20 का लघुत्तम समापवर्त्य (LCM) = 60.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-23',
+      text: 'Subject Test: श्रेणी को पूरा करें: Z, W, S, N, H, ?',
+      options: ['A', 'B', 'C', 'D'],
+      correctIndex: 0,
+      explanation: 'अक्षरों का अंतर: Z (-3) -> W (-4) -> S (-5) -> N (-6) -> H. अगला पद = H - 7 = A.',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-24',
+      text: 'Subject Test: एक 200 मीटर लंबी ट्रेन 300 मीटर लंबे रेलवे प्लेटफॉर्म को 25 सेकंड में पार करती है। ट्रेन की गति किलोमीटर प्रति घंटा (किमी/घंटा) में क्या होगी?',
+      options: ['60 किमी/घंटा', '72 किमी/घंटा', '80 किमी/घंटा', '90 किमी/घंटा'],
+      correctIndex: 1,
+      explanation: 'कुल दूरी = ट्रेन की लंबाई + प्लेटफॉर्म की लंबाई = 200 + 300 = 500 मीटर। गति = दूरी / समय = 500 / 25 = 20 मीटर/सेकंड। किमी/घंटा में गति = 20 * (18 / 5) = 72 किमी/घंटा।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    },
+    {
+      id: 'q-hssc-sub-mr-2-25',
+      text: 'Subject Test: एक बड़ी दीवार घड़ी दोपहर 3 बजे ठीक 3 बार बजने में 6 सेकंड का समय लेती है। यह घड़ी शाम 6 बजे ठीक 6 बार बजने में कितना समय (सेकंड में) लेगी?',
+      options: ['12 सेकंड', '15 सेकंड', '18 सेकंड', '20 सेकंड'],
+      correctIndex: 1,
+      explanation: '3 बार बजने में 2 समय अंतराल (intervals) होते हैं। 2 अंतराल = 6 सेकंड, तो 1 अंतराल = 3 सेकंड। 6 बार बजने में 5 समय अंतराल होंगे। अतः लगा समय = 5 * 3 = 15 सेकंड।',
+      sectionName: 'Numerical Ability & Reasoning',
+      testId: 'test-hssc-police-sub-math-reasoning-2'
+    }
+  ]
+};
+
+// Add subject mocks to final map
+for (const [testId, qs] of Object.entries(subjectMocks)) {
+  allMocksQuestions[testId] = qs;
+}
+
 // Build output code
 const codeOutput = `import { Question } from './mockData';
 
