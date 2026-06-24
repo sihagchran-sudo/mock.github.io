@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { CATEGORIES, EXAMS, MOCK_TESTS } from '@/mockData';
+import { BLOGS } from '@/blogData';
 import TestCard from '@/components/TestCard';
 
 export default function HomePage() {
@@ -159,34 +160,81 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Popular Tests Carousel/Grid */}
+      {/* 3. Exam Syllabus & Official Notifications Blog Section */}
       <section className="bg-slate-100/50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
             <div className="text-center md:text-left">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                Trending Mock Tests
+                Official Exam Syllabus & Syllabus Patterns
               </h2>
               <p className="text-slate-500 mt-2 text-sm sm:text-base">
-                Attempt these high-yield mock tests taken by thousands of aspirants daily.
+                Read official patterns, section weightage, age limit, and direct syllabus insights from sarkari alerts.
               </p>
             </div>
-            <Link
-              href="/exam/sbi-po"
-              className="mt-4 md:mt-0 text-sm text-blue-600 hover:text-blue-700 font-bold inline-flex items-center gap-1 justify-center"
-            >
-              View All Mock Tests
-              <span>→</span>
-            </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {popularTests.map((test) => (
-              <TestCard key={test.id} test={test} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {BLOGS.map((blog) => (
+              <div 
+                key={blog.slug} 
+                className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between"
+              >
+                <div>
+                  {/* Category and Read time */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-[10px] bg-blue-50 text-blue-600 font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider border border-blue-100">
+                      {blog.category}
+                    </span>
+                    <span className="text-[10px] text-slate-400 font-medium">
+                      {blog.readTime}
+                    </span>
+                  </div>
+
+                  {/* Icon & Title */}
+                  <div className="flex gap-4 items-start mb-3">
+                    <span className="text-3xl p-3 bg-slate-50 rounded-2xl shrink-0">
+                      {blog.icon}
+                    </span>
+                    <div>
+                      <Link href={`/blog/${blog.slug}`} className="hover:text-blue-600 transition-colors">
+                        <h3 className="font-extrabold text-slate-800 text-base sm:text-lg leading-snug">
+                          {blog.title}
+                        </h3>
+                      </Link>
+                      <p className="text-[10px] text-slate-400 mt-1 font-semibold">
+                        Authority: {blog.details.authority}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-slate-500 text-xs sm:text-sm line-clamp-2 leading-relaxed mb-6 font-medium">
+                    {blog.description}
+                  </p>
+                </div>
+
+                {/* Buttons Action Group */}
+                <div className="flex gap-3 pt-4 border-t border-slate-100">
+                  <Link
+                    href={`/blog/${blog.slug}`}
+                    className="flex-1 text-center bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs py-3 px-4 rounded-xl transition-all"
+                  >
+                    View Details
+                  </Link>
+                  <Link
+                    href={`/exam/${blog.examSlug}`}
+                    className="flex-1 text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-3 px-4 rounded-xl shadow-md hover:shadow-blue-500/10 transition-all"
+                  >
+                    Start Mock Test
+                  </Link>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* 4. Stats / Trust Banner */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12">

@@ -150,24 +150,62 @@ export const MOCK_TESTS: Test[] = [...BASE_MOCK_TESTS];
 EXAMS.forEach(exam => {
   const hasTests = BASE_MOCK_TESTS.some(t => t.examId === exam.id);
   if (!hasTests) {
+    let duration = 90;
+    let totalMarks = 105;
+    let questionCount = 100;
+
+    if (exam.slug === 'ssc-chsl' || exam.slug === 'ssc-cpo') {
+      duration = 60;
+      totalMarks = 200;
+      questionCount = 100;
+    } else if (exam.slug === 'up-police-constable') {
+      duration = 120;
+      totalMarks = 300;
+      questionCount = 150;
+    } else if (exam.slug === 'ssc-mts') {
+      duration = 90;
+      totalMarks = 270;
+      questionCount = 90;
+    } else if (['sbi-clerk', 'ibps-clerk', 'ibps-po', 'ibps-rrb-po', 'ibps-rrb-clerk', 'rbi-assistant'].includes(exam.slug)) {
+      duration = 60;
+      totalMarks = 100;
+      questionCount = 100;
+    } else if (exam.slug === 'rbi-grade-b') {
+      duration = 120;
+      totalMarks = 200;
+      questionCount = 200;
+    } else if (['upsc-cse', 'uppsc-pcs', 'bpsc', 'hpsc-hcs'].includes(exam.slug)) {
+      duration = 120;
+      totalMarks = 200;
+      questionCount = 100;
+    } else if (exam.slug === 'rrb-ntpc' || exam.slug === 'rrb-group-d' || exam.slug === 'rrb-alp') {
+      duration = 90;
+      totalMarks = 100;
+      questionCount = 100;
+    } else if (exam.slug === 'ctet' || exam.slug === 'htet') {
+      duration = 150;
+      totalMarks = 150;
+      questionCount = 150;
+    }
+
     MOCK_TESTS.push(
       {
         id: `test-${exam.slug}-full-1`,
         title: `${exam.name} - Full Mock Test 1`,
-        duration: 90,
-        totalMarks: 100,
+        duration,
+        totalMarks,
         testType: 'FULL',
         examId: exam.id,
-        questionCount: 100
+        questionCount
       },
       {
         id: `test-${exam.slug}-sub-gk`,
         title: `${exam.name} - General Studies Sectional Mock`,
-        duration: 20,
-        totalMarks: 30,
+        duration: Math.round(duration * 0.25) || 15,
+        totalMarks: Math.round(totalMarks * 0.25) || 25,
         testType: 'SECTIONAL',
         examId: exam.id,
-        questionCount: 30
+        questionCount: Math.round(questionCount * 0.25) || 25
       },
       {
         id: `test-${exam.slug}-chap-quant`,
