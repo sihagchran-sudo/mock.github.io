@@ -566,16 +566,698 @@ try {
   process.exit(1);
 }
 
-// Load Mock 6 and Mock 7 from scratch files
-try {
-  const mock6 = JSON.parse(fs.readFileSync('C:\\Users\\dell\\.gemini\\antigravity\\brain\\d839deef-9e5e-44c7-badd-2ef017d13ae2\\scratch\\mock6_final.json', 'utf8'));
-  const mock7 = JSON.parse(fs.readFileSync('C:\\Users\\dell\\.gemini\\antigravity\\brain\\d839deef-9e5e-44c7-badd-2ef017d13ae2\\scratch\\mock7_final.json', 'utf8'));
-  allMocksQuestions['test-hssc-police-full-6'] = mock6;
-  allMocksQuestions['test-hssc-police-full-7'] = mock7;
-  console.log("Successfully loaded Mock 6 and Mock 7 from scratch files.");
-} catch (err) {
-  console.error("Error loading Mock 6 or Mock 7 from scratch files:", err.message);
-  process.exit(1);
+// Haryana GK Chapter-wise Mocks Definition
+const chapterMocks = {
+  'test-hssc-police-chap-history': [
+    {
+      id: 'q-hssc-chap-history-1',
+      text: 'Haryana General Knowledge: योधेय गणराज्य के संदर्भ में निम्नांकित कथनों पर विचार कीजिए। योधेयों की राजधानी क्या थी और उनके सिक्कों पर किस देवता का चित्र अंकित था?',
+      options: ['रोहतक/नौरंगाबाद - कार्तिकेय', 'सिरसा - भगवान शिव', 'थानेसर - इंद्र', 'अग्रोहा - सूर्य'],
+      correctIndex: 0,
+      explanation: 'योधेय गणराज्य का प्रमुख केंद्र बहुधान्यक (रोहतक) था। खोखराकोट (रोहतक) और नौरंगाबाद (भिवानी) से प्राप्त सिक्कों पर उनके आराध्य देव कार्तिकेय (स्कन्द) तथा मयूर का अंकन है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-2',
+      text: 'Haryana General Knowledge: चीनी यात्री ह्वेनसांग (Xuanzang) ने राजा हर्षवर्धन के शासनकाल के दौरान थानेसर की यात्रा किस अवधि (वर्षों) में की थी?',
+      options: ['629 ई. से 645 ई.', '606 ई. से 612 ई.', '634 ई. से 644 ई.', '650 ई. से 660 ई.'],
+      correctIndex: 2,
+      explanation: 'ह्वेनसांग ने 634 से 644 ई. के मध्य थानेसर (कुरुक्षेत्र) में रहकर शिक्षा और बौद्ध धर्म का अध्ययन किया था। उन्होंने अपनी पुस्तक \'सी-यू-की\' में थानेसर के वैभव का वर्णन किया है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-3',
+      text: 'Haryana General Knowledge: मध्यकालीन इतिहास में प्रसिद्ध \'तराइन का तीसरा युद्ध\' (Third Battle of Tarain) किस वर्ष लड़ा गया था और इसमें किसकी पराजय हुई थी?',
+      options: ['1192 ई. - पृथ्वीराज चौहान', '1215 ई. - ताजुद्दीन यल्दौज', '1206 ई. - कुतुबुद्दीन ऐबक', '1526 ई. - इब्राहिम लोदी'],
+      correctIndex: 1,
+      explanation: 'तराइन का तीसरा युद्ध 1215-1216 ई. में दिल्ली के सुल्तान इल्तुतमिश और गजनी के शासक ताजुद्दीन यल्दौज के बीच हुआ था, जिसमें यल्दौज की पराजय हुई और उसे बंदी बनाया गया।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-4',
+      text: 'Haryana General Knowledge: 1857 की क्रांति के दौरान हरियाणा की किस रियासत के शासक को अंग्रेजों ने दिल्ली के चांदनी चौक पर फांसी दी थी?',
+      options: ['फर्रुखनगर के नवाब अहमद अली खां', 'झज्जर के नवाब अब्दुल रहमान खां', 'बल्लभगढ़ के राजा नाहर सिंह', 'दुजाना के नवाब'],
+      correctIndex: 2,
+      explanation: 'बल्लभगढ़ के राजा नाहर सिंह को 9 जनवरी 1858 को उनके जन्मदिन के दिन दिल्ली के चांदनी चौक पर सरेआम फांसी दी गई थी। उन्हें \'बल्लभगढ़ का शेर\' भी कहा जाता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-5',
+      text: 'Haryana General Knowledge: हड़प्पा सभ्यता का स्थल \'राखीगढ़ी\' किस नदी के शुष्क मार्ग पर स्थित है और इसकी खोज सर्वप्रथम किसके द्वारा की गई थी?',
+      options: ['घग्गर नदी - सूरजभान', 'दृषद्वती नदी - अमरेंद्र नाथ', 'सरस्वती नदी - जे.पी. जोशी', 'साहिबी नदी - आर.एस. बिष्ट'],
+      correctIndex: 1,
+      explanation: 'राखीगढ़ी हिसार जिले में दृषद्वती (चौतांग) नदी घाटी में स्थित है। इसकी खोज प्रो. सूरजभान ने की थी, जबकि विस्तृत उत्खनन डॉ. अमरेंद्र नाथ के नेतृत्व में किया गया था। यह भारत का सबसे बड़ा हड़प्पा स्थल है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-6',
+      text: 'Haryana General Knowledge: पानीपत की तीसरी लड़ाई के समय जाट राजा सूरजमल का क्या रुख था?',
+      options: ['उन्होंने मराठों का अंत तक पूर्ण समर्थन किया', 'उन्होंने अहमद शाह अब्दाली का साथ दिया', 'सदाशिवराव भाऊ से मतभेद के कारण वे युद्ध से अलग रहे', 'उन्होंने अंग्रेजों से संधि कर ली'],
+      correctIndex: 2,
+      explanation: 'सदाशिवराव भाऊ के अड़ियल रवैये और रणनीति से मतभेद होने के कारण जाट राजा सूरजमल पानीपत के तीसरे युद्ध (1761) से अलग हट गए थे, हालांकि बाद में उन्होंने पराजित मराठा सैनिकों की मानवीय सहायता की थी।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-7',
+      text: 'Haryana General Knowledge: जॉर्ज थॉमस (George Thomas) ने 1797 में हरियाणा के किस स्थान को अपनी राजधानी बनाया और वहाँ एक टकसाल (Mint) स्थापित की?',
+      options: ['महम (रोहतक)', 'हांसी (हिसार)', 'जहाजगढ़ (झज्जर)', 'टोहाना (फतेहाबाद)'],
+      correctIndex: 1,
+      explanation: 'आयरिश साहसी जॉर्ज थॉमस ने हांसी के किले को अपनी राजधानी बनाया और वहां सिक्के ढालने के लिए एक टकसाल स्थापित की। उसके चलाए गए सिक्कों को \'सिक्का-ए-साहिब\' कहा जाता था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-8',
+      text: 'Haryana General Knowledge: 1803 में अंग्रेजों और मराठों के बीच हुई \'सुर्जी-अंजनगाँव की संधि\' (Treaty of Surji-Anjangaon) के तहत हरियाणा को किसे सौंपा गया था?',
+      options: ['फ्रांसीसियों को', 'सिखों को', 'ईस्ट इंडिया कंपनी को', 'मुगल सम्राट को'],
+      correctIndex: 2,
+      explanation: 'सुर्जी-अंजनगाँव की संधि (30 दिसंबर 1803) दौलतराव सिंधिया और ब्रिटिश ईस्ट इंडिया कंपनी के बीच हुई थी, जिसके बाद हरियाणा का क्षेत्र ब्रिटिश नियंत्रण में आ गया।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-9',
+      text: 'Haryana General Knowledge: राजा अजीत सिंह के नेतृत्व में अंग्रेजों के विरुद्ध \'लाडवा का विद्रोह\' (Revolt of Ladwa) किस वर्ष हुआ था?',
+      options: ['1818 ई.', '1835 ई.', '1845 ई.', '1849 ई.'],
+      correctIndex: 2,
+      explanation: 'लाडवा (कुरुक्षेत्र) का विद्रोह 1845 ई. में राजा अजीत सिंह के नेतृत्व में हुआ था। यह अंग्रेजों की दमनकारी नीति के विरुद्ध एक प्रमुख सशस्त्र विद्रोह था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-10',
+      text: 'Haryana General Knowledge: फिरोजशाह तुगलक ने 1354 ई. में हिसार-ए-फिरोजा (हिसार) की स्थापना की थी। इस शहर के निर्माण के लिए पानी की आपूर्ति हेतु उन्होंने कौन सी नहर निकलवाई थी?',
+      options: ['पश्चिमी यमुना नहर', 'उलीगखानी और रजवाह नहरें', 'सूतलज-यमुना लिंक', 'भिवानी नहर'],
+      correctIndex: 1,
+      explanation: 'फिरोजशाह तुगलक ने हिसार में पानी की कमी दूर करने के लिए यमुना से \'उलीगखानी\' और सतलुज से \'फिरोजाबाद/रजवाह\' नामक नहरें निकलवाई थीं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-11',
+      text: 'Haryana General Knowledge: तोमर शासक अनंगपाल तोमर (द्वितीय) द्वारा 10वीं शताब्दी में फरीदाबाद जिले में किस ऐतिहासिक जलाशय का निर्माण कराया गया था?',
+      options: ['बड़खल झील', 'सूरजकुंड', 'धौज झील', 'मयूर जलाशय'],
+      correctIndex: 1,
+      explanation: 'सूरजकुंड (उगते सूर्य की झील) का निर्माण तोमर वंश के राजा सूरजपाल या अनंगपाल तोमर द्वितीय द्वारा 10वीं शताब्दी में कराया गया था। यह सूर्य देव की उपासना के लिए बनवाया गया था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-12',
+      text: 'Haryana General Knowledge: हरियाणा में प्रसिद्ध \'असहयोग आंदोलन\' (Non-Cooperation Movement) के दौरान किस नेता ने अपनी \'राय बहादुर\' की उपाधि अंग्रेजों को वापस लौटा दी थी?',
+      options: ['नेकीराम शर्मा', 'लाला लाजपत राय', 'लाला मुरलीधर', 'सर छोटू राम'],
+      correctIndex: 2,
+      explanation: 'असहयोग आंदोलन (1920) के दौरान \'ग्रैंड ओल्ड मैन ऑफ पंजाब\' कहे जाने वाले लाला मुरलीधर ने ब्रिटिश सरकार द्वारा दी गई \'राय बहादुर\' और \'कैसर-ए-हिंद\' की उपाधि का त्याग कर दिया था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-13',
+      text: 'Haryana General Knowledge: महमूद गजनवी के पुत्र मसूद ने हरियाणा के हांसी पर आक्रमण कर उसे किस वर्ष अपने अधीन कर लिया था?',
+      options: ['1014 ई.', '1030 ई.', '1037 ई.', '1043 ई.'],
+      correctIndex: 2,
+      explanation: 'मसूद (महमूद गजनवी का पुत्र) ने 1037 ई. में हांसी के प्रसिद्ध दुर्ग पर आक्रमण किया और तोमरों को हराकर उस पर अधिकार कर लिया था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-14',
+      text: 'Haryana General Knowledge: 1947 में भारत के विभाजन के समय भारत के गृह मंत्री सरदार वल्लभभाई पटेल ने पूर्वी पंजाब (हरियाणा सहित) के शरणार्थियों को बसाने के लिए किस शहर की नींव रखी थी?',
+      options: ['फरीदाबाद', 'कुरुक्षेत्र', 'नीलोखेड़ी', 'रोहतक'],
+      correctIndex: 0,
+      explanation: 'फरीदाबाद शहर को 1950 के दशक के आरंभ में विस्थापितों के पुनर्वास के लिए योजनाबद्ध तरीके से बसाया गया था, जिसका उद्घाटन नेहरू जी और पटेल जी के प्रयासों से हुआ था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    },
+    {
+      id: 'q-hssc-chap-history-15',
+      text: 'Haryana General Knowledge: 9वीं शताब्दी के \'पेहोवा अभिलेख\' (Pehowa Inscription) से किस गुर्जर-प्रतिहार शासक के शासनकाल और घोड़ों के व्यापार की जानकारी मिलती है?',
+      options: ['नागभट्ट द्वितीय', 'मिहिर भोज', 'महिपाल प्रथम', 'रामभद्र'],
+      correctIndex: 1,
+      explanation: 'पेहोवा अभिलेख (882 ई.) गुर्जर-प्रतिहार वंश के महान शासक मिहिर भोज के समय का है। इससे स्पष्ट होता है कि पेहोवा उस समय घोड़ों के व्यापार का एक प्रसिद्ध केंद्र था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-history'
+    }
+  ],
+  'test-hssc-police-chap-geography': [
+    {
+      id: 'q-hssc-chap-geography-1',
+      text: 'Haryana General Knowledge: हरियाणा के किस भूगोलीय क्षेत्र को \'तराई का मैदान\' कहा जाता है और यह मुख्यतः किन जिलों में विस्तृत है?',
+      options: ['यमुना-घग्गर दोआब - रोहतक, सोनीपत', 'शिवालिक का पादप क्षेत्र - पंचकूला, यमुनानगर', 'घग्गर व मार्कंडा नदियों के बीच का दलदली क्षेत्र - सिरसा, फतेहाबाद', 'अरावली का शुष्क क्षेत्र - महेन्द्रगढ़, रेवाड़ी'],
+      correctIndex: 2,
+      explanation: 'घग्गर व मार्कंडा के बाढ़ के मैदानों के जलोढ़ जमाव और सिरसा के दक्षिणी भाग में पाए जाने वाले \'अनकाई दलदल\' (Ankai Daldal) को भौगोलिक दृष्टि से दलदली व निम्न मैदान कहा जाता है, जो समुद्र तल से सबसे कम ऊंचाई (200 मीटर से कम) पर है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-2',
+      text: 'Haryana General Knowledge: अरावली पर्वत श्रृंखला के अंतर्गत हरियाणा का सबसे उच्चतम बिंदु \'कुल्ताजपुर\' गाँव में स्थित है। इसे किस नाम से जाना जाता है और इसकी ऊंचाई कितनी है?',
+      options: ['करोह चोटी - 1467 मीटर', 'ढोसी की पहाड़ी - 652 मीटर', 'टिपरा पहाड़ी - 1320 मीटर', 'ताजेवाला हिल्स - 450 मीटर'],
+      correctIndex: 1,
+      explanation: 'दक्षिण हरियाणा में अरावली का सबसे ऊंचा स्थान महेन्द्रगढ़ जिले के नारनौल के पास कुल्ताजपुर गाँव में \'ढोसी की पहाड़ी\' है, जिसकी ऊंचाई 652 मीटर है। यह च्यवन ऋषि की तपोस्थली भी है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-3',
+      text: 'Haryana General Knowledge: कोपेन के जलवायु वर्गीकरण (Koppen\'s Climate Classification) के अनुसार, Haryana में मुख्य रूप से कौन सी दो जलवायु श्रेणियां पाई जाती हैं?',
+      options: ['Cwg (शुष्क शीत मानसून) और BSh (अर्ध-शुष्क स्टेपी)', 'Aw (उष्णकटिबंधीय सवाना) और BWh (उष्ण मरुस्थलीय)', 'Am (मानसूनी लघु शुष्क) और Cfa (नम उपोष्ण)', 'As (शुष्क ग्रीष्म मानसून) और Dfb (ठंडी नम)'],
+      correctIndex: 0,
+      explanation: 'कोपेन के अनुसार हरियाणा के उत्तरी भाग में उपोष्ण आर्द्र जलवायु (Cwg) तथा मध्य व दक्षिणी भाग में उष्ण अर्ध-शुष्क स्टेपी जलवायु (BSh) पाई जाती है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-4',
+      text: 'Haryana General Knowledge: लाल चेस्टनट मृदा (Red Chestnut Soil) हरियाणा के किस विशिष्ट जिले में पाई जाती है और इसकी प्रकृति कैसी होती है?',
+      options: ['महेन्द्रगढ़ - अत्यधिक अम्लीय', 'यमुनानगर - उदासीन से हल्की क्षारीय', 'सिरसा - अत्यधिक लवणीय', 'गुरुग्राम - पथरीली बलुई'],
+      correctIndex: 1,
+      explanation: 'लाल चेस्टनट मिट्टी मुख्यतः यमुनानगर जिले में पाई जाती है। नाइट्रोजन और फास्फोरस की कमी वाली इस मिट्टी की प्रकृति उदासीन से हल्की क्षारीय होती है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-5',
+      text: 'Haryana General Knowledge: हरियाणा के डार्क ज़ोन (Dark Zones) में भूजल स्तर सुधारने के लिए चलाई जा रही \'मेरा पानी-मेरी विरासत\' योजना के तहत धान के स्थान पर वैकल्पिक फसलें उगाने पर कितनी वित्तीय सहायता दी जाती है?',
+      options: ['5,000 रुपये प्रति एकड़', '7,000 रुपये प्रति एकड़', '10,000 रुपये प्रति एकड़', '12,000 रुपये प्रति एकड़'],
+      correctIndex: 1,
+      explanation: '\'मेरा पानी-मेरी विरासत\' योजना के तहत धान की खेती छोड़कर कम पानी वाली फसलें (जैसे मक्का, बाजरा, कपास, दालें) उगाने वाले किसानों को ₹7,000 प्रति एकड़ की वित्तीय प्रोत्साहन राशि प्रदान की जाती है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-6',
+      text: 'Haryana General Knowledge: घग्गर नदी द्वारा निर्मित संकीर्ण बाढ़ के मैदानों को स्थानीय भाषा में क्या कहा जाता है और मार्कंडा नदी द्वारा बनाए गए मैदानों को क्या कहते हैं?',
+      options: ['बेट (Bet) और नाली (Nali)', 'नैली (Nelli) और बेट (Bet)', 'नाली (Nali) और चौ (Cho)', 'घर (Ghar) और कंकर (Kankar)'],
+      correctIndex: 1,
+      explanation: 'घग्गर नदी के बाढ़ मैदानों को \'नैली\' या \'नाली\' कहा जाता है, जबकि मार्कंडा नदी द्वारा बनाए गए उपजाऊ बाढ़ मैदानों को स्थानीय स्तर पर \'बेट\' कहा जाता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-7',
+      text: 'Haryana General Knowledge: हरियाणा वन विकास निगम (Haryana Forest Development Corporation - HFDC) की स्थापना किस वर्ष हुई थी और इसका मुख्यालय कहाँ स्थित है?',
+      options: ['December 1989 - पंचकूला', 'March 1991 - गुरुग्राम', 'November 1995 - यमुनानगर', 'June 1985 - अम्बाला'],
+      correctIndex: 0,
+      explanation: 'हरियाणा वन विकास निगम लिमिटेड की स्थापना दिसंबर 1989 में कंपनी अधिनियम के तहत की गई थी। इसका मुख्यालय पंचकूला में है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-8',
+      text: 'Haryana General Knowledge: मार्कंडा नदी प्राचीन काल में किस नाम से जानी जाती थी और यह हरियाणा में सर्वप्रथम किस स्थान से प्रवेश करती है?',
+      options: ['दृषद्वती - कालका', 'अरुणा - काला अम्ब (अम्बाला)', 'साहिबी - कोट कासिम', 'मंदाकिनी - ताजेवाला'],
+      correctIndex: 1,
+      explanation: 'मार्कंडा नदी का प्राचीन नाम \'अरुणा\' था। यह हिमाचल प्रदेश की शिवालिक पहाड़ियों से निकलकर अम्बाला जिले के \'काला अम्ब\' नामक स्थान से हरियाणा में प्रवेश करती है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-9',
+      text: 'Haryana General Knowledge: हरियाणा के किस राष्ट्रीय उद्यान/वन्यजीव अभयारण्य में 2023 में लगभग 110 वर्षों बाद एक जंगली बाघ (Tiger) देखा गया था?',
+      options: ['सुल्तानपुर राष्ट्रीय उद्यान', 'कालेसर राष्ट्रीय उद्यान', 'भींडावास वन्यजीव अभयारण्य', 'बीर शिकारगाह अभयारण्य'],
+      correctIndex: 1,
+      explanation: 'यमुनानगर में स्थित कालेसर राष्ट्रीय उद्यान में अप्रैल 2023 में एक जंगली बाघ कैमरे में कैद हुआ था, जो इस क्षेत्र में 110 वर्षों बाद बाघ की पहली पुष्टि थी।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-10',
+      text: 'Haryana General Knowledge: यमुना नदी हरियाणा की पूर्वी सीमा पर कितने किलोमीटर बहती हुई उत्तर प्रदेश से इसे अलग करती है?',
+      options: ['250 किमी', '320 किमी', '350 किमी', '410 किमी'],
+      correctIndex: 1,
+      explanation: 'यमुना नदी हरियाणा की पूर्वी सीमा पर लगभग 320 किलोमीटर की दूरी तक बहती है। यह यमुनोत्री से निकलकर यमुनानगर के ताजेवाला से हरियाणा में प्रवेश करती है और हसनपुर (पलवल) से होकर उत्तर प्रदेश में चली जाती है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-11',
+      text: 'Haryana General Knowledge: हरियाणा का कौन सा वन्यजीव अभयारण्य पर्यावरण संवेदनशील क्षेत्र (Eco-Sensitive Zone) घोषित है और अपनी खूबसूरत आर्द्रभूमि के कारण रामसर साइट (Ramsar Site) में शामिल है?',
+      options: ['खपरवास वन्यजीव अभयारण्य', 'भींडावास वन्यजीव अभयारण्य', 'छिलछिला वन्यजीव अभयारण्य', 'नाहर वन्यजीव अभयारण्य'],
+      correctIndex: 1,
+      explanation: 'झज्जर जिले में स्थित भींडावास वन्यजीव अभयारण्य अपनी बड़ी आर्द्रभूमि और पक्षियों की विविधता के लिए प्रसिद्ध है। इसे अगस्त 2021 में रामसर साइट के रूप में मान्यता मिली थी।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-12',
+      text: 'Haryana General Knowledge: शिवालिक पर्वत श्रेणी के अंतर्गत आने वाली \'करोह चोटी\' (Karoh Peak) की वास्तविक ऊंचाई कितनी है, जो हरियाणा का सर्वोच्च शिखर है?',
+      options: ['1467 मीटर', '1514 मीटर', '1567 मीटर', '1600 मीटर'],
+      correctIndex: 1,
+      explanation: 'मोरनी पहाड़ियों (पंचकूला) में स्थित करोह चोटी हरियाणा की सबसे ऊंची चोटी है। इसकी ऊंचाई समुद्र तल से लगभग 1514 मीटर है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-13',
+      text: 'Haryana General Knowledge: दक्षिण हरियाणा में स्थित \'कोटला झील\' (Kotla Lake) किस जिले में अवस्थित है और यह किन पहाड़ियों से घिरी हुई है?',
+      options: ['महेन्द्रगढ़ - ढोसी पहाड़ियाँ', 'नूंह (मेवात) - अरावली पहाड़ियाँ', 'फरीदाबाद - बड़खल पहाड़ियाँ', 'रेवाड़ी - झाबुआ पहाड़ियाँ'],
+      correctIndex: 1,
+      explanation: 'कोटला झील नूंह (मेवात) जिले में अरावली पर्वत श्रृंखलाओं के मध्य स्थित है। यह सिंचाई और जल संचयन की दृष्टि से एक अत्यंत महत्वपूर्ण प्राकृतिक झील है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-14',
+      text: 'Haryana General Knowledge: हरियाणा के किस जिले में सर्वाधिक वन प्रतिशत (Forest Percentage) पाया जाता है और सबसे कम वन प्रतिशत किस जिले में है?',
+      options: ['यमुनानगर (अधिकतम) - जींद (न्यूनतम)', 'पंचकूला (अधिकतम) - फतेहाबाद (न्यूनतम)', 'गुरुग्राम (अधिकतम) - पानीपत (न्यूनतम)', 'अम्बाला (अधिकतम) - पलवल (न्यूनतम)'],
+      correctIndex: 1,
+      explanation: 'भारतीय वन सर्वेक्षण रिपोर्ट 2021 के अनुसार, Haryana में प्रतिशत के आधार पर सर्वाधिक वन क्षेत्र पंचकूला (लगभग 43.66%) में है और न्यूनतम वन प्रतिशत फतेहाबाद (0.73%) जिले में है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    },
+    {
+      id: 'q-hssc-chap-geography-15',
+      text: 'Haryana General Knowledge: \'कंडुआ\' (Kandua) नामक स्थानीय मिट्टी, जो भारी दोमट मिट्टी है, हरियाणा के किस कृषि-जलवायु क्षेत्र में मुख्य रूप से पाई जाती है?',
+      options: ['दक्षिणी अर्ध-शुष्क जोन', 'उत्तरी तराई और शिवालिक पादप मैदान', 'मध्यवर्ती जलोढ़ मैदान', 'पश्चिमी रेतीला मैदान'],
+      correctIndex: 1,
+      explanation: 'कंडुआ मिट्टी को स्थानीय भाषा में डाकर या भारी जलोढ़ मृदा भी कहा जाता है। यह शिवालिक के गिरिपाद मैदानों व तराई क्षेत्र (यमुनानगर, कुरुक्षेत्र, करनाल) में पाई जाती है और धान की फसल के लिए सर्वोत्तम होती है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-geography'
+    }
+  ],
+  'test-hssc-police-chap-polity': [
+    {
+      id: 'q-hssc-chap-polity-1',
+      text: 'Haryana General Knowledge: हरियाणा पंचायती राज अधिनियम, 1994 की किस धारा के तहत ग्राम पंचायतों को \'स्थानीय कर\' (Local Taxes) लगाने और वसूलने का अधिकार दिया गया है?',
+      options: ['धारा 45', 'धारा 88', 'धारा 147', 'धारा 212'],
+      correctIndex: 1,
+      explanation: 'Haryana पंचायती राज अधिनियम, 1994 की धारा 88 के तहत ग्राम पंचायतों को कर, शुल्क और उपकर आरोपित करने की शक्ति प्रदान की गई है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-2',
+      text: 'Haryana General Knowledge: हरियाणा में पहली बार राष्ट्रपति शासन (President\'s Rule) कब लागू किया गया था और उस समय राज्य के मुख्यमंत्री कौन थे?',
+      options: ['1967 - राव बीरेन्द्र सिंह', '1977 - चौधरी देवी लाल', '1991 - ओम प्रकाश चौटाला', '1966 - भगवत दयाल शर्मा'],
+      correctIndex: 0,
+      explanation: 'हरियाणा में प्रथम बार राष्ट्रपति शासन 21 नवंबर 1967 से 21 मई 1968 तक लगा था। उस समय राव बीरेन्द्र सिंह मुख्यमंत्री थे और राव साहब की विशाल हरियाणा पार्टी सत्ता में थी।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-3',
+      text: 'Haryana General Knowledge: किस वर्ष हरियाणा विधान सभा की सीटों की संख्या बढ़ाकर 90 की गई थी और इनमें से अनुसूचित जातियों (SC) के लिए आरक्षित सीटों की संख्या कितनी है?',
+      options: ['1966 - 15 सीटें', '1973 - 17 सीटें', '1977 - 17 सीटें', '1987 - 18 सीटें'],
+      correctIndex: 2,
+      explanation: '1966 में हरियाणा गठन के समय 54 विधानसभा सीटें थीं। 1967 में इन्हें बढ़ाकर 81 किया गया और 1977 में परिसीमन के बाद यह संख्या बढ़ाकर 90 कर दी गई, जिसमें से 17 सीटें अनुसूचित जाति (SC) के लिए आरक्षित हैं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-4',
+      text: 'Haryana General Knowledge: हरियाणा लोक सेवा आयोग (HPSC) के अध्यक्ष और सदस्यों की नियुक्ति किसके द्वारा की जाती है और उनका कार्यकाल कितना होता है?',
+      options: ['राष्ट्रपति द्वारा - 6 वर्ष या 65 वर्ष', 'राज्यपाल द्वारा - 6 वर्ष या 62 वर्ष', 'मुख्यमंत्री द्वारा - 5 वर्ष या 60 वर्ष', 'मुख्य न्यायाधीश द्वारा - 6 वर्ष या 62 वर्ष'],
+      correctIndex: 1,
+      explanation: 'HPSC के अध्यक्ष और सदस्यों की नियुक्ति राज्य के राज्यपाल द्वारा की जाती है। इनका कार्यकाल कार्यभार ग्रहण करने की तिथि से 6 वर्ष या 62 वर्ष की आयु (जो भी पहले हो) तक होता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-5',
+      text: 'Haryana General Knowledge: हरियाणा पंचायती राज (संशोधन) अधिनियम, 2015 के अनुसार, चुनाव लड़ने के लिए उम्मीदवारों हेतु शैक्षणिक योग्यता लागू करने वाला हरियाणा देश का कौन सा राज्य बना?',
+      options: ['पहला राज्य', 'दूसरा राज्य', 'तीसरा राज्य', 'चौथा राज्य'],
+      correctIndex: 1,
+      explanation: '7 सितंबर 2015 को हरियाणा विधानसभा ने पंचायती राज संशोधन विधेयक पारित कर न्यूनतम शैक्षणिक योग्यता अनिवार्य की। राजस्थान के बाद हरियाणा ऐसा करने वाला देश का दूसरा राज्य बना।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-6',
+      text: 'Haryana General Knowledge: Haryana विधान सभा के प्रथम पुरुष अध्यक्ष (Speaker) कौन थे, जिन्होंने सबसे कम समय के लिए भी इस पद को सुशोभित किया?',
+      options: ['शन्नो देवी', 'राव बीरेन्द्र सिंह', 'मनफूल सिंह', 'श्रीचंद'],
+      correctIndex: 1,
+      explanation: 'हरियाणा विधानसभा की पहली अध्यक्ष श्रीमती शन्नो देवी थीं, जबकि पहले पुरुष अध्यक्ष राव बीरेन्द्र सिंह बने, जो मात्र 16 दिनों के लिए इस पद पर रहे।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-7',
+      text: 'Haryana General Knowledge: पंजाब और हरियाणा उच्च न्यायालय (Punjab and Haryana High Court) के वर्तमान भवन का डिजाइन किस प्रसिद्ध फ्रांसीसी वास्तुकार द्वारा तैयार किया गया था और यह कहाँ स्थित है?',
+      options: ['लुटियंस - नई दिल्ली', 'ली कार्बूजियर - चंडीगढ़', 'लॉरी बेकर - शिमला', 'चार्ल्स कोरिया - पंचकूला'],
+      correctIndex: 1,
+      explanation: 'चंडीगढ़ स्थित पंजाब और हरियाणा उच्च न्यायालय के भवन का स्थापत्य डिजाइन विख्यात फ्रांसीसी आर्किटेक्ट ली कार्बूजियर ने तैयार किया था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-8',
+      text: 'Haryana General Knowledge: हरियाणा में पंचायती राज संस्थाओं में महिलाओं के लिए कितने प्रतिशत आरक्षण का प्रावधान (हरियाणा पंचायती राज संशोधन विधेयक, 2020 द्वारा) किया गया है?',
+      options: ['33%', '50%', '45%', '40%'],
+      correctIndex: 1,
+      explanation: 'वर्ष 2020 में हरियाणा विधानसभा द्वारा पारित संशोधन विधेयक के अनुसार, पंचायती राज संस्थाओं में महिलाओं को 50% प्रतिनिधित्व प्रदान किया गया है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-9',
+      text: 'Haryana General Knowledge: हरियाणा राज्य निर्वाचन आयोग (State Election Commission, Haryana) का गठन किस वर्ष और किस संविधान संशोधन के तहत किया गया था?',
+      options: ['1991 - 71वां संशोधन', '1993 - 73वां संशोधन', '1995 - 74वां संशोधन', '1997 - 78वां संशोधन'],
+      correctIndex: 1,
+      explanation: '73वें संविधान संशोधन अधिनियम, 1992 के अनुपालन में हरियाणा राज्य निर्वाचन आयोग का गठन 26 नवंबर 1993 को किया गया था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-10',
+      text: 'Haryana General Knowledge: हरियाणा के किस पूर्व राज्यपाल के नाम राज्य में सर्वाधिक लंबे समय तक राज्यपाल रहने का रिकॉर्ड दर्ज है?',
+      options: ['धर्मवीर', 'बीरेन्द्र नारायण चक्रवर्ती (B.N. Chakravarty)', 'हरचरण सिंह बराड़', 'जगन्नाथ पहाड़िया'],
+      correctIndex: 1,
+      explanation: 'बी.एन. चक्रवर्ती हरियाणा के सबसे लंबे समय तक रहने वाले राज्यपाल हैं। वे 15 सितंबर 1967 से 26 मार्च 1976 तक इस पद पर रहे।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-11',
+      text: 'Haryana General Knowledge: हरियाणा मानवाधिकार आयोग (Haryana State Human Rights Commission) के अध्यक्ष की नियुक्ति राज्यपाल द्वारा एक समिति की सिफारिश पर की जाती है। इस समिति का अध्यक्ष कौन होता है?',
+      options: ['राज्य का मुख्य न्यायाधीश', 'राज्य का गृह मंत्री', 'राज्य का मुख्यमंत्री', 'विधानसभा का अध्यक्ष'],
+      correctIndex: 2,
+      explanation: 'मानवाधिकार संरक्षण अधिनियम के तहत राज्य मानवाधिकार आयोग के अध्यक्ष की नियुक्ति राज्यपाल एक समिति की सिफारिश पर करता है जिसका अध्यक्ष मुख्यमंत्री होता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-12',
+      text: 'Haryana General Knowledge: हरियाणा विधानसभा की कुल 90 सीटों में से अनुसूचित जाति (SC) के लिए आरक्षित 17 सीटों में से कौन सा जिला ऐसा है जिसमें कोई भी विधानसभा सीट आरक्षित नहीं है?',
+      options: ['पंचकूला, महेंद्रगढ़, फरीदाबाद, मेवात (नूंह), चरखी दादरी', 'सिरसा, फतेहाबाद, हिसार', 'करनाल, कैथल, कुरुक्षेत्र', 'अम्बाला, यमुनानगर, पानीपत'],
+      correctIndex: 0,
+      explanation: 'Haryana के 5 ऐसे जिले हैं - पंचकूला, महेंद्रगढ़, फरीदाबाद, मेवात (नूंह) और चरखी दादरी, जहां कोई भी विधानसभा सीट अनुसूचित जाति के लिए आरक्षित नहीं है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-13',
+      text: 'Haryana General Knowledge: हरियाणा लोकायुक्त अधिनियम (Haryana Lokayukta Act) किस वर्ष लागू किया गया था और राज्य के प्रथम लोकायुक्त कौन थे?',
+      options: ['1999 - न्यायधीश आई.पी. वशिष्ठ', '2004 - न्यायधीश प्रीतम पाल', '2002 - न्यायधीश जसबीर सिंह', '2006 - न्यायधीश नवल किशोर'],
+      correctIndex: 1,
+      explanation: 'हरियाणा लोकायुक्त अधिनियम 2002 में पारित हुआ और 27 जनवरी 2003 को लागू हुआ। इसके तहत पहले लोकायुक्त न्यायमूर्ति प्रीतम पाल बने थे।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-14',
+      text: 'Haryana General Knowledge: हरियाणा में किस वर्ष \'राइट टू सर्विस एक्ट\' (Haryana Right to Service Act) लागू किया गया और इसके तहत सेवा प्रदान करने में देरी पर अपील हेतु कौन सा आयोग गठित है?',
+      options: ['2011 - हरियाणा सेवा का अधिकार आयोग', '2014 - हरियाणा प्रशासनिक सुधार आयोग', '2016 - हरियाणा जन शिकायत निवारण प्राधिकरण', '2018 - सुशासन आयोग'],
+      correctIndex: 0,
+      explanation: 'हरियाणा सेवा का अधिकार अधिनियम 2011 में लागू किया गया था। इसके तहत अपीलीय निकाय के रूप में \'हरियाणा सेवा का अधिकार आयोग\' कार्यरत है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    },
+    {
+      id: 'q-hssc-chap-polity-15',
+      text: 'Haryana General Knowledge: हरियाणा विधानसभा की कौन सी एक सीट ऐसी है जो किसी भी जिला मुख्यालय (District Headquarters) के नाम पर नहीं होकर एक तहसील/कस्बा है, जबकि वह जिला स्वयं एक विधानसभा क्षेत्र है?',
+      options: ['कुरुक्षेत्र (शाहबाद)', 'कुरुक्षेत्र विधानसभा सीट नहीं है बल्कि थानेसर है', 'अम्बाला (नारायणगढ़)', 'गुरुग्राम (पटौदी)'],
+      correctIndex: 1,
+      explanation: 'हरियाणा के सभी जिलों के नाम पर विधानसभा सीटें हैं, लेकिन कुरुक्षेत्र जिला मुख्यालय के नाम पर कोई सीट नहीं है, बल्कि उस सीट का नाम \'थानेसर\' है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-polity'
+    }
+  ],
+  'test-hssc-police-chap-culture': [
+    {
+      id: 'q-hssc-chap-culture-1',
+      text: 'Haryana General Knowledge: हरियाणा के प्रसिद्ध स्वांग (Saang) थिएटर कला के संदर्भ में \'स्वांग की शुरुआत\' करने का श्रेय मेरठ के किस कलाकार को दिया जाता है, और इसका समय क्या माना जाता है?',
+      options: ['दीपचंद बहमन - 1915 ई.', 'किशन लाल भाट - 1730 ई.', 'पंडित लखमीचंद - 1930 ई.', 'बाजे भगत - 1920 ई.'],
+      correctIndex: 1,
+      explanation: 'हरियाणा में सांग परंपरा का प्रारंभ मेरठ निवासी किशन लाल भाट द्वारा 1730 ई. के आसपास माना जाता है। वे सांग विधा के आदि-पुरुष कहे जाते हैं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-2',
+      text: 'Haryana General Knowledge: संगीत और कविता के क्षेत्र में अतुलनीय योगदान के लिए किसे \'हरियाणा का सूर्यकवि\' (Suryakavi of Haryana) कहा जाता है और उनके गुरु का क्या नाम था?',
+      options: ['बाजे भगत - गुरु हरदेव', 'पंडित लखमीचंद - गुरु मानसिंह', 'दीपचंद बहमन - गुरु छज्जूराम', 'पंडित जसराज - गुरु अच्युत'],
+      correctIndex: 1,
+      explanation: 'पंडित लखमीचंद को हरियाणा का \'सूर्यकवि\' और \'सूफी संत\' कहा जाता है। उनके गुरु मानसिंह थे।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-3',
+      text: 'Haryana General Knowledge: हरियाणा के किस नृत्य को \'हरियाणा का गिद्दा\' (Gidda of Haryana) कहा जाता है और यह नृत्य मुख्यतः किस उत्सव/अवसर पर महिलाओं द्वारा किया जाता है?',
+      options: ['धमाल नृत्य - होली', 'झूमर नृत्य - विवाह व त्योहार', 'लूर नृत्य - फागुन मास', 'खोडिया नृत्य - बारात प्रस्थान के बाद'],
+      correctIndex: 1,
+      explanation: 'झूमर नृत्य को \'हरियाणा का गिद्दा\' कहा जाता है। यह मुख्यतः नवविवाहित युवतियों और महिलाओं द्वारा आभूषण व पारंपरिक परिधान पहनकर वृत्ताकार घेरे में किया जाता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-4',
+      text: 'Haryana General Knowledge: हरियाणा में पुरुषों द्वारा पहने जाने वाली बारीक सूती धागे से बुनी हुई कढ़ाईदार टोपी को क्या कहा जाता है?',
+      options: ['खंडवा (Khandwa)', 'दुबड़ी (Dubri)', 'साफा (Safa)', 'पगड़ी (Pagri)'],
+      correctIndex: 1,
+      explanation: 'हरियाणा में पुरुषों द्वारा सिर पर पहनी जाने वाली कढ़ाईदार छोटी टोपी को \'दुबड़ी\' कहा जाता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-5',
+      text: 'Haryana General Knowledge: गुजरी महल (Gujri Mahal) हरियाणा के किस जिले में स्थित है और इस महल की दीवारों पर किस भाषा में लिखे गए 8 अभिलेख (Inscriptions) हैं जो आने वाले पर्यटकों की सूचना देते हैं?',
+      options: ['रोहतक - अरबी भाषा', 'हिसार - भागवत/संस्कृत भाषा', 'सोनीपत - फारसी भाषा', 'फतेहाबाद - खरोष्ठी लिपि'],
+      correctIndex: 1,
+      explanation: 'गुजरी महल हिसार में फिरोजशाह तुगलक द्वारा बनवाया गया था। इसके परिसर में एक लाट (स्तंभ) है जिस पर आठ दिशाओं से आने वाले भागवतों (यात्रियों) की सूचना देने वाले आठ अभिलेख संस्कृत/ब्राह्मी शैली में उत्कीर्ण हैं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-6',
+      text: 'Haryana General Knowledge: हरियाणा का प्रसिद्ध \'लूर नृत्य\' (Lur Dance) किस क्षेत्र में सर्वाधिक लोकप्रिय है और इस नृत्य की मुख्य विशेषता क्या है?',
+      options: ['मेवात क्षेत्र - इसमें पुरुष भाग लेते हैं', 'बांगर क्षेत्र (जींद, कैथल) - इसमें प्रश्न-उत्तर पूछे जाते हैं', 'अहीरवाल क्षेत्र - यह केवल रात्रि में किया जाता है', 'यमुनानगर - यह वर्षा ऋतु में होता है'],
+      correctIndex: 1,
+      explanation: 'लूर नृत्य मुख्य रूप से बांगर क्षेत्र (जींद, कैथल, हिसार) में होली के अवसर पर किया जाता है। इस नृत्य में लड़कियों द्वारा प्रश्न-उत्तर की शैली अपनाई जाती है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-7',
+      text: 'Haryana General Knowledge: सूफी संत शेख चिल्ली का मकबरा (Tomb of Sheikh Chilli) कहाँ स्थित है और इसे \'हरियाणा का ताजमहल\' किसने कहा था?',
+      options: ['पानीपत - कनिंघम', 'थानेसर (कुरुक्षेत्र) - डेविड रॉस', 'नारनौल - लॉर्ड कर्जन', 'हांसी - स्लीमैन'],
+      correctIndex: 1,
+      explanation: 'शेख चिल्ली का मकबरा थानेसर में स्थित है। लाल और सफेद पत्थरों से बने इस भव्य मकबरे को पुरातत्वविद डेविड रॉस ने \'हरियाणा का ताजमहल\' कहा था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-8',
+      text: 'Haryana General Knowledge: हरियाणा के किस प्रसिद्ध लोक कलाकार को \'संगीत का तानसेन\' (Tansen of Haryanvi Music) कहा जाता है?',
+      options: ['पंडित लखमीचंद', 'पंडित जसराज', 'बाजे भगत', 'राजेंद्र सिंह खरकिया'],
+      correctIndex: 0,
+      explanation: 'पंडित लखमीचंद को हरियाणवी लोक संगीत और सांग कला का \'तानसेन\' कहा जाता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-9',
+      text: 'Haryana General Knowledge: हरियाणा में शीतला माता मंदिर (Sheetla Mata Temple, Gurgaon) का निर्माण किस वर्ष हुआ था और यह किस शैली (Architecture Style) में निर्मित है?',
+      options: ['1650 ई. - राजस्थानी शैली', '1700 ई. - मुग़ल शैली', '1805 ई. - द्रविड़ शैली', '1750 ई. - पहाड़ी शैली'],
+      correctIndex: 0,
+      explanation: 'गुरुग्राम स्थित शीतला माता मंदिर का निर्माण 1650 ई. में राजस्थानी वास्तुकला शैली में करवाया गया था। यह माता कृपी (गुरु द्रोणाचार्य की पत्नी) को समर्पित है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-10',
+      text: 'Haryana General Knowledge: कार्तिक सांस्कृतिक उत्सव (Kartik Cultural Festival) का आयोजन फरीदाबाद के किस ऐतिहासिक महल में किया जाता है और इसकी शुरुआत किस वर्ष हुई थी?',
+      options: ['नाहर सिंह महल - 1996 ई.', 'शीश महल - 1990 ई.', 'रानी की ड्योढ़ी - 2002 ई.', 'कलेसर पैलेस - 2005 ई.'],
+      correctIndex: 0,
+      explanation: 'बल्लभगढ़ (फरीदाबाद) के राजा नाहर सिंह के ऐतिहासिक महल में प्रत्येक वर्ष \'कार्तिक सांस्कृतिक उत्सव\' का आयोजन हरियाणा पर्यटन विभाग द्वारा 1996 से किया जा रहा है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-11',
+      text: 'Haryana General Knowledge: प्रसिद्ध स्थापत्य कला की धरोहर \'माधोगढ़ का किला\' (Madhogarh Fort) हरियाणा के किस जिले में स्थित है और इसे किसने बनवाया था?',
+      options: ['महेन्द्रगढ़ - सवाई माधव सिंह', 'रेवाड़ी - राव नंदराम', 'नूंह - हसन खां मेवाती', 'भिवानी - राजा भवानी सिंह'],
+      correctIndex: 0,
+      explanation: 'माधोगढ़ का किला महेन्द्रगढ़ जिले के सतनाली रोड पर स्थित माधोगढ़ गाँव की पहाड़ी पर है। इसे जयपुर के महाराजा सवाई माधव सिंह ने 18वीं शताब्दी के उत्तरार्ध में बनवाया था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-12',
+      text: 'Haryana General Knowledge: हरियाणा की महिलाओं द्वारा माथे पर पहने जाने वाले प्रसिद्ध आभूषण \'टीका\' के अतिरिक्त \'पुरली\' (Purli) शरीर के किस अंग में पहना जाता है?',
+      options: ['गले में (Neck)', 'कान में (Ear)', 'नाक में (Nose)', 'हाथ की उंगली में (Finger)'],
+      correctIndex: 2,
+      explanation: "'पुरली' महिलाओं द्वारा नाक में पहना जाने वाला एक छोटा आभूषण है।",
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-13',
+      text: 'Haryana General Knowledge: हरियाणा के किस लोक नृत्य को यूनेस्को (UNESCO) द्वारा संरक्षित लोक धरोहर के रूप में सराहा गया है और यह राज्य का सबसे प्राचीन नृत्य है जो महाभारत काल से चला आ रहा है?',
+      options: ['सांग नृत्य', 'धमाल नृत्य', 'घूमर नृत्य', 'मंजीरा नृत्य'],
+      correctIndex: 1,
+      explanation: 'धमाल नृत्य हरियाणा का सबसे प्राचीन लोक नृत्य माना जाता है, जो महाभारत कालीन परंपराओं से जुड़ा है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-14',
+      text: 'Haryana General Knowledge: कलायत (कैथल) में स्थित ईंटों के प्राचीन शिव मंदिर (Ancient Brick Temple) किस गुप्तोत्तर कालीन शैली के उत्कृष्ट उदाहरण हैं?',
+      options: ['नागर शैली', 'द्रविड़ शैली', 'वेसर शैली', 'पंचायतन शैली'],
+      correctIndex: 0,
+      explanation: 'कलायत में लाल ईंटों से बने दो प्राचीन मंदिर हैं, जो वास्तुकला की नागर शैली के बेजोड़ नमूने हैं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    },
+    {
+      id: 'q-hssc-chap-culture-15',
+      text: 'Haryana General Knowledge: \'रागिनी\' और \'सांग\' साहित्य में अद्वितीय योगदान देने वाले बाजे भगत (Baje Bhagat) हरियाणा के किस जिले से संबंध रखते थे और उनका जीवनकाल क्या था?',
+      options: ['सोनीपत (सिसाना गाँव) - 1898-1939', 'रोहतक (रूडकी गाँव) - 1905-1950', 'पानीपत (पट्टी कल्याणा) - 1890-1940', 'जींद (अलेवा गाँव) - 1910-1960'],
+      correctIndex: 0,
+      explanation: 'प्रसिद्ध सांगी व कवि बाजे भगत का जन्म सोनीपत जिले के सिसाना गाँव में 1898 में हुआ था और उनका देहावसान 1939 में हुआ।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-culture'
+    }
+  ],
+  'test-hssc-police-chap-economy': [
+    {
+      id: 'q-hssc-chap-economy-1',
+      text: 'Haryana General Knowledge: हरियाणा आर्थिक सर्वेक्षण 2023-24 (Haryana Economic Survey) के अनुसार, स्थिर मूल्यों (Constant Prices) पर राज्य की जीएसडीपी (GSDP) में कृषि एवं संबद्ध क्षेत्र (Agriculture & Allied) का योगदान कितने प्रतिशत अनुमानित है?',
+      options: ['12.5%', '17.4%', '21.5%', '24.8%'],
+      correctIndex: 1,
+      explanation: 'हरियाणा के सकल राज्य मूल्यवर्धन (GSVA) में स्थिर मूल्यों (2011-12) पर कृषि एवं संबद्ध क्षेत्र का योगदान लगभग 17.4% है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-2',
+      text: 'Haryana General Knowledge: हरियाणा की प्रसिद्ध \'मुर्रा भैंस\' (Murrah Buffalo) को स्थानीय भाषा में किस नाम से जाना जाता है और इसके दूध में औसतन वसा (Fat) प्रतिशत कितना होता है?',
+      options: ['काली गाय - 5-6%', 'काला सोना (Black Gold) - 7-9%', 'हरियाणा बुल - 10-12%', 'देसी भैंस - 4-5%'],
+      correctIndex: 1,
+      explanation: 'मुर्रा भैंस को हरियाणा में \'काला सोना\' (Black Gold) कहा जाता है। यह विश्व की सबसे उत्कृष्ट दुग्ध उत्पादक भैंस नस्ल है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-3',
+      text: 'Haryana General Knowledge: हरियाणा राज्य सहकारी दुग्ध उत्पादक संघ (HAIC / HDDFDC - Vita) की स्थापना किस वर्ष हुई थी और इसके ब्रांड का क्या नाम है?',
+      options: ['1970 - Vita', '1975 - Amul', '1980 - HAFED', '1985 - Verka'],
+      correctIndex: 0,
+      explanation: 'हरियाणा डेयरी विकास सहकारी प्रसंघ लिमिटेड (HDDFDF) की स्थापना 1970 में की गई थी, जिसके तहत दूध का विपणन \'Vita\' ब्रांड नाम से किया जाता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-4',
+      text: 'Haryana General Knowledge: केंद्रीय भैंस अनुसंधान संस्थान (Central Institute for Research on Buffaloes - CIRB) हरियाणा के किस जिले में स्थित है और इसकी स्थापना किस वर्ष की गई थी?',
+      options: ['करनाल - 1984', 'हिसार - 1985', 'रोहतक - 1989', 'महेन्द्रगढ़ - 1991'],
+      correctIndex: 1,
+      explanation: 'CIRB हिसार में स्थित है और इसकी स्थापना 1 फरवरी 1985 को भारतीय कृषि अनुसंधान परिषद (ICAR) द्वारा की गई थी।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-5',
+      text: 'Haryana General Knowledge: हरियाणा के किस जिले में एशिया का सबसे बड़ा बागवानी बाजार (International Horticulture Market) विकसित किया जा रहा है?',
+      options: ['लाडवा (कुरुक्षेत्र)', 'गन्नौर (सोनीपत)', 'पिंजौर (पंचकूला)', 'नीलोखेड़ी (करनाल)'],
+      correctIndex: 1,
+      explanation: 'सोनीपत जिले के गन्नौर में अंतरराष्ट्रीय स्तर की सेब, फल और सब्जी मंडी विकसित की जा रही है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-6',
+      text: 'Haryana General Knowledge: हरियाणा में राष्ट्रीय डेयरी अनुसंधान संस्थान (NDRI) कहाँ स्थित है और इसे मानद विश्वविद्यालय (Deemed University) का दर्जा किस वर्ष दिया गया था?',
+      options: ['हिसार - 1975', 'करनाल - 1989', 'कुरुक्षेत्र - 1995', 'अम्बाला - 2002'],
+      correctIndex: 1,
+      explanation: 'NDRI को 1955 में बेंगलुरु से करनाल स्थानांतरित किया गया था। इसे वर्ष 1989 में डीम्ड यूनिवर्सिटी का दर्जा प्राप्त हुआ था।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-7',
+      text: 'Haryana General Knowledge: हरियाणा राज्य कृषि विपणन बोर्ड (Haryana State Agricultural Marketing Board - HSAMB) की स्थापना कब की गई थी?',
+      options: ['1 November 1966', '1 August 1969', '2 October 1972', '15 August 1975'],
+      correctIndex: 1,
+      explanation: 'किसानों को उपज का सही मूल्य दिलाने और मंडियों के प्रबंधन हेतु 1 अगस्त 1969 को HSAMB की स्थापना की गई थी।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-8',
+      text: 'Haryana General Knowledge: बासमती चावल के उत्पादन के लिए प्रसिद्ध होने के कारण हरियाणा के किस जिले को \'धान का कटोरा\' (Bowl of Rice) कहा जाता है?',
+      options: ['करनाल', 'सिरसा', 'हिसार', 'रोहतक'],
+      correctIndex: 0,
+      explanation: 'करनाल अपने बेहतरीन बासमती चावल के उत्पादन के लिए देश-विदेश में प्रसिद्ध है, इसलिए इसे हरियाणा का \'धान का कटोरा\' कहा जाता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-9',
+      text: 'Haryana General Knowledge: हरियाणा में पशुओं के इलाज हेतु \'पशु संजीवनी सेवा\' (Pashu Sanjivani Sewa) के तहत टोल-फ्री नंबर क्या जारी किया गया है और इसकी शुरुआत किस जिले से की गई थी?',
+      options: ['1962 - जींद', '1962 - यमुनानगर', '112 - हिसार', '108 - रोहतक'],
+      correctIndex: 0,
+      explanation: 'ग्रामीण पशुपालकों के घर पर ही पशु चिकित्सा सेवा प्रदान करने के लिए \'1962\' टोल-फ्री नंबर के तहत mobile वेटरनरी क्लिनिक योजना शुरू की गई थी, जिसका पायलट प्रोजेक्ट जींद से शुरू हुआ।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-10',
+      text: 'Haryana General Knowledge: हरियाणा में सर्वाधिक मशरूम (Kumbhi/Mushroom) का उत्पादन करने वाला जिला कौन सा है, जो पूरे भारत में भी अपना प्रमुख स्थान रखता है?',
+      options: ['सोनीपत (खूबडू गाँव)', 'पानीपत', 'गुरुग्राम', 'यमुनानगर'],
+      correctIndex: 0,
+      explanation: 'सोनीपत जिला हरियाणा में मशरूम उत्पादन में अग्रणी है। यह भारत के कुल मशरूम उत्पादन में एक महत्वपूर्ण हिस्सेदारी रखता है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-11',
+      text: 'Haryana General Knowledge: हरियाणा के किस कृषि विश्वविद्यालय को 2023-24 में देश के सर्वश्रेष्ठ कृषि विश्वविद्यालयों की श्रेणी में तीसरा स्थान प्राप्त हुआ है और इसका नाम किस पूर्व प्रधानमंत्री के नाम पर रखा गया है?',
+      options: ['महाराणा प्रताप बागवानी विश्वविद्यालय (MHU) - करनाल', 'चौधरी चरण सिंह हरियाणा कृषि विश्वविद्यालय (CCSHAU) - हिसार', 'लाला लाजपत राय पशु चिकित्सा और पशु विज्ञान विश्वविद्यालय (LUVAS) - हिसार', 'राष्ट्रीय डेयरी अनुसंधान संस्थान (NDRI) - करनाल'],
+      correctIndex: 1,
+      explanation: 'CCSHAU हिसार की स्थापना 2 फरवरी 1970 को हुई थी। इसका नाम भारत के सातवें प्रधानमंत्री चौधरी चरण सिंह के नाम पर रखा गया है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-12',
+      text: 'Haryana General Knowledge: हरियाणा का कौन सा जिला शुष्क सिंचाई पद्धति और ड्रिप इरिगेशन (Drip Irrigation) को अपनाने में अग्रणी है?',
+      options: ['महेन्द्रगढ़', 'फरीदाबाद', 'समालखा', 'करनाल'],
+      correctIndex: 0,
+      explanation: 'महेन्द्रगढ़ और रेवाड़ी जिले भूजल की कमी के कारण ड्रिप और स्प्रिंकलर सिंचाई पद्धति को सर्वाधिक अपनाने वाले जिले हैं।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-13',
+      text: 'Haryana General Knowledge: देश का पहला \'मत्स्य पालन व्यवसाय इनक्यूबेटर\' (Fisheries Business Incubator - LIFT) हरियाणा के किस जिले में स्थापित किया गया है?',
+      options: ['गुरुग्राम', 'रोहतक', 'हिसार', 'पंचकूला'],
+      correctIndex: 0,
+      explanation: 'मत्स्य पालन क्षेत्र में स्टार्ट-अप और उद्यमिता को बढ़ावा देने के लिए देश का पहला लिफ्ट इनक्यूबेटर सेंटर गुरुग्राम में स्थापित किया गया है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-14',
+      text: 'Haryana General Knowledge: पशुधन बीमा योजना (Pashudhan Bima Yojana) के तहत अनुसूचित जाति (SC) के पशुपालकों के लिए बीमा प्रीमियम की दर कितनी निर्धारित की गई है?',
+      options: ['मुफ़्त (Free / 100% Subsidy)', '100 रुपये प्रति गाय/भैंस', '50 रुपये प्रति भेड़/बकरी', '5% प्रीमियम दर'],
+      correctIndex: 0,
+      explanation: 'हरियाणा में पशुधन बीमा योजना के तहत अनुसूचित जाति (SC) के पशुपालकों के लिए पशुओं का बीमा पूर्णतः निःशुल्क है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    },
+    {
+      id: 'q-hssc-chap-economy-15',
+      text: 'Haryana General Knowledge: हरियाणा के किस स्थान पर \'राष्ट्रीय अश्व अनुसंधान केंद्र\' (National Research Centre on Equines - NRCE) स्थित है और यह घोड़ों के अलावा अन्य किस पशु के अनुसंधान के लिए भी जाना जाता है?',
+      options: ['करनाल - गाय', 'हिसार - गधे व खच्चर', 'अम्बाला - भेड़', 'रोहतक - सूअर'],
+      correctIndex: 1,
+      explanation: 'NRCE हिसार में स्थित है और इसकी स्थापना 7 जनवरी 1986 को हुई थी। यह घोड़ों के साथ-साथ गधों और खच्चरों के प्रजनन व बीमारियों पर शोध के लिए देश का एकमात्र प्रमुख संस्थान है।',
+      sectionName: 'Haryana General Knowledge',
+      testId: 'test-hssc-police-chap-economy'
+    }
+  ]
+};
+
+// Add chapter mocks to final map
+for (const [testId, qs] of Object.entries(chapterMocks)) {
+  allMocksQuestions[testId] = qs;
 }
 
 // Build output code

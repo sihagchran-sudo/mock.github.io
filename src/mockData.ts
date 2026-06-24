@@ -148,7 +148,11 @@ const BASE_MOCK_TESTS: Test[] = [
   { id: 'test-hssc-police-full-6', title: 'HSSC Haryana Police Constable - Full Mock Test 6', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard' },
   { id: 'test-hssc-police-full-7', title: 'HSSC Haryana Police Constable - Full Mock Test 7', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard' },
   { id: 'test-hssc-police-sec-gk', title: 'Haryana General Knowledge - Sectional Mock', duration: 20, totalMarks: 25, testType: 'SECTIONAL', examId: 'exam-hssc-police', questionCount: 5 },
-  { id: 'test-hssc-police-chap-agri', title: 'Chapter Test: Agriculture & Animal Husbandry', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 5 },
+  { id: 'test-hssc-police-chap-history', title: 'Chapter Test: History of Haryana (हरियाणा का इतिहास)', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 15, difficulty: 'Medium' },
+  { id: 'test-hssc-police-chap-geography', title: 'Chapter Test: Geography & Environment (हरियाणा का भूगोल एवं पर्यावरण)', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 15, difficulty: 'Hard' },
+  { id: 'test-hssc-police-chap-polity', title: 'Chapter Test: Polity & Panchayati Raj (राजव्यवस्था एवं पंचायती राज)', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 15, difficulty: 'Medium' },
+  { id: 'test-hssc-police-chap-culture', title: 'Chapter Test: Art, Culture & Heritage (कला, संस्कृति एवं विरासत)', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 15, difficulty: 'Hard' },
+  { id: 'test-hssc-police-chap-economy', title: 'Chapter Test: Economy, Agri & Livestock (अर्थव्यवस्था, कृषि एवं पशुपालन)', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 15, difficulty: 'Medium' },
 ];
 
 // Dynamically generate mock test suites for all 31 exams
