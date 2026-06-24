@@ -43,9 +43,16 @@ export default function TestCard({ test }: TestCardProps) {
       <div>
         {/* Test Type Badge */}
         <div className="flex items-center justify-between mb-3">
-          <span className={`text-[11px] font-semibold px-2 py-0.5 rounded border ${getBadgeColor(test.testType)}`}>
-            {getBadgeLabel(test.testType)}
-          </span>
+          <div className="flex items-center gap-1.5">
+            <span className={`text-[11px] font-semibold px-2 py-0.5 rounded border ${getBadgeColor(test.testType)}`}>
+              {getBadgeLabel(test.testType)}
+            </span>
+            {test.difficulty === 'Hard' && (
+              <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded border bg-red-50 text-red-600 border-red-200 uppercase tracking-wider">
+                Hard
+              </span>
+            )}
+          </div>
           <span className="text-slate-400 text-xs flex items-center gap-1">
             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
