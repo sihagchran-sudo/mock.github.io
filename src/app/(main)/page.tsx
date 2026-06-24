@@ -112,45 +112,49 @@ export default function HomePage() {
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
             Target Your Exam Goal
           </h2>
-          <p className="text-slate-500 mt-2 text-sm sm:text-base">
+          <p className="text-slate-650 mt-2 text-sm sm:text-base">
             Directly select your target exam and start practicing real-time mock tests
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {EXAMS.map((exam) => (
-            <div
+            <Link
               key={exam.id}
-              className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between"
+              href={`/exam/${exam.slug}`}
+              className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-row md:flex-col justify-between items-center md:items-start gap-4 md:gap-0"
             >
-              <div>
-                <span className="text-2xl sm:text-3xl p-3 bg-slate-50 rounded-xl inline-block mb-3.5">
+              <div className="flex items-center gap-4 md:block md:w-full">
+                <span className="text-2xl sm:text-3xl p-3 bg-slate-50 rounded-xl inline-flex items-center justify-center shrink-0 md:mb-4">
                   {EXAM_ICONS[exam.slug] || '📝'}
                 </span>
-                <div className="flex items-center gap-1.5 flex-wrap">
-                  <h3 className="font-extrabold text-slate-800 text-sm sm:text-base leading-tight">
-                    {exam.name}
-                  </h3>
-                  {exam.popular && (
-                    <span className="bg-blue-50 text-blue-700 text-[9px] font-bold px-1.5 py-0.5 rounded border border-blue-100">
-                      Popular
-                    </span>
-                  )}
+                <div className="min-w-0 text-left">
+                  <div className="flex items-center gap-1.5 flex-wrap">
+                    <h3 className="font-extrabold text-slate-800 text-sm sm:text-base leading-tight">
+                      {exam.name}
+                    </h3>
+                    {exam.popular && (
+                      <span className="bg-blue-50 text-blue-700 text-[9px] font-bold px-1.5 py-0.5 rounded border border-blue-100 shrink-0">
+                        Popular
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-slate-500 text-xs mt-1.5 line-clamp-1 md:line-clamp-2 leading-relaxed">
+                    {exam.description}
+                  </p>
                 </div>
-                <p className="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
-                  {exam.description}
-                </p>
               </div>
-              <div className="mt-5 pt-3 border-t border-slate-100">
-                <Link
-                  href={`/exam/${exam.slug}`}
-                  className="text-xs text-blue-650 hover:text-blue-750 font-bold flex items-center gap-1 group"
-                >
-                  Explore Mock Tests
-                  <span className="group-hover:translate-x-0.5 transition-transform">→</span>
-                </Link>
+              
+              <div className="hidden md:flex mt-5 pt-3 border-t border-slate-100 w-full items-center justify-between text-xs text-blue-650 font-bold group">
+                <span>Explore Mock Tests</span>
+                <span className="group-hover:translate-x-0.5 transition-transform">→</span>
               </div>
-            </div>
+              
+              {/* Mobile right arrow icon */}
+              <div className="md:hidden text-slate-400 shrink-0 font-bold text-base">
+                →
+              </div>
+            </Link>
           ))}
         </div>
       </section>
