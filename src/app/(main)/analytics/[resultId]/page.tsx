@@ -12,6 +12,8 @@ export default function AnalyticsPage() {
 
   const [attempt, setAttempt] = useState<TestAttempt | null>(null);
   const [openExplanation, setOpenExplanation] = useState<Record<string, boolean>>({});
+  const [totalCandidates, setTotalCandidates] = useState(12450);
+  const [userRank, setUserRank] = useState(1);
 
   useEffect(() => {
     // 1. Try to fetch from local storage
@@ -25,6 +27,20 @@ export default function AnalyticsPage() {
 
     if (currentAttempt) {
       setAttempt(currentAttempt);
+
+      // Seed calculation to keep total candidates and rank consistent per attempt ID
+      let seed = 0;
+      for (let i = 0; i < currentAttempt.id.length; i++) {
+        seed += currentAttempt.id.charCodeAt(i);
+      }
+      const virtualTotal = 8400 + (seed % 340);
+      setTotalCandidates(virtualTotal);
+
+      // Calculate rank based on percentile
+      const p = currentAttempt.percentile;
+      const fractionAbove = 1 - p / 100;
+      const rank = Math.max(1, Math.round(fractionAbove * virtualTotal));
+      setUserRank(rank);
     }
   }, [resultId]);
 
@@ -48,6 +64,79 @@ export default function AnalyticsPage() {
 
   const test = getTestById(attempt.testId)!;
   const questions = getQuestionsForTest(attempt.testId);
+
+  const formatSeconds = (totalSecs: number) => {
+    const mins = Math.floor(totalSecs / 60);
+    const secs = totalSecs % 60;
+    return `${mins}m ${secs}s`;
+  };
+
+  const getLeaderboard = () => {
+    // Seeded random generator to keep leaderboard content identical for the same attempt ID
+    let seed = 0;
+    for (let i = 0; i < attempt.id.length; i++) {
+      seed += attempt.id.charCodeAt(i);
+    }
+    
+    const random = (s: number) => {
+      const x = Math.sin(s) * 10000;
+      return x - Math.floor(x);
+    };
+
+    // Realistic candidate names for leaderboard (focused on HSSC / general competitive exams)
+    const candidateNames = [
+      "Manjeet Singh", "Sanjay Kumar", "Vikram Yadav", "Priyanka Sharma",
+      "Amit Chaudhary", "Karan Dahiya", "Jyoti Phogat", "Sandhya Hooda",
+      "Manish Punia", "Deepak Ahlawat", "Pooja Malik", "Preeti Sheoran"
+    ];
+
+    const list = [];
+    
+    // Rank 1
+    const n1 = candidateNames[seed % candidateNames.length];
+    const s1 = Math.round((test.totalMarks * (0.93 + random(seed) * 0.05)) * 10) / 10;
+    const t1 = Math.round(test.duration * 60 * (0.55 + random(seed + 1) * 0.15));
+    list.push({ rank: 1, name: n1, score: s1, accuracy: 96, time: t1, isUser: false });
+
+    // Rank 2
+    const n2 = candidateNames[(seed + 1) % candidateNames.length];
+    const s2 = Math.round((test.totalMarks * (0.88 + random(seed + 2) * 0.04)) * 10) / 10;
+    const t2 = Math.round(test.duration * 60 * (0.65 + random(seed + 3) * 0.1));
+    list.push({ rank: 2, name: n2, score: s2, accuracy: 92, time: t2, isUser: false });
+
+    // Rank 3
+    const n3 = candidateNames[(seed + 2) % candidateNames.length];
+    const s3 = Math.round((test.totalMarks * (0.84 + random(seed + 4) * 0.03)) * 10) / 10;
+    const t3 = Math.round(test.duration * 60 * (0.7 + random(seed + 5) * 0.1));
+    list.push({ rank: 3, name: n3, score: s3, accuracy: 88, time: t3, isUser: false });
+
+    // Rank 4
+    const n4 = candidateNames[(seed + 3) % candidateNames.length];
+    const s4 = Math.round((test.totalMarks * (0.80 + random(seed + 6) * 0.03)) * 10) / 10;
+    const t4 = Math.round(test.duration * 60 * (0.75 + random(seed + 7) * 0.1));
+    list.push({ rank: 4, name: n4, score: s4, accuracy: 84, time: t4, isUser: false });
+
+    const userTime = attempt.submittedAt 
+      ? Math.round((new Date(attempt.submittedAt).getTime() - new Date(attempt.startedAt).getTime()) / 1000)
+      : 0;
+
+    const userEntry = {
+      rank: userRank,
+      name: "You (Aspirant)",
+      score: attempt.score,
+      accuracy: attempt.accuracy,
+      time: userTime,
+      isUser: true
+    };
+
+    if (userRank <= 4) {
+      list.push(userEntry);
+      list.sort((a, b) => a.rank - b.rank);
+      return list.slice(0, 5);
+    } else {
+      return [...list, userEntry];
+    }
+  };
 
   // Time formatting helper (seconds to Mins)
   const formatTimeMinutes = (totalSeconds: number) => {
@@ -97,7 +186,7 @@ export default function AnalyticsPage() {
       </div>
 
       {/* 2. Core Metrics Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+      <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 mb-8">
         {/* Score Card */}
         <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
           <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Score Obtained</p>
@@ -108,13 +197,14 @@ export default function AnalyticsPage() {
           <p className="text-[10px] text-slate-400 mt-2 font-medium">Scaled score logic applied</p>
         </div>
 
-        {/* Accuracy Card */}
+        {/* Rank Card */}
         <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
-          <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Accuracy</p>
+          <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">All India Rank</p>
           <div className="mt-4 flex items-baseline gap-1">
-            <span className="text-3xl font-extrabold text-emerald-600">{attempt.accuracy}%</span>
+            <span className="text-3xl font-extrabold text-amber-600">#{userRank.toLocaleString()}</span>
+            <span className="text-xs text-slate-400 font-semibold">/ {totalCandidates.toLocaleString()}</span>
           </div>
-          <p className="text-[10px] text-slate-400 mt-2 font-medium">Target accuracy: &gt;85%</p>
+          <p className="text-[10px] text-slate-400 mt-2 font-medium">Rank based on percentile rating</p>
         </div>
 
         {/* Percentile Card */}
@@ -125,6 +215,15 @@ export default function AnalyticsPage() {
             <span className="text-xs text-slate-400 font-semibold">%ile</span>
           </div>
           <p className="text-[10px] text-slate-400 mt-2 font-medium">Outperformed {attempt.percentile}% of applicants</p>
+        </div>
+
+        {/* Accuracy Card */}
+        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Accuracy</p>
+          <div className="mt-4 flex items-baseline gap-1">
+            <span className="text-3xl font-extrabold text-emerald-600">{attempt.accuracy}%</span>
+          </div>
+          <p className="text-[10px] text-slate-400 mt-2 font-medium">Target accuracy: &gt;85%</p>
         </div>
 
         {/* Time Card */}
@@ -250,6 +349,101 @@ export default function AnalyticsPage() {
               </li>
             ))}
           </ul>
+        </div>
+      </div>
+
+      {/* 4.5. Leaderboard Section */}
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden p-6 mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+          <div>
+            <h3 className="font-extrabold text-slate-800 text-sm sm:text-base flex items-center gap-1.5">
+              🏆 Mock Test Leaderboard
+            </h3>
+            <p className="text-[10px] sm:text-xs text-slate-400 mt-0.5 font-medium">
+              Top performers and your relative standing in this mock test.
+            </p>
+          </div>
+          <span className="text-[10px] font-bold text-slate-500 bg-slate-50 border border-slate-200 px-3 py-1 rounded-lg self-start">
+            Total Applicants: {totalCandidates.toLocaleString()}
+          </span>
+        </div>
+
+        <div className="overflow-x-auto scrollbar-none">
+          <table className="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr className="border-b border-slate-100 text-slate-400 font-bold uppercase tracking-wider text-[9px] sm:text-[10px]">
+                <th className="py-3 px-2 sm:px-4 w-14 sm:w-16">Rank</th>
+                <th className="py-3 px-2 sm:px-4">Candidate Name</th>
+                <th className="py-3 px-2 sm:px-4 text-center">Score</th>
+                <th className="py-3 px-2 sm:px-4 text-center">Accuracy</th>
+                <th className="py-3 px-2 sm:px-4 text-right">Time Taken</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 font-semibold text-slate-700">
+              {getLeaderboard().map((entry, i, arr) => {
+                const showDotsBefore = entry.isUser && entry.rank > 4 && i === arr.length - 1;
+                
+                return (
+                  <tr 
+                    key={entry.isUser ? 'user' : `leader-${entry.rank}`}
+                    className={`hover:bg-slate-50/50 transition-colors ${
+                      entry.isUser 
+                        ? 'bg-blue-50/70 text-blue-900 border-y border-blue-100 hover:bg-blue-50' 
+                        : ''
+                    }`}
+                  >
+                    <td className="py-3 px-2 sm:px-4">
+                      {entry.rank === 1 ? (
+                        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-amber-100 text-amber-800 text-[10px] font-extrabold border border-amber-200">
+                          🥇
+                        </span>
+                      ) : entry.rank === 2 ? (
+                        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-slate-100 text-slate-800 text-[10px] font-extrabold border border-slate-200">
+                          🥈
+                        </span>
+                      ) : entry.rank === 3 ? (
+                        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-orange-100 text-orange-800 text-[10px] font-extrabold border border-orange-200">
+                          🥉
+                        </span>
+                      ) : (
+                        <span className="pl-1 sm:pl-2">#{entry.rank}</span>
+                      )}
+                    </td>
+                    <td className="py-3 px-2 sm:px-4">
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <span className="truncate max-w-[120px] sm:max-w-none">{entry.name}</span>
+                        {entry.isUser && (
+                          <span className="text-[8px] bg-blue-600 text-white font-extrabold px-1 py-0.5 rounded uppercase tracking-wide">
+                            You
+                          </span>
+                        )}
+                        {showDotsBefore && (
+                          <span className="text-[8px] bg-amber-500 text-white font-extrabold px-1 py-0.5 rounded uppercase tracking-wide ml-1">
+                            Your Rank
+                          </span>
+                        )}
+                      </div>
+                    </td>
+                    <td className="py-3 px-2 sm:px-4 text-center font-extrabold">
+                      {entry.score} <span className="text-[9px] text-slate-400 font-normal">/ {test.totalMarks}</span>
+                    </td>
+                    <td className="py-3 px-2 sm:px-4 text-center">
+                      <span className={`px-1.5 py-0.5 rounded-full text-[9px] font-bold ${
+                        entry.accuracy >= 85 
+                          ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' 
+                          : 'bg-amber-50 text-amber-700 border border-amber-200'
+                      }`}>
+                        {entry.accuracy}%
+                      </span>
+                    </td>
+                    <td className="py-3 px-2 sm:px-4 text-right text-slate-500 font-mono text-[10px] sm:text-[11px]">
+                      {formatSeconds(entry.time)}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
       </div>
 
