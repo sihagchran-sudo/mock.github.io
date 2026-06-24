@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma db push && next build",
+    "build": "node -e \"if(process.env.VERCEL) require('child_process').execSync('npx prisma db push', {stdio: 'inherit'})\" && next build",
     "start": "next start",
     "lint": "eslint",
     "postinstall": "prisma generate"

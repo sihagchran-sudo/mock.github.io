@@ -110,10 +110,6 @@ function SignUpForm() {
     }
   };
 
-  const handleGoogleLogin = () => {
-    signIn("google", { callbackUrl: "/dashboard" });
-  };
-
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md bg-white border border-slate-200 rounded-3xl p-8 sm:p-10 shadow-lg relative">
@@ -180,29 +176,6 @@ function SignUpForm() {
             {loading ? "Creating Account..." : "Sign Up"}
           </button>
         </form>
-
-        {/* Divider */}
-        <div className="relative my-6 text-center">
-          <hr className="border-slate-200" />
-          <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-3 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-            Or
-          </span>
-        </div>
-
-        {/* Google Signup Option */}
-        <button
-          onClick={handleGoogleLogin}
-          type="button"
-          className="w-full flex items-center justify-center gap-3 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-bold text-xs py-3.5 px-4 rounded-xl shadow-sm transition-all active:scale-98"
-        >
-          <svg className="w-4 h-4" viewBox="0 0 24 24">
-            <path fill="#EA4335" d="M12 24c3.24 0 5.97-1.08 7.96-2.91l-3.87-3c-1.08.72-2.47 1.16-4.09 1.16-3.15 0-5.82-2.13-6.78-5.01L1.24 17.3c2 3.97 6.11 6.7 10.76 6.7z"/>
-            <path fill="#4285F4" d="M23.49 12.27c0-.82-.07-1.61-.21-2.38H12v4.51h6.44c-.28 1.48-1.12 2.73-2.37 3.58l3.87 3c2.26-2.09 3.55-5.17 3.55-8.71z"/>
-            <path fill="#FBBC05" d="M5.22 14.12c-.24-.72-.38-1.5-.38-2.3a7.82 7.82 0 01.38-2.3L1.24 6.4C.45 7.98 0 9.77 0 11.64c0 1.87.45 3.66 1.24 5.24l3.98-2.76z"/>
-            <path fill="#34A853" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.43-3.43C17.96 1.19 15.24 0 12 0 7.35 0 3.24 2.73 1.24 6.7l3.98 3.08c.96-2.88 3.63-5.03 6.78-5.03z"/>
-          </svg>
-          <span>Continue with Google</span>
-        </button>
 
         {/* Redirect */}
         <div className="mt-8 text-center text-xs text-slate-500">
