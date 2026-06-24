@@ -946,8 +946,8 @@ EXAMS.forEach(exam => {
     const details = getDynamicDetails(exam.slug, exam.name, exam.categoryId);
     dynamicBlogs.push({
       slug: `${exam.slug}-info`,
-      title: `${exam.name} Complete Info, Syllabus & Pattern 2026`,
-      description: `All details about the ${exam.name} examination including syllabus, exam pattern, eligibility criteria, salary, and selection process in one comprehensive guide.`,
+      title: `${exam.name} Information`,
+      description: "",
       publishDate: "June 24, 2026",
       readTime: "5 min read",
       examSlug: exam.slug,
@@ -955,44 +955,7 @@ EXAMS.forEach(exam => {
       category,
       icon,
       type: 'info',
-      sections: [
-        {
-          title: "1. Exam Overview & Important Details",
-          paragraphs: [
-            `The official notification for ${exam.name} recruitment contains key details regarding vacancy, online application dates, and selection stages. Complete information will be updated here by the admin.`
-          ]
-        },
-        {
-          title: "2. Eligibility Criteria & Age Limit",
-          paragraphs: [
-            "Candidates planning to apply must satisfy the minimum eligibility requirements in terms of educational qualification and age limit as specified in the official notification guidelines."
-          ]
-        },
-        {
-          title: "3. Exam Pattern & Marks Weightage",
-          paragraphs: [
-            "The exam is conducted based on a predefined scheme of subjects, question weightage, and negative marking structure. Having a clear idea of the marks distribution helps plan practice targets."
-          ]
-        },
-        {
-          title: "4. Detailed Subject-wise Syllabus",
-          paragraphs: [
-            "Topic breakdown for reasoning, mathematics, general awareness, English/Hindi language, and specific subjects will be listed in this section to help cover all essential concepts."
-          ]
-        },
-        {
-          title: "5. Salary Structure, Perks & Allowances",
-          paragraphs: [
-            "In addition to the basic pay scale, recruited candidates are eligible for standard allowances (DA, HRA, TA) and other state/central government perks according to the official pay matrix."
-          ]
-        },
-        {
-          title: "6. Previous Year Cut Off & Selection Process",
-          paragraphs: [
-            "Analyzing previous year category-wise cut-off scores offers valuable insights into competitive thresholds and expected score targets to secure final selection."
-          ]
-        }
-      ],
+      sections: [],
       details
     });
   }

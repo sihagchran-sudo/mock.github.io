@@ -40,9 +40,11 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
           <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
             {blog.title}
           </h1>
-          <p className="text-slate-500 mt-2 text-sm sm:text-base max-w-3xl leading-relaxed">
-            {blog.description}
-          </p>
+          {blog.description && (
+            <p className="text-slate-500 mt-2 text-sm sm:text-base max-w-3xl leading-relaxed">
+              {blog.description}
+            </p>
+          )}
         </div>
 
         {/* Layout Grid */}
