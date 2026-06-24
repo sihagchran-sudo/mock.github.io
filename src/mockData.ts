@@ -80,36 +80,107 @@ export const CATEGORIES: Category[] = [
 
 // 2. Exams
 export const EXAMS: Exam[] = [
-  { id: 'exam-1', name: 'SBI PO', slug: 'sbi-po', categoryId: 'cat-1', description: 'State Bank of India Probationary Officer Exam', popular: true },
-  { id: 'exam-2', name: 'IBPS PO', slug: 'ibps-po', categoryId: 'cat-1', description: 'Institute of Banking Personnel Selection PO Exam', popular: true },
-  { id: 'exam-3', name: 'SSC CGL', slug: 'ssc-cgl', categoryId: 'cat-2', description: 'Staff Selection Commission Combined Graduate Level', popular: true },
-  { id: 'exam-4', name: 'SSC CHSL', slug: 'ssc-chsl', categoryId: 'cat-2', description: 'Staff Selection Commission Combined Higher Secondary Level', popular: false },
-  { id: 'exam-5', name: 'SSC MTS', slug: 'ssc-mts', categoryId: 'cat-2', description: 'Staff Selection Commission Multi Tasking Staff Exam', popular: true },
-  { id: 'exam-6', name: 'UPSC Civil Services (CSE)', slug: 'upsc-cse', categoryId: 'cat-3', description: 'Union Public Service Commission Civil Services Exam', popular: true },
-  { id: 'exam-7', name: 'RRB NTPC', slug: 'rrb-ntpc', categoryId: 'cat-5', description: 'Railway Recruitment Board Non-Technical Popular Categories', popular: true },
+  // Banking & Insurance
+  { id: 'exam-sbi-po', name: 'SBI PO', slug: 'sbi-po', categoryId: 'cat-1', description: 'State Bank of India Probationary Officer Exam', popular: true },
+  { id: 'exam-sbi-clerk', name: 'SBI Clerk', slug: 'sbi-clerk', categoryId: 'cat-1', description: 'State Bank of India Junior Associate Exam', popular: true },
+  { id: 'exam-ibps-po', name: 'IBPS PO', slug: 'ibps-po', categoryId: 'cat-1', description: 'Institute of Banking Personnel Selection PO Exam', popular: true },
+  { id: 'exam-ibps-clerk', name: 'IBPS Clerk', slug: 'ibps-clerk', categoryId: 'cat-1', description: 'Institute of Banking Personnel Selection Clerk Exam', popular: false },
+  { id: 'exam-ibps-rrb-po', name: 'IBPS RRB PO', slug: 'ibps-rrb-po', categoryId: 'cat-1', description: 'Officer Scale-I Regional Rural Banks Exam', popular: true },
+  { id: 'exam-ibps-rrb-clerk', name: 'IBPS RRB Clerk', slug: 'ibps-rrb-clerk', categoryId: 'cat-1', description: 'Office Assistant Regional Rural Banks Exam', popular: false },
+  { id: 'exam-rbi-grade-b', name: 'RBI Grade B Officer', slug: 'rbi-grade-b', categoryId: 'cat-1', description: 'Reserve Bank of India Grade B Officers Exam', popular: true },
+  { id: 'exam-rbi-assistant', name: 'RBI Assistant', slug: 'rbi-assistant', categoryId: 'cat-1', description: 'Reserve Bank of India Assistants Exam', popular: false },
+
+  // SSC Exams
+  { id: 'exam-ssc-cgl', name: 'SSC CGL', slug: 'ssc-cgl', categoryId: 'cat-2', description: 'Staff Selection Commission Combined Graduate Level', popular: true },
+  { id: 'exam-ssc-chsl', name: 'SSC CHSL', slug: 'ssc-chsl', categoryId: 'cat-2', description: 'Staff Selection Commission Combined Higher Secondary Level', popular: false },
+  { id: 'exam-ssc-mts', name: 'SSC MTS', slug: 'ssc-mts', categoryId: 'cat-2', description: 'Staff Selection Commission Multi Tasking Staff Exam', popular: true },
+  { id: 'exam-ssc-gd', name: 'SSC GD Constable', slug: 'ssc-gd-constable', categoryId: 'cat-2', description: 'Staff Selection Commission General Duty Constable Exam', popular: true },
+  { id: 'exam-ssc-cpo', name: 'SSC CPO', slug: 'ssc-cpo', categoryId: 'cat-2', description: 'Staff Selection Commission Central Police Organisation Exam', popular: false },
+  { id: 'exam-ssc-steno', name: 'SSC Stenographer', slug: 'ssc-stenographer', categoryId: 'cat-2', description: 'Staff Selection Commission Grade C & D Stenographer', popular: false },
+
+  // UPSC & Civil Services
+  { id: 'exam-upsc-cse', name: 'UPSC Civil Services (CSE)', slug: 'upsc-cse', categoryId: 'cat-3', description: 'Union Public Service Commission Civil Services Prelims', popular: true },
+  { id: 'exam-uppsc-pcs', name: 'UPPSC PCS', slug: 'uppsc-pcs', categoryId: 'cat-3', description: 'Uttar Pradesh Public Service Commission State Services', popular: true },
+  { id: 'exam-bpsc', name: 'BPSC Civil Services', slug: 'bpsc', categoryId: 'cat-3', description: 'Bihar Public Service Commission State Services Exam', popular: false },
+  { id: 'exam-hpsc-hcs', name: 'HPSC HCS', slug: 'hpsc-hcs', categoryId: 'cat-3', description: 'Haryana Public Service Commission Haryana Civil Services', popular: true },
+
+  // State PSC & Police Exams
   { id: 'exam-hssc-police', name: 'HSSC Haryana Police Constable', slug: 'hssc-haryana-police', categoryId: 'cat-4', description: 'Haryana Staff Selection Commission Police Constable Exam', popular: true },
+  { id: 'exam-hssc-cet', name: 'HSSC CET (Group C & D)', slug: 'hssc-cet', categoryId: 'cat-4', description: 'Haryana CET General Common Entrance Test', popular: true },
+  { id: 'exam-up-police-constable', name: 'UP Police Constable', slug: 'up-police-constable', categoryId: 'cat-4', description: 'Uttar Pradesh Police Constable Recruitment Exam', popular: true },
+  { id: 'exam-up-police-si', name: 'UP Police SI', slug: 'up-police-si', categoryId: 'cat-4', description: 'Uttar Pradesh Police Sub Inspector Exam', popular: false },
+  { id: 'exam-delhi-police', name: 'Delhi Police Constable', slug: 'delhi-police-constable', categoryId: 'cat-4', description: 'Delhi Police Constable Executive Recruitment Exam', popular: true },
+  { id: 'exam-bihar-police', name: 'Bihar Police Constable', slug: 'bihar-police-constable', categoryId: 'cat-4', description: 'Bihar Police Constable Recruitment Examination', popular: false },
+  { id: 'exam-rajasthan-police', name: 'Rajasthan Police Constable', slug: 'rajasthan-police-constable', categoryId: 'cat-4', description: 'Rajasthan Police Constable Recruitment Exam', popular: false },
+  { id: 'exam-ctet', name: 'CTET Paper 1 & 2', slug: 'ctet', categoryId: 'cat-4', description: 'Central Teacher Eligibility Test Prep Mock Exams', popular: true },
+  { id: 'exam-htet', name: 'HTET Haryana Teacher', slug: 'htet', categoryId: 'cat-4', description: 'Haryana Teacher Eligibility Test Recruitment Exam', popular: false },
+
+  // Railways Exams
+  { id: 'exam-rrb-ntpc', name: 'RRB NTPC', slug: 'rrb-ntpc', categoryId: 'cat-5', description: 'Railway Recruitment Board Non-Technical Popular Categories', popular: true },
+  { id: 'exam-rrb-group-d', name: 'RRB Group D', slug: 'rrb-group-d', categoryId: 'cat-5', description: 'Railway Recruitment Board Group D Level 1 Tracks', popular: true },
+  { id: 'exam-rrb-alp', name: 'RRB ALP (Loco Pilot)', slug: 'rrb-alp', categoryId: 'cat-5', description: 'Railway Recruitment Board Assistant Loco Pilot Exam', popular: false },
+  { id: 'exam-rpf-si', name: 'RPF SI & Constable', slug: 'rpf-si', categoryId: 'cat-5', description: 'Railway Protection Force Sub Inspector Recruitment Exam', popular: false },
 ];
 
-// 3. Tests
-export const MOCK_TESTS: Test[] = [
-  // SBI PO Tests
-  { id: 'test-sbi-po-full-1', title: 'SBI PO Prelims - Full Mock Test 1', duration: 60, totalMarks: 100, testType: 'FULL', examId: 'exam-1', questionCount: 10 },
-  { id: 'test-sbi-po-full-2', title: 'SBI PO Prelims - Full Mock Test 2', duration: 60, totalMarks: 100, testType: 'FULL', examId: 'exam-1', questionCount: 10 },
-  { id: 'test-sbi-po-sub-quant', title: 'Quantitative Aptitude - Sectional Mock', duration: 20, totalMarks: 35, testType: 'SUBJECT', examId: 'exam-1', questionCount: 5 },
-  { id: 'test-sbi-po-chap-si', title: 'Chapter Test: Simple & Compound Interest', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-1', questionCount: 5 },
-  { id: 'test-sbi-po-sec-reasoning', title: 'Reasoning Ability - Sectional Mock', duration: 20, totalMarks: 35, testType: 'SECTIONAL', examId: 'exam-1', questionCount: 5 },
+// 3. Base Custom Tests
+const BASE_MOCK_TESTS: Test[] = [
+  // SBI PO Custom Tests
+  { id: 'test-sbi-po-full-1', title: 'SBI PO Prelims - Full Mock Test 1', duration: 60, totalMarks: 100, testType: 'FULL', examId: 'exam-sbi-po', questionCount: 10 },
+  { id: 'test-sbi-po-full-2', title: 'SBI PO Prelims - Full Mock Test 2', duration: 60, totalMarks: 100, testType: 'FULL', examId: 'exam-sbi-po', questionCount: 10 },
+  { id: 'test-sbi-po-sub-quant', title: 'Quantitative Aptitude - Sectional Mock', duration: 20, totalMarks: 35, testType: 'SUBJECT', examId: 'exam-sbi-po', questionCount: 5 },
+  { id: 'test-sbi-po-chap-si', title: 'Chapter Test: Simple & Compound Interest', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-sbi-po', questionCount: 5 },
+  { id: 'test-sbi-po-sec-reasoning', title: 'Reasoning Ability - Sectional Mock', duration: 20, totalMarks: 35, testType: 'SECTIONAL', examId: 'exam-sbi-po', questionCount: 5 },
 
-  // SSC CGL Tests
-  { id: 'test-ssc-cgl-full-1', title: 'SSC CGL Tier I - Full Mock Test 1', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-3', questionCount: 10 },
-  { id: 'test-ssc-cgl-sub-english', title: 'English Comprehension - Subject Mock', duration: 15, totalMarks: 50, testType: 'SUBJECT', examId: 'exam-3', questionCount: 5 },
-  { id: 'test-ssc-cgl-chap-geo', title: 'Chapter Test: Geometry & Mensuration', duration: 15, totalMarks: 20, testType: 'CHAPTER', examId: 'exam-3', questionCount: 5 },
+  // SSC CGL Custom Tests
+  { id: 'test-ssc-cgl-full-1', title: 'SSC CGL Tier I - Full Mock Test 1', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 10 },
+  { id: 'test-ssc-cgl-sub-english', title: 'English Comprehension - Subject Mock', duration: 15, totalMarks: 50, testType: 'SUBJECT', examId: 'exam-ssc-cgl', questionCount: 5 },
+  { id: 'test-ssc-cgl-chap-geo', title: 'Chapter Test: Geometry & Mensuration', duration: 15, totalMarks: 20, testType: 'CHAPTER', examId: 'exam-ssc-cgl', questionCount: 5 },
 
-  // HSSC Haryana Police Tests
+  // HSSC Haryana Police Custom Tests
   { id: 'test-hssc-police-full-1', title: 'HSSC Haryana Police Constable - Full Mock Test 1', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100 },
   { id: 'test-hssc-police-full-2', title: 'HSSC Haryana Police Constable - Full Mock Test 2', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100 },
   { id: 'test-hssc-police-sec-gk', title: 'Haryana General Knowledge - Sectional Mock', duration: 20, totalMarks: 25, testType: 'SECTIONAL', examId: 'exam-hssc-police', questionCount: 5 },
   { id: 'test-hssc-police-chap-agri', title: 'Chapter Test: Agriculture & Animal Husbandry', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 5 },
 ];
+
+// Dynamically generate mock test suites for all 31 exams
+export const MOCK_TESTS: Test[] = [...BASE_MOCK_TESTS];
+
+// Fill in standard mocks for every exam that doesn't have custom ones
+EXAMS.forEach(exam => {
+  const hasTests = BASE_MOCK_TESTS.some(t => t.examId === exam.id);
+  if (!hasTests) {
+    MOCK_TESTS.push(
+      {
+        id: `test-${exam.slug}-full-1`,
+        title: `${exam.name} - Full Mock Test 1`,
+        duration: 90,
+        totalMarks: 100,
+        testType: 'FULL',
+        examId: exam.id,
+        questionCount: 100
+      },
+      {
+        id: `test-${exam.slug}-sub-gk`,
+        title: `${exam.name} - General Studies Sectional Mock`,
+        duration: 20,
+        totalMarks: 30,
+        testType: 'SECTIONAL',
+        examId: exam.id,
+        questionCount: 30
+      },
+      {
+        id: `test-${exam.slug}-chap-quant`,
+        title: `${exam.name} - Quant Chapter Practice Test`,
+        duration: 15,
+        totalMarks: 15,
+        testType: 'CHAPTER',
+        examId: exam.id,
+        questionCount: 15
+      }
+    );
+  }
+});
 
 // 4. Questions (Standard 10 questions per full mock, 5 per other)
 export const MOCK_QUESTIONS: Record<string, Question[]> = {
