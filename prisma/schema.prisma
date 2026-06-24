@@ -1,0 +1,126 @@
+datasource db {
+  provider = "sqlite"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id            String        @id @default(uuid())
+  email         String        @unique
+  name          String?
+  emailVerified DateTime?
+  image         String?
+  passwordHash  String?       // Nullable for OAuth-only users
+  isPassActive  Boolean       @default(false)
+  passExpiry    DateTime?
+  attempts      TestAttempt[]
+  accounts      Account[]
+  sessions      Session[]
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+}
+
+model Account {
+  id                String  @id @default(uuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(uuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model ExamCategory {
+  id        String   @id @default(uuid())
+  name      String   @unique // e.g. Banking, SSC, UPSC
+  slug      String   @unique
+  exams     Exam[]
+  createdAt DateTime @default(now())
+}
+
+model Exam {
+  id          String       @id @default(uuid())
+  name        String       // e.g. SBI PO, SSC CGL
+  slug        String       @unique
+  categoryId  String
+  category    ExamCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  tests       Test[]
+  createdAt   DateTime     @default(now())
+}
+
+model Test {
+  id          String        @id @default(uuid())
+  title       String        // e.g. SBI PO Mock Test 1
+  duration    Int           // in minutes
+  totalMarks  Int
+  testType    String        // FULL, SUBJECT, CHAPTER, SECTIONAL
+  examId      String
+  exam        Exam          @relation(fields: [examId], references: [id], onDelete: Cascade)
+  questions   Question[]
+  attempts    TestAttempt[]
+  createdAt   DateTime      @default(now())
+}
+
+model Question {
+  id           String   @id @default(uuid())
+  text         String   // Question text
+  options      String   // JSON stringified array of options e.g. '["Option A", "Option B", "Option C", "Option D"]'
+  correctIndex Int      // Index of correct option (0-3)
+  explanation  String?  // Solution explanation
+  sectionName  String   // e.g. Quantitative Aptitude, Reasoning, English
+  testId       String
+  test         Test     @relation(fields: [testId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+}
+
+model TestAttempt {
+  id            String     @id @default(uuid())
+  userId        String
+  user          User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  testId        String
+  test          Test       @relation(fields: [testId], references: [id], onDelete: Cascade)
+  score         Float      @default(0)
+  accuracy      Float      @default(0)      // accuracy percentage
+  percentile    Float      @default(0)
+  status        String     @default("IN_PROGRESS") // IN_PROGRESS, COMPLETED
+  startedAt     DateTime   @default(now())
+  submittedAt   DateTime?
+  responses     String     @default("[]")   // JSON stringified array of user choices: [{questionId: string, selectedIndex: number, isMarkedForReview: boolean}]
+  analytics     Analytics?
+}
+
+model Analytics {
+  id               String      @id @default(uuid())
+  attemptId        String      @unique
+  attempt          TestAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  sectionTimeTaken String      // JSON string: {"Quantitative Aptitude": 1200, "Reasoning": 900} (seconds)
+  weakChapters     String      // JSON string of arrays: ["Compound Interest", "Syllogism"]
+  strongChapters   String      // JSON string of arrays: ["Time & Work", "Coding-Decoding"]
+}
