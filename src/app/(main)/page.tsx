@@ -8,6 +8,17 @@ import TestCard from '@/components/TestCard';
 export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
 
+  const EXAM_ICONS: Record<string, string> = {
+    'sbi-po': '🏛️',
+    'ibps-po': '🏦',
+    'ssc-cgl': '✍️',
+    'ssc-chsl': '📝',
+    'ssc-mts': '📋',
+    'upsc-cse': '🎖️',
+    'rrb-ntpc': '🚆',
+    'hssc-haryana-police': '👮',
+  };
+
   // Filter exams based on search query
   const filteredExams = EXAMS.filter(exam =>
     exam.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -95,40 +106,47 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. Categories Grid */}
+      {/* 2. Exams Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="text-center md:text-left mb-10">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Browse Exams By Category
+            Target Your Exam Goal
           </h2>
           <p className="text-slate-500 mt-2 text-sm sm:text-base">
-            Select your dream goal and start practice tests immediately
+            Directly select your target exam and start practicing real-time mock tests
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
-          {CATEGORIES.map((cat) => (
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {EXAMS.map((exam) => (
             <div
-              key={cat.id}
-              className="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between"
+              key={exam.id}
+              className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between"
             >
               <div>
-                <span className="text-3xl p-3 bg-slate-50 rounded-xl inline-block mb-4">
-                  {cat.icon}
+                <span className="text-2xl sm:text-3xl p-3 bg-slate-50 rounded-xl inline-block mb-3.5">
+                  {EXAM_ICONS[exam.slug] || '📝'}
                 </span>
-                <h3 className="font-bold text-slate-800 text-base leading-tight">
-                  {cat.name}
-                </h3>
-                <p className="text-xs text-slate-400 mt-1 font-medium">
-                  {cat.examCount} Exams Available
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <h3 className="font-extrabold text-slate-800 text-sm sm:text-base leading-tight">
+                    {exam.name}
+                  </h3>
+                  {exam.popular && (
+                    <span className="bg-blue-50 text-blue-700 text-[9px] font-bold px-1.5 py-0.5 rounded border border-blue-100">
+                      Popular
+                    </span>
+                  )}
+                </div>
+                <p className="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                  {exam.description}
                 </p>
               </div>
-              <div className="mt-6">
+              <div className="mt-5 pt-3 border-t border-slate-100">
                 <Link
-                  href={`/exam/${cat.slug === 'banking' ? 'sbi-po' : cat.slug === 'ssc' ? 'ssc-cgl' : cat.slug === 'state-psc' ? 'hssc-haryana-police' : 'upsc-cse'}`}
-                  className="text-xs text-blue-600 hover:text-blue-700 font-bold flex items-center gap-1 group"
+                  href={`/exam/${exam.slug}`}
+                  className="text-xs text-blue-650 hover:text-blue-750 font-bold flex items-center gap-1 group"
                 >
-                  Explore Mocks
+                  Explore Mock Tests
                   <span className="group-hover:translate-x-0.5 transition-transform">→</span>
                 </Link>
               </div>

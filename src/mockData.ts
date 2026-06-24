@@ -84,8 +84,9 @@ export const EXAMS: Exam[] = [
   { id: 'exam-2', name: 'IBPS PO', slug: 'ibps-po', categoryId: 'cat-1', description: 'Institute of Banking Personnel Selection PO Exam', popular: true },
   { id: 'exam-3', name: 'SSC CGL', slug: 'ssc-cgl', categoryId: 'cat-2', description: 'Staff Selection Commission Combined Graduate Level', popular: true },
   { id: 'exam-4', name: 'SSC CHSL', slug: 'ssc-chsl', categoryId: 'cat-2', description: 'Staff Selection Commission Combined Higher Secondary Level', popular: false },
-  { id: 'exam-5', name: 'UPSC Civil Services (CSE)', slug: 'upsc-cse', categoryId: 'cat-3', description: 'Union Public Service Commission Civil Services Exam', popular: true },
-  { id: 'exam-6', name: 'RRB NTPC', slug: 'rrb-ntpc', categoryId: 'cat-5', description: 'Railway Recruitment Board Non-Technical Popular Categories', popular: true },
+  { id: 'exam-5', name: 'SSC MTS', slug: 'ssc-mts', categoryId: 'cat-2', description: 'Staff Selection Commission Multi Tasking Staff Exam', popular: true },
+  { id: 'exam-6', name: 'UPSC Civil Services (CSE)', slug: 'upsc-cse', categoryId: 'cat-3', description: 'Union Public Service Commission Civil Services Exam', popular: true },
+  { id: 'exam-7', name: 'RRB NTPC', slug: 'rrb-ntpc', categoryId: 'cat-5', description: 'Railway Recruitment Board Non-Technical Popular Categories', popular: true },
   { id: 'exam-hssc-police', name: 'HSSC Haryana Police Constable', slug: 'hssc-haryana-police', categoryId: 'cat-4', description: 'Haryana Staff Selection Commission Police Constable Exam', popular: true },
 ];
 
