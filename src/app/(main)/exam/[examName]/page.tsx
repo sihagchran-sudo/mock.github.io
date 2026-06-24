@@ -33,7 +33,7 @@ export default async function ExamNamePage({ params, searchParams }: PageProps) 
     );
   }
 
-  const examBlog = BLOGS.find(b => b.examSlug === exam.slug);
+  const examBlogs = BLOGS.filter(b => b.examSlug === exam.slug);
 
   // Get all tests for this exam
   const allTests = getTestsForExam(exam.id);
@@ -83,26 +83,42 @@ export default async function ExamNamePage({ params, searchParams }: PageProps) 
         </div>
       </div>
 
-      {/* Syllabus Link Banner */}
-      {examBlog && (
-        <div className="mb-8 p-5 bg-blue-50/60 border border-blue-100 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
-          <div className="flex gap-3.5 items-start sm:items-center">
-            <span className="text-3xl p-2.5 bg-blue-500/10 rounded-xl">📖</span>
-            <div className="text-left">
-              <h4 className="font-extrabold text-slate-800 text-sm sm:text-base">
-                Official Syllabus & Exam Pattern
-              </h4>
-              <p className="text-slate-500 text-xs mt-0.5 font-medium leading-relaxed">
-                Check detailed subjects weightage, topics list, negative marking and eligibility criteria for {exam.name}.
-              </p>
-            </div>
+      {/* Exam Resources Grid */}
+      {examBlogs.length > 0 && (
+        <div className="mb-8 p-5 bg-blue-50/60 border border-blue-100 rounded-2xl shadow-sm">
+          <h3 className="font-extrabold text-slate-800 text-sm sm:text-base mb-4 flex items-center gap-1.5 border-b border-blue-100/50 pb-2">
+            📚 Quick Exam Guides & Info
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {examBlogs.map((b) => {
+              let label = "View Syllabus";
+              let icon = "📖";
+              if (b.type === 'salary') {
+                label = "View Salary & Job Profile";
+                icon = "💰";
+              } else if (b.type === 'cutoff') {
+                label = "View Cut Off Trends";
+                icon = "📈";
+              }
+              return (
+                <Link
+                  key={b.slug}
+                  href={`/blog/${b.slug}`}
+                  className="flex items-center gap-3.5 p-3.5 bg-white border border-slate-200 hover:border-blue-300 hover:bg-blue-50/10 rounded-xl transition-all shadow-sm group"
+                >
+                  <span className="text-2xl p-2 bg-slate-50 rounded-xl group-hover:bg-blue-50 transition-colors shrink-0">
+                    {icon}
+                  </span>
+                  <div className="text-left">
+                    <span className="block font-extrabold text-slate-700 text-xs group-hover:text-blue-600 transition-colors leading-snug">
+                      {b.title.split(' 2026')[0].split(' Detailed')[0].split(' Structure')[0]}
+                    </span>
+                    <span className="text-[9px] text-blue-500 font-bold mt-1 block uppercase tracking-wider">{label} →</span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
-          <Link
-            href={`/blog/${examBlog.slug}`}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-3 px-5 rounded-xl shadow-md hover:shadow-blue-500/15 transition-all text-center shrink-0"
-          >
-            View Full Syllabus
-          </Link>
         </div>
       )}
 
