@@ -16,10 +16,18 @@ function SignInForm() {
 
   // Read error parameters or verification parameters
   const error = searchParams.get("error");
+  const isReset = searchParams.get("reset") === "true";
+  const isRegistered = searchParams.get("registered") === "true";
 
   const getAlertMessage = () => {
     if (localError) {
       return { type: "error", text: localError };
+    }
+    if (isReset) {
+      return { type: "success", text: "Your password has been reset successfully! Please sign in." };
+    }
+    if (isRegistered) {
+      return { type: "success", text: "Registration successful! Please sign in to continue." };
     }
     if (error) {
       if (error === "CredentialsSignin" || error === "CallbackRouteError") {
@@ -92,8 +100,14 @@ function SignInForm() {
 
         {/* Dynamic Alerts */}
         {alert && (
-          <div className="bg-red-50 border border-red-200 text-red-700 text-xs rounded-xl p-3.5 mb-5 flex items-start gap-2.5">
-            <span className="text-base leading-none pt-0.5">⚠️</span>
+          <div className={`border text-xs rounded-xl p-3.5 mb-5 flex items-start gap-2.5 ${
+            alert.type === "success"
+              ? "bg-emerald-50 border-emerald-200 text-emerald-700"
+              : "bg-red-50 border border-red-200 text-red-700"
+          }`}>
+            <span className="text-base leading-none pt-0.5">
+              {alert.type === "success" ? "✅" : "⚠️"}
+            </span>
             <span>{alert.text}</span>
           </div>
         )}
@@ -112,7 +126,12 @@ function SignInForm() {
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-slate-600 mb-1.5 uppercase tracking-wider">Password</label>
+            <div className="flex justify-between items-center mb-1.5">
+              <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">Password</label>
+              <Link href="/forgot-password" className="text-[10px] font-bold text-blue-600 hover:underline">
+                Forgot Password?
+              </Link>
+            </div>
             <input
               type="password"
               required
