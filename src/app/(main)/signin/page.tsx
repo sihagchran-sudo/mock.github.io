@@ -1,33 +1,81 @@
 'use client';
 
 import { signIn } from "next-auth/react";
-import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 
 function SignInForm() {
   const searchParams = useSearchParams();
+  const router = useRouter();
+  
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [localError, setLocalError] = useState("");
 
   // Read error parameters or verification parameters
   const error = searchParams.get("error");
 
   const getAlertMessage = () => {
+    if (localError) {
+      return { type: "error", text: localError };
+    }
     if (error) {
+      if (error === "CredentialsSignin" || error === "CallbackRouteError") {
+        return {
+          type: "error",
+          text: "Invalid username or password. Please try again.",
+        };
+      }
       if (error === "Configuration" || error === "AccessDenied") {
         return {
           type: "error",
-          text: "Authentication configuration error. Please ensure Google OAuth credentials are correctly configured in your .env file.",
+          text: "Authentication configuration error. Please ensure settings are correct.",
         };
       }
       return {
         type: "error",
-        text: "Failed to sign in with Google. Please try again.",
+        text: "Failed to sign in. Please try again.",
       };
     }
     return null;
   };
 
   const alert = getAlertMessage();
+
+  const handleCredentialsLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!username.trim() || !password) {
+      setLocalError("Please enter both username and password.");
+      return;
+    }
+    setLocalError("");
+    setLoading(true);
+
+    try {
+      const res = await signIn("credentials", {
+        username: username.trim(),
+        password,
+        redirect: false,
+      });
+
+      if (res?.error) {
+        if (res.error === "CredentialsSignin" || res.error.includes("CredentialsSignin")) {
+          setLocalError("Invalid username or password.");
+        } else {
+          setLocalError("An error occurred during sign in. Please try again.");
+        }
+      } else {
+        router.push("/dashboard");
+        router.refresh();
+      }
+    } catch (err) {
+      setLocalError("An unexpected error occurred.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleGoogleLogin = () => {
     signIn("google", { callbackUrl: "/dashboard" });
@@ -43,7 +91,7 @@ function SignInForm() {
             MockMaster
           </Link>
           <h2 className="text-lg font-bold text-slate-800">Sign in to your account</h2>
-          <p className="text-xs text-slate-500 mt-1">Google Sign-in Only Portal</p>
+          <p className="text-xs text-slate-500 mt-1">Enter your username and password below</p>
         </div>
 
         {/* Dynamic Alerts */}
@@ -54,28 +102,69 @@ function SignInForm() {
           </div>
         )}
 
-        <div className="space-y-6">
-          <p className="text-xs text-slate-500 text-center leading-relaxed">
-            Create an account or sign in securely using your Google account to save attempt history and check pro passes.
-          </p>
+        <form onSubmit={handleCredentialsLogin} className="space-y-4">
+          <div>
+            <label className="block text-xs font-bold text-slate-600 mb-1.5 uppercase tracking-wider">Username</label>
+            <input
+              type="text"
+              required
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="e.g. sihagchran"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm text-slate-800 placeholder:text-slate-400 font-medium bg-slate-50/50"
+            />
+          </div>
 
-          {/* Google OAuth Login Button */}
+          <div>
+            <label className="block text-xs font-bold text-slate-600 mb-1.5 uppercase tracking-wider">Password</label>
+            <input
+              type="password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="••••••••"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm text-slate-800 placeholder:text-slate-400 font-medium bg-slate-50/50"
+            />
+          </div>
+
           <button
-            onClick={handleGoogleLogin}
-            type="button"
-            className="w-full flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-3.5 px-4 rounded-xl shadow-md hover:shadow-lg transition-all active:scale-98"
+            type="submit"
+            disabled={loading}
+            className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white font-bold text-xs py-3.5 px-4 rounded-xl shadow-md hover:shadow-lg transition-all active:scale-98 mt-2"
           >
-            {/* White Google Icon */}
-            <svg className="w-4 h-4 text-white fill-current" viewBox="0 0 24 24">
-              <path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.113-5.136 4.113-3.48 0-6.3-2.82-6.3-6.3s2.82-6.3 6.3-6.3c1.614 0 3.082.614 4.194 1.616l3.056-3.056C19.167 2.697 15.937 1.5 12.24 1.5 6.012 1.5 1 6.512 1 12.74s5.012 11.24 11.24 11.24c5.895 0 10.864-4.22 10.864-11.24 0-.668-.063-1.34-.177-1.97H12.24z"/>
-            </svg>
-            <span>Continue with Google</span>
+            {loading ? "Signing In..." : "Sign In"}
           </button>
+        </form>
+
+        {/* Divider */}
+        <div className="relative my-6 text-center">
+          <hr className="border-slate-200" />
+          <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-3 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+            Or
+          </span>
         </div>
 
-        {/* Footer info */}
-        <div className="mt-8 text-center text-[10px] text-slate-400">
-          Secure authentication powered by Google OAuth.
+        {/* Google Login Option */}
+        <button
+          onClick={handleGoogleLogin}
+          type="button"
+          className="w-full flex items-center justify-center gap-3 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-bold text-xs py-3.5 px-4 rounded-xl shadow-sm transition-all active:scale-98"
+        >
+          <svg className="w-4 h-4" viewBox="0 0 24 24">
+            <path fill="#EA4335" d="M12 24c3.24 0 5.97-1.08 7.96-2.91l-3.87-3c-1.08.72-2.47 1.16-4.09 1.16-3.15 0-5.82-2.13-6.78-5.01L1.24 17.3c2 3.97 6.11 6.7 10.76 6.7z"/>
+            <path fill="#4285F4" d="M23.49 12.27c0-.82-.07-1.61-.21-2.38H12v4.51h6.44c-.28 1.48-1.12 2.73-2.37 3.58l3.87 3c2.26-2.09 3.55-5.17 3.55-8.71z"/>
+            <path fill="#FBBC05" d="M5.22 14.12c-.24-.72-.38-1.5-.38-2.3a7.82 7.82 0 01.38-2.3L1.24 6.4C.45 7.98 0 9.77 0 11.64c0 1.87.45 3.66 1.24 5.24l3.98-2.76z"/>
+            <path fill="#34A853" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.43-3.43C17.96 1.19 15.24 0 12 0 7.35 0 3.24 2.73 1.24 6.7l3.98 3.08c.96-2.88 3.63-5.03 6.78-5.03z"/>
+          </svg>
+          <span>Continue with Google</span>
+        </button>
+
+        {/* Redirect */}
+        <div className="mt-8 text-center text-xs text-slate-500">
+          <span>Don't have an account? </span>
+          <Link href="/signup" className="text-blue-600 font-bold hover:underline">
+            Register here
+          </Link>
         </div>
       </div>
     </div>
