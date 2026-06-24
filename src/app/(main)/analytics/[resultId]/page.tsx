@@ -65,6 +65,34 @@ export default function AnalyticsPage() {
   const test = getTestById(attempt.testId)!;
   const questions = getQuestionsForTest(attempt.testId);
 
+  let correctCount = 0;
+  let incorrectCount = 0;
+  let unattemptedCount = 0;
+
+  if (attempt.responses && attempt.responses.length > 0) {
+    attempt.responses.forEach(res => {
+      const q = questions.find(question => question.id === res.questionId);
+      if (q) {
+        if (res.selectedIndex === -1) {
+          unattemptedCount++;
+        } else if (res.selectedIndex === q.correctIndex) {
+          correctCount++;
+        } else {
+          incorrectCount++;
+        }
+      }
+    });
+  } else {
+    // Estimate based on score and accuracy for historical attempts
+    const totalQ = questions.length || test.questionCount || 100;
+    const scoreFraction = test.totalMarks > 0 ? attempt.score / test.totalMarks : 0;
+    correctCount = Math.round(totalQ * scoreFraction);
+    const accuracyFraction = attempt.accuracy / 100;
+    const attempted = accuracyFraction > 0 ? Math.round(correctCount / accuracyFraction) : correctCount;
+    incorrectCount = Math.max(0, attempted - correctCount);
+    unattemptedCount = Math.max(0, totalQ - correctCount - incorrectCount);
+  }
+
   const formatSeconds = (totalSecs: number) => {
     const mins = Math.floor(totalSecs / 60);
     const secs = totalSecs % 60;
@@ -91,28 +119,33 @@ export default function AnalyticsPage() {
     ];
 
     const list = [];
-    
+    const isHssc = test.examId === 'exam-hssc-police';
+
     // Rank 1
     const n1 = candidateNames[seed % candidateNames.length];
-    const s1 = Math.round((test.totalMarks * (0.93 + random(seed) * 0.05)) * 10) / 10;
+    const topMult = isHssc ? 0.84 : 0.93;
+    const s1 = Math.round((test.totalMarks * (topMult + random(seed) * 0.04)) * 10) / 10;
     const t1 = Math.round(test.duration * 60 * (0.55 + random(seed + 1) * 0.15));
     list.push({ rank: 1, name: n1, score: s1, accuracy: 96, time: t1, isUser: false });
 
     // Rank 2
     const n2 = candidateNames[(seed + 1) % candidateNames.length];
-    const s2 = Math.round((test.totalMarks * (0.88 + random(seed + 2) * 0.04)) * 10) / 10;
+    const secondMult = isHssc ? 0.80 : 0.88;
+    const s2 = Math.round((test.totalMarks * (secondMult + random(seed + 2) * 0.03)) * 10) / 10;
     const t2 = Math.round(test.duration * 60 * (0.65 + random(seed + 3) * 0.1));
     list.push({ rank: 2, name: n2, score: s2, accuracy: 92, time: t2, isUser: false });
 
     // Rank 3
     const n3 = candidateNames[(seed + 2) % candidateNames.length];
-    const s3 = Math.round((test.totalMarks * (0.84 + random(seed + 4) * 0.03)) * 10) / 10;
+    const thirdMult = isHssc ? 0.77 : 0.84;
+    const s3 = Math.round((test.totalMarks * (thirdMult + random(seed + 4) * 0.02)) * 10) / 10;
     const t3 = Math.round(test.duration * 60 * (0.7 + random(seed + 5) * 0.1));
     list.push({ rank: 3, name: n3, score: s3, accuracy: 88, time: t3, isUser: false });
 
     // Rank 4
     const n4 = candidateNames[(seed + 3) % candidateNames.length];
-    const s4 = Math.round((test.totalMarks * (0.80 + random(seed + 6) * 0.03)) * 10) / 10;
+    const fourthMult = isHssc ? 0.74 : 0.80;
+    const s4 = Math.round((test.totalMarks * (fourthMult + random(seed + 6) * 0.02)) * 10) / 10;
     const t4 = Math.round(test.duration * 60 * (0.75 + random(seed + 7) * 0.1));
     list.push({ rank: 4, name: n4, score: s4, accuracy: 84, time: t4, isUser: false });
 
@@ -132,6 +165,12 @@ export default function AnalyticsPage() {
     if (userRank <= 4) {
       list.push(userEntry);
       list.sort((a, b) => a.rank - b.rank);
+      // Ensure ranks are sequentially displayed
+      list.forEach((entry, idx) => {
+        if (!entry.isUser) {
+          entry.rank = idx + 1;
+        }
+      });
       return list.slice(0, 5);
     } else {
       return [...list, userEntry];
@@ -223,7 +262,20 @@ export default function AnalyticsPage() {
           <div className="mt-4 flex items-baseline gap-1">
             <span className="text-3xl font-extrabold text-emerald-600">{attempt.accuracy}%</span>
           </div>
-          <p className="text-[10px] text-slate-400 mt-2 font-medium">Target accuracy: &gt;85%</p>
+          <div className="mt-2 text-[10px] font-semibold text-slate-500 space-y-0.5 border-t border-slate-100 pt-2">
+            <div className="flex justify-between">
+              <span className="text-emerald-600">Correct:</span>
+              <span className="font-bold text-slate-700">{correctCount}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-red-500">Incorrect:</span>
+              <span className="font-bold text-slate-700">{incorrectCount}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-slate-400">Unattempted:</span>
+              <span className="font-bold text-slate-700">{unattemptedCount}</span>
+            </div>
+          </div>
         </div>
 
         {/* Time Card */}
@@ -276,14 +328,18 @@ export default function AnalyticsPage() {
             </div>
           </div>
 
-          <div className="mt-6 flex space-x-6 text-xs text-slate-600 font-semibold">
+          <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-slate-600 font-bold">
             <div className="flex items-center gap-1.5">
               <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full"></span>
-              Correct Responses
+              Correct: {correctCount}
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-2.5 h-2.5 bg-slate-200 rounded-full"></span>
-              Incorrect / Unanswered
+              <span className="w-2.5 h-2.5 bg-rose-500 rounded-full"></span>
+              Incorrect: {incorrectCount}
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="w-2.5 h-2.5 bg-slate-300 rounded-full"></span>
+              Unattempted: {unattemptedCount}
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Test, TestType } from '../mockData';
 
 interface TestCardProps {
@@ -8,6 +9,15 @@ interface TestCardProps {
 }
 
 export default function TestCard({ test }: TestCardProps) {
+  const router = useRouter();
+
+  const handleStartTest = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const confirmStart = window.confirm("क्या आप टेस्ट शुरू करना चाहते हैं? / Are you sure you want to start the test?");
+    if (confirmStart) {
+      router.push(`/test-interface/${test.id}`);
+    }
+  };
   const getBadgeColor = (type: TestType) => {
     switch (type) {
       case 'FULL':
@@ -79,15 +89,15 @@ export default function TestCard({ test }: TestCardProps) {
         </div>
 
         {/* Start Button */}
-        <Link
-          href={`/test-interface/${test.id}`}
-          className="bg-blue-600 hover:bg-blue-700 text-white text-xs px-4 py-2 rounded-lg font-semibold shadow-sm transition-all hover:shadow-md active:scale-95 flex items-center gap-1"
+        <button
+          onClick={handleStartTest}
+          className="bg-blue-600 hover:bg-blue-700 text-white text-xs px-4 py-2 rounded-lg font-semibold shadow-sm transition-all hover:shadow-md active:scale-95 flex items-center gap-1 cursor-pointer"
         >
           Start Test
           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
-        </Link>
+        </button>
       </div>
     </div>
   );

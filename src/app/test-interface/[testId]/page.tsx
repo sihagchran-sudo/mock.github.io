@@ -1,7 +1,7 @@
 'use client';
 
 import { useParams, useRouter } from 'next/navigation';
-import { useEffect, useState, use } from 'react';
+import { useEffect, useState, use, useRef } from 'react';
 import { getTestById, getQuestionsForTest, gradeTestAttempt, UserResponse } from '@/mockData';
 import { useSession } from 'next-auth/react';
 
@@ -23,6 +23,60 @@ export default function TestInterfacePage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const isSubmittingRef = useRef(false);
+
+  // Sync isSubmittingRef with isSubmitting state
+  useEffect(() => {
+    isSubmittingRef.current = isSubmitting;
+  }, [isSubmitting]);
+
+  // Warning on refresh or tab close
+  useEffect(() => {
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (isSubmittingRef.current) return;
+      e.preventDefault();
+      e.returnValue = 'Are you sure you want to leave? Your progress will not be saved.';
+      return e.returnValue;
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
+  // Warning on back button navigation
+  useEffect(() => {
+    // Push an extra state in history to capture the back action
+    window.history.pushState(null, '', window.location.href);
+
+    const handlePopState = () => {
+      if (isSubmittingRef.current) return;
+
+      const confirmExit = window.confirm("क्या आप टेस्ट छोड़ना चाहते हैं? / Are you sure you want to exit the test? (Your progress will not be saved)");
+      if (confirmExit) {
+        isSubmittingRef.current = true; // Bypass any further unload triggers
+        router.push('/');
+      } else {
+        // Put the state back in history to keep user on the page
+        window.history.pushState(null, '', window.location.href);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [router]);
+
+  const handleExit = () => {
+    const confirmExit = window.confirm("क्या आप टेस्ट छोड़ना चाहते हैं? / Are you sure you want to exit the test? (Your progress will not be saved)");
+    if (confirmExit) {
+      isSubmittingRef.current = true;
+      router.push('/');
+    }
+  };
 
   // Sync fullscreen state
   useEffect(() => {
@@ -226,10 +280,16 @@ export default function TestInterfacePage() {
     <div className="min-h-screen bg-slate-50 select-none flex flex-col h-screen overflow-hidden">
       {/* 1. Header Bar (Distraction Free) */}
       <header className="bg-slate-800 text-white px-3 sm:px-6 h-14 flex items-center justify-between border-b border-slate-900 sticky top-0 z-40 shrink-0">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <span className="font-bold text-sm sm:text-base tracking-wide bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent truncate max-w-[100px] xs:max-w-[150px] sm:max-w-none">
             {test.title}
           </span>
+          <button
+            onClick={handleExit}
+            className="text-[10px] sm:text-xs bg-red-600/30 hover:bg-red-600 border border-red-500/50 hover:border-red-500 text-red-200 hover:text-white px-2 py-0.5 rounded transition-all active:scale-95 cursor-pointer font-bold"
+          >
+            Exit Test
+          </button>
         </div>
 
         {/* Timer Box */}

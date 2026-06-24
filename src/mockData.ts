@@ -1373,16 +1373,20 @@ export function gradeTestAttempt(testId: string, userResponses: UserResponse[], 
   });
 
   // Calculate marks: +1 for correct, -0.25 for incorrect (typical exam grading)
-  // Let's scale it to totalMarks
+  // Disable negative marking for Haryana Police (HSSC)
   const weight = test.totalMarks / questions.length;
-  const rawScore = (correctCount * 1.0) - (incorrectCount * 0.25);
+  const hasNegative = test.examId !== 'exam-hssc-police';
+  const rawScore = (correctCount * 1.0) - (hasNegative ? incorrectCount * 0.25 : 0);
   const score = Math.max(0, Math.round(rawScore * weight * 10) / 10);
 
   const attemptedCount = correctCount + incorrectCount;
   const accuracy = attemptedCount > 0 ? Math.round((correctCount / attemptedCount) * 100) : 0;
   
-  // Percentile mock calculation: ranges between 70 to 99 based on accuracy
-  const percentile = Math.min(99.9, Math.max(50.0, Math.round((70 + accuracy * 0.29) * 10) / 10));
+  // Realistic percentile calculation using normal distribution approximation (sigmoid curve)
+  const scorePercentage = test.totalMarks > 0 ? score / test.totalMarks : 0;
+  const z = (scorePercentage - 0.52) / 0.16; // mean = 0.52, stddev = 0.16
+  const approxPercentile = 100 / (1 + Math.exp(-1.6 * z));
+  const percentile = Math.min(99.9, Math.max(0.1, Math.round(approxPercentile * 10) / 10));
 
   // Distribute time spent across sections
   const sections = Array.from(new Set(questions.map(q => q.sectionName)));
