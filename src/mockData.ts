@@ -1,4 +1,5 @@
 import { HARYANA_POLICE_CUSTOM_MOCKS } from './haryanaPoliceMocksData';
+import { GROUP_D_CUSTOM_MOCKS } from './groupDMocksData';
 
 export interface Category {
   id: string;
@@ -163,6 +164,11 @@ const BASE_MOCK_TESTS: Test[] = [
   { id: 'test-hssc-police-chap-polity', title: 'Chapter Test: Polity & Panchayati Raj (राजव्यवस्था एवं पंचायती राज)', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 15, difficulty: 'Medium' },
   { id: 'test-hssc-police-chap-culture', title: 'Chapter Test: Art, Culture & Heritage (कला, संस्कृति एवं विरासत)', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 15, difficulty: 'Hard' },
   { id: 'test-hssc-police-chap-economy', title: 'Chapter Test: Economy, Agri & Livestock (अर्थव्यवस्था, कृषि एवं पशुपालन)', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 15, difficulty: 'Medium' },
+
+  // HSSC CET (Group D) Custom Tests
+  { id: 'test-hssc-cet-full-1', title: 'HSSC CET (Group D) - Full Mock Test 1', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-hssc-cet-full-2', title: 'HSSC CET (Group D) - Full Mock Test 2', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Hard' },
+  { id: 'test-hssc-cet-full-3', title: 'HSSC CET (Group D) - Full Mock Test 3', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Hard' },
 ];
 
 // Dynamically generate mock test suites for all 31 exams
@@ -1257,6 +1263,9 @@ export function getQuestionsForTest(testId: string): Question[] {
   }
   if (HARYANA_POLICE_CUSTOM_MOCKS[testId]) {
     return HARYANA_POLICE_CUSTOM_MOCKS[testId];
+  }
+  if (GROUP_D_CUSTOM_MOCKS[testId]) {
+    return GROUP_D_CUSTOM_MOCKS[testId];
   }
   // Generate generic questions if none match
   const test = MOCK_TESTS.find(t => t.id === testId);
