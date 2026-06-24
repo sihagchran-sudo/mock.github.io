@@ -940,120 +940,38 @@ const dynamicBlogs: BlogArticle[] = [];
 EXAMS.forEach(exam => {
   const { category, icon } = getCategoryAndIcon(exam.categoryId, exam.slug);
   
-  // 1. Syllabus Detailed Guide
-  const hasStaticSyllabus = staticBlogs.some(sb => sb.examSlug === exam.slug && sb.slug.includes('syllabus'));
+  // Syllabus Detailed Guide (only 1 article per exam)
+  const hasStaticSyllabus = staticBlogs.some(sb => sb.examSlug === exam.slug);
   if (!hasStaticSyllabus) {
     const details = getDynamicDetails(exam.slug, exam.name, exam.categoryId);
     dynamicBlogs.push({
       slug: `${exam.slug}-syllabus-exam-pattern`,
-      title: `${exam.name} Detailed Syllabus & Exam Pattern 2026`,
-      description: `Get the complete subject-wise syllabus, marks weightage, eligibility, and official preparation guidelines for the ${exam.name} examination.`,
+      title: `${exam.name} Detailed Syllabus, Exam Pattern & Complete Info 2026`,
+      description: `Get the complete subject-wise syllabus, marks weightage, eligibility, salary structure, job profile, cut-off trends and official preparation guidelines for the ${exam.name} examination.`,
       publishDate: "June 24, 2026",
-      readTime: "5 min read",
+      readTime: "6 min read",
       examSlug: exam.slug,
       examName: exam.name,
       category,
       icon,
       type: 'syllabus',
+      sections: [
+        {
+          title: "Salary Structure & Job Profile",
+          paragraphs: [
+            "Content will be added soon. The pay scale, monthly in-hand salary details, perks, allowances and job responsibilities for this post will be updated here by the admin."
+          ]
+        },
+        {
+          title: "Previous Year Cut Off Analysis",
+          paragraphs: [
+            "Content will be added soon. Category-wise previous year cut-off marks (General, OBC, SC, ST, EWS) and expected trends will be updated here shortly."
+          ]
+        }
+      ],
       details
     });
   }
-
-  // 2. Salary & Job Profile
-  dynamicBlogs.push({
-    slug: `${exam.slug}-salary-job-profile`,
-    title: `${exam.name} Salary Structure, Allowances & Job Profile`,
-    description: `Detailed analysis of the salary structure, pay scale, grade pay, allowances, and job responsibilities for ${exam.name} recruitment.`,
-    publishDate: "June 24, 2026",
-    readTime: "4 min read",
-    examSlug: exam.slug,
-    examName: exam.name,
-    category,
-    icon,
-    type: 'salary',
-    sections: [
-      {
-        title: "Salary Structure & Pay Scale",
-        paragraphs: [
-          "Content will be added soon. The official salary structure, grade pay, basic pay, and detailed monthly in-hand salary table will be posted here.",
-          "Usually, this post is categorised under state or central government pay commissions (e.g., 7th Pay Commission) with grade-specific scales."
-        ]
-      },
-      {
-        title: "Allowances & Perks",
-        paragraphs: [
-          "Content will be added soon. Information about Dearness Allowance (DA), House Rent Allowance (HRA), Transport Allowance (TA), and medical security perks will be updated shortly.",
-          "Allowances are determined based on the city category (Class X, Y, Z) where the officer is posted."
-        ]
-      },
-      {
-        title: "Job Profile & Career Growth Hierarchy",
-        paragraphs: [
-          "Content will be added soon. A detailed description of the roles and responsibilities, shift patterns, and promotional channels will be listed here.",
-          "Career growth offers promotions based on departmental examinations and years of continuous service."
-        ]
-      }
-    ],
-    details: {
-      postName: `${exam.name} Officer`,
-      authority: "Government Recruitment Board",
-      totalMarks: 0,
-      durationMinutes: 0,
-      negativeMarking: "N/A",
-      eligibility: "Refer to official syllabus page for detailed criteria.",
-      ageLimit: "Refer to official syllabus page.",
-      subjects: [],
-      fullSyllabus: [],
-      prepTips: []
-    }
-  });
-
-  // 3. Previous Year Cut Off Marks & Trends
-  dynamicBlogs.push({
-    slug: `${exam.slug}-cutoff-analysis`,
-    title: `${exam.name} Cut Off Marks & Previous Year Trends`,
-    description: `Analyze the previous year cut-off marks, category-wise trends, and expected cut-off marks for the ${exam.name} examination.`,
-    publishDate: "June 24, 2026",
-    readTime: "4 min read",
-    examSlug: exam.slug,
-    examName: exam.name,
-    category,
-    icon,
-    type: 'cutoff',
-    sections: [
-      {
-        title: "Previous Year Cut Off Marks",
-        paragraphs: [
-          "Content will be added soon. Historical category-wise cut-off marks (General, OBC, SC, ST, EWS) from previous recruitment cycles will be updated here shortly.",
-          "These cut-offs serve as a benchmark to set target scores while solving mock test series."
-        ]
-      },
-      {
-        title: "Factors Affecting Cut Off Marks",
-        paragraphs: [
-          "Content will be added soon. Detailed breakdown of factors like difficulty level of questions, total number of test-takers, and available vacancy counts."
-        ]
-      },
-      {
-        title: "How to Download Official Cut Off PDF",
-        paragraphs: [
-          "Content will be added soon. Step-by-step instructions on accessing results, downloading category-wise cut-offs, and calculating scores using answer keys."
-        ]
-      }
-    ],
-    details: {
-      postName: `${exam.name} Officer`,
-      authority: "Government Recruitment Board",
-      totalMarks: 0,
-      durationMinutes: 0,
-      negativeMarking: "N/A",
-      eligibility: "Refer to official syllabus page for detailed criteria.",
-      ageLimit: "Refer to official syllabus page.",
-      subjects: [],
-      fullSyllabus: [],
-      prepTips: []
-    }
-  });
 });
 
 export const BLOGS: BlogArticle[] = [...staticBlogs, ...dynamicBlogs];

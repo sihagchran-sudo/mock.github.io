@@ -83,42 +83,29 @@ export default async function ExamNamePage({ params, searchParams }: PageProps) 
         </div>
       </div>
 
-      {/* Exam Resources Grid */}
+      {/* Exam Resource Banner */}
       {examBlogs.length > 0 && (
-        <div className="mb-8 p-5 bg-blue-50/60 border border-blue-100 rounded-2xl shadow-sm">
-          <h3 className="font-extrabold text-slate-800 text-sm sm:text-base mb-4 flex items-center gap-1.5 border-b border-blue-100/50 pb-2">
-            📚 Quick Exam Guides & Info
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {examBlogs.map((b) => {
-              let label = "View Syllabus";
-              let icon = "📖";
-              if (b.type === 'salary') {
-                label = "View Salary & Job Profile";
-                icon = "💰";
-              } else if (b.type === 'cutoff') {
-                label = "View Cut Off Trends";
-                icon = "📈";
-              }
-              return (
-                <Link
-                  key={b.slug}
-                  href={`/blog/${b.slug}`}
-                  className="flex items-center gap-3.5 p-3.5 bg-white border border-slate-200 hover:border-blue-300 hover:bg-blue-50/10 rounded-xl transition-all shadow-sm group"
-                >
-                  <span className="text-2xl p-2 bg-slate-50 rounded-xl group-hover:bg-blue-50 transition-colors shrink-0">
-                    {icon}
-                  </span>
-                  <div className="text-left">
-                    <span className="block font-extrabold text-slate-700 text-xs group-hover:text-blue-600 transition-colors leading-snug">
-                      {b.title.split(' 2026')[0].split(' Detailed')[0].split(' Structure')[0]}
-                    </span>
-                    <span className="text-[9px] text-blue-500 font-bold mt-1 block uppercase tracking-wider">{label} →</span>
-                  </div>
-                </Link>
-              );
-            })}
+        <div className="mb-8 p-5 bg-gradient-to-r from-blue-50 to-indigo-50/60 border border-blue-150 rounded-2xl shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-start gap-4">
+            <span className="text-3xl p-3 bg-white border border-blue-150 rounded-2xl shadow-sm shrink-0">
+              📚
+            </span>
+            <div>
+              <h3 className="font-extrabold text-slate-800 text-sm sm:text-base leading-tight">
+                Official Syllabus, Exam Pattern & Complete Info Guide
+              </h3>
+              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed max-w-2xl font-medium">
+                Check out the detailed subject weightage, topic-wise syllabus breakdown, eligibility criteria, salary structure, and previous year cut-off trends for the {exam.name} examination.
+              </p>
+            </div>
           </div>
+          <Link
+            href={`/blog/${examBlogs[0].slug}`}
+            className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs px-5 py-3 rounded-xl shadow-sm hover:shadow-blue-500/10 transition-all shrink-0 active:scale-98"
+          >
+            <span>Read Complete Guide</span>
+            <span>→</span>
+          </Link>
         </div>
       )}
 
