@@ -1034,7 +1034,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "CLO"
       ],
       "correctIndex": 1,
-      "explanation": "पैटर्न: +1, +3, +5. B+1=C, I+3=L, G+5=L/P (P)। विकल्प बी सही है।",
+      "explanation": "पैटर्न: +1, +3, +5. B+1=C, I+3=L, G+5=P. विकल्प बी सही है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-2"
     },
@@ -1054,7 +1054,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
     },
     {
       "id": "q-hssc-m2-76",
-      "text": "Numerical Ability (Mathematics): एक वर्ग का क्षेत्रफल 140 वर्ग सेमी है। इसके विकर्ण की लंबाई क्या होगी?",
+      "text": "Numerical Ability (Mathematics): एक वर्ग का क्षेत्रफल 100 वर्ग सेमी है। इसके विकर्ण की लंबाई क्या होगी?",
       "options": [
         "10 सेमी",
         "14.14 सेमी",
@@ -1062,7 +1062,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "28.28 सेमी"
       ],
       "correctIndex": 1,
-      "explanation": "विकर्ण = sqrt(2 * क्षेत्रफल)। 100 के लिए 14.14 सेमी लगभग।",
+      "explanation": "विकर्ण = sqrt(2 * क्षेत्रफल) = sqrt(200) = 14.14 सेमी लगभग।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-2"
     },
@@ -1132,7 +1132,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "शनिवार"
       ],
       "correctIndex": 2,
-      "explanation": "कुल दिनों का अंतर = 3 + 4 = 7 दिन। मंगलवार से 7 दिन पहले भी मंगलवार था। आज से 3 दिन बाद मंगलवार है, यानी आज शनिवार है। 4 दिन पहले मंगलवार था।",
+      "explanation": "मंगलवार से 7 दिन पहले भी मंगलवार था। आज से 3 दिन बाद मंगलवार है, यानी आज शनिवार है। 4 दिन पहले मंगलवार था।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-2"
     },
@@ -1146,7 +1146,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "12 सेकंड"
       ],
       "correctIndex": 1,
-      "explanation": "समय = 120 / (60 * 5/18) = 120 / (16.67) = 7.2 सेकंड।",
+      "explanation": "समय = 120 / (60 * 5/18) = 7.2 सेकंड।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-2"
     },
@@ -1160,7 +1160,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "दक्षिण"
       ],
       "correctIndex": 2,
-      "explanation": "सुबह सूर्य पूर्व में होता है, तो छाया पश्चिम में पड़ेगी। छाया मोहन के बाईं ओर है, यानी मोहन का बायाँ हाथ पश्चिम में है। अतः उसका मुंह उत्तर (North) दिशा में था।",
+      "explanation": "सुबह सूर्य पूर्व में होता है, तो छाया पश्चिम में पड़ेगी। छाया मोहन के बाईं ओर है, यानी मोहन का बायाँ हाथ पश्चिम में है। अतः उसका मुंह उत्तर दिशा में था।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-2"
     },
@@ -1180,7 +1180,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
     },
     {
       "id": "q-hssc-m2-85",
-      "text": "Reasoning Ability: विषम शब्द युग्म का चयन करें:",
+      "text": "Reasoning Ability: दिए गए विकल्पों में से विषम शब्द युग्म का चयन करें:",
       "options": [
         "कपास - सफेद",
         "कोयला - काला",
@@ -1194,7 +1194,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
     },
     {
       "id": "q-hssc-m2-86",
-      "text": "Numerical Ability (Mathematics): एक परीक्षा में 35% छात्र हिंदी में और 45% छात्र अंग्रेजी में फेल हुए। यदि 20% दोनों में फेल हुए, तो दोनों में पास होने वाले छात्रों का प्रतिशत क्या है?",
+      "text": "Numerical Ability (Mathematics): एक परीक्षा में 35% छात्र हिंदी में और 45% छात्र अंग्रेजी में फेल हुए। यदि 20% दोनों में fail हुए, तो दोनों में पास होने वाले छात्रों का प्रतिशत क्या है?",
       "options": [
         "30%",
         "40%",
@@ -1258,7 +1258,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "130°"
       ],
       "correctIndex": 0,
-      "explanation": "कोण = |30H - 5.5M| = |30*4 - 5.5*40| = |120 - 220| = 100°.",
+      "explanation": "कोण = |30H - 5.5M| = |30*4 - 5.5*40| = 100°.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-2"
     },
@@ -1272,7 +1272,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "21"
       ],
       "correctIndex": 2,
-      "explanation": "समीकरण: 20 / 4 * 3 + 6 - 2 = 5 * 3 + 6 - 2 = 15 + 6 - 2 = 19.",
+      "explanation": "समीकरण: 20 / 4 * 3 + 6 - 2 = 15 + 6 - 2 = 19.",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-2"
     },
@@ -1292,7 +1292,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
     },
     {
       "id": "q-hssc-m2-93",
-      "text": "Reasoning Ability: निम्न में से कौन सा आरेख 'पुरुष, डॉक्टर, अभिनेता' के बीच सही संबंध दर्शाता है?",
+      "text": "Reasoning Ability: निम्न में से कौन सा आरेख 'पुरुष, doctor, actor' के बीच सही संबंध दर्शाता है?",
       "options": [
         "पूर्णतः समाहित आरेख",
         "तीनों आंशिक रूप से प्रतिच्छेदित आरेख",
@@ -1300,7 +1300,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "कोई संबंध नहीं"
       ],
       "correctIndex": 1,
-      "explanation": "कुछ पुरुष डॉक्टर और अभिनेता दोनों हो सकते हैं। अतः तीनों आरेख आंशिक रूप से एक-दूसरे को प्रतिच्छेद करेंगे।",
+      "explanation": "कुछ पुरुष doctor और actor दोनों हो सकते हैं। अतः तीनों आरेख आंशिक रूप से एक-दूसरे को प्रतिच्छेद करेंगे।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-2"
     },
@@ -1356,7 +1356,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "12"
       ],
       "correctIndex": 1,
-      "explanation": "वृत्ताकार मेज के चारों ओर बैठाने के तरीके = (n - 1)! = (5 - 1)! = 4! = 24.",
+      "explanation": "तरीके = (5 - 1)! = 4! = 24.",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-2"
     },
@@ -1376,7 +1376,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
     },
     {
       "id": "q-hssc-m2-99",
-      "text": "Reasoning Ability: सादृश्यता को पूरा करें: शेर : मांद :: घोड़ा : ?",
+      "text": "Reasoning Ability: सादृশ্যता को पूरा करें: शेर : मांद :: घोड़ा : ?",
       "options": [
         "पिंजरा",
         "अस्तबल",
@@ -1384,7 +1384,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "बाड़ा"
       ],
       "correctIndex": 1,
-      "explanation": "शेर मांद में रहता है, और घोड़ा अस्तबल (Stable) में रहता है।",
+      "explanation": "घोड़ा अस्तबल (Stable) में रहता है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-2"
     },
@@ -1398,7 +1398,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "61 बार"
       ],
       "correctIndex": 1,
-      "explanation": "LCM of 6,8,12 = 24 सेकंड. 12 मिनट = 720 सेकंड. बार = 720/24 + 1 = 30 + 1 = 31 बार.",
+      "explanation": "LCM = 24 सेकंड. 12 मिनट = 720 सेकंड. बार = 720/24 + 1 = 30 + 1 = 31 बार.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-2"
     }
@@ -2456,343 +2456,343 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
     },
     {
       "id": "q-hssc-m3-76",
-      "text": "Numerical Ability (Mathematics): एक वर्ग का क्षेत्रफल 145 वर्ग सेमी है। इसके विकर्ण की लंबाई क्या होगी?",
+      "text": "Numerical Ability (Mathematics): एक वर्ग का क्षेत्रफल 144 वर्ग सेमी है। इसके विकर्ण की लंबाई क्या होगी?",
       "options": [
-        "10 सेमी",
-        "14.14 सेमी",
-        "20 सेमी",
-        "28.28 सेमी"
+        "12 सेमी",
+        "16.97 सेमी",
+        "24 सेमी",
+        "33.94 सेमी"
       ],
       "correctIndex": 1,
-      "explanation": "विकर्ण = sqrt(2 * क्षेत्रफल)। 100 के लिए 14.14 सेमी लगभग।",
+      "explanation": "विकर्ण = sqrt(2 * क्षेत्रफल) = sqrt(288) = 16.97 सेमी लगभग।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-77",
-      "text": "Reasoning Ability: एक लड़के की ओर इशारा करते हुए सुनीता ने कहा, \"वह मेरे ससुर के इकलौते बेटे का बेटा है।\" सुनीता का उस लड़के से क्या संबंध है?",
+      "text": "Reasoning Ability: एक महिला की ओर इशारा करते हुए अमोल ने कहा, \"वह मेरे दादा के इकलौते बेटे की बेटी है।\" अमोल का उस महिला से क्या संबंध है?",
       "options": [
-        "बहन",
-        "माता",
-        "चाची",
-        "दादी"
+        "भाई",
+        "पिता",
+        "चाचा",
+        "दादा"
       ],
-      "correctIndex": 1,
-      "explanation": "ससुर का इकलौता बेटा = सुनीता का पति। पति का बेटा = सुनीता का बेटा। अतः सुनीता उसकी माता है।",
+      "correctIndex": 0,
+      "explanation": "दादा का इकलौता बेटा = अमोल का पिता। पिता की बेटी = अमोल की बहन। अतः अमोल उसका भाई है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-78",
-      "text": "Numerical Ability (Mathematics): दो संख्याओं का अनुपात 3:5 है और उनका लघुत्तम समापवर्त्य (LCM) 165 है। छोटी संख्या ज्ञात करें।",
+      "text": "Numerical Ability (Mathematics): दो संख्याओं का अनुपात 3:5 है और उनका लघुत्तम समापवर्त्य (LCM) 180 है। छोटी संख्या ज्ञात करें।",
       "options": [
-        "30",
+        "36",
         "45",
         "60",
-        "75"
+        "72"
       ],
       "correctIndex": 0,
-      "explanation": "LCM = 15x = 150 -> x = 10. छोटी संख्या = 3x = 30.",
+      "explanation": "LCM = 15x = 180 -> x = 12. छोटी संख्या = 3x = 36.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-79",
-      "text": "Reasoning Ability: कथन: सभी पुस्तकें कॉपियाँ हैं। सभी कॉपियाँ पेन हैं। निष्कर्ष I: सभी पुस्तकें पेन हैं। निष्कर्ष II: सभी पेन पुस्तकें हैं।",
+      "text": "Reasoning Ability: कथन: सभी बिल्लियाँ चूहे हैं। सभी चूहे जानवर हैं। निष्कर्ष I: सभी बिल्लियाँ जानवर हैं। निष्कर्ष II: सभी जानवर बिल्लियाँ हैं।",
       "options": [
-        "केवल निष्कर्ष I सही है",
+        "क्युकी निष्कर्ष I सही है",
         "केवल निष्कर्ष II सही है",
         "दोनों निष्कर्ष सही हैं",
         "कोई भी सही नहीं है"
       ],
       "correctIndex": 0,
-      "explanation": "चूँकि सभी पुस्तकें कॉपियाँ हैं और सभी कॉपियाँ पेन हैं, इसलिए सभी पुस्तकें पेन हैं। निष्कर्ष II आवश्यक रूप से सही नहीं है।",
+      "explanation": "चूँकि सभी बिल्लियाँ चूहे हैं और सभी चूहे जानवर हैं, इसलिए सभी बिल्लियाँ जानवर हैं। निष्कर्ष II आवश्यक रूप से सही नहीं है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-80",
-      "text": "Numerical Ability (Mathematics): एक टैंक को नल A 10 घंटे में भर सकता है और नल B 15 घंटे में खाली कर सकता है। दोनों एक साथ खोले जाने पर टंकी कितने समय में भरेगी?",
+      "text": "Numerical Ability (Mathematics): एक टैंक को नल A 12 घंटे में भर सकता है और नल B 18 घंटे में खाली कर सकता है। दोनों एक साथ खोले जाने पर टंकी कितने समय में भरेगी?",
       "options": [
-        "20 घंटे",
+        "24 घंटे",
         "30 घंटे",
-        "40 घंटे",
-        "50 घंटे"
+        "36 घंटे",
+        "48 घंटे"
       ],
-      "correctIndex": 1,
-      "explanation": "समय = (A * B) / (B - A) = (10 * 15) / 5 = 30 घंटे।",
+      "correctIndex": 2,
+      "explanation": "समय = (12 * 18) / (18 - 12) = 216 / 6 = 36 घंटे।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-81",
-      "text": "Reasoning Ability: यदि आज से 3 दिन बाद मंगलवार है, तो आज से 4 दिन पहले कौन सा दिन था?",
+      "text": "Reasoning Ability: यदि 2 दिन बाद आने वाला कल शुक्रवार है, तो आज से 3 दिन पहले कौन सा दिन था?",
       "options": [
-        "सोमवार",
-        "मंगलवार",
+        "शनिवार",
         "रविवार",
-        "शनिवार"
+        "सोमवार",
+        "मंगलवार"
       ],
-      "correctIndex": 2,
-      "explanation": "कुल दिनों का अंतर = 3 + 4 = 7 दिन। मंगलवार से 7 दिन पहले भी मंगलवार था। आज से 3 दिन बाद मंगलवार है, यानी आज शनिवार है। 4 दिन पहले मंगलवार था।",
+      "correctIndex": 0,
+      "explanation": "2 दिन बाद आने वाला कल शुक्रवार है, यानी आज मंगलवार है। 3 दिन पहले शनिवार था।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-82",
-      "text": "Numerical Ability (Mathematics): 120 मीटर लंबी एक रेलगाड़ी 60 किमी/घंटा की गति से दौड़ रही है। पटरी के पास खड़े एक व्यक्ति को पार करने में यह कितना समय लेगी?",
+      "text": "Numerical Ability (Mathematics): 150 मीटर लंबी एक रेलगाड़ी 90 किमी/घंटा की गति से दौड़ रही है। पटरी के पास खड़े एक व्यक्ति को पार करने में यह कितना समय लेगी?",
       "options": [
-        "5.2 सेकंड",
-        "7.2 सेकंड",
-        "9.2 सेकंड",
-        "12 सेकंड"
+        "5 सेकंड",
+        "6 सेकंड",
+        "7 सेकंड",
+        "8 सेकंड"
       ],
       "correctIndex": 1,
-      "explanation": "समय = 120 / (60 * 5/18) = 120 / (16.67) = 7.2 सेकंड।",
+      "explanation": "समय = 150 / (90 * 5/18) = 150 / 25 = 6 सेकंड।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-83",
-      "text": "Reasoning Ability: एक सुबह सूर्योदय के बाद, मोहन एक खंभे की ओर मुंह करके खड़ा था। खंभे की छाया उसके ठीक बाईं ओर पड़ रही थी। मोहन का मुंह किस दिशा में था?",
+      "text": "Reasoning Ability: एक सुबह सूर्योदय के बाद, राम एक खंभे की ओर मुंह करके खड़ा था। खंभे की छाया उसके ठीक दाईं ओर पड़ रही थी। राम का मुंह किस दिशा में था?",
       "options": [
         "पूर्व",
         "पश्चिम",
         "उत्तर",
         "दक्षिण"
       ],
-      "correctIndex": 2,
-      "explanation": "सुबह सूर्य पूर्व में होता है, तो छाया पश्चिम में पड़ेगी। छाया मोहन के बाईं ओर है, यानी मोहन का बायाँ हाथ पश्चिम में है। अतः उसका मुंह उत्तर (North) दिशा में था।",
+      "correctIndex": 3,
+      "explanation": "सुबह छाया पश्चिम में पड़ती है। यदि छाया राम के दाईं ओर है, तो उसका दायाँ हाथ पश्चिम में है, यानी उसका मुंह दक्षिण दिशा में था।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-84",
-      "text": "Numerical Ability (Mathematics): यदि एक गोले की त्रिज्या को दुगुना कर दिया जाए, तो उसके आयतन में कितने प्रतिशत की वृद्धि होगी?",
+      "text": "Numerical Ability (Mathematics): यदि एक गोले की त्रिज्या को तिगुना कर दिया जाए, तो उसके आयतन में कितने प्रतिशत की वृद्धि होगी?",
       "options": [
-        "100%",
-        "300%",
-        "700%",
-        "800%"
+        "800%",
+        "900%",
+        "2600%",
+        "2700%"
       ],
       "correctIndex": 2,
-      "explanation": "त्रिज्या दुगुनी होने पर आयतन 8 गुना हो जाएगा। वृद्धि = 8 - 1 = 7 गुना = 700%।",
+      "explanation": "त्रिज्या तिगुनी होने पर आयतन 27 गुना हो जाएगा। वृद्धि = 27 - 1 = 26 गुना = 2600%।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-85",
-      "text": "Reasoning Ability: विषम शब्द युग्म का चयन करें:",
+      "text": "Reasoning Ability: निम्नलिखित में से विषम शब्द युग्म का चयन करें:",
       "options": [
-        "कपास - सफेद",
-        "कोयला - काला",
-        "सोना - पीला",
-        "पत्ता - लाल"
+        "सेब - फल",
+        "गाजर - सब्जी",
+        "आलू - तुलसी",
+        "अंगूर - फल"
       ],
-      "correctIndex": 3,
-      "explanation": "पत्ता आमतौर पर हरा होता है, लाल नहीं। बाकी सभी वस्तुओं के उनके प्राकृतिक रंगों के साथ सही मिलान हैं।",
+      "correctIndex": 2,
+      "explanation": "आलू एक सब्जी है, तुलसी एक औषधीय पौधा है। अन्य सभी का सही मिलान हैं।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-86",
-      "text": "Numerical Ability (Mathematics): एक परीक्षा में 35% छात्र हिंदी में और 45% छात्र अंग्रेजी में फेल हुए। यदि 20% दोनों में फेल हुए, तो दोनों में पास होने वाले छात्रों का प्रतिशत क्या है?",
+      "text": "Numerical Ability (Mathematics): एक परीक्षा में 40% छात्र गणित में और 50% छात्र विज्ञान में फेल हुए। यदि 25% दोनों में फेल हुए, तो दोनों में पास होने वाले छात्रों का प्रतिशत क्या है?",
       "options": [
-        "30%",
-        "40%",
-        "50%",
-        "60%"
+        "25%",
+        "35%",
+        "45%",
+        "55%"
       ],
       "correctIndex": 1,
-      "explanation": "कुल फेल = 35 + 45 - 20 = 60%. पास% = 100 - 60 = 40%.",
+      "explanation": "कुल फेल = 40 + 50 - 25 = 65%. पास% = 100 - 65 = 35%.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-87",
-      "text": "Reasoning Ability: अंग्रेजी वर्णमाला श्रृंखला में बाएं से 7वें अक्षर और दाएं से 5वें अक्षर के ठीक बीच में कौन सा अक्षर होगा?",
+      "text": "Reasoning Ability: अंग्रेजी वर्णमाला श्रृंखला में बाएं से 5वें अक्षर और दाएं से 9वें अक्षर के ठीक बीच में कौन सा अक्षर होगा?",
       "options": [
+        "K",
         "L",
         "M",
-        "N",
-        "O"
+        "N"
       ],
-      "correctIndex": 2,
-      "explanation": "बाएं से 7वां = G. दाएं से 5वां = V (22वां बाएं से)। बीच में = (7+22)/2 = 14.5 (M या N)। वास्तविक पैटर्न के अनुसार N बीच में बैठता है।",
+      "correctIndex": 1,
+      "explanation": "बाएं से 5वां = E. दाएं से 9वां = R (18वां बाएं से)। बीच में = (5+18)/2 = 11.5 (L या M)। बीच में L सही विकल्प है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-88",
-      "text": "Numerical Ability (Mathematics): A और B एक साझेदारी में क्रमशः 20000 रुपये और 30000 रुपये लगाते हैं। यदि वर्ष के अंत में कुल लाभ 15000 रुपये है, तो A का हिस्सा क्या होगा?",
+      "text": "Numerical Ability (Mathematics): A और B एक साझेदारी में क्रमशः 30000 रुपये और 40000 रुपये लगाते हैं। यदि वर्ष के अंत में कुल लाभ 21000 रुपये है, तो A का हिस्सा क्या होगा?",
       "options": [
-        "5000 रुपये",
-        "6000 रुपये",
-        "7000 रुपये",
-        "8000 रुपये"
+        "8000 रुपये",
+        "9000 रुपये",
+        "10000 रुपये",
+        "12000 रुपये"
       ],
       "correctIndex": 1,
-      "explanation": "अनुपात = 2:3. A का हिस्सा = (2/5) * 15000 = 6000 रुपये।",
+      "explanation": "अनुपात = 3:4. A का हिस्सा = (3/7) * 21000 = 9000 रुपये।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-89",
-      "text": "Reasoning Ability: 5 मित्रों (A, B, C, D, E) में, A केवल B से लंबा है लेकिन C से छोटा है। D, E से लंबा है लेकिन C से छोटा है। सबसे लंबा कौन है?",
+      "text": "Reasoning Ability: 5 मित्रों (P, Q, R, S, T) में, P केवल Q से लंबा है लेकिन R से छोटा है। S, T से लंबा है लेकिन P से छोटा है। सबसे लंबा कौन है?",
       "options": [
-        "A",
-        "C",
-        "D",
-        "E"
+        "P",
+        "Q",
+        "R",
+        "S"
       ],
-      "correctIndex": 1,
-      "explanation": "क्रम है: C > D > E > A > B. अतः सबसे लंबा C है।",
+      "correctIndex": 2,
+      "explanation": "क्रम है: R > P > S > T > Q. अतः सबसे लंबा R है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-90",
-      "text": "Numerical Ability (Mathematics): एक घड़ी में 4 बजकर 40 मिनट पर घंटे और मिनट की सुइयों के बीच कितने डिग्री का कोण बनेगा?",
+      "text": "Numerical Ability (Mathematics): एक घड़ी में 3 बजकर 30 मिनट पर घंटे और मिनट की सुइयों के बीच कितने डिग्री का कोण बनेगा?",
       "options": [
-        "100°",
-        "110°",
-        "120°",
-        "130°"
+        "75°",
+        "80°",
+        "85°",
+        "90°"
       ],
       "correctIndex": 0,
-      "explanation": "कोण = |30H - 5.5M| = |30*4 - 5.5*40| = |120 - 220| = 100°.",
+      "explanation": "कोण = |30*3 - 5.5*30| = |90 - 165| = 75°.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-91",
-      "text": "Reasoning Ability: यदि '+' का अर्थ 'भाग', '-' का अर्थ 'गुणा', '*' का अर्थ 'जोड़' और '/' का अर्थ 'घटाव' है, तो हल करें: 20 + 4 - 3 * 6 / 2",
+      "text": "Reasoning Ability: यदि '+' का अर्थ 'भाग', '-' का अर्थ 'गुणा', '*' का अर्थ 'जोड़' और '/' का अर्थ 'घटाव' है, तो हल करें: 15 + 3 - 4 * 8 / 4",
       "options": [
-        "12",
-        "15",
-        "19",
-        "21"
+        "20",
+        "22",
+        "24",
+        "26"
       ],
       "correctIndex": 2,
-      "explanation": "समीकरण: 20 / 4 * 3 + 6 - 2 = 5 * 3 + 6 - 2 = 15 + 6 - 2 = 19.",
+      "explanation": "15 / 3 * 4 + 8 - 4 = 5 * 4 + 8 - 4 = 20 + 8 - 4 = 24.",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-92",
-      "text": "Numerical Ability (Mathematics): एक बैग में 5 लाल और 4 पीली गेंदें हैं। यदि 2 गेंदें यादृच्छिक रूप से निकाली जाती हैं, तो दोनों के लाल होने की क्या प्रायिकता है?",
+      "text": "Numerical Ability (Mathematics): एक बैग में 4 लाल और 6 नीली गेंदें हैं। यदि 2 गेंदें यादृच्छिक रूप से निकाली जाती हैं, तो दोनों के लाल होने की क्या प्रायिकता है?",
       "options": [
-        "5/18",
-        "5/12",
-        "5/36",
-        "10/36"
+        "2/15",
+        "4/15",
+        "1/3",
+        "1/5"
       ],
       "correctIndex": 0,
-      "explanation": "प्रायिकता = (5C2) / (9C2) = 10 / 36 = 5/18.",
+      "explanation": "प्रायिकता = (4C2) / (10C2) = 6 / 45 = 2/15.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-93",
-      "text": "Reasoning Ability: निम्न में से कौन सा आरेख 'पुरुष, डॉक्टर, अभिनेता' के बीच सही संबंध दर्शाता है?",
+      "text": "Reasoning Ability: निम्न में से कौन सा आरेख 'कुत्ता, बिल्ली, पालतू जानवर' के बीच सही संबंध दर्शाता है?",
       "options": [
         "पूर्णतः समाहित आरेख",
-        "तीनों आंशिक रूप से प्रतिच्छेदित आरेख",
-        "दो अलग और एक साझा आरेख",
+        "दो अलग वृत्त एक आंशिक रूप से प्रतिच्छेदित बड़े वृत्त के अंदर",
+        "तीनों आंशिक प्रतिच्छेदित",
         "कोई संबंध नहीं"
       ],
       "correctIndex": 1,
-      "explanation": "कुछ पुरुष डॉक्टर और अभिनेता दोनों हो सकते हैं। अतः तीनों आरेख आंशिक रूप से एक-दूसरे को प्रतिच्छेद करेंगे।",
+      "explanation": "कुत्ते और बिल्ली दोनों अलग जानवर हैं, लेकिन दोनों ही आंशिक रूप से पालतू जानवर हो सकते हैं।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-94",
-      "text": "Numerical Ability (Mathematics): सरल करें: 25 * 12 + 100 / 5 - 150",
+      "text": "Numerical Ability (Mathematics): सरल करें: 30 * 10 + 120 / 6 - 200",
       "options": [
+        "100",
         "120",
-        "150",
-        "170",
-        "200"
+        "140",
+        "160"
       ],
-      "correctIndex": 2,
-      "explanation": "25*12 = 300. 100/5 = 20. 300 + 20 - 150 = 170.",
+      "correctIndex": 1,
+      "explanation": "300 + 20 - 200 = 120.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-95",
-      "text": "Reasoning Ability: यदि अंग्रेजी शब्द 'POLICE' के अक्षरों को वर्णानुक्रम (Alphabetical order) में व्यवस्थित किया जाए, तो कितने अक्षरों का स्थान अपरिवर्तित रहेगा?",
+      "text": "Reasoning Ability: यदि अंग्रेजी शब्द 'HARYANA' के अक्षरों को वर्णानुक्रम (Alphabetical order) में व्यवस्थित किया जाए, तो कितने अक्षरों का स्थान अपरिवर्तित रहेगा?",
       "options": [
         "कोई नहीं",
         "एक",
         "दो",
         "तीन"
       ],
-      "correctIndex": 1,
-      "explanation": "POLICE -> CEILOP. तुलना करने पर केवल I का स्थान (चौथा) अपरिवर्तित रहता है।",
+      "correctIndex": 2,
+      "explanation": "HARYANA -> AAAHRNY. तुलना करने पर R और Y का स्थान अपरिवर्तित रहता है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-96",
-      "text": "Numerical Ability (Mathematics): एक आयत की लंबाई में 20% की वृद्धि और चौड़ाई में 10% की कमी की जाती है। इसके क्षेत्रफल में शुद्ध परिवर्तन क्या होगा?",
+      "text": "Numerical Ability (Mathematics): एक आयत की लंबाई में 10% की वृद्धि और चौड़ाई में 10% की वृद्धि की जाती है। इसके क्षेत्रफल में शुद्ध परिवर्तन क्या होगा?",
       "options": [
-        "8% वृद्धि",
-        "8% कमी",
-        "10% वृद्धि",
-        "12% वृद्धि"
+        "20% वृद्धि",
+        "21% वृद्धि",
+        "11% वृद्धि",
+        "10% वृद्धि"
       ],
-      "correctIndex": 0,
-      "explanation": "परिवर्तन = 20 - 10 - (20*10)/100 = 10 - 2 = 8% वृद्धि।",
+      "correctIndex": 1,
+      "explanation": "10 + 10 + (10*10)/100 = 21% वृद्धि।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-97",
-      "text": "Reasoning Ability: 5 लड़कों को एक वृत्ताकार मेज (Circular table) के चारों ओर कितने अलग-अलग तरीकों से बैठाया जा सकता है?",
+      "text": "Reasoning Ability: 6 व्यक्तियों को एक वृत्ताकार मेज (Circular table) के चारों ओर कितने अलग-अलग तरीकों से बैठाया जा सकता है?",
       "options": [
         "120",
-        "24",
+        "720",
         "60",
-        "12"
+        "360"
       ],
-      "correctIndex": 1,
-      "explanation": "वृत्ताकार मेज के चारों ओर बैठाने के तरीके = (n - 1)! = (5 - 1)! = 4! = 24.",
+      "correctIndex": 0,
+      "explanation": "तरीके = (6 - 1)! = 5! = 120.",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-98",
-      "text": "Numerical Ability (Mathematics): 30% सांद्रता वाले अल्कोहल के 6 लीटर मिश्रण में 2 लीटर शुद्ध पानी मिलाया जाता है। नए मिश्रण में अल्कोहल की सांद्रता क्या होगी?",
+      "text": "Numerical Ability (Mathematics): 25% सांद्रता वाले alcohol के 4 लीटर मिश्रण में 1 लीटर शुद्ध पानी मिलाया जाता है। नए मिश्रण में alcohol की सांद्रता क्या होगी?",
       "options": [
         "15%",
-        "22.5%",
-        "25%",
-        "28%"
+        "20%",
+        "22%",
+        "24%"
       ],
       "correctIndex": 1,
-      "explanation": "अल्कोहल मात्रा = 6 * 0.3 = 1.8 लीटर। नया कुल आयतन = 8 लीटर। सांद्रता = (1.8/8)*100 = 22.5%.",
+      "explanation": "अल्कोहल = 4 * 0.25 = 1 लीटर. कुल आयतन = 5 लीटर. सांद्रता = (1/5)*100 = 20%.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-99",
-      "text": "Reasoning Ability: सादृश्यता को पूरा करें: शेर : मांद :: घोड़ा : ?",
+      "text": "Reasoning Ability: पक्षियों का संबंध घोंसले से है, तो खरगोश का संबंध किससे होगा?",
       "options": [
-        "पिंजरा",
-        "अस्तबल",
-        "घोंसला",
+        "गुफा",
+        "बिल",
+        "खंदक",
         "बाड़ा"
       ],
       "correctIndex": 1,
-      "explanation": "शेर मांद में रहता है, और घोड़ा अस्तबल (Stable) में रहता है।",
+      "explanation": "पक्षी घोंसले में रहते हैं, खरगोश बिल में रहता है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-3"
     },
     {
       "id": "q-hssc-m3-100",
-      "text": "Numerical Ability (Mathematics): तीन घंटियाँ क्रमशः 6, 8 और 12 सेकंड के अंतराल पर बजती हैं। यदि वे एक साथ बजना शुरू करती हैं, तो 12 मिनट में वे कितनी बार एक साथ बजेंगी?",
+      "text": "Numerical Ability (Mathematics): तीन घंटियाँ क्रमशः 5, 10 और 15 सेकंड के अंतराल पर बजती हैं। यदि वे एक साथ बजना शुरू करती हैं, तो 15 मिनट में वे कितनी बार एक साथ बजेंगी?",
       "options": [
         "30 बार",
         "31 बार",
@@ -2800,7 +2800,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "61 बार"
       ],
       "correctIndex": 1,
-      "explanation": "LCM of 6,8,12 = 24 सेकंड. 12 मिनट = 720 सेकंड. बार = 720/24 + 1 = 30 + 1 = 31 बार.",
+      "explanation": "LCM = 30 सेकंड. 15 मिनट = 900 सेकंड. बार = 900/30 + 1 = 31 बार.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-3"
     }
@@ -3858,49 +3858,49 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
     },
     {
       "id": "q-hssc-m4-76",
-      "text": "Numerical Ability (Mathematics): एक वर्ग का क्षेत्रफल 100 वर्ग सेमी है। इसके विकर्ण की लंबाई क्या होगी?",
+      "text": "Numerical Ability (Mathematics): एक वर्ग का क्षेत्रफल 225 वर्ग सेमी है। इसके विकर्ण की लंबाई क्या होगी?",
       "options": [
-        "10 सेमी",
-        "14.14 सेमी",
-        "20 सेमी",
-        "28.28 सेमी"
+        "15 सेमी",
+        "21.21 सेमी",
+        "30 सेमी",
+        "42.42 सेमी"
       ],
       "correctIndex": 1,
-      "explanation": "विकर्ण = sqrt(2 * क्षेत्रफल)। 100 के लिए 14.14 सेमी लगभग।",
+      "explanation": "विकर्ण = sqrt(2 * क्षेत्रफल) = sqrt(450) = 21.21 सेमी लगभग।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-77",
-      "text": "Reasoning Ability: एक लड़के की ओर इशारा करते हुए सुनीता ने कहा, \"वह मेरे ससुर के इकलौते बेटे का बेटा है।\" सुनीता का उस लड़के से क्या संबंध है?",
+      "text": "Reasoning Ability: एक लड़के की ओर इशारा करते हुए राहुल ने कहा, \"वह मेरे मामा की इकलौती बहन की बेटी का भाई है।\" राहुल का उस लड़के से क्या संबंध है?",
       "options": [
-        "बहन",
-        "माता",
-        "चाची",
-        "दादी"
+        "भाई",
+        "भांजा",
+        "चाचा",
+        "पिता"
       ],
-      "correctIndex": 1,
-      "explanation": "ससुर का इकलौता बेटा = सुनीता का पति। पति का बेटा = सुनीता का बेटा। अतः सुनीता उसकी माता है।",
+      "correctIndex": 0,
+      "explanation": "मामा की इकलौती बहन = राहुल की माँ। माँ की बेटी का भाई = राहुल की माँ का बेटा (यानी राहुल का भाई)। अतः वह भाई है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-78",
-      "text": "Numerical Ability (Mathematics): दो संख्याओं का अनुपात 3:5 है और उनका लघुत्तम समापवर्त्य (LCM) 180 है। छोटी संख्या ज्ञात करें।",
+      "text": "Numerical Ability (Mathematics): दो संख्याओं का अनुपात 3:5 है और उनका लघुत्तम समापवर्त्य (LCM) 225 है। छोटी संख्या ज्ञात करें।",
       "options": [
-        "30",
         "45",
         "60",
-        "75"
+        "75",
+        "90"
       ],
       "correctIndex": 0,
-      "explanation": "LCM = 15x = 150 -> x = 10. छोटी संख्या = 3x = 30.",
+      "explanation": "LCM = 15x = 225 -> x = 15. छोटी संख्या = 3x = 45.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-79",
-      "text": "Reasoning Ability: कथन: सभी पुस्तकें कॉपियाँ हैं। सभी कॉपियाँ पेन हैं। निष्कर्ष I: सभी पुस्तकें पेन हैं। निष्कर्ष II: सभी पेन पुस्तकें हैं।",
+      "text": "Reasoning Ability: कथन: सभी डॉक्टर लेखक हैं। सभी लेखक शिक्षक हैं। निष्कर्ष I: सभी डॉक्टर शिक्षक हैं। निष्कर्ष II: सभी शिक्षक डॉक्टर हैं।",
       "options": [
         "केवल निष्कर्ष I सही है",
         "केवल निष्कर्ष II सही है",
@@ -3908,301 +3908,301 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "कोई भी सही नहीं है"
       ],
       "correctIndex": 0,
-      "explanation": "चूँकि सभी पुस्तकें कॉपियाँ हैं और सभी कॉपियाँ पेन हैं, इसलिए सभी पुस्तकें पेन हैं। निष्कर्ष II आवश्यक रूप से सही नहीं है।",
+      "explanation": "चूँकि सभी डॉक्टर लेखक हैं और सभी लेखक शिक्षक हैं, इसलिए सभी डॉक्टर शिक्षक हैं। निष्कर्ष II आवश्यक रूप से सही नहीं है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-80",
-      "text": "Numerical Ability (Mathematics): एक टैंक को नल A 10 घंटे में भर सकता है और नल B 15 घंटे में खाली कर सकता है। दोनों एक साथ खोले जाने पर टंकी कितने समय में भरेगी?",
+      "text": "Numerical Ability (Mathematics): एक टैंक को नल A 8 घंटे में भर सकता है और नल B 12 घंटे में खाली कर सकता है। दोनों एक साथ खोले जाने पर टंकी कितने समय में भरेगी?",
       "options": [
+        "16 घंटे",
         "20 घंटे",
-        "30 घंटे",
-        "40 घंटे",
-        "50 घंटे"
+        "24 घंटे",
+        "32 घंटे"
       ],
-      "correctIndex": 1,
-      "explanation": "समय = (A * B) / (B - A) = (10 * 15) / 5 = 30 घंटे।",
+      "correctIndex": 2,
+      "explanation": "समय = (8 * 12) / (12 - 8) = 96 / 4 = 24 घंटे।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-81",
-      "text": "Reasoning Ability: यदि आज से 3 दिन बाद मंगलवार है, तो आज से 4 दिन पहले कौन सा दिन था?",
+      "text": "Reasoning Ability: यदि 5 दिन पहले बीते हुए कल से पहले का दिन सोमवार था, तो आने वाले कल के 2 दिन बाद कौन सा दिन होगा?",
       "options": [
-        "सोमवार",
-        "मंगलवार",
+        "शनिवार",
         "रविवार",
-        "शनिवार"
+        "सोमवार",
+        "गुरुवार"
       ],
-      "correctIndex": 2,
-      "explanation": "कुल दिनों का अंतर = 3 + 4 = 7 दिन। मंगलवार से 7 दिन पहले भी मंगलवार था। आज से 3 दिन बाद मंगलवार है, यानी आज शनिवार है। 4 दिन पहले मंगलवार था।",
+      "correctIndex": 3,
+      "explanation": "गणना के अनुसार गुरुवार सही उत्तर बैठता है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-82",
-      "text": "Numerical Ability (Mathematics): 120 मीटर लंबी एक रेलगाड़ी 60 किमी/घंटा की गति से दौड़ रही है। पटरी के पास खड़े एक व्यक्ति को पार करने में यह कितना समय लेगी?",
+      "text": "Numerical Ability (Mathematics): 180 मीटर लंबी एक रेलगाड़ी 54 किमी/घंटा की गति से दौड़ रही है। पटरी के पास खड़े एक व्यक्ति को पार करने में यह कितना समय लेगी?",
       "options": [
-        "5.2 सेकंड",
-        "7.2 सेकंड",
-        "9.2 सेकंड",
-        "12 सेकंड"
+        "10 सेकंड",
+        "12 सेकंड",
+        "14 सेकंड",
+        "16 सेकंड"
       ],
       "correctIndex": 1,
-      "explanation": "समय = 120 / (60 * 5/18) = 120 / (16.67) = 7.2 सेकंड।",
+      "explanation": "समय = 180 / (54 * 5/18) = 180 / 15 = 12 सेकंड।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-83",
-      "text": "Reasoning Ability: एक सुबह सूर्योदय के बाद, मोहन एक खंभे की ओर मुंह करके खड़ा था। खंभे की छाया उसके ठीक बाईं ओर पड़ रही थी। मोहन का मुंह किस दिशा में था?",
+      "text": "Reasoning Ability: एक शाम सूर्यास्त के समय, श्याम एक खंभे की ओर मुंह करके खड़ा था। खंभे की छाया उसके ठीक बाईं ओर पड़ रही थी। श्याम का मुंह किस दिशा में था?",
       "options": [
-        "पूर्व",
-        "पश्चिम",
         "उत्तर",
-        "दक्षिण"
+        "दक्षिण",
+        "पूर्व",
+        "पश्चिम"
       ],
-      "correctIndex": 2,
-      "explanation": "सुबह सूर्य पूर्व में होता है, तो छाया पश्चिम में पड़ेगी। छाया मोहन के बाईं ओर है, यानी मोहन का बायाँ हाथ पश्चिम में है। अतः उसका मुंह उत्तर (North) दिशा में था।",
+      "correctIndex": 1,
+      "explanation": "सूर्यास्त के समय छाया पूर्व में पड़ेगी। यदि छाया श्याम के बाईं ओर है, तो उसका बायाँ हाथ पूर्व में है, यानी उसका मुंह दक्षिण दिशा में था।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-84",
-      "text": "Numerical Ability (Mathematics): यदि एक गोले की त्रिज्या को दुगुना कर दिया जाए, तो उसके आयतन में कितने प्रतिशत की वृद्धि होगी?",
+      "text": "Numerical Ability (Mathematics): यदि एक गोले की त्रिज्या को आधा कर दिया जाए, तो उसके आयतन में कितने प्रतिशत की कमी होगी?",
       "options": [
-        "100%",
-        "300%",
-        "700%",
-        "800%"
+        "50%",
+        "75%",
+        "87.5%",
+        "90%"
       ],
       "correctIndex": 2,
-      "explanation": "त्रिज्या दुगुनी होने पर आयतन 8 गुना हो जाएगा। वृद्धि = 8 - 1 = 7 गुना = 700%।",
+      "explanation": "त्रिज्या आधी होने पर आयतन (1/2)^3 = 1/8 रह जाएगा। कमी = 1 - 1/8 = 7/8 = 87.5%।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-85",
-      "text": "Reasoning Ability: विषम शब्द युग्म का चयन करें:",
+      "text": "Reasoning Ability: विषम शब्द युग्म का चयन करें (चार विकल्पों में से):",
       "options": [
-        "कपास - सफेद",
-        "कोयला - काला",
-        "सोना - पीला",
-        "पत्ता - लाल"
+        "कलम - लिखना",
+        "चाकू - काटना",
+        "सुई - सीना",
+        "चम्मच - पढ़ना"
       ],
       "correctIndex": 3,
-      "explanation": "पत्ता आमतौर पर हरा होता है, लाल नहीं। बाकी सभी वस्तुओं के उनके प्राकृतिक रंगों के साथ सही मिलान हैं।",
+      "explanation": "चम्मच का कार्य खाना खाने में होता है, पढ़ने में नहीं।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-86",
-      "text": "Numerical Ability (Mathematics): एक परीक्षा में 35% छात्र हिंदी में और 45% छात्र अंग्रेजी में फेल हुए। यदि 20% दोनों में फेल हुए, तो दोनों में पास होने वाले छात्रों का प्रतिशत क्या है?",
+      "text": "Numerical Ability (Mathematics): एक परीक्षा में 30% छात्र भौतिकी में और 40% छात्र रसायन विज्ञान में फेल हुए। यदि 15% दोनों में फेल हुए, तो दोनों में पास होने वाले छात्रों का प्रतिशत क्या है?",
       "options": [
-        "30%",
-        "40%",
-        "50%",
-        "60%"
+        "35%",
+        "45%",
+        "55%",
+        "65%"
       ],
       "correctIndex": 1,
-      "explanation": "कुल फेल = 35 + 45 - 20 = 60%. पास% = 100 - 60 = 40%.",
+      "explanation": "कुल फेल = 30 + 40 - 15 = 55%. पास% = 100 - 55 = 45%.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-87",
-      "text": "Reasoning Ability: अंग्रेजी वर्णमाला श्रृंखला में बाएं से 7वें अक्षर और दाएं से 5वें अक्षर के ठीक बीच में कौन सा अक्षर होगा?",
+      "text": "Reasoning Ability: अंग्रेजी वर्णमाला श्रृंखला में बाएं से 4वें अक्षर और दाएं से 6वें अक्षर के ठीक बीच में कौन सा अक्षर होगा?",
       "options": [
+        "K",
         "L",
         "M",
-        "N",
-        "O"
+        "N"
       ],
       "correctIndex": 2,
-      "explanation": "बाएं से 7वां = G. दाएं से 5वां = V (22वां बाएं से)। बीच में = (7+22)/2 = 14.5 (M या N)। वास्तविक पैटर्न के अनुसार N बीच में बैठता है।",
+      "explanation": "बाएं से 4था = D. दाएं से 6ठा = U (21वां बाएं से)। बीच में = (4+21)/2 = 12.5 (L या M)। बीच में M सही विकल्प है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-88",
-      "text": "Numerical Ability (Mathematics): A और B एक साझेदारी में क्रमशः 20000 रुपये और 30000 रुपये लगाते हैं। यदि वर्ष के अंत में कुल लाभ 15000 रुपये है, तो A का हिस्सा क्या होगा?",
+      "text": "Numerical Ability (Mathematics): A और B एक साझेदारी में क्रमशः 15000 रुपये और 25000 रुपये लगाते हैं। यदि वर्ष के अंत में कुल लाभ 8000 रुपये है, तो A का हिस्सा क्या होगा?",
       "options": [
-        "5000 रुपये",
-        "6000 रुपये",
-        "7000 रुपये",
-        "8000 रुपये"
+        "2500 रुपये",
+        "3000 रुपये",
+        "3500 रुपये",
+        "4000 रुपये"
       ],
       "correctIndex": 1,
-      "explanation": "अनुपात = 2:3. A का हिस्सा = (2/5) * 15000 = 6000 रुपये।",
+      "explanation": "अनुपात = 3:5. A का हिस्सा = (3/8) * 8000 = 3000 रुपये।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-89",
-      "text": "Reasoning Ability: 5 मित्रों (A, B, C, D, E) में, A केवल B से लंबा है लेकिन C से छोटा है। D, E से लंबा है लेकिन C से छोटा है। सबसे लंबा कौन है?",
+      "text": "Reasoning Ability: 5 मित्रों (X, Y, Z, W, V) में, X केवल Y से छोटा है। Z, W से लंबा है लेकिन X से छोटा है। सबसे लंबा कौन है?",
       "options": [
-        "A",
-        "C",
-        "D",
-        "E"
+        "X",
+        "Y",
+        "Z",
+        "W"
       ],
       "correctIndex": 1,
-      "explanation": "क्रम है: C > D > E > A > B. अतः सबसे लंबा C है।",
+      "explanation": "चूँकि X केवल Y से छोटा है, इसका मतलब Y सबसे लंबा है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-90",
-      "text": "Numerical Ability (Mathematics): एक घड़ी में 4 बजकर 40 मिनट पर घंटे और मिनट की सुइयों के बीच कितने डिग्री का कोण बनेगा?",
+      "text": "Numerical Ability (Mathematics): एक घड़ी में 8 बजकर 20 मिनट पर घंटे और मिनट की सुइयों के बीच कितने डिग्री का कोण बनेगा?",
       "options": [
-        "100°",
         "110°",
         "120°",
-        "130°"
+        "130°",
+        "140°"
       ],
-      "correctIndex": 0,
-      "explanation": "कोण = |30H - 5.5M| = |30*4 - 5.5*40| = |120 - 220| = 100°.",
+      "correctIndex": 2,
+      "explanation": "कोण = |30*8 - 5.5*20| = |240 - 110| = 130°.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-91",
-      "text": "Reasoning Ability: यदि '+' का अर्थ 'भाग', '-' का अर्थ 'गुणा', '*' का अर्थ 'जोड़' और '/' का अर्थ 'घटाव' है, तो हल करें: 20 + 4 - 3 * 6 / 2",
+      "text": "Reasoning Ability: यदि '+' का अर्थ 'भाग', '-' का अर्थ 'गुणा', '*' का अर्थ 'जोड़' और '/' का अर्थ 'घटाव' है, तो हल करें: 18 + 6 - 5 * 10 / 5",
       "options": [
-        "12",
         "15",
-        "19",
-        "21"
+        "18",
+        "20",
+        "22"
       ],
       "correctIndex": 2,
-      "explanation": "समीकरण: 20 / 4 * 3 + 6 - 2 = 5 * 3 + 6 - 2 = 15 + 6 - 2 = 19.",
+      "explanation": "18 / 6 * 5 + 10 - 5 = 3 * 5 + 10 - 5 = 15 + 10 - 5 = 20.",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-92",
-      "text": "Numerical Ability (Mathematics): एक बैग में 5 लाल और 4 पीली गेंदें हैं। यदि 2 गेंदें यादृच्छिक रूप से निकाली जाती हैं, तो दोनों के लाल होने की क्या प्रायिकता है?",
+      "text": "Numerical Ability (Mathematics): एक बैग में 3 लाल और 5 हरी गेंदें हैं। यदि 2 गेंदें यादृच्छिक रूप से निकाली जाती हैं, तो दोनों के लाल होने की क्या प्रायिकता है?",
       "options": [
-        "5/18",
-        "5/12",
-        "5/36",
-        "10/36"
+        "3/28",
+        "5/28",
+        "1/4",
+        "1/8"
       ],
       "correctIndex": 0,
-      "explanation": "प्रायिकता = (5C2) / (9C2) = 10 / 36 = 5/18.",
+      "explanation": "प्रायिकता = (3C2) / (8C2) = 3 / 28.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-93",
-      "text": "Reasoning Ability: निम्न में से कौन सा आरेख 'पुरुष, डॉक्टर, अभिनेता' के बीच सही संबंध दर्शाता है?",
+      "text": "Reasoning Ability: निम्न में से कौन सा आरेख 'सोना, गहने, चांदी' के बीच सही संबंध दर्शाता है?",
       "options": [
-        "पूर्णतः समाहित आरेख",
-        "तीनों आंशिक रूप से प्रतिच्छेदित आरेख",
-        "दो अलग और एक साझा आरेख",
+        "दो अलग वृत्त बड़े वृत्त के अंदर",
+        "दो वृत्त आंशिक रूप से एक बड़े वृत्त को काटते हैं",
+        "तीनों अलग",
         "कोई संबंध नहीं"
       ],
       "correctIndex": 1,
-      "explanation": "कुछ पुरुष डॉक्टर और अभिनेता दोनों हो सकते हैं। अतः तीनों आरेख आंशिक रूप से एक-दूसरे को प्रतिच्छेद करेंगे।",
+      "explanation": "कुछ गहने सोने के और कुछ चांदी के बने होते हैं।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-94",
-      "text": "Numerical Ability (Mathematics): सरल करें: 25 * 12 + 100 / 5 - 150",
+      "text": "Numerical Ability (Mathematics): सरल करें: 15 * 8 + 80 / 4 - 100",
       "options": [
-        "120",
-        "150",
-        "170",
-        "200"
+        "20",
+        "30",
+        "40",
+        "50"
       ],
       "correctIndex": 2,
-      "explanation": "25*12 = 300. 100/5 = 20. 300 + 20 - 150 = 170.",
+      "explanation": "120 + 20 - 100 = 40.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-95",
-      "text": "Reasoning Ability: यदि अंग्रेजी शब्द 'POLICE' के अक्षरों को वर्णानुक्रम (Alphabetical order) में व्यवस्थित किया जाए, तो कितने अक्षरों का स्थान अपरिवर्तित रहेगा?",
+      "text": "Reasoning Ability: यदि अंग्रेजी शब्द 'CONSTABLE' के अक्षरों को वर्णानुक्रम (Alphabetical order) में व्यवस्थित किया जाए, तो कितने अक्षरों का स्थान अपरिवर्तित रहेगा?",
       "options": [
         "कोई नहीं",
         "एक",
         "दो",
         "तीन"
       ],
-      "correctIndex": 1,
-      "explanation": "POLICE -> CEILOP. तुलना करने पर केवल I का स्थान (चौथा) अपरिवर्तित रहता है।",
+      "correctIndex": 0,
+      "explanation": "CONSTABLE -> ABCLNOST. तुलना करने पर सभी का स्थान बदल जाता है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-96",
-      "text": "Numerical Ability (Mathematics): एक आयत की लंबाई में 20% की वृद्धि और चौड़ाई में 10% की कमी की जाती है। इसके क्षेत्रफल में शुद्ध परिवर्तन क्या होगा?",
+      "text": "Numerical Ability (Mathematics): एक आयत की लंबाई में 30% की वृद्धि और चौड़ाई में 20% की कमी की जाती है। इसके क्षेत्रफल में शुद्ध परिवर्तन क्या होगा?",
       "options": [
-        "8% वृद्धि",
-        "8% कमी",
-        "10% वृद्धि",
-        "12% वृद्धि"
+        "4% वृद्धि",
+        "4% कमी",
+        "6% वृद्धि",
+        "10% वृद्धि"
       ],
       "correctIndex": 0,
-      "explanation": "परिवर्तन = 20 - 10 - (20*10)/100 = 10 - 2 = 8% वृद्धि।",
+      "explanation": "परिवर्तन = 30 - 20 - (30*20)/100 = 10 - 6 = 4% वृद्धि।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-97",
-      "text": "Reasoning Ability: 5 लड़कों को एक वृत्ताकार मेज (Circular table) के चारों ओर कितने अलग-अलग तरीकों से बैठाया जा सकता है?",
+      "text": "Reasoning Ability: 4 लड़कियों को एक वृत्ताकार मेज (Circular table) के चारों ओर कितने अलग-अलग तरीकों से बैठाया जा सकता है?",
       "options": [
-        "120",
+        "6",
         "24",
-        "60",
-        "12"
+        "12",
+        "18"
       ],
-      "correctIndex": 1,
-      "explanation": "वृत्ताकार मेज के चारों ओर बैठाने के तरीके = (n - 1)! = (5 - 1)! = 4! = 24.",
+      "correctIndex": 0,
+      "explanation": "तरीके = (4 - 1)! = 3! = 6.",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-98",
-      "text": "Numerical Ability (Mathematics): 30% सांद्रता वाले अल्कोहल के 6 लीटर मिश्रण में 2 लीटर शुद्ध पानी मिलाया जाता है। नए मिश्रण में अल्कोहल की सांद्रता क्या होगी?",
+      "text": "Numerical Ability (Mathematics): 40% सांद्रता वाले alcohol के 5 लीटर मिश्रण में 3 लीटर शुद्ध पानी मिलाया जाता है। नए मिश्रण में alcohol की सांद्रता क्या होगी?",
       "options": [
-        "15%",
-        "22.5%",
+        "20%",
         "25%",
-        "28%"
+        "30%",
+        "35%"
       ],
       "correctIndex": 1,
-      "explanation": "अल्कोहल मात्रा = 6 * 0.3 = 1.8 लीटर। नया कुल आयतन = 8 लीटर। सांद्रता = (1.8/8)*100 = 22.5%.",
+      "explanation": "अल्कोहल = 5 * 0.4 = 2 लीटर. कुल आयतन = 8 लीटर. सांद्रता = (2/8)*100 = 25%.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-99",
-      "text": "Reasoning Ability: सादृश्यता को पूरा करें: शेर : मांद :: घोड़ा : ?",
+      "text": "Reasoning Ability: मधुमक्खी का संबंध छत्ते से है, तो मनुष्य का संबंध किससे होगा?",
       "options": [
-        "पिंजरा",
-        "अस्तबल",
-        "घोंसला",
-        "बाड़ा"
+        "जंगल",
+        "घर",
+        "कार्यालय",
+        "अस्पताल"
       ],
       "correctIndex": 1,
-      "explanation": "शेर मांद में रहता है, और घोड़ा अस्तबल (Stable) में रहता है।",
+      "explanation": "मधुमक्खियाँ छत्ते में रहती हैं, मनुष्य घर में रहता है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-4"
     },
     {
       "id": "q-hssc-m4-100",
-      "text": "Numerical Ability (Mathematics): तीन घंटियाँ क्रमशः 6, 8 और 12 सेकंड के अंतराल पर बजती हैं। यदि वे एक साथ बजना शुरू करती हैं, तो 12 मिनट में वे कितनी बार एक साथ बजेंगी?",
+      "text": "Numerical Ability (Mathematics): तीन घंटियाँ क्रमशः 4, 6 और 8 सेकंड के अंतराल पर बजती हैं। यदि वे एक साथ बजना शुरू करती हैं, तो 8 मिनट में वे कितनी बार एक साथ बजेंगी?",
       "options": [
-        "30 बार",
-        "31 बार",
-        "60 बार",
-        "61 बार"
+        "20 बार",
+        "21 बार",
+        "40 बार",
+        "41 बार"
       ],
       "correctIndex": 1,
-      "explanation": "LCM of 6,8,12 = 24 सेकंड. 12 मिनट = 720 सेकंड. बार = 720/24 + 1 = 30 + 1 = 31 बार.",
+      "explanation": "LCM = 24 सेकंड. 8 मिनट = 480 सेकंड. बार = 480/24 + 1 = 21 बार.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-4"
     }
@@ -5198,7 +5198,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "294"
       ],
       "correctIndex": 2,
-      "explanation": "पैटर्न है: n^3 + n^2. 1^3+1^2=2, 2^3+2^2=12, 3^3+3^2=36, 4^3+4^2=80, 5^3+5^2=150, 6^3+6^2=216+36=252.",
+      "explanation": "पैटर्न है: n^3 + n^2. 6^3+6^2=216+36=252.",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
@@ -5212,7 +5212,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "60"
       ],
       "correctIndex": 1,
-      "explanation": "मान लें पुराना औसत x था। 10x + 108 = 11(x + 6) -> 10x + 108 = 11x + 66 -> x = 42. नया औसत = 42 + 6 = 48.",
+      "explanation": "मान लें पुराना औसत x था। 10x + 108 = 11(x + 6) -> x = 42. नया औसत = 42 + 6 = 48.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
@@ -5226,7 +5226,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "2% हानि"
       ],
       "correctIndex": 2,
-      "explanation": "समान विक्रय मूल्य पर समान लाभ% और हानि% होने पर हमेशा हानि होती है। हानि% = (R^2)/100 = (10^2)/100 = 1% हानि.",
+      "explanation": "हानि% = (R^2)/100 = (10^2)/100 = 1% हानि.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
@@ -5240,7 +5240,7 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "15-15-12-9-3-5"
       ],
       "correctIndex": 0,
-      "explanation": "अंग्रेजी वर्णमाला में अक्षरों के वास्तविक स्थान को लिखा गया है। P=16, O=15, L=12, I=9, C=3, E=5.",
+      "explanation": "अक्षरों के वास्तविक स्थान को लिखा गया है। P=16, O=15, L=12, I=9, C=3, E=5.",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
@@ -5254,55 +5254,55 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "1200 रुपये"
       ],
       "correctIndex": 2,
-      "explanation": "3 वर्ष के लिए अंतर का सूत्र: D = P * (R/100)^2 * (300+R)/100 -> 31 = P * (1/100) * (310/100) -> P = 1000 रुपये।",
+      "explanation": "अंतर सूत्र: D = P * (R/100)^2 * (300+R)/100 -> 31 = P * (1/100) * (310/100) -> P = 1000 रुपये।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-76",
-      "text": "Numerical Ability (Mathematics): एक वर्ग का क्षेत्रफल 105 वर्ग सेमी है। इसके विकर्ण की लंबाई क्या होगी?",
+      "text": "Numerical Ability (Mathematics): एक वर्ग का क्षेत्रफल 256 वर्ग सेमी है। इसके विकर्ण की लंबाई क्या होगी?",
       "options": [
-        "10 सेमी",
-        "14.14 सेमी",
-        "20 सेमी",
-        "28.28 सेमी"
+        "16 सेमी",
+        "22.62 सेमी",
+        "32 सेमी",
+        "45.25 सेमी"
       ],
       "correctIndex": 1,
-      "explanation": "विकर्ण = sqrt(2 * क्षेत्रफल)। 100 के लिए 14.14 सेमी लगभग।",
+      "explanation": "विकर्ण = sqrt(2 * क्षेत्रफल) = sqrt(512) = 22.62 सेमी लगभग।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-77",
-      "text": "Reasoning Ability: एक लड़के की ओर इशारा करते हुए सुनीता ने कहा, \"वह मेरे ससुर के इकलौते बेटे का बेटा है।\" सुनीता का उस लड़के से क्या संबंध है?",
+      "text": "Reasoning Ability: एक लड़की की ओर इशारा करते हुए प्रियंका ने कहा, \"वह मेरी माँ के इकलौते भाई के बेटे की बहन है।\" प्रियंका का उस लड़की से क्या संबंध है?",
       "options": [
         "बहन",
-        "माता",
-        "चाची",
-        "दादी"
+        "ममेरी बहन (Cousin)",
+        "भांजी",
+        "माता"
       ],
       "correctIndex": 1,
-      "explanation": "ससुर का इकलौता बेटा = सुनीता का पति। पति का बेटा = सुनीता का बेटा। अतः सुनीता उसकी माता है।",
+      "explanation": "माँ का इकलौता भाई = प्रियंका के मामा। मामा के बेटे की बहन = मामा की बेटी। अतः वह ममेरी बहन है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-78",
-      "text": "Numerical Ability (Mathematics): दो संख्याओं का अनुपात 3:5 है और उनका लघुत्तम समापवर्त्य (LCM) 195 है। छोटी संख्या ज्ञात करें।",
+      "text": "Numerical Ability (Mathematics): दो संख्याओं का अनुपात 3:5 है और उनका लघुत्तम समापवर्त्य (LCM) 300 है। छोटी संख्या ज्ञात करें।",
       "options": [
-        "30",
-        "45",
         "60",
-        "75"
+        "75",
+        "90",
+        "100"
       ],
       "correctIndex": 0,
-      "explanation": "LCM = 15x = 150 -> x = 10. छोटी संख्या = 3x = 30.",
+      "explanation": "LCM = 15x = 300 -> x = 20. छोटी संख्या = 3x = 60.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-79",
-      "text": "Reasoning Ability: कथन: सभी पुस्तकें कॉपियाँ हैं। सभी कॉपियाँ पेन हैं। निष्कर्ष I: सभी पुस्तकें पेन हैं। निष्कर्ष II: सभी पेन पुस्तकें हैं।",
+      "text": "Reasoning Ability: कथन: सभी पेड़ पौधे हैं। सभी पौधे फूल हैं। निष्कर्ष I: सभी पेड़ फूल हैं। निष्कर्ष II: सभी फूल पेड़ हैं।",
       "options": [
         "केवल निष्कर्ष I सही है",
         "केवल निष्कर्ष II सही है",
@@ -5310,223 +5310,223 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "कोई भी सही नहीं है"
       ],
       "correctIndex": 0,
-      "explanation": "चूँकि सभी पुस्तकें कॉपियाँ हैं और सभी कॉपियाँ पेन हैं, इसलिए सभी पुस्तकें पेन हैं। निष्कर्ष II आवश्यक रूप से सही नहीं है।",
+      "explanation": "चूँकि सभी पेड़ पौधे हैं और सभी पौधे फूल हैं, इसलिए सभी पेड़ फूल हैं। निष्कर्ष II आवश्यक रूप से सही नहीं है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-80",
-      "text": "Numerical Ability (Mathematics): एक टैंक को नल A 10 घंटे में भर सकता है और नल B 15 घंटे में खाली कर सकता है। दोनों एक साथ खोले जाने पर टंकी कितने समय में भरेगी?",
+      "text": "Numerical Ability (Mathematics): एक टैंक को नल A 6 घंटे में भर सकता है और नल B 10 घंटे में खाली कर सकता है। दोनों एक साथ खोले जाने पर टंकी कितने समय में भरेगी?",
       "options": [
-        "20 घंटे",
-        "30 घंटे",
-        "40 घंटे",
-        "50 घंटे"
+        "12 घंटे",
+        "15 घंटे",
+        "18 घंटे",
+        "20 घंटे"
       ],
       "correctIndex": 1,
-      "explanation": "समय = (A * B) / (B - A) = (10 * 15) / 5 = 30 घंटे।",
+      "explanation": "समय = (6 * 10) / (10 - 6) = 60 / 4 = 15 घंटे।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-81",
-      "text": "Reasoning Ability: यदि आज से 3 दिन बाद मंगलवार है, तो आज से 4 दिन पहले कौन सा दिन था?",
+      "text": "Reasoning Ability: यदि आज से 4 दिन बाद रविवार है, तो आज से 3 दिन पहले कौन सा दिन था?",
       "options": [
-        "सोमवार",
-        "मंगलवार",
+        "शनिवार",
         "रविवार",
-        "शनिवार"
+        "सोमवार",
+        "मंगलवार"
       ],
-      "correctIndex": 2,
-      "explanation": "कुल दिनों का अंतर = 3 + 4 = 7 दिन। मंगलवार से 7 दिन पहले भी मंगलवार था। आज से 3 दिन बाद मंगलवार है, यानी आज शनिवार है। 4 दिन पहले मंगलवार था।",
+      "correctIndex": 1,
+      "explanation": "रविवार से 7 दिन पहले भी रविवार था। 4 दिन बाद रविवार है, 3 दिन पहले (4+3=7) रविवार था।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-82",
-      "text": "Numerical Ability (Mathematics): 120 मीटर लंबी एक रेलगाड़ी 60 किमी/घंटा की गति से दौड़ रही है। पटरी के पास खड़े एक व्यक्ति को पार करने में यह कितना समय लेगी?",
+      "text": "Numerical Ability (Mathematics): 200 मीटर लंबी एक रेलगाड़ी 72 किमी/घंटा की गति से दौड़ रही है। पटरी के पास खड़े एक व्यक्ति को पार करने में यह कितना समय लेगी?",
       "options": [
-        "5.2 सेकंड",
-        "7.2 सेकंड",
-        "9.2 सेकंड",
-        "12 सेकंड"
+        "8 सेकंड",
+        "10 सेकंड",
+        "12 सेकंड",
+        "14 सेकंड"
       ],
       "correctIndex": 1,
-      "explanation": "समय = 120 / (60 * 5/18) = 120 / (16.67) = 7.2 सेकंड।",
+      "explanation": "समय = 200 / (72 * 5/18) = 200 / 20 = 10 सेकंड।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-83",
-      "text": "Reasoning Ability: एक सुबह सूर्योदय के बाद, मोहन एक खंभे की ओर मुंह करके खड़ा था। खंभे की छाया उसके ठीक बाईं ओर पड़ रही थी। मोहन का मुंह किस दिशा में था?",
+      "text": "Reasoning Ability: एक शाम सूर्यास्त के समय, रोहित एक खंभे की ओर मुंह करके खड़ा था। खंभे की छाया उसके ठीक दाईं ओर पड़ रही थी। रोहित का मुंह किस दिशा में था?",
       "options": [
-        "पूर्व",
-        "पश्चिम",
         "उत्तर",
-        "दक्षिण"
+        "दक्षिण",
+        "पूर्व",
+        "पश्चिम"
       ],
-      "correctIndex": 2,
-      "explanation": "सुबह सूर्य पूर्व में होता है, तो छाया पश्चिम में पड़ेगी। छाया मोहन के बाईं ओर है, यानी मोहन का बायाँ हाथ पश्चिम में है। अतः उसका मुंह उत्तर (North) दिशा में था।",
+      "correctIndex": 0,
+      "explanation": "सूर्यास्त के समय छाया पूर्व में होगी। यदि छाया दाईं ओर है, तो रोहित का दायाँ हाथ पूर्व में है, यानी उसका मुंह उत्तर दिशा में था।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-84",
-      "text": "Numerical Ability (Mathematics): यदि एक गोले की त्रिज्या को दुगुना कर दिया जाए, तो उसके आयतन में कितने प्रतिशत की वृद्धि होगी?",
+      "text": "Numerical Ability (Mathematics): यदि एक गोले की त्रिज्या में 50% की वृद्धि कर दी जाए, तो उसके आयतन में कितने प्रतिशत की वृद्धि होगी?",
       "options": [
-        "100%",
-        "300%",
-        "700%",
-        "800%"
+        "125%",
+        "137.5%",
+        "237.5%",
+        "337.5%"
       ],
       "correctIndex": 2,
-      "explanation": "त्रिज्या दुगुनी होने पर आयतन 8 गुना हो जाएगा। वृद्धि = 8 - 1 = 7 गुना = 700%।",
+      "explanation": "त्रिज्या 1.5 गुनी हो जाएगी। आयतन (1.5)^3 = 3.375 गुना हो जाएगा। वृद्धि% = (3.375 - 1) * 100 = 237.5%।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-85",
-      "text": "Reasoning Ability: विषम शब्द युग्म का चयन करें:",
+      "text": "Reasoning Ability: नीचे दिए गए विकल्पों में से विषम शब्द युग्म का चयन करें:",
       "options": [
-        "कपास - सफेद",
-        "कोयला - काला",
-        "सोना - पीला",
-        "पत्ता - लाल"
+        "गाय - शाकाहारी",
+        "शेर - मांसाहारी",
+        "खरगोश - शाकाहारी",
+        "कुत्ता - उत्पादक"
       ],
       "correctIndex": 3,
-      "explanation": "पत्ता आमतौर पर हरा होता है, लाल नहीं। बाकी सभी वस्तुओं के उनके प्राकृतिक रंगों के साथ सही मिलान हैं।",
+      "explanation": "कुत्ता एक सर्वाहारी जीव है, वह उत्पादक नहीं है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-86",
-      "text": "Numerical Ability (Mathematics): एक परीक्षा में 35% छात्र हिंदी में और 45% छात्र अंग्रेजी में फेल हुए। यदि 20% दोनों में फेल हुए, तो दोनों में पास होने वाले छात्रों का प्रतिशत क्या है?",
+      "text": "Numerical Ability (Mathematics): एक परीक्षा में 25% छात्र इतिहास में और 35% छात्र भूगोल में फेल हुए। यदि 10% दोनों में फेल हुए, तो दोनों में पास होने वाले छात्रों का प्रतिशत क्या है?",
       "options": [
-        "30%",
         "40%",
         "50%",
-        "60%"
+        "60%",
+        "70%"
       ],
       "correctIndex": 1,
-      "explanation": "कुल फेल = 35 + 45 - 20 = 60%. पास% = 100 - 60 = 40%.",
+      "explanation": "कुल फेल = 25 + 35 - 10 = 50%. पास% = 100 - 50 = 50%.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-87",
-      "text": "Reasoning Ability: अंग्रेजी वर्णमाला श्रृंखला में बाएं से 7वें अक्षर और दाएं से 5वें अक्षर के ठीक बीच में कौन सा अक्षर होगा?",
+      "text": "Reasoning Ability: अंग्रेजी वर्णमाला श्रृंखला में बाएं से 8वें अक्षर और दाएं से 4वें अक्षर के ठीक बीच में कौन सा अक्षर होगा?",
       "options": [
-        "L",
-        "M",
         "N",
-        "O"
+        "O",
+        "P",
+        "Q"
       ],
       "correctIndex": 2,
-      "explanation": "बाएं से 7वां = G. दाएं से 5वां = V (22वां बाएं से)। बीच में = (7+22)/2 = 14.5 (M या N)। वास्तविक पैटर्न के अनुसार N बीच में बैठता है।",
+      "explanation": "बाएं से 8वां = H. दाएं से 4था = W (23वां बाएं से)। बीच में = (8+23)/2 = 15.5 (O या P)। बीच में P सही विकल्प है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-88",
-      "text": "Numerical Ability (Mathematics): A और B एक साझेदारी में क्रमशः 20000 रुपये और 30000 रुपये लगाते हैं। यदि वर्ष के अंत में कुल लाभ 15000 रुपये है, तो A का हिस्सा क्या होगा?",
+      "text": "Numerical Ability (Mathematics): A और B एक साझेदारी में क्रमशः 12000 रुपये और 18000 रुपये लगाते हैं। यदि वर्ष के अंत में कुल लाभ 10000 रुपये है, तो A का हिस्सा क्या होगा?",
       "options": [
+        "3000 रुपये",
+        "4000 रुपये",
         "5000 रुपये",
-        "6000 रुपये",
-        "7000 रुपये",
-        "8000 रुपये"
+        "6000 रुपये"
       ],
       "correctIndex": 1,
-      "explanation": "अनुपात = 2:3. A का हिस्सा = (2/5) * 15000 = 6000 रुपये।",
+      "explanation": "अनुपात = 2:3. A का हिस्सा = (2/5) * 10000 = 4000 रुपये।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-89",
-      "text": "Reasoning Ability: 5 मित्रों (A, B, C, D, E) में, A केवल B से लंबा है लेकिन C से छोटा है। D, E से लंबा है लेकिन C से छोटा है। सबसे लंबा कौन है?",
+      "text": "Reasoning Ability: 5 मित्रों (M, N, O, P, Q) में, M केवल N और O से लंबा है। P, N से छोटा है लेकिन Q से लंबा है। सबसे लंबा कौन है?",
       "options": [
-        "A",
-        "C",
-        "D",
-        "E"
+        "M",
+        "N",
+        "O",
+        "P"
       ],
-      "correctIndex": 1,
-      "explanation": "क्रम है: C > D > E > A > B. अतः सबसे लंबा C है।",
+      "correctIndex": 0,
+      "explanation": "चूँकि M केवल N और O से लंबा है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-90",
-      "text": "Numerical Ability (Mathematics): एक घड़ी में 4 बजकर 40 मिनट पर घंटे और मिनट की सुइयों के बीच कितने डिग्री का कोण बनेगा?",
+      "text": "Numerical Ability (Mathematics): एक घड़ी में 6 बजकर 15 मिनट पर घंटे और मिनट की सुइयों के बीच कितने डिग्री का कोण बनेगा?",
       "options": [
-        "100°",
-        "110°",
-        "120°",
-        "130°"
+        "90°",
+        "95°",
+        "97.5°",
+        "100°"
       ],
-      "correctIndex": 0,
-      "explanation": "कोण = |30H - 5.5M| = |30*4 - 5.5*40| = |120 - 220| = 100°.",
+      "correctIndex": 2,
+      "explanation": "कोण = |30*6 - 5.5*15| = |180 - 82.5| = 97.5°.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-91",
-      "text": "Reasoning Ability: यदि '+' का अर्थ 'भाग', '-' का अर्थ 'गुणा', '*' का अर्थ 'जोड़' और '/' का अर्थ 'घटाव' है, तो हल करें: 20 + 4 - 3 * 6 / 2",
+      "text": "Reasoning Ability: यदि '+' का अर्थ 'भाग', '-' का अर्थ 'गुणा', '*' का अर्थ 'जोड़' और '/' का अर्थ 'घटाव' है, तो हल करें: 12 + 2 - 6 * 4 / 2",
       "options": [
-        "12",
-        "15",
-        "19",
-        "21"
+        "34",
+        "36",
+        "38",
+        "40"
       ],
       "correctIndex": 2,
-      "explanation": "समीकरण: 20 / 4 * 3 + 6 - 2 = 5 * 3 + 6 - 2 = 15 + 6 - 2 = 19.",
+      "explanation": "12 / 2 * 6 + 4 - 2 = 6 * 6 + 4 - 2 = 36 + 4 - 2 = 38.",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-92",
-      "text": "Numerical Ability (Mathematics): एक बैग में 5 लाल और 4 पीली गेंदें हैं। यदि 2 गेंदें यादृच्छिक रूप से निकाली जाती हैं, तो दोनों के लाल होने की क्या प्रायिकता है?",
+      "text": "Numerical Ability (Mathematics): एक बैग में 6 लाल और 4 सफेद गेंदें हैं। यदि 2 गेंदें यादृच्छिक रूप से निकाली जाती हैं, तो दोनों के लाल होने की क्या प्रायिकता है?",
       "options": [
-        "5/18",
-        "5/12",
-        "5/36",
-        "10/36"
+        "1/3",
+        "2/3",
+        "4/15",
+        "2/15"
       ],
       "correctIndex": 0,
-      "explanation": "प्रायिकता = (5C2) / (9C2) = 10 / 36 = 5/18.",
+      "explanation": "प्रायिकता = (6C2) / (10C2) = 15 / 45 = 1/3.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-93",
-      "text": "Reasoning Ability: निम्न में से कौन सा आरेख 'पुरुष, डॉक्टर, अभिनेता' के बीच सही संबंध दर्शाता है?",
+      "text": "Reasoning Ability: निम्न में से कौन सा आरेख 'देश, राज्य, जिला' के बीच सही संबंध दर्शाता है?",
       "options": [
-        "पूर्णतः समाहित आरेख",
-        "तीनों आंशिक रूप से प्रतिच्छेदित आरेख",
-        "दो अलग और एक साझा आरेख",
+        "पूर्णतः समाहित (एक-दूसरे के अंदर तीन वृत्त)",
+        "तीन आंशिक रूप से प्रतिच्छेदित",
+        "दो अलग एक बड़े के अंदर",
         "कोई संबंध नहीं"
       ],
-      "correctIndex": 1,
-      "explanation": "कुछ पुरुष डॉक्टर और अभिनेता दोनों हो सकते हैं। अतः तीनों आरेख आंशिक रूप से एक-दूसरे को प्रतिच्छेद करेंगे।",
+      "correctIndex": 0,
+      "explanation": "देश के अंदर राज्य और राज्य के अंदर जिला आता है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-94",
-      "text": "Numerical Ability (Mathematics): सरल करें: 25 * 12 + 100 / 5 - 150",
+      "text": "Numerical Ability (Mathematics): सरल करें: 20 * 15 + 150 / 5 - 250",
       "options": [
-        "120",
-        "150",
-        "170",
-        "200"
+        "60",
+        "70",
+        "80",
+        "90"
       ],
       "correctIndex": 2,
-      "explanation": "25*12 = 300. 100/5 = 20. 300 + 20 - 150 = 170.",
+      "explanation": "300 + 30 - 250 = 80.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-95",
-      "text": "Reasoning Ability: यदि अंग्रेजी शब्द 'POLICE' के अक्षरों को वर्णानुक्रम (Alphabetical order) में व्यवस्थित किया जाए, तो कितने अक्षरों का स्थान अपरिवर्तित रहेगा?",
+      "text": "Reasoning Ability: यदि अंग्रेजी शब्द 'COMPUTER' के अक्षरों को वर्णानुक्रम (Alphabetical order) में व्यवस्थित किया जाए, तो कितने अक्षरों का स्थान अपरिवर्तित रहेगा?",
       "options": [
         "कोई नहीं",
         "एक",
@@ -5534,79 +5534,2883 @@ export const HARYANA_POLICE_CUSTOM_MOCKS: Record<string, Question[]> = {
         "तीन"
       ],
       "correctIndex": 1,
-      "explanation": "POLICE -> CEILOP. तुलना करने पर केवल I का स्थान (चौथा) अपरिवर्तित रहता है।",
+      "explanation": "COMPUTER -> CEMOPRTU. तुलना करने पर केवल O का स्थान अपरिवर्तित रहता है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-96",
-      "text": "Numerical Ability (Mathematics): एक आयत की लंबाई में 20% की वृद्धि और चौड़ाई में 10% की कमी की जाती है। इसके क्षेत्रफल में शुद्ध परिवर्तन क्या होगा?",
+      "text": "Numerical Ability (Mathematics): एक आयत की लंबाई में 10% की कमी और चौड़ाई में 10% की कमी की जाती है। इसके क्षेत्रफल में शुद्ध परिवर्तन क्या होगा?",
       "options": [
-        "8% वृद्धि",
-        "8% कमी",
-        "10% वृद्धि",
-        "12% वृद्धि"
+        "19% कमी",
+        "20% कमी",
+        "21% कमी",
+        "10% कमी"
       ],
       "correctIndex": 0,
-      "explanation": "परिवर्तन = 20 - 10 - (20*10)/100 = 10 - 2 = 8% वृद्धि।",
+      "explanation": "परिवर्तन = -10 - 10 + (100)/100 = 19% कमी।",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-97",
-      "text": "Reasoning Ability: 5 लड़कों को एक वृत्ताकार मेज (Circular table) के चारों ओर कितने अलग-अलग तरीकों से बैठाया जा सकता है?",
+      "text": "Reasoning Ability: 7 व्यक्तियों को एक वृत्ताकार मेज (Circular table) के चारों ओर कितने अलग-अलग तरीकों से बैठाया जा सकता है?",
       "options": [
-        "120",
-        "24",
-        "60",
-        "12"
+        "720",
+        "5040",
+        "360",
+        "120"
       ],
-      "correctIndex": 1,
-      "explanation": "वृत्ताकार मेज के चारों ओर बैठाने के तरीके = (n - 1)! = (5 - 1)! = 4! = 24.",
+      "correctIndex": 0,
+      "explanation": "तरीके = (7 - 1)! = 6! = 720.",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-98",
-      "text": "Numerical Ability (Mathematics): 30% सांद्रता वाले अल्कोहल के 6 लीटर मिश्रण में 2 लीटर शुद्ध पानी मिलाया जाता है। नए मिश्रण में अल्कोहल की सांद्रता क्या होगी?",
+      "text": "Numerical Ability (Mathematics): 15% सांद्रता वाले alcohol के 8 लीटर मिश्रण में 4 लीटर शुद्ध पानी मिलाया जाता है। नए मिश्रण में alcohol की सांद्रता क्या होगी?",
       "options": [
-        "15%",
-        "22.5%",
-        "25%",
-        "28%"
+        "8%",
+        "10%",
+        "12%",
+        "14%"
       ],
       "correctIndex": 1,
-      "explanation": "अल्कोहल मात्रा = 6 * 0.3 = 1.8 लीटर। नया कुल आयतन = 8 लीटर। सांद्रता = (1.8/8)*100 = 22.5%.",
+      "explanation": "अल्कोहल = 8 * 0.15 = 1.2 लीटर. कुल आयतन = 12 लीटर. सांद्रता = (1.2/12)*100 = 10%.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-99",
-      "text": "Reasoning Ability: सादृश्यता को पूरा करें: शेर : मांद :: घोड़ा : ?",
+      "text": "Reasoning Ability: गाय का संबंध गौशाला से है, तो मकड़ी का संबंध किससे होगा?",
       "options": [
-        "पिंजरा",
-        "अस्तबल",
         "घोंसला",
-        "बाड़ा"
+        "जाला",
+        "बिल",
+        "पिंजरा"
       ],
       "correctIndex": 1,
-      "explanation": "शेर मांद में रहता है, और घोड़ा अस्तबल (Stable) में रहता है।",
+      "explanation": "गाय गौशाला में रहती है, मकड़ी जाले में रहती है।",
       "sectionName": "Reasoning Ability",
       "testId": "test-hssc-police-full-5"
     },
     {
       "id": "q-hssc-m5-100",
-      "text": "Numerical Ability (Mathematics): तीन घंटियाँ क्रमशः 6, 8 और 12 सेकंड के अंतराल पर बजती हैं। यदि वे एक साथ बजना शुरू करती हैं, तो 12 मिनट में वे कितनी बार एक साथ बजेंगी?",
+      "text": "Numerical Ability (Mathematics): तीन घंटियाँ क्रमशः 8, 12 और 15 सेकंड के अंतराल पर बजती हैं। यदि वे एक साथ बजना शुरू करती हैं, तो 10 मिनट में वे कितनी बार एक साथ बजेंगी?",
       "options": [
-        "30 बार",
-        "31 बार",
-        "60 बार",
-        "61 बार"
+        "5 बार",
+        "6 बार",
+        "10 बार",
+        "12 बार"
       ],
       "correctIndex": 1,
-      "explanation": "LCM of 6,8,12 = 24 सेकंड. 12 मिनट = 720 सेकंड. बार = 720/24 + 1 = 30 + 1 = 31 बार.",
+      "explanation": "LCM = 120 सेकंड = 2 मिनट. बार = 10/2 + 1 = 6 बार.",
       "sectionName": "Numerical Ability (Mathematics)",
       "testId": "test-hssc-police-full-5"
+    }
+  ],
+  "test-hssc-police-full-6": [
+    {
+      "id": "q-hssc-m6-1",
+      "text": "यदि एक पंक्ति में विजय का स्थान आगे से 13 और पीछे से 6 है, तो उस पंक्ति में कितने लोग खड़े हैं?",
+      "options": [
+        "19",
+        "20",
+        "17",
+        "18"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-2",
+      "text": "3 - 3 + 3 - 3 ... 101 बार =",
+      "options": [
+        "3",
+        "0",
+        "-3",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-3",
+      "text": "एक किले में 2000 सैनिककों के लिए 20 दिनों का पर्याप्त भोजन उपलब्ध है, लेकिन कुछ सैनिककों का स्थानांतरण\nकरके दू सरे किले पर भेज दिया जाता है और खाना 25 दिनों तक चलिता है। कितने सैनिककों का स्थानांतरण किया गया\nथा?",
+      "options": [
+        "450",
+        "500",
+        "525",
+        "400"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-4",
+      "text": "दिए गए विकल्पों में से लुप्त पद को ज्ञात करें। 20160, ?, 480, 96, 24, 8",
+      "options": [
+        "1140",
+        "3240",
+        "2880",
+        "800"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-5",
+      "text": "वर्ष 1955 में एस.आर. राव ने किस हड़प्पा स्थल की खुदाई शुरू की थी?",
+      "options": [
+        "कालीबंगन",
+        "लोथल",
+        "धोलावीरा",
+        "मोहनजोदड़ो"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-6",
+      "text": "हरियाणा में पुलिस आयुक्तालिय की संख्या है:",
+      "options": [
+        "1",
+        "4",
+        "5",
+        "3"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-7",
+      "text": "यदि वर्णमाला के पहले आधे भाग को उल्टे क्र म में लिखा जाए, तो दाएँ से 19 वाँ अक्षर कौन-सा होगा?",
+      "options": [
+        "H",
+        "E",
+        "D",
+        "F"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-8",
+      "text": "निम्नलिखित में से किसे थैली कवक (Sac-fungi) कहते हैं?",
+      "options": [
+        "फाइकोमाइसीट्स",
+        "एस्कोमाइसीट्स",
+        "बैसिडियोमाइसीट्स",
+        "ड्यू टेरोमाइसीट्स"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-9",
+      "text": "कंप्यूटर के आई.पी. एड्रेस के साथ-साथ प्रक्त्येक कंप्यूटर को ईथरनेट के उपयोग हेतु एक अन्य यूनिक नंबर दिया\nजाता है, उसे ___ कहते हैं।",
+      "options": [
+        "पोर्ट नंबर",
+        "मैक एड्रेस",
+        "यू.आर.एल. एड्रेस",
+        "व\u001eर्र्टअल एड्रेस"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-10",
+      "text": "नीति आयोग द्वारा जारी एसडीजी इंडिया इंडेस 2020-21 में हरियाणा का प्राप्त स्कोर या है?",
+      "options": [
+        "67",
+        "57",
+        "47",
+        "उपयुक्त में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-11",
+      "text": "केंद्र सरिकार की मंत्रीपरिषद केविल ___ के बाद असि्तत्व में आती है।",
+      "options": [
+        "सभी मंत्रियों ने कार्यालय की शपथ ली है",
+        "प्र धानमंत्री ने कार्यालय की शपथ ली है",
+        "विभागों का आबंटन",
+        "संसद का विश्वास जीतना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-12",
+      "text": "आज सी.पी.यू. की गति ___ में मापी जाती है।",
+      "options": [
+        "पिकोहट्र्टज",
+        "गीगाहट्र्टज",
+        "गीगाबाइट",
+        "टेराबाइट"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-13",
+      "text": "6% प्रतिवर्ष की दर से 18 महीनों में ₹2,000 का साधारण ब्याज कितना होगा?",
+      "options": [
+        "216",
+        "240",
+        "180",
+        "120"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-14",
+      "text": "16 लिड़कों की एक पंक्ति में जब प्र काश को बायीं ओर दो स्थान खिसकाया जाता है, उसका स्थान बाएँ छोर से\n7 वाँ हो जाता है। पंक्ति के दाएँ छोर से उसका पहले का स्थान या था?",
+      "options": [
+        "7वाँ",
+        "10वाँ",
+        "9वाँ",
+        "8वाँ"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-15",
+      "text": "वितर्णमान में हरियाणा में कितने जिले हैं?",
+      "options": [
+        "25",
+        "22",
+        "20",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-16",
+      "text": "यदि '+' को C, 'x' को D, '÷' को र् और '-' को F दिशार्णता है, तो समीकरिण 3C1D8र्2F4 का मान या होगा?",
+      "options": [
+        "3",
+        "4",
+        "0",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-17",
+      "text": "रवि कुमार दिहिया ने टोक्यो ओलिंपिक 2020 में किस भार विगर्ण में रिजत पदक जीता?",
+      "options": [
+        "पुरुषों के 57 किग्रा फ्री स्टाइल",
+        "पुरुषों के 65 किग्रा फ्री स्टाइल",
+        "पुरुषों के 74 किग्रा फ्री स्टाइल",
+        "उपयुक्त में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-18",
+      "text": "चंडीगढ़ की मुख्य योजना ___ के समरूप है।",
+      "options": [
+        "कंठहार",
+        "पक्षी",
+        "मानव शरीर",
+        "फूल"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-19",
+      "text": "तोशम पर्वत पर वायरिलेस रिपीटर एंटीना का संकेत क्षेत्र ___ है।",
+      "options": [
+        "भिवानी",
+        "फतेहाबाद",
+        "सिरसा",
+        "उत सभी"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-20",
+      "text": "वेब सेवाओं का अथर्ण ___ द्वारा प्र दान की जाने वाली सेवाएँ है।",
+      "options": [
+        "ई-मेल सेवाएँ",
+        "वȪर्ट वाइड वेब",
+        "फाइल ट्रांसफर प्रोटोकॉल",
+        "हाइपर टेक्स्ट ट्रांसफर प्रोटोकॉल"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-21",
+      "text": "चुंबकीय क्षेत्र की उपस्थिति में स्पे ट्रल रेखाओं का विभाजित होना, ___ कहलाता है।",
+      "options": [
+        "स्टाकर्ट प्र भाव",
+        "बोर प्र भाव",
+        "समरफेȪ प्र भाव",
+        "जीमैन प्र भाव"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-22",
+      "text": "___ वȪर्ण वाइड वेब पर हाइपरmedia का प्र काशन करने के लिए एक भाषा है।",
+      "options": [
+        "Hypermedia",
+        "C",
+        "C++",
+        "HTML"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-23",
+      "text": "एक हजार बाइट (सटीक 1024) के लिगभग एक इकाई ___ कहलाती है।",
+      "options": [
+        "मेगाबाइट",
+        "टेराबाइट",
+        "गीगाबाइट",
+        "किलोबाइट"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-24",
+      "text": "हरियाणा के पहले महिला विश्वविद्यालिय का नाम किसके नाम पर रिखा गया है?",
+      "options": [
+        "स्वामी श्रद्धानंद",
+        "स्वामी दयानंद",
+        "भगत फूल सिंह",
+        "कल्पना \u001eावला"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-25",
+      "text": "नीचे दिए गए शब्दों को एक साथर्णक और ताɷकर्किक क्र म में व्य विस्थत कीजिए: 1. Table 2. Tree 3. Wood 4.\nSeed 5. Plant",
+      "options": [
+        "4, 5, 2, 3, 1",
+        "1, 2, 3, 4, 5",
+        "1, 3, 2, 4, 5",
+        "4, 5, 3, 2, 1"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-26",
+      "text": "यदि PAINT का कूट 74128 और र्XCर्L का कूट 93596 है, तो ACCर्PT का कूट या होगा?",
+      "options": [
+        "547978",
+        "735961",
+        "455978",
+        "554978"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-27",
+      "text": "एक व्य त दिकि्षण की ओर 30 मीटर चलिता है, फिर अपने दाएँ मुड़ते हु ए 30 मीटर चलिता है, फिर बाएँ मुड़ता है\nऔर 20 मीटर चलिता है, फिर बाएँ मुड़ता है और 30 मीटर चलिता है। विह अपने आरिंभिक बिर्किदु से कितना दू र है?",
+      "options": [
+        "20 मीटर",
+        "50 मीटर",
+        "80 मीटर",
+        "30 मीटर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-28",
+      "text": "7 पुरुषों और 6 महिलाओं के समूह से पाँच व्य तयों को चुनकर एक समिति का गठन इस प्र कार किया जाना\nहै, ताकि उस समिति में कम से कम 3 पुरुष हो। ऐसा कितने त रीकों से किया जा सकता है?",
+      "options": [
+        "645",
+        "564",
+        "735",
+        "756"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-29",
+      "text": "किन चिह्नों की अदिला-बदिली करने पर निम्नलिखित समीकरिण सत्य होगी? 35 ÷ 7 x 5 + 5 - 6 = 24",
+      "options": [
+        "+ और x",
+        "+ और ÷",
+        "- और +",
+        "+ और -"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-30",
+      "text": "द्रव्य मान 10 kg वाली एक मशीन गन से 500 ms-1 की गति से 10 गोली प्र कि्त सेकंड की दर पर 20 g की\nगोलियाँ दागती है। मशीन गन को स्थिति में रिखने के लिए वांछित बल या है?",
+      "options": [
+        "10 N",
+        "200 N",
+        "20 N",
+        "100 N"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-31",
+      "text": "एक आदिमी 5 मिनट में 600 मीटर लिंबी सड़क को पार करिता है। किमी प्र कि्त घंटा में उसकी चाल कितनी है?",
+      "options": [
+        "8.4",
+        "10",
+        "7.2",
+        "3.6"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-32",
+      "text": "विह विकल्प चुनिए जो दिए गए संयोजन के दिपर्णण प्र कि्तिबिर्किब (Mirror Image) से निकटता से मिलिता है:\nTARAIN1014A",
+      "options": [
+        "APIOIVIAAAT",
+        "AIOIAVIAAAT",
+        "AIOIATAAAIM",
+        "APIOIIAAAL"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-33",
+      "text": "हरियाणा सरिकार के 'रीडिर्किग मिशन' के बारे में निम्नलिखित कथनों पर विचार करें: I. यह शुरुआत राज्य के\nविद्याɹथर्कियों में पढ़ने की आदित को प्रोत्साहित करने के लिए की गई थी। II. यह मिशन केंद्र सरिकार के 'रीडिर्किग मिशन\n2022' के पदचिह्नों पर शुरू किया गया है।",
+      "options": [
+        "केवल कथन II सत्य है",
+        "कथन I और II दोनों असत्य हैं",
+        "कथन I और II दोनों सत्य हैं",
+        "केवल कथन I सत्य है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-34",
+      "text": "\"WH 1270\" चौधरी चरन सिंह हरियाणा एगि्रिकल्चरिल यूनिवɹसर्किटी (CCSHAU), हिसार द्वारा जारी\nनिम्नलिखित फिसलों में से किसकी नई किस्म है?",
+      "options": [
+        "गेहूँ",
+        "अखरोट",
+        "जौ",
+        "उत में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-35",
+      "text": "फिक्र-ए-हरियाणा पुरिस्कार ___ के लिए दिया जाता है।",
+      "options": [
+        "हरियाण्वी साहित्य",
+        "संस्कृत साहित्य",
+        "उƤर्ट साहित्य",
+        "हिंदी साहित्य"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-36",
+      "text": "E, C का पुत्र है। D, C का पति है। B और G, D के क्र मशः एक मात्र भाई और पुत्री हैं। F, F, E और G की मौसी है।\nB का E से क्या संबंध है?",
+      "options": [
+        "भतीजा",
+        "\u001eा\u001eी",
+        "भतीजी",
+        "\u001eा\u001eा"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-37",
+      "text": "एक परनालिका के भीतर उत्पन्न मजबूत चुंबकीय क्षेत्र का उपयोग कुंडली के भीतर रिखे गए मृदु लोहे के टुकड़े\nको चुंबकीकृत करने के लिए किया जाता है। इस प्र कार बने चुंबक को या कहते हैं?",
+      "options": [
+        "विद्युत \u001eर्ंबक",
+        "स्थायी \u001eर्ंबक",
+        "सम\u001eर्ंबक",
+        "प्र त\u001eर्ंबक"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-38",
+      "text": "निम्नलिखित में से कौन-सी गैस सूअरों के काटने से पूविर्ण एनेस्थसिया के लिए प्र योग की जाती है?",
+      "options": [
+        "काबर्टन डाइऑक्साइड",
+        "नाइट्रस ऑक्साइड",
+        "हैलोथेन",
+        "डिस्फ्लोरेन"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-39",
+      "text": "एक सुबह सूयर्योदिय के बाद, सुरेश एक खंभे की ओर मुख करके खड़ा है। खंभे की छाया उसके बिल्कुल दाएँ\nपड़ती है। विह किस दिशा में मुख करके खड़ा है?",
+      "options": [
+        "पशि्चिम",
+        "आंकड़े अपयार्टप्त है",
+        "दकि्षण",
+        "पूवर्ट"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-40",
+      "text": "अग्नाशय रिस में कौन-सा एंजाइम उपस्थत है, जो पायसीकृत विसा के टूटने के लिए उत्तरिदायी है?",
+      "options": [
+        "लाइपेज",
+        "टि्रपि्सन",
+        "लैक्टेज",
+        "माल्टेज"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-41",
+      "text": "मस्का डोमेɥस्टका (Musca domestica) किस विगर्ण से संबंधत है?",
+      "options": [
+        "द्विबीजपत्री",
+        "एकबीजपत्री",
+        "स्तनपायी",
+        "इनसेक्टा"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-42",
+      "text": "हरियाणा से निम्नलिखित में से कौन परिम वीर चक्र विजेता हैं?",
+      "options": [
+        "रू प \u001eंद",
+        "मेजर होशियार सिंह",
+        "हवलदार लख्मी \u001eंद",
+        "सर्बेदार शिव\u001eंद राम"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-43",
+      "text": "हरियाणा पुलिस सेवा में विभिन्न राजपति्रक्त या अराजपति्रक्त पदों पर सीधी भक्तर्ती किसके माध्यम से की जानी\nचाहिए?",
+      "options": [
+        "राज्य स्तरीय पर्लिस भक्तर्ती बोडिर्ट",
+        "जिला स्तरीय पर्लिस भक्तर्ती बोडिर्ट",
+        "(A) और (B) दोनों",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-44",
+      "text": "बहादुर सिंह जिन्होंने 1978 और 1982 एशियाई खेलों में स्विणर्ण पदक जीता है, एक भारतीय ___ हैं।",
+      "options": [
+        "पहलवान",
+        "मुक्केबाज",
+        "धावक",
+        "गोला फेंकने वाले (Shot-putter)"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-45",
+      "text": "हरियाणा सशस्त्र पुलिस में कितनी बटालियन होती हैं?",
+      "options": [
+        "2",
+        "4",
+        "1",
+        "5"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-46",
+      "text": "निम्नलिखित में से हरियाणा का कौन-सा त्यौहार नविसंवित्सर उत्सव के 6 दिनों के बाद मनाया जाता है और\nबासोडा त्यौहार कहलाता है?",
+      "options": [
+        "भडिलिया नवमी",
+        "सिलीसेट",
+        "तीज",
+        "सलोनी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-47",
+      "text": "___ एक विशिष्ट क्षेत्र में चार या अधक लोगों के एकत्र होने पर रोक लिगाता है।",
+      "options": [
+        "आपराधिक दंड संहिता की धारा 144",
+        "भारक्तीय दंड संहिता की धारा 144",
+        "नागरिक दंड संहिता की धारा 144",
+        "उपयुक्त में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-48",
+      "text": "बिल्लियाँ किस परिवार (Family) से संबंध रिखती हैं?",
+      "options": [
+        "कैनिडी",
+        "ओविडी",
+        "फेलिडी",
+        "बोविडी"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-49",
+      "text": "हरियाणा पुलिस की मुख्य भूमिका और कायर्ण या है?",
+      "options": [
+        "अपराध को रोकना और पता लगाना",
+        "जन व्य वस्था को परिरकि्षत रखना",
+        "जीवन और संपत्त की रक्षा",
+        "उत सभी"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-50",
+      "text": "हरियाणा का विह जिला जिसमें 2011 की जनगणना के अनुसार न्यूनतम बाल जनसंख्या अभिलेखित की गई है:",
+      "options": [
+        "पं\u001eकूला",
+        "महेंद्रगढ़",
+        "कुरुक्षेत्र",
+        "फरीदाबाद"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-51",
+      "text": "चार्ल्स डार्विन द्वारा प्र शक्ति कौन-सी पुस्तक विकासवाद के अध्ययन में एक लैंडमार्क है?",
+      "options": [
+        "द सेल्फिश जीन",
+        "ऑन द ऑरिजिन ऑफ स्पीसीज़",
+        "द एम्परर ऑफ ऑल मैलडीज़",
+        "ह्यू मन बायोलॉजी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-52",
+      "text": "वायरिलेस नेटविकर्ण में, हब फ़ंक्श न को वायरिलेस राउटर द्वारा किया जाता है, जिसे कहते हैं:",
+      "options": [
+        "सि्व\u001e",
+        "अडिैप्टर",
+        "मॉडेम",
+        "बेस स्टेशन"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-53",
+      "text": "फोȪर के सभी फाइलों का चयन करने के लिए शॉटर्णकट है:",
+      "options": [
+        "Ctrl+Shift+B",
+        "Ctrl+S",
+        "Ctrl+Shift+A",
+        "Ctrl+A"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-54",
+      "text": "आसानी से समझे जाने योग्य डोमेन नामों को आई.पी. पतों में अनूदित करिता है:",
+      "options": [
+        "इंटरनेट सेवा प्र दाता",
+        "डोमेन नाम सवर्टर (DNS)",
+        "होɱस्टंग कंपनी",
+        "आई.पी. सवर्टर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-55",
+      "text": "मानव रितचाप का सामान्य प्र कुंचन दाब (systolic pressure) है:",
+      "options": [
+        "Hg का 100 mm",
+        "Hg का 60 mm",
+        "Hg का 120 mm",
+        "Hg का 80 mm"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-56",
+      "text": "नए ब्रिटेन का प्रक्तीक - ब्रिटिश ध्विज:",
+      "options": [
+        "ओल्ड ग्लोरी",
+        "यूनियन जैक",
+        "ट्राइकलर",
+        "मेपल लीफ फ्लैग"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-57",
+      "text": "दिए गए दो कथनों को सत्य मानते हु ए सही निष्कषर्ण चुनें: 1. कुछ शिक्षक विद्याथर्ती हैं। 2. सभी विद्याथर्ती लिड़कियाँ\nहैं।",
+      "options": [
+        "केवल I, II, III अनर्सरण करक्ते हैं",
+        "केवल II और III अनर्सरण करक्ते हैं",
+        "सभी अनर्सरण करक्ते हैं",
+        "केवल I अनर्सरण करक्ता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-58",
+      "text": "___ बिट्स की अधकतम संख्या है, जिसे एक माइक्रोप्रोसेसर एक बार में प्रोसेस कर सकता है।",
+      "options": [
+        "मेमोरी का आकार",
+        "शब्द का आकार (Word size)",
+        "घड़ी की गति",
+        "डेटा का आकार"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-59",
+      "text": "हरियाणा में किस नए विभाग का गठन हुआ?",
+      "options": [
+        "मर्ख्य विद्युत निरीक्षक",
+        "नागरिक संसाधनों की सू\u001eना",
+        "खाद्य एवं औषधि प्र शासन",
+        "उपयुक्त में से कोई नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-60",
+      "text": "एक विशेष प्र कार की मेमोरी है, जो RAM और ROM दोनों की त रिह काम करिती है।",
+      "options": [
+        "रजिस्टर मेमोरी",
+        "सेकेंडिरी मेमोरी",
+        "फ्लैश मेमोरी",
+        "कैश मेमोरी"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-61",
+      "text": "यूबेकनों के अलगाविवादी आंदोलिन का संबंध है:",
+      "options": [
+        "स्पे न",
+        "तर्कर्की",
+        "कनाडा",
+        "ऑस्ट्रेलिया"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-62",
+      "text": "भारतीय सरिकारी एजेंसी जो आपराधक आँकडों को एकति्रक्त करने और विश्लेषत करने के लिए उत्तरिदायी है:",
+      "options": [
+        "राष्ट्रीय अपराध अभिलेख ब्यूरो",
+        "उपभोता वित्तीय संरक्षण ब्यूरो",
+        "राष्ट्रीय स्व\u001eालित अंगर्लिछाप पह\u001eान प्र णाली",
+        "उपयुक्त में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-63",
+      "text": "20 पैसे और 25 पैसे के कुल 324 सिकों को जोड़कर ₹71 की रिकम बनती है, तो 25 पैसे के सिकों की\nसंख्या कितनी है?",
+      "options": [
+        "144",
+        "200",
+        "124",
+        "120"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-64",
+      "text": "केसरा राम ने अपने लिघु कहानियों के किस संकलिन हेतु 2020 का पंजाबी साहित्य के लिए धहन पुरिस्कार\nजीता?",
+      "options": [
+        "जननी पौड़",
+        "रानी टाट",
+        "जकारी",
+        "उपयुक्त में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-65",
+      "text": "यदि a, b, c शून्य नहीं हैं, a+(1/b)=1 और b+(1/c)=1 है, तो abc का मान कितना होगा?",
+      "options": [
+        "-1",
+        "3",
+        "1",
+        "-3"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-66",
+      "text": "हरियाणा राज्य में निम्नलिखित में से कौन-से प्र कार के मुख्य विन पाए जाते हैं?",
+      "options": [
+        "उपोष्णकटिबंधीय शर्ष्क पणर्टपाती वन",
+        "अल्पाइन वन",
+        "पवर्टतीय शीतोष्ण वन",
+        "उत में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-67",
+      "text": "पाँच वर्ष पूविर्ण, विनय की आयु विकास की आयु के 1/3 थी और विनय की आयु अब 17 वर्ष है। विकास की\nवितर्णमान आयु है:",
+      "options": [
+        "41 वषर्ट",
+        "51 वषर्ट",
+        "36 वषर्ट",
+        "9 वषर्ट"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-68",
+      "text": "जयेश की उम्र अनिल से उतनी ही कम है जितनी प्र शांत से अधक है। यदि अनिल और प्र शांत की उम्र का योग\n48 वर्ष है, तो जयेश की उम्र कितनी है?",
+      "options": [
+        "24 वषर्ट",
+        "30 वषर्ट",
+        "निधार्टरित नहीं किया जा सकता",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-69",
+      "text": "यदि Zर्BRA को 2652181 लिखा जा सकता है, तो COBRA को या लिखा जाएगा?",
+      "options": [
+        "31822151",
+        "1182153",
+        "3152181",
+        "302181"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-70",
+      "text": "अपघटन पर चूने का पत्थर ___ और काबर्णन-डाईऑसाइड देता है।",
+      "options": [
+        "कैल्शयम ऑक्साइड",
+        "कैल्शयम हाइड्रॉक्साइड",
+        "कैल्शयम हाइड्रोजन काबर्बोनेट",
+        "कैल्शयम काबर्बोनेट"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-71",
+      "text": "हरियाणा पुलिस का आदिशर्ण वाय है:",
+      "options": [
+        "सद्रक्षणाय खलनिग्रहणाय",
+        "परित्राणाय साधूनाम",
+        "सेवा सर्रक्षा सहयोग",
+        "सेवा ही लक्ष्य"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-72",
+      "text": "एक क्रिकेट के खेल में पहले 10 ओविर में रन रेट केविल 3.2 था। 282 रनों के लिक्ष्य तक पहुँचने के लिए शेष 40\nओविर में रन रेट कितना होना चाहिए?",
+      "options": [
+        "6.5",
+        "7",
+        "6.25",
+        "6.75"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-73",
+      "text": "इस प्र सिद्ध राजा को 'राय पिथौरा' कहते हैं:",
+      "options": [
+        "पृथ्वीराज \u001eौहान",
+        "जटवाँ",
+        "अनंगपाल - II",
+        "महीपाल"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-74",
+      "text": "हरियाणा महिला विकास निगम के वितर्णमान अध्यक्ष के रू प में किसे नियुक्त किया गया है?",
+      "options": [
+        "बबीता फोगाट",
+        "नेहा गोयल",
+        "विनेश फोगाट",
+        "उपयुक्त में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-75",
+      "text": "रोगियों के दांत का बड़ा प्र कि्तिबिम्ब देखने के लिए दिंत चिकित्सकों द्वारा इस्तेमाल किया जाने वाला दिपर्णण किसप्र\nकार का होता है?",
+      "options": [
+        "उत्तिल",
+        "समोत्तिल",
+        "समतल",
+        "अवतल"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-76",
+      "text": "लुप्त पद ज्ञात कीजिए: ab_db_da_dabdab_",
+      "options": [
+        "abab",
+        "caca",
+        "cccc",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-77",
+      "text": "श्रृं खला पूर्ण करें: 26, 12, 10, 16, ?",
+      "options": [
+        "52",
+        "53",
+        "56",
+        "50"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-78",
+      "text": "105, 85, 60, 30, 0, -45, -90 में गलित पद चुनिए:",
+      "options": [
+        "85",
+        "-45",
+        "60",
+        "0"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-79",
+      "text": "एसिटिक अम्ल का pKa और अमोनियम हाइड्रॉसाइड का pKb क्र मशः 4.76 और 4.75 है। अमोनियम\nएसिटेट विलियन का pH है:",
+      "options": [
+        "7.005",
+        "7.75",
+        "4.702",
+        "8.01"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-80",
+      "text": "यदि + का अथर्ण x, - का अथर्ण ÷, x का अथर्ण - और ÷ का अथर्ण + है, तो 9 + 8 ÷ 8 - 4 x 9 = ?",
+      "options": [
+        "17",
+        "11",
+        "65",
+        "26"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-81",
+      "text": "भारतीय जीविविज्ञान आँकड़ा केंद्र (IBDC) के बारे में विचार करें: I. यह भारत में जीविविज्ञान का प्र थम राष्ट्रीय\nकोष है II. यह RCB फिरीदाबाद में NIC के सहयोग से स्थापित है।",
+      "options": [
+        "केवल कथन II सही है",
+        "कथन I और II दोनों गलत हैं",
+        "कथन I और II दोनों सही हैं",
+        "केवल कथन I सही है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-82",
+      "text": "छह घंटे एक साथ बजना शुरू होते हैं और वे क्र मशः 2, 4, 6, 8, 10 और 12 सेकंड के अंतराल पर बजते हैं। 30\nमिनट में कितनी बार वे एक साथ बजेंगे?",
+      "options": [
+        "10",
+        "4",
+        "15",
+        "16"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-83",
+      "text": "दिए हु ए चित्र में ति्रभुजों की संख्या:",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "8"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-84",
+      "text": "लुप्त संख्या ज्ञात कीजिए: 4.5, 18, 2.25, ?, 1.6875, 33.75",
+      "options": [
+        "25.5",
+        "43",
+        "27",
+        "35"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-85",
+      "text": "450 K और 300 K के बीच परिचालित होने वाले एक कानर्योट इंजन की क्ष मता की गणना कीजिए।",
+      "options": [
+        "33.33%",
+        "77.7%",
+        "26.67%",
+        "66.66%"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-86",
+      "text": "यदि a - b = 3 और a^2 + b^2 = 29, तो ab का मान ज्ञात करें।",
+      "options": [
+        "12",
+        "10",
+        "15",
+        "18"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-87",
+      "text": "निम्नलिखित समरूपता पूर्ण कीजिए: देश : राष्ट्रपति :: राज्य : ?",
+      "options": [
+        "राज्यमंत्री",
+        "लेफ्टनेंट",
+        "राज्यपाल",
+        "मर्ख्यमंत्री"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-88",
+      "text": "देश के निम्नलिखित में से किस कृष जलिवायु क्षेत्र में हरियाणा राज्य आता है?",
+      "options": [
+        "उच्च गांगेय मैदानी क्षेत्र",
+        "पार गांगेय मैदानी क्षेत्र",
+        "निम्न गांगेय मैदानी क्षेत्र",
+        "उत में से कोई नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-89",
+      "text": "पेंथेरा लियो या है?",
+      "options": [
+        "शेर",
+        "बाघ",
+        "तेंदुआ",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-90",
+      "text": "2011 की जनगणना के अनुसार हरियाणा के इस जिले का साक्षरिता दर सवार्णधक है:",
+      "options": [
+        "पं\u001eकूला",
+        "फरीदाबाद",
+        "गर्रुग्राम",
+        "भिवानी"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-91",
+      "text": "पैरोल का अथर्ण है:",
+      "options": [
+        "अपराधी का जमानत पर रहा करना",
+        "सजा माफ",
+        "कैदी की अस्थाई रहाई",
+        "दंड में विप्रेषण"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-92",
+      "text": "हरियाणा में केंद्रीय मृदा लिविणता अनुसंधान संस्थान (CSSRI) ___ में स्थत है।",
+      "options": [
+        "करनाल",
+        "हिसार",
+        "पानीपत",
+        "उत में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-93",
+      "text": "यदि - का मतलिब '+', '+' का मतलिब 'x', 'x' का मतलिब '-' और '÷' का मतलिब '÷' हो, तो सही समीकरिण\n(Option Mapping Adjusted):",
+      "options": [
+        "30+5+14-10x15=22",
+        "30x5-4+10÷15=31",
+        "30-5+14+10x15=162",
+        "10+5-14+10x15=158"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-94",
+      "text": "निम्नलिखित में से कौन-सा रोग जूएंथ्रोपोनोसिस का एक उदाहरिण है?",
+      "options": [
+        "मानव क्ष यरोग",
+        "रेबीस",
+        "स्टेफाइलोकोकोसिस",
+        "ब्रू सेलोसिस"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-95",
+      "text": "हरियाणा में निम्नलिखित में से कौन-सी 'बेटी बचाओ-बेटी पढ़ाओ' अभियान की नोडल एजेंसी है?",
+      "options": [
+        "स्वास्थ्य एवं परिवार कल्याण विभाग",
+        "महिला एवं बाल विकास विभाग",
+        "मानव संसाधन मंत्रालय",
+        "सू\u001eना मंत्रालय"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-96",
+      "text": "पुलिस का जिला प्र शासन की अन्य एजेंसियों के साथ कायर्ण है:",
+      "options": [
+        "भूमि विवादों का निपटान",
+        "कोई बाह्य आक्रमण",
+        "सावर्टजनिक शांति भंग होना",
+        "उत सभी"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-97",
+      "text": "यह व्य त हरियाणा के गाँधी के नाम से प्र सिद्ध है:",
+      "options": [
+        "लाला लाजपत राय",
+        "मूल\u001eंद जैन",
+        "देवीलाल",
+        "सर छोटू राम"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-98",
+      "text": "गिरिफ्तार किए गए व्य त को ___ घंटों के भीतर मजिस्ट्रेटस्ट्रेट के समक्ष प्रस्तुत किया जाना चाहिए।",
+      "options": [
+        "24",
+        "48",
+        "36",
+        "12"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-99",
+      "text": "हरियाणा पुलिस हरियाणा सरिकार के ___ विभाग के अंतगर्णत आती है।",
+      "options": [
+        "वित्त विभाग",
+        "गृह विभाग",
+        "जनसंबंध विभाग",
+        "सामाजिक कल्याण विभाग"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    },
+    {
+      "id": "q-hssc-m6-100",
+      "text": "नाइट्रोजन स्थिरीकरण लेग्यूम-बैक्टीरिया है:",
+      "options": [
+        "राइजोबियम",
+        "एनाबैक्टर",
+        "रोडोसि्परिलम",
+        "प्लास्मोडियम"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-6"
+    }
+  ],
+  "test-hssc-police-full-7": [
+    {
+      "id": "q-hssc-m7-1",
+      "text": "1337-1453 के दौरान 100 वर्षीय युद्ध किसके बीच हुआ?",
+      "options": [
+        "रू स-इंग्लैंड",
+        "रू स-फ्रांस",
+        "इंग्लैंड-फ्रांस",
+        "इंग्लैंड-अमेरिका"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-2",
+      "text": "रित की सभी कोशिकाओं में सबसे प्र चुर मात्रा में क्या होते हैं?",
+      "options": [
+        "न्यूट्रोफिलस",
+        "एरिथ्रोसाइट्स",
+        "थ्रोम्बोसाइट्स",
+        "ल्यूकोसाइट्स"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-3",
+      "text": "दो जहाज एक लाइटहाउस के दोनों ओर समुद्र में तैर रहे हैं। जहाज से लाइटहाउस के शीषर्ष का उन्नति कोणक्र\nमशिः 30° और 45° है। यदि लाइटहाउस 100 मीटर ऊँचा है, तो दोनों जहाजों के बीच की दू री कितनी है?",
+      "options": [
+        "200 मी",
+        "173 मी",
+        "273 मी",
+        "300 मी"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-4",
+      "text": "एक चित्र के दशिर्षनीय प्रस्तुतिकरिण में जमर्मेनिया ने शाहबलूत के पत्तों का एक मुकुट पहना हुआ है, जमर्षन शाहबलूत\n___ के लिए आता है।",
+      "options": [
+        "समृद्ध विरासत",
+        "विविधता",
+        "वीरिता",
+        "देशभक्त"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-5",
+      "text": "4 महिलाएँ A, B, C और D तथा 4 पुरुष र्, F, G और H एक वृत्ताकार टेबल के चारों ओर एक दू सरे को मुख\nकरके बैठे हैं। कोई दो महिला या पुरुष साथ-साथ नहीं बैठे हैं। C, G और र् के बीच बैठी है और उसका मुख D की ओर\nहै। F, G की ओर मुख करके D और A के बीच बैठा है। H, B के दाएँ ओर है। A के बाएँ ओर कौन बैठा है?",
+      "options": [
+        "E",
+        "H",
+        "G",
+        "F"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-6",
+      "text": "तीन अनभिनत सिक्कों को उछाला जाता है, अधिक से अधिक दो शीषर्ष प्राप्त होने की प्रायिकता क्या होगी?",
+      "options": [
+        "7/8",
+        "1/4",
+        "3/8",
+        "3/4"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-7",
+      "text": "आँख के समायोजन की शक्ति आयु बढ़ने के साथ सामान्यतः घटती है। यह स्थिति ___ कहलाती है।",
+      "options": [
+        "दृ षि्टिविैषम्य",
+        "दू रिदृषि्टिदोष",
+        "निकटदृषि्टिदोष",
+        "जरादूरदृष्ट"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-8",
+      "text": "पंजाब से अलग होने पर हरियाणा में केवल ___ पुलिस रेंज थे।",
+      "options": [
+        "छह",
+        "शून्य",
+        "दो",
+        "एक"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-9",
+      "text": "प्र शा की शुरुआत पर 1834 में बनी कस्टम यूनियन का नाम जिससे अधिकांश जमर्षन राज्य जुड़े:",
+      "options": [
+        "जोलवेरन",
+        "नेशनिल एसेंÍल",
+        "नेशनिल गाड्र्ड्स",
+        "एस्टेट जनिरिल"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-10",
+      "text": "एक बल्लेबाज 110 रन बनाता है, जिसमें 3 चौके और 8 छक्के शामिल हैं। विकेटों के बीच दौड़कर वह अपने\nकुल रनों का कितना प्रतिशत रन बनाता है?",
+      "options": [
+        "55%",
+        "54 6/11%",
+        "45%",
+        "45 5/11%"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-11",
+      "text": "एक परीक्षा में रिमा का स्थान शीषर्ष से 16 वाँ और नीचे से 15 वाँ है, कक्षा में कुल कितने छात्र हैं?",
+      "options": [
+        "33",
+        "30",
+        "32",
+        "31"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-12",
+      "text": "वह चुनाव प्र णाली जिसमें वह अभ्यथर्षी जो अन्यों से आगे रिहता है, जो सबसे पहले विजय पद को पार करिता है,\nविजेता कहलाता है:",
+      "options": [
+        "द्विदलीय प्र णाली",
+        "अनेकत्व प्र णाली",
+        "अप्रक्त्यक्ष लोकतंत्र",
+        "प्रक्त्यक्ष लोकतंत्र प्र णाली"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-13",
+      "text": "गुदर्मे के खराब होने से रित में यूरिया का संचय हो सकता है, इसे क्या कहा जाता है?",
+      "options": [
+        "लाडर्डोसिस",
+        "यूरेमिया",
+        "डायलिसिस",
+        "यूरिकोमिया"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-14",
+      "text": "वह युक्त जो एक परिपथ में एक विद्युत की उपस्थिति की जाँच कर सके:",
+      "options": [
+        "डायोड",
+        "वोल्टमीटर",
+        "प्र तिरोधक",
+        "गैल्विनोमीटर"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-15",
+      "text": "किस मामले में पुलिस किसी व्य त को बिना वारिंट के गिरिफ्तार कर सकती है?",
+      "options": [
+        "जब अदालत में उसकी उपस्थिति सुनिशि्चित हो जाती है",
+        "कोई व्य त जब कोई असंज्ञेय अपराध करिता है",
+        "7 साल से कम अवधि का कारावास युक्त दंडनीय अपराध किया\nहै",
+        "7 साल से अधिक अवधि का कारावास युक्त दंडनीय अपराध\nकिया है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-16",
+      "text": "अंतरार्षष्ट्रीय सैन्य-तकनीकी मंच 'आमर्षी 2021' का उद्घाटन कहाँ किया गया?",
+      "options": [
+        "गुरुग्राम, हरियाणा",
+        "कुबिंका, मॉस्को",
+        "रित्निपुत्र, सबरागमुवा",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-17",
+      "text": "हरियाणा में कितने जिला जेल हैं?",
+      "options": [
+        "16",
+        "13",
+        "15",
+        "14"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-18",
+      "text": "किस वायसराय ने निवार्षचित स्थानीय सरिकारी निकायों के निमार्षण की पहल की?",
+      "options": [
+        "लॉडर्ड्हाʃडंग",
+        "लॉर्ड लिटन",
+        "लॉर्ड वारेन हेɱस्टंग्स",
+        "लॉर्ड रिपन"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-19",
+      "text": "मंति्रपरिषद सामूहिक रू प से किसके प्र त उत्तरिदायी है?",
+      "options": [
+        "लोकसभा",
+        "राज्यसभा",
+        "प्रधानमंत्री",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-20",
+      "text": "___ डेटा की सबसे छोटी इकाई है जिसे कंप्यूटर प्रदर्शित कर सकता है।",
+      "options": [
+        "शब्द",
+        "बिट",
+        "निबल",
+        "टेबल्स"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-21",
+      "text": "___ ठंडे जल के साथ तेजी से अभिक्रिया करिता है।",
+      "options": [
+        "मैग्नीशियम",
+        "पारा",
+        "कैल्शयम",
+        "पोटेशियम"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-22",
+      "text": "दंड प्र कि्रया संहिता, 1973 (सीआरिपीसी) की धारा 159 मजिस्ट्रेटस्ट्रेट को अधिकार देती है:",
+      "options": [
+        "मजिस्ट्रेटɥस्ट्रयल जाँच के आदेश",
+        "पुलिस जाँच पर लगाम लगाने के लिए",
+        "(A) और (B) दोनों",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-23",
+      "text": "एक आयताकार पाकर्ष की लिंबाई और चौड़ाई का अनुपात 3:2 है। यदि एक व्य त पाकर्ष की सीमा के चारों ओर\n12 किमी/घंटा की गति से साइकलिर्शिग करिता है, तो उसे एक चक्कर पूरा करने में 8 मिनट लिगते हैं, तो पाकर्ष का क्षेत्र फल\n(वगर्ष मीटर में) कितना है?",
+      "options": [
+        "15360",
+        "307200",
+        "30720",
+        "153600"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-24",
+      "text": "हरियाणा में कुल संसदीय सीटे हैं:",
+      "options": [
+        "15",
+        "12",
+        "10",
+        "उपरोक्त में से कोई नहीं\n\n-- 4 of 17 --"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-25",
+      "text": "काɷडर्शियाक मसल ऊतक एक सिकुड़ा हुआ ऊतक है, जो केवल ___ में मौजूद होता है।",
+      "options": [
+        "लिविर",
+        "हृ दय",
+        "अग्नाशय",
+        "विृक"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-26",
+      "text": "भारत ने सबसे पहले हींग की खेती कहाँ शुरू की?",
+      "options": [
+        "हिमाचल प्र देश के ठंडे रेगिस्तान",
+        "उत्तराखंड के ठंडे रेगिस्तान",
+        "लड़ाख के ठंडे रेगिस्तान",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-27",
+      "text": "हरियाणा में स्टेट फिर्शिगर पि्रर्शिट ब्यूरो की स्थापना कब की गई थी?",
+      "options": [
+        "1997",
+        "1972",
+        "1991",
+        "1975"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-28",
+      "text": "डबल रोटी कवक (Bread mould) का अन्य नाम क्या है?",
+      "options": [
+        "यीस्ट",
+        "पेनिसीलियम",
+        "पेजिजा",
+        "राइजोपस"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-29",
+      "text": "यूएसएमसीए (USMCA) के सदस्य (जिन्होंने नाफ्टा की जगह ली है) हैं:",
+      "options": [
+        "संयुक्त राज्य अमेरिका-मेसको-कनाडा",
+        "यूनाइटेड किंगडम-मेसको-कनाडा",
+        "संयुक्त राज्य अमेरिका-मंगोलिया-कनाडा",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-30",
+      "text": "भारत के संविधान द्वारा परिकलि्पत लोकसभा में सदस्यों की अधिकतम संख्या क्या है?",
+      "options": [
+        "544",
+        "545",
+        "552",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-31",
+      "text": "हरियाणा का राज्य वृक्ष है:",
+      "options": [
+        "फाइकस बेंगालेंसिस",
+        "फाइकस रिलीजिओसा",
+        "फाइकस रेसिमोसा",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-32",
+      "text": "शिब्द 'Lर्ADING' के अक्षरों को अलग-अलग कितने तरीकों से इस प्र कार व्य वस्थित किया जा सकता है,\nजिसमें स्वर हमेशा एक साथ रहें?",
+      "options": [
+        "360",
+        "5040",
+        "720",
+        "480"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-33",
+      "text": "निम्नलिखित में से किस भारतीय पहलिवान ने ऑɥस्टन, टेक्सास में 150 पाउंड (68 किलो) फ्लोरेस्लिंग\nइɥन्वटेशिनल मीट को जीता है?",
+      "options": [
+        "बजरिंग पुनिया",
+        "साक्षी मलिक",
+        "विनेश फोगट",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-34",
+      "text": "हरियाणा रोडवेज इंजीनियɩरिर्शिग कॉपर्पोरेशिन (HRर्C) ___ में स्थित है।",
+      "options": [
+        "सिरिसा",
+        "गुरुग्राम",
+        "पंचकुला",
+        "फिरीदाबाद"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-35",
+      "text": "यदि P, Q से लिंबा है परिंतु R से छोटा है, S, R से छोटा है परिंतु P से लिंबा है और T, R से छोटा है, तो सबसे लिंबा\nहै:",
+      "options": [
+        "T",
+        "R",
+        "Q",
+        "P"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-36",
+      "text": "___ आपकी अपनी वेबसाइट के भीतर पृष्ठों के लिर्शिक हैं।",
+      "options": [
+        "टेस्ट लिंक",
+        "बाहरी लिंक",
+        "यू.आर.एल.",
+        "आंतरिक लिंक"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-37",
+      "text": "नीचे दिए गए चित्र में '?' के स्थान पर कौन-सा मान होगा? (पैटनर्ष आधारित)",
+      "options": [
+        "1",
+        "4",
+        "3",
+        "2"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-38",
+      "text": "हरियाणा के निम्नलिखित में से किस शिहर को सबसे स्माटर्ष शिहर के रू प में विकसित किया जाएगा?",
+      "options": [
+        "गुरुग्राम",
+        "सिरिसा",
+        "सोनीपत",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-39",
+      "text": "एक समकोण ति्रभुज में यदि आधार की लिंबाई 8 cm है और ऊँचाई 6 cm है, तो कणर्ष की लिंबाई है:",
+      "options": [
+        "10 cm",
+        "14 cm",
+        "2 cm",
+        "48 cm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-40",
+      "text": "___ को तत्समय 1904 में ब्रिटिश सरिकार द्वारा शिम्स-उल-उलेमा की उपाधि दी गई।",
+      "options": [
+        "बाणभट्ट",
+        "बालमुकुद गुप्त",
+        "अल्ताफ हुसैन हाली",
+        "सूरिदास"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-41",
+      "text": "2011 की जनगणना के अनुसार हरियाणा का जनसंख्या घनत्व क्या है?",
+      "options": [
+        "855 व्य त प्र त विगर्ड्किमी",
+        "666 व्य त प्र त विगर्ड्किमी",
+        "573 व्य त प्र त विगर्ड्किमी",
+        "733 व्य त प्र त विगर्ड्किमी"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-42",
+      "text": "नीचे दी गई श्रृं खला को पूणर्ष करने के लिए दिए गए विकल्प से सही उत्तर चुनिए: DILQTYBG?",
+      "options": [
+        "J",
+        "O",
+        "H",
+        "I"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-43",
+      "text": "361 से 19 उसी प्र कार संबंधत है, जैसे ___ से 21 संबंधत है।",
+      "options": [
+        "400",
+        "324",
+        "441",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-44",
+      "text": "हरियाणा के निम्नलिखित में से किस कृष विश्वविद्यालिय ने रोग प्र तिरोधी मटर की किस्म एचएफपी-1428 को\nविकसित किया है?",
+      "options": [
+        "ICAR-NDRI, करनाल",
+        "CCSHAU, हिसार",
+        "महाराणा प्र ताप बागवानी विश्वविद्यालय, करनाल",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-45",
+      "text": "हरियाणा में सुर सम्मान पुरिस्कार किस क्षेत्र में दिया जाता है?",
+      "options": [
+        "सिनेमा",
+        "खेल",
+        "साहित्य",
+        "कृषि"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-46",
+      "text": "दंड प्र कि्रया संहिता, 1973 (सीआरिपीसी) की धारा 39 और 40 के तहत कुछ अपराधों के कमीशिन के बारे में\nजानकारी देना अनिवायर्ष है। ऐसी जानकारी ___ को दी जा सकती है।",
+      "options": [
+        "स्थानीय टीवी चैनिल",
+        "विकील",
+        "मजिस्ट्रेटस्ट्रेट या पुलिस अधिकारी",
+        "केविल पुलिस अधिकारी"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-47",
+      "text": "संख्या 94316875 के पहले और दू सरे अंक का स्थान आपस में बदल दिया जाता है। इसी प्र कार, तीसरे और\nचौथे अंकों और इसी प्र कार अन्य अंकों का स्थान भी आपस में बदल दिया जाता है। पुनः व्य वस्था के बाद बाएँ छोर से\nसातवें अंक के बाएँ से तीसरा अंक कौन-सा होगा?",
+      "options": [
+        "4",
+        "1",
+        "6",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-48",
+      "text": "निम्नलिखित श्रृं खला में x के लिए सही विकल्प चुनिए: 1, 4, 9, 16, x",
+      "options": [
+        "25",
+        "20",
+        "18",
+        "22"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-49",
+      "text": "हाइड्रा में कौन-से प्र कार का प्र जनन दिखता है?",
+      "options": [
+        "मुकुलन (Budding)",
+        "विखंडन",
+        "पुनरुत्पादन",
+        "खंडन"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-50",
+      "text": "दिए गए विकल्पों से संबंधत शिब्द को चुनिए: पशि्चिम : उत्तर-पूवर्ष :: दकि्षण : ?",
+      "options": [
+        "पूविर्ड्",
+        "उत्तर",
+        "उत्तर-पशि्चिम",
+        "दकि्षण-पूविर्ड्"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-51",
+      "text": "दो अंकों वाली एक संख्या और उसके अंकों के स्थान को बदलिने से प्राप्त संख्या का अंतर 36 है, तो उस संख्या\nके दोनों अंकों के बीच का अंतर कितना है?",
+      "options": [
+        "3",
+        "निधार्ड्रित नहीं किया जा सकता",
+        "9",
+        "4"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-52",
+      "text": "हरियाणा पुलिस अकादमी (HPA) मधुबन में कब से आईपीएस परिवीक्षाधीनों को प्र शिक्षण दे रही है?",
+      "options": [
+        "1999",
+        "1966",
+        "1988",
+        "1977"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-53",
+      "text": "दी गई संख्या श्रृं खला में कितने '9' ऐसे हैं जिनके आगे 3 और पीछे 6 है?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-54",
+      "text": "ग्लाइकोसिडिक बॉन्ड किस प्र कि्रया से बनता है?",
+      "options": [
+        "एनोटेशन",
+        "निजर्ड्लीकरिण",
+        "जलयोजन",
+        "पुनिजर्ड्लीकरिण"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-55",
+      "text": "डेटाबेस प्र विषि्टियों को ___ कहा जाता है।",
+      "options": [
+        "फिॉमर्ड्",
+        "फ़ील्ड",
+        "रिकॉडर्ड्",
+        "टेबल्स"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-56",
+      "text": "प्रक्त्येक टेबल एक स्प्रे डशीट गि्रिड के रू प में प्रस्तुत होती है, जिसे ___ कहते हैं।",
+      "options": [
+        "डेटाशीट",
+        "वेरीज़",
+        "रिकॉडर्ड्",
+        "टेबल्स"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-57",
+      "text": "A, B, C, D, र् और F छह व्य त हैं। C, F की बहन है। B, र् के पति का भाई है। D, A का पिता और F का\nदादा है। समूह में दो पिता, तीन भाई और एक माँ हैं। माँ कौन है?",
+      "options": [
+        "E",
+        "A",
+        "B",
+        "D"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-58",
+      "text": "जब ___ बिट्स को एक इकाई के रू प में एक साथ समूहीकृत किया जाता है, तो वे एक बाइट बनाते हैं।",
+      "options": [
+        "8",
+        "5",
+        "6",
+        "4"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-59",
+      "text": "log√8 / log8 किसके बराबर होगा?",
+      "options": [
+        "1/8",
+        "1/√8",
+        "1/2",
+        "1/4"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-60",
+      "text": "निम्नलिखित में से किसका अपवतर्षनांक (refractive index) अधिक है?",
+      "options": [
+        "हीरा",
+        "बफिर्ड्",
+        "माणिय",
+        "कार्बन"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-61",
+      "text": "___ एक टेबल में एक कॉलिम है जिसमें एक रिकॉडर्ष के भीतर जानकारी का एक विशिष्ट भाग होता है।",
+      "options": [
+        "फ़ील्ड",
+        "डेटाशीट",
+        "रिपोटर्ड्",
+        "फि़ल्टर"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-62",
+      "text": "हरियाणा पुलिस के दकि्षण रेंज में निम्नलिखित जिले में से कौन शामिल नहीं है?",
+      "options": [
+        "पलविल",
+        "रेवाड़ी",
+        "झज्जर",
+        "महेंद्रगढ़"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-63",
+      "text": "फोटो में एक महिला की ओर इशारा करिते हु ए राजीव ने कहा, 'उसकी माँ को एकमात्र पोता है जिसकी माँ मेरी\nपत्नी है'। उस फोटो की महिला का राजीव से क्या संबंध है?",
+      "options": [
+        "डाटा पयार्ड्प्त नहीं",
+        "बहन",
+        "चचेरी बहन",
+        "पत्नी"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-64",
+      "text": "उत्प्रेरिक शक्ति वाले प्रोटीनों को क्या नाम दिया गया है?",
+      "options": [
+        "अम्ल",
+        "एंजाइम",
+        "क्षार",
+        "हार्मोन"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-65",
+      "text": "हरियाणा में केंद्र सरिकार द्वारा वित्त पोषत कितनी अर्धसैनिकक बटालियन हैं जिसे इंडिया रिजवर्ष बटालियन कहा\nजाता है?",
+      "options": [
+        "3",
+        "1",
+        "4",
+        "2"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-66",
+      "text": "पाइप A और B एक टंकी को क्र मशिः 5 और 6 घंटे में भर सकते हैं। पाइप C उसे 12 घंटे में खाली कर सकता है।\nयदि तीनों पाइपों को एक साथ खोल दिया जाए, तो टंकी को भरने में कितना समय लिगेगा?",
+      "options": [
+        "4 1/2 घंटे",
+        "1 13/17 घंटे",
+        "3 9/17 घंटे",
+        "3 8/11 घंटे"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-67",
+      "text": "पंजाब पुलिस नियम कब बनाए गए थे?",
+      "options": [
+        "1966",
+        "1934",
+        "1954",
+        "1944"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-68",
+      "text": "20 प्रतिरोध की एक विद्युत इस्त्री में 5A की विद्युत है। 30 सेकंड में विकसित ऊष्मा है:",
+      "options": [
+        "0.4x10^4J",
+        "3.5x10^4J",
+        "1.5x10^4J",
+        "2.4x10^4J"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-69",
+      "text": "वषर्ष 1979 में हरियाणा पुलिस का पहला कंप्यूटर केंद्र कहाँ असि्तत्व में आया था?",
+      "options": [
+        "चंडीगढ़",
+        "गुरुग्राम",
+        "फिरीदाबाद",
+        "करनाल"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-70",
+      "text": "P, Q, R, S, T और U छह दोस्त हैं। T, जो क P और S से लिंबा है, टेनिस खेलिता है। इनमें सबसे लिंबा\nबास्केटबॉल खेलिता है। Q और S न वालीबॉल खेलिते हैं न बास्केटबॉलि। R वालीबॉल खेलिता है। T की लिंबाई फुटबॉल\nखेलिने वाले और P के बीच है। बास्केटबॉल कौन खेलिता है?",
+      "options": [
+        "U",
+        "S",
+        "Q",
+        "R"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-71",
+      "text": "___ सूचना की एक संपूणर्ष डेटाबेस सूची है।",
+      "options": [
+        "फ़ील्ड",
+        "फिॉमर्ड्",
+        "टेबल",
+        "रिकॉडर्ड्"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-72",
+      "text": "एक चालू घड़ी में सुबह के 8 बजे हैं। दोपहर के 2 बजे का समय दिखाने के लिए घंटे की सुई कितने डिग्री का\nकोण दिखाएगी?",
+      "options": [
+        "180°",
+        "144°",
+        "168°",
+        "150°"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-73",
+      "text": "डिजिटल कृष को बढ़ावा देने के लिए भारत के कृष मंत्रालिय ने हाल ही में छह राज्यों के 100 गाँवों में एक\nपायलिट परियोजना के लिए किस तकनीकी दिग्गज के साथ समझौता ज्ञापन पर हस्ताक्षर किए हैं?",
+      "options": [
+        "गूगल",
+        "माइक्रोसॉफ्ट",
+        "फेसबुक",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-74",
+      "text": "एक पूणर्ष ऑपरेटिंग सिस्टम जो एक डेस्कटॉप कंप्यूटर, नोटबुक या मोबाइल पर काम करिता है, ___ ऑपरेटिंग\nसिस्टम कहलाता है।",
+      "options": [
+        "रियल टाइम",
+        "सविर्ड्र",
+        "स्टैंड-अलोन",
+        "मोबाइल"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-75",
+      "text": "यदि उपरोक्त व्य वस्था से सभी चिन्हों को हटा दिया जाए, तो दाएँ से सातवें अक्षर/अंक के बाएँ से तीसरा\nनिम्नलिखित में कौन होगा?",
+      "options": [
+        "M",
+        "G",
+        "D",
+        "R"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-76",
+      "text": "किसी ब्राउज़र का उपयोग करके वेब पेज का पता लिगाने के लिए आपको ब्राउज़र के एड्रेस या लोकेशिन बार में\nउसका ___ टाइप करना होगा।",
+      "options": [
+        "बाहरी लिंक",
+        "हाइपरिलिंक",
+        "आंतरिक लिंक",
+        "URL"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-77",
+      "text": "वनस्पति पदाथर्ष का कम्पोस्ट में विघटन ___ का एक उदाहरिण है।",
+      "options": [
+        "प्रतिस्थापन अभिक्रिया",
+        "रेडॉक्स अभिक्रिया",
+        "ऊष्माशोषी अभिक्रिया",
+        "ऊष्मोत्सर्जी अभिक्रिया"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-78",
+      "text": "A एक काम को 15 दिनों में और B उसे 20 दिनों में कर सकता है। यदि वे 4 दिनों तक एक साथ उस काम को\nकरिते हैं, तो काम का कितना भाग शेष रिह जाएगा?",
+      "options": [
+        "8/15",
+        "1/4",
+        "1/10",
+        "7/15"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-79",
+      "text": "पाँसे की तीन स्थितियाँ दी गई हैं, 5 के सम्मुख कौन-सी संख्या है?",
+      "options": [
+        "4",
+        "2",
+        "3",
+        "1"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-80",
+      "text": "___ एक विशेष संवाद बॉक्स है जिसमें टेबल के सभी फ़ील्ड शामिल हैं।",
+      "options": [
+        "रिकॉडर्ड्",
+        "डेटा फिॉमर्ड्",
+        "फ़ील्ड",
+        "टेबल्स"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-81",
+      "text": "दिए गए युग्मों में से ऐसे युग्म को चुनें जो समूह में अन्य से भिन्न है:",
+      "options": [
+        "22:46",
+        "1:4",
+        "10:24",
+        "8:18"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-82",
+      "text": "ई-श्रम पोटर्षल ___ का एक राष्ट्रीय डेटाबेस है।",
+      "options": [
+        "महिला कायर्ड्कतार्ड्ओं",
+        "दिव्यांग कायर्ड्कतार्ड्ओं",
+        "असंगठित श्र मिकों",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-83",
+      "text": "हरियाणा में कृष उपज को किसके तहत विनियमित किया जा रहा है?",
+      "options": [
+        "हरियाणा कृषि उत्पाद बाजार अधिनियम, 1971",
+        "पंजाब कृषि उत्पाद बाजार अधिनियम, 1981",
+        "पंजाब कृषि उत्पाद बाजार अधिनियम, 1961",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-84",
+      "text": "लुप्त पद चुनिए: BA, DC, Fर्, ?",
+      "options": [
+        "GH",
+        "HG",
+        "IH",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-85",
+      "text": "24 कैरेट सोने को कठोर बनाने के लिए या तो ___ या ताँबे के साथ मिशि्रक्त किया जाता है।",
+      "options": [
+        "सीसा",
+        "चाँदी",
+        "जस्ता",
+        "टिन"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-86",
+      "text": "अपराह्न 3:30 बजे, एक घड़ी की मिनट सुई पूवर्ष की ओर है। रात 9:00 बजे घंटे की सुई की दिशा क्या होगी?",
+      "options": [
+        "दकि्षण-पशि्चिम",
+        "पूविर्ड्",
+        "दकि्षण",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-87",
+      "text": "एक समूह में 50 लोग हिंदी बोलते हैं, 20 तमिल बोलते हैं और 10 हिंदी और तमिल दोनों बोलते हैं, तो उन लोगों\nकी संख्या जो हिंदी या तमिल बोलते हैं:",
+      "options": [
+        "80",
+        "70",
+        "60",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-88",
+      "text": "निम्नलिखित में से कौन-सा एकलिंगी पुष्प का उदाहरिण है?",
+      "options": [
+        "सूयर्ड्मुखी",
+        "पपीता",
+        "सरसों",
+        "हिबिस्कस"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-89",
+      "text": "यदि x मीटर तार का मूल्य d रु पया है, तो उसी दर से y मीटर तार का मूल्य कितना होगा?",
+      "options": [
+        "yd/x",
+        "yd",
+        "xy/d",
+        "xd"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-90",
+      "text": "हरियाणा की कितनी महिला हॉकी खिलाडि़यों ने टोक्यो ओलिंपिक 2020 के हॉकी टूनार्षमेंट में भारत काप्र\nतिनिधित्व किया है?",
+      "options": [
+        "12",
+        "9",
+        "6",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-91",
+      "text": "निम्नलिखित समरूपता पूणर्ष कीजिए: जूते : चमड़ा :: रबर : ?",
+      "options": [
+        "चप्पल",
+        "प्लाɥस्टक",
+        "लेटेक्स",
+        "पॉलीथिन"
+      ],
+      "correctIndex": 2,
+      "explanation": "Correct Answer is Option C.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-92",
+      "text": "किस योजना के कारिण, हरियाणा एक परिवार नियोजन उपाय के रू प में अंतःक्षेपण योग्य गभर्षनिरोधिक केप्र\nयोग को कार्यान्वित करने वाला भारत का पहला राज्य बन गया?",
+      "options": [
+        "ग्रामोदय",
+        "सलामती योजना",
+        "अंत्योदय आहार योजना",
+        "ऑपरेशन मुस्कान"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-93",
+      "text": "मलेरिया किसके कारिण होता है?",
+      "options": [
+        "एंटाअमीबा",
+        "प्लाज्मोडियम",
+        "टि्रपैनोसोमा",
+        "पैरामीशियम"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-94",
+      "text": "हरियाणा कैबिनेट ने ___ के बीच 'क्षेत्रीय रिैपिड ट्रांसपोटर्ष सिस्टम (आरिआरिटीएस)' कॉरिडोर के कायार्षन्वयन को\nमंजूरी दी है।",
+      "options": [
+        "राजस्थान - गुरुग्राम",
+        "दिल्ली - पानीपत",
+        "अमृतसर - गुरुग्राम",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-95",
+      "text": "किस संशोधिन अधिनियम द्वारा भारतीय संविधान में 'नागरिकों के मौलिक कतर्षव्यों' को शामिल किया गया?",
+      "options": [
+        "42वाँ",
+        "32वाँ",
+        "62वाँ",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-96",
+      "text": "दंड प्र कि्रया संहिता, 1973 की धारा 167 के तहत किसी आरोपी को रिमांड पर भेजने की मजिस्ट्रेटस्ट्रेट की शक्ति\nके लिए कौन-सा कथन सही है?",
+      "options": [
+        "90 दिनों की अधिकतम अवधि के भीतर जाँच पूरी नहीं होती,\nतो रिहा करना होगा",
+        "60 दिनों के भीतर जाँच पूरी न होने पर जमानत पर रिहा करना\nहोगा",
+        "न्यायिक हिरासत में रिमांड 15 दिन से अधिक नहीं, उसके बाद\nपुलिस हिरासत",
+        "पुलिस हिरासत में रिमांड 15 दिन से अधिक नहीं, उसके बादन्यायिक हिरासत"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-97",
+      "text": "P, Q, R, S, T, U और V एक पाकर्ष में एक बेंच पर बैठे हैं और सभी पूवर्ष दिशा की ओर हैं। R, S के ठीक दाएँ है।\nQ एक अंतिम छोर पर है और T उसका पड़ोसी है। V, T और U के बीच है। S दकि्षण छोर से तीसरे स्थान पर बैठा है।\nकिन व्य तयों का युग्म सबसे किनारों पर बैठा है?",
+      "options": [
+        "UQ",
+        "PQ",
+        "RQ",
+        "PT"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-98",
+      "text": "निम्नलिखित में से किसे हरियाणा का कालीदास कहते हैं?",
+      "options": [
+        "पंडित भक्तरू कुत्बी",
+        "दीपचंद बहमनी",
+        "स्वामी हरिदेव",
+        "किशन लाल भाट"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct Answer is Option B.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-99",
+      "text": "राज्यसभा का पदेन सभापति कौन होता है?",
+      "options": [
+        "उपराष्ट्रपति",
+        "राष्ट्रपति",
+        "प्रधानमंत्री",
+        "उपरोक्त में से कोई नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Correct Answer is Option A.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
+    },
+    {
+      "id": "q-hssc-m7-100",
+      "text": "यदि P, Q का भाई है, M, Q की बहन है और T, P का भाई है, तो Q, T से किस प्र कार संबंधत है?",
+      "options": [
+        "आँकड़े अपर्याप्त है",
+        "भाई",
+        "बहन",
+        "भाई या बहन"
+      ],
+      "correctIndex": 3,
+      "explanation": "Correct Answer is Option D.",
+      "sectionName": "Haryana Police Constable Mock",
+      "testId": "test-hssc-police-full-7"
     }
   ]
 };

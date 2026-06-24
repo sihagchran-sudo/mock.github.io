@@ -145,6 +145,8 @@ const BASE_MOCK_TESTS: Test[] = [
   { id: 'test-hssc-police-full-3', title: 'HSSC Haryana Police Constable - Full Mock Test 3', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100 },
   { id: 'test-hssc-police-full-4', title: 'HSSC Haryana Police Constable - Full Mock Test 4', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard' },
   { id: 'test-hssc-police-full-5', title: 'HSSC Haryana Police Constable - Full Mock Test 5', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard' },
+  { id: 'test-hssc-police-full-6', title: 'HSSC Haryana Police Constable - Full Mock Test 6', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard' },
+  { id: 'test-hssc-police-full-7', title: 'HSSC Haryana Police Constable - Full Mock Test 7', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard' },
   { id: 'test-hssc-police-sec-gk', title: 'Haryana General Knowledge - Sectional Mock', duration: 20, totalMarks: 25, testType: 'SECTIONAL', examId: 'exam-hssc-police', questionCount: 5 },
   { id: 'test-hssc-police-chap-agri', title: 'Chapter Test: Agriculture & Animal Husbandry', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 5 },
 ];
