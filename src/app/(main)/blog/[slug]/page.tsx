@@ -50,114 +50,117 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
           
           {/* Main content column (Left) */}
           <div className="lg:col-span-2 space-y-8">
-            
-            {/* Sarkari Job Summary Sheet */}
-            <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-              <h2 className="text-lg font-bold text-slate-800 border-b border-slate-100 pb-3 mb-4 flex items-center gap-2">
-                📋 Official Notification Summary
-              </h2>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                  <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Authority</span>
-                  <span className="font-extrabold text-slate-700 text-sm">{details.authority}</span>
-                </div>
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                  <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Post Name</span>
-                  <span className="font-extrabold text-slate-700 text-sm">{details.postName}</span>
-                </div>
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                  <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Eligibility Criteria</span>
-                  <span className="font-semibold text-slate-600 text-xs">{details.eligibility}</span>
-                </div>
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                  <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Age Limit</span>
-                  <span className="font-extrabold text-slate-700 text-sm">{details.ageLimit}</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Subject weightage pattern */}
-            <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-              <h2 className="text-lg font-bold text-slate-800 border-b border-slate-100 pb-3 mb-4 flex items-center gap-2">
-                📊 Subject-wise Marks Weightage
-              </h2>
-              <p className="text-xs text-slate-500 mb-4">
-                The mock test series for this exam is simulated exactly using this official subject schema.
-              </p>
-              
-              <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse text-xs sm:text-sm">
-                  <thead>
-                    <tr className="border-b border-slate-200 bg-slate-50 text-slate-600 font-bold">
-                      <th className="py-3 px-4 rounded-l-xl">Subject / Section</th>
-                      <th className="py-3 px-4 text-center">Questions</th>
-                      <th className="py-3 px-4 text-center rounded-r-xl">Total Marks</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100 text-slate-700 font-medium">
-                    {details.subjects.map((sub, index) => (
-                      <tr key={index} className="hover:bg-slate-50/50">
-                        <td className="py-3 px-4 font-semibold text-slate-800">{sub.name}</td>
-                        <td className="py-3 px-4 text-center text-slate-600">{sub.questions} Qs</td>
-                        <td className="py-3 px-4 text-center font-bold text-slate-900">{sub.marks} Marks</td>
-                      </tr>
-                    ))}
-                    <tr className="bg-blue-50/30 font-bold border-t border-slate-200">
-                      <td className="py-3.5 px-4 text-blue-700">Total Pattern Scheme</td>
-                      <td className="py-3.5 px-4 text-center text-blue-750">
-                        {details.subjects.reduce((sum, s) => sum + s.questions, 0)} Qs
-                      </td>
-                      <td className="py-3.5 px-4 text-center text-blue-800 font-extrabold">
-                        {details.totalMarks} Marks
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            {/* Detailed syllabus section */}
-            <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-              <h2 className="text-lg font-bold text-slate-800 border-b border-slate-100 pb-3 mb-5 flex items-center gap-2">
-                📖 Complete Syllabus Topics
-              </h2>
-              
-              <div className="space-y-6">
-                {details.fullSyllabus.map((section, idx) => (
-                  <div key={idx} className="border border-slate-150 rounded-2xl p-4 sm:p-5 hover:border-slate-300 transition-colors">
-                    <h3 className="font-extrabold text-slate-800 text-sm sm:text-base mb-3 flex items-center gap-2">
-                      <span className="text-blue-500 text-xs">◆</span> {section.section}
-                    </h3>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-slate-600 font-medium">
-                      {section.topics.map((topic, tIdx) => (
-                        <li key={tIdx} className="flex items-start gap-1.5">
-                          <span className="text-slate-400 mt-0.5">•</span>
-                          <span>{topic}</span>
-                        </li>
-                      ))}
-                    </ul>
+                   {blog.type !== 'info' && (
+              <>
+                {/* Sarkari Job Summary Sheet */}
+                <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+                  <h2 className="text-lg font-bold text-slate-800 border-b border-slate-100 pb-3 mb-4 flex items-center gap-2">
+                    📋 Official Notification Summary
+                  </h2>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                      <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Authority</span>
+                      <span className="font-extrabold text-slate-700 text-sm">{details.authority}</span>
+                    </div>
+                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                      <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Post Name</span>
+                      <span className="font-extrabold text-slate-700 text-sm">{details.postName}</span>
+                    </div>
+                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                      <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Eligibility Criteria</span>
+                      <span className="font-semibold text-slate-650 text-xs">{details.eligibility}</span>
+                    </div>
+                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                      <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Age Limit</span>
+                      <span className="font-extrabold text-slate-700 text-sm">{details.ageLimit}</span>
+                    </div>
                   </div>
-                ))}
-              </div>
-            </div>
+                </div>
 
-            {/* Preparation tips */}
-            <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-              <h2 className="text-lg font-bold text-slate-800 border-b border-slate-100 pb-3 mb-4 flex items-center gap-2">
-                💡 Expert Preparation Strategy
-              </h2>
-              <ul className="space-y-3">
-                {details.prepTips.map((tip, index) => (
-                  <li key={index} className="flex gap-3 text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
-                    <span className="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 text-xs font-bold shrink-0">
-                      {index + 1}
-                    </span>
-                    <span>{tip}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                {/* Subject weightage pattern */}
+                <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+                  <h2 className="text-lg font-bold text-slate-800 border-b border-slate-100 pb-3 mb-4 flex items-center gap-2">
+                    📊 Subject-wise Marks Weightage
+                  </h2>
+                  <p className="text-xs text-slate-500 mb-4">
+                    The mock test series for this exam is simulated exactly using this official subject schema.
+                  </p>
+                  
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                      <thead>
+                        <tr className="border-b border-slate-200 bg-slate-50 text-slate-600 font-bold">
+                          <th className="py-3 px-4 rounded-l-xl">Subject / Section</th>
+                          <th className="py-3 px-4 text-center">Questions</th>
+                          <th className="py-3 px-4 text-center rounded-r-xl">Total Marks</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100 text-slate-700 font-medium">
+                        {details.subjects.map((sub, index) => (
+                          <tr key={index} className="hover:bg-slate-50/50">
+                            <td className="py-3 px-4 font-semibold text-slate-800">{sub.name}</td>
+                            <td className="py-3 px-4 text-center text-slate-600">{sub.questions} Qs</td>
+                            <td className="py-3 px-4 text-center font-bold text-slate-900">{sub.marks} Marks</td>
+                          </tr>
+                        ))}
+                        <tr className="bg-blue-50/30 font-bold border-t border-slate-200">
+                          <td className="py-3.5 px-4 text-blue-700">Total Pattern Scheme</td>
+                          <td className="py-3.5 px-4 text-center text-blue-750">
+                            {details.subjects.reduce((sum, s) => sum + s.questions, 0)} Qs
+                          </td>
+                          <td className="py-3.5 px-4 text-center text-blue-800 font-extrabold">
+                            {details.totalMarks} Marks
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* Detailed syllabus section */}
+                <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+                  <h2 className="text-lg font-bold text-slate-800 border-b border-slate-100 pb-3 mb-5 flex items-center gap-2">
+                    📖 Complete Syllabus Topics
+                  </h2>
+                  
+                  <div className="space-y-6">
+                    {details.fullSyllabus.map((section, idx) => (
+                      <div key={idx} className="border border-slate-150 rounded-2xl p-4 sm:p-5 hover:border-slate-300 transition-colors">
+                        <h3 className="font-extrabold text-slate-800 text-sm sm:text-base mb-3 flex items-center gap-2">
+                          <span className="text-blue-500 text-xs">◆</span> {section.section}
+                        </h3>
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-slate-600 font-medium">
+                          {section.topics.map((topic, tIdx) => (
+                            <li key={tIdx} className="flex items-start gap-1.5">
+                              <span className="text-slate-400 mt-0.5">•</span>
+                              <span>{topic}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Preparation tips */}
+                <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+                  <h2 className="text-lg font-bold text-slate-800 border-b border-slate-100 pb-3 mb-4 flex items-center gap-2">
+                    💡 Expert Preparation Strategy
+                  </h2>
+                  <ul className="space-y-3">
+                    {details.prepTips.map((tip, index) => (
+                      <li key={index} className="flex gap-3 text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                        <span className="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 text-xs font-bold shrink-0">
+                          {index + 1}
+                        </span>
+                        <span>{tip}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </>
+            )}
 
             {/* Render custom sections (Salary, Job Profile, Cutoff, etc.) */}
             {blog.sections && blog.sections.map((sec, idx) => (

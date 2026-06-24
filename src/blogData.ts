@@ -10,7 +10,7 @@ export interface BlogArticle {
   examName: string;
   category: string;
   icon: string;
-  type?: 'syllabus' | 'salary' | 'cutoff';
+  type?: 'syllabus' | 'salary' | 'cutoff' | 'info';
   sections?: { title: string; paragraphs: string[] }[];
   details: {
     postName: string;
@@ -940,32 +940,56 @@ const dynamicBlogs: BlogArticle[] = [];
 EXAMS.forEach(exam => {
   const { category, icon } = getCategoryAndIcon(exam.categoryId, exam.slug);
   
-  // Syllabus Detailed Guide (only 1 article per exam)
+  // Clean dynamic info article (only 1 article per exam)
   const hasStaticSyllabus = staticBlogs.some(sb => sb.examSlug === exam.slug);
   if (!hasStaticSyllabus) {
     const details = getDynamicDetails(exam.slug, exam.name, exam.categoryId);
     dynamicBlogs.push({
-      slug: `${exam.slug}-syllabus-exam-pattern`,
-      title: `${exam.name} Detailed Syllabus, Exam Pattern & Complete Info 2026`,
-      description: `Get the complete subject-wise syllabus, marks weightage, eligibility, salary structure, job profile, cut-off trends and official preparation guidelines for the ${exam.name} examination.`,
+      slug: `${exam.slug}-info`,
+      title: `${exam.name} Complete Info, Syllabus & Pattern 2026`,
+      description: `All details about the ${exam.name} examination including syllabus, exam pattern, eligibility criteria, salary, and selection process in one comprehensive guide.`,
       publishDate: "June 24, 2026",
-      readTime: "6 min read",
+      readTime: "5 min read",
       examSlug: exam.slug,
       examName: exam.name,
       category,
       icon,
-      type: 'syllabus',
+      type: 'info',
       sections: [
         {
-          title: "Salary Structure & Job Profile",
+          title: "1. Exam Overview & Important Details",
           paragraphs: [
-            "Content will be added soon. The pay scale, monthly in-hand salary details, perks, allowances and job responsibilities for this post will be updated here by the admin."
+            `The official notification for ${exam.name} recruitment contains key details regarding vacancy, online application dates, and selection stages. Complete information will be updated here by the admin.`
           ]
         },
         {
-          title: "Previous Year Cut Off Analysis",
+          title: "2. Eligibility Criteria & Age Limit",
           paragraphs: [
-            "Content will be added soon. Category-wise previous year cut-off marks (General, OBC, SC, ST, EWS) and expected trends will be updated here shortly."
+            "Candidates planning to apply must satisfy the minimum eligibility requirements in terms of educational qualification and age limit as specified in the official notification guidelines."
+          ]
+        },
+        {
+          title: "3. Exam Pattern & Marks Weightage",
+          paragraphs: [
+            "The exam is conducted based on a predefined scheme of subjects, question weightage, and negative marking structure. Having a clear idea of the marks distribution helps plan practice targets."
+          ]
+        },
+        {
+          title: "4. Detailed Subject-wise Syllabus",
+          paragraphs: [
+            "Topic breakdown for reasoning, mathematics, general awareness, English/Hindi language, and specific subjects will be listed in this section to help cover all essential concepts."
+          ]
+        },
+        {
+          title: "5. Salary Structure, Perks & Allowances",
+          paragraphs: [
+            "In addition to the basic pay scale, recruited candidates are eligible for standard allowances (DA, HRA, TA) and other state/central government perks according to the official pay matrix."
+          ]
+        },
+        {
+          title: "6. Previous Year Cut Off & Selection Process",
+          paragraphs: [
+            "Analyzing previous year category-wise cut-off scores offers valuable insights into competitive thresholds and expected score targets to secure final selection."
           ]
         }
       ],
