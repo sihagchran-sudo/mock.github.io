@@ -74,7 +74,16 @@ function SignUpForm() {
         }),
       });
 
-      const data = await signupRes.json();
+      let data;
+      const contentType = signupRes.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        data = await signupRes.json();
+      } else {
+        const text = await signupRes.text();
+        setLocalError(text.substring(0, 100) || `Server error (Status ${signupRes.status})`);
+        setLoading(false);
+        return;
+      }
 
       if (!signupRes.ok) {
         setLocalError(data.error || "Failed to register user. Please try again.");

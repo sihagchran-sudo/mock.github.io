@@ -60,11 +60,11 @@ export async function POST(req: Request) {
       { message: "User registered successfully", userId: user.id },
       { status: 201 }
     );
-  } catch (error) {
+  } catch (error: any) {
     console.error("Signup error:", error);
     return NextResponse.json(
-      { error: "Failed to register user" },
-      { status: 550 }
+      { error: error?.message || "Failed to register user" },
+      { status: 500 }
     );
   }
 }
