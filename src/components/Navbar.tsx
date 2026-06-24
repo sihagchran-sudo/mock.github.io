@@ -13,6 +13,8 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Dashboard', href: '/dashboard' },
+    { name: 'Contact Us', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy' },
   ];
 
   // Helper to get initials
@@ -36,31 +38,33 @@ export default function Navbar() {
   const isPremium = user?.isPremium || false;
 
   return (
-    <nav className="border-b border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+    <nav className="border-b border-slate-100 bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <Link href="/" className="flex items-center space-x-2 group">
+              <span className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent group-hover:scale-[1.02] transition-transform">
                 MockMaster
               </span>
-              <span className="bg-emerald-100 text-emerald-800 text-xs px-2 py-0.5 rounded-full font-semibold font-sans">
+              <span className="bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider font-sans shadow-sm border border-emerald-200">
                 PRO
               </span>
             </Link>
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-blue-600 ${
-                    isActive ? 'text-blue-600 border-b-2 border-blue-600 py-5' : 'text-slate-600'
+                  className={`text-xs font-bold transition-all relative py-5.5 px-1 hover:text-blue-600 ${
+                    isActive 
+                      ? 'text-blue-600 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-blue-600 after:to-indigo-600 after:rounded-full' 
+                      : 'text-slate-500'
                   }`}
                 >
                   {link.name}
@@ -78,15 +82,15 @@ export default function Navbar() {
                   </div>
                 ) : (
                   <>
-                    <div className="bg-amber-50 border border-amber-200 text-amber-800 text-xs rounded-lg px-3 py-1.5 font-medium flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                    <div className="bg-amber-50 border border-amber-200/50 text-amber-800 text-[10px] rounded-lg px-2.5 py-1.5 font-bold flex items-center gap-1.5 uppercase tracking-wide">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
                       Free Pass
                     </div>
                     <Link
                       href="/dashboard"
-                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm px-4 py-2 rounded-lg font-medium shadow-sm transition-all hover:shadow-md active:scale-95"
+                      className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white text-[11px] px-4 py-2 rounded-xl font-extrabold shadow-md shadow-orange-500/10 hover:shadow-orange-500/20 transition-all active:scale-98 flex items-center gap-1.5"
                     >
-                      Buy Pass
+                      <span>✨</span> Buy Pass
                     </Link>
                   </>
                 )}
@@ -114,7 +118,7 @@ export default function Navbar() {
               <div className="flex items-center space-x-4">
                 <Link
                   href="/signin"
-                  className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-5 py-2.5 rounded-lg font-bold shadow-sm transition-all active:scale-95"
+                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-[11px] px-5 py-2.5 rounded-xl font-extrabold shadow-md shadow-blue-500/10 hover:shadow-blue-500/20 transition-all active:scale-98"
                 >
                   Sign In
                 </Link>
