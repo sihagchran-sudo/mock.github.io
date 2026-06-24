@@ -6,8 +6,20 @@ import { CATEGORIES, EXAMS, MOCK_TESTS } from '@/mockData';
 import { BLOGS } from '@/blogData';
 import TestCard from '@/components/TestCard';
 
+const SYLLABUS_CATEGORIES = [
+  { key: 'ALL', label: 'All Exams' },
+  { key: 'Banking', label: 'Banking & Insurance' },
+  { key: 'SSC Exams', label: 'SSC Exams' },
+  { key: 'Civil Services', label: 'Civil Services' },
+  { key: 'Railways', label: 'Railways' },
+  { key: 'State Police', label: 'State Police' },
+  { key: 'Teacher Exams', label: 'Teaching Exams' },
+  { key: 'State Exams', label: 'State General' },
+];
+
 export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedSyllabusCategory, setSelectedSyllabusCategory] = useState('ALL');
 
   const EXAM_ICONS: Record<string, string> = {
     'sbi-po': '🏛️',
@@ -30,6 +42,12 @@ export default function HomePage() {
   const popularExams = EXAMS.filter(e => e.popular);
   // Popular mock tests list (take first 3)
   const popularTests = MOCK_TESTS.filter(t => t.testType === 'FULL').slice(0, 3);
+
+  // Filtered blogs for syllabus
+  const filteredBlogs = BLOGS.filter(blog => {
+    if (selectedSyllabusCategory === 'ALL') return true;
+    return blog.category === selectedSyllabusCategory;
+  });
 
   return (
     <div className="min-h-screen">
@@ -163,7 +181,7 @@ export default function HomePage() {
       {/* 3. Exam Syllabus & Official Notifications Blog Section */}
       <section className="bg-slate-100/50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8">
             <div className="text-center md:text-left">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
                 Official Exam Syllabus & Syllabus Patterns
@@ -174,8 +192,28 @@ export default function HomePage() {
             </div>
           </div>
 
+          {/* Syllabus Category Filter Tabs */}
+          <div className="flex gap-2 pb-4 mb-8 overflow-x-auto scrollbar-none border-b border-slate-200">
+            {SYLLABUS_CATEGORIES.map((cat) => {
+              const isActive = selectedSyllabusCategory === cat.key;
+              return (
+                <button
+                  key={cat.key}
+                  onClick={() => setSelectedSyllabusCategory(cat.key)}
+                  className={`py-2 px-4 text-xs font-bold rounded-full border transition-all whitespace-nowrap ${
+                    isActive
+                      ? 'bg-blue-600 border-blue-600 text-white shadow-md shadow-blue-500/10'
+                      : 'bg-white border-slate-250 text-slate-500 hover:text-slate-700 hover:border-slate-350'
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              );
+            })}
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {BLOGS.map((blog) => (
+            {filteredBlogs.map((blog) => (
               <div 
                 key={blog.slug} 
                 className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between"

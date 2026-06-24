@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getExamBySlug, getTestsForExam } from '@/mockData';
 import TestCard from '@/components/TestCard';
+import { BLOGS } from '@/blogData';
 
 interface PageProps {
   params: Promise<{ examName: string }>;
@@ -31,6 +32,8 @@ export default async function ExamNamePage({ params, searchParams }: PageProps) 
       </div>
     );
   }
+
+  const examBlog = BLOGS.find(b => b.examSlug === exam.slug);
 
   // Get all tests for this exam
   const allTests = getTestsForExam(exam.id);
@@ -79,6 +82,29 @@ export default async function ExamNamePage({ params, searchParams }: PageProps) 
           </div>
         </div>
       </div>
+
+      {/* Syllabus Link Banner */}
+      {examBlog && (
+        <div className="mb-8 p-5 bg-blue-50/60 border border-blue-100 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+          <div className="flex gap-3.5 items-start sm:items-center">
+            <span className="text-3xl p-2.5 bg-blue-500/10 rounded-xl">📖</span>
+            <div className="text-left">
+              <h4 className="font-extrabold text-slate-800 text-sm sm:text-base">
+                Official Syllabus & Exam Pattern
+              </h4>
+              <p className="text-slate-500 text-xs mt-0.5 font-medium leading-relaxed">
+                Check detailed subjects weightage, topics list, negative marking and eligibility criteria for {exam.name}.
+              </p>
+            </div>
+          </div>
+          <Link
+            href={`/blog/${examBlog.slug}`}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-3 px-5 rounded-xl shadow-md hover:shadow-blue-500/15 transition-all text-center shrink-0"
+          >
+            View Full Syllabus
+          </Link>
+        </div>
+      )}
 
       {/* 2. Tabbed Interface */}
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
