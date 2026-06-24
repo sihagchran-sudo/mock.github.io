@@ -1,3 +1,5 @@
+import { HARYANA_POLICE_CUSTOM_MOCKS } from './haryanaPoliceMocksData';
+
 export interface Category {
   id: string;
   name: string;
@@ -139,6 +141,7 @@ const BASE_MOCK_TESTS: Test[] = [
   // HSSC Haryana Police Custom Tests
   { id: 'test-hssc-police-full-1', title: 'HSSC Haryana Police Constable - Full Mock Test 1', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100 },
   { id: 'test-hssc-police-full-2', title: 'HSSC Haryana Police Constable - Full Mock Test 2', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100 },
+  { id: 'test-hssc-police-full-3', title: 'HSSC Haryana Police Constable - Full Mock Test 3', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100 },
   { id: 'test-hssc-police-sec-gk', title: 'Haryana General Knowledge - Sectional Mock', duration: 20, totalMarks: 25, testType: 'SECTIONAL', examId: 'exam-hssc-police', questionCount: 5 },
   { id: 'test-hssc-police-chap-agri', title: 'Chapter Test: Agriculture & Animal Husbandry', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 5 },
 ];
@@ -1232,6 +1235,9 @@ export const MOCK_QUESTIONS: Record<string, Question[]> = {
 export function getQuestionsForTest(testId: string): Question[] {
   if (MOCK_QUESTIONS[testId]) {
     return MOCK_QUESTIONS[testId];
+  }
+  if (HARYANA_POLICE_CUSTOM_MOCKS[testId]) {
+    return HARYANA_POLICE_CUSTOM_MOCKS[testId];
   }
   // Generate generic questions if none match
   const test = MOCK_TESTS.find(t => t.id === testId);
