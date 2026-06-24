@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { EXAMS } from "@/mockData";
 
 interface AdminUser {
   id: string;
@@ -28,6 +29,16 @@ export default function AdminDashboardPage() {
   const [resetLoading, setResetLoading] = useState(false);
   const [resetError, setResetError] = useState("");
 
+  // Tabs state
+  const [activeTab, setActiveTab] = useState<"users" | "blogs">("users");
+
+  // Blog Editor states
+  const [selectedExamSlug, setSelectedExamSlug] = useState("");
+  const [blogTitle, setBlogTitle] = useState("");
+  const [blogDescription, setBlogDescription] = useState("");
+  const [blogSections, setBlogSections] = useState<{ title: string; paragraphs: string[] }[]>([]);
+  const [blogSaveLoading, setBlogSaveLoading] = useState(false);
+
   // Check auth on mount
   useEffect(() => {
     const savedAuth = sessionStorage.getItem("admin_authenticated");
@@ -37,11 +48,50 @@ export default function AdminDashboardPage() {
     }
   }, []);
 
+  // Fetch blog data when exam changes
+  useEffect(() => {
+    if (!selectedExamSlug) {
+      setBlogTitle("");
+      setBlogDescription("");
+      setBlogSections([]);
+      return;
+    }
+    
+    const fetchBlog = async () => {
+      setError("");
+      setSuccess("");
+      try {
+        const examObj = EXAMS.find(e => e.slug === selectedExamSlug);
+        if (!examObj) return;
+
+        const slug = `${selectedExamSlug}-info`;
+        const secretKey = sessionStorage.getItem("admin_access_code") || accessCode;
+        const res = await fetch(`/api/admin/blog?secret=${encodeURIComponent(secretKey)}&slug=${slug}`);
+        const data = await res.json();
+        
+        if (res.ok && data.article) {
+          setBlogTitle(data.article.title || "");
+          setBlogDescription(data.article.description || "");
+          setBlogSections(data.article.sections || []);
+        } else {
+          setBlogTitle(`${examObj.name} Information`);
+          setBlogDescription("");
+          setBlogSections([]);
+        }
+      } catch (err) {
+        setError("Failed to load guide details from database.");
+      }
+    };
+
+    fetchBlog();
+  }, [selectedExamSlug]);
+
   const handleAuthSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (accessCode === ADMIN_SECRET) {
       setIsAuthenticated(true);
       sessionStorage.setItem("admin_authenticated", "true");
+      sessionStorage.setItem("admin_access_code", accessCode);
       setError("");
       fetchUsers();
     } else {
@@ -52,8 +102,79 @@ export default function AdminDashboardPage() {
   const handleAdminLogout = () => {
     setIsAuthenticated(false);
     sessionStorage.removeItem("admin_authenticated");
+    sessionStorage.removeItem("admin_access_code");
     setUsers([]);
   };
+
+  const addSection = () => {
+    setBlogSections(prev => [...prev, { title: "", paragraphs: [""] }]);
+  };
+
+  const updateSectionTitle = (index: number, val: string) => {
+    setBlogSections(prev => prev.map((sec, i) => i === index ? { ...sec, title: val } : sec));
+  };
+
+  const handleSaveBlog = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!selectedExamSlug) return;
+
+    setBlogSaveLoading(true);
+    setError("");
+    setSuccess("");
+
+    try {
+      const examObj = EXAMS.find(e => e.slug === selectedExamSlug);
+      if (!examObj) return;
+
+      const slug = `${selectedExamSlug}-info`;
+      const secretKey = sessionStorage.getItem("admin_access_code") || accessCode;
+      
+      const res = await fetch("/api/admin/blog?secret=" + encodeURIComponent(secretKey), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          slug,
+          title: blogTitle,
+          description: blogDescription,
+          sections: blogSections.map(sec => ({
+            title: sec.title,
+            paragraphs: sec.paragraphs.filter(p => p.trim() !== ""),
+          })),
+          examSlug: examObj.slug,
+          examName: examObj.name,
+          category: examObj.slug.includes("sbi") || examObj.slug.includes("ibps") ? "Banking" : "State Exams",
+          icon: "📝",
+          type: "info",
+          details: {
+            authority: "Recruitment Authority",
+            postName: examObj.name,
+            eligibility: "Check official bulletin",
+            ageLimit: "Check official bulletin",
+            totalMarks: 100,
+            durationMinutes: 90,
+            negativeMarking: "No Negative Marking",
+            subjects: [],
+            fullSyllabus: [],
+            prepTips: [],
+          }
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error || "Failed to save guide.");
+      } else {
+        setSuccess(`Information guide for "${examObj.name}" saved successfully!`);
+      }
+    } catch (err) {
+      setError("An unexpected error occurred while saving the guide.");
+    } finally {
+      setBlogSaveLoading(false);
+    }
+  };
+
 
   const fetchUsers = async () => {
     setLoading(true);
@@ -203,7 +324,7 @@ export default function AdminDashboardPage() {
             <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 flex items-center gap-2">
               🛡️ Admin Control Panel
             </h1>
-            <p className="text-xs text-slate-500 mt-0.5">Manage mock portal users and reset accounts</p>
+            <p className="text-xs text-slate-500 mt-0.5">Manage mock portal users and update exam guides</p>
           </div>
           <div className="flex gap-3">
             <button
@@ -219,6 +340,30 @@ export default function AdminDashboardPage() {
               Logout Admin
             </button>
           </div>
+        </div>
+
+        {/* Tabs Selection Bar */}
+        <div className="flex gap-4 border-b border-slate-200 mb-8">
+          <button
+            onClick={() => setActiveTab("users")}
+            className={`pb-3 text-sm font-bold border-b-2 transition-all ${
+              activeTab === "users"
+                ? "border-blue-600 text-blue-600"
+                : "border-transparent text-slate-400 hover:text-slate-600"
+            }`}
+          >
+            👥 User Directory
+          </button>
+          <button
+            onClick={() => setActiveTab("blogs")}
+            className={`pb-3 text-sm font-bold border-b-2 transition-all ${
+              activeTab === "blogs"
+                ? "border-blue-600 text-blue-600"
+                : "border-transparent text-slate-400 hover:text-slate-600"
+            }`}
+          >
+            📝 Edit Exam Guides
+          </button>
         </div>
 
         {/* Global Notifications */}
@@ -242,87 +387,219 @@ export default function AdminDashboardPage() {
           </div>
         )}
 
-        {/* Search and Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="md:col-span-3 bg-white border border-slate-200 rounded-2xl p-4 shadow-sm flex items-center">
-            <span className="text-slate-400 mr-2.5 pl-1">🔍</span>
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search students by Name or User ID (Username)..."
-              className="w-full text-sm outline-none text-slate-800 placeholder:text-slate-400"
-            />
-          </div>
-          <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm text-center flex flex-col justify-center">
-            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Total Registered</p>
-            <p className="text-2xl font-extrabold text-blue-600 mt-1">{users.length} Users</p>
-          </div>
-        </div>
+        {activeTab === "users" ? (
+          <>
+            {/* Search and Stats Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+              <div className="md:col-span-3 bg-white border border-slate-200 rounded-2xl p-4 shadow-sm flex items-center">
+                <span className="text-slate-400 mr-2.5 pl-1">🔍</span>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search students by Name or User ID (Username)..."
+                  className="w-full text-sm outline-none text-slate-800 placeholder:text-slate-400"
+                />
+              </div>
+              <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm text-center flex flex-col justify-center">
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Total Registered</p>
+                <p className="text-2xl font-extrabold text-blue-600 mt-1">{users.length} Users</p>
+              </div>
+            </div>
 
-        {/* User Table Card */}
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-          <div className="overflow-x-auto">
-            {loading ? (
-              <div className="py-20 text-center flex flex-col items-center justify-center">
-                <div className="w-8 h-8 border-4 border-slate-100 border-t-blue-600 rounded-full animate-spin"></div>
-                <p className="text-xs text-slate-450 mt-4 font-semibold">Loading user registry...</p>
+            {/* User Table Card */}
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden animate-fade-in">
+              <div className="overflow-x-auto">
+                {loading ? (
+                  <div className="py-20 text-center flex flex-col items-center justify-center">
+                    <div className="w-8 h-8 border-4 border-slate-100 border-t-blue-600 rounded-full animate-spin"></div>
+                    <p className="text-xs text-slate-450 mt-4 font-semibold">Loading user registry...</p>
+                  </div>
+                ) : filteredUsers.length > 0 ? (
+                  <table className="w-full text-left border-collapse text-xs">
+                    <thead>
+                      <tr className="border-b border-slate-200 bg-slate-55/30 text-slate-500 font-bold uppercase tracking-wider text-[10px]">
+                        <th className="py-3 px-6">Name</th>
+                        <th className="py-3 px-6">User ID (Username)</th>
+                        <th className="py-3 px-6">Registration Date</th>
+                        <th className="py-3 px-6 text-center">Plan status</th>
+                        <th className="py-3 px-6 text-right">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100 font-medium text-slate-700">
+                      {filteredUsers.map((user) => (
+                        <tr key={user.id} className="hover:bg-slate-50/50 transition-colors">
+                          <td className="py-4 px-6 font-bold text-slate-800">{user.name || "N/A"}</td>
+                          <td className="py-4 px-6 font-mono text-slate-600">{user.email}</td>
+                          <td className="py-4 px-6 text-slate-500">
+                            {new Date(user.createdAt).toLocaleDateString(undefined, {
+                              dateStyle: "medium"
+                            })}
+                          </td>
+                          <td className="py-4 px-6 text-center">
+                            <span className={`px-2.5 py-1 rounded-full text-[9px] font-bold ${
+                              user.isPassActive
+                                ? "bg-emerald-50 text-emerald-700 border border-emerald-250"
+                                : "bg-slate-100 text-slate-600 border border-slate-200"
+                            }`}>
+                              {user.isPassActive ? "Pro Premium" : "Free Pass"}
+                            </span>
+                          </td>
+                          <td className="py-4 px-6 text-right flex justify-end gap-2.5">
+                            <button
+                              onClick={() => setResettingUser(user)}
+                              className="bg-blue-50 hover:bg-blue-100 text-blue-700 text-[10px] font-bold px-3 py-1.5 rounded-lg shadow-sm border border-blue-100 transition-all"
+                            >
+                              Reset Password
+                            </button>
+                            <button
+                              onClick={() => handleDeleteUser(user.id, user.name || user.email)}
+                              className="bg-red-50 hover:bg-red-100 text-red-600 text-[10px] font-bold px-3 py-1.5 rounded-lg shadow-sm border border-red-100 transition-all"
+                            >
+                              Delete User
+                            </button>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                ) : (
+                  <div className="py-20 text-center text-slate-450 font-semibold text-xs">
+                    📭 No registered users found.
+                  </div>
+                )}
               </div>
-            ) : filteredUsers.length > 0 ? (
-              <table className="w-full text-left border-collapse text-xs">
-                <thead>
-                  <tr className="border-b border-slate-200 bg-slate-55/30 text-slate-500 font-bold uppercase tracking-wider text-[10px]">
-                    <th className="py-3 px-6">Name</th>
-                    <th className="py-3 px-6">User ID (Username)</th>
-                    <th className="py-3 px-6">Registration Date</th>
-                    <th className="py-3 px-6 text-center">Plan status</th>
-                    <th className="py-3 px-6 text-right">Actions</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100 font-medium text-slate-700">
-                  {filteredUsers.map((user) => (
-                    <tr key={user.id} className="hover:bg-slate-50/50 transition-colors">
-                      <td className="py-4 px-6 font-bold text-slate-800">{user.name || "N/A"}</td>
-                      <td className="py-4 px-6 font-mono text-slate-600">{user.email}</td>
-                      <td className="py-4 px-6 text-slate-500">
-                        {new Date(user.createdAt).toLocaleDateString(undefined, {
-                          dateStyle: "medium"
-                        })}
-                      </td>
-                      <td className="py-4 px-6 text-center">
-                        <span className={`px-2.5 py-1 rounded-full text-[9px] font-bold ${
-                          user.isPassActive
-                            ? "bg-emerald-50 text-emerald-700 border border-emerald-250"
-                            : "bg-slate-100 text-slate-600 border border-slate-200"
-                        }`}>
-                          {user.isPassActive ? "Pro Premium" : "Free Pass"}
-                        </span>
-                      </td>
-                      <td className="py-4 px-6 text-right flex justify-end gap-2.5">
-                        <button
-                          onClick={() => setResettingUser(user)}
-                          className="bg-blue-50 hover:bg-blue-100 text-blue-700 text-[10px] font-bold px-3 py-1.5 rounded-lg shadow-sm border border-blue-100 transition-all"
-                        >
-                          Reset Password
-                        </button>
-                        <button
-                          onClick={() => handleDeleteUser(user.id, user.name || user.email)}
-                          className="bg-red-50 hover:bg-red-100 text-red-600 text-[10px] font-bold px-3 py-1.5 rounded-lg shadow-sm border border-red-100 transition-all"
-                        >
-                          Delete User
-                        </button>
-                      </td>
-                    </tr>
+            </div>
+          </>
+        ) : (
+          /* Guide Editor Form */
+          <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+            <h2 className="text-lg font-bold text-slate-800 border-b border-slate-100 pb-3 mb-6">
+              ✏️ Edit Exam Information Guide
+            </h2>
+            
+            <form onSubmit={handleSaveBlog} className="space-y-6">
+              {/* Select Exam */}
+              <div>
+                <label className="block text-xs font-bold text-slate-400 mb-2 uppercase tracking-wider">Select Exam</label>
+                <select
+                  required
+                  value={selectedExamSlug}
+                  onChange={(e) => setSelectedExamSlug(e.target.value)}
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm font-semibold"
+                >
+                  <option value="">-- Choose an Exam --</option>
+                  {EXAMS.map(exam => (
+                    <option key={exam.id} value={exam.slug}>
+                      {exam.name}
+                    </option>
                   ))}
-                </tbody>
-              </table>
-            ) : (
-              <div className="py-20 text-center text-slate-450 font-semibold text-xs">
-                📭 No registered users found.
+                </select>
               </div>
-            )}
+
+              {selectedExamSlug && (
+                <>
+                  {/* Guide Title */}
+                  <div>
+                    <label className="block text-xs font-bold text-slate-400 mb-2 uppercase tracking-wider">Guide Title</label>
+                    <input
+                      type="text"
+                      required
+                      value={blogTitle}
+                      onChange={(e) => setBlogTitle(e.target.value)}
+                      placeholder="e.g. SSC CGL Complete Information Guide"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm font-medium"
+                    />
+                  </div>
+
+                  {/* Guide Description */}
+                  <div>
+                    <label className="block text-xs font-bold text-slate-400 mb-2 uppercase tracking-wider">Guide Description (Optional)</label>
+                    <textarea
+                      value={blogDescription}
+                      onChange={(e) => setBlogDescription(e.target.value)}
+                      placeholder="Write a brief overview of the guide..."
+                      rows={3}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-850 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm font-medium resize-y"
+                    />
+                  </div>
+
+                  {/* Sections List */}
+                  <div className="space-y-4 border-t border-slate-100 pt-6">
+                    <div className="flex justify-between items-center mb-4">
+                      <h3 className="text-sm font-bold text-slate-700">Article Content Sections</h3>
+                      <button
+                        type="button"
+                        onClick={addSection}
+                        className="bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs px-3.5 py-2 rounded-lg font-bold transition-all"
+                      >
+                        ➕ Add New Section
+                      </button>
+                    </div>
+
+                    {blogSections.map((sec, idx) => (
+                      <div key={idx} className="p-5 border border-slate-200 rounded-2xl relative bg-slate-50/50">
+                        {/* Remove Section button */}
+                        <button
+                          type="button"
+                          onClick={() => setBlogSections(prev => prev.filter((_, i) => i !== idx))}
+                          className="absolute top-4 right-4 text-xs font-bold text-red-500 hover:text-red-750 hover:underline"
+                        >
+                          Delete Section
+                        </button>
+
+                        <div className="space-y-4 max-w-2xl">
+                          <div>
+                            <label className="block text-[10px] font-bold text-slate-400 uppercase mb-1">Section Title</label>
+                            <input
+                              type="text"
+                              required
+                              value={sec.title}
+                              onChange={(e) => updateSectionTitle(idx, e.target.value)}
+                              placeholder="e.g. 1. Selection Process & Phases"
+                              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white text-slate-800 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 font-semibold"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-[10px] font-bold text-slate-400 uppercase mb-1">Section Paragraphs (Separate with an empty line)</label>
+                            <textarea
+                              required
+                              value={sec.paragraphs.join("\n\n")}
+                              onChange={(e) => {
+                                const val = e.target.value;
+                                setBlogSections(prev => prev.map((s, i) => i === idx ? { ...s, paragraphs: val.split("\n\n") } : s));
+                              }}
+                              placeholder="Type your paragraphs here. Press enter twice to separate paragraphs..."
+                              rows={5}
+                              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white text-slate-800 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 font-medium resize-y"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+
+                    {blogSections.length === 0 && (
+                      <div className="py-10 text-center border border-dashed border-slate-200 rounded-2xl text-slate-450 text-xs font-semibold">
+                        No custom sections added yet. Click "Add New Section" to start writing your article.
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Submit Button */}
+                  <div className="border-t border-slate-100 pt-6 flex justify-end">
+                    <button
+                      type="submit"
+                      disabled={blogSaveLoading}
+                      className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white font-extrabold text-xs px-6 py-3 rounded-xl shadow-lg hover:shadow-blue-500/10 transition-all active:scale-98"
+                    >
+                      {blogSaveLoading ? "Saving Article..." : "Save Information Guide"}
+                    </button>
+                  </div>
+                </>
+              )}
+            </form>
           </div>
-        </div>
+        )}
 
         {/* Reset Password Modal Overlay */}
         {resettingUser && (

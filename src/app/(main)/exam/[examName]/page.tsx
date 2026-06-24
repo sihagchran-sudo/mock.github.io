@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { getExamBySlug, getTestsForExam } from '@/mockData';
 import TestCard from '@/components/TestCard';
 import { BLOGS } from '@/blogData';
+import { prisma } from '@/lib/db';
 
 interface PageProps {
   params: Promise<{ examName: string }>;
@@ -21,7 +22,7 @@ export default async function ExamNamePage({ params, searchParams }: PageProps) 
         <span className="text-4xl">⚠️</span>
         <h2 className="text-xl font-bold text-slate-800 mt-4">Exam Not Found</h2>
         <p className="text-slate-500 text-sm mt-2">
-          We couldn\'t find the exam you\'re looking for. Please check the URL or search from the home page.
+          We couldn't find the exam you're looking for. Please check the URL or search from the home page.
         </p>
         <Link
           href="/"
@@ -33,7 +34,35 @@ export default async function ExamNamePage({ params, searchParams }: PageProps) 
     );
   }
 
-  const examBlogs = BLOGS.filter(b => b.examSlug === exam.slug);
+  let examBlogs = BLOGS.filter(b => b.examSlug === exam.slug);
+
+  try {
+    const dbArticles = await prisma.blogArticle.findMany({
+      where: { examSlug: exam.slug },
+    });
+    if (dbArticles.length > 0) {
+      const dbSlugs = new Set(dbArticles.map(a => a.slug));
+      examBlogs = [
+        ...dbArticles.map(a => ({
+          slug: a.slug,
+          title: a.title,
+          description: a.description,
+          examSlug: a.examSlug,
+          examName: a.examName,
+          category: a.category,
+          icon: a.icon,
+          type: a.type as any,
+          sections: JSON.parse(a.sections),
+          details: JSON.parse(a.details),
+          publishDate: a.publishDate,
+          readTime: a.readTime,
+        })),
+        ...BLOGS.filter(b => b.examSlug === exam.slug && !dbSlugs.has(b.slug)),
+      ];
+    }
+  } catch (e) {
+    // Fallback to static blogs
+  }
 
   // Get all tests for this exam
   const allTests = getTestsForExam(exam.id);

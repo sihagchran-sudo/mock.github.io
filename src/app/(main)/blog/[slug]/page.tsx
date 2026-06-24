@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getBlogBySlug } from '@/blogData';
+import { getBlogBySlug, BlogArticle } from '@/blogData';
+import { prisma } from '@/lib/db';
 
 interface BlogPageProps {
   params: Promise<{ slug: string }>;
@@ -8,7 +9,27 @@ interface BlogPageProps {
 
 export default async function BlogDetailPage({ params }: BlogPageProps) {
   const { slug } = await params;
-  const blog = getBlogBySlug(slug);
+  
+  let blog: BlogArticle | null | undefined = null;
+
+  try {
+    const dbArticle = await prisma.blogArticle.findUnique({
+      where: { slug },
+    });
+    if (dbArticle) {
+      blog = {
+        ...dbArticle,
+        sections: JSON.parse(dbArticle.sections),
+        details: JSON.parse(dbArticle.details),
+      } as any;
+    }
+  } catch (e) {
+    // Fail silent and fallback to static
+  }
+
+  if (!blog) {
+    blog = getBlogBySlug(slug);
+  }
 
   if (!blog) {
     notFound();

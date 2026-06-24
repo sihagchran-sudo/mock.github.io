@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { CATEGORIES, EXAMS, MOCK_TESTS } from '@/mockData';
 import { BLOGS } from '@/blogData';
@@ -20,6 +20,23 @@ const SYLLABUS_CATEGORIES = [
 export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSyllabusCategory, setSelectedSyllabusCategory] = useState('ALL');
+  const [blogsList, setBlogsList] = useState<any[]>(BLOGS);
+
+  // Fetch updated blogs list from database
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch("/api/admin/blog");
+        const data = await res.json();
+        if (res.ok && data.articles) {
+          setBlogsList(data.articles);
+        }
+      } catch (e) {
+        // Fallback is already BLOGS in state
+      }
+    };
+    fetchBlogs();
+  }, []);
 
   const EXAM_ICONS: Record<string, string> = {
     'sbi-po': '🏛️',
@@ -44,7 +61,7 @@ export default function HomePage() {
   const popularTests = MOCK_TESTS.filter(t => t.testType === 'FULL').slice(0, 3);
 
   // Filtered blogs for syllabus
-  const filteredBlogs = BLOGS.filter(blog => {
+  const filteredBlogs = blogsList.filter(blog => {
     if (selectedSyllabusCategory === 'ALL') return true;
     return blog.category === selectedSyllabusCategory;
   });

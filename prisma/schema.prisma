@@ -124,3 +124,20 @@ model Analytics {
   weakChapters     String      // JSON string of arrays: ["Compound Interest", "Syllogism"]
   strongChapters   String      // JSON string of arrays: ["Time & Work", "Coding-Decoding"]
 }
+
+model BlogArticle {
+  slug        String   @id
+  title       String
+  description String
+  publishDate String   @default("June 24, 2026")
+  readTime    String   @default("5 min read")
+  examSlug    String
+  examName    String
+  category    String
+  icon        String
+  type        String   @default("info")
+  sections    String   @default("[]")   // JSON string of sections: [{title: string, paragraphs: string[]}]
+  details     String   @default("{}")   // JSON string of details
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
