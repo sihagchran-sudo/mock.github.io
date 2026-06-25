@@ -69,7 +69,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* 1. Hero Section */}
-      <section className="relative bg-gradient-to-b from-slate-100 via-white to-slate-50/50 text-slate-800 overflow-hidden py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-200/50">
+      <section className="relative bg-gradient-to-br from-blue-50/90 via-sky-50/60 to-white/70 backdrop-blur-lg text-slate-800 overflow-hidden py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-blue-100/50">
         {/* Background Decorative Elements (Sleek light blue/indigo blur reflections) */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-blue-200/20 blur-[120px] pointer-events-none -mr-40 -mt-40"></div>
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-indigo-200/20 blur-[100px] pointer-events-none -ml-20 -mb-20"></div>
@@ -106,7 +106,7 @@ export default function HomePage() {
           
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight max-w-3xl text-slate-900">
             Leave Exam Fear Behind. Practice in a{' '}
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-indigo-800 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-500 via-amber-600 to-orange-500 bg-clip-text text-transparent">
               Real Test Environment.
             </span>
           </h1>
