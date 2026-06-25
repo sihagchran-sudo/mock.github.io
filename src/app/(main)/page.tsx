@@ -77,120 +77,97 @@ export default function HomePage() {
         {/* Sleek diagonal grid pattern using pure CSS SVG to look highly premium */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)] pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Column: Hero Text Content */}
-            <div className="lg:col-span-7 flex flex-col items-start text-left">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 text-blue-300 border border-blue-500/20 mb-6 backdrop-blur-md shadow-sm">
-                🚀 Powered by AI Exam Analytics
+        <div className="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 text-blue-300 border border-blue-500/20 mb-6 backdrop-blur-md shadow-sm">
+            🚀 Powered by AI Exam Analytics
+          </span>
+          
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight max-w-2xl">
+            Crack Your Dream Exam with{' '}
+            <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-amber-350 bg-clip-text text-transparent">
+              Real-time Mock Tests
+            </span>
+          </h1>
+          
+          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+            Get the actual exam experience with TCS iON-like exam simulator, detailed analytics dashboard, and practice questions curated by experts.
+          </p>
+
+          {/* Exam Search Bar */}
+          <div className="w-full max-w-lg relative mb-8">
+            <div className="flex shadow-2xl shadow-blue-950/50 rounded-xl overflow-hidden bg-white text-slate-800 border border-slate-200/50 focus-within:ring-2 focus-within:ring-blue-500/40 transition-all">
+              <span className="flex items-center justify-center pl-4 bg-white text-base">
+                🔍
               </span>
-              
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight max-w-xl">
-                Crack Your Dream Exam with{' '}
-                <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-amber-350 bg-clip-text text-transparent">
-                  Real-time Mock Tests
-                </span>
-              </h1>
-              
-              <p className="text-base sm:text-lg text-slate-350 max-w-xl mb-8 leading-relaxed font-normal">
-                Get the actual exam experience with TCS iON-like exam simulator, detailed analytics dashboard, and practice questions curated by experts.
-              </p>
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search exams (e.g. SBI PO, SSC CGL, RRB)..."
+                className="w-full px-4 py-3.5 focus:outline-none text-slate-800 font-semibold placeholder:text-slate-400 text-sm sm:text-base text-left"
+              />
+            </div>
 
-              {/* Exam Search Bar */}
-              <div className="w-full max-w-lg relative mb-6">
-                <div className="flex shadow-2xl shadow-blue-950/50 rounded-xl overflow-hidden bg-white text-slate-800 border border-slate-200/50 focus-within:ring-2 focus-within:ring-blue-500/40 transition-all">
-                  <span className="flex items-center justify-center pl-4 bg-white text-base">
-                    🔍
-                  </span>
-                  <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search exams (e.g. SBI PO, SSC CGL, RRB)..."
-                    className="w-full px-4 py-3.5 focus:outline-none text-slate-800 font-semibold placeholder:text-slate-400 text-sm sm:text-base"
-                  />
-                </div>
-
-                {/* Live Search Suggestions Dropdown */}
-                {searchQuery && (
-                  <div className="absolute left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-slate-100 z-50 text-slate-800 max-h-60 overflow-y-auto text-left divide-y divide-slate-50">
-                    {filteredExams.length > 0 ? (
-                      filteredExams.map((exam) => (
-                        <Link
-                          key={exam.id}
-                          href={`/exam/${exam.slug}`}
-                          className="block px-5 py-3.5 hover:bg-slate-50 transition-colors"
-                        >
-                          <div className="font-semibold text-slate-800 text-sm">{exam.name}</div>
-                          <div className="text-xs text-slate-500 mt-0.5">{exam.description}</div>
-                        </Link>
-                      ))
-                    ) : (
-                      <div className="px-5 py-4 text-sm text-slate-400 italic text-center">
-                        No exams found matching your search.
-                      </div>
-                    )}
+            {/* Live Search Suggestions Dropdown */}
+            {searchQuery && (
+              <div className="absolute left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-slate-100 z-50 text-slate-800 max-h-60 overflow-y-auto text-left divide-y divide-slate-50">
+                {filteredExams.length > 0 ? (
+                  filteredExams.map((exam) => (
+                    <Link
+                      key={exam.id}
+                      href={`/exam/${exam.slug}`}
+                      className="block px-5 py-3.5 hover:bg-slate-50 transition-colors"
+                    >
+                      <div className="font-semibold text-slate-800 text-sm">{exam.name}</div>
+                      <div className="text-xs text-slate-500 mt-0.5">{exam.description}</div>
+                    </Link>
+                  ))
+                ) : (
+                  <div className="px-5 py-4 text-sm text-slate-400 italic text-center">
+                    No exams found matching your search.
                   </div>
                 )}
               </div>
+            )}
+          </div>
 
-              {/* Trust Ticker (Above the Fold) */}
-              <div className="w-full max-w-xl mt-2 mb-8">
-                <div className="flex flex-wrap gap-3 sm:gap-4">
-                  <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10">
-                    <span className="text-base sm:text-lg shrink-0">🏆</span>
-                    <div>
-                      <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Attempted</div>
-                      <div className="text-sm sm:text-base font-extrabold text-amber-400 mt-0.5">10M+ Tests</div>
-                    </div>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10">
-                    <span className="text-base sm:text-lg shrink-0">🎓</span>
-                    <div>
-                      <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Exams Covered</div>
-                      <div className="text-sm sm:text-base font-extrabold text-blue-300 mt-0.5">500+ Govt</div>
-                    </div>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10">
-                    <span className="text-base sm:text-lg shrink-0">⚡</span>
-                    <div>
-                      <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">User Rating</div>
-                      <div className="text-sm sm:text-base font-extrabold text-emerald-400 mt-0.5">4.8 / 5.0</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Quick exam tags */}
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="text-xs text-slate-400 font-bold">Popular:</span>
-                {popularExams.map(exam => (
-                  <Link
-                    key={exam.id}
-                    href={`/exam/${exam.slug}`}
-                    className="text-xs bg-white/10 hover:bg-white/20 hover:text-amber-300 px-3.5 py-1.5 rounded-full font-semibold transition-colors border border-white/10"
-                  >
-                    {exam.name}
-                  </Link>
-                ))}
+          {/* Trust Ticker (Above the Fold, Centered) */}
+          <div className="w-full max-w-2xl flex flex-wrap justify-center gap-3 sm:gap-4 mb-8">
+            <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
+              <span className="text-base sm:text-lg shrink-0">🏆</span>
+              <div>
+                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Attempted</div>
+                <div className="text-sm sm:text-base font-extrabold text-amber-400 mt-0.5">10M+ Tests</div>
               </div>
             </div>
-
-            {/* Right Column: Premium 2D Cinematic Illustration */}
-            <div className="lg:col-span-5 relative flex justify-center items-center mt-10 lg:mt-0">
-              <div className="relative w-full max-w-[420px] aspect-square animate-float">
-                {/* Visual backglow matching branding */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-indigo-650/20 rounded-full blur-3xl -z-10"></div>
-                <div className="absolute inset-0 border border-white/10 rounded-3xl [mask-image:linear-gradient(to_bottom,white,transparent)] -z-10"></div>
-                
-                <img
-                  src="/hero_composition_vector.png"
-                  alt="TCS iON simulator and AI Analytics dashboard leading to success gateway 2D illustration"
-                  className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(59,130,246,0.25)] select-none"
-                  draggable="false"
-                />
+            <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
+              <span className="text-base sm:text-lg shrink-0">🎓</span>
+              <div>
+                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Exams Covered</div>
+                <div className="text-sm sm:text-base font-extrabold text-blue-300 mt-0.5">500+ Govt</div>
               </div>
             </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
+              <span className="text-base sm:text-lg shrink-0">⚡</span>
+              <div>
+                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">User Rating</div>
+                <div className="text-sm sm:text-base font-extrabold text-emerald-400 mt-0.5">4.8 / 5.0</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick exam tags */}
+          <div className="flex flex-wrap justify-center items-center gap-2.5">
+            <span className="text-xs text-slate-400 font-bold">Popular:</span>
+            {popularExams.map(exam => (
+              <Link
+                key={exam.id}
+                href={`/exam/${exam.slug}`}
+                className="text-xs bg-white/10 hover:bg-white/20 hover:text-amber-300 px-3.5 py-1.5 rounded-full font-semibold transition-colors border border-white/10"
+              >
+                {exam.name}
+              </Link>
+            ))}
           </div>
         </div>
       </section>
