@@ -1,6 +1,7 @@
 import { HARYANA_POLICE_CUSTOM_MOCKS } from './haryanaPoliceMocksData';
 import { GROUP_D_CUSTOM_MOCKS } from './groupDMocksData';
 import { HARYANA_POLICE_EXPERT_MOCK } from './haryanaPoliceExpertMockData';
+import { HARYANA_POLICE_EXPERT_MOCK_2 } from './haryanaPoliceExpertMockData2';
 
 export interface Category {
   id: string;
@@ -152,6 +153,7 @@ const BASE_MOCK_TESTS: Test[] = [
   { id: 'test-hssc-police-full-6', title: 'HSSC Haryana Police Constable - Full Mock Test 6', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard' },
   { id: 'test-hssc-police-full-7', title: 'HSSC Haryana Police Constable - Full Mock Test 7', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard' },
   { id: 'test-hssc-police-full-8', title: 'HSSC Haryana Police Constable - Expert Full Mock (Syllabus-Aligned)', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard', isExpert: true, isNew: true },
+  { id: 'test-hssc-police-full-9', title: 'HSSC Haryana Police Constable - Expert Full Mock 2 (Latest Pattern)', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard', isExpert: true, isNew: true },
   { id: 'test-hssc-police-sub-haryana-gk-1', title: 'Subject Test: Haryana GK - Mock 1 (हरियाणा सामान्य ज्ञान)', duration: 25, totalMarks: 25, testType: 'SUBJECT', examId: 'exam-hssc-police', questionCount: 25, difficulty: 'Medium' },
   { id: 'test-hssc-police-sub-haryana-gk-2', title: 'Subject Test: Haryana GK - Mock 2 (हरियाणा सामान्य ज्ञान)', duration: 25, totalMarks: 25, testType: 'SUBJECT', examId: 'exam-hssc-police', questionCount: 25, difficulty: 'Hard' },
   { id: 'test-hssc-police-sub-agriculture-1', title: 'Subject Test: Agriculture & Husbandry - Mock 1 (कृषि एवं पशुपालन)', duration: 25, totalMarks: 25, testType: 'SUBJECT', examId: 'exam-hssc-police', questionCount: 25, difficulty: 'Medium' },
@@ -1264,6 +1266,9 @@ export const MOCK_QUESTIONS: Record<string, Question[]> = {
 export function getQuestionsForTest(testId: string): Question[] {
   if (testId === 'test-hssc-police-full-8') {
     return HARYANA_POLICE_EXPERT_MOCK;
+  }
+  if (testId === 'test-hssc-police-full-9') {
+    return HARYANA_POLICE_EXPERT_MOCK_2;
   }
   if (MOCK_QUESTIONS[testId]) {
     return MOCK_QUESTIONS[testId];
