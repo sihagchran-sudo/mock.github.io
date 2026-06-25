@@ -57,7 +57,7 @@ export default function TestCard({ test }: TestCardProps) {
             <span className={`text-[11px] font-semibold px-2 py-0.5 rounded border ${getBadgeColor(test.testType)}`}>
               {getBadgeLabel(test.testType)}
             </span>
-            {test.difficulty === 'Hard' && (
+            {test.difficulty === 'Hard' && !test.isExpert && (
               <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded border bg-red-50 text-red-600 border-red-200 uppercase tracking-wider">
                 Hard
               </span>
