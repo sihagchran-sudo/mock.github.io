@@ -2,6 +2,7 @@ import { HARYANA_POLICE_CUSTOM_MOCKS } from './haryanaPoliceMocksData';
 import { GROUP_D_CUSTOM_MOCKS } from './groupDMocksData';
 import { HARYANA_POLICE_EXPERT_MOCK } from './haryanaPoliceExpertMockData';
 import { HARYANA_POLICE_EXPERT_MOCK_2 } from './haryanaPoliceExpertMockData2';
+import { SSC_CUSTOM_MOCKS } from './sscMocksData';
 
 export interface Category {
   id: string;
@@ -140,7 +141,16 @@ const BASE_MOCK_TESTS: Test[] = [
   { id: 'test-sbi-po-sec-reasoning', title: 'Reasoning Ability - Sectional Mock', duration: 20, totalMarks: 35, testType: 'SECTIONAL', examId: 'exam-sbi-po', questionCount: 5 },
 
   // SSC CGL Custom Tests
-  { id: 'test-ssc-cgl-full-1', title: 'SSC CGL Tier I - Full Mock Test 1', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 10 },
+  { id: 'test-ssc-cgl-full-1', title: 'SSC CGL Tier I - Full Mock Test 1', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
+  { id: 'test-ssc-cgl-full-2', title: 'SSC CGL Tier I - Full Mock Test 2', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
+  { id: 'test-ssc-cgl-full-3', title: 'SSC CGL Tier I - Full Mock Test 3', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
+  { id: 'test-ssc-cgl-full-4', title: 'SSC CGL Tier I - Full Mock Test 4', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
+  { id: 'test-ssc-cgl-full-5', title: 'SSC CGL Tier I - Full Mock Test 5', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
+  { id: 'test-ssc-cgl-full-6', title: 'SSC CGL Tier I - Full Mock Test 6', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
+  { id: 'test-ssc-cgl-full-7', title: 'SSC CGL Tier I - Full Mock Test 7', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
+  { id: 'test-ssc-cgl-full-8', title: 'SSC CGL Tier I - Full Mock Test 8', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
+  { id: 'test-ssc-cgl-full-9', title: 'SSC CGL Tier I - Full Mock Test 9', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
+  { id: 'test-ssc-cgl-full-10', title: 'SSC CGL Tier I - Full Mock Test 10', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
   { id: 'test-ssc-cgl-sub-english', title: 'English Comprehension - Subject Mock', duration: 15, totalMarks: 50, testType: 'SUBJECT', examId: 'exam-ssc-cgl', questionCount: 5 },
   { id: 'test-ssc-cgl-chap-geo', title: 'Chapter Test: Geometry & Mensuration', duration: 15, totalMarks: 20, testType: 'CHAPTER', examId: 'exam-ssc-cgl', questionCount: 5 },
 
@@ -1279,6 +1289,9 @@ export function getQuestionsForTest(testId: string): Question[] {
   }
   if (GROUP_D_CUSTOM_MOCKS[testId]) {
     return GROUP_D_CUSTOM_MOCKS[testId];
+  }
+  if (SSC_CUSTOM_MOCKS[testId]) {
+    return SSC_CUSTOM_MOCKS[testId];
   }
   // Generate generic questions if none match
   const test = MOCK_TESTS.find(t => t.id === testId);
