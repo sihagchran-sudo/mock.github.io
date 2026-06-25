@@ -77,6 +77,28 @@ export default function HomePage() {
         {/* Sleek diagonal grid pattern using pure CSS SVG to look highly premium on light background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)] pointer-events-none"></div>
 
+        {/* Subtle 2D Motion Overlays (Absolute floating badges in background) */}
+        <div className="hidden lg:block absolute top-[18%] left-[6%] animate-float-slow pointer-events-none select-none z-0">
+          <div className="bg-white border border-slate-200/80 rounded-xl px-3.5 py-2.5 shadow-md text-slate-800 text-xs font-bold opacity-[0.18] flex items-center gap-2">
+            <span>🎯</span> 99th Percentile
+          </div>
+        </div>
+        <div className="hidden lg:block absolute bottom-[22%] left-[8%] animate-float-delay pointer-events-none select-none z-0">
+          <div className="bg-white border border-slate-200/80 rounded-xl px-4 py-2.5 shadow-md text-slate-800 text-xs font-bold opacity-[0.16] flex items-center gap-2">
+            <span>📈</span> Accuracy: +95%
+          </div>
+        </div>
+        <div className="hidden lg:block absolute top-[22%] right-[6%] animate-float-delay pointer-events-none select-none z-0">
+          <div className="bg-white border border-slate-200/80 rounded-xl px-4 py-2.5 shadow-md text-slate-800 text-xs font-bold opacity-[0.18] flex items-center gap-2">
+            <span>⏱️</span> Real-time Timer
+          </div>
+        </div>
+        <div className="hidden lg:block absolute bottom-[26%] right-[8%] animate-float-slow pointer-events-none select-none z-0">
+          <div className="bg-white border border-slate-200/80 rounded-xl px-4 py-2.5 shadow-md text-slate-800 text-xs font-bold opacity-[0.16] flex items-center gap-2">
+            <span>🏆</span> Cut-off Cleared
+          </div>
+        </div>
+
         <div className="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-650 border border-blue-100 mb-6 shadow-sm">
             🚀 Powered by AI Exam Analytics
