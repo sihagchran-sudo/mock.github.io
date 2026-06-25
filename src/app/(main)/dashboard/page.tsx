@@ -15,17 +15,66 @@ export default function DashboardPage() {
   const [attempts, setAttempts] = useState<TestAttempt[]>([]);
   const [upgrading, setUpgrading] = useState(false);
 
-  // Load attempt history (localStorage + mock templates)
+  // Load attempt history (database + localStorage + mock templates)
   useEffect(() => {
     const email = session?.user?.email;
-    if (email) {
-      const storedAttempts = JSON.parse(localStorage.getItem('mock_attempts') || '[]');
-      const allAttempts = [...storedAttempts, ...INITIAL_ATTEMPTS];
-      const userAttempts = allAttempts.filter(a => a.userId === email);
-      setAttempts(userAttempts);
-    } else {
+    if (!email) {
       setAttempts([]);
+      return;
     }
+
+    let isMounted = true;
+
+    async function loadAttempts() {
+      // 1. Get local attempts and initial templates
+      const storedAttempts = JSON.parse(localStorage.getItem('mock_attempts') || '[]');
+      const localAndInitial = [...storedAttempts, ...INITIAL_ATTEMPTS].filter(a => a.userId === email);
+      
+      try {
+        // 2. Fetch database attempts
+        const res = await fetch('/api/user/attempts');
+        if (res.ok) {
+          const data = await res.json();
+          if (data.success && data.attempts && isMounted) {
+            const dbAttempts = data.attempts;
+            
+            // Merge & deduplicate by attempt.id
+            const attemptMap = new Map<string, any>();
+            
+            // Add DB attempts first (database is source of truth for synced data)
+            dbAttempts.forEach((att: any) => attemptMap.set(att.id, att));
+            
+            // Add local/initial attempts (keeps any that aren't synced or are template defaults)
+            localAndInitial.forEach((att: any) => {
+              if (!attemptMap.has(att.id)) {
+                attemptMap.set(att.id, att);
+              }
+            });
+
+            // Sort by startedAt descending
+            const merged = Array.from(attemptMap.values()).sort(
+              (a, b) => new Date(b.startedAt).getTime() - new Date(a.startedAt).getTime()
+            );
+
+            setAttempts(merged);
+            return;
+          }
+        }
+      } catch (err) {
+        console.error("Failed to fetch database attempts:", err);
+      }
+
+      // Fallback to local storage if API call fails
+      if (isMounted) {
+        setAttempts(localAndInitial);
+      }
+    }
+
+    loadAttempts();
+
+    return () => {
+      isMounted = false;
+    };
   }, [session]);
 
   // Compute aggregate prep stats

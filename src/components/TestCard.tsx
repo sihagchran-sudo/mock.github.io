@@ -6,6 +6,35 @@ import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import { Test, TestType } from '../mockData';
 
+// Coalesced cache for retrieving database attempts to avoid duplicate API requests
+let lastFetchTime = 0;
+let cachedAttempts: any[] = [];
+let pendingPromise: Promise<any[]> | null = null;
+
+function getAttemptsCached(): Promise<any[]> {
+  const now = Date.now();
+  if (pendingPromise) return pendingPromise;
+  
+  if (now - lastFetchTime < 5000 && cachedAttempts.length > 0) {
+    return Promise.resolve(cachedAttempts);
+  }
+  
+  pendingPromise = fetch('/api/user/attempts')
+    .then(res => res.ok ? res.json() : { success: false, attempts: [] })
+    .then(data => {
+      cachedAttempts = data.success ? data.attempts : [];
+      lastFetchTime = Date.now();
+      pendingPromise = null;
+      return cachedAttempts;
+    })
+    .catch(() => {
+      pendingPromise = null;
+      return [];
+    });
+    
+  return pendingPromise;
+}
+
 interface TestCardProps {
   test: Test;
 }
@@ -17,17 +46,44 @@ export default function TestCard({ test }: TestCardProps) {
 
   useEffect(() => {
     const email = session?.user?.email;
-    try {
-      const pastAttempts = JSON.parse(localStorage.getItem('mock_attempts') || '[]');
-      const attempted = pastAttempts.some((attempt: any) => 
-        attempt.testId === test.id && 
-        attempt.status === 'COMPLETED' && 
-        (!email || attempt.userId === email)
-      );
-      setIsAttempted(attempted);
-    } catch (e) {
-      console.error(e);
+    let isMounted = true;
+
+    async function checkAttempted() {
+      try {
+        // 1. Check local storage first
+        const pastAttempts = JSON.parse(localStorage.getItem('mock_attempts') || '[]');
+        let attempted = pastAttempts.some((attempt: any) => 
+          attempt.testId === test.id && 
+          attempt.status === 'COMPLETED' && 
+          (!email || attempt.userId === email)
+        );
+
+        if (attempted) {
+          if (isMounted) setIsAttempted(true);
+          return;
+        }
+
+        // 2. If not found in local storage and user is logged in, check database
+        if (email) {
+          const dbAttempts = await getAttemptsCached();
+          const dbAttempted = dbAttempts.some((attempt: any) =>
+            attempt.testId === test.id &&
+            attempt.status === 'COMPLETED'
+          );
+          if (isMounted) setIsAttempted(dbAttempted);
+        } else {
+          if (isMounted) setIsAttempted(false);
+        }
+      } catch (e) {
+        console.error(e);
+      }
     }
+
+    checkAttempted();
+
+    return () => {
+      isMounted = false;
+    };
   }, [test.id, session]);
 
   const handleStartTest = (e: React.MouseEvent) => {

@@ -16,32 +16,57 @@ export default function AnalyticsPage() {
   const [userRank, setUserRank] = useState(1);
 
   useEffect(() => {
-    // 1. Try to fetch from local storage
-    const storedAttempts = JSON.parse(localStorage.getItem('mock_attempts') || '[]');
-    let currentAttempt = storedAttempts.find((a: TestAttempt) => a.id === resultId);
+    let isMounted = true;
 
-    // 2. Fall back to initial mock history
-    if (!currentAttempt) {
-      currentAttempt = INITIAL_ATTEMPTS.find(a => a.id === resultId);
-    }
+    async function loadAttempt() {
+      // 1. Try to fetch from local storage
+      const storedAttempts = JSON.parse(localStorage.getItem('mock_attempts') || '[]');
+      let currentAttempt = storedAttempts.find((a: TestAttempt) => a.id === resultId);
 
-    if (currentAttempt) {
-      setAttempt(currentAttempt);
-
-      // Seed calculation to keep total candidates and rank consistent per attempt ID
-      let seed = 0;
-      for (let i = 0; i < currentAttempt.id.length; i++) {
-        seed += currentAttempt.id.charCodeAt(i);
+      // 2. Fall back to initial mock history
+      if (!currentAttempt) {
+        currentAttempt = INITIAL_ATTEMPTS.find(a => a.id === resultId);
       }
-      const virtualTotal = 8400 + (seed % 340);
-      setTotalCandidates(virtualTotal);
 
-      // Calculate rank based on percentile
-      const p = currentAttempt.percentile;
-      const fractionAbove = 1 - p / 100;
-      const rank = Math.max(1, Math.round(fractionAbove * virtualTotal));
-      setUserRank(rank);
+      // 3. Check database if not found locally
+      if (!currentAttempt) {
+        try {
+          const res = await fetch(`/api/user/attempts?id=${resultId}`);
+          if (res.ok) {
+            const data = await res.json();
+            if (data.success && data.attempt) {
+              currentAttempt = data.attempt;
+            }
+          }
+        } catch (err) {
+          console.error("Failed to fetch attempt from database:", err);
+        }
+      }
+
+      if (currentAttempt && isMounted) {
+        setAttempt(currentAttempt);
+
+        // Seed calculation to keep total candidates and rank consistent per attempt ID
+        let seed = 0;
+        for (let i = 0; i < currentAttempt.id.length; i++) {
+          seed += currentAttempt.id.charCodeAt(i);
+        }
+        const virtualTotal = 8400 + (seed % 340);
+        setTotalCandidates(virtualTotal);
+
+        // Calculate rank based on percentile
+        const p = currentAttempt.percentile;
+        const fractionAbove = 1 - p / 100;
+        const rank = Math.max(1, Math.round(fractionAbove * virtualTotal));
+        setUserRank(rank);
+      }
     }
+
+    loadAttempt();
+
+    return () => {
+      isMounted = false;
+    };
   }, [resultId]);
 
   if (!attempt) {

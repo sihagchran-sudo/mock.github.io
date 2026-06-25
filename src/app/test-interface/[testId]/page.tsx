@@ -218,7 +218,7 @@ export default function TestInterfacePage() {
     }
   };
 
-  const handleSubmit = (autoSubmit = false) => {
+  const handleSubmit = async (autoSubmit = false) => {
     if (!autoSubmit && !window.confirm('Are you sure you want to submit your mock test?')) {
       return;
     }
@@ -232,6 +232,21 @@ export default function TestInterfacePage() {
     const pastAttempts = JSON.parse(localStorage.getItem('mock_attempts') || '[]');
     pastAttempts.unshift(attempt);
     localStorage.setItem('mock_attempts', JSON.stringify(pastAttempts));
+    
+    // Sync to database if logged in
+    if (session?.user?.email) {
+      try {
+        await fetch('/api/user/attempts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(attempt),
+        });
+      } catch (err) {
+        console.error("Failed to sync attempt to database:", err);
+      }
+    }
     
     // Redirect to analytics
     router.push(`/analytics/${attempt.id}`);
