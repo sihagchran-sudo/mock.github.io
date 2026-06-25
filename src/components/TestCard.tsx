@@ -62,6 +62,16 @@ export default function TestCard({ test }: TestCardProps) {
                 Hard
               </span>
             )}
+            {test.isExpert && (
+              <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded border bg-purple-50 text-purple-700 border-purple-200 uppercase tracking-wider">
+                Expert
+              </span>
+            )}
+            {test.isNew && (
+              <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded border bg-amber-500 text-white border-amber-500 uppercase tracking-wider">
+                New
+              </span>
+            )}
           </div>
           <span className="text-slate-400 text-xs flex items-center gap-1">
             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
