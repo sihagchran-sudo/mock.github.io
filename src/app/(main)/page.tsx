@@ -68,56 +68,55 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      {/* 1. Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50/90 via-sky-50/60 to-white/70 backdrop-blur-lg text-slate-800 overflow-hidden py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-blue-100/50">
+       <section className="relative bg-gradient-to-b from-[#0b1329] via-[#0d1630] to-[#090e1e] text-white overflow-hidden py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-900">
         {/* Background Decorative Elements (Sleek light blue/indigo blur reflections) */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-blue-200/20 blur-[120px] pointer-events-none -mr-40 -mt-40"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-indigo-200/20 blur-[100px] pointer-events-none -ml-20 -mb-20"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none -mr-40 -mt-40"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none -ml-20 -mb-20"></div>
         
-        {/* Sleek diagonal grid pattern using pure CSS SVG to look highly premium on light background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)] pointer-events-none"></div>
+        {/* Sleek diagonal grid pattern using pure CSS SVG to look highly premium on dark background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)] pointer-events-none"></div>
 
         {/* Subtle 2D Motion Overlays (Absolute floating badges in background) */}
         <div className="hidden lg:block absolute top-[18%] left-[6%] animate-float-slow pointer-events-none select-none z-0">
-          <div className="bg-white border border-slate-200/80 rounded-xl px-3.5 py-2.5 shadow-md text-slate-800 text-xs font-bold opacity-[0.18] flex items-center gap-2">
+          <div className="bg-white/5 border border-white/10 rounded-xl px-3.5 py-2.5 shadow-md text-white text-xs font-bold opacity-[0.18] flex items-center gap-2">
             <span>🎯</span> 99th Percentile
           </div>
         </div>
         <div className="hidden lg:block absolute bottom-[22%] left-[8%] animate-float-delay pointer-events-none select-none z-0">
-          <div className="bg-white border border-slate-200/80 rounded-xl px-4 py-2.5 shadow-md text-slate-800 text-xs font-bold opacity-[0.16] flex items-center gap-2">
+          <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 shadow-md text-white text-xs font-bold opacity-[0.16] flex items-center gap-2">
             <span>📈</span> Accuracy: +95%
           </div>
         </div>
         <div className="hidden lg:block absolute top-[22%] right-[6%] animate-float-delay pointer-events-none select-none z-0">
-          <div className="bg-white border border-slate-200/80 rounded-xl px-4 py-2.5 shadow-md text-slate-800 text-xs font-bold opacity-[0.18] flex items-center gap-2">
+          <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 shadow-md text-white text-xs font-bold opacity-[0.18] flex items-center gap-2">
             <span>⏱️</span> Real-time Timer
           </div>
         </div>
         <div className="hidden lg:block absolute bottom-[26%] right-[8%] animate-float-slow pointer-events-none select-none z-0">
-          <div className="bg-white border border-slate-200/80 rounded-xl px-4 py-2.5 shadow-md text-slate-800 text-xs font-bold opacity-[0.16] flex items-center gap-2">
+          <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 shadow-md text-white text-xs font-bold opacity-[0.16] flex items-center gap-2">
             <span>🏆</span> Cut-off Cleared
           </div>
         </div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-650 border border-blue-100 mb-6 shadow-sm">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 text-blue-300 border border-blue-500/20 mb-6 shadow-sm">
             🚀 Powered by AI Exam Analytics
           </span>
           
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight max-w-3xl text-slate-900">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight max-w-3xl text-white">
             Leave Exam Fear Behind. Practice in a{' '}
-            <span className="bg-gradient-to-r from-amber-500 via-amber-600 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">
               Real Test Environment.
             </span>
           </h1>
           
-          <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
             Feeling nervous about the final exam day is normal, but it shouldn't lower your score. Our platform gives you the exact feel of the real exam hall. Practice with the same screen layout, manage the real countdown timer, and test your speed before the actual day. We show you exactly where you are making mistakes so you can fix them fast. Build your confidence, manage your time better, and get ready to clear the cut-off.
           </p>
 
           {/* Exam Search Bar */}
           <div className="w-full max-w-lg relative mb-8">
-            <div className="flex shadow-xl shadow-slate-100 rounded-xl overflow-hidden bg-white text-slate-800 border border-slate-200 focus-within:ring-2 focus-within:ring-blue-500/20 transition-all">
+            <div className="flex shadow-2xl shadow-blue-950/50 rounded-xl overflow-hidden bg-white text-slate-800 border border-slate-200/50 focus-within:ring-2 focus-within:ring-blue-500/40 transition-all">
               <span className="flex items-center justify-center pl-4 bg-white text-base">
                 🔍
               </span>
@@ -155,37 +154,37 @@ export default function HomePage() {
 
           {/* Trust Ticker (Above the Fold, Centered) */}
           <div className="w-full max-w-2xl flex flex-wrap justify-center gap-3 sm:gap-4 mb-8">
-            <div className="bg-white border border-slate-200/80 rounded-xl px-4 py-2.5 flex items-center gap-2.5 shadow-sm hover:shadow-md hover:border-slate-350 transition-all text-left">
+            <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
               <span className="text-base sm:text-lg shrink-0">🏆</span>
               <div>
                 <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Attempted</div>
-                <div className="text-sm sm:text-base font-extrabold text-blue-600 mt-0.5">10M+ Tests</div>
+                <div className="text-sm sm:text-base font-extrabold text-amber-400 mt-0.5">10M+ Tests</div>
               </div>
             </div>
-            <div className="bg-white border border-slate-200/80 rounded-xl px-4 py-2.5 flex items-center gap-2.5 shadow-sm hover:shadow-md hover:border-slate-350 transition-all text-left">
+            <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
               <span className="text-base sm:text-lg shrink-0">🎓</span>
               <div>
                 <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Exams Covered</div>
-                <div className="text-sm sm:text-base font-extrabold text-indigo-600 mt-0.5">500+ Govt</div>
+                <div className="text-sm sm:text-base font-extrabold text-blue-300 mt-0.5">500+ Govt</div>
               </div>
             </div>
-            <div className="bg-white border border-slate-200/80 rounded-xl px-4 py-2.5 flex items-center gap-2.5 shadow-sm hover:shadow-md hover:border-slate-350 transition-all text-left">
+            <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
               <span className="text-base sm:text-lg shrink-0">⚡</span>
               <div>
                 <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">User Rating</div>
-                <div className="text-sm sm:text-base font-extrabold text-emerald-600 mt-0.5">4.8 / 5.0</div>
+                <div className="text-sm sm:text-base font-extrabold text-emerald-400 mt-0.5">4.8 / 5.0</div>
               </div>
             </div>
           </div>
 
           {/* Quick exam tags */}
           <div className="flex flex-wrap justify-center items-center gap-2.5">
-            <span className="text-xs text-slate-500 font-bold">Popular:</span>
+            <span className="text-xs text-slate-400 font-bold">Popular:</span>
             {popularExams.map(exam => (
               <Link
                 key={exam.id}
                 href={`/exam/${exam.slug}`}
-                className="text-xs bg-slate-100 hover:bg-slate-200 hover:text-blue-600 text-slate-650 border border-slate-200/60 font-semibold px-3.5 py-1.5 rounded-full transition-all"
+                className="text-xs bg-white/10 hover:bg-white/20 hover:text-amber-300 text-slate-200 border border-white/10 font-semibold px-3.5 py-1.5 rounded-full transition-all"
               >
                 {exam.name}
               </Link>
