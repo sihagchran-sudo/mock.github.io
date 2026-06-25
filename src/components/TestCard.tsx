@@ -1,7 +1,9 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 import { Test, TestType } from '../mockData';
 
 interface TestCardProps {
@@ -10,6 +12,23 @@ interface TestCardProps {
 
 export default function TestCard({ test }: TestCardProps) {
   const router = useRouter();
+  const { data: session } = useSession();
+  const [isAttempted, setIsAttempted] = useState(false);
+
+  useEffect(() => {
+    const email = session?.user?.email;
+    try {
+      const pastAttempts = JSON.parse(localStorage.getItem('mock_attempts') || '[]');
+      const attempted = pastAttempts.some((attempt: any) => 
+        attempt.testId === test.id && 
+        attempt.status === 'COMPLETED' && 
+        (!email || attempt.userId === email)
+      );
+      setIsAttempted(attempted);
+    } catch (e) {
+      console.error(e);
+    }
+  }, [test.id, session]);
 
   const handleStartTest = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -72,6 +91,11 @@ export default function TestCard({ test }: TestCardProps) {
                 New
               </span>
             )}
+            {isAttempted && (
+              <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded border bg-emerald-50 text-emerald-700 border-emerald-200 uppercase tracking-wider flex items-center gap-0.5">
+                ✓ Attempted
+              </span>
+            )}
           </div>
           <span className="text-slate-400 text-xs flex items-center gap-1">
             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -103,7 +127,7 @@ export default function TestCard({ test }: TestCardProps) {
           onClick={handleStartTest}
           className="bg-blue-600 hover:bg-blue-700 text-white text-xs px-4 py-2 rounded-lg font-semibold shadow-sm transition-all hover:shadow-md active:scale-95 flex items-center gap-1 cursor-pointer"
         >
-          Start Test
+          {isAttempted ? 'Retake Test' : 'Start Test'}
           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
