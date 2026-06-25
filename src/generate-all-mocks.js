@@ -3534,7 +3534,359 @@ const subjectMocks = {
       sectionName: 'Numerical Ability & Reasoning',
       testId: 'test-hssc-police-sub-math-reasoning-2'
     }
-  ]
+  ],
+  "test-hssc-police-sub-haryana-gk-3": [
+  {
+    "id": "q-hssc-sub-haryana-gk-3-1",
+    "text": "Subject Test: Haryana में कहाँ पर देश का पहला फुटवियर ट्रेड सेंटर स्थापित किया जाएगा?",
+    "options": [
+      "पानीपत",
+      "बहादुरगढ़",
+      "गुरुग्राम",
+      "बल्लभगढ़"
+    ],
+    "correctIndex": 1,
+    "explanation": "हरियाणा के बहादुरगढ़ में देश का पहला फुटवियर ट्रेड सेंटर स्थापित किया जाएगा। बहादुरगढ़ को हरियाणा का फुटवियर पार्क भी कहा जाता है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-2",
+    "text": "Subject Test: Haryana सरकार ने वर्ष 2026 के अंत तक वायु गुणवत्ता सूचकांक (AQI) में लगभग कितने प्रतिशत तक कमी लाने का लक्ष्य रखा है?",
+    "options": [
+      "10 प्रतिशत",
+      "15 प्रतिशत",
+      "20 प्रतिशत",
+      "30 प्रतिशत"
+    ],
+    "correctIndex": 2,
+    "explanation": "हरियाणा सरकार ने कमीशन फॉर एयर क्वालिटी मैनेजमेंट (CAQM) को सौंपी गई कार्य योजना के तहत वर्ष 2026 के अंत तक राज्य में वायु गुणवत्ता सूचकांक (AQI) में लगभग 20% (आधिकारिक तौर पर 21.5%) की कमी लाने का लक्ष्य रखा है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-3",
+    "text": "Subject Test: Haryana के किस जिले में सीके नायडू ट्रॉफी एलीट अंडर-23 क्रिकेट प्रतियोगिता का आयोजन किया गया?",
+    "options": [
+      "गुरुग्राम",
+      "फरीदाबाद",
+      "रोहतक",
+      "यमुनानगर"
+    ],
+    "correctIndex": 1,
+    "explanation": "सीके नायडू ट्रॉफी एलीट अंडर-23 क्रिकेट प्रतियोगिता का आयोजन हरियाणा राज्य खेल परिसर, सेक्टर 12, फरीदाबाद में किया गया।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-4",
+    "text": "Subject Test: Haryana में किसके द्वारा देश के पहले हाइड्रोजन से चलने वाले ड्रोन को लॉन्च किया गया है?",
+    "options": [
+      "नायब सिंह सैनी",
+      "कंवरपाल गुर्जर",
+      "अनिल विज",
+      "रणवीर सिंह गंगवा"
+    ],
+    "correctIndex": 0,
+    "explanation": "हरियाणा के मुख्यमंत्री नायब सिंह सैनी द्वारा देश के पहले हाइड्रोजन से चलने वाले कृषि ड्रोन को लॉन्च किया गया, जिसे हिसार स्थित एक स्टार्टअप 'WOW Go Green' ने विकसित किया है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-5",
+    "text": "Subject Test: मोबाइल डिजिटल लाइब्रेरी योजना की शुरुआत Haryana के किस क्षेत्र से होगी?",
+    "options": [
+      "पिंजौर",
+      "कालका",
+      "मोरनी",
+      "हांसी"
+    ],
+    "correctIndex": 2,
+    "explanation": "हरियाणा में मोबाइल डिजिटल लाइब्रेरी योजना की शुरुआत पंचकूला जिले के मोरनी पहाड़ी क्षेत्र से की जाएगी, ताकि ग्रामीण व दूरदराज के क्षेत्रों के बच्चों तक डिजिटल शिक्षा की पहुंच आसान हो सके।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-6",
+    "text": "Subject Test: आईएनएस अरावली (INS Aravali) को कहाँ कमीशन किया गया है?",
+    "options": [
+      "अंबाला",
+      "पंचकूला",
+      "गुरुग्राम",
+      "सोनीपत"
+    ],
+    "correctIndex": 2,
+    "explanation": "आईएनएस अरावली (INS Aravali) को गुरुग्राम, हरियाणा में कमीशन किया गया है। यह एक स्टोन फ्रिगेट (भूमि आधारित नौसैनिक प्रतिष्ठान) है जो हिंद महासागर क्षेत्र (IOR) में समुद्री सुरक्षा और सूचना साझा करने के लिए प्रशासनिक और लॉजिस्टिक सहायता प्रदान करता है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-7",
+    "text": "Subject Test: Haryana सरकार ने 'बाढ़ मुक्त हरियाणा' और 'एनीमिया मुक्त हरियाणा' का लक्ष्य कब तक का रखा है?",
+    "options": [
+      "वर्ष 2027 तक",
+      "वर्ष 2028 तक",
+      "वर्ष 2030 तक",
+      "वर्ष 2032 तक"
+    ],
+    "correctIndex": 1,
+    "explanation": "हरियाणा सरकार ने राज्य को पूर्ण रूप से बाढ़ मुक्त और एनीमिया मुक्त बनाने का लक्ष्य वर्ष 2028 तक का निर्धारित किया है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-8",
+    "text": "Subject Test: Haryana सरकार ने 'म्हारी सड़क' ऐप के माध्यम से कितने किलोमीटर लंबी सड़कों को गड्ढा-मुक्त करने का दावा किया है?",
+    "options": [
+      "90,000 किलोमीटर",
+      "1,00,000 किलोमीटर",
+      "1,20,000 किलोमीटर",
+      "1,60,000 किलोमीटर"
+    ],
+    "correctIndex": 1,
+    "explanation": "हरियाणा सरकार ने 'म्हारी सड़क' ऐप के माध्यम से लगभग 1,00,000 किलोमीटर (आधिकारिक आंकड़ों में 1.18 lakh किलोमीटर तक का दावा) लंबी सड़कों को गड्ढा-मुक्त करने का दावा किया है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-9",
+    "text": "Subject Test: Haryana सरकार प्रत्येक जिले में क्या स्थापित करने जा रही है?",
+    "options": [
+      "खेल स्टेडियम",
+      "जिमखाना क्लब",
+      "स्पोर्ट्स एक्सीलेंस सेंटर",
+      "स्पोर्ट्स यूनिवर्सिटी"
+    ],
+    "correctIndex": 2,
+    "explanation": "हरियाणा सरकार खेल और एथलीटों को बढ़ावा देने के लिए राज्य के प्रत्येक जिले में 'स्पोर्ट्स एक्सीलेंस सेंटर' (Sports Excellence Centre) स्थापित करने जा रही है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-10",
+    "text": "Subject Test: प्रदेश का पहला 'हॉस्पिटल ऑन व्हील्स' (आधुनिक चिकित्सा बसें) किस शहर में शुरू किया गया है?",
+    "options": [
+      "अंबाला",
+      "गुरुग्राम",
+      "हिसार",
+      "फरीदाबाद"
+    ],
+    "correctIndex": 3,
+    "explanation": "प्रदेश का पहला 'हॉस्पिटल ऑन व्हील्स' (आधुनिक चिकित्सा बसें) फरीदाबाद शहर में ईएसआईसी (ESIC) मेडिकल कॉलेज और अस्पताल द्वारा शुरू किया गया है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-11",
+    "text": "Subject Test: हाल ही में Haryana के किस जिले में मुख्यमंत्री ने आभासी (Virtual) firing प्रशिक्षण केंद्र का उद्घाटन किया है?",
+    "options": [
+      "करनाल",
+      "अंबाला",
+      "पंचकूला",
+      "हिसार"
+    ],
+    "correctIndex": 2,
+    "explanation": "हरियाणा के मुख्यमंत्री ने पंचकूला में पुलिस प्रशिक्षण के आधुनिकीकरण के हिस्से के रूप में एक आभासी (Virtual) फायरिंग प्रशिक्षण केंद्र का उद्घाटन किया है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-12",
+    "text": "Subject Test: Haryana सरकार ने किस वर्ष तक यमुना को प्रदूषण रहित बनाने का लक्ष्य रखा है?",
+    "options": [
+      "वर्ष 2027",
+      "वर्ष 2028",
+      "वर्ष 2026",
+      "वर्ष 2032"
+    ],
+    "correctIndex": 1,
+    "explanation": "हरियाणा सरकार ने यमुना नदी को पूरी तरह से प्रदूषण रहित और स्वच्छ बनाने का लक्ष्य वर्ष 2028 तक का निर्धारित किया है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-13",
+    "text": "Subject Test: अंतरराष्ट्रीय गीता महोत्सव-2026 का आयोजन किस देश में होगा?",
+    "options": [
+      "पंजाब",
+      "हिमाचल प्रदेश",
+      "जापान",
+      "उत्तराखंड"
+    ],
+    "correctIndex": 2,
+    "explanation": "अंतरराष्ट्रीय गीता महोत्सव-2026 का अंतरराष्ट्रीय संस्करण जापान (टोक्यो और ओसाका) में 19 से 23 जून 2026 तक आयोजित किया गया है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-14",
+    "text": "Subject Test: Haryana की किस खिलाड़ी को जगमोहन डालमिया ट्रॉफी से सम्मानित किया गया है?",
+    "options": [
+      "बबीता फोगाट",
+      "रानी रामपाल",
+      "शेफाली वर्मा",
+      "मनु भाकर"
+    ],
+    "correctIndex": 2,
+    "explanation": "हरियाणा की स्टार महिला क्रिकेटर शेफाली वर्मा को घरेलू क्रिकेट में उत्कृष्ट प्रदर्शन के लिए सर्वश्रेष्ठ महिला क्रिकेटर (सीनियर घरेलू वनडे) के रूप में बीसीसीआई द्वारा जगमोहन डालमिया ट्रॉफी से सम्मानित किया गया।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-15",
+    "text": "Subject Test: Haryana के किस जिले में भारत का पहला एलपीजी एटीएम (LPG ATM) शुरू किया गया है?",
+    "options": [
+      "फरीदाबाद",
+      "पलवल",
+      "भिवानी",
+      "गुरुग्राम"
+    ],
+    "correctIndex": 3,
+    "explanation": "भारत का पहला एलपीजी एटीएम (LPG ATM) हरियाणा के गुरुग्राम जिले में शुरू किया गया है, जिसके माध्यम से उपभोक्ता किसी भी समय छोटे एलपीजी सिलेंडर रिफिल प्राप्त कर सकते हैं।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-16",
+    "text": "Subject Test: Haryana के किस जिले में पोषक अनाज अनुसंधान केंद्र (Nutri-Grain Research Centre) स्थापित किया गया है?",
+    "options": [
+      "सिरसा",
+      "कुरुक्षेत्र",
+      "फतेहाबाद",
+      "भिवानी"
+    ],
+    "correctIndex": 3,
+    "explanation": "हरियाणा के bhivani जिले के गोकलपुरा गांव में चौधरी चरण सिंह हरियाणा कृषि विश्वविद्यालय (CCS HAU) के तहत पोषक अनाज अनुसंधान केंद्र स्थापित किया गया है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-17",
+    "text": "Subject Test: केंद्रीय करों से Haryana को मिलने वाला हिस्सा प्रतिशत 16वें वित्त आयोग की सिफारिश के अनुसार कितना रहेगा?",
+    "options": [
+      "1.367 प्रतिशत",
+      "1.093 प्रतिशत",
+      "1.084 प्रतिशत",
+      "1.048 प्रतिशत"
+    ],
+    "correctIndex": 0,
+    "explanation": "16वें वित्त आयोग की सिफारिशों के अनुसार केंद्रीय करों के विभाज्य पूल में हरियाणा का हिस्सा बढ़ाकर 1.367% कर दिया गया है, जो 15वें वित्त आयोग में 1.093% था।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-18",
+    "text": "Subject Test: Haryana स्वच्छ वायु परियोजना के तहत विश्व बैंक द्वारा कितने करोड़ रुपए की सहयोग राशि स्वीकृत की गई है?",
+    "options": [
+      "2025 करोड़ रुपए",
+      "2276 करोड़ रुपए",
+      "2638 करोड़ रुपए",
+      "2474 करोड़ रुपए"
+    ],
+    "correctIndex": 2,
+    "explanation": "हरियाणा स्वच्छ वायु परियोजना के तहत विश्व बैंक द्वारा हरियाणा को लगभग 2,638 करोड़ रुपये (300 मिलियन डॉलर) की वित्तीय सहयोग राशि स्वीकृत की गई है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-19",
+    "text": "Subject Test: Haryana सरकार द्वारा वर्ष 2026-27 की कुल बजट राशि कितने करोड़ रुपए रखी गई है?",
+    "options": [
+      "2,23,658.17 करोड़ रुपए",
+      "2,02,816.66 करोड़ रुपए",
+      "3,22,546.70 करोड़ रुपए",
+      "2,67,898.66 करोड़ रुपए"
+    ],
+    "correctIndex": 0,
+    "explanation": "हरियाणा के मुख्यमंत्री नायब सिंह सैनी ने वित्तीय वर्ष 2026-27 के लिए ₹2,23,658.17 करोड़ का कुल बजट पेश किया है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-20",
+    "text": "Subject Test: किसानों को कृषि के लिए बिजली का जल्दी कनेक्शन व बिना रुकावट के बिजली देने के लिए किस नाम से तीसरी बिजली वितरण कंपनी बनाई जाएगी?",
+    "options": [
+      "हरियाणा एग्री डिस्कॉम",
+      "हरियाणा जन डिस्कॉम",
+      "हरियाणा किसान डिस्कॉम",
+      "हरियाणा विद्युत डिस्कॉम"
+    ],
+    "correctIndex": 0,
+    "explanation": "हरियाणा सरकार कृषि क्षेत्र के लिए एक समर्पित बिजली वितरण कंपनी 'हरियाणा एग्री डिस्कॉम' (Haryana Agri Discom) का गठन करने जा रही है, जो कृषि उपभोक्ताओं की समस्याओं का समाधान करेगी।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-21",
+    "text": "Subject Test: Haryana क्षेत्र से संबंधित निम्नलिखित ऐतिहासिक घटनाओं को सही कालानुक्रम में व्यवस्थित करें (सबसे पहले से लेकर नवीनतम):\ni) ब्रिटिश ईस्ट इंडिया कंपनी को हरियाणा का नियंत्रण हस्तांतरित करने के लिए सुरजी-अंजनगांव की संधि।\nii) हाँसी में जॉर्ज थॉमस के स्वतंत्र राज्य की स्थापना।\niii) व्यपगत के सिद्धांत के तहत अंग्रेजों द्वारा कैथल राज्य का विलय।\niv) नादिर शाह और मुहम्मद शाह के बीच करनाल की लड़ाई।",
+    "options": [
+      "iv, ii, i, iii",
+      "iv, i, ii, iii",
+      "ii, iv, i, iii",
+      "i, iv, ii, iii"
+    ],
+    "correctIndex": 0,
+    "explanation": "ऐतिहासिक घटनाओं का सही क्रम है: करनाल की लड़ाई (1739) -> जॉर्ज थॉमस द्वारा हाँसी में राज्य की स्थापना (1797) -> सुरजी-अंजनगांव की संधि (1803) -> अंग्रेजों द्वारा कैथल का विलय (1843)। अतः सही अनुक्रम iv, ii, i, iii है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-22",
+    "text": "Subject Test: निम्नलिखित में से कौन सा कथन Haryana के 'लूर' नृत्य की विशिष्ट पहचान करता है?",
+    "options": [
+      "यह दशहरा के त्योहार के दौरान पुरुषों द्वारा तलवार और ढाल के साथ किया जाने वाला एक युद्ध नृत्य है।",
+      "यह लड़कियों/महिलाओं द्वारा किया जाने वाला एक नृत्य है, जिसकी विशेषता गायन प्रारूप में प्रश्नों और उत्तरों की है।",
+      "यह सावन के महीने के दौरान शिव के भक्तों द्वारा किया जाता है, जिसमें तेजी से कताई की गतिविधियाँ शामिल होती हैं।",
+      "यह एक धीमा, लयबद्ध नृत्य है जो एक दुल्हन के अपने मातृ-गृह से जाने पर शोक व्यक्त करने के लिए किया जाता है।"
+    ],
+    "correctIndex": 1,
+    "explanation": "लूर नृत्य हरियाणा के बांगर क्षेत्र का एक अत्यंत लोकप्रिय लोक नृत्य है, जो होली के अवसर पर केवल लड़कियों द्वारा किया जाता है। इसकी मुख्य विशेषता गायन के माध्यम से प्रश्न-उत्तर शैली है।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-23",
+    "text": "Subject Test: सर छोटू राम के संदर्भ में निम्नलिखित में से कौन-से कथन सत्य हैं?\n(a) उन्होंने एक कांग्रेसी के रूप में अपने कैरियर की शुरूआत की।\n(b) बाद में उन्होंने यूनियनिस्ट पार्टी की सदस्यता ली।\n(c) वह अविभाजित पंजाब की सरकार में एक मंत्री थे।",
+    "options": [
+      "केवल कथन (b) तथा (c) सत्य है।",
+      "केवल कथन (a) तथा (c) सत्य है।",
+      "केवल कथन (a) सत्य है।",
+      "कथन (a), (b) तथा (c) सत्य हैं।"
+    ],
+    "correctIndex": 3,
+    "explanation": "सर छोटू राम ने 1916 में कांग्रेस के साथ अपने राजनीतिक करियर की शुरुआत की। 1923 में उन्होंने यूनियनिस्ट पार्टी (जमींदारा लीग) का गठन किया। वह 1937 में अविभाजित पंजाब सरकार में विकास मंत्री बने। अतः तीनों कथन सत्य हैं।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-24",
+    "text": "Subject Test: निम्नलिखित में से कौन-से सही सुमेलित हैं?\n(a) गुजरी महल - हिसार\n(b) आराम-ए-कौसर - नारनौल\n(c) शेख तय्यब का मकबरा - जींद",
+    "options": [
+      "कथन (a) तथा (c)",
+      "कथन (a) तथा (b)",
+      "कथन (b) तथा (c)",
+      "कथन (a), (b) तथा (c)"
+    ],
+    "correctIndex": 1,
+    "explanation": "गुजरी महल हिसार में स्थित है और आराम-ए-कौसर नारनौल में स्थित है (दोनों सुमेलित हैं)। जबकि शेख तय्यब का मकबरा कैथल में स्थित है, जींद में नहीं। अतः केवल (a) और (b) सही सुमेलित हैं।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  },
+  {
+    "id": "q-hssc-sub-haryana-gk-3-25",
+    "text": "Subject Test: Haryana की महिला पहलवान जिसने 2023 का अर्जुन पुरस्कार प्राप्त किया?",
+    "options": [
+      "अंतिम पंघाल",
+      "अंशु मलिक",
+      "गीतिका जाखड़",
+      "साक्षी मलिक"
+    ],
+    "correctIndex": 0,
+    "explanation": "हरियाणा की युवा महिला पहलवान अंतिम पंघाल को वर्ष 2023 के राष्ट्रीय खेल पुरस्कारों में प्रतिष्ठित अर्जुन पुरस्कार से सम्मानित किया गया था।",
+    "sectionName": "Haryana General Knowledge",
+    "testId": "test-hssc-police-sub-haryana-gk-3"
+  }
+]
 };
 
 // Add subject mocks to final map
