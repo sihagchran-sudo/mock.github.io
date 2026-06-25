@@ -119,7 +119,8 @@ const staticBlogs: BlogArticle[] = [
         paragraphs: [
           "The Staff Selection Commission has reopened applications for the Combined Graduate Level Exam, and this year the scale is hard to ignore. SSC CGL Recruitment 2026 covers 12,256 posts across Group-B and Group-C. If you are a graduate hoping for a stable central government job, this is one of the strongest openings on the calendar.",
           "Here is the quick snapshot before the details. Keep this table handy while you fill your form:",
-          "• Conducting body: Staff Selection Commission (SSC)\n• Exam name: Combined Graduate Level (CGL) 2026\n• Total vacancies: 12,256\n• Application starts: 21 May 2026\n• Application last date: 25 June 2026\n• Fee payment last date: 26 June 2026\n• Age limit: 18-32 years (as on 01 August 2026)\n• Eligibility: Graduation in any stream\n• Selection: Tier-I and Tier-II exams\n• Official website: ssc.gov.in"
+          "[TABLE]\nDetail | Information\nConducting body | Staff Selection Commission (SSC)\nExam name | Combined Graduate Level (CGL) 2026\nTotal vacancies | 12,256\nApplication starts | 21 May 2026\nApplication last date | 25 June 2026\nFee payment last date | 26 June 2026\nAge limit | 18-32 years (as on 01 August 2026)\nEligibility | Graduation in any stream\nSelection | Tier-I and Tier-II exams\nOfficial website | ssc.gov.in",
+          "With more than 12,000 seats, this is a large recruitment cycle. But the application window is short, so treat the deadline seriously."
         ]
       },
       {
@@ -134,24 +135,24 @@ const staticBlogs: BlogArticle[] = [
         title: "SSC CGL 2026 Vacancy Details",
         paragraphs: [
           "The 12,256 posts are split across two groups, each with its own set of roles. Knowing them helps you understand what job you are actually competing for.",
-          "Key Group-B Posts (Higher-profile, more competitive):\n• Assistant Audit Officer (Central and State Cadre)\n• Assistant Accounts Officer\n• Assistant Section Officer (ASO)\n• Inspector of Income Tax\n• Inspector (Central Excise, Preventive Officer, Examiner)\n• Assistant Enforcement Officer\n• Sub-Inspector (CBI and NIA)\n• Junior Statistical Officer (JSO)\n• Research Assistant and Divisional Accountant",
-          "Key Group-C Posts (Usually carry a higher number of openings):\n• Auditor\n• Accountant / Junior Accountant\n• Tax Assistant\n• Senior Secretariat Assistant / Upper Division Clerk (UDC)\n• Postal Assistant / Sorting Assistant",
+          "Key Group-B Posts (These are the higher-profile, more competitive roles):\n• Assistant Audit Officer (Central and State Cadre)\n• Assistant Accounts Officer\n• Assistant Section Officer (ASO)\n• Inspector of Income Tax\n• Inspector (Central Excise, Preventive Officer, Examiner)\n• Assistant Enforcement Officer\n• Sub-Inspector (CBI and NIA)\n• Junior Statistical Officer (JSO)\n• Research Assistant and Divisional Accountant",
+          "Key Group-C Posts (These roles usually carry a higher number of openings):\n• Auditor\n• Accountant / Junior Accountant\n• Tax Assistant\n• Senior Secretariat Assistant / Upper Division Clerk (UDC)\n• Postal Assistant / Sorting Assistant",
           "Your target depends on your rank and post preference. Group-B roles bring more responsibility and pay. Group-C roles often have more seats and slightly lower cut-offs. Decide your post preferences early."
         ]
       },
       {
         title: "SSC CGL 2026 Eligibility",
         paragraphs: [
-          "Eligibility is the first filter. Miss any condition here, and your form gets rejected. Here is what you need to check:",
-          "• Educational Qualification: For most posts, you need a graduation degree in any stream from a recognized university. B.A., B.Com, B.Sc, or B.Tech all count equally. The only exception is the Junior Statistical Officer (JSO) post, which requires 60% marks in Mathematics at 12th standard level OR a Bachelor's degree with Statistics as one of the subjects.",
-          "• Age Limit (as on 01 August 2026): Minimum age: 18 years, Maximum age: 32 years. SSC offers age relaxation to reserved categories (SC, ST, OBC, PwD, ex-servicemen) under government rules."
+          "Eligibility is the first filter. Miss any condition here, and your form gets rejected, so read this part carefully.",
+          "• Educational Qualification: For most posts, you need a graduation degree in any stream from a recognized university. B.A., B.Com, B.Sc, or B.Tech all count equally. The only exception is the Junior Statistical Officer (JSO) post, which has a special requirement: 60% marks in Mathematics at the 12th standard level, or a Bachelor's degree with Statistics as one of the subjects.",
+          "• Age Limit (as on 01 August 2026): Minimum age: 18 years, Maximum age: 32 years. SSC offers age relaxation to reserved categories under government rules. SC, ST, OBC, PwD, and ex-servicemen get extra years above the upper limit."
         ]
       },
       {
         title: "SSC CGL 2026 Application Fee",
         paragraphs: [
           "The fee is low, and many candidates pay nothing at all:",
-          "• General, OBC, EWS: ₹100\n• Female candidates (all categories): Free (₹0)\n• SC, ST, PwD candidates: Free (₹0)",
+          "• General, OBC, EWS: ₹100\n• Female candidates (all categories): Free\n• PwD candidates: Free",
           "You can pay online using debit card, credit card, internet banking, IMPS, or mobile wallets."
         ]
       },
@@ -159,14 +160,14 @@ const staticBlogs: BlogArticle[] = [
         title: "SSC CGL 2026 Selection Process",
         paragraphs: [
           "You will not clear this exam in a single sitting. SSC selects candidates through two main stages, and both matter:",
-          "1. Tier-I (August–September 2026): An online objective test. It covers General Intelligence and Reasoning, General Awareness, Quantitative Aptitude, and English Comprehension. This stage is qualifying; it decides who moves to Tier-II.",
-          "2. Tier-II (December 2026): The deciding stage. It goes deeper into quantitative ability, reasoning, English, statistics, and, for some posts, computer knowledge. Your final merit comes from here.",
+          "1. Tier-I (August–September 2026): An online objective test. It covers General Intelligence and Reasoning, General Awareness, Quantitative Aptitude, and English Comprehension. This stage is qualifying. It decides who moves to Tier-II.\n2. Tier-II (December 2026): The deciding stage. It goes deeper into quantitative ability, reasoning, English, statistics, and, for some posts, computer knowledge. Your final merit comes from here.",
           "In plain terms: Tier-I gets you through the door, and Tier-II decides your rank and post. Build your strategy around Tier-II, but remember you cannot reach it without a strong Tier-I score."
         ]
       },
       {
         title: "How to Fill the SSC CGL 2026 Online Form",
         paragraphs: [
+          "Filling the form is straightforward when you follow the right order. Here are the steps:",
           "1. Go to the official SSC website at ssc.gov.in.\n2. Complete your One-Time Registration (OTR) if you have not already.\n3. Log in and open the SSC CGL 2026 application.\n4. Fill in your personal, educational, and category details carefully.\n5. Upload your photo and signature in the correct format.\n6. Pay the application fee, if it applies to you.\n7. Submit the form before 25 June 2026 and save a printout.",
           "One habit before you start: read the official notification from beginning to end. Pay close attention to the last date, age limit, and qualification sections. Apply only through ssc.gov.in."
         ]
@@ -174,7 +175,7 @@ const staticBlogs: BlogArticle[] = [
       {
         title: "Why Mock Tests Decide Your SSC CGL Result",
         paragraphs: [
-          "Here is a truth most candidates learn too late: knowing the syllabus and performing under a clock are two very different skills. SSC CGL tests speed and accuracy at the same time, and that pressure is what trips people up.",
+          "Here is a truth most candidates learn too late. Knowing the syllabus and performing under a clock are two very different skills. SSC CGL tests speed and accuracy at the same time, and that pressure is what trips people up.",
           "Regular mock test practice fixes this in four ways:\n• Builds exam-day stamina. You stay sharp across the full paper, not just the first 20 minutes.\n• Sharpens time management. You learn which sections eat your clock, and how to stop them.\n• Exposes weak spots early. Each test shows where you lose marks, so you fix it before it counts.\n• Cuts exam stress. Once the format feels familiar, the real paper stops feeling like a surprise.",
           "The candidates who clear SSC CGL are rarely the ones who studied the longest. They are the ones who practiced the smartest."
         ]
@@ -193,7 +194,7 @@ const staticBlogs: BlogArticle[] = [
           "Q: What is the last date to apply?\nA: You can apply until 25 June 2026. The last date for fee payment is 26 June 2026.",
           "Q: How many vacancies are there?\nA: There are 12,256 posts in total, across Group-B and Group-C.",
           "Q: What is the age limit?\nA: You must be between 18 and 32 years as on 01 August 2026. Reserved categories get relaxation as per SSC rules.",
-          "Q: What is the eligibility?\nA: A graduation degree in any stream from a recognized university. The JSO post needs 60% in Maths at the 12th level, or Statistics as a degree subject.",
+          "Q: What is the eligibility?\nA: A graduation degree in any stream from a recognized university. JSO post needs 60% in Maths at the 12th level, or Statistics as a degree subject.",
           "Q: What is the application fee?\nA: ₹100 for General, OBC, and EWS candidates. Female and PwD candidates apply free.",
           "Q: What is the selection process?\nA: Two stages: Tier-I and Tier-II. Tier-II decides your final merit and post.",
           "Q: When is the correction window?\nA: You can edit your form between 01 and 03 July 2026.",
@@ -270,8 +271,8 @@ const staticBlogs: BlogArticle[] = [
         title: "SBI PO Recruitment 2026 at a Glance",
         paragraphs: [
           "The State Bank of India has opened applications for 1,500 Probationary Officer posts, and if a stable banking career is on your radar, this is one of the year's biggest openings. SBI PO Recruitment 2026 is live, the notification is out, and the clock is already ticking.",
-          "Before the details, here's the quick snapshot. Keep these keys in mind:",
-          "• Recruiting body: State Bank of India (SBI)\n• Post: Probationary Officer (PO)\n• Advertisement No: CRPD/PO/2026-27/09\n• Total vacancies: 1,500\n• Application starts: 18 June 2026\n• Application ends: 08 July 2026\n• Age limit: 21-30 years (as on 01 April 2026)\n• Eligibility: Bachelor's degree in any stream\n• Selection process: Prelims → Mains → Group Exercise → Interview\n• Official website: sbi.co.in",
+          "Before the details, here's the quick snapshot. Keep this table handy — it's the whole recruitment in one screen:",
+          "[TABLE]\nDetail | Information\nRecruiting body | State Bank of India (SBI)\nPost | Probationary Officer (PO)\nAdvertisement No. | CRPD/PO/2026-27/09\nTotal vacancies | 1,500\nApplication starts | 18 June 2026\nApplication ends | 08 July 2026\nAge limit | 21-30 years (as on 01 April 2026)\nEligibility | Bachelor's degree in any stream\nSelection process | Prelims → Mains → Group Exercise → Interview\nOfficial website | sbi.co.in",
           "The headline number is 1,500 posts. That sounds generous, but the application window is short, so treat the deadline as a hard line, not a suggestion."
         ]
       },
@@ -286,17 +287,17 @@ const staticBlogs: BlogArticle[] = [
       {
         title: "SBI PO Eligibility 2026: Do You Qualify?",
         paragraphs: [
-          "Eligibility is the first gate. Miss any of these conditions and your form gets rejected, so read carefully before you fill anything out:",
+          "Eligibility is the first gate. Miss any of these conditions and your form gets rejected, so read this part carefully before you fill anything out.",
           "• Educational Qualification: You need a Bachelor's degree in any stream from a recognized Indian university. Your subject doesn't matter — a B.A., B.Com, B.Sc, B.Tech, or any other graduation all count equally. Final-year students can apply too, as long as you can show proof of graduation when SBI asks for it.",
-          "• Age Limit (as on 01 April 2026): Minimum 21 years, Maximum 30 years. SBI also offers age relaxation to reserved categories under government rules. SC, ST, OBC, PwD, and a few other groups get extra years above the upper limit."
+          "• Age Limit (as on 01 April 2026): Minimum: 21 years, Maximum: 30 years. SBI also offers age relaxation to reserved categories under government rules. SC, ST, OBC, PwD, and a few other groups get extra years above the upper limit."
         ]
       },
       {
         title: "SBI PO Vacancy 2026: Category-Wise Breakdown",
         paragraphs: [
           "How are those 1,500 posts actually split? Knowing this tells you the real competition inside your own category — not just the big headline figure:",
-          "• General: 588 posts\n• OBC: 390 posts\n• EWS: 144 posts\n• SC: 216 posts (including 18 backlog posts)\n• ST: 108 posts (including 36 backlog posts)",
-          "So find your category, note the posts allotted to it, and judge your competition from there. The number that matters to you isn't 1,500 — it's the count for your group."
+          "[TABLE]\nCategory | Regular Posts | Backlog Posts\nGeneral | 588 | —\nOBC | 390 | —\nEWS | 144 | —\nSC | 216 | 18\nST | 108 | 36",
+          "General holds the largest share at 588 posts. OBC candidates have 390 regular openings. SC and ST categories get extra seats thanks to backlog vacancies. Find your category, note the posts allotted to it, and judge your competition from there."
         ]
       },
       {
@@ -304,17 +305,14 @@ const staticBlogs: BlogArticle[] = [
         paragraphs: [
           "The fee depends entirely on your category. Here's what you'll pay:",
           "• General, OBC, EWS: ₹750\n• SC, ST, PwD: Free (₹0)",
-          "You can pay online using Debit card, Credit card, Internet banking, IMPS, or Mobile wallet/Cash cards."
+          "You can pay online using debit card, credit card, internet banking, IMPS, or mobile wallets."
         ]
       },
       {
         title: "SBI PO Selection Process 2026",
         paragraphs: [
           "Clearing one round won't get you the job. SBI hires Probationary Officers through four stages, and you have to pass each one to move forward:",
-          "1. Preliminary Exam (Prelims): The first screening test. It covers English, Quantitative Aptitude, and Reasoning. This stage only qualifies you — the marks don't count toward your final merit.",
-          "2. Mains Exam: The decider. It tests Reasoning & Computer Aptitude, Data Analysis & Interpretation, General & Banking Awareness, and English. These marks carry straight into your final score.",
-          "3. Group Exercise: A discussion-style round that checks how you think, communicate, and handle a team setting.",
-          "4. Interview: The final personal round, where the panel judges your awareness, personality, and fit for banking.",
+          "1. Preliminary Exam (Prelims): The first screening test. It covers English, Quantitative Aptitude, and Reasoning. This stage only qualifies you — the marks don't count toward your final merit.\n2. Mains Exam: The decider. It tests Reasoning and Computer Aptitude, Data Analysis and Interpretation, General and Banking Awareness, and English. These marks carry straight into your final score.\n3. Group Exercise: A discussion-style round that checks how you think, communicate, and handle a team setting.\n4. Interview: The final personal round, where the panel judges your awareness, personality, and fit for banking.",
           "Strategy note: Build your prep around the Mains, since that's where your final rank is decided. But remember — you can't even reach it without clearing the Prelims first."
         ]
       },
@@ -423,14 +421,14 @@ const staticBlogs: BlogArticle[] = [
           "Haryana Staff Selection Commission (HSSC) ने Common Eligibility Test (CET) Group C के तहत 1238 पदों के लिए notification जारी कर दिया है। अगर आप Haryana में सरकारी नौकरी की तैयारी कर रहे हैं, तो यह आपके लिए एक बड़ा मौका है। इस article में आपको vacancy, eligibility, age limit, application fee, selection process और apply करने का तरीका — सब कुछ step-by-step मिलेगा।",
           "Advertisement Number है 06/2026। Online application 24 June 2026 से शुरू हो चुकी है और last date 30 June 2026 है।",
           "नीचे दी गई जानकारी आपको पूरी भर्ती का overview देगी:",
-          "• भर्ती संस्था: Haryana Staff Selection Commission (HSSC)\n• Advertisement No.: 06/2026\n• कुल पद: 1238\n• Post Name: Warder और Assistant Superintendent Jail\n• Application शुरू: 24 June 2026\n• Application की अंतिम तिथि: 30 June 2026\n• Selection Process: Written Exam, Document Verification, Medical Exam\n• Official Website: hssc.gov.in"
+          "[TABLE]\nभर्ती संस्था | Haryana Staff Selection Commission (HSSC)\nAdvertisement No. | 06/2026\nकुल पद | 1238\nPost Name | Warder और Assistant Superintendent Jail\nApplication शुरू | 24 June 2026\nApplication की अंतिम तिथि | 30 June 2026\nSelection Process | Written Exam, Document Verification, Medical Exam\nOfficial Website | hssc.gov.in"
         ]
       },
       {
         title: "Important Dates: कौन सी तारीख याद रखनी है",
         paragraphs: [
           "तारीखें भूल जाना सबसे बड़ी गलती होती है। नीचे हर ज़रूरी date दी गई है:",
-          "• Online Apply Start Date: 24 June 2026\n• Online Apply Last Date: 30 June 2026\n• Fee Payment की अंतिम तिथि: 30 June 2026\n• Correction Date: 01 - 02 July 2026\n• Exam Date: जल्द घोषित होगी\n• Admit Card: Exam से पहले\n• Result Date: बाद में update होगा",
+          "[TABLE]\nEvent | Date\nOnline Apply Start Date | 24 June 2026\nOnline Apply Last Date | 30 June 2026\nFee Payment की अंतिम तिथि | 30 June 2026\nCorrection Date | 01 - 02 July 2026\nExam Date | जल्द घोषित होगी\nAdmit Card | Exam से पहले\nResult Date | बाद में update होगा",
           "Takeaway: Form 30 June 2026 तक ही भरा जा सकता है, इसलिए आखिरी दिन का इंतज़ार न करें।"
         ]
       },
@@ -438,14 +436,14 @@ const staticBlogs: BlogArticle[] = [
         title: "Haryana Group C Vacancy 2026: पद का पूरा ब्यौरा",
         paragraphs: [
           "आप किस पद के लिए apply कर सकते हैं, यह जानना सबसे पहले ज़रूरी है। कुल 1238 पदों का विवरण इस प्रकार है:",
-          "• Assistant Superintendent Jail (Male): 30\n• Assistant Superintendent Jail (Female): 03\n• Warder (Male): 1093\n• Warder (Female): 112",
+          "[TABLE]\nPost Name | पदों की संख्या\nAssistant Superintendent Jail (Male) | 30\nAssistant Superintendent Jail (Female) | 03\nWarder (Male) | 1093\nWarder (Female) | 112",
           "जैसा कि आप देख सकते हैं, सबसे ज्यादा vacancy Warder (Male) पद के लिए है — 1093 पद। यानी 10+2 pass उम्मीदवारों के लिए यह भर्ती सबसे बड़ा अवसर है."
         ]
       },
       {
         title: "Eligibility Criteria: आप योग्य हैं या नहीं",
         paragraphs: [
-          "हर पद के लिए educational qualification अलग है। Apply करने से पहले यह ज़रूर check करें ताकि आपका form reject न हो।",
+          "हर पद के लिए educational qualification अलग है। Apply करने से पहले यह ज़रूर check करें ताकि आपका form reject न हो.",
           "Warder के लिए योग्यता:\n• किसी मान्यता प्राप्त board से 10+2 (Intermediate) pass होना चाहिए.\n• उम्मीदवार ने CET (Group C) / Preliminary Eligibility Test (PET) qualify किया हो.",
           "Assistant Superintendent Jail के लिए योग्यता:\n• किसी मान्यता प्राप्त university से Graduation Degree होनी चाहिए.\n• उम्मीदवार ने CET (Group C) / PET qualify किया हो.",
           "Takeaway: अगर आपके पास सिर्फ 12वीं है, तो आप Warder के लिए apply कर सकते हैं। Graduate उम्मीदवार दोनों पदों पर विचार कर सकते हैं."
@@ -463,8 +461,7 @@ const staticBlogs: BlogArticle[] = [
         title: "Application Fee: कितनी फीस देनी होगी",
         paragraphs: [
           "Application fee इस बात पर निर्भर करती है कि आपने PPP (Parivar Pehchan Patra) / Aadhaar verify किया है या नहीं:",
-          "• With PPP / Aadhaar:\n  - General (Male) / Other State: ₹500/-\n  - SC / BC / EWS / PH: ₹250/-\n  - ESM / सभी महिलाएं: ₹250/-",
-          "• Without PPP / Aadhaar:\n  - General (Male) / Other State: ₹1000/-\n  - SC / BC / EWS / PH: ₹500/-\n  - ESM / सभी महिलाएं: ₹500/-",
+          "[TABLE]\nCategory | With PPP / Aadhaar | Without PPP / Aadhaar\nGeneral (Male) / Other State | ₹500/- | ₹1000/-\nSC / BC / EWS / PH | ₹250/- | ₹500/-\nESM / सभी महिलाएं | ₹250/- | ₹500/-",
           "Fee आप Debit Card, Credit Card, Internet Banking, IMPS या Mobile Wallet/Cash Card से online जमा कर सकते हैं. PPP / Aadhaar verify होने पर आपकी fee आधी हो जाती है, इसलिए apply करने से पहले verification पूरा कर लें."
         ]
       },
