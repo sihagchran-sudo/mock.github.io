@@ -184,8 +184,8 @@ export default function HomePage() {
                 <div className="absolute inset-0 border border-white/10 rounded-3xl [mask-image:linear-gradient(to_bottom,white,transparent)] -z-10"></div>
                 
                 <img
-                  src="/hero_prep_vector.png"
-                  alt="Competitive Exam Preparation 2D Illustration"
+                  src="/hero_composition_vector.png"
+                  alt="TCS iON simulator and AI Analytics dashboard leading to success gateway 2D illustration"
                   className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(59,130,246,0.25)] select-none"
                   draggable="false"
                 />
