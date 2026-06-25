@@ -82,15 +82,15 @@ export default function HomePage() {
             🚀 Powered by AI Exam Analytics
           </span>
           
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight max-w-2xl text-slate-900">
-            Crack Your Dream Exam with{' '}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight max-w-3xl text-slate-900">
+            Leave Exam Fear Behind. Practice in a{' '}
             <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-indigo-800 bg-clip-text text-transparent">
-              Real-time Mock Tests
+              Real Test Environment.
             </span>
           </h1>
           
-          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
-            Get the actual exam experience with TCS iON-like exam simulator, detailed analytics dashboard, and practice questions curated by experts.
+          <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
+            Feeling nervous about the final exam day is normal, but it shouldn't lower your score. Our platform gives you the exact feel of the real exam hall. Practice with the same screen layout, manage the real countdown timer, and test your speed before the actual day. We show you exactly where you are making mistakes so you can fix them fast. Build your confidence, manage your time better, and get ready to clear the cut-off.
           </p>
 
           {/* Exam Search Bar */}
