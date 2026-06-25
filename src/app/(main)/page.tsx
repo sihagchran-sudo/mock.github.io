@@ -68,7 +68,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-       <section className="relative bg-gradient-to-b from-[#0b1329] via-[#0d1630] to-[#090e1e] text-white overflow-hidden py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-900">
+       <section className="relative bg-[#0a122c] text-white overflow-hidden py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-blue-950/50">
         {/* Background Decorative Elements (Sleek light blue/indigo blur reflections) */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none -mr-40 -mt-40"></div>
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none -ml-20 -mb-20"></div>
