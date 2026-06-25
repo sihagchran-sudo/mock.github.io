@@ -69,7 +69,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* 1. Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-955 via-blue-955 to-slate-900 text-white overflow-hidden py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 text-white overflow-hidden py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
         {/* Background Decorative Elements (Sleek 2D vector shapes and blur blobs) */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none -mr-40 -mt-40"></div>
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none -ml-20 -mb-20"></div>
@@ -92,13 +92,13 @@ export default function HomePage() {
                 </span>
               </h1>
               
-              <p className="text-base sm:text-lg text-slate-300/80 max-w-xl mb-8 leading-relaxed font-normal">
+              <p className="text-base sm:text-lg text-slate-350 max-w-xl mb-8 leading-relaxed font-normal">
                 Get the actual exam experience with TCS iON-like exam simulator, detailed analytics dashboard, and practice questions curated by experts.
               </p>
 
               {/* Exam Search Bar */}
               <div className="w-full max-w-lg relative mb-6">
-                <div className="flex shadow-2xl shadow-blue-955/50 rounded-xl overflow-hidden bg-white text-slate-800 border border-slate-200/50 focus-within:ring-2 focus-within:ring-blue-500/40 transition-all">
+                <div className="flex shadow-2xl shadow-blue-950/50 rounded-xl overflow-hidden bg-white text-slate-800 border border-slate-200/50 focus-within:ring-2 focus-within:ring-blue-500/40 transition-all">
                   <span className="flex items-center justify-center pl-4 bg-white text-base">
                     🔍
                   </span>
@@ -247,10 +247,10 @@ export default function HomePage() {
       </section>
 
       {/* 2.5 TCS iON Test Simulator Preview Section */}
-      <section className="bg-gradient-to-br from-slate-900 to-indigo-955 text-white py-16 sm:py-24 overflow-hidden relative border-t border-white/5">
+      <section className="bg-gradient-to-br from-slate-900 to-indigo-950 text-white py-16 sm:py-24 overflow-hidden relative border-t border-white/5">
         {/* Background Gradients */}
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-blue-500/10 blur-[100px] pointer-events-none -mr-20 -mb-20"></div>
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full bg-indigo-650/10 blur-[120px] pointer-events-none -ml-20 -mt-20"></div>
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full bg-indigo-600/10 blur-[120px] pointer-events-none -ml-20 -mt-20"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
