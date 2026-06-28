@@ -256,154 +256,6 @@ const staticBlogs: BlogArticle[] = [
     }
   },
   {
-    slug: "sbi-po-info",
-    title: "SBI PO Recruitment 2026: Vacancies, Eligibility, Dates, and Smart Prep",
-    description: "The State Bank of India has opened applications for 1,500 Probationary Officer posts. Here is your complete guide to dates, eligibility, vacancies, and smart prep.",
-    publishDate: "June 18, 2026",
-    readTime: "6 min read",
-    examSlug: "sbi-po",
-    examName: "SBI PO",
-    category: "Banking",
-    icon: "🏛️",
-    type: "info",
-    sections: [
-      {
-        title: "SBI PO Recruitment 2026 at a Glance",
-        paragraphs: [
-          "The State Bank of India has opened applications for 1,500 Probationary Officer posts, and if a stable banking career is on your radar, this is one of the year's biggest openings. SBI PO Recruitment 2026 is live, the notification is out, and the clock is already ticking.",
-          "Before the details, here's the quick snapshot. Keep this table handy — it's the whole recruitment in one screen:",
-          "[TABLE]\nDetail | Information\nRecruiting body | State Bank of India (SBI)\nPost | Probationary Officer (PO)\nAdvertisement No. | CRPD/PO/2026-27/09\nTotal vacancies | 1,500\nApplication starts | 18 June 2026\nApplication ends | 08 July 2026\nAge limit | 21-30 years (as on 01 April 2026)\nEligibility | Bachelor's degree in any stream\nSelection process | Prelims → Mains → Group Exercise → Interview\nOfficial website | sbi.co.in",
-          "The headline number is 1,500 posts. That sounds generous, but the application window is short, so treat the deadline as a hard line, not a suggestion."
-        ]
-      },
-      {
-        title: "Important Dates You Can't Afford to Miss",
-        paragraphs: [
-          "One missed date can cost you a full year of waiting. Lock these into your calendar right now:",
-          "• Application opens: 18 June 2026\n• Application closes: 08 July 2026\n• Last date for fee payment: 08 July 2026\n• Prelims exam: August 2026\n• Prelims admit card: Released shortly before the exam\n• Prelims result: Announced on the official website",
-          "You've got roughly three weeks to register, pay the fee, and submit. That's tighter than most people expect. Quick tip: Apply a few days before 08 July. The portal slows to a crawl on the final day when everyone rushes in at once."
-        ]
-      },
-      {
-        title: "SBI PO Eligibility 2026: Do You Qualify?",
-        paragraphs: [
-          "Eligibility is the first gate. Miss any of these conditions and your form gets rejected, so read this part carefully before you fill anything out.",
-          "• Educational Qualification: You need a Bachelor's degree in any stream from a recognized Indian university. Your subject doesn't matter — a B.A., B.Com, B.Sc, B.Tech, or any other graduation all count equally. Final-year students can apply too, as long as you can show proof of graduation when SBI asks for it.",
-          "• Age Limit (as on 01 April 2026): Minimum: 21 years, Maximum: 30 years. SBI also offers age relaxation to reserved categories under government rules. SC, ST, OBC, PwD, and a few other groups get extra years above the upper limit."
-        ]
-      },
-      {
-        title: "SBI PO Vacancy 2026: Category-Wise Breakdown",
-        paragraphs: [
-          "How are those 1,500 posts actually split? Knowing this tells you the real competition inside your own category — not just the big headline figure:",
-          "[TABLE]\nCategory | Regular Posts | Backlog Posts\nGeneral | 588 | —\nOBC | 390 | —\nEWS | 144 | —\nSC | 216 | 18\nST | 108 | 36",
-          "General holds the largest share at 588 posts. OBC candidates have 390 regular openings. SC and ST categories get extra seats thanks to backlog vacancies. Find your category, note the posts allotted to it, and judge your competition from there."
-        ]
-      },
-      {
-        title: "SBI PO Application Fee 2026",
-        paragraphs: [
-          "The fee depends entirely on your category. Here's what you'll pay:",
-          "• General, OBC, EWS: ₹750\n• SC, ST, PwD: Free (₹0)",
-          "You can pay online using debit card, credit card, internet banking, IMPS, or mobile wallets."
-        ]
-      },
-      {
-        title: "SBI PO Selection Process 2026",
-        paragraphs: [
-          "Clearing one round won't get you the job. SBI hires Probationary Officers through four stages, and you have to pass each one to move forward:",
-          "1. Preliminary Exam (Prelims): The first screening test. It covers English, Quantitative Aptitude, and Reasoning. This stage only qualifies you — the marks don't count toward your final merit.\n2. Mains Exam: The decider. It tests Reasoning and Computer Aptitude, Data Analysis and Interpretation, General and Banking Awareness, and English. These marks carry straight into your final score.\n3. Group Exercise: A discussion-style round that checks how you think, communicate, and handle a team setting.\n4. Interview: The final personal round, where the panel judges your awareness, personality, and fit for banking.",
-          "Strategy note: Build your prep around the Mains, since that's where your final rank is decided. But remember — you can't even reach it without clearing the Prelims first."
-        ]
-      },
-      {
-        title: "How to Fill the SBI PO Online Form 2026",
-        paragraphs: [
-          "Filling the form is simple once you follow the right order. These steps keep you clear of the usual mistakes:",
-          "1. Go to sbi.co.in or open the official apply link from the recruitment portal.\n2. Register with your basic details and set up your login.\n3. Enter your personal, educational, and category information carefully.\n4. Upload your photo, signature, and documents in the correct format.\n5. Pay the fee based on your category.\n6. Review the whole form once before you hit submit.\n7. Submit before 08 July 2026 and save a printout for your records.",
-          "One small habit before you start: read the official notification end to end. Pay extra attention to the last date, age limit, and qualification sections. That single step prevents most form rejections."
-        ]
-      },
-      {
-        title: "Why Mock Tests Decide Who Clears SBI PO",
-        paragraphs: [
-          "Here's a truth most candidates learn too late: knowing the syllabus and performing under a clock are two completely different skills. The SBI PO exam tests speed and accuracy at the same time, and that pressure is exactly what trips people up.",
-          "Regular SBI PO mock test practice fixes this in four ways:\n• Builds exam-day stamina. You learn to stay sharp across the full paper, not just the first 20 minutes.\n• Sharpens time management. You find out which sections eat your clock — and how to stop them.\n• Exposes weak spots early. Every test shows where you bleed marks, so you fix it before it counts.\n• Cuts exam stress. Once the format feels familiar, the real paper stops feeling like an ambush.",
-          "The people who crack SBI PO usually aren't the ones who studied the longest. They're the ones who practiced the smartest."
-        ]
-      },
-      {
-        title: "Start With Free SBI PO Mock Tests",
-        paragraphs: [
-          "You can begin today. Our website offers free SBI PO mock tests built around the latest exam pattern, covering both Prelims and Mains. Each test matches the real difficulty level, gives you instant scores, and flags your weak topics on the spot.",
-          "Take a few full-length mocks, track how your scores move, and turn vague preparation into measurable progress. Practice now, and you'll walk into the exam hall with confidence instead of guesswork."
-        ]
-      },
-      {
-        title: "SBI PO 2026: Frequently Asked Questions",
-        paragraphs: [
-          "Q: When does the SBI PO 2026 application start?\nA: Applications opened on 18 June 2026.",
-          "Q: What's the last date to apply?\nA: You can apply until 08 July 2026.",
-          "Q: How many vacancies are there?\nA: There are 1,500 Probationary Officer posts in total.",
-          "Q: What's the age limit?\nA: You must be between 21 and 30 years as on 01 April 2026. Reserved categories get relaxation as per SBI rules.",
-          "Q: What's the eligibility?\nA: A Bachelor's degree in any stream from a recognized university. Final-year students can also apply.",
-          "Q: What's the application fee?\nA: ₹750 for General, OBC, and EWS. SC, ST, and PwD candidates apply free.",
-          "Q: What's the selection process?\nA: Four stages: Prelims, Mains, Group Exercise, and Interview.",
-          "Q: Where can I take SBI PO mock tests?\nA: On our website. The free SBI PO mock tests follow the latest pattern and give you instant feedback."
-        ]
-      }
-    ],
-    details: {
-      postName: "Probationary Officer (PO)",
-      authority: "State Bank of India (SBI)",
-      totalMarks: 100,
-      durationMinutes: 60,
-      negativeMarking: "0.25 (1/4th) Marks deducted per wrong answer",
-      eligibility: "Graduation in any discipline from a recognized University or equivalent.",
-      ageLimit: "21 to 30 Years",
-      subjects: [
-        { name: "Reasoning Ability", marks: 35, questions: 35 },
-        { name: "Quantitative Aptitude", marks: 35, questions: 35 },
-        { name: "English Language", marks: 30, questions: 30 }
-      ],
-      fullSyllabus: [
-        {
-          section: "Reasoning Ability (Sectional Time: 20 mins)",
-          topics: [
-            "Seating Arrangements (Circular, Linear, Square)",
-            "Puzzles (Floor, Box, Tabulation, Days/Months)",
-            "Inequalities, Syllogism, Blood Relations, Directions",
-            "Coding-Decoding, Alphanumeric Series, Input-Output",
-            "Data Sufficiency"
-          ]
-        },
-        {
-          section: "Quantitative Aptitude (Sectional Time: 20 mins)",
-          topics: [
-            "Data Interpretation (Bar, Line, Pie charts, Caselet)",
-            "Number Series (Missing & Wrong series)",
-            "Quadratic Equations, Simplification/Approximation",
-            "Arithmetic: Percentage, Average, Profit & Loss, Ratio",
-            "Partnership, Mixture & Alligation, Probability"
-          ]
-        },
-        {
-          section: "English Language (Sectional Time: 20 mins)",
-          topics: [
-            "Reading Comprehension (including vocabulary questions)",
-            "Cloze Test, Error Detection, Sentence Rearrangement",
-            "Fillers, Word Swap, Phrase Replacement"
-          ]
-        }
-      ],
-      prepTips: [
-        "Each section has a strict 20-minute limit. You cannot switch between sections, so practice sectional tests separately.",
-        "Puzzles and Data Interpretation carry the highest marks. Dedicate ample time to mastering various puzzle types.",
-        "Speed calculation is key. Practice mental math, squares, cubes, and tables to speed up calculations."
-      ]
-    }
-  },
-  {
     slug: "hssc-cet-info",
     title: "HSSC CET Group C Recruitment 2026: 1238 पदों पर भर्ती की पूरी जानकारी",
     description: "Haryana Staff Selection Commission (HSSC) ने CET Group C के तहत जेल विभाग में 1238 Warder और Assistant Superintendent Jail पदों के लिए नोटिफिकेशन जारी किया है।",
@@ -591,26 +443,23 @@ const staticBlogs: BlogArticle[] = [
 ];
 
 function getCategoryAndIcon(categoryId: string, slug: string): { category: string; icon: string } {
-  if (categoryId === 'cat-1') {
-    const isClerk = slug.includes('clerk') || slug.includes('assistant');
-    return { category: "Banking", icon: isClerk ? "🏦" : "🏛️" };
-  } else if (categoryId === 'cat-2') {
+  if (categoryId === 'cat-ssc') {
     if (slug === 'ssc-mts') return { category: "SSC Exams", icon: "📋" };
     if (slug === 'ssc-stenographer') return { category: "SSC Exams", icon: "✍️" };
     if (slug.includes('constable') || slug.includes('cpo')) return { category: "SSC Exams", icon: "👮" };
     return { category: "SSC Exams", icon: "📝" };
-  } else if (categoryId === 'cat-3') {
-    return { category: "Civil Services", icon: "🎖️" };
-  } else if (categoryId === 'cat-5') {
+  } else if (categoryId === 'cat-hssc') {
+    return { category: "HSSC Exams", icon: "📋" };
+  } else if (categoryId === 'cat-police') {
+    return { category: "State Police", icon: "👮" };
+  } else if (categoryId === 'cat-teaching') {
+    return { category: "Teacher Exams", icon: "🎓" };
+  } else if (categoryId === 'cat-railways') {
     return { category: "Railways", icon: "🚆" };
+  } else if (categoryId === 'cat-defence') {
+    return { category: "Defence", icon: "⚔️" };
   } else {
-    if (slug.includes('police') || slug.includes('constable') || slug.includes('si')) {
-      return { category: "State Police", icon: "👮" };
-    } else if (slug === 'ctet' || slug === 'htet') {
-      return { category: "Teacher Exams", icon: "🎓" };
-    } else {
-      return { category: "State Exams", icon: "🌾" };
-    }
+    return { category: "State Exams", icon: "🗺️" };
   }
 }
 

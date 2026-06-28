@@ -80,66 +80,64 @@ export interface TestAttempt {
 
 // 1. Categories
 export const CATEGORIES: Category[] = [
-  { id: 'cat-1', name: 'Banking & Insurance', slug: 'banking', icon: '🏛️', examCount: 15 },
-  { id: 'cat-2', name: 'SSC Exams', slug: 'ssc', icon: '📝', examCount: 22 },
-  { id: 'cat-3', name: 'UPSC & Civil Services', slug: 'upsc', icon: '🎖️', examCount: 8 },
-  { id: 'cat-4', name: 'State PSC Exams', slug: 'state-psc', icon: '🗺️', examCount: 34 },
-  { id: 'cat-5', name: 'Railways Exams', slug: 'railways', icon: '🚆', examCount: 12 },
+  { id: 'cat-ssc', name: 'SSC Exams', slug: 'ssc', icon: '📝', examCount: 7 },
+  { id: 'cat-hssc', name: 'HSSC Exams', slug: 'hssc', icon: '📋', examCount: 2 },
+  { id: 'cat-police', name: 'State Police', slug: 'police', icon: '👮', examCount: 6 },
+  { id: 'cat-teaching', name: 'Teaching Exams', slug: 'teaching', icon: '🎓', examCount: 2 },
+  { id: 'cat-railways', name: 'Railways Exams', slug: 'railways', icon: '🚆', examCount: 4 },
+  { id: 'cat-defence', name: 'Defence Exams', slug: 'defence', icon: '⚔️', examCount: 4 },
+  { id: 'cat-state-general', name: 'State General', slug: 'state-general', icon: '🗺️', examCount: 5 },
 ];
 
 // 2. Exams
 export const EXAMS: Exam[] = [
-  // Banking & Insurance
-  { id: 'exam-sbi-po', name: 'SBI PO', slug: 'sbi-po', categoryId: 'cat-1', description: 'State Bank of India Probationary Officer Exam', popular: true },
-  { id: 'exam-sbi-clerk', name: 'SBI Clerk', slug: 'sbi-clerk', categoryId: 'cat-1', description: 'State Bank of India Junior Associate Exam', popular: true },
-  { id: 'exam-ibps-po', name: 'IBPS PO', slug: 'ibps-po', categoryId: 'cat-1', description: 'Institute of Banking Personnel Selection PO Exam', popular: true },
-  { id: 'exam-ibps-clerk', name: 'IBPS Clerk', slug: 'ibps-clerk', categoryId: 'cat-1', description: 'Institute of Banking Personnel Selection Clerk Exam', popular: false },
-  { id: 'exam-ibps-rrb-po', name: 'IBPS RRB PO', slug: 'ibps-rrb-po', categoryId: 'cat-1', description: 'Officer Scale-I Regional Rural Banks Exam', popular: true },
-  { id: 'exam-ibps-rrb-clerk', name: 'IBPS RRB Clerk', slug: 'ibps-rrb-clerk', categoryId: 'cat-1', description: 'Office Assistant Regional Rural Banks Exam', popular: false },
-  { id: 'exam-rbi-grade-b', name: 'RBI Grade B Officer', slug: 'rbi-grade-b', categoryId: 'cat-1', description: 'Reserve Bank of India Grade B Officers Exam', popular: true },
-  { id: 'exam-rbi-assistant', name: 'RBI Assistant', slug: 'rbi-assistant', categoryId: 'cat-1', description: 'Reserve Bank of India Assistants Exam', popular: false },
-
   // SSC Exams
-  { id: 'exam-ssc-cgl', name: 'SSC CGL', slug: 'ssc-cgl', categoryId: 'cat-2', description: 'Staff Selection Commission Combined Graduate Level', popular: true },
-  { id: 'exam-ssc-chsl', name: 'SSC CHSL', slug: 'ssc-chsl', categoryId: 'cat-2', description: 'Staff Selection Commission Combined Higher Secondary Level', popular: false },
-  { id: 'exam-ssc-mts', name: 'SSC MTS', slug: 'ssc-mts', categoryId: 'cat-2', description: 'Staff Selection Commission Multi Tasking Staff Exam', popular: true },
-  { id: 'exam-ssc-gd', name: 'SSC GD Constable', slug: 'ssc-gd-constable', categoryId: 'cat-2', description: 'Staff Selection Commission General Duty Constable Exam', popular: true },
-  { id: 'exam-ssc-cpo', name: 'SSC CPO', slug: 'ssc-cpo', categoryId: 'cat-2', description: 'Staff Selection Commission Central Police Organisation Exam', popular: false },
-  { id: 'exam-ssc-steno', name: 'SSC Stenographer', slug: 'ssc-stenographer', categoryId: 'cat-2', description: 'Staff Selection Commission Grade C & D Stenographer', popular: false },
+  { id: 'exam-ssc-cgl', name: 'SSC CGL', slug: 'ssc-cgl', categoryId: 'cat-ssc', description: 'Staff Selection Commission Combined Graduate Level Exam', popular: true },
+  { id: 'exam-ssc-chsl', name: 'SSC CHSL', slug: 'ssc-chsl', categoryId: 'cat-ssc', description: 'Staff Selection Commission Combined Higher Secondary Level', popular: false },
+  { id: 'exam-ssc-mts', name: 'SSC MTS', slug: 'ssc-mts', categoryId: 'cat-ssc', description: 'Staff Selection Commission Multi Tasking Staff Exam', popular: true },
+  { id: 'exam-ssc-gd', name: 'SSC GD Constable', slug: 'ssc-gd-constable', categoryId: 'cat-ssc', description: 'Staff Selection Commission General Duty Constable Exam', popular: true },
+  { id: 'exam-ssc-cpo', name: 'SSC CPO', slug: 'ssc-cpo', categoryId: 'cat-ssc', description: 'Staff Selection Commission Central Police Organisation Exam', popular: false },
+  { id: 'exam-ssc-steno', name: 'SSC Stenographer', slug: 'ssc-stenographer', categoryId: 'cat-ssc', description: 'Staff Selection Commission Grade C & D Stenographer', popular: false },
+  { id: 'exam-ssc-je', name: 'SSC JE (Junior Engineer)', slug: 'ssc-je', categoryId: 'cat-ssc', description: 'Staff Selection Commission Junior Engineer Mock Exam', popular: false },
 
-  // UPSC & Civil Services
-  { id: 'exam-upsc-cse', name: 'UPSC Civil Services (CSE)', slug: 'upsc-cse', categoryId: 'cat-3', description: 'Union Public Service Commission Civil Services Prelims', popular: true },
-  { id: 'exam-uppsc-pcs', name: 'UPPSC PCS', slug: 'uppsc-pcs', categoryId: 'cat-3', description: 'Uttar Pradesh Public Service Commission State Services', popular: true },
-  { id: 'exam-bpsc', name: 'BPSC Civil Services', slug: 'bpsc', categoryId: 'cat-3', description: 'Bihar Public Service Commission State Services Exam', popular: false },
-  { id: 'exam-hpsc-hcs', name: 'HPSC HCS', slug: 'hpsc-hcs', categoryId: 'cat-3', description: 'Haryana Public Service Commission Haryana Civil Services', popular: true },
+  // HSSC Exams
+  { id: 'exam-hssc-police', name: 'HSSC Haryana Police Constable', slug: 'hssc-haryana-police', categoryId: 'cat-hssc', description: 'Haryana Staff Selection Commission Police Constable Exam', popular: true },
+  { id: 'exam-hssc-cet', name: 'HSSC CET (Group C & D)', slug: 'hssc-cet', categoryId: 'cat-hssc', description: 'Haryana CET General Common Entrance Test', popular: true },
 
-  // State PSC & Police Exams
-  { id: 'exam-hssc-police', name: 'HSSC Haryana Police Constable', slug: 'hssc-haryana-police', categoryId: 'cat-4', description: 'Haryana Staff Selection Commission Police Constable Exam', popular: true },
-  { id: 'exam-hssc-cet', name: 'HSSC CET (Group C & D)', slug: 'hssc-cet', categoryId: 'cat-4', description: 'Haryana CET General Common Entrance Test', popular: true },
-  { id: 'exam-up-police-constable', name: 'UP Police Constable', slug: 'up-police-constable', categoryId: 'cat-4', description: 'Uttar Pradesh Police Constable Recruitment Exam', popular: true },
-  { id: 'exam-up-police-si', name: 'UP Police SI', slug: 'up-police-si', categoryId: 'cat-4', description: 'Uttar Pradesh Police Sub Inspector Exam', popular: false },
-  { id: 'exam-delhi-police', name: 'Delhi Police Constable', slug: 'delhi-police-constable', categoryId: 'cat-4', description: 'Delhi Police Constable Executive Recruitment Exam', popular: true },
-  { id: 'exam-bihar-police', name: 'Bihar Police Constable', slug: 'bihar-police-constable', categoryId: 'cat-4', description: 'Bihar Police Constable Recruitment Examination', popular: false },
-  { id: 'exam-rajasthan-police', name: 'Rajasthan Police Constable', slug: 'rajasthan-police-constable', categoryId: 'cat-4', description: 'Rajasthan Police Constable Recruitment Exam', popular: false },
-  { id: 'exam-ctet', name: 'CTET Paper 1 & 2', slug: 'ctet', categoryId: 'cat-4', description: 'Central Teacher Eligibility Test Prep Mock Exams', popular: true },
-  { id: 'exam-htet', name: 'HTET Haryana Teacher', slug: 'htet', categoryId: 'cat-4', description: 'Haryana Teacher Eligibility Test Recruitment Exam', popular: false },
+  // State Police
+  { id: 'exam-up-police-constable', name: 'UP Police Constable', slug: 'up-police-constable', categoryId: 'cat-police', description: 'Uttar Pradesh Police Constable Recruitment Exam', popular: true },
+  { id: 'exam-up-police-si', name: 'UP Police SI', slug: 'up-police-si', categoryId: 'cat-police', description: 'Uttar Pradesh Police Sub Inspector Exam', popular: false },
+  { id: 'exam-delhi-police', name: 'Delhi Police Constable', slug: 'delhi-police-constable', categoryId: 'cat-police', description: 'Delhi Police Constable Executive Recruitment Exam', popular: true },
+  { id: 'exam-bihar-police', name: 'Bihar Police Constable', slug: 'bihar-police-constable', categoryId: 'cat-police', description: 'Bihar Police Constable Recruitment Examination', popular: false },
+  { id: 'exam-rajasthan-police', name: 'Rajasthan Police Constable', slug: 'rajasthan-police-constable', categoryId: 'cat-police', description: 'Rajasthan Police Constable Recruitment Exam', popular: false },
+  { id: 'exam-cisf-capf', name: 'CISF/CAPF Constable', slug: 'cisf-capf-constable', categoryId: 'cat-police', description: 'Central Industrial Security Force & CAPF Constable Exam', popular: false },
+
+  // Teaching Exams
+  { id: 'exam-ctet', name: 'CTET Paper 1 & 2', slug: 'ctet', categoryId: 'cat-teaching', description: 'Central Teacher Eligibility Test Prep Mock Exams', popular: true },
+  { id: 'exam-htet', name: 'HTET Haryana Teacher', slug: 'htet', categoryId: 'cat-teaching', description: 'Haryana Teacher Eligibility Test Recruitment Exam', popular: false },
 
   // Railways Exams
-  { id: 'exam-rrb-ntpc', name: 'RRB NTPC', slug: 'rrb-ntpc', categoryId: 'cat-5', description: 'Railway Recruitment Board Non-Technical Popular Categories', popular: true },
-  { id: 'exam-rrb-group-d', name: 'RRB Group D', slug: 'rrb-group-d', categoryId: 'cat-5', description: 'Railway Recruitment Board Group D Level 1 Tracks', popular: true },
-  { id: 'exam-rrb-alp', name: 'RRB ALP (Loco Pilot)', slug: 'rrb-alp', categoryId: 'cat-5', description: 'Railway Recruitment Board Assistant Loco Pilot Exam', popular: false },
-  { id: 'exam-rpf-si', name: 'RPF SI & Constable', slug: 'rpf-si', categoryId: 'cat-5', description: 'Railway Protection Force Sub Inspector Recruitment Exam', popular: false },
+  { id: 'exam-rrb-ntpc', name: 'RRB NTPC', slug: 'rrb-ntpc', categoryId: 'cat-railways', description: 'Railway Recruitment Board Non-Technical Popular Categories', popular: true },
+  { id: 'exam-rrb-group-d', name: 'RRB Group D', slug: 'rrb-group-d', categoryId: 'cat-railways', description: 'Railway Recruitment Board Group D Level 1 Tracks', popular: true },
+  { id: 'exam-rrb-alp', name: 'RRB ALP (Loco Pilot)', slug: 'rrb-alp', categoryId: 'cat-railways', description: 'Railway Recruitment Board Assistant Loco Pilot Exam', popular: false },
+  { id: 'exam-rpf-si', name: 'RPF SI & Constable', slug: 'rpf-si', categoryId: 'cat-railways', description: 'Railway Protection Force Sub Inspector Recruitment Exam', popular: false },
+
+  // Defence (Army) Exams
+  { id: 'exam-army-gd', name: 'Indian Army Agniveer (GD)', slug: 'army-agniveer-gd', categoryId: 'cat-defence', description: 'Indian Army Agniveer General Duty Written Exam', popular: false },
+  { id: 'exam-army-tech', name: 'Indian Army Agniveer (Technical)', slug: 'army-agniveer-technical', categoryId: 'cat-defence', description: 'Indian Army Agniveer Technical Branch Written Exam', popular: false },
+  { id: 'exam-army-tradesman', name: 'Indian Army Agniveer (Tradesman)', slug: 'army-agniveer-tradesman', categoryId: 'cat-defence', description: 'Indian Army Agniveer Tradesman 8th/10th Pass Exam', popular: false },
+  { id: 'exam-army-clerk', name: 'Indian Army Agniveer (Clerk/SKT)', slug: 'army-agniveer-clerk', categoryId: 'cat-defence', description: 'Indian Army Agniveer Clerk & Store Keeper Technical', popular: false },
+
+  // State General Exams
+  { id: 'exam-upsssc-pet', name: 'UPSSSC PET', slug: 'upsssc-pet', categoryId: 'cat-state-general', description: 'Uttar Pradesh Subordinate Services Preliminary Eligibility Test', popular: true },
+  { id: 'exam-up-patwari', name: 'UP Patwari/Lekhpal', slug: 'up-patwari', categoryId: 'cat-state-general', description: 'Uttar Pradesh Revenue Department Patwari & Lekhpal Exam', popular: false },
+  { id: 'exam-rajasthan-patwari', name: 'Rajasthan Patwari', slug: 'rajasthan-patwari', categoryId: 'cat-state-general', description: 'Rajasthan Revenue Department Patwari Recruitment Exam', popular: false },
+  { id: 'exam-ib-acio', name: 'IB ACIO', slug: 'ib-acio', categoryId: 'cat-state-general', description: 'Intelligence Bureau Assistant Central Intelligence Officer', popular: true },
+  { id: 'exam-dsssb-various', name: 'DSSSB Various Posts', slug: 'dsssb-various', categoryId: 'cat-state-general', description: 'Delhi Subordinate Services Selection Board Recruitment', popular: false },
 ];
 
 // 3. Base Custom Tests
 const BASE_MOCK_TESTS: Test[] = [
-  // SBI PO Custom Tests
-  { id: 'test-sbi-po-full-1', title: 'SBI PO Prelims - Full Mock Test 1', duration: 60, totalMarks: 100, testType: 'FULL', examId: 'exam-sbi-po', questionCount: 10 },
-  { id: 'test-sbi-po-full-2', title: 'SBI PO Prelims - Full Mock Test 2', duration: 60, totalMarks: 100, testType: 'FULL', examId: 'exam-sbi-po', questionCount: 10 },
-  { id: 'test-sbi-po-sub-quant', title: 'Quantitative Aptitude - Sectional Mock', duration: 20, totalMarks: 35, testType: 'SUBJECT', examId: 'exam-sbi-po', questionCount: 5 },
-  { id: 'test-sbi-po-chap-si', title: 'Chapter Test: Simple & Compound Interest', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-sbi-po', questionCount: 5 },
-  { id: 'test-sbi-po-sec-reasoning', title: 'Reasoning Ability - Sectional Mock', duration: 20, totalMarks: 35, testType: 'SECTIONAL', examId: 'exam-sbi-po', questionCount: 5 },
-
   // SSC CGL Custom Tests
   { id: 'test-ssc-cgl-full-1', title: 'SSC CGL Tier I - Full Mock Test 1', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
   { id: 'test-ssc-cgl-full-2', title: 'SSC CGL Tier I - Full Mock Test 2', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
@@ -211,18 +209,6 @@ EXAMS.forEach(exam => {
       duration = 90;
       totalMarks = 270;
       questionCount = 90;
-    } else if (['sbi-clerk', 'ibps-clerk', 'ibps-po', 'ibps-rrb-po', 'ibps-rrb-clerk', 'rbi-assistant'].includes(exam.slug)) {
-      duration = 60;
-      totalMarks = 100;
-      questionCount = 100;
-    } else if (exam.slug === 'rbi-grade-b') {
-      duration = 120;
-      totalMarks = 200;
-      questionCount = 200;
-    } else if (['upsc-cse', 'uppsc-pcs', 'bpsc', 'hpsc-hcs'].includes(exam.slug)) {
-      duration = 120;
-      totalMarks = 200;
-      questionCount = 100;
     } else if (exam.slug === 'rrb-ntpc' || exam.slug === 'rrb-group-d' || exam.slug === 'rrb-alp') {
       duration = 90;
       totalMarks = 100;
@@ -267,108 +253,6 @@ EXAMS.forEach(exam => {
 
 // 4. Questions (Standard 10 questions per full mock, 5 per other)
 export const MOCK_QUESTIONS: Record<string, Question[]> = {
-  'test-sbi-po-full-1': [
-    {
-      id: 'q-sbi-1',
-      text: 'A sum of money invested at compound interest doubles itself in 5 years. In how many years will it become 8 times itself?',
-      options: ['10 years', '15 years', '20 years', '25 years'],
-      correctIndex: 1, // 15 years
-      explanation: 'Let principal be P. It becomes 2P in 5 years. For it to become 8P (which is 2^3 P), it will take 3 * 5 = 15 years.',
-      sectionName: 'Quantitative Aptitude',
-      testId: 'test-sbi-po-full-1',
-    },
-    {
-      id: 'q-sbi-2',
-      text: 'A and B together can complete a piece of work in 12 days. A alone can complete it in 20 days. In how many days can B alone complete it?',
-      options: ['25 days', '30 days', '35 days', '40 days'],
-      correctIndex: 1, // 30 days
-      explanation: 'Work rate of (A+B) = 1/12. Work rate of A = 1/20. B\'s work rate = 1/12 - 1/20 = (5-3)/60 = 2/60 = 1/30. Thus, B takes 30 days.',
-      sectionName: 'Quantitative Aptitude',
-      testId: 'test-sbi-po-full-1',
-    },
-    {
-      id: 'q-sbi-3',
-      text: 'In a certain code language, "TRUST" is written as "USVTV". How is "HONOR" written in that code?',
-      options: ['IPOPS', 'IPNPS', 'IPNPU', 'IPNQS'],
-      correctIndex: 1, // IPNPS
-      explanation: 'Each letter is shifted by +1 (T->U, R->S, U->V, S->T, T->U). Applying the same to HONOR gives IPNPS.',
-      sectionName: 'Reasoning Ability',
-      testId: 'test-sbi-po-full-1',
-    },
-    {
-      id: 'q-sbi-4',
-      text: 'Read the statement: "Only a few circles are squares. No square is a triangle." Choose the logical conclusion.',
-      options: [
-        'All circles are triangles is a possibility',
-        'Some circles are not triangles',
-        'Some squares are circles',
-        'No circle is a triangle'
-      ],
-      correctIndex: 2, // Some squares are circles
-      explanation: 'Since "Only a few circles are squares", it implies some circles are squares, which also means some squares are circles.',
-      sectionName: 'Reasoning Ability',
-      testId: 'test-sbi-po-full-1',
-    },
-    {
-      id: 'q-sbi-5',
-      text: 'Identify the grammatically correct sentence from the following options.',
-      options: [
-        'Neither of the students have submitted their assignment.',
-        'Neither of the students has submitted his assignment.',
-        'Neither of the student have submitted his assignment.',
-        'Neither of the students has submitted their assignment.'
-      ],
-      correctIndex: 1, // Has submitted his
-      explanation: '"Neither" is singular, so it takes a singular verb ("has") and singular pronoun ("his").',
-      sectionName: 'English Language',
-      testId: 'test-sbi-po-full-1',
-    },
-    {
-      id: 'q-sbi-6',
-      text: 'Find the odd one out from the following number series: 2, 9, 28, 65, 126, 216, 344',
-      options: ['28', '65', '126', '216'],
-      correctIndex: 3, // 216
-      explanation: 'The pattern is n^3 + 1. 1^3+1=2, 2^3+1=9, 3^3+1=28, 4^3+1=65, 5^3+1=126, 6^3+1=217 (not 216), 7^3+1=344. So 216 is wrong.',
-      sectionName: 'Quantitative Aptitude',
-      testId: 'test-sbi-po-full-1',
-    },
-    {
-      id: 'q-sbi-7',
-      text: 'Point A is 5m North of Point B. Point C is 10m East of Point B. Point D is 5m South of Point C. What is the shortest distance between A and D?',
-      options: ['10m', '10.5m', '14.14m', '15m'],
-      correctIndex: 2, // 14.14m
-      explanation: 'Shortest distance = sqrt((vertical distance)^2 + (horizontal distance)^2). Vertical distance = 5m (North) + 5m (South) = 10m. Horizontal = 10m. distance = sqrt(100+100) = sqrt(200) = 14.14m.',
-      sectionName: 'Reasoning Ability',
-      testId: 'test-sbi-po-full-1',
-    },
-    {
-      id: 'q-sbi-8',
-      text: 'Choose the word that is most nearly OPPOSITE in meaning to: EPHEMERAL',
-      options: ['Transient', 'Eternal', 'Fleeting', 'Ethereal'],
-      correctIndex: 1, // Eternal
-      explanation: 'Ephemeral means lasting for a very short time. Its opposite is Eternal (lasting forever).',
-      sectionName: 'English Language',
-      testId: 'test-sbi-po-full-1',
-    },
-    {
-      id: 'q-sbi-9',
-      text: 'The average weight of 8 persons increases by 2.5 kg when a new person comes in place of one of them weighing 65 kg. What is the weight of the new person?',
-      options: ['70 kg', '75 kg', '80 kg', '85 kg'],
-      correctIndex: 3, // 85 kg
-      explanation: 'Total weight increase = 8 * 2.5 = 20 kg. Weight of new person = Weight of replaced person + increase = 65 + 20 = 85 kg.',
-      sectionName: 'Quantitative Aptitude',
-      testId: 'test-sbi-po-full-1',
-    },
-    {
-      id: 'q-sbi-10',
-      text: 'Statements: "All mangoes are fruits. All fruits are healthy." Conclusion I: All mangoes are healthy. Conclusion II: Some healthy things are mangoes.',
-      options: ['Only I follows', 'Only II follows', 'Both I and II follow', 'Neither I nor II follows'],
-      correctIndex: 2, // Both follow
-      explanation: 'Since all mangoes are fruits and all fruits are healthy, all mangoes are healthy (I follows). Since all mangoes are healthy, at least some healthy things are mangoes (II follows).',
-      sectionName: 'Reasoning Ability',
-      testId: 'test-sbi-po-full-1',
-    }
-  ],
   'test-hssc-police-full-1': [
     {
       id: 'q-hssc-1',
@@ -1319,10 +1203,10 @@ export const INITIAL_ATTEMPTS: TestAttempt[] = [
   {
     id: 'attempt-1',
     userId: 'user-default',
-    testId: 'test-sbi-po-full-1',
-    score: 78.5,
-    accuracy: 85,
-    percentile: 94.2,
+    testId: 'test-ssc-cgl-full-2',
+    score: 135.5,
+    accuracy: 82,
+    percentile: 91.4,
     status: 'COMPLETED',
     startedAt: '2026-06-20T10:00:00Z',
     submittedAt: '2026-06-20T10:45:00Z',
@@ -1332,8 +1216,8 @@ export const INITIAL_ATTEMPTS: TestAttempt[] = [
       attemptId: 'attempt-1',
       sectionTimeTaken: {
         'Quantitative Aptitude': 1100,
-        'Reasoning Ability': 950,
-        'English Language': 650
+        'General Intelligence & Reasoning': 950,
+        'English Comprehension': 650
       },
       weakChapters: ['Simple Interest', 'Sentence Correction'],
       strongChapters: ['Syllogism', 'Average', 'Direction Sense']
@@ -1355,8 +1239,8 @@ export const INITIAL_ATTEMPTS: TestAttempt[] = [
       attemptId: 'attempt-2',
       sectionTimeTaken: {
         'Quantitative Aptitude': 1500,
-        'General Intelligence': 1000,
-        'English Language': 600,
+        'General Intelligence & Reasoning': 1000,
+        'English Comprehension': 600,
         'General Awareness': 500
       },
       weakChapters: ['Geometry', 'History'],

@@ -8,12 +8,12 @@ import TestCard from '@/components/TestCard';
 
 const SYLLABUS_CATEGORIES = [
   { key: 'ALL', label: 'All Exams' },
-  { key: 'Banking', label: 'Banking & Insurance' },
   { key: 'SSC Exams', label: 'SSC Exams' },
-  { key: 'Civil Services', label: 'Civil Services' },
+  { key: 'HSSC Exams', label: 'HSSC Exams' },
   { key: 'Railways', label: 'Railways' },
   { key: 'State Police', label: 'State Police' },
   { key: 'Teacher Exams', label: 'Teaching Exams' },
+  { key: 'Defence', label: 'Defence' },
   { key: 'State Exams', label: 'State General' },
 ];
 
@@ -39,14 +39,43 @@ export default function HomePage() {
   }, []);
 
   const EXAM_ICONS: Record<string, string> = {
-    'sbi-po': '🏛️',
-    'ibps-po': '🏦',
+    // SSC
     'ssc-cgl': '✍️',
     'ssc-chsl': '📝',
     'ssc-mts': '📋',
-    'upsc-cse': '🎖️',
-    'rrb-ntpc': '🚆',
+    'ssc-gd-constable': '👮',
+    'ssc-cpo': '🚓',
+    'ssc-stenographer': '⌨️',
+    'ssc-je': '⚙️',
+    // HSSC
     'hssc-haryana-police': '👮',
+    'hssc-cet': '🌾',
+    // State Police
+    'up-police-constable': '👮',
+    'up-police-si': '🚓',
+    'delhi-police-constable': '👮',
+    'bihar-police-constable': '👮',
+    'rajasthan-police-constable': '👮',
+    'cisf-capf-constable': '🛡️',
+    // Teaching
+    'ctet': '🎓',
+    'htet': '🏫',
+    // Railways
+    'rrb-ntpc': '🚆',
+    'rrb-group-d': '🛤️',
+    'rrb-alp': '🚂',
+    'rpf-si': '👮',
+    // Defence (Army)
+    'army-agniveer-gd': '🎖️',
+    'army-agniveer-technical': '⚙️',
+    'army-agniveer-tradesman': '🛠️',
+    'army-agniveer-clerk': '💼',
+    // State General
+    'upsssc-pet': '📋',
+    'up-patwari': '🗺️',
+    'rajasthan-patwari': '🗺️',
+    'ib-acio': '🕵️',
+    'dsssb-various': '🏢',
   };
 
   // Filter exams based on search query

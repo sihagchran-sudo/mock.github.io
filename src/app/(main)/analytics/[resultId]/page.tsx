@@ -242,7 +242,7 @@ export default function AnalyticsPage() {
         </div>
 
         <Link
-          href={`/exam/sbi-po`}
+          href={`/exam/ssc-cgl`}
           className="border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs px-5 py-2.5 rounded-lg font-bold transition-all shadow-sm flex items-center justify-center gap-1.5 self-start"
         >
           ← Practice More Mocks

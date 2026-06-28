@@ -11,7 +11,7 @@ export default function Footer() {
               MockMaster
             </span>
             <p className="text-sm text-slate-500 leading-relaxed">
-              India's leading online test preparation platform. Prepare for Banking, SSC, UPSC, and Railways with real-time test simulators.
+              India's leading online test preparation platform. Prepare for SSC, Railways, State Police, HSSC, and Defence exams with real-time test simulators.
             </p>
             <div className="flex space-x-4 text-xs text-slate-500">
               <span>Trusted by 10M+ Aspirants</span>
@@ -24,10 +24,10 @@ export default function Footer() {
               Popular Exams
             </h3>
             <ul className="space-y-2 text-sm text-slate-600 font-medium">
-              <li><Link href="/exam/sbi-po" className="hover:text-blue-650 transition-colors">SBI PO Prelims</Link></li>
-              <li><Link href="/exam/ibps-po" className="hover:text-blue-650 transition-colors">IBPS PO Mocks</Link></li>
               <li><Link href="/exam/ssc-cgl" className="hover:text-blue-650 transition-colors">SSC CGL Tier 1</Link></li>
               <li><Link href="/exam/rrb-ntpc" className="hover:text-blue-650 transition-colors">RRB NTPC</Link></li>
+              <li><Link href="/exam/ssc-gd-constable" className="hover:text-blue-650 transition-colors">SSC GD Constable</Link></li>
+              <li><Link href="/exam/upsssc-pet" className="hover:text-blue-650 transition-colors">UPSSSC PET</Link></li>
             </ul>
           </div>
 
