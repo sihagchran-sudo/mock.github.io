@@ -249,6 +249,168 @@ const staticBlogs: BlogArticle[] = [
       { question: "Is there an interview for the Haryana Police Constable exam?", answer: "No. The selection process consists of CET-based shortlisting, the Physical Measurement Test, the Physical Screening Test, the Knowledge Test, document verification, and a medical examination—there's no interview round." }
     ],
     relatedExams: ["hssc-cet", "up-police-constable", "delhi-police-constable"]
+  },
+  {
+    slug: "ssc-stenographer-syllabus-pattern",
+    examSlug: "ssc-stenographer",
+    examName: "SSC Stenographer",
+    category: "SSC Exams",
+    icon: "✍️",
+    title: "SSC Stenographer Exam: Your Complete Guide to Grade C & D in 2026",
+    description: "Want a stable central government job straight after Class 12? This guide breaks down everything you need to know: eligibility, exam pattern, syllabus, salary, and practical prep tips.",
+    metaTitle: "SSC Stenographer Exam Guide 2026: Pattern, Syllabus, Salary & Eligibility",
+    metaDescription: "Everything you need to crack the SSC Stenographer Grade C & D exam—eligibility, exam pattern, syllabus, salary, and smart prep tips. Start preparing today.",
+    authorName: "Editorial Team",
+    authorityBadge: "SSC",
+    publishDate: "June 28, 2026",
+    readTime: "5 min read",
+    datePublishedISO: "2026-06-28T10:35:00Z",
+    featuredImage: "/hero_composition_vector.png",
+    featuredImageAlt: "SSC Stenographer Grade C & D Exam Prep",
+    quickAnswer: "The SSC Stenographer exam is a national-level recruitment conducted by the Staff Selection Commission to fill Stenographer Grade C (Group B, Non-Gazetted) and Grade D (Group C) posts across central government ministries and departments. You need to have passed Class 12 and possess stenography skills to apply. Selection involves a computer-based test followed by a qualifying shorthand skill test—no interview.",
+    sections: [
+      {
+        id: "about-exam",
+        title: "What is the SSC Stenographer exam?",
+        paragraphs: [
+          "The SSC Stenographer exam is conducted annually by the Staff Selection Commission to recruit stenographers for central government departments. A stenographer's core job is to record speech rapidly and accurately using shorthand, then transcribe it—a role that remains essential wherever real-time documentation is required.",
+          "The recruitment is offered at two levels:\nStenographer Grade C: A Group B (Non-Gazetted) post, typically attached to senior officers and ministries, with higher pay and responsibility.\nStenographer Grade D: A Group C post that handles shorthand, transcription, and clerical support across various government offices.",
+          "Day-to-day duties for both grades usually include:\nShorthand dictation: Taking live dictation from senior officials, capturing instructions and remarks accurately at speed.\nSpeech transcription: Converting spoken words from meetings and proceedings into shorthand notes, then transcribing them later.\nExecutive support: Providing personal-assistant–level support to ministers and senior officers, managing schedules and communications.\nDocumentation and drafting: Preparing structured drafts of speeches, official statements, meeting summaries, and reports.",
+          "These roles offer the stability, steady pay, and growth opportunities that make central government jobs so appealing—with the added advantage of being open to Class 12 pass candidates."
+        ]
+      },
+      {
+        id: "eligibility",
+        title: "Who is eligible for SSC Stenographer?",
+        paragraphs: [
+          "Before you start prepping, make sure you tick the basic boxes.",
+          "Educational qualification: You must have passed Class 12 (10+2) or an equivalent qualification from a recognized board or university on or before the cut-off date of 1 August 2026. You must also possess stenography skills to apply.",
+          "Age limit: The age requirement differs by grade, calculated as on the crucial date of 1 August 2026.",
+          "Age relaxation applies for reserved categories:\nSC/ST: 5 years\nOBC: 3 years\nPwBD (Unreserved): 10 years",
+          "Nationality: You must be a citizen of India, a subject of Nepal or Bhutan, or a person of Indian origin who has migrated from specified countries with the intention of permanently settling in India."
+        ],
+        table: {
+          headers: ["Post", "Minimum Age", "Maximum Age"],
+          rows: [
+            ["Stenographer Grade C", "18 years", "30 years"],
+            ["Stenographer Grade D", "18 years", "27 years"]
+          ]
+        }
+      },
+      {
+        id: "exam-pattern",
+        title: "What is the SSC Stenographer exam pattern?",
+        paragraphs: [
+          "Selection happens across two main stages. You'll start with the Computer-Based Examination (CBE), and qualifying candidates progress to the shorthand skill test. There's no interview. Importantly, the final merit list is prepared solely on your CBE marks—the skill test is qualifying in nature."
+        ],
+        stepper: [
+          { stepNumber: 1, title: "Computer-Based Examination (CBE)", description: "The written objective test that decides the final merit marks." },
+          { stepNumber: 2, title: "Skill Test in Stenography", description: "A qualifying shorthand dictation and transcription test on computer." }
+        ]
+      },
+      {
+        id: "cbe-stage",
+        title: "Stage 1: Computer-Based Examination",
+        paragraphs: [
+          "The CBE is a single objective test of 200 questions worth 200 marks, to be completed in 2 hours. From the 2026 cycle, SSC has introduced sectional timing for the first time—each subject now has a fixed time limit, and once it expires, you're automatically moved to the next section. There's also a negative marking of 0.25 marks for every wrong answer, so answer carefully.",
+          "One thing to keep in mind: time saved in one section can't be carried over to another. You'll need to manage your pace within each individual timer."
+        ],
+        table: {
+          headers: ["Part", "Subject", "Questions", "Marks", "Duration"],
+          rows: [
+            ["I", "General Intelligence & Reasoning", "50", "50", "30 minutes"],
+            ["II", "General Awareness", "50", "50", "30 minutes"],
+            ["III", "English Language & Comprehension", "100", "100", "60 minutes"],
+            ["Total", "All Sections Combined", "200", "200", "120 minutes"]
+          ]
+        }
+      },
+      {
+        id: "skill-test-stage",
+        title: "Stage 2: Skill Test in Stenography",
+        paragraphs: [
+          "Candidates shortlisted from the CBE based on merit move on to the skill test. You'll be dictated a passage in either English or Hindi (chosen while filling the form), which you then transcribe on a computer.",
+          "The dictation speeds are:\nStenographer Grade C: 100 words per minute (wpm) for 10 minutes\nStenographer Grade D: 80 words per minute (wpm) for 10 minutes",
+          "Accuracy matters here. The permissible mistakes are 5% for Grade C (General) and 7% for Grade D (General), with OBC/SC/ST/Ex-servicemen candidates allowed up to 10% for Grade D."
+        ],
+        table: {
+          headers: ["Post", "Language", "Transcription Time", "Time for Scribe Users"],
+          rows: [
+            ["Stenographer Grade D", "English", "50 minutes", "70 minutes"],
+            ["Stenographer Grade D", "Hindi", "65 minutes", "90 minutes"],
+            ["Stenographer Grade C", "English", "40 minutes", "55 minutes"],
+            ["Stenographer Grade C", "Hindi", "55 minutes", "75 minutes"]
+          ]
+        }
+      },
+      {
+        id: "syllabus",
+        title: "What does the SSC Stenographer syllabus cover?",
+        paragraphs: [
+          "The CBE tests three broad domains. Here's what to study:",
+          "General Intelligence & Reasoning: Analogies, similarities and differences, space visualization, problem solving, visual memory, coding-decoding, blood relations, direction and distance, order and ranking, puzzles, Venn diagrams, number series, and non-verbal reasoning.",
+          "General Awareness: History, culture, geography, general polity, the Indian Constitution, economic scene, scientific research, science and technology, sports, and current affairs—covering India and its neighboring countries.",
+          "English Language & Comprehension: Vocabulary, grammar, sentence structure, synonyms and antonyms, spellings, idioms and phrases, active and passive voice, direct and indirect speech, reading comprehension, fill in the blanks, error spotting, para jumbles, and sentence correction.",
+          "For the skill test, dictation passages typically draw from topics of national interest such as the President's Speech, Budget Speech, Parliament proceedings, editorial columns, natural calamities, employment in India, and science and technology.",
+          "A useful tip: since English carries 100 of the 200 marks, it's by far the highest-weightage section—consistent daily practice here pays off more than anywhere else."
+        ],
+        weightageChart: [
+          { label: "English Language & Comprehension", percentage: 50 },
+          { label: "General Intelligence & Reasoning", percentage: 25 },
+          { label: "General Awareness", percentage: 25 }
+        ]
+      },
+      {
+        id: "salary-posts",
+        title: "SSC Stenographer salary and posts",
+        paragraphs: [
+          "The compensation for an SSC Stenographer is set by the 7th Central Pay Commission, and varies between the two grades.",
+          "Beyond the basic pay, both grades receive several allowances that depend on the city classification (X, Y, or Z) of your posting:\nDearness Allowance (DA): Periodically revised to account for inflation\nHouse Rent Allowance (HRA): Provided if government accommodation isn't availed\nTransport Allowance (TA): To cover daily commuting costs\nMedical facilities: Access to subsidized healthcare under the Central Government Health Scheme (CGHS)",
+          "A quick note on the difference between grades: Grade C is the senior of the two, offering a higher pay level and greater responsibility, while Grade D is an entry-level Group C post—still a secure, respected role within central government offices."
+        ],
+        table: {
+          headers: ["Component", "Stenographer Grade C", "Stenographer Grade D"],
+          rows: [
+            ["Pay Level", "Level 6", "Level 4"],
+            ["Basic Pay", "₹35,400", "₹25,500"],
+            ["Grade Pay", "₹4,200", "₹2,400"]
+          ]
+        }
+      },
+      {
+        id: "how-to-prepare",
+        title: "How to prepare for the SSC Stenographer exam",
+        paragraphs: [
+          "A clear plan beats random studying every time. Here's how to approach your prep, ideally over a three-month window:"
+        ],
+        strategyCards: [
+          { title: "Know the syllabus and pattern inside out", description: "Understand exactly what each section tests and how the new sectional timer works. With fixed time per subject, you can't afford to get stuck on any one part." },
+          { title: "Make English your priority", description: "English carries half the written marks, so treat it as your biggest scoring opportunity. Build daily grammar, vocabulary, and reading comprehension practice into your routine, and maintain an error notebook to avoid repeating mistakes." },
+          { title: "Start shorthand practice early", description: "The skill test is mandatory for final selection, so don't leave it until after the CBE. Build dictation speed gradually—aim for steady accuracy before pushing for raw speed." },
+          { title: "Solve previous year papers and take mock tests", description: "Past papers reveal recurring question patterns, while regular mocks train you to handle the sectional timers and computer-based format. Analyze every mock for accuracy, timing, and weak topics." },
+          { title: "Play the negative marking smartly", description: "Each wrong answer costs 0.25 marks. Attempt questions you're confident about rather than guessing blindly." },
+          { title: "Revise General Awareness with limited sources", description: "Stick to one or two reliable sources, make short notes, and revise weekly. Keep up with current affairs through a daily newspaper." },
+          { title: "Follow a phased study plan", description: "A common approach splits 90 days into three phases—building fundamentals first, then focusing on practice and speed, and finally on full mocks and revision. Trusted books like S.P. Bakshi for English, Lucent for GK, and R.S. Aggarwal for reasoning can anchor your prep." }
+        ]
+      },
+      {
+        id: "next-steps",
+        title: "Your next step toward a government job",
+        paragraphs: [
+          "The SSC Stenographer exam is one of the most accessible routes into a central government career for Class 12 pass candidates—and with focused effort, cracking it is well within reach. A clear grasp of the new sectional-timed pattern, a strong emphasis on English, early shorthand practice, and regular mock tests will set you up to walk into the exam hall ready.",
+          "Start by downloading the official syllabus, gathering quality study material, and setting up your daily schedule. The sooner you begin—especially on shorthand—the more time you'll have to build the speed and accuracy that selection demands."
+        ]
+      }
+    ],
+    faqs: [
+      { question: "What is the minimum qualification for SSC Stenographer?", answer: "You must have passed Class 12 (10+2) from a recognized board, along with possessing stenography skills. This makes it a great option for candidates who want a stable government job without needing a graduate degree." },
+      { question: "Is there negative marking in the SSC Stenographer exam?", answer: "Yes. In the Computer-Based Examination, 0.25 marks are deducted for every wrong answer, so it pays to be selective about the questions you attempt." },
+      { question: "What is the age limit for SSC Stenographer?", answer: "The age limit is 18 to 30 years for Grade C and 18 to 27 years for Grade D. Reserved categories receive relaxation—3 years for OBC, 5 years for SC/ST, and 10 years for PwBD (Unreserved)." },
+      { question: "Is the skill test compulsory?", answer: "Yes. Only candidates who qualify the shorthand skill test—meeting the prescribed speed and accuracy norms—are considered for final selection. However, the final merit list is based solely on your Computer-Based Examination marks, as the skill test is qualifying in nature." },
+      { question: "What is the salary of an SSC Stenographer?", answer: "Grade C falls under Pay Level 6 with a basic pay of ₹35,400, while Grade D falls under Pay Level 4 with a basic pay of ₹25,500. Both grades also receive allowances such as DA, HRA, and TA, along with CGHS medical benefits." },
+      { question: "What is the difference between Stenographer Grade C and Grade D?", answer: "Grade C is a Group B (Non-Gazetted) post with a higher pay level (Level 6), greater responsibility, and a faster required dictation speed of 100 wpm. Grade D is a Group C post at Pay Level 4, with a dictation speed of 80 wpm." }
+    ],
+    relatedExams: ["ssc-cgl", "ssc-chsl", "ssc-mts"]
   }
 ];
 
