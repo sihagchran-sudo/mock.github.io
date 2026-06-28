@@ -114,6 +114,22 @@ export default function HomePage() {
             Feeling nervous about the final exam day is normal, but it shouldn't lower your score. Our platform gives you the exact feel of the real exam hall. Practice with the same screen layout, manage the real countdown timer, and test your speed before the actual day. We show you exactly where you are making mistakes so you can fix them fast. Build your confidence, manage your time better, and get ready to clear the cut-off.
           </p>
 
+          {/* Mobile/Tablet Badges Showcase */}
+          <div className="flex flex-wrap justify-center gap-2.5 mb-8 lg:hidden max-w-2xl mx-auto z-10">
+            <div className="bg-white/8 border border-white/15 rounded-xl px-3 py-2 shadow-sm text-white text-[10px] sm:text-xs font-bold flex items-center gap-1.5">
+              <span>🎯</span> 99th Percentile
+            </div>
+            <div className="bg-white/8 border border-white/15 rounded-xl px-3 py-2 shadow-sm text-white text-[10px] sm:text-xs font-bold flex items-center gap-1.5">
+              <span>📈</span> Accuracy: +95%
+            </div>
+            <div className="bg-white/8 border border-white/15 rounded-xl px-3 py-2 shadow-sm text-white text-[10px] sm:text-xs font-bold flex items-center gap-1.5">
+              <span>⏱️</span> Real-time Timer
+            </div>
+            <div className="bg-white/8 border border-white/15 rounded-xl px-3 py-2 shadow-sm text-white text-[10px] sm:text-xs font-bold flex items-center gap-1.5">
+              <span>🏆</span> Cut-off Cleared
+            </div>
+          </div>
+
           {/* Exam Search Bar */}
           <div className="w-full max-w-lg relative mb-8">
             <div className="flex shadow-2xl shadow-blue-950/50 rounded-xl overflow-hidden bg-white text-slate-800 border border-slate-200/50 focus-within:ring-2 focus-within:ring-blue-500/40 transition-all">

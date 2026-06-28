@@ -118,7 +118,7 @@ export default function Navbar() {
               <div className="flex items-center space-x-4">
                 <Link
                   href="/signin"
-                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-[11px] px-5 py-2.5 rounded-xl font-extrabold shadow-md shadow-blue-500/10 hover:shadow-blue-500/20 transition-all active:scale-98"
+                  className="bg-accent-cta hover:bg-accent-cta-hover text-white text-[11px] px-5 py-2.5 rounded-xl font-extrabold shadow-md shadow-amber-500/10 hover:shadow-amber-500/20 transition-all active:scale-98"
                 >
                   Sign In
                 </Link>
@@ -190,7 +190,7 @@ export default function Navbar() {
                     <Link
                       href="/dashboard"
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="bg-blue-600 text-white text-center px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                      className="bg-accent-cta text-white text-center px-4 py-2 rounded-lg font-medium hover:bg-accent-cta-hover transition-colors"
                     >
                       Buy Pass
                     </Link>
@@ -211,7 +211,7 @@ export default function Navbar() {
               <Link
                 href="/signin"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full bg-blue-600 text-white text-center px-4 py-2.5 rounded-lg font-bold shadow-sm"
+                className="w-full bg-accent-cta hover:bg-accent-cta-hover text-white text-center px-4 py-2.5 rounded-lg font-bold shadow-sm"
               >
                 Sign In
               </Link>
