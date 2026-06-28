@@ -384,6 +384,25 @@ export default function Navbar() {
               );
             })}
             
+            {/* Mobile Updates Button in Hamburger Menu */}
+            <div className="pt-2 border-t border-slate-150">
+              <button
+                onClick={() => {
+                  handleMobileNotifToggle();
+                  setIsMobileMenuOpen(false);
+                }}
+                className="w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-slate-705 hover:bg-slate-50 hover:text-blue-600 cursor-pointer"
+              >
+                <span className="flex items-center gap-2">
+                  <span>🔔</span> Updates & What's New
+                  {hasUnreadNotifs && (
+                    <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                  )}
+                </span>
+                <span className="text-xs text-slate-400">View</span>
+              </button>
+            </div>
+            
             <div className="pt-4 border-t border-slate-200 flex flex-col space-y-3">
               {status === "authenticated" && user ? (
                 <>
