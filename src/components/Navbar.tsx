@@ -18,6 +18,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Dashboard', href: '/dashboard' },
+    { name: 'Free PDFs', href: '/free-resources' },
     { name: 'Contact Us', href: '/contact' },
     { name: 'Privacy Policy', href: '/privacy' },
   ];

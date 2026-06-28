@@ -50,10 +50,9 @@ export default function Footer() {
               Aspirant Support
             </h3>
             <ul className="space-y-2 text-sm text-slate-600 font-medium">
-              <li><span className="text-slate-550">Frequently Asked Questions</span></li>
-              <li><span className="text-slate-550">Contact Helpdesk</span></li>
-              <li><span className="text-slate-550">Affiliate Program</span></li>
-              <li><span className="text-slate-550">Privacy Policy</span></li>
+              <li><Link href="/free-resources" className="hover:text-blue-650 transition-colors">Free Study PDFs</Link></li>
+              <li><Link href="/contact" className="hover:text-blue-650 transition-colors">Contact Helpdesk</Link></li>
+              <li><Link href="/privacy" className="hover:text-blue-650 transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>

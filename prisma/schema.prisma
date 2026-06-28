@@ -139,3 +139,17 @@ model BlogArticle {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
+
+model FreeResource {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  url         String   // Download or viewing link
+  category    String   // e.g. "SSC Exams", "HSSC Exams", "NCERT Books", "Notes"
+  fileSize    String?  // e.g. "1.2 MB"
+  source      String?  // e.g. "NCERT Official", "Official Board", "Internet Archive"
+  isApproved  Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
