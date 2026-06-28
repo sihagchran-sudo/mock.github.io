@@ -23,7 +23,7 @@ export default function Navbar() {
     { name: 'Privacy Policy', href: '/privacy' },
   ];
 
-  const notifications = [
+  const [notifications, setNotifications] = useState<any[]>([
     {
       id: 'notif-steno-2026',
       title: 'SSC Stenographer Guide & Tests Live!',
@@ -42,16 +42,7 @@ export default function Navbar() {
       badge: 'Exam Guide',
       icon: '👮',
     },
-    {
-      id: 'notif-filters-2026',
-      title: 'Exam Category Filters Active',
-      desc: 'Easily find exams by category (SSC, HSSC, State Police, etc.) on the homepage.',
-      link: '/',
-      date: 'June 27, 2026',
-      badge: 'Feature',
-      icon: '⚡',
-    },
-  ];
+  ]);
 
   useEffect(() => {
     // Check if top banner has been dismissed
@@ -60,11 +51,28 @@ export default function Navbar() {
       setIsBannerVisible(false);
     }
 
-    // Check if user has read the notifications
-    const lastRead = localStorage.getItem('mockmaster_notif_last_read_2026_06_28');
-    if (!lastRead) {
-      setHasUnreadNotifs(true);
+    // Fetch dynamic notifications
+    async function loadNotifications() {
+      try {
+        const res = await fetch("/api/notifications");
+        if (res.ok) {
+          const data = await res.json();
+          if (data.notifications && data.notifications.length > 0) {
+            setNotifications(data.notifications);
+            
+            // Check unread based on latest notification ID
+            const latestId = data.notifications[0].id;
+            const lastReadId = localStorage.getItem('mockmaster_notif_last_read_id');
+            if (lastReadId !== latestId) {
+              setHasUnreadNotifs(true);
+            }
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load notifications:", err);
+      }
     }
+    loadNotifications();
   }, []);
 
   const handleDismissBanner = () => {
@@ -76,14 +84,20 @@ export default function Navbar() {
     setIsNotifDropdownOpen(!isNotifDropdownOpen);
     if (!isNotifDropdownOpen) {
       setHasUnreadNotifs(false);
-      localStorage.setItem('mockmaster_notif_last_read_2026_06_28', new Date().toISOString());
+      if (notifications.length > 0) {
+        localStorage.setItem('mockmaster_notif_last_read_id', notifications[0].id);
+      }
     }
   };
 
   const handleMobileNotifToggle = () => {
     setIsMobileNotifsOpen(!isMobileNotifsOpen);
-    setHasUnreadNotifs(false);
-    localStorage.setItem('mockmaster_notif_last_read_2026_06_28', new Date().toISOString());
+    if (!isMobileNotifsOpen) {
+      setHasUnreadNotifs(false);
+      if (notifications.length > 0) {
+        localStorage.setItem('mockmaster_notif_last_read_id', notifications[0].id);
+      }
+    }
   };
 
   // Helper to get initials
