@@ -509,7 +509,7 @@ const EXAM_CATEGORIES = [
                         </h3>
                       </Link>
                       <p className="text-[10px] text-slate-400 mt-1.5 font-bold uppercase tracking-wider">
-                        Authority: {blog.details.authority}
+                        Authority: {blog.authorityBadge || (blog.details as any)?.authority || 'Official Board'}
                       </p>
                     </div>
                   </div>
