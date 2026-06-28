@@ -21,6 +21,8 @@ export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSyllabusCategory, setSelectedSyllabusCategory] = useState('ALL');
   const [blogsList, setBlogsList] = useState<any[]>(BLOGS);
+  const [selectedExamCategory, setSelectedExamCategory] = useState('ALL');
+  const [activeDetailsExam, setActiveDetailsExam] = useState<any | null>(null);
 
   // Fetch updated blogs list from database
   useEffect(() => {
@@ -78,11 +80,32 @@ export default function HomePage() {
     'dsssb-various': '🏢',
   };
 
+const EXAM_CATEGORIES = [
+  { id: 'ALL', name: 'All Categories', icon: '⚡' },
+  { id: 'cat-ssc', name: 'SSC Exams', icon: '📝' },
+  { id: 'cat-hssc', name: 'HSSC Exams', icon: '📋' },
+  { id: 'cat-police', name: 'State Police', icon: '👮' },
+  { id: 'cat-railways', name: 'Railways', icon: '🚆' },
+  { id: 'cat-defence', name: 'Defence', icon: '⚔️' },
+  { id: 'cat-teaching', name: 'Teaching', icon: '🎓' },
+  { id: 'cat-state-general', name: 'State General', icon: '🗺️' },
+];
+
   // Filter exams based on search query
   const filteredExams = EXAMS.filter(exam =>
     exam.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     exam.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  // Filter exams based on search query AND category selection
+  const filteredExamsForGrid = EXAMS.filter(exam => {
+    const matchesSearch = exam.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          exam.description.toLowerCase().includes(searchQuery.toLowerCase());
+    if (!matchesSearch) return false;
+    
+    if (selectedExamCategory === 'ALL') return true;
+    return exam.categoryId === selectedExamCategory;
+  });
 
   // Popular exams list
   const popularExams = EXAMS.filter(e => e.popular);
@@ -249,43 +272,86 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {EXAMS.map((exam) => (
-            <Link
-              key={exam.id}
-              href={`/exam/${exam.slug}`}
-              className="group bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:shadow-blue-900/5 hover:border-blue-500/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between min-h-[220px]"
-            >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between w-full">
-                  {/* Styled Icon Container */}
-                  <span className="text-2xl sm:text-3xl p-3 bg-gradient-to-br from-blue-50 to-indigo-50/50 text-blue-600 border border-blue-100/50 rounded-2xl inline-flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                    {EXAM_ICONS[exam.slug] || '📝'}
-                  </span>
-                  
-                  {exam.popular && (
-                    <span className="bg-amber-500/10 text-amber-700 text-[10px] font-extrabold px-2.5 py-1 rounded-full border border-amber-500/20 shrink-0">
-                      Popular
-                    </span>
-                  )}
-                </div>
+        {/* Category Tabs */}
+        <div className="flex gap-2.5 pb-4 mb-10 overflow-x-auto scrollbar-none border-b border-slate-200 justify-start sm:justify-center">
+          {EXAM_CATEGORIES.map((cat) => {
+            const isActive = selectedExamCategory === cat.id;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => setSelectedExamCategory(cat.id)}
+                className={`py-2 px-4.5 text-xs font-bold rounded-full border transition-all whitespace-nowrap cursor-pointer flex items-center gap-1.5 active:scale-98 ${
+                  isActive
+                    ? 'bg-blue-600 border-blue-600 text-white shadow-md shadow-blue-500/10'
+                    : 'bg-white border-slate-200 text-slate-650 hover:text-slate-850 hover:border-slate-350'
+                }`}
+              >
+                <span>{cat.icon}</span>
+                <span>{cat.name}</span>
+              </button>
+            );
+          })}
+        </div>
 
-                <div className="min-w-0 text-left">
-                  <h3 className="font-extrabold text-slate-800 text-base sm:text-lg leading-snug group-hover:text-blue-600 transition-colors">
-                    {exam.name}
-                  </h3>
-                  <p className="text-slate-500 text-xs mt-2 line-clamp-2 leading-relaxed">
-                    {exam.description}
-                  </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {filteredExamsForGrid.map((exam) => {
+            const examTests = MOCK_TESTS.filter(t => t.examId === exam.id);
+            const duration = examTests.find(t => t.testType === 'FULL')?.duration || 90;
+            const marks = examTests.find(t => t.testType === 'FULL')?.totalMarks || 100;
+            
+            return (
+              <div
+                key={exam.id}
+                className="group bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:shadow-blue-900/5 hover:border-blue-500/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between min-h-[250px]"
+              >
+                <div className="space-y-4 text-left">
+                  <div className="flex items-center justify-between w-full">
+                    {/* Styled Icon Container */}
+                    <span className="text-2xl sm:text-3xl p-3 bg-gradient-to-br from-blue-50 to-indigo-50/50 text-blue-600 border border-blue-100/50 rounded-2xl inline-flex items-center justify-center shrink-0 group-hover:scale-105 transition-all duration-300">
+                      {EXAM_ICONS[exam.slug] || '📝'}
+                    </span>
+                    
+                    {exam.popular && (
+                      <span className="bg-amber-500/10 text-amber-700 text-[10px] font-extrabold px-2.5 py-1 rounded-full border border-amber-500/20 shrink-0">
+                        Popular
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="min-w-0">
+                    <h3 className="font-extrabold text-slate-800 text-base sm:text-lg leading-snug group-hover:text-blue-600 transition-colors">
+                      {exam.name}
+                    </h3>
+                    <p className="text-slate-500 text-xs mt-2 line-clamp-2 leading-relaxed">
+                      {exam.description}
+                    </p>
+
+                    {/* Dynamic Exam Details Badges */}
+                    <div className="flex items-center gap-3 mt-3.5 text-[10px] font-bold text-slate-400">
+                      <span className="flex items-center gap-1">⏱️ {duration} Mins</span>
+                      <span>•</span>
+                      <span className="flex items-center gap-1">📊 {marks} Marks</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex gap-2.5 mt-6 pt-4 border-t border-slate-100 w-full items-center">
+                  <button
+                    onClick={() => setActiveDetailsExam(exam)}
+                    className="flex-1 text-center bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/50 font-bold text-xs py-2.5 rounded-xl transition-all cursor-pointer min-h-[36px]"
+                  >
+                    View Details
+                  </button>
+                  <Link
+                    href={`/exam/${exam.slug}`}
+                    className="flex-1 text-center bg-accent-cta hover:bg-accent-cta-hover text-white font-bold text-xs py-2.5 rounded-xl shadow-md hover:shadow-amber-500/10 transition-all cursor-pointer min-h-[36px] flex items-center justify-center"
+                  >
+                    Start Mocks
+                  </Link>
                 </div>
               </div>
-              
-              <div className="flex mt-6 pt-4 border-t border-slate-100 w-full items-center justify-between text-xs text-blue-650 font-bold group">
-                <span>Start Mock Tests</span>
-                <span className="group-hover:translate-x-1.5 transition-transform duration-300 text-base leading-none">→</span>
-              </div>
-            </Link>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -499,6 +565,127 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {activeDetailsExam && (() => {
+        const exam = activeDetailsExam;
+        const examTests = MOCK_TESTS.filter(t => t.examId === exam.id);
+        const fullMock = examTests.find(t => t.testType === 'FULL') || examTests[0];
+        
+        let sections = ["General Knowledge", "Reasoning Ability", "Quantitative Aptitude"];
+        if (exam.slug.startsWith('ssc-')) {
+          sections = ["General Intelligence & Reasoning", "Quantitative Aptitude", "English Comprehension", "General Awareness"];
+        } else if (exam.slug.startsWith('hssc-')) {
+          sections = ["Haryana GK", "General Knowledge & Science", "Reasoning & Maths", "Hindi & English"];
+        } else if (exam.slug.startsWith('up-police-')) {
+          sections = ["General Knowledge", "General Hindi", "Numerical & Mental Ability", "Reasoning & Mental Aptitude"];
+        } else if (exam.slug.includes('rrb-') || exam.slug.includes('rpf-')) {
+          sections = ["General Awareness", "Mathematics", "General Intelligence & Reasoning"];
+        } else if (exam.slug.includes('ctet') || exam.slug.includes('htet')) {
+          sections = ["Child Development & Pedagogy", "Language I", "Language II", "Mathematics", "Environmental Studies"];
+        } else if (exam.slug.startsWith('army-')) {
+          sections = ["General Science", "General Knowledge", "Mathematics", "Logical Reasoning"];
+        }
+        
+        return (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/60 backdrop-blur-md transition-all duration-300">
+            <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto border border-slate-200 shadow-2xl flex flex-col justify-between relative z-50">
+              {/* Close Button */}
+              <button 
+                onClick={() => setActiveDetailsExam(null)} 
+                className="absolute top-5 right-5 text-slate-400 hover:text-slate-650 transition-colors p-2 bg-slate-100 hover:bg-slate-200 rounded-full cursor-pointer z-10 text-sm leading-none"
+              >
+                ✕
+              </button>
+
+              {/* Modal Header */}
+              <div className="p-6 sm:p-8 border-b border-slate-150 bg-slate-50/50 text-left">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="text-3xl p-3.5 bg-white border border-slate-150 rounded-2xl shadow-sm inline-flex items-center justify-center shrink-0">
+                    {EXAM_ICONS[exam.slug] || '📝'}
+                  </span>
+                  <div>
+                    <span className="text-[10px] bg-blue-50 text-blue-600 font-extrabold px-3 py-1 rounded-full border border-blue-100 uppercase tracking-wider">
+                      {CATEGORIES.find(c => c.id === exam.categoryId)?.name || 'Exam'}
+                    </span>
+                    <h2 className="text-xl sm:text-2xl font-black text-slate-800 mt-1.5 leading-tight">{exam.name}</h2>
+                  </div>
+                </div>
+                <p className="text-slate-500 text-xs sm:text-sm font-medium leading-relaxed">{exam.description}</p>
+              </div>
+
+              {/* Modal Body */}
+              <div className="p-6 sm:p-8 space-y-6 flex-grow text-left">
+                {/* Quick Stats Grid */}
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="p-3.5 bg-slate-50 rounded-2xl border border-slate-150 text-center">
+                    <span className="block text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-1">Total Tests</span>
+                    <span className="font-extrabold text-slate-800 text-xs sm:text-sm">{examTests.length} Mocks</span>
+                  </div>
+                  <div className="p-3.5 bg-slate-50 rounded-2xl border border-slate-150 text-center">
+                    <span className="block text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-1">Duration</span>
+                    <span className="font-extrabold text-slate-800 text-xs sm:text-sm">{(fullMock?.duration) || 90} Mins</span>
+                  </div>
+                  <div className="p-3.5 bg-slate-50 rounded-2xl border border-slate-150 text-center">
+                    <span className="block text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-1">Max Marks</span>
+                    <span className="font-extrabold text-slate-800 text-xs sm:text-sm">{(fullMock?.totalMarks) || 100} Marks</span>
+                  </div>
+                </div>
+
+                {/* Syllabus Sections */}
+                <div>
+                  <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Syllabus Subjects Covered</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {sections.map((sec, i) => (
+                      <span key={i} className="text-xs bg-blue-50/50 text-blue-800 border border-blue-100 font-semibold px-3 py-1.5 rounded-xl">
+                        {sec}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Tests List */}
+                <div>
+                  <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3.5">Available Practice Mocks</h3>
+                  <div className="space-y-2.5 max-h-48 overflow-y-auto pr-1">
+                    {examTests.map(test => (
+                      <div key={test.id} className="flex items-center justify-between p-3.5 bg-white border border-slate-200 hover:border-slate-300 rounded-2xl shadow-sm transition-all gap-4">
+                        <div className="text-left">
+                          <h4 className="font-extrabold text-slate-800 text-xs sm:text-sm">{test.title}</h4>
+                          <p className="text-[10px] text-slate-400 mt-1 font-bold">
+                            {test.questionCount} Qs • {test.duration} Mins • {test.testType} Mock
+                          </p>
+                        </div>
+                        <Link 
+                          href={`/exam/${exam.slug}`}
+                          className="bg-accent-cta hover:bg-accent-cta-hover text-white text-[10px] font-black px-4 py-2 rounded-xl shadow-sm transition-all whitespace-nowrap active:scale-98"
+                        >
+                          Start Mocks
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Modal Footer */}
+              <div className="p-6 bg-slate-50/50 border-t border-slate-150 flex items-center justify-end gap-3 rounded-b-3xl">
+                <button 
+                  onClick={() => setActiveDetailsExam(null)} 
+                  className="px-5 py-2.5 bg-white hover:bg-slate-100 border border-slate-250 rounded-xl text-slate-700 text-xs font-bold transition-all cursor-pointer active:scale-98"
+                >
+                  Close
+                </button>
+                <Link 
+                  href={`/exam/${exam.slug}`}
+                  className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 rounded-xl text-white text-xs font-extrabold transition-all shadow-sm active:scale-98"
+                >
+                  Start Mock Test Series
+                </Link>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
     </div>
   );
 }
