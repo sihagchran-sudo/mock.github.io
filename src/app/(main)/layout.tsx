@@ -9,7 +9,7 @@ export default function MainLayout({
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow bg-slate-50/50">{children}</main>
+      <main className="flex-grow bg-page">{children}</main>
       <Footer />
     </div>
   );

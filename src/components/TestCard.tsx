@@ -181,7 +181,7 @@ export default function TestCard({ test }: TestCardProps) {
         {/* Start Button */}
         <button
           onClick={handleStartTest}
-          className="bg-blue-600 hover:bg-blue-700 text-white text-xs px-4 py-2 rounded-lg font-semibold shadow-sm transition-all hover:shadow-md active:scale-95 flex items-center gap-1 cursor-pointer"
+          className="bg-accent-cta hover:bg-accent-cta-hover text-white text-xs px-4 py-2 rounded-lg font-semibold shadow-sm transition-all hover:shadow-md active:scale-95 flex items-center gap-1 cursor-pointer"
         >
           {isAttempted ? 'Retake Test' : 'Start Test'}
           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -130,7 +130,7 @@ export default async function ExamNamePage({ params, searchParams }: PageProps) 
           </div>
           <Link
             href={`/blog/${examBlogs[0].slug}`}
-            className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs px-5 py-3 rounded-xl shadow-sm hover:shadow-blue-500/10 transition-all shrink-0 active:scale-98"
+            className="inline-flex items-center gap-1.5 bg-accent-cta hover:bg-accent-cta-hover text-white font-extrabold text-xs px-5 py-3 rounded-xl shadow-sm hover:shadow-amber-500/10 transition-all shrink-0 active:scale-98"
           >
             <span>Read Complete Guide</span>
             <span>→</span>

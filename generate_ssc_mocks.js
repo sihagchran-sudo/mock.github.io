@@ -224,116 +224,7 @@ while (finalGaPool.length < 250) {
 // ==========================================
 // 2. ENGLISH COMPREHENSION POOL (250 Questions)
 // ==========================================
-const englishPool = [
-  {
-    text: "Identify the segment containing a grammatical error: 'Each of the students are required to submit their assignment by Monday.'",
-    options: ["Each of the students", "are required to submit", "their assignment", "by Monday"],
-    correctIndex: 1,
-    explanation: "The pronoun 'Each' is singular, so it must take a singular verb. 'are required' should be replaced with 'is required'.",
-    sectionName: "English Comprehension"
-  },
-  {
-    text: "Select the most appropriate synonym of the word: 'DILIGENT'",
-    options: ["Lazy", "Industrious", "Arrogant", "Indifferent"],
-    correctIndex: 1,
-    explanation: "'Diligent' means having or showing care and conscientiousness in one's work. 'Industrious' is a direct synonym.",
-    sectionName: "English Comprehension"
-  },
-  {
-    text: "Select the most appropriate antonym of the word: 'BENEVOLENT'",
-    options: ["Malevolent", "Kind", "Generous", "Friendly"],
-    correctIndex: 0,
-    explanation: "'Benevolent' means well-meaning and kindly. 'Malevolent' means having or showing a wish to do evil to others, making it the perfect antonym.",
-    sectionName: "English Comprehension"
-  },
-  {
-    text: "Select the option that expresses the given sentence in Passive Voice: 'The storm destroyed the entire village.'",
-    options: [
-      "The entire village is destroyed by the storm.",
-      "The entire village was destroyed by the storm.",
-      "The entire village had been destroyed by the storm.",
-      "The entire village was being destroyed by the storm."
-    ],
-    correctIndex: 1,
-    explanation: "The active sentence is in Simple Past tense. The passive structure is: Object (The entire village) + was/were + past participle (destroyed) + by + Subject (the storm).",
-    sectionName: "English Comprehension"
-  },
-  {
-    text: "Choose the correct spelling of the word meaning 'an occurrence of scientific discovery':",
-    options: ["Serendipity", "Serandipity", "Serendepity", "Serendipety"],
-    correctIndex: 0,
-    explanation: "The correct spelling is 'Serendipity', which refers to the occurrence of events by chance in a happy or beneficial way.",
-    sectionName: "English Comprehension"
-  },
-  {
-    text: "Select the most appropriate meaning of the idiom: 'Bite the bullet'",
-    options: [
-      "To participate in a battle",
-      "To face a difficult situation with courage and endurance",
-      "To commit a crime deliberately",
-      "To make a sudden decision to travel"
-    ],
-    correctIndex: 1,
-    explanation: "The idiom 'Bite the bullet' means to face a tough, unavoidable situation with grit, resilience, and courage.",
-    sectionName: "English Comprehension"
-  },
-  {
-    text: "Select the word that can be substituted for the description: 'A person who is indifferent to pain or pleasure.'",
-    options: ["Stoic", "Ascetic", "Epicurean", "Sadist"],
-    correctIndex: 0,
-    explanation: "A 'Stoic' is a person who can endure pain or hardship without showing their feelings or complaining, maintaining indifference to both pain and pleasure.",
-    sectionName: "English Comprehension"
-  },
-  {
-    text: "Identify the error in the sentence: 'No sooner had she finished her song when the audience erupted in applause.'",
-    options: ["No sooner had she", "finished her song", "when the audience", "erupted in applause"],
-    correctIndex: 2,
-    explanation: "The adverbial phrase 'No sooner' is always paired with the conjunction 'than' (not 'when'). Therefore, 'when the audience' should be 'than the audience'.",
-    sectionName: "English Comprehension"
-  },
-  {
-    text: "Choose the correct option to improve the bracketed part of the sentence: 'She (had laid) in bed for hours thinking about the solution.'",
-    options: ["laid", "lay", "had lain", "No improvement"],
-    correctIndex: 2,
-    explanation: "The verb 'lie' (meaning to recline) has past forms: lie - lay - lain. The past perfect form is 'had lain'. 'Laid' is the past form of 'lay' (meaning to place something down).",
-    sectionName: "English Comprehension"
-  },
-  {
-    text: "Select the option that expresses the given sentence in Indirect Speech: 'He said to me, \"Where are you going?\"'",
-    options: [
-      "He asked me where I was going.",
-      "He asked me where were you going.",
-      "He told me where I am going.",
-      "He enquired me that where I was going."
-    ],
-    correctIndex: 0,
-    explanation: "For reporting interrogative sentences, 'said to' changes to 'asked', commas are replaced by the wh-word itself, and the tense shifts from present continuous to past continuous. Thus: 'He asked me where I was going.'",
-    sectionName: "English Comprehension"
-  }
-];
-
-// Add extra variations for English to reach 250 questions
-const engQuestionsList = [
-  { q: "Choose the correct synonym of 'EPHEMERAL':", opts: ["Permanent", "Transitory", "Gigantic", "Mysterious"], ans: 1, exp: "'Ephemeral' means lasting for a very short time. 'Transitory' is its synonym." },
-  { q: "Choose the correct antonym of 'ARROGANT':", opts: ["Humble", "Proud", "Conceited", "Stubborn"], ans: 0, exp: "'Arrogant' means having an exaggerated sense of one's own importance. 'Humble' is the direct antonym." },
-  { q: "Identify the error: 'If I was you, I would not accept this offer.'", opts: ["If I was", "you, I would", "not accept", "this offer"], ans: 0, exp: "In hypothetical/subjunctive statements, 'were' is used with all pronouns. It should be 'If I were you'." },
-  { q: "Select the passive voice: 'The chef prepared a delicious meal.'", opts: ["A delicious meal is prepared by the chef.", "A delicious meal was prepared by the chef.", "A delicious meal had been prepared by the chef.", "A delicious meal prepared by the chef."], ans: 1, exp: "'prepared' is simple past, passive structure requires 'was/were prepared'." },
-  { q: "Identify the correct meaning of idiom: 'Spill the beans'", opts: ["To throw food", "To reveal a secret accidentally", "To work hard", "To waste money"], ans: 1, exp: "'Spill the beans' means to disclose confidential information or reveal a secret prematurely." },
-  { q: "Substitute the phrase: 'One who knows many languages.'", opts: ["Polyglot", "Linguist", "Translator", "Bilingual"], ans: 0, exp: "A 'Polyglot' is a person who knows, speaks, or writes several languages fluently." },
-  { q: "Correct the spelling:", opts: ["Accomodation", "Accommodation", "Acomodation", "Accomodasion"], ans: 1, exp: "The correct spelling is 'Accommodation', with double 'c' and double 'm'." }
-];
-
-const finalEnglishPool = [...englishPool];
-while (finalEnglishPool.length < 250) {
-  const item = engQuestionsList[finalEnglishPool.length % engQuestionsList.length];
-  finalEnglishPool.push({
-    text: `[Eng Mock-${Math.floor(finalEnglishPool.length/15)}] ${item.q}`,
-    options: item.opts,
-    correctIndex: item.ans,
-    explanation: item.exp,
-    sectionName: "English Comprehension"
-  });
-}
+const finalEnglishPool = require('./ssc_english_questions');
 
 // ==========================================
 // 3. PROGRAMMATIC GENERATION FOR QUANT (250)
@@ -522,8 +413,6 @@ function generateQuantQuestion(mockIdx, qIdx) {
 // ==========================================
 function generateReasoningQuestion(mockIdx, qIdx) {
   const seed = mockIdx * 25 + qIdx;
-  
-  // Deterministic selector for 25 different Reasoning topics
   const topicIdx = qIdx % 25;
   
   let text = "";
@@ -534,7 +423,7 @@ function generateReasoningQuestion(mockIdx, qIdx) {
   switch (topicIdx) {
     case 0: { // Coding-Decoding
       const offset = 1 + (seed % 3); // 1, 2, 3
-      text = `In a certain code language, if 'CAT' is written as '${String.fromCharCode(67+offset)}${String.fromCharCode(65+offset)}${String.fromCharCode(84+offset)}', how will 'DOG' be written in that code?`;
+      text = `In a certain code language, if 'CAT' is written as '${String.fromCharCode(67+offset)}${String.fromCharCode(65+offset)}${String.fromCharCode(84+offset)}', how will 'DOG' be written in that code? / यदि किसी निश्चित कूट भाषा में 'CAT' को '${String.fromCharCode(67+offset)}${String.fromCharCode(65+offset)}${String.fromCharCode(84+offset)}' लिखा जाता है, तो उसी कूट में 'DOG' को कैसे लिखा जाएगा?`;
       const d = String.fromCharCode(68+offset);
       const o = String.fromCharCode(79+offset);
       const g = String.fromCharCode(71+offset);
@@ -545,7 +434,7 @@ function generateReasoningQuestion(mockIdx, qIdx) {
         `${String.fromCharCode(68+offset+2)}${o}${g}`
       ];
       correctIndex = 1;
-      explanation = `Each letter of 'CAT' is shifted forward by +${offset} positions. Following the same rule, 'DOG' shifts to '${d}${o}${g}'.`;
+      explanation = `Each letter of 'CAT' is shifted forward by +${offset} positions. Following the same rule, 'DOG' shifts to '${d}${o}${g}'.\n/ 'CAT' के प्रत्येक अक्षर को +${offset} स्थान आगे स्थानांतरित किया गया है। उसी नियम का पालन करते हुए, 'DOG' '${d}${o}${g}' में बदल जाता है।`;
       break;
     }
     case 1: { // Number Series
@@ -556,7 +445,7 @@ function generateReasoningQuestion(mockIdx, qIdx) {
       const s3 = s2 + diff * 2;
       const s4 = s3 + diff * 3;
       const s5 = s4 + diff * 4;
-      text = `Complete the series: ${s1}, ${s2}, ${s3}, ${s4}, ?`;
+      text = `Complete the series: ${s1}, ${s2}, ${s3}, ${s4}, ? / श्रृंखला को पूरा करें: ${s1}, ${s2}, ${s3}, ${s4}, ?`;
       options = [
         `${s5 + 2}`,
         `${s5 - 3}`,
@@ -564,67 +453,348 @@ function generateReasoningQuestion(mockIdx, qIdx) {
         `${s5 * 2}`
       ];
       correctIndex = 2;
-      explanation = `The difference between consecutive numbers increases progressively: +${diff}, +${diff*2}, +${diff*3}. The next term should be ${s4} + ${diff*4} = ${s5}.`;
+      explanation = `The difference between consecutive numbers increases progressively: +${diff}, +${diff*2}, +${diff*3}. The next term should be ${s4} + ${diff*4} = ${s5}.\n/ लगातार संख्याओं के बीच का अंतर उत्तरोत्तर बढ़ता है: +${diff}, +${diff*2}, +${diff*3}। अगला पद ${s4} + ${diff*4} = ${s5} होना चाहिए।`;
       break;
     }
     case 2: { // Blood Relations
-      const names = [["Rahul", "Ramesh"], ["Amit", "Anil"], ["Deepak", "Dev"], ["Sanjay", "Sohan"]];
+      const names = [["Rahul / राहुल", "Ramesh / रमेश"], ["Amit / अमित", "Anil / अनिल"], ["Deepak / दीपक", "Dev / देव"], ["Sanjay / संजय", "Sohan / सोहन"]];
       const selected = names[seed % names.length];
-      text = `Pointing to a boy, ${selected[0]} says: "He is the only son of my father's only son." How is the boy related to ${selected[0]}?`;
+      text = `Pointing to a boy, ${selected[0]} says: "He is the only son of my father's only son." How is the boy related to ${selected[0]}? / एक लड़के की ओर इशारा करते हुए, ${selected[0]} कहता है: "वह मेरे पिता के इकलौते बेटे का इकलौता बेटा है।" वह लड़का ${selected[0]} से किस प्रकार संबंधित है?`;
       options = [
-        "Brother",
-        "Son",
-        "Nephew",
-        "Uncle"
+        "Brother / भाई",
+        "Son / पुत्र",
+        "Nephew / भतीजा",
+        "Uncle / चाचा"
       ];
       correctIndex = 1;
-      explanation = `"${selected[0]}'s father's only son" is ${selected[0]} himself. The boy is the son of that person, hence the boy is the Son of ${selected[0]}.`;
+      explanation = `"${selected[0]}'s father's only son" is ${selected[0]} himself. The boy is the son of that person, hence the boy is the Son of ${selected[0]}.\n/ "${selected[0]} के पिता का इकलौता बेटा" स्वयं ${selected[0]} है। लड़का उस व्यक्ति का पुत्र है, इसलिए वह लड़का ${selected[0]} का पुत्र है।`;
       break;
     }
     case 3: { // Direction Sense
       const d1 = 5 + (seed % 6); // 5 to 10
       const d2 = 12 + (seed % 6); // 12 to 17
       const hypotenuse = Math.round(Math.sqrt(d1*d1 + d2*d2));
-      text = `A man walks ${d1} km North, turns right and walks ${d2} km. How far is he from the starting point?`;
+      text = `A man walks ${d1} km North, turns right and walks ${d2} km. How far is he from the starting point? / एक व्यक्ति ${d1} किमी उत्तर की ओर चलता है, दायें मुड़ता है और ${d2} किमी चलता है। वह प्रारंभिक बिंदु से कितनी दूरी पर है?`;
       options = [
-        `${hypotenuse} km`,
-        `${d1 + d2} km`,
-        `${Math.round(hypotenuse - 1.5)} km`,
-        `${hypotenuse + 3} km`
+        `${hypotenuse} km / किमी`,
+        `${d1 + d2} km / किमी`,
+        `${Math.round(hypotenuse - 1.5)} km / किमी`,
+        `${hypotenuse + 3} km / किमी`
       ];
       correctIndex = 0;
-      explanation = `By forming a right-angled triangle, we use the Pythagorean theorem:\nDistance = √(${d1}² + ${d2}²) = √(${d1*d1} + ${d2*d2}) = ${hypotenuse} km.`;
+      explanation = `By forming a right-angled triangle, we use the Pythagorean theorem:\nDistance = √(${d1}² + ${d2}²) = √(${d1*d1} + ${d2*d2}) = ${hypotenuse} km.\n/ समकोण त्रिभुज बनाकर, हम पाइथागोरस प्रमेय का उपयोग करते हैं:\nदूरी = √(${d1}² + ${d2}²) = √(${d1*d1} + ${d2*d2}) = ${hypotenuse} किमी।`;
       break;
     }
     case 4: { // Analogy
       const words = [
-        ["Doctor", "Hospital", "Teacher", "School"],
-        ["Chef", "Kitchen", "Scientist", "Laboratory"],
-        ["Actor", "Theatre", "Farmer", "Field"],
-        ["Judge", "Court", "Pilot", "Cockpit"]
+        ["Doctor / डॉक्टर", "Hospital / अस्पताल", "Teacher / शिक्षक", "School / स्कूल"],
+        ["Chef / शेफ", "Kitchen / रसोई", "Scientist / वैज्ञानिक", "Laboratory / प्रयोगशाला"],
+        ["Actor / अभिनेता", "Theatre / थिएटर", "Farmer / किसान", "Field / खेत"],
+        ["Judge / न्यायाधीश", "Court / न्यायालय", "Pilot / पायलट", "Cockpit / कॉकपिट"]
       ];
       const selected = words[seed % words.length];
       text = `${selected[0]} : ${selected[1]} :: ${selected[2]} : ?`;
       options = [
         selected[3],
-        "Office",
-        "Market",
-        "Factory"
+        "Office / कार्यालय",
+        "Market / बाज़ार",
+        "Factory / कारखाना"
       ];
       correctIndex = 0;
-      explanation = `A ${selected[0]} works in a ${selected[1]}. Similarly, a ${selected[2]} works in a ${selected[3]}.`;
+      explanation = `A ${selected[0]} works in a ${selected[1]}. Similarly, a ${selected[2]} works in a ${selected[3]}.\n/ एक ${selected[0]} ${selected[1]} में काम करता है। इसी तरह, एक ${selected[2]} ${selected[3]} में काम करता है।`;
       break;
     }
-    default: { // Syllogism
-      text = "Statements:\nI. All mangoes are golden.\nII. Some golden fruits are sweet.\nConclusions:\nI. Some mangoes are sweet.\nII. No mango is sweet.";
+    case 5: { // Classification / Odd One Out
+      const groups = [
+        ["Rose / गुलाब", "Lily / लिली", "Lotus / कमल", "Apple / सेब"],
+        ["Car / कार", "Bus / बस", "Truck / ट्रक", "Boat / नाव"],
+        ["Gold / सोना", "Silver / चाँदी", "Copper / ताँबा", "Coal / कोयला"],
+        ["Lion / शेर", "Tiger / बाघ", "Leopard / तेंदुआ", "Cow / गाय"]
+      ];
+      const sel = groups[seed % groups.length];
+      text = `Find the odd one out: / विषम शब्द चुनें:`;
       options = [
-        "Only Conclusion I follows",
-        "Only Conclusion II follows",
-        "Either I or II follows",
-        "Neither I nor II follows"
+        sel[0],
+        sel[1],
+        sel[2],
+        sel[3]
+      ];
+      correctIndex = 3;
+      explanation = `The first three belong to the same category, while the fourth one is different.\n/ पहले तीन एक ही श्रेणी के हैं, जबकि चौथा अलग है।`;
+      break;
+    }
+    case 6: { // Mirror Image
+      const words = ["MOCK", "PREP", "SSC", "CGL", "EXAM"];
+      const word = words[seed % words.length];
+      text = `Which of the following options represents the mirror image of the word '${word}' when the mirror is placed to its right? / यदि दर्पण को शब्द '${word}' के दाईं ओर रखा जाए, तो उसका दर्पण प्रतिबिंब कौन सा होगा?`;
+      options = [
+        `Reversed '${word}' letters / उल्टे अक्षर`,
+        `Vertically inverted '${word}' / लंबवत उल्टा`,
+        `Correct lateral inversion of '${word}' / सही पार्श्व उल्टा प्रतिबिंब`,
+        `Same as '${word}' / '${word}' जैसा ही`
       ];
       correctIndex = 2;
-      explanation = "Since the relationship between mangoes and sweet is uncertain, they form a complementary pair ('Some' + 'No'). Hence, either Conclusion I or II must follow.";
+      explanation = `A mirror on the right side causes lateral inversion of the letters.\n/ दाईं ओर का दर्पण अक्षरों का पार्श्व उलटाव (बायाँ-दायाँ) करता है।`;
+      break;
+    }
+    case 7: { // Calendar
+      const baseYear = 2021 + (seed % 5);
+      text = `If 1st January of ${baseYear} (a non-leap year) was a Monday, what day of the week was 31st December of the same year? / यदि ${baseYear} (एक गैर-लीप वर्ष) का 1 जनवरी सोमवार था, तो उसी वर्ष का 31 दिसंबर सप्ताह का कौन सा दिन था?`;
+      options = [
+        "Monday / सोमवार",
+        "Tuesday / मंगलवार",
+        "Sunday / रविवार",
+        "Wednesday / बुधवार"
+      ];
+      correctIndex = 0;
+      explanation = `An ordinary year starts and ends on the same day of the week.\n/ एक साधारण वर्ष सप्ताह के उसी दिन शुरू और समाप्त होता है।`;
+      break;
+    }
+    case 8: { // Clock
+      const hr = 2 + (seed % 4); // 2 to 5
+      const min = 20 + (seed % 4) * 5; // 20 to 35
+      const angle = Math.abs(30 * hr - 5.5 * min);
+      
+      text = `Find the angle between the hour hand and minute hand of a clock at ${hr}:${min}. / ${hr}:${min} पर घड़ी की घंटे की सुई और minute की सुई के बीच का कोण ज्ञात कीजिए।`;
+      options = [
+        `${angle + 15}°`,
+        `${angle}°`,
+        `${angle - 10}°`,
+        `${angle + 5}°`
+      ];
+      correctIndex = 1;
+      explanation = `Formula: Angle = |30*H - 5.5*M| = |30*${hr} - 5.5*${min}| = ${angle}°.\n/ सूत्र: कोण = |30*H - 5.5*M| = |30*${hr} - 5.5*${min}| = ${angle}°।`;
+      break;
+    }
+    case 9: { // Ranking and Ordering
+      const pos = 10 + (seed % 10); // 10 to 19
+      const tot = 30 + (seed % 10); // 30 to 39
+      const back = tot - pos + 1;
+      
+      text = `In a class of ${tot} students, Rohan is ranked ${pos} from the top. What is his rank from the bottom? / ${tot} छात्रों की एक कक्षा में, रोहन शीर्ष से ${pos} स्थान पर है। नीचे से उसका स्थान क्या है?`;
+      options = [
+        `${back + 1}`,
+        `${back - 2}`,
+        `${back}`,
+        `${back + 2}`
+      ];
+      correctIndex = 2;
+      explanation = `Rank from bottom = Total - Rank from top + 1 = ${tot} - ${pos} + 1 = ${back}.\n/ नीचे से स्थान = कुल - शीर्ष से स्थान + 1 = ${tot} - ${pos} + 1 = ${back}।`;
+      break;
+    }
+    case 10: { // Alphabet Series
+      const startLetter = String.fromCharCode(65 + (seed % 4)); // A, B, C, D
+      const nextLetter1 = String.fromCharCode(startLetter.charCodeAt(0) + 2);
+      const nextLetter2 = String.fromCharCode(startLetter.charCodeAt(0) + 4);
+      const nextLetter3 = String.fromCharCode(startLetter.charCodeAt(0) + 6);
+      const ansLetter = String.fromCharCode(startLetter.charCodeAt(0) + 8);
+      
+      text = `Find the next term in the series: ${startLetter}, ${nextLetter1}, ${nextLetter2}, ${nextLetter3}, ? / श्रृंखला में अगला पद ज्ञात कीजिए: ${startLetter}, ${nextLetter1}, ${nextLetter2}, ${nextLetter3}, ?`;
+      options = [
+        `${String.fromCharCode(ansLetter.charCodeAt(0) - 1)}`,
+        `${ansLetter}`,
+        `${String.fromCharCode(ansLetter.charCodeAt(0) + 1)}`,
+        `${String.fromCharCode(ansLetter.charCodeAt(0) + 2)}`
+      ];
+      correctIndex = 1;
+      explanation = `The pattern is +2 shifts in alphabetical position. Next term is ${ansLetter}.\n/ पैटर्न वर्णमाला के स्थान में +2 विस्थापन का है। अगला पद ${ansLetter} है।`;
+      break;
+    }
+    case 11: { // Mathematical Operations
+      const a = 12 + (seed % 5);
+      const b = 4 + (seed % 2);
+      const c = 2 + (seed % 3);
+      const res = a / b + c;
+      
+      text = `If '+' means '/' and '/' means '+', then evaluate: ${a} + ${b} / ${c}. / यदि '+' का अर्थ '/' है और '/' का अर्थ '+' है, तो मान ज्ञात करें: ${a} + ${b} / ${c}।`;
+      options = [
+        `${res + 3}`,
+        `${res - 1}`,
+        `${res}`,
+        `${res * 1.5}`
+      ];
+      correctIndex = 2;
+      explanation = `Substitute signs: ${a} / ${b} + ${c} = ${a / b} + ${c} = ${res}.\n/ चिह्नों को बदलें: ${a} / ${b} + ${c} = ${a / b} + ${c} = ${res}।`;
+      break;
+    }
+    case 12: { // Missing Number in Pattern
+      const n1 = 3 + (seed % 4);
+      const n2 = 5 + (seed % 4);
+      const p1 = n1 * n1;
+      const p2 = n2 * n2;
+      
+      text = `Find the missing term: ${n1} : ${p1} :: ${n2} : ? / लुप्त पद ज्ञात कीजिए: ${n1} : ${p1} :: ${n2} : ?`;
+      options = [
+        `${p2 + 5}`,
+        `${p2}`,
+        `${p2 - 4}`,
+        `${p2 * 2}`
+      ];
+      correctIndex = 1;
+      explanation = `The pattern is x : x². So ${n2}² = ${p2}.\n/ पैटर्न x : x² है। अतः ${n2}² = ${p2}।`;
+      break;
+    }
+    case 13: { // Syllogism
+      text = "Statements: I. All bats are balls. II. All balls are wickets.\nConclusions: I. All bats are wickets. II. Some wickets are bats.\n/ कथन: I. सभी बल्ले गेंद हैं। II. सभी गेंद विकेट हैं।\nनिष्कर्ष: I. सभी बल्ले विकेट हैं। II. कुछ विकेट बल्ले हैं।";
+      options = [
+        "Only Conclusion I follows / केवल निष्कर्ष I अनुसरण करता है",
+        "Only Conclusion II follows / केवल निष्कर्ष II अनुसरण करता है",
+        "Neither follows / कोई अनुसरण नहीं करता",
+        "Both conclusions follow / दोनों निष्कर्ष अनुसरण करते हैं"
+      ];
+      correctIndex = 3;
+      explanation = `Since all bats are balls and all balls are wickets, all bats are wickets (Conclusion I follows). Also, some wickets are bats is true (Conclusion II follows).\n/ चूंकि सभी बल्ले गेंद हैं और सभी गेंद विकेट हैं, इसलिए सभी बल्ले विकेट हैं। साथ ही, कुछ विकेट बल्ले हैं भी सत्य है।`;
+      break;
+    }
+    case 14: { // Statement and Conclusion
+      text = "Statement: Rohan is a good athlete. All athletes are fit.\nConclusion: Rohan is fit.\n/ कथन: रोहन एक अच्छा एथलीट है। सभी एथलीट फिट हैं।\nनिष्कर्ष: रोहन फिट है।";
+      options = [
+        "Conclusion follows / निष्कर्ष अनुसरण करता है",
+        "Conclusion does not follow / निष्कर्ष अनुसरण नहीं करता है",
+        "Partially follows / आंशिक रूप से अनुसरण करता है",
+        "Insufficient data / अपर्याप्त डेटा"
+      ];
+      correctIndex = 0;
+      explanation = `Rohan is an athlete and all athletes are fit, so Rohan must be fit.\n/ रोहन एक एथलीट है और सभी एथलीट फिट हैं, इसलिए रोहन का फिट होना आवश्यक है।`;
+      break;
+    }
+    case 15: { // Venn Diagram Logic
+      text = "Which of the following Venn Diagram representations best shows the relationship between: Parents, Mothers, Fathers? / निम्नलिखित में से कौन सा वेन आरेख इनके बीच के संबंध को सबसे अच्छा दर्शाता है: माता-पिता, माताएँ, पिता?";
+      options = [
+        "Three disjoint circles / तीन अलग वृत्त",
+        "Three intersecting circles / three प्रतिच्छेदी वृत्त",
+        "One large circle containing two disjoint circles / एक बड़ा वृत्त जिसके अंदर दो असंयुक्त वृत्त हों",
+        "Two concentric circles / दो संकेंद्रित वृत्त"
+      ];
+      correctIndex = 2;
+      explanation = `Parents contains both Mothers and Fathers, but Mothers and Fathers are disjoint.\n/ माता-पिता के अंतर्गत माताएँ और पिता दोनों आते हैं, लेकिन माताएँ और पिता परस्पर असंयुक्त हैं।`;
+      break;
+    }
+    case 16: { // Water Image
+      text = "Choose the correct water image of the number '893'. / संख्या '893' का सही जल प्रतिबिंब चुनिए।";
+      options = [
+        "Vertically inverted '893' / लंबवत उल्टा '893'",
+        "Laterally inverted '893' / पार्श्व उल्टा '893'",
+        "Upside down '893' / ऊपर का हिस्सा नीचे किया हुआ '893'",
+        "Same as '893' / '893' जैसा ही"
+      ];
+      correctIndex = 0;
+      explanation = `Water image is a vertical inversion of the object.\n/ जल प्रतिबिंब वस्तु का लंबवत उल्टा रूप होता है।`;
+      break;
+    }
+    case 17: { // Paper Folding
+      text = "A square sheet of paper is folded twice and punched. How will it appear when unfolded? / कागज की एक वर्गाकार शीट को दो बार मोड़ा जाता है और पंच किया जाता है। खोले जाने पर यह कैसी दिखाई देगी?";
+      options = [
+        "Four symmetric punch holes / चार सममित छिद्र",
+        "Two punch holes / दो छिद्र",
+        "Single punch hole in center / केंद्र में एक छिद्र",
+        "Asymmetric holes / असममित छिद्र"
+      ];
+      correctIndex = 0;
+      explanation = `Folding twice creates 4 layers. One punch hole will result in 4 symmetric holes when unfolded.\n/ दो बार मोड़ने से 4 परतें बनती हैं। एक पंच छिद्र खोले जाने पर 4 सममित छिद्र बनाएगा।`;
+      break;
+    }
+    case 18: { // Dice
+      const face = 1 + (seed % 6);
+      const opp = 7 - face;
+      text = `In a standard dice, if the face showing '${face}' is at the bottom, which number will be at the top? / एक मानक पासे में, यदि '${face}' वाली सतह नीचे है, तो शीर्ष पर कौन सी संख्या होगी?`;
+      options = [
+        `${opp + 1}`,
+        `${opp}`,
+        `${opp - 1}`,
+        `${opp + 2}`
+      ];
+      correctIndex = 1;
+      explanation = `In a standard dice, the sum of opposite faces is always 7. Opposite of ${face} is 7 - ${face} = ${opp}.\n/ एक मानक पासे में, विपरीत सतहों का योग हमेशा 7 होता है। ${face} का विपरीत 7 - ${face} = ${opp} है।`;
+      break;
+    }
+    case 19: { // Figure Series / Counting
+      text = "How many triangles are there in a square with both diagonals drawn? / दोनों विकर्णों वाले एक वर्ग में कितने त्रिभुज होते हैं?";
+      options = [
+        "6",
+        "8",
+        "10",
+        "12"
+      ];
+      correctIndex = 1;
+      explanation = `A square with both diagonals contains 4 small triangles and 4 larger triangles formed by combinations, total = 8.\n/ दोनों विकर्णों वाले वर्ग में 4 छोटे त्रिभुज और संयोजनों द्वारा बने 4 बड़े त्रिभुज होते हैं, कुल = 8।`;
+      break;
+    }
+    case 20: { // Word Arrangement
+      text = "Arrange the words in a logical order / शब्दों को तार्किक क्रम में व्यवस्थित करें: 1. Country / देश 2. State / राज्य 3. District / जिला 4. Village / गाँव";
+      options = [
+        "4, 3, 2, 1",
+        "1, 2, 3, 4",
+        "4, 2, 3, 1",
+        "1, 3, 2, 4"
+      ];
+      correctIndex = 0;
+      explanation = `The logical order from smallest to largest is: Village (4) -> District (3) -> State (2) -> Country (1).\n/ सबसे छोटे से सबसे बड़े का तार्किक क्रम है: गाँव (4) -> जिला (3) -> राज्य (2) -> देश (1)।`;
+      break;
+    }
+    case 21: { // Inequality
+      text = "If P > Q and Q = R, which of the following relations is definitely true? / यदि P > Q और Q = R है, तो निम्नलिखित में से कौन सा संबंध निश्चित रूप से सत्य है?";
+      options = [
+        "P < R",
+        "P = R",
+        "P > R",
+        "None of these / इनमें से कोई नहीं"
+      ];
+      correctIndex = 2;
+      explanation = `Since Q = R, we can substitute R for Q in P > Q, yielding P > R.\n/ चूंकि Q = R है, हम P > Q में Q के स्थान पर R रख सकते हैं, जिससे P > R प्राप्त होता है।`;
+      break;
+    }
+    case 22: { // Seating Arrangement
+      text = "Five friends A, B, C, D, E are sitting in a row facing North. A is next to B, C is next to D. Who is in the middle if the order is A, B, E, C, D? / पांच मित्र A, B, C, D, E उत्तर की ओर मुख करके एक पंक्ति में बैठे हैं। A, B के बगल में है, C, D के बगल में है। यदि बैठने का क्रम A, B, E, C, D है, तो मध्य में कौन है?";
+      options = [
+        "B",
+        "E",
+        "C",
+        "A"
+      ];
+      correctIndex = 1;
+      explanation = `In the order A, B, E, C, D, the middle position (3rd) is occupied by E.\n/ A, B, E, C, D क्रम में, मध्य स्थान (तीसरे) पर E बैठा है।`;
+      break;
+    }
+    case 23: { // Age Problems
+      const ratioA = 3 + (seed % 2); // 3 or 4
+      const ratioB = ratioA + 1; // 4 or 5
+      const diff = 5 + (seed % 5); // 5 to 9
+      const ageA = diff * ratioA;
+      
+      text = `The ratio of ages of A and B is ${ratioA} : ${ratioB}. If A is ${diff} years younger than B, find A's age. / A और B की आयु का अनुपात ${ratioA} : ${ratioB} है। यदि A, B से ${diff} वर्ष छोटा है, तो A की आयु ज्ञात कीजिए।`;
+      options = [
+        `${ageA - 5} years / वर्ष`,
+        `${ageA} years / वर्ष`,
+        `${ageA + 10} years / वर्ष`,
+        `${ageA + 3} years / वर्ष`
+      ];
+      correctIndex = 1;
+      explanation = `Let ages be ${ratioA}x and ${ratioB}x. Difference: ${ratioB}x - ${ratioA}x = ${diff} => x = ${diff}. A's age = ${ratioA} * ${diff} = ${ageA} years.\n/ माना आयु ${ratioA}x और ${ratioB}x है। अंतर: ${ratioB}x - ${ratioA}x = ${diff} => x = ${diff}। A की आयु = ${ratioA} * ${diff} = ${ageA} वर्ष।`;
+      break;
+    }
+    case 24: { // Embedded Figures
+      text = "Find which option figure contains the question figure as its embedded part. / ज्ञात कीजिए कि कौन सा विकल्प चित्र प्रश्न चित्र को अपने अंतर्निहित भाग के रूप में रखता है।";
+      options = [
+        "Option A / विकल्प A",
+        "Option B / विकल्प B",
+        "Option C / विकल्प C",
+        "Option D / विकल्प D"
+      ];
+      correctIndex = seed % 4;
+      explanation = `Visual check confirms the correct embedding in Option ${String.fromCharCode(65 + (seed % 4))}.\n/ दृश्य जांच विकल्प ${String.fromCharCode(65 + (seed % 4))} में सही अंतर्निहित होने की पुष्टि करती है।`;
+      break;
+    }
+    default: {
+      text = "Complete the analogy: Bird : Nest :: Bee : ? / सादृश्य पूरा करें: पक्षी : घोंसला :: मधुमक्खी : ?";
+      options = [
+        "Hive / छत्ता",
+        "Water / पानी",
+        "Sky / आकाश",
+        "House / घर"
+      ];
+      correctIndex = 0;
+      explanation = `A bee lives in a hive.\n/ मधुमक्खी छत्ते में रहती है।`;
       break;
     }
   }

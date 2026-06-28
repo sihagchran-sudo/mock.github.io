@@ -68,7 +68,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-       <section className="relative bg-[#0a122c] text-white overflow-hidden py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-blue-950/50">
+       <section className="relative bg-hero text-white overflow-hidden py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-blue-950/50">
         {/* Background Decorative Elements (Sleek light blue/indigo blur reflections) */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none -mr-40 -mt-40"></div>
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none -ml-20 -mb-20"></div>
@@ -78,22 +78,22 @@ export default function HomePage() {
 
         {/* Subtle 2D Motion Overlays (Absolute floating badges in background) */}
         <div className="hidden lg:block absolute top-[18%] left-[6%] animate-float-slow pointer-events-none select-none z-0">
-          <div className="bg-white/5 border border-white/10 rounded-xl px-3.5 py-2.5 shadow-md text-white text-xs font-bold opacity-[0.18] flex items-center gap-2">
+          <div className="bg-white/8 border border-white/15 rounded-xl px-3.5 py-2.5 shadow-md text-white text-xs font-bold flex items-center gap-2">
             <span>🎯</span> 99th Percentile
           </div>
         </div>
         <div className="hidden lg:block absolute bottom-[22%] left-[8%] animate-float-delay pointer-events-none select-none z-0">
-          <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 shadow-md text-white text-xs font-bold opacity-[0.16] flex items-center gap-2">
+          <div className="bg-white/8 border border-white/15 rounded-xl px-4 py-2.5 shadow-md text-white text-xs font-bold flex items-center gap-2">
             <span>📈</span> Accuracy: +95%
           </div>
         </div>
         <div className="hidden lg:block absolute top-[22%] right-[6%] animate-float-delay pointer-events-none select-none z-0">
-          <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 shadow-md text-white text-xs font-bold opacity-[0.18] flex items-center gap-2">
+          <div className="bg-white/8 border border-white/15 rounded-xl px-4 py-2.5 shadow-md text-white text-xs font-bold flex items-center gap-2">
             <span>⏱️</span> Real-time Timer
           </div>
         </div>
         <div className="hidden lg:block absolute bottom-[26%] right-[8%] animate-float-slow pointer-events-none select-none z-0">
-          <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 shadow-md text-white text-xs font-bold opacity-[0.16] flex items-center gap-2">
+          <div className="bg-white/8 border border-white/15 rounded-xl px-4 py-2.5 shadow-md text-white text-xs font-bold flex items-center gap-2">
             <span>🏆</span> Cut-off Cleared
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function HomePage() {
             </span>
           </h1>
           
-          <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-[#cfe0ff] max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
             Feeling nervous about the final exam day is normal, but it shouldn't lower your score. Our platform gives you the exact feel of the real exam hall. Practice with the same screen layout, manage the real countdown timer, and test your speed before the actual day. We show you exactly where you are making mistakes so you can fix them fast. Build your confidence, manage your time better, and get ready to clear the cut-off.
           </p>
 
@@ -154,24 +154,24 @@ export default function HomePage() {
 
           {/* Trust Ticker (Above the Fold, Centered) */}
           <div className="w-full max-w-2xl flex flex-wrap justify-center gap-3 sm:gap-4 mb-8">
-            <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
+            <div className="bg-white/8 border border-white/15 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
               <span className="text-base sm:text-lg shrink-0">🏆</span>
               <div>
-                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Attempted</div>
+                <div className="text-[10px] text-[#cfe0ff] uppercase font-bold tracking-wider leading-none">Attempted</div>
                 <div className="text-sm sm:text-base font-extrabold text-amber-400 mt-0.5">10M+ Tests</div>
               </div>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
+            <div className="bg-white/8 border border-white/15 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
               <span className="text-base sm:text-lg shrink-0">🎓</span>
               <div>
-                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Exams Covered</div>
+                <div className="text-[10px] text-[#cfe0ff] uppercase font-bold tracking-wider leading-none">Exams Covered</div>
                 <div className="text-sm sm:text-base font-extrabold text-blue-300 mt-0.5">500+ Govt</div>
               </div>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
+            <div className="bg-white/8 border border-white/15 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
               <span className="text-base sm:text-lg shrink-0">⚡</span>
               <div>
-                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">User Rating</div>
+                <div className="text-[10px] text-[#cfe0ff] uppercase font-bold tracking-wider leading-none">User Rating</div>
                 <div className="text-sm sm:text-base font-extrabold text-emerald-400 mt-0.5">4.8 / 5.0</div>
               </div>
             </div>
@@ -303,7 +303,7 @@ export default function HomePage() {
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/exam/ssc-cgl"
-                  className="inline-flex justify-center items-center bg-gradient-to-r from-blue-600 to-indigo-650 hover:from-blue-700 hover:to-indigo-750 text-white font-bold text-sm px-8 py-4 rounded-xl shadow-lg shadow-blue-500/25 transition-all hover:scale-102 active:scale-98 min-h-[48px] text-center cursor-pointer"
+                  className="inline-flex justify-center items-center bg-accent-cta hover:bg-accent-cta-hover text-white font-bold text-sm px-8 py-4 rounded-xl shadow-lg shadow-amber-500/25 transition-all hover:scale-102 active:scale-98 min-h-[48px] text-center cursor-pointer"
                 >
                   Launch Demo Simulator
                 </Link>
@@ -419,7 +419,7 @@ export default function HomePage() {
                   </Link>
                   <Link
                     href={`/exam/${blog.examSlug}`}
-                    className="flex-1 text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-3.5 px-4 rounded-xl shadow-md hover:shadow-blue-500/10 transition-all min-h-[44px] flex items-center justify-center cursor-pointer"
+                    className="flex-1 text-center bg-accent-cta hover:bg-accent-cta-hover text-white font-bold text-xs py-3.5 px-4 rounded-xl shadow-md hover:shadow-amber-500/10 transition-all min-h-[44px] flex items-center justify-center cursor-pointer"
                   >
                     Start Mock Test
                   </Link>
