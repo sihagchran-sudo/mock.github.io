@@ -381,7 +381,7 @@ export default function TestInterfacePage() {
               </div>
 
               {/* Question Text */}
-              <div className="text-slate-800 text-sm sm:text-base font-semibold leading-relaxed mb-6 sm:mb-8">
+              <div className="text-slate-800 text-sm sm:text-base font-semibold leading-relaxed mb-6 sm:mb-8 whitespace-pre-wrap">
                 {currentQuestion.text}
               </div>
 

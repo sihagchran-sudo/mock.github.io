@@ -574,7 +574,7 @@ export default function AnalyticsPage() {
                 </div>
 
                 {/* Question text */}
-                <p className="text-slate-800 text-sm font-semibold mb-4 leading-relaxed">
+                <p className="text-slate-800 text-sm font-semibold mb-4 leading-relaxed whitespace-pre-wrap">
                   {q.text}
                 </p>
 
@@ -628,7 +628,7 @@ export default function AnalyticsPage() {
                   {isOpen && (
                     <div className="mt-3.5 p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-600 leading-relaxed shadow-inner">
                       <p className="font-bold text-slate-800 mb-1.5">Detailed Answer Explanation:</p>
-                      <p className="mb-2.5">{q.explanation}</p>
+                      <p className="mb-2.5 whitespace-pre-wrap">{q.explanation}</p>
                       <p className="text-[10px] text-slate-400 font-medium">
                         Section topic tags: {q.sectionName} &gt; {idx % 2 === 0 ? 'Algebra Arithmetic' : 'Reasoning Aptitude'}
                       </p>
