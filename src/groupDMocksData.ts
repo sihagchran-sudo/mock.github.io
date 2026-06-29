@@ -5608,6 +5608,1408 @@ export const GROUP_D_CUSTOM_MOCKS: Record<string, Question[]> = {
     "sectionName": "Haryana GK",
     "testId": "test-hssc-cet-full-4"
   }
+],
+  "test-hssc-cet-full-5": [
+  {
+    "id": "q-hssc-cet-m5-1",
+    "text": "Consider the following statements regarding the Directive Principles of State Policy (DPSP): निदेशक तत्वों (DPSP) के संबंध में निम्नलिखित कथनों पर विचार करें: **Statement I / कथन I:** DPSP are contained in Part IV of the Indian Constitution (Articles 36–51). DPSP भारतीय संविधान के भाग IV (अनुच्छेद 36–51) में समाहित हैं। **Statement II / कथन II:** DPSP are justiciable in nature, meaning courts can enforce them. DPSP न्यायोचित (Justiciable) हैं, अर्थात न्यायालय इन्हें लागू करवा सकते हैं। Which of the following is correct? / निम्नलिखित में से कौन-सा सही है? / ",
+    "options": [
+      "Both I and II are correct / I और II दोनों सही हैं",
+      "I is correct but II is incorrect / I सही है लेकिन II गलत है",
+      "I is incorrect but II is correct / I गलत है लेकिन II सही है",
+      "Both I and II are incorrect / I और II दोनों गलत हैं"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** Statement I is correct — DPSPs are indeed in Part IV (Articles 36–51). Statement II is **incorrect** — DPSPs are **non-justiciable**, meaning courts cannot enforce them. However, they are fundamental in governance. Fundamental Rights (Part III) are justiciable. / **व्याख्या (हिंदी):** कथन I सही है — DPSP वास्तव में भाग IV (अनुच्छेद 36–51) में हैं। कथन II **गलत** है — DPSP **गैर-न्यायोचित** हैं, अर्थात न्यायालय इन्हें लागू नहीं करवा सकते। परंतु ये शासन में मूलभूत माने जाते हैं। मौलिक अधिकार (भाग III) न्यायोचित हैं।\n\n**Exam Tip:** DPSP = borrowed from Ireland (Irish Constitution) | Non-justiciable but fundamental in governance.\n**परीक्षा टिप:** DPSP आयरलैंड के संविधान से लिए गए हैं | न्यायोचित नहीं, परंतु शासन हेतु मूलभूत।",
+    "sectionName": "General Awareness",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-2",
+    "text": "The term 'Doctrine of Colourable Legislation' in Indian Constitutional Law means: भारतीय संवैधानिक कानून में 'रंगीन विधान का सिद्धांत' (Doctrine of Colourable Legislation) का अर्थ है: / ",
+    "options": [
+      "Parliament can legislate on any subject using colourful language / संसद किसी भी विषय पर रंगीन भाषा में कानून बना सकती है",
+      "What cannot be done directly cannot be done indirectly / जो प्रत्यक्ष रूप से नहीं किया जा सकता, वह अप्रत्यक्ष रूप से भी नहीं किया जा सकता",
+      "Legislation must always be morally justified / कानून हमेशा नैतिक रूप से उचित होना चाहिए",
+      "Parliament may delegate its legislative power to state governments / संसद अपनी विधायी शक्ति राज्य सरकारों को सौंप सकती है"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** The Doctrine of Colourable Legislation (also called \"fraud on the Constitution\") means that a legislature cannot do indirectly what it cannot do directly. If a legislature lacks the power to enact a law on a subject, it cannot achieve the same result by disguising the legislation. / **व्याख्या (हिंदी):** 'रंगीन विधान का सिद्धांत' (जिसे \"संविधान के साथ धोखाधड़ी\" भी कहते हैं) का अर्थ है कि विधानमंडल वह काम अप्रत्यक्ष रूप से नहीं कर सकता, जो वह प्रत्यक्ष रूप से नहीं कर सकता। यदि किसी विषय पर कानून बनाने की शक्ति नहीं है, तो उसे छुपाकर वही परिणाम प्राप्त नहीं किया जा सकता।\n\n**Exam Tip:** This doctrine tests the substance, not the form of legislation. Supreme Court has applied it in several landmark cases.\n**परीक्षा टिप:** यह सिद्धांत विधान के रूप को नहीं, बल्कि उसके सार (Substance) को परखता है।",
+    "sectionName": "General Awareness",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-3",
+    "text": "Who among the following was NOT one of the founding members of the Non-Aligned Movement (NAM)? निम्नलिखित में से कौन गुटनिरपेक्ष आंदोलन (NAM) के संस्थापक सदस्यों में से एक नहीं था? / ",
+    "options": [
+      "Jawaharlal Nehru (India) / जवाहरलाल नेहरू (भारत)",
+      "Josip Broz Tito (Yugoslavia) / जोसिप ब्रोज टीटो (युगोस्लाविया)",
+      "Gamal Abdel Nasser (Egypt) / गमाल अब्देल नासर (मिस्र)",
+      "Mao Zedong (China) / माओ जेडोंग (चीन)"
+    ],
+    "correctIndex": 3,
+    "explanation": "**Explanation (English):** NAM was founded in 1961 at the Belgrade Conference. The five founding leaders were: Jawaharlal Nehru (India), Josip Broz Tito (Yugoslavia), Gamal Abdel Nasser (Egypt), Sukarno (Indonesia), and Kwame Nkrumah (Ghana). China was NOT a founding member. Mao Zedong led Communist China which was aligned with USSR. / **व्याख्या (हिंदी):** गुटनिरपेक्ष आंदोलन की स्थापना 1961 में बेलग्रेड सम्मेलन में हुई थी। पाँच संस्थापक नेता थे: नेहरू (भारत), टीटो (युगोस्लाविया), नासर (मिस्र), सुकर्णो (इंडोनेशिया) और एनक्रुमा (घाना)। चीन इसका संस्थापक सदस्य नहीं था। माओ जेडोंग का कम्युनिस्ट चीन सोवियत संघ के साथ संरेखित था।\n\n**Exam Tip:** NAM 1961, Belgrade → 5 founders: INDIA, Yugoslavia, Egypt, Indonesia, Ghana.\n**परीक्षा टिप:** NAM 1961, बेलग्रेड → 5 संस्थापक: भारत, युगोस्लाविया, मिस्र, इंडोनेशिया, घाना।",
+    "sectionName": "General Awareness",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-4",
+    "text": "Consider the following statements about the 73rd Constitutional Amendment Act, 1992: 73वें संविधान संशोधन अधिनियम, 1992 के बारे में निम्नलिखित कथनों पर विचार करें: **Statement I / कथन I:** It added Part IX to the Constitution, giving constitutional status to Panchayati Raj Institutions. इसने संविधान में भाग IX जोड़ा, जिससे पंचायती राज संस्थाओं को संवैधानिक दर्जा मिला। **Statement II / कथन II:** It provides for a three-tier system of Panchayati Raj in all states including those with population below 20 lakhs. इसमें 20 लाख से कम जनसंख्या वाले राज्यों सहित सभी राज्यों में त्रि-स्तरीय पंचायती राज प्रणाली का प्रावधान है। Which is correct? / कौन-सा सही है? / ",
+    "options": [
+      "Only I / केवल I",
+      "Only II / केवल II",
+      "Both I and II / I और II दोनों",
+      "Neither I nor II / न I न II"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** Statement I is correct. The 73rd Amendment (1992) added Part IX (Articles 243–243O) giving constitutional status to PRIs. Statement II is **incorrect** — States with **population below 20 lakhs** are exempted from the **intermediate level (Block/Taluka Panchayat)**, making it a two-tier system for them. / **व्याख्या (हिंदी):** कथन I सही है। 73वें संशोधन (1992) ने भाग IX (अनुच्छेद 243–243O) जोड़ा, जिससे PRIs को संवैधानिक दर्जा मिला। कथन II **गलत** है — **20 लाख से कम जनसंख्या** वाले राज्यों को **मध्यवर्ती स्तर (ब्लॉक/तालुका पंचायत)** से छूट दी गई है, जिससे उनके लिए यह द्वि-स्तरीय प्रणाली बन जाती है।\n\n**Exam Tip:** 73rd = PRIs | 74th = Urban Local Bodies (Nagarpalika). Both in 1992.\n**परीक्षा टिप:** 73वाँ = पंचायती राज संस्थाएं | 74वाँ = शहरी स्थानीय निकाय। दोनों 1992 में।",
+    "sectionName": "General Awareness",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-5",
+    "text": "The 'Champaran Satyagraha' of 1917 was primarily fought against: 1917 का 'चंपारण सत्याग्रह' मुख्य रूप से किसके विरुद्ध था? / ",
+    "options": [
+      "Salt Tax imposed by the British / अंग्रेजों द्वारा लगाए गए नमक कर के विरुद्ध",
+      "Tinkathia system forcing farmers to grow indigo / किसानों को नील उगाने के लिए मजबूर करने वाली तिनकठिया प्रणाली के विरुद्ध",
+      "Rowlatt Act imposing censorship / रोलेट एक्ट के विरुद्ध जो सेंसरशिप लगाता था",
+      "Partition of Bengal causing communal tension / बंगाल विभाजन के विरुद्ध जो सांप्रदायिक तनाव पैदा करता था"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** The Champaran Satyagraha (1917) in Bihar was Gandhi's first Satyagraha in India. It was fought against the **Tinkathia System** under which British planters forced farmers (raiyats) to cultivate indigo on 3/20 of their land without fair compensation. Gandhi successfully got this system abolished. / **व्याख्या (हिंदी):** बिहार में चंपारण सत्याग्रह (1917) भारत में गांधी का पहला सत्याग्रह था। यह **तिनकठिया प्रणाली** के विरुद्ध था, जिसके अंतर्गत ब्रिटिश बागान मालिक किसानों (रैयतों) को उनकी 3/20 भूमि पर बिना उचित मुआवजे के नील की खेती करने के लिए मजबूर करते थे। गांधी जी ने इस प्रणाली को सफलतापूर्वक समाप्त कराया।\n\n**Exam Tip:** Champaran 1917 → Indigo/Tinkathia | Kheda 1918 → Revenue/Flood | Ahmedabad 1918 → Mill Workers.\n**परीक्षा टिप:** चंपारण 1917 → नील/तिनकठिया | खेड़ा 1918 → राजस्व/बाढ़ | अहमदाबाद 1918 → मिल मजदूर।",
+    "sectionName": "General Awareness",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-6",
+    "text": "Which of the following rivers does NOT originate in India? निम्नलिखित में से कौन-सी नदी भारत में उत्पन्न नहीं होती? / ",
+    "options": [
+      "Godavari / गोदावरी",
+      "Brahmaputra / ब्रह्मपुत्र",
+      "Mahanadi / महानदी",
+      "Krishna / कृष्णा"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** The **Brahmaputra** originates in the **Mansarovar Lake region (Chemayungdung glacier) in Tibet, China**, not in India. It enters India through Arunachal Pradesh and is called Tsangpo in Tibet. Godavari, Mahanadi, and Krishna all originate within India. / **व्याख्या (हिंदी):** **ब्रह्मपुत्र** का उद्गम **तिब्बत (चीन) में मानसरोवर झील क्षेत्र (चेमायुंगदुंग हिमनद)** से होता है, भारत में नहीं। यह अरुणाचल प्रदेश से भारत में प्रवेश करती है और तिब्बत में इसे त्सांगपो कहते हैं। गोदावरी, महानदी और कृष्णा सभी भारत के अंदर से उत्पन्न होती हैं।\n\n**Exam Tip:** Brahmaputra = Tibet (China) | Indus = Tibet | Sutlej = Tibet | Kosi = Nepal — rivers NOT originating in India.\n**परीक्षा टिप:** ब्रह्मपुत्र = तिब्बत | सिंधु = तिब्बत | सतलुज = तिब्बत | कोसी = नेपाल — ये भारत से नहीं निकलतीं।",
+    "sectionName": "General Awareness",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-7",
+    "text": "Assertion (A): The Indian Parliament follows the bicameral system. कथन (A): भारतीय संसद द्विसदनीय प्रणाली का पालन करती है। Reason (R): The Rajya Sabha represents the states and Union Territories in Parliament. कारण (R): राज्यसभा संसद में राज्यों और केंद्रशासित प्रदेशों का प्रतिनिधित्व करती है। Choose the correct option / सही विकल्प चुनें: / ",
+    "options": [
+      "Both A and R are true, and R correctly explains A / A और R दोनों सही हैं, और R, A की सही व्याख्या करता है",
+      "Both A and R are true, but R does NOT correctly explain A / A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं करता",
+      "A is true but R is false / A सही है लेकिन R गलत है",
+      "A is false but R is true / A गलत है लेकिन R सही है"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** Both statements are correct and R correctly explains A. India's Parliament is bicameral — Lok Sabha (Lower House) + Rajya Sabha (Upper House). Rajya Sabha is the Council of States representing federal units. Therefore, the bicameral system exists precisely because Rajya Sabha represents states. / **व्याख्या (हिंदी):** दोनों कथन सही हैं और R, A की सही व्याख्या करता है। भारत की संसद द्विसदनीय है — लोकसभा (निम्न सदन) + राज्यसभा (उच्च सदन)। राज्यसभा राज्य परिषद है जो संघीय इकाइयों का प्रतिनिधित्व करती है। इसलिए द्विसदनीय प्रणाली इसीलिए है क्योंकि राज्यसभा राज्यों का प्रतिनिधित्व करती है।\n\n**Exam Tip:** Assertion-Reason questions: Check (1) both true/false, (2) if both true, check if R explains A.\n**परीक्षा टिप:** Assertion-Reason में: (1) दोनों सही/गलत जाँचें, (2) यदि दोनों सही हों, तो देखें R, A की व्याख्या करता है या नहीं।",
+    "sectionName": "General Awareness",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-8",
+    "text": "The 'Sarkaria Commission' was appointed in 1983 to examine: 'सरकारिया आयोग' को 1983 में किसकी जाँच के लिए नियुक्त किया गया था? / ",
+    "options": [
+      "Electoral reforms in India / भारत में चुनावी सुधार",
+      "Centre-State relations in India / भारत में केंद्र-राज्य संबंध",
+      "Administrative reforms in the civil services / सिविल सेवाओं में प्रशासनिक सुधार",
+      "Linguistic reorganisation of states / राज्यों का भाषाई पुनर्गठन"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** The Sarkaria Commission (1983) was set up under Justice R.S. Sarkaria to examine **Centre-State relations** in India. It submitted its report in 1988 with 247 recommendations. The Punchhi Commission (2007) was a follow-up on the same subject. / **व्याख्या (हिंदी):** सरकारिया आयोग (1983) की स्थापना न्यायमूर्ति आर.एस. सरकारिया की अध्यक्षता में **केंद्र-राज्य संबंधों** की जाँच के लिए की गई थी। इसने 1988 में 247 सिफारिशों के साथ अपनी रिपोर्ट प्रस्तुत की। पुंछी आयोग (2007) इसी विषय पर अनुवर्ती आयोग था।\n\n**Exam Tip:** Sarkaria Commission (1983) → Centre-State relations | Punchhi Commission (2007) → same topic (follow-up).\n**परीक्षा टिप:** सरकारिया आयोग (1983) → केंद्र-राज्य संबंध | पुंछी आयोग (2007) → इसी विषय पर।",
+    "sectionName": "General Awareness",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-9",
+    "text": "Match the following National Parks with their respective states: निम्नलिखित राष्ट्रीय उद्यानों को उनके राज्यों से सुमेलित करें: | National Park / राष्ट्रीय उद्यान | State / राज्य | |---|---| | 1. Kaziranga / काजीरंगा | P. Madhya Pradesh / मध्य प्रदेश | | 2. Bandhavgarh / बांधवगढ़ | Q. Assam / असम | | 3. Nagarhole / नागरहोले | R. Rajasthan / राजस्थान | | 4. Sariska / सरिस्का | S. Karnataka / कर्नाटक | / ",
+    "options": [
+      "1-Q, 2-P, 3-S, 4-R",
+      "1-P, 2-Q, 3-R, 4-S",
+      "1-Q, 2-S, 3-P, 4-R",
+      "1-S, 2-P, 3-Q, 4-R"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** Kaziranga → Assam (famous for one-horned rhinoceros) | Bandhavgarh → Madhya Pradesh (highest tiger density) | Nagarhole → Karnataka (also called Rajiv Gandhi NP) | Sariska → Rajasthan (tiger reserve). All four are UNESCO World Heritage Sites or famous wildlife sanctuaries. / **व्याख्या (हिंदी):** काजीरंगा → असम (एक सींग वाले गैंडे के लिए प्रसिद्ध) | बांधवगढ़ → मध्य प्रदेश (सबसे अधिक बाघ घनत्व) | नागरहोले → कर्नाटक (राजीव गांधी राष्ट्रीय उद्यान के रूप में भी जाना जाता है) | सरिस्का → राजस्थान (बाघ अभयारण्य)।\n\n**Exam Tip:** Match-the-Following — eliminate the ones you're sure about first to narrow down options.\n**परीक्षा टिप:** मिलान प्रश्नों में — पहले जो निश्चित हों उन्हें मिलाएँ, बाकी अपने आप आ जाएंगे।",
+    "sectionName": "General Awareness",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-10",
+    "text": "Who wrote the book 'Discovery of India'? 'डिस्कवरी ऑफ इंडिया' पुस्तक किसने लिखी? / ",
+    "options": [
+      "Mahatma Gandhi / महात्मा गांधी",
+      "Sardar Vallabhbhai Patel / सरदार वल्लभभाई पटेल",
+      "Jawaharlal Nehru / जवाहरलाल नेहरू",
+      "Subhas Chandra Bose / सुभाष चंद्र बोस"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** 'Discovery of India' was written by **Jawaharlal Nehru** while he was imprisoned at Ahmednagar Fort (1944). Other famous books by Nehru: 'Glimpses of World History', 'An Autobiography'. Gandhi wrote 'My Experiments with Truth'. / **व्याख्या (हिंदी):** 'डिस्कवरी ऑफ इंडिया' **जवाहरलाल नेहरू** ने अहमदनगर किले में कैद के दौरान (1944) लिखी थी। नेहरू की अन्य प्रसिद्ध पुस्तकें: 'ग्लिम्प्सेज ऑफ वर्ल्ड हिस्ट्री', 'एन ऑटोबायोग्राफी'। गांधी जी ने 'सत्य के साथ मेरे प्रयोग' लिखी।",
+    "sectionName": "General Awareness",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-11",
+    "text": "Consider the following statements about the human digestive system: मानव पाचन तंत्र के बारे में निम्नलिखित कथनों पर विचार करें: **Statement I / कथन I:** Bile juice is produced in the liver and stored in the gallbladder. पित्त रस (Bile juice) यकृत में बनता है और पित्ताशय (Gallbladder) में संग्रहीत होता है। **Statement II / कथन II:** Gastric juice contains Hydrochloric acid (HCl) which kills bacteria in food. आमाशय रस में हाइड्रोक्लोरिक एसिड (HCl) होता है जो भोजन में बैक्टीरिया को नष्ट करता है। / ",
+    "options": [
+      "Only I is correct / केवल I सही है",
+      "Only II is correct / केवल II सही है",
+      "Both I and II are correct / I और II दोनों सही हैं",
+      "Both I and II are incorrect / I और II दोनों गलत हैं"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** Both statements are correct. Bile is produced by the **liver** (hepatocytes) and stored in the **gallbladder**; it aids in fat digestion (emulsification). Gastric juice contains **HCl** which maintains an acidic environment (pH 2) that kills harmful bacteria and activates the enzyme pepsin. / **व्याख्या (हिंदी):** दोनों कथन सही हैं। पित्त **यकृत** (hepatocytes) में बनता है और **पित्ताशय** में संग्रहीत होता है; यह वसा के पाचन (इमल्सीफिकेशन) में सहायक होता है। आमाशय रस में **HCl** होता है जो अम्लीय वातावरण (pH 2) बनाए रखता है, हानिकारक बैक्टीरिया को मारता है और एंजाइम पेप्सिन को सक्रिय करता है।\n\n**Exam Tip:** Liver = largest gland | Skin = largest organ. Bile emulsifies fat — does NOT digest it directly.\n**परीक्षा टिप:** यकृत = सबसे बड़ी ग्रंथि | त्वचा = सबसे बड़ा अंग। पित्त वसा का इमल्सीकरण करता है — सीधे पाचन नहीं।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-12",
+    "text": "Ohm's Law states: V = IR. A circuit has a resistance of 15 Ω and a current of 4 A flowing through it. What is the potential difference across the circuit? ओम का नियम: V = IR। एक परिपथ में 15 Ω का प्रतिरोध और 4 A की धारा प्रवाहित हो रही है। परिपथ के आर-पार विभवांतर क्या होगा? / ",
+    "options": [
+      "45 V",
+      "52 V",
+      "60 V",
+      "75 V"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** V = I × R = 4 × 15 = **60 V**. Power consumed = V × I = 60 × 4 = 240 W. This is a direct application of Ohm's Law. Always check units: V in Volts, I in Amperes, R in Ohms. / **व्याख्या (हिंदी):** V = I × R = 4 × 15 = **60 V**। खपत शक्ति = V × I = 60 × 4 = 240 W। यह ओम के नियम का सीधा अनुप्रयोग है। हमेशा इकाइयाँ जाँचें: V वोल्ट में, I एम्पियर में, R ओम में।\n\n**Exam Tip:** Ohm's Law triangle: V at top, I and R at bottom. Cover what you want to find — rest gives formula.\n**परीक्षा टिप:** ओम के नियम का त्रिकोण: V ऊपर, I और R नीचे। जो ढूंढना है उसे ढकें — बाकी सूत्र दे देता है।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-13",
+    "text": "Which of the following is a CORRECT match of disease and its causative agent? निम्नलिखित में से कौन-सा रोग और उसके कारक एजेंट का सही मिलान है? / ",
+    "options": [
+      "Tuberculosis — Virus / क्षय रोग — वायरस",
+      "Dengue — Bacteria / डेंगू — बैक्टीरिया",
+      "Cholera — Vibrio cholerae (Bacteria) / हैजा — विब्रियो कॉलेरी (बैक्टीरिया)",
+      "Malaria — Aedes mosquito (direct cause) / मलेरिया — एडीज मच्छर (प्रत्यक्ष कारण)"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** Cholera is caused by **Vibrio cholerae** (bacterium). TB is caused by **Mycobacterium tuberculosis** (bacterium — not virus). Dengue is caused by **Dengue virus** (transmitted by Aedes mosquito). Malaria is caused by **Plasmodium** (protozoa); Anopheles mosquito is the vector, not the direct cause. / **व्याख्या (हिंदी):** हैजा **विब्रियो कॉलेरी** (जीवाणु) से होता है। क्षय रोग **माइकोबैक्टीरियम ट्यूबरकुलोसिस** (जीवाणु — वायरस नहीं) से। डेंगू **डेंगू वायरस** (एडीज मच्छर द्वारा संचरित) से। मलेरिया **प्लास्मोडियम** (प्रोटोजोआ) से होता है; एनोफिलीज मच्छर वाहक है, प्रत्यक्ष कारण नहीं।\n\n**Exam Tip:** TB = Bacteria (Mycobacterium) | Dengue = Virus (Aedes) | Malaria = Protozoa (Anopheles vector).\n**परीक्षा टिप:** क्षय = जीवाणु | डेंगू = वायरस (एडीज) | मलेरिया = प्रोटोजोआ (एनोफिलीज वाहक)।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-14",
+    "text": "A body at rest has 0 kinetic energy. If a force of 20 N acts on a 5 kg body for 4 seconds, what is the kinetic energy acquired? विराम अवस्था में एक पिंड की गतिज ऊर्जा 0 होती है। यदि 5 kg के पिंड पर 20 N का बल 4 सेकंड तक लगाया जाए, तो अर्जित गतिज ऊर्जा क्या होगी? / ",
+    "options": [
+      "320 J",
+      "640 J",
+      "1280 J",
+      "160 J"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** This is a multi-step question combining Newton's 2nd Law + Kinematics + KE formula. Practice all three together.\n**परीक्षा टिप:** यह न्यूटन के 2nd नियम + गतिकी + KE सूत्र का संयुक्त प्रश्न है।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-15",
+    "text": "Assertion (A): Diamond is the hardest natural substance known. Assertion (A): हीरा ज्ञात सबसे कठोर प्राकृतिक पदार्थ है। Reason (R): Diamond is an allotrope of carbon in which each carbon atom is covalently bonded to four other carbon atoms in a tetrahedral structure. Reason (R): हीरा कार्बन का एक अपरूप है जिसमें प्रत्येक कार्बन परमाणु चतुष्फलकीय संरचना में चार अन्य कार्बन परमाणुओं से सहसंयोजक बंध से जुड़ा होता है। / ",
+    "options": [
+      "Both A and R are true; R correctly explains A / दोनों सही हैं; R, A की सही व्याख्या करता है",
+      "Both A and R are true; R does NOT explain A / दोनों सही हैं; R, A की व्याख्या नहीं करता",
+      "A is true, R is false / A सही है, R गलत है",
+      "A is false, R is true / A गलत है, R सही है"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** Both A and R are correct. Diamond IS the hardest natural substance (10 on Mohs scale). And its hardness is DIRECTLY due to the 3D tetrahedral covalent bonding structure — every carbon forms 4 strong covalent bonds, making it extremely hard. So R correctly explains A. / **व्याख्या (हिंदी):** A और R दोनों सही हैं। हीरा वास्तव में सबसे कठोर प्राकृतिक पदार्थ है (मोह स्केल पर 10)। और इसकी कठोरता सीधे 3D चतुष्फलकीय सहसंयोजक बंध संरचना के कारण है — प्रत्येक कार्बन 4 मजबूत सहसंयोजक बंध बनाता है। अतः R, A की सही व्याख्या करता है।\n\n**Exam Tip:** Graphite (another carbon allotrope) is soft because it has layered structure with weak Van der Waals forces.\n**परीक्षा टिप:** ग्रेफाइट (कार्बन का दूसरा अपरूप) नरम है क्योंकि इसमें कमजोर वान डेर वाल्स बलों वाली परत संरचना है।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-16",
+    "text": "Which of the following is the INCORRECT match of metal and its ore? धातु और उसके अयस्क का कौन-सा मिलान गलत है? / ",
+    "options": [
+      "Iron — Haematite (Fe₂O₃) / लोहा — हेमेटाइट",
+      "Aluminium — Bauxite (Al₂O₃·2H₂O) / एल्युमिनियम — बॉक्साइट",
+      "Copper — Galena (PbS) / तांबा — गैलेना",
+      "Zinc — Zinc Blende (ZnS) / जस्ता — जिंक ब्लेंड"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** Galena (PbS) is the ore of **Lead (Pb)**, NOT Copper. Copper's major ore is **Copper Pyrite (CuFeS₂)**, also called Chalcopyrite. All other matches are correct: Fe₂O₃ (Haematite) → Iron | Al₂O₃·2H₂O (Bauxite) → Aluminium | ZnS (Zinc Blende) → Zinc. / **व्याख्या (हिंदी):** गैलेना (PbS) **सीसे (Pb)** का अयस्क है, तांबे का नहीं। तांबे का प्रमुख अयस्क **कॉपर पाइराइट (CuFeS₂)** है, जिसे चैल्कोपाइराइट भी कहते हैं। अन्य सभी मिलान सही हैं।\n\n**Exam Tip:** Galena = Lead (Pb) | Bauxite = Aluminium | Haematite = Iron | Chalcopyrite = Copper.\n**परीक्षा टिप:** गैलेना = सीसा | बॉक्साइट = एल्युमिनियम | हेमेटाइट = लोहा | चैल्कोपाइराइट = तांबा।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-17",
+    "text": "Human blood has a pH of approximately 7.4. This makes it: मानव रक्त का pH लगभग 7.4 होता है। यह इसे बनाता है: / ",
+    "options": [
+      "Strongly acidic / प्रबल अम्लीय",
+      "Slightly acidic / हल्का अम्लीय",
+      "Neutral / उदासीन",
+      "Slightly alkaline / हल्का क्षारीय"
+    ],
+    "correctIndex": 3,
+    "explanation": "**Explanation (English):** pH 7 = neutral. pH < 7 = acidic. pH > 7 = alkaline (basic). Human blood pH = 7.35–7.45, making it **slightly alkaline**. If blood pH drops below 7.35, it causes acidosis; above 7.45 causes alkalosis, both life-threatening conditions. / **व्याख्या (हिंदी):** pH 7 = उदासीन। pH < 7 = अम्लीय। pH > 7 = क्षारीय। मानव रक्त का pH = 7.35–7.45, जो इसे **हल्का क्षारीय** बनाता है। यदि रक्त का pH 7.35 से नीचे जाए तो एसिडोसिस, 7.45 से ऊपर जाए तो एल्कलोसिस होता है — दोनों जानलेवा स्थितियाँ हैं।\n\n**Exam Tip:** Stomach acid pH ≈ 2 | Blood pH ≈ 7.4 | Seawater pH ≈ 8 | Know these common pH values.\n**परीक्षा टिप:** आमाशय एसिड pH ≈ 2 | रक्त pH ≈ 7.4 | समुद्री जल pH ≈ 8 — ये सामान्य मान याद रखें।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-18",
+    "text": "Consider the following about Newton's Laws: न्यूटन के नियमों के बारे में निम्नलिखित पर विचार करें: **Statement I / कथन I:** A rocket propels forward because the exhaust gases push against the launch pad. एक रॉकेट आगे बढ़ता है क्योंकि निकास गैसें लॉन्च पैड के विरुद्ध धक्का देती हैं। **Statement II / कथन II:** When a bullet is fired from a gun, the gun recoils backward, illustrating Newton's Third Law. जब बंदूक से गोली चलाई जाती है, बंदूक पीछे हटती है — यह न्यूटन के तीसरे नियम को दर्शाता है। / ",
+    "options": [
+      "Only I is correct / केवल I सही है",
+      "Only II is correct / केवल II सही है",
+      "Both I and II are correct / I और II दोनों सही हैं",
+      "Both I and II are incorrect / I और II दोनों गलत हैं"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** Statement I is **incorrect**. A rocket propels forward because exhaust gases push **backward against the rocket** (Newton's 3rd Law — action-reaction). It does NOT push against the launch pad. Statement II is **correct** — gun recoil is a perfect example of Newton's 3rd Law (action = bullet forward, reaction = gun backward). / **व्याख्या (हिंदी):** कथन I **गलत** है। रॉकेट आगे इसलिए बढ़ता है क्योंकि निकास गैसें **रॉकेट के विरुद्ध पीछे की ओर** धक्का देती हैं (न्यूटन का 3rd नियम)। यह लॉन्च पैड के विरुद्ध नहीं धकेलती। कथन II **सही** है — बंदूक की पुनरावृत्ति (recoil) न्यूटन के 3rd नियम का उत्तम उदाहरण है।\n\n**Exam Tip:** Rocket, swimming, jet engines — all work on Newton's 3rd Law (reaction propulsion), NOT by pushing against a surface.\n**परीक्षा टिप:** रॉकेट, तैराकी, जेट इंजन — सभी न्यूटन के 3rd नियम पर काम करते हैं, किसी सतह को धकेलकर नहीं।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-19",
+    "text": "Which type of mirror is used in the headlights of vehicles? वाहनों की हेडलाइट में किस प्रकार का दर्पण उपयोग किया जाता है? / ",
+    "options": [
+      "Convex mirror / उत्तल दर्पण",
+      "Concave mirror / अवतल दर्पण",
+      "Plane mirror / समतल दर्पण",
+      "Bifocal mirror / द्विफोकसी दर्पण"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** **Concave (converging) mirrors** are used in vehicle headlights because when the bulb is placed at the focus of a concave mirror, it reflects light as a **strong parallel beam**, illuminating the road ahead effectively. Convex mirrors are used as rear-view mirrors (wider field of view). / **व्याख्या (हिंदी):** वाहनों की हेडलाइट में **अवतल दर्पण** का उपयोग होता है क्योंकि जब बल्ब को अवतल दर्पण के फोकस पर रखा जाता है, तो यह प्रकाश को **समानांतर किरणपुंज** के रूप में परावर्तित करता है, जो सामने की सड़क को प्रभावी ढंग से रोशन करता है। उत्तल दर्पण पीछे-देखने वाले दर्पण (रियर व्यू मिरर) में उपयोग होते हैं।\n\n**Exam Tip:** Concave = converging = headlights, torches, shaving mirror | Convex = diverging = rear-view mirror, shop security mirrors.\n**परीक्षा टिप:** अवतल = अभिसारी = हेडलाइट, टॉर्च | उत्तल = अपसारी = रियर व्यू मिरर।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-20",
+    "text": "What is the approximate percentage of Nitrogen in the Earth's atmosphere? पृथ्वी के वायुमंडल में नाइट्रोजन का लगभग प्रतिशत क्या है? / ",
+    "options": [
+      "21%",
+      "78%",
+      "0.03%",
+      "1%"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** Earth's atmospheric composition: **Nitrogen (N₂) ≈ 78%** | Oxygen (O₂) ≈ 21% | Argon (Ar) ≈ 0.93% | CO₂ ≈ 0.04%. Nitrogen is the most abundant gas. Despite being most abundant, plants cannot directly use atmospheric N₂ — they need it fixed by bacteria (Nitrogen fixation). / **व्याख्या (हिंदी):** पृथ्वी के वायुमंडलीय संरचना: **नाइट्रोजन (N₂) ≈ 78%** | ऑक्सीजन ≈ 21% | आर्गन ≈ 0.93% | CO₂ ≈ 0.04%। नाइट्रोजन सर्वाधिक मात्रा में है। सबसे अधिक होने के बावजूद पौधे वायुमंडलीय N₂ का सीधे उपयोग नहीं कर सकते — उन्हें बैक्टीरिया द्वारा नाइट्रोजन स्थिरीकरण की आवश्यकता होती है।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-21",
+    "text": "A convex lens has a focal length of 25 cm. What is its power? एक उत्तल लेंस की फोकस दूरी 25 cm है। इसकी शक्ति क्या है? / ",
+    "options": [
+      "+4 D",
+      "−4 D",
+      "+0.04 D",
+      "−25 D"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** Power of a lens P = 1/f (in metres). f = 25 cm = 0.25 m. P = 1/0.25 = **+4 Dioptre (D)**. Positive sign because convex lens is converging. Concave lenses have negative power. / **व्याख्या (हिंदी):** लेंस की शक्ति P = 1/f (मीटर में)। f = 25 cm = 0.25 m। P = 1/0.25 = **+4 डायोप्टर (D)**। धनात्मक चिह्न इसलिए क्योंकि उत्तल लेंस अभिसारी होता है। अवतल लेंसों की शक्ति ऋणात्मक होती है।\n\n**Exam Tip:** Short-sightedness (myopia) = concave lens (−ve power) | Long-sightedness (hyperopia) = convex lens (+ve power).\n**परीक्षा टिप:** निकट-दृष्टि = अवतल लेंस (−ve) | दूर-दृष्टि = उत्तल लेंस (+ve)।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-22",
+    "text": "Statement I / कथन I: The process of rusting of iron is an example of oxidation. लोहे का जंग लगना ऑक्सीकरण का उदाहरण है। Statement II / कथन II: Rusting requires both oxygen and moisture (water) to occur. जंग लगने के लिए ऑक्सीजन और नमी (जल) दोनों की आवश्यकता होती है। / ",
+    "options": [
+      "Both correct; II correctly explains I / दोनों सही; II, I की व्याख्या करता है",
+      "Both correct; II does NOT explain I / दोनों सही; II, I की व्याख्या नहीं करता",
+      "I correct, II incorrect / I सही, II गलत",
+      "I incorrect, II correct / I गलत, II सही"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** Both are correct. Rusting: 4Fe + 3O₂ + xH₂O → 2Fe₂O₃·xH₂O (Hydrated iron oxide). This IS oxidation (iron loses electrons). And it DOES require both O₂ and moisture — iron kept in dry air or in water free of dissolved oxygen does NOT rust. Statement II explains the conditions under which Statement I (oxidation) occurs. / **व्याख्या (हिंदी):** दोनों सही हैं। जंग: 4Fe + 3O₂ + xH₂O → 2Fe₂O₃·xH₂O (जलीय आयरन ऑक्साइड)। यह ऑक्सीकरण है (लोहा इलेक्ट्रॉन खोता है)। और इसके लिए O₂ और नमी दोनों चाहिए — सूखी हवा में या घुलित ऑक्सीजन-मुक्त पानी में रखे लोहे में जंग नहीं लगती। कथन II, कथन I के होने की शर्तें बताता है।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-23",
+    "text": "Which of the following correctly describes the phenomenon of 'Tyndall Effect'? निम्नलिखित में से कौन-सा 'टिंडल प्रभाव' (Tyndall Effect) की सही व्याख्या करता है? / ",
+    "options": [
+      "Scattering of light by colloidal particles making the beam visible / कोलॉइडल कणों द्वारा प्रकाश का प्रकीर्णन जो किरण को दृश्यमान बनाता है",
+      "Reflection of light from a smooth surface / चिकनी सतह से प्रकाश का परावर्तन",
+      "Refraction of light through a prism / प्रिज्म से प्रकाश का अपवर्तन",
+      "Absorption of light by dark-coloured objects / गहरे रंग की वस्तुओं द्वारा प्रकाश का अवशोषण"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** The **Tyndall Effect** is the scattering of light by colloidal particles (particle size 1–100 nm). Examples: blue colour of sky, red/orange sunrise/sunset, beam of light visible through fog or smoke, blue colour of eyes. It distinguishes colloids from true solutions (which don't show Tyndall Effect). / **व्याख्या (हिंदी):** **टिंडल प्रभाव** कोलॉइडल कणों (कण आकार 1–100 nm) द्वारा प्रकाश का प्रकीर्णन है। उदाहरण: आसमान का नीला रंग, लाल/नारंगी सूर्योदय/सूर्यास्त, कोहरे या धुएँ में प्रकाश की किरण दिखना। यह कोलॉइड को वास्तविक विलयन (जो टिंडल प्रभाव नहीं दिखाते) से अलग करता है।\n\n**Exam Tip:** True solution (e.g. salt water) = No Tyndall Effect | Colloid (milk, fog) = Shows Tyndall Effect.\n**परीक्षा टिप:** सत्य विलयन (जैसे नमक पानी) = टिंडल प्रभाव नहीं | कोलॉइड (दूध, कोहरा) = टिंडल प्रभाव दिखाता है।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-24",
+    "text": "In which of the following processes does a plant release energy? निम्नलिखित में से किस प्रक्रिया में पौधा ऊर्जा मुक्त करता है? / ",
+    "options": [
+      "Photosynthesis / प्रकाश संश्लेषण",
+      "Transpiration / वाष्पोत्सर्जन",
+      "Cellular Respiration / कोशिकीय श्वसन",
+      "Germination / अंकुरण"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** **Cellular Respiration** releases energy: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + **Energy (ATP)**. Photosynthesis STORES energy (doesn't release). Transpiration = water loss through stomata. Germination = seed sprouting (uses energy, doesn't primarily release it). / **व्याख्या (हिंदी):** **कोशिकीय श्वसन** में ऊर्जा मुक्त होती है: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + **ऊर्जा (ATP)**। प्रकाश संश्लेषण ऊर्जा संग्रहीत करता है। वाष्पोत्सर्जन = रंध्रों से जल का ह्रास। अंकुरण = बीज का अंकुरित होना।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-25",
+    "text": "Which of the following is NOT a greenhouse gas? निम्नलिखित में से कौन-सी ग्रीनहाउस गैस नहीं है? / ",
+    "options": [
+      "Methane (CH₄) / मीथेन",
+      "Nitrous Oxide (N₂O) / नाइट्रस ऑक्साइड",
+      "Nitrogen (N₂) / नाइट्रोजन",
+      "Water Vapour (H₂O) / जलवाष्प"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** **Nitrogen (N₂)** is NOT a greenhouse gas despite being the most abundant atmospheric gas. Greenhouse gases are: CO₂, CH₄, N₂O, water vapour (H₂O), O₃ (ozone), and CFCs. N₂ is diatomic and does not absorb infrared radiation, so it doesn't contribute to greenhouse warming. / **व्याख्या (हिंदी):** **नाइट्रोजन (N₂)** वायुमंडल में सर्वाधिक मात्रा में होने के बावजूद ग्रीनहाउस गैस नहीं है। ग्रीनहाउस गैसें हैं: CO₂, CH₄, N₂O, जलवाष्प (H₂O), O₃ और CFCs। N₂ द्विपरमाणुक है और अवरक्त विकिरण अवशोषित नहीं करती, इसलिए ग्रीनहाउस वार्मिंग में योगदान नहीं देती।",
+    "sectionName": "General Science",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-26",
+    "text": "Study the following number series carefully and find the missing term: निम्नलिखित संख्या श्रृंखला को ध्यान से देखें और लुप्त पद ज्ञात करें: **3, 7, 13, 21, 31, 43, ?** / ",
+    "options": [
+      "55",
+      "57",
+      "59",
+      "61"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** When difference of terms forms an AP, use double-differencing method.\n**परीक्षा टिप:** जब पदों का अंतर AP बनाए, तो द्विगुण-अंतर विधि का उपयोग करें।",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-27",
+    "text": "In a certain code language: किसी कूट भाषा में: 'MASTER' = 'UCUVJX' 'SIMPLE' = ? / ",
+    "options": [
+      "UKORMG",
+      "UMPRMG",
+      "UKORNG",
+      "UKORMH"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** / ",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-28",
+    "text": "Five friends — Amit, Benu, Chetan, Deepak and Eshan — are sitting in a row facing North. Deepak is to the immediate right of Benu. Amit is at one of the extreme ends. Chetan is between Eshan and Deepak. Amit is not adjacent to Benu. Who is sitting second from the right? पाँच मित्र — अमित, बेनू, चेतन, दीपक और एशान — एक पंक्ति में उत्तर की ओर मुख करके बैठे हैं। दीपक, बेनू के ठीक दाईं ओर है। अमित एक छोर पर है। चेतन, एशान और दीपक के बीच में है। अमित, बेनू के बगल में नहीं है। दाईं ओर से दूसरे स्थान पर कौन है? / ",
+    "options": [
+      "Chetan / चेतन",
+      "Deepak / दीपक",
+      "Eshan / एशान",
+      "Benu / बेनू"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-29",
+    "text": "In the following series, how many such letters are there which are immediately preceded by a number and immediately followed by a symbol? निम्नलिखित श्रृंखला में ऐसे कितने अक्षर हैं जिनके ठीक पहले एक संख्या और ठीक बाद एक प्रतीक है? **M 4 K # 7 P @ B 3 Q ! 2 R $ 9 T % 5 H &** / ",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 3,
+    "explanation": "**Explanation (English):** 4→K→# ✓ | 3→Q→! ✓ | 2→R→$ ✓ | 9→T→% ✓ = **4 letters** / **व्याख्या (हिंदी):** 4→K→# ✓ | 3→Q→! ✓ | 2→R→$ ✓ | 9→T→% ✓ = **4 अक्षर**\n\n**Exam Tip:** In such questions, check both conditions simultaneously — number before AND symbol after the letter.\n**परीक्षा टिप:** ऐसे प्रश्नों में दोनों शर्तें एक साथ जाँचें — अक्षर के पहले संख्या AND बाद में प्रतीक।",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-30",
+    "text": "A word arrangement machine rearranges words step by step. Study the input and steps: एक शब्द व्यवस्था मशीन शब्दों को चरणबद्ध तरीके से पुनर्व्यवस्थित करती है। इनपुट और चरण देखें: **Input:** bright future success brings hard work **Step 1:** brings bright future success hard work **Step 2:** brings bright future hard success work **Step 3:** brings bright future hard success work What will Step 2 of the following input be? **Input:** noble aims require great courage and strength / ",
+    "options": [
+      "aims noble require great courage and strength",
+      "aims noble courage great require and strength",
+      "aims noble require courage great and strength",
+      "aims noble great require courage and strength"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** / \n\n**Exam Tip:** In machine-arrangement questions, always find the RULE from the given steps before applying to new input.\n**परीक्षा टिप:** मशीन-व्यवस्था प्रश्नों में, दिए गए चरणों से नियम खोजें, फिर नए इनपुट पर लगाएँ।",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-31",
+    "text": "Study the following Venn diagram and answer: निम्नलिखित वेन आरेख देखें और उत्तर दें: ``` [Doctors]  ∩  [Engineers]  ∩  [Managers] A            B              C \\          |            / \\   D    |    E      / \\       |          / [  F (all three)  ] ``` *(Circle 1 = Doctors only; Circle 2 = Engineers only; Circle 3 = Managers only; D = Doctor+Engineer; E = Engineer+Manager; F = all three)* How many doctors are also managers but NOT engineers? कितने डॉक्टर प्रबंधक भी हैं लेकिन इंजीनियर नहीं हैं? / ",
+    "options": [
+      "Region A only / केवल क्षेत्र A",
+      "Region D only / केवल क्षेत्र D",
+      "Region that represents Doctor ∩ Manager but NOT Engineer / डॉक्टर ∩ प्रबंधक लेकिन इंजीनियर नहीं वाला क्षेत्र",
+      "Region F only / केवल क्षेत्र F"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** In a 3-circle Venn diagram: / **व्याख्या (हिंदी):** 3-वृत्त वेन आरेख में:\n\n**Exam Tip:** In Venn diagram questions, identify overlapping regions carefully. \"Not Engineer\" means exclude the Engineer circle's contribution.\n**परीक्षा टिप:** वेन आरेख में ओवरलैपिंग क्षेत्रों को सावधानी से पहचानें।",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-32",
+    "text": "If all the letters of the word 'EXAMINATION' are arranged in alphabetical order, then which letter will be at the 5th position from the left? यदि 'EXAMINATION' के सभी अक्षरों को वर्णमाला क्रम में व्यवस्थित किया जाए, तो बाईं ओर से 5वें स्थान पर कौन-सा अक्षर होगा? / ",
+    "options": [
+      "I",
+      "M",
+      "N",
+      "A"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** List all letters first (including duplicates), then sort alphabetically.\n**परीक्षा टिप:** पहले सभी अक्षर (डुप्लीकेट सहित) लिखें, फिर वर्णमाला क्रम में लगाएँ।",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-33",
+    "text": "Statement / कथन: All politicians are dishonest. Some honest people are teachers. सभी राजनेता बेईमान हैं। कुछ ईमानदार लोग शिक्षक हैं। Conclusion I / निष्कर्ष I: Some teachers are not politicians. कुछ शिक्षक राजनेता नहीं हैं। Conclusion II / निष्कर्ष II: All dishonest people are politicians. सभी बेईमान लोग राजनेता हैं। / ",
+    "options": [
+      "Only Conclusion I follows / केवल निष्कर्ष I अनुसरण करता है",
+      "Only Conclusion II follows / केवल निष्कर्ष II अनुसरण करता है",
+      "Both I and II follow / I और II दोनों अनुसरण करते हैं",
+      "Neither I nor II follows / न I न II अनुसरण करता है"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** In syllogism, \"All A are B\" does NOT mean \"All B are A.\" Converse is not always valid for universal affirmatives.\n**परीक्षा टिप:** न्याय में \"सभी A, B हैं\" का अर्थ \"सभी B, A हैं\" नहीं होता।",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-34",
+    "text": "A cube is painted red on all six faces and then cut into 64 equal smaller cubes. How many smaller cubes have exactly TWO faces painted? एक घन के सभी छह फलकों को लाल रंग से रंगा गया और फिर 64 बराबर छोटे घनों में काटा गया। कितने छोटे घनों के ठीक दो फलक रंगे हुए हैं? / ",
+    "options": [
+      "16",
+      "24",
+      "32",
+      "8"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** Cube cutting formulas — memorise all four:\n**परीक्षा टिप:** घन-कटाई सूत्र याद करें: 3 रंगे=8 | 2 रंगे=12(n-2) | 1 रंगा=6(n-2)² | 0 रंगा=(n-2)³",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-35",
+    "text": "In a certain family: A is the father of B. C is the sister of B. D is the husband of A's sister. E is the daughter of D. How is E related to C? एक परिवार में: A, B का पिता है। C, B की बहन है। D, A की बहन का पति है। E, D की पुत्री है। E, C से किस प्रकार संबंधित है? / ",
+    "options": [
+      "Cousin / चचेरी/मामेरी बहन",
+      "Sister / बहन",
+      "Niece / भतीजी",
+      "Aunt / मौसी/चाची"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-36",
+    "text": "A clock was showing the correct time at 8:00 AM. It gains 3 minutes every hour. What time will it show when the actual time is 6:00 PM the same day? एक घड़ी सुबह 8:00 बजे सही समय दिखा रही थी। यह प्रत्येक घंटे 3 मिनट आगे जाती है। जब वास्तविक समय उसी दिन शाम 6:00 बजे होगा, तो घड़ी क्या समय दिखाएगी? / ",
+    "options": [
+      "6:30 PM",
+      "6:36 PM",
+      "6:27 PM",
+      "6:33 PM"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** Gaining clock = shows MORE than actual time. Losing clock = shows LESS.\n**परीक्षा टिप:** तेज घड़ी = वास्तविक से ज्यादा दिखाती है। धीमी घड़ी = कम दिखाती है।",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-37",
+    "text": "If the positions of the 1st and 2nd letters, the 3rd and 4th letters, and the 5th and 6th letters of the word 'GARNET' are interchanged, which letter will be 4th from the right in the new arrangement? यदि 'GARNET' शब्द के 1st और 2nd, 3rd और 4th, और 5th और 6th अक्षरों के स्थान परस्पर बदल दिए जाएँ, तो नई व्यवस्था में दाईं ओर से 4वाँ अक्षर कौन-सा होगा? / ",
+    "options": [
+      "R",
+      "N",
+      "A",
+      "E"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-38",
+    "text": "Complete the analogy: सादृश्य पूर्ण करें: BCEF : GHIJ :: KLNO : ? / ",
+    "options": [
+      "PQRS",
+      "PQST",
+      "PQRT",
+      "OPQR"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-39",
+    "text": "Statement / कथन: Some pens are books. No book is a pencil. All pencils are erasers. कुछ पेन किताबें हैं। कोई किताब पेंसिल नहीं है। सभी पेंसिल इरेज़र हैं। Which conclusion(s) definitely follow? कौन-सा/से निष्कर्ष निश्चित रूप से अनुसरण करते हैं? **Conclusion I:** Some pens are not pencils. **Conclusion II:** Some erasers are not books. **Conclusion III:** No pen is an eraser. / ",
+    "options": [
+      "Only I and II / केवल I और II",
+      "Only I / केवल I",
+      "Only II and III / केवल II और III",
+      "All three / तीनों"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-40",
+    "text": "How many meaningful English words can be formed using the letters **G, A, R, E, T** (each used only once)? अक्षरों **G, A, R, E, T** (प्रत्येक केवल एक बार) का उपयोग करके कितने अर्थपूर्ण अंग्रेजी शब्द बनाए जा सकते हैं? / ",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**",
+    "sectionName": "Reasoning Ability",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-41",
+    "text": "A train 180 m long crosses a platform 120 m long in 15 seconds. It also crosses a man standing on the platform. In how many seconds does it cross the man? 180 m लंबी एक रेलगाड़ी 120 m लंबे एक प्लेटफॉर्म को 15 सेकंड में पार करती है। यह प्लेटफॉर्म पर खड़े एक आदमी को भी पार करती है। रेलगाड़ी आदमी को कितने सेकंड में पार करेगी? / ",
+    "options": [
+      "6 seconds / 6 सेकंड",
+      "8 seconds / 8 सेकंड",
+      "9 seconds / 9 सेकंड",
+      "12 seconds / 12 सेकंड"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** Cross stationary man = only train length | Cross platform = train + platform | Cross another train = sum of both lengths.\n**परीक्षा टिप:** स्थिर आदमी = केवल ट्रेन | प्लेटफॉर्म = ट्रेन + प्लेटफॉर्म | दूसरी ट्रेन = दोनों की लंबाई।",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-42",
+    "text": "If the radius of a circle is increased by 20%, then its area increases by what percent? यदि वृत्त की त्रिज्या 20% बढ़ा दी जाए, तो इसका क्षेत्रफल कितने प्रतिशत बढ़ेगा? / ",
+    "options": [
+      "20%",
+      "40%",
+      "44%",
+      "48%"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** This formula (2a + a²/100) works for ANY area when a linear dimension changes by a%.\n**परीक्षा टिप:** यह सूत्र (2a + a²/100) तब काम करता है जब कोई रैखिक माप a% बदले।",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-43",
+    "text": "A sum of money at compound interest (compounded annually) amounts to ₹6,760 in 2 years and ₹7,436 in 3 years. Find the rate of interest per annum. चक्रवृद्धि ब्याज (वार्षिक संयोजन) पर कोई धनराशि 2 वर्षों में ₹6,760 और 3 वर्षों में ₹7,436 हो जाती है। वार्षिक ब्याज दर ज्ञात करें। / ",
+    "options": [
+      "8%",
+      "9%",
+      "10%",
+      "12%"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** In CI problems, interest for (n+1)th year = A at end of nth year × R/100.\n**परीक्षा टिप:** CI में (n+1)वें वर्ष का ब्याज = nth वर्ष की राशि × R/100।",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-44",
+    "text": "Two pipes A and B can fill a tank in 12 minutes and 18 minutes respectively. A drain pipe C can empty the full tank in 36 minutes. If all three are opened simultaneously, in how many minutes will the empty tank be filled? दो पाइप A और B एक टंकी को क्रमशः 12 और 18 मिनट में भर सकते हैं। एक निकासी पाइप C पूरी टंकी को 36 मिनट में खाली कर सकता है। यदि तीनों एक साथ खोल दिए जाएँ, तो खाली टंकी कितने मिनट में भरेगी? / ",
+    "options": [
+      "9 minutes / 9 मिनट",
+      "10 minutes / 10 मिनट",
+      "12 minutes / 12 मिनट",
+      "8 minutes / 8 मिनट"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-45",
+    "text": "A man bought an article for ₹X and sold it at a loss of 15%. He then bought it back at 20% less than his selling price. What is his overall profit or loss percentage? एक व्यक्ति ने ₹X में एक वस्तु खरीदी और 15% हानि पर बेच दी। फिर उसने उसे अपने विक्रय मूल्य से 20% कम पर वापस खरीदा। उसका कुल लाभ या हानि प्रतिशत क्या है? / ",
+    "options": [
+      "32% profit / 32% लाभ",
+      "32% loss / 32% हानि",
+      "2% profit / 2% लाभ",
+      "2% loss / 2% हानि"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-46",
+    "text": "If x + 1/x = 5, then x² + 1/x² = ? यदि x + 1/x = 5 है, तो x² + 1/x² = ? / ",
+    "options": [
+      "21",
+      "23",
+      "25",
+      "27"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** Key algebraic identity: (a+b)² = a² + 2ab + b². Here a=x, b=1/x, ab=1.\n**परीक्षा टिप:** बीजगणितीय सूत्र: (a+b)² = a² + 2ab + b²। यहाँ ab = x × 1/x = 1.",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-47",
+    "text": "The ages of three friends are in the ratio 2:3:5. After 6 years, their ages will be in the ratio 3:4:6. What is the present age of the eldest? तीन मित्रों की आयु 2:3:5 के अनुपात में है। 6 वर्ष बाद उनकी आयु 3:4:6 के अनुपात में होगी। सबसे बड़े की वर्तमान आयु क्या है? / ",
+    "options": [
+      "20 years / 20 वर्ष",
+      "25 years / 25 वर्ष",
+      "30 years / 30 वर्ष",
+      "15 years / 15 वर्ष"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-48",
+    "text": "A shopkeeper marks up his goods by 40% and then gives successive discounts of 10% and 10%. What is his net profit or loss percentage? एक दुकानदार अपना माल 40% महँगा अंकित करता है और फिर क्रमिक 10% और 10% की छूट देता है। उसका कुल लाभ या हानि प्रतिशत क्या है? / ",
+    "options": [
+      "13.4% profit / 13.4% लाभ",
+      "20% profit / 20% लाभ",
+      "13.4% loss / 13.4% हानि",
+      "No profit no loss / न लाभ न हानि"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** Successive discounts of x% and y% = single equivalent discount of (x+y−xy/100)%.\n**परीक्षा टिप:** x% और y% की क्रमिक छूट = एकल समतुल्य छूट (x+y−xy/100)%।",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-49",
+    "text": "A man rows downstream at 12 km/h and upstream at 8 km/h. What is the speed of the current? एक व्यक्ति धारा के साथ 12 km/h और धारा के विरुद्ध 8 km/h की गति से नाव चलाता है। धारा की गति क्या है? / ",
+    "options": [
+      "2 km/h",
+      "4 km/h",
+      "10 km/h",
+      "6 km/h"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** Current speed = (D−U)/2 | Boat speed = (D+U)/2. These two formulas cover ALL boat-stream problems.\n**परीक्षा टिप:** धारा = (D−U)/2 | नाव = (D+U)/2।",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-50",
+    "text": "If the sum of interior angles of a polygon is 1440°, how many sides does it have? यदि किसी बहुभुज के आंतरिक कोणों का योग 1440° है, तो उसकी कितनी भुजाएँ हैं? / ",
+    "options": [
+      "8",
+      "9",
+      "10",
+      "12"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** Interior angle sum: Triangle=180°, Quadrilateral=360°, Pentagon=540°, Hexagon=720°, Octagon=1080°, Decagon=1440°.\n**परीक्षा टिप:** त्रिभुज=180°, चतुर्भुज=360°, पंचभुज=540°, षट्भुज=720°, दशभुज=1440°।",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-51",
+    "text": "A cone has radius 7 cm and slant height 25 cm. Find its total surface area. (Use π = 22/7) एक शंकु की त्रिज्या 7 cm और तिरछी ऊँचाई 25 cm है। इसका सम्पूर्ण पृष्ठीय क्षेत्रफल ज्ञात करें। (π = 22/7 का उपयोग करें) / ",
+    "options": [
+      "700 cm²",
+      "704 cm²",
+      "720 cm²",
+      "750 cm²"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**\n\n**Exam Tip:** Cone TSA = πrl + πr² = πr(l+r) | CSA = πrl. Remember: l = slant height (not vertical height).\n**परीक्षा टिप:** शंकु TSA = πr(l+r) | CSA = πrl। l = तिरछी ऊँचाई।",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-52",
+    "text": "The HCF of two numbers is 18 and their LCM is 1080. If one number is 216, find the other. दो संख्याओं का HCF 18 और LCM 1080 है। यदि एक संख्या 216 है, तो दूसरी संख्या ज्ञात करें। / ",
+    "options": [
+      "72",
+      "80",
+      "84",
+      "90"
+    ],
+    "correctIndex": 3,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-53",
+    "text": "Pipes A, B, and C fill a tank. A and B together fill in 6 hours. B and C together fill in 8 hours. A and C together fill in 4 hours. How long does it take all three together? पाइप A, B और C एक टंकी भरते हैं। A और B मिलकर 6 घंटे में, B और C मिलकर 8 घंटे में, A और C मिलकर 4 घंटे में भरते हैं। तीनों मिलकर कितने घंटे में भरेंगे? / ",
+    "options": [
+      "3 hours / 3 घंटे",
+      "13/6 hours",
+      "24/7 hours",
+      "4 hours / 4 घंटे"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-54",
+    "text": "A number when divided by 7 gives remainder 4, when divided by 9 gives remainder 2, and when divided by 11 gives remainder 6. What is the smallest such number? एक संख्या को 7 से भाग देने पर शेष 4, 9 से भाग देने पर शेष 2, और 11 से भाग देने पर शेष 6 आता है। ऐसी सबसे छोटी संख्या क्या है? / ",
+    "options": [
+      "200",
+      "186",
+      "200",
+      "697"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** / ",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-55",
+    "text": "In a class of 60 students, 40% play cricket, 35% play football, and 15% play both. How many students play neither cricket nor football? 60 छात्रों की एक कक्षा में, 40% क्रिकेट, 35% फुटबॉल खेलते हैं, और 15% दोनों खेलते हैं। कितने छात्र न क्रिकेट खेलते हैं न फुटबॉल? / ",
+    "options": [
+      "18",
+      "20",
+      "24",
+      "30"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** / **व्याख्या (हिंदी):**",
+    "sectionName": "Mathematics",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-56",
+    "text": "निम्नलिखित में से कौन-सा शब्द 'तत्सम' है? / ",
+    "options": [
+      "आग",
+      "कान",
+      "अग्नि",
+      "दूध"
+    ],
+    "correctIndex": 2,
+    "explanation": " / \n\n**परीक्षा टिप:** तत्सम = संस्कृत रूप (अग्नि, कर्ण, दुग्ध) | तद्भव = बदला हुआ रूप (आग, कान, दूध)।",
+    "sectionName": "Hindi Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-57",
+    "text": "'अपना उल्लू सीधा करना' मुहावरे का सही अर्थ क्या है? / ",
+    "options": [
+      "उल्लू पालना",
+      "अपना स्वार्थ सिद्ध करना",
+      "रात में काम करना",
+      "बुद्धिमानी दिखाना"
+    ],
+    "correctIndex": 1,
+    "explanation": " / \n\n**परीक्षा टिप:** 'उल्लू बनाना' = मूर्ख बनाना | 'उल्लू सीधा करना' = स्वार्थ सिद्ध करना — दोनों में अंतर समझें।",
+    "sectionName": "Hindi Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-58",
+    "text": "निम्नलिखित में 'बहुव्रीहि समास' का उदाहरण कौन-सा है? / ",
+    "options": [
+      "पीताम्बर",
+      "त्रिभुज",
+      "राजा-रानी",
+      "देशभक्ति"
+    ],
+    "correctIndex": 0,
+    "explanation": " / \n\n**परीक्षा टिप:** बहुव्रीहि की पहचान: दोनों पद मिलकर किसी 'तीसरे' का बोध कराएँ। जैसे: नीलकंठ = नीले कंठ वाला (शिव)।",
+    "sectionName": "Hindi Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-59",
+    "text": "'चिरायु' का सही संधि-विच्छेद क्या है? / ",
+    "options": [
+      "चि + रायु",
+      "चिर + आयु",
+      "चिरा + यु",
+      "चि + रायु"
+    ],
+    "correctIndex": 1,
+    "explanation": " / \n\n**परीक्षा टिप:** स्वर संधि में: अ/आ + अ/आ = आ | अ/आ + इ/ई = ए | अ/आ + उ/ऊ = ओ।",
+    "sectionName": "Hindi Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-60",
+    "text": "निम्नलिखित वाक्य में रेखांकित पद का कारक बताइए: \"**राम के लिए** फल लाओ।\" / ",
+    "options": [
+      "कर्ता कारक",
+      "कर्म कारक",
+      "संप्रदान कारक",
+      "अपादान कारक"
+    ],
+    "correctIndex": 2,
+    "explanation": " / \n\n**परीक्षा टिप:** कारक-विभक्ति: कर्ता=ने | कर्म=को | करण=से/के द्वारा | संप्रदान=के लिए | अपादान=से (अलग होने में) | संबंध=का/की/के | अधिकरण=में/पर | संबोधन=हे/ओ।",
+    "sectionName": "Hindi Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-61",
+    "text": "'अमृत' का विलोम शब्द क्या है? / ",
+    "options": [
+      "जहर",
+      "विष",
+      "गरल",
+      "सभी सही हैं / उपर्युक्त सभी"
+    ],
+    "correctIndex": 3,
+    "explanation": " / \n\n**परीक्षा टिप:** कभी-कभी एक शब्द के एकाधिक सही विलोम हो सकते हैं। ऐसे प्रश्नों में सावधानी से विकल्प पढ़ें।",
+    "sectionName": "Hindi Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-62",
+    "text": "निम्नलिखित वाक्य में अलंकार पहचानिए: \"चाँदी की चाँदनी चमकती चारों ओर चमचमाई।\" / ",
+    "options": [
+      "उपमा",
+      "अनुप्रास",
+      "यमक",
+      "रूपक"
+    ],
+    "correctIndex": 1,
+    "explanation": " / \n\n**परीक्षा टिप:** अनुप्रास = एक वर्ण की आवृत्ति | यमक = एक शब्द दो बार, अलग अर्थ | श्लेष = एक शब्द के दो अर्थ | उपमा = जैसा/सा/सी।",
+    "sectionName": "Hindi Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-63",
+    "text": "'नेत्र' का बहुवचन क्या है? / ",
+    "options": [
+      "नेत्रें",
+      "नेत्रों",
+      "नेत्र (अपरिवर्तित)",
+      "नेत्राएँ"
+    ],
+    "correctIndex": 2,
+    "explanation": " / \n\n**परीक्षा टिप:** तत्सम शब्द (नेत्र, पत्र, फल, जल, मन) प्रायः बहुवचन में अपरिवर्तित रहते हैं।",
+    "sectionName": "Hindi Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-64",
+    "text": "'जिसे क्षमा न किया जा सके' — वाक्यांश के लिए उपयुक्त एक शब्द है: / ",
+    "options": [
+      "अक्षम",
+      "अक्षम्य",
+      "क्षमाशील",
+      "क्षम्य"
+    ],
+    "correctIndex": 1,
+    "explanation": " / \n\n**परीक्षा टिप:** उपसर्ग 'अ' या 'अन' = नहीं/अभाव। जैसे: अज्ञेय (जो जाना न जा सके), अनुचित, अक्षम्य।",
+    "sectionName": "Hindi Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-65",
+    "text": "रिक्त स्थान भरें: \"_______ घर का बच्चा भी जानता है।\" / ",
+    "options": [
+      "इस",
+      "उस",
+      "जिस",
+      "किस"
+    ],
+    "correctIndex": 0,
+    "explanation": " / ",
+    "sectionName": "Hindi Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-66",
+    "text": "Choose the correct meaning of the idiom: **'To burn one's boats'** / ",
+    "options": [
+      "To set fire to enemy ships",
+      "To commit oneself to a course with no possibility of turning back",
+      "To destroy one's property deliberately",
+      "To take a risky sea voyage"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation:** 'To burn one's boats' means to take an action that cannot be undone, committing fully to a course with no way of turning back. Historical origin: Roman general Scipio Africanus burned his ships at Carthage so soldiers had no option but to fight. / \n\n**Exam Tip:** Similar idiom: 'To burn one's bridges' = same meaning (no return possible). 'To cross the Rubicon' = pass a point of no return.",
+    "sectionName": "English Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-67",
+    "text": "Identify the figure of speech in: **\"The wind whispered through the trees.\"** / ",
+    "options": [
+      "Simile",
+      "Metaphor",
+      "Personification",
+      "Hyperbole"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation:** Personification attributes a human quality (whispering) to a non-human thing (wind). The wind cannot literally whisper — this is a human action given to a natural phenomenon. Simile uses 'like/as', Metaphor equates two unlike things, Hyperbole is exaggeration. / \n\n**Exam Tip:** Personification = giving human traits to non-human → Nature poems are full of it.",
+    "sectionName": "English Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-68",
+    "text": "Fill in the blank with the correct option: **\"Neither the manager nor the employees ______ satisfied with the decision.\"** / ",
+    "options": [
+      "was",
+      "were",
+      "is",
+      "has been"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation:** In \"Neither...nor...\" constructions, the verb agrees with the subject CLOSER to it. Here \"employees\" (plural) is closer to the verb, so the plural verb \"were\" is correct. / \n\n**Exam Tip:** Neither/Nor and Either/Or → verb agrees with the NEAREST subject. Singular near = singular verb; plural near = plural verb.",
+    "sectionName": "English Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-69",
+    "text": "Select the word that is CLOSEST in meaning to: **'Perspicacious'** / ",
+    "options": [
+      "Confused",
+      "Physically strong",
+      "Having a ready insight; mentally sharp",
+      "Overly emotional"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation:** 'Perspicacious' means having a ready insight into things; mentally sharp and perceptive. Synonyms: astute, shrewd, discerning, sagacious, perceptive. A perspicacious observer quickly understands complex situations. / \n\n**Exam Tip:** Confuse not with 'perspicuous' (clearly expressed) — perspicacious = sharp-minded (about the observer), perspicuous = clear (about the expression).",
+    "sectionName": "English Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-70",
+    "text": "Choose the sentence with correct subject-verb agreement: / ",
+    "options": [
+      "The committee have decided to postpone the meeting.",
+      "The news are very disturbing.",
+      "Mathematics are my favourite subject.",
+      "The committee has decided to postpone the meeting."
+    ],
+    "correctIndex": 3,
+    "explanation": "**Explanation:** 'Committee' is a collective noun. In formal British/exam English, collective nouns take singular verbs when the group acts as a unit → \"has decided\" ✓. 'News' is always singular (The news IS, not ARE). 'Mathematics' is always singular (Mathematics IS, not ARE). / \n\n**Exam Tip:** Collective nouns (committee, team, family, jury) + acting as ONE unit → singular verb. News, Physics, Mathematics, Economics → always singular.",
+    "sectionName": "English Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-71",
+    "text": "In the following sentence, identify the type of the underlined clause: **\"She left before the meeting started.\"** (underlined: before the meeting started) / ",
+    "options": [
+      "Noun clause",
+      "Adverb clause of time",
+      "Adjective clause",
+      "Adverb clause of reason"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation:** The clause \"before the meeting started\" modifies the verb \"left\" by telling WHEN she left. It begins with 'before' (subordinating conjunction of time). Adverb clauses of time begin with: when, before, after, until, since, as soon as. / \n\n**Exam Tip:** Adverb clause types — Time (when/before/after), Reason (because/since), Condition (if/unless), Concession (although/even though), Purpose (so that/in order that).",
+    "sectionName": "English Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-72",
+    "text": "Convert to indirect speech: **She said to him, \"Please wait for me outside.\"** / ",
+    "options": [
+      "She requested him to please wait for her outside.",
+      "She requested him to wait for her outside.",
+      "She told him that please wait for her outside.",
+      "She asked him please to wait for him outside."
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation:** Imperative sentences with \"please\" in direct speech become **Requested** in indirect speech. \"Please wait for me\" → \"requested him to wait for her.\" Rules applied: (1) 'please' is dropped in indirect speech, (2) pronoun 'me' changes to 'her' (per reporting subject 'she'), (3) 'requested...to' is used. / \n\n**Exam Tip:** Request (please+verb) → requested to | Command (verb!) → ordered/commanded to | Advice (should/must) → advised to.",
+    "sectionName": "English Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-73",
+    "text": "Choose the correct sentence: / ",
+    "options": [
+      "He is more stronger than his brother.",
+      "He is stronger than his brother.",
+      "He is most strongest than his brother.",
+      "He is the more strong than his brother."
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation:** \"More stronger\" is WRONG — double comparative (more + -er). 'Stronger' is already comparative, so 'more' is redundant. Similarly, \"most strongest\" is wrong (double superlative). Correct: comparative = stronger; superlative = strongest. Never use 'more' + 'er' form together. / \n\n**Exam Tip:** Never double: more stronger/most strongest/more better/most best — these are ALWAYS wrong.",
+    "sectionName": "English Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-74",
+    "text": "Choose the pair that correctly represents ANTONYMS: / ",
+    "options": [
+      "Spurious — Fake",
+      "Loquacious — Verbose",
+      "Magnanimous — Petty",
+      "Gregarious — Sociable"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation:** Magnanimous (generous, noble-minded) ↔ Petty (small-minded, ungenerous) — these are ANTONYMS ✓. Spurious and Fake = synonyms. Loquacious and Verbose = synonyms (talkative). Gregarious and Sociable = synonyms. / \n\n**Exam Tip:** Magnanimous = big-hearted (magna = great + animus = soul) | Petty = trivial/small-minded.",
+    "sectionName": "English Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-75",
+    "text": "In the following passage, the underlined word needs to be replaced with the most appropriate word: \"The teacher's explanation was so **ambiguous** that every student understood it immediately.\" / ",
+    "options": [
+      "lucid",
+      "confusing",
+      "unclear",
+      "vague"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation:** The sentence says students understood immediately, so the explanation must have been CLEAR. 'Ambiguous' (unclear/open to interpretation) is contextually WRONG. The correct replacement is **'lucid'** (clear, easy to understand). Confusing, unclear, vague would all also be wrong contextually (students wouldn't understand immediately from these). / \n\n**Exam Tip:** Lucid = crystal clear | Ambiguous = having multiple interpretations | Verbose = using too many words | Succinct = brief and clear.",
+    "sectionName": "English Language",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-76",
+    "text": "Consider the following statements about Haryana: हरियाणा के बारे में निम्नलिखित कथनों पर विचार करें: **Statement I / कथन I:** Haryana is the only state in India which has no Scheduled Tribe (ST) population in its official census. हरियाणा भारत का एकमात्र राज्य है जिसमें आधिकारिक जनगणना में कोई अनुसूचित जनजाति (ST) जनसंख्या नहीं है। **Statement II / कथन II:** Haryana has the highest per capita income among all Indian states. हरियाणा की सभी भारतीय राज्यों में सर्वाधिक प्रति व्यक्ति आय है। Which is correct? / कौन-सा सही है? / ",
+    "options": [
+      "Only I / केवल I",
+      "Only II / केवल II",
+      "Both I and II / I और II दोनों",
+      "Neither I nor II / न I न II"
+    ],
+    "correctIndex": 0,
+    "explanation": "**Explanation (English):** Statement I is CORRECT — Haryana is one of the very few states with no recognised Scheduled Tribes in its official census data. Statement II is INCORRECT — Goa has the highest per capita income among Indian states; Haryana ranks high but is NOT the highest. / **व्याख्या (हिंदी):** कथन I सही है — हरियाणा उन कुछ राज्यों में से एक है जिसमें आधिकारिक ST जनसंख्या नहीं है। कथन II गलत है — गोवा की प्रति व्यक्ति आय सर्वाधिक है; हरियाणा उच्च स्थान पर है, परंतु सर्वोच्च नहीं।\n\n**Exam Tip:** Haryana = No ST population officially | Goa = Highest per capita income | Bihar = Lowest per capita income.\n**परीक्षा टिप:** हरियाणा = कोई ST नहीं | गोवा = सर्वाधिक प्रति व्यक्ति आय | बिहार = सबसे कम।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-77",
+    "text": "The famous saint-poet 'Surdas' was born in which place associated with Haryana? प्रसिद्ध संत-कवि 'सूरदास' का जन्म हरियाणा से संबंधित किस स्थान पर हुआ था? / ",
+    "options": [
+      "Kurukshetra / कुरुक्षेत्र",
+      "Sirhi (near Faridabad) / सिरही (फरीदाबाद के पास)",
+      "Panipat / पानीपत",
+      "Rohtak / रोहतक"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** Surdas, the great 15th–16th century blind devotional poet of the Bhakti movement, was born at **Sirhi (also written as Sihi), near Faridabad**, Haryana. He was a disciple of Vallabhacharya and composed 'Sur Sagar', 'Sur Saravali', and 'Sahitya Lahiri' in Braj Bhasha. / **व्याख्या (हिंदी):** महान 15वीं–16वीं सदी के भक्ति आंदोलन के नेत्रहीन कवि सूरदास का जन्म **सिरही (सिही), फरीदाबाद के पास**, हरियाणा में हुआ था। वे वल्लभाचार्य के शिष्य थे और ब्रज भाषा में 'सूरसागर', 'सूर सारावली' और 'साहित्य लहरी' की रचना की।\n\n**Exam Tip:** Surdas = Sihi, Faridabad | Kabir = Varanasi | Mirabai = Rajasthan | Tulsidas = Rajapur, UP.\n**परीक्षा टिप:** सूरदास = सिही, फरीदाबाद | कबीर = वाराणसी | मीराबाई = राजस्थान।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-78",
+    "text": "Assertion (A): Haryana is called the 'Granary of India'. Assertion (A): हरियाणा को 'भारत का अन्न भंडार' कहा जाता है। Reason (R): Haryana contributes the highest percentage of wheat and rice to India's central food pool (PDS). Reason (R): हरियाणा भारत के केंद्रीय खाद्य भंडार (PDS) में गेहूँ और चावल का सर्वाधिक प्रतिशत योगदान देता है। / ",
+    "options": [
+      "A is correct; R correctly explains A / A सही; R, A की सही व्याख्या करता है",
+      "A is correct; R does NOT correctly explain A / A सही; R, A की सही व्याख्या नहीं करता",
+      "A is incorrect; R is correct / A गलत; R सही है",
+      "Both A and R are incorrect / A और R दोनों गलत हैं"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** Statement A is correct — Haryana IS called \"Granary of India\" (also \"Bread Basket of India\"). However, Reason R is PARTIALLY incorrect in its claim — Punjab, not Haryana, contributes the HIGHEST % to PDS. Haryana is a major contributor but not the highest. So A is correct but R doesn't correctly explain why Haryana gets that title (Punjab also claims that title). / **व्याख्या (हिंदी):** A सही है — हरियाणा को 'भारत का अन्न भंडार' कहा जाता है। लेकिन R आंशिक रूप से गलत है — PDS में सर्वाधिक योगदान हरियाणा नहीं, **पंजाब** देता है। पंजाब को भी यह उपाधि दी जाती है। अतः R, A की सही व्याख्या नहीं करता।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-79",
+    "text": "Which Haryana city is known as the 'City of Weavers' due to its traditional handloom industry? हरियाणा का कौन-सा शहर अपने पारंपरिक हथकरघा उद्योग के कारण 'बुनकरों का शहर' कहलाता है? / ",
+    "options": [
+      "Hisar / हिसार",
+      "Bhiwani / भिवानी",
+      "Panipat / पानीपत",
+      "Rewari / रेवाड़ी"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** **Panipat** is known as the \"City of Weavers\" due to its centuries-old handloom and textile industry. It is also called \"Cast-off Capital of the World\" due to its recycled textile (shoddy) industry that recycles old clothes. Bhiwani is known as \"Mini Bombay\" (boxing). / **व्याख्या (हिंदी):** **पानीपत** को अपनी सदियों पुरानी हथकरघा और वस्त्र उद्योग के कारण \"बुनकरों का शहर\" कहा जाता है। इसे \"विश्व की कबाड़ राजधानी\" (Cast-off Capital) भी कहते हैं — पुराने कपड़ों को रीसायकल करने के कारण। भिवानी को \"मिनी बॉम्बे\" (मुक्केबाजी के लिए) कहते हैं।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-80",
+    "text": "The 'Pinjore Heritage Festival' is held annually in which city of Haryana? 'पिंजौर हेरिटेज फेस्टिवल' हरियाणा के किस शहर में प्रतिवर्ष आयोजित होता है? / ",
+    "options": [
+      "Panipat / पानीपत",
+      "Pinjore (Panchkula district) / पिंजौर (पंचकूला जिला)",
+      "Hisar / हिसार",
+      "Ambala / अंबाला"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** The Pinjore Heritage Festival is held in **Pinjore, Panchkula district**, Haryana. The famous Yadavindra Gardens (Mughal garden) in Pinjore is the venue. The festival celebrates music, dance, and Haryana's cultural heritage. Pinjore is historically associated with the Mughal period. / **व्याख्या (हिंदी):** पिंजौर हेरिटेज फेस्टिवल **पिंजौर, पंचकूला जिला** में आयोजित होता है। प्रसिद्ध यादवेंद्र गार्डन (मुगलकालीन उद्यान) इस उत्सव का स्थल है। यह उत्सव संगीत, नृत्य और हरियाणा की सांस्कृतिक विरासत को मनाता है।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-81",
+    "text": "Who among the following was the first Chief Minister of Haryana after its formation in 1966? 1966 में गठन के बाद हरियाणा के पहले मुख्यमंत्री निम्नलिखित में से कौन थे? / ",
+    "options": [
+      "Bansi Lal / बंसी लाल",
+      "Bhajan Lal / भजन लाल",
+      "Bhagwat Dayal Sharma / भगवत दयाल शर्मा",
+      "Devi Lal / देवी लाल"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** **Bhagwat Dayal Sharma** was the first Chief Minister of Haryana, serving from November 1, 1966 to March 24, 1967. Bansi Lal served later (1968–1975 and 1985–1987). Bhajan Lal (1979–1985 and 1991–1996). Devi Lal (1977–1979 and 1987–1990). / **व्याख्या (हिंदी):** **भगवत दयाल शर्मा** हरियाणा के पहले मुख्यमंत्री थे (1 नवंबर 1966 से 24 मार्च 1967)। बंसी लाल बाद में (1968–75 और 1985–87)। भजन लाल (1979–85 और 1991–96)। देवी लाल (1977–79 और 1987–90)।\n\n**Exam Tip:** 1st CM Haryana = Bhagwat Dayal Sharma | 1st CM Punjab = Gopi Chand Bhargava | 1st PM India = Nehru.\n**परीक्षा टिप:** हरियाणा 1st CM = भगवत दयाल शर्मा।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-82",
+    "text": "Consider the following about the 'Rakhigarhi' site in Haryana: हरियाणा में 'राखीगढ़ी' स्थल के बारे में निम्नलिखित पर विचार करें: **Statement I / कथन I:** Rakhigarhi is considered one of the largest Harappan (Indus Valley Civilisation) sites in South Asia. राखीगढ़ी को दक्षिण एशिया में हड़प्पा (सिंधु घाटी सभ्यता) के सबसे बड़े स्थलों में से एक माना जाता है। **Statement II / कथन II:** Rakhigarhi is located in Hisar district of Haryana. राखीगढ़ी हरियाणा के हिसार जिले में स्थित है। / ",
+    "options": [
+      "Only I / केवल I",
+      "Only II / केवल II",
+      "Both I and II / I और II दोनों",
+      "Neither I nor II / न I न II"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** Both statements are CORRECT. Rakhigarhi in **Hisar district, Haryana** is one of the largest known Harappan sites, possibly larger than Mohenjo-daro and Harappa. Archaeological studies have revealed extensive urban planning, drainage systems, and skeletal remains providing insights into IVC population genetics. / **व्याख्या (हिंदी):** दोनों कथन सही हैं। **हिसार जिले, हरियाणा** में स्थित राखीगढ़ी ज्ञात हड़प्पा स्थलों में से एक सबसे बड़ा स्थल है — संभवतः मोहनजोदड़ो और हड़प्पा से भी बड़ा। पुरातात्त्विक अध्ययनों ने विस्तृत नगर नियोजन, जल निकासी प्रणाली और कंकाल अवशेष प्रकट किए हैं।\n\n**Exam Tip:** Rakhigarhi = Hisar district = Largest Harappan site | Dholavira = Gujarat | Lothal = Gujarat.\n**परीक्षा टिप:** राखीगढ़ी = हिसार जिला = सबसे बड़ा हड़प्पा स्थल | धोलावीरा = गुजरात।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-83",
+    "text": "The 'Atal Setu' (Atal Bridge) inaugurated in recent years is located in which Indian city? हाल के वर्षों में उद्घाटन किया गया 'अटल सेतु' (Atal Bridge) किस भारतीय शहर में स्थित है? / ",
+    "options": [
+      "Delhi / दिल्ली",
+      "Mumbai / मुंबई",
+      "Ahmedabad / अहमदाबाद",
+      "Surat / सूरत"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** The **Atal Setu** (officially Mumbai Trans Harbour Link / MTHL) is India's longest sea bridge, located in **Mumbai, Maharashtra**. It spans across Thane Creek connecting Sewri (Mumbai) to Nhava Sheva (Navi Mumbai). It was inaugurated in January 2024. Length: approximately 21.8 km. / **व्याख्या (हिंदी):** **अटल सेतु** (आधिकारिक नाम मुंबई ट्रांस हार्बर लिंक / MTHL) भारत का सबसे लंबा समुद्री पुल है, जो **मुंबई, महाराष्ट्र** में स्थित है। यह थाणे क्रीक पर सेवरी (मुंबई) को न्हावा शेवा (नवी मुंबई) से जोड़ता है। जनवरी 2024 में उद्घाटन हुआ। लंबाई: लगभग 21.8 km।\n\n**Exam Tip:** Atal Setu = Mumbai | India's longest road sea bridge = Atal Setu (21.8 km) | India's longest bridge overall = Dhola-Sadiya (Assam, 9.15 km over river).\n**परीक्षा टिप:** अटल सेतु = मुंबई | भारत का सबसे लंबा समुद्री सड़क पुल।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-84",
+    "text": "India won the ICC Men's T20 World Cup 2026, defeating which country in the Final? भारत ने ICC पुरुष T20 विश्व कप 2026 में किस देश को फाइनल में हराकर जीता? / ",
+    "options": [
+      "Pakistan / पाकिस्तान",
+      "England / इंग्लैंड",
+      "Australia / ऑस्ट्रेलिया",
+      "New Zealand / न्यूजीलैंड"
+    ],
+    "correctIndex": 3,
+    "explanation": "**Explanation (English):** India won the 2026 ICC Men's T20 World Cup final at the Narendra Modi Stadium in Ahmedabad on 8 March 2026, defeating New Zealand by 96 runs. India scored 255/5 and New Zealand were all out for 159. India became the first team to win three T20 World Cup titles and the first to successfully defend the title. / **व्याख्या (हिंदी):** भारत ने 8 मार्च 2026 को नरेंद्र मोदी स्टेडियम, अहमदाबाद में न्यूजीलैंड को 96 रनों से हराकर ICC पुरुष T20 विश्व कप 2026 जीता। भारत ने 255/5 स्कोर बनाया और न्यूजीलैंड 159 पर आउट हो गई।\n\n**Exam Tip:** T20 WC 2026: Winner=India | Venue=India+Sri Lanka | Final=Narendra Modi Stadium, Ahmedabad | Player of Match=Jasprit Bumrah (4/15) | Player of Tournament=Sanju Samson (321 runs).\n**परीक्षा टिप:** T20 WC 2026: विजेता=भारत | Player of Match=बुमराह | Player of Tournament=संजू सैमसन।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-85",
+    "text": "Who was awarded 'Player of the Tournament' in the ICC Men's T20 World Cup 2026? ICC पुरुष T20 विश्व कप 2026 में 'Player of the Tournament' कौन रहे? / ",
+    "options": [
+      "Jasprit Bumrah / जसप्रीत बुमराह",
+      "Sanju Samson / संजू सैमसन",
+      "Suryakumar Yadav / सूर्यकुमार यादव",
+      "Abhishek Sharma / अभिषेक शर्मा"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** Sanju Samson was awarded the Player of the Series in the T20 World Cup 2026, scoring 321 runs. Jasprit Bumrah won the Player of the Match award for the Final with figures of 4/15. Suryakumar Yadav was India's captain. / **व्याख्या (हिंदी):** संजू सैमसन को T20 विश्व कप 2026 में 321 रनों के साथ Player of the Series (Tournament) घोषित किया गया। जसप्रीत बुमराह को Final में 4/15 के प्रदर्शन के लिए Player of the Match मिला।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-86",
+    "text": "The Union Budget 2026–27 announced the New Income Tax Act to take effect from which date? केंद्रीय बजट 2026–27 में घोषित नया आयकर अधिनियम किस तारीख से प्रभावी होने की घोषणा की गई? / ",
+    "options": [
+      "1 February 2026",
+      "1 January 2026",
+      "1 April 2026",
+      "1 July 2026"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** The Income Tax Act, 2025 takes effect from April 1, 2026, with simplified rules, redesigned forms, and multiple measures aimed at easing compliance and reducing litigation. / **व्याख्या (हिंदी):** आयकर अधिनियम, 2025, 1 अप्रैल 2026 से प्रभावी हुआ, जिसमें सरलीकृत नियम, पुनर्डिज़ाइन किए गए फॉर्म, और अनुपालन को आसान बनाने व विवाद कम करने के उपाय शामिल हैं।\n\n**Exam Tip:** New IT Act 2025 → effective 1 April 2026 | Exemption limit → ₹12 lakh | 30% tax slab → above ₹24 lakh.",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-87",
+    "text": "Budget 2026–27 announced ₹10,000 crore for which fund to support MSMEs? बजट 2026–27 में MSMEs को सहायता के लिए ₹10,000 करोड़ के किस कोष की घोषणा की गई? / ",
+    "options": [
+      "MSME Vikas Fund / MSME विकास कोष",
+      "SME Growth Fund / SME ग्रोथ फंड",
+      "Mudra Fund Extension / मुद्रा फंड विस्तार",
+      "Startup India Fund / स्टार्टअप इंडिया फंड"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** A ₹10,000 crore SME Growth Fund has been proposed in Budget 2026–27 to create MSMEs as future champions. This fund aims to provide equity support to high-growth potential MSMEs to scale up their operations. / **व्याख्या (हिंदी):** बजट 2026–27 में MSMEs को भविष्य के 'champion' बनाने के लिए ₹10,000 करोड़ के SME ग्रोथ फंड का प्रस्ताव रखा गया।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-88",
+    "text": "Which institution appointed Mahesh Dixit as its new Director in June 2026? जून 2026 में किस संस्थान ने महेश दीक्षित को अपना नया निदेशक नियुक्त किया? / ",
+    "options": [
+      "Research and Analysis Wing (RAW) / रिसर्च एंड एनालिसिस विंग (RAW)",
+      "Central Bureau of Investigation (CBI) / केंद्रीय जाँच ब्यूरो (CBI)",
+      "Intelligence Bureau (IB) / इंटेलिजेंस ब्यूरो (IB)",
+      "National Investigation Agency (NIA) / राष्ट्रीय जाँच एजेंसी (NIA)"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** The Government of India appointed Mahesh Dixit, a 1993-batch IPS officer of the Telangana cadre, as the new Director of the Intelligence Bureau (IB), succeeding Tapan Kumar. / **व्याख्या (हिंदी):** भारत सरकार ने 1993 बैच के तेलंगाना कैडर के IPS अधिकारी महेश दीक्षित को इंटेलिजेंस ब्यूरो (IB) का नया निदेशक नियुक्त किया, जो टापन कुमार का स्थान लेंगे।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-89",
+    "text": "India launched 'Operation Amistad' in June 2026 to provide humanitarian relief to which country after a devastating earthquake? जून 2026 में भारत ने विनाशकारी भूकंप के बाद किस देश को मानवीय राहत प्रदान करने के लिए 'ऑपरेशन अमिस्ताद' शुरू किया? / ",
+    "options": [
+      "Nepal / नेपाल",
+      "Afghanistan / अफगानिस्तान",
+      "Venezuela / वेनेजुएला",
+      "Turkey / तुर्की"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** India launched Operation Amistad to support Venezuela after a devastating earthquake that caused extensive loss of life, injuries, and widespread destruction. 'Amistad' means 'friendship' in Spanish — reflecting India's goodwill gesture. / **व्याख्या (हिंदी):** भारत ने वेनेजुएला में विनाशकारी भूकंप के बाद व्यापक जान-माल की क्षति और तबाही के बाद वहाँ सहायता के लिए ऑपरेशन अमिस्ताद शुरू किया। 'Amistad' स्पेनिश में 'मित्रता' का अर्थ है।\n\n**Exam Tip:** India's named rescue/relief operations: Operation Ganga (Ukraine), Operation Kaveri (Sudan), Operation Ajay (Israel), Operation Amistad (Venezuela 2026).",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-90",
+    "text": "Jasprit Bumrah and Varun Chakravarthy were joint highest wicket-takers in T20 WC 2026. How many wickets did each take? जसप्रीत बुमराह और वरुण चक्रवर्ती T20 WC 2026 में संयुक्त रूप से सर्वाधिक विकेट लेने वाले खिलाड़ी थे। प्रत्येक ने कितने विकेट लिए? / ",
+    "options": [
+      "12 wickets / 12 विकेट",
+      "13 wickets / 13 विकेट",
+      "14 wickets / 14 विकेट",
+      "16 wickets / 16 विकेट"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** Jasprit Bumrah and Varun Chakravarthy of India both took 14 wickets each and were tied for the most wickets in the 2026 tournament. / **व्याख्या (हिंदी):** जसप्रीत बुमराह और वरुण चक्रवर्ती ने 2026 टूर्नामेंट में 14-14 विकेट लेकर सर्वाधिक विकेट का संयुक्त रिकॉर्ड बनाया।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-91",
+    "text": "India commissioned the world's first Hydrogen production facility based on nuclear process heat in June 2026. This was inaugurated at which location? भारत ने जून 2026 में परमाणु प्रक्रिया ताप पर आधारित विश्व की पहली हाइड्रोजन उत्पादन सुविधा का उद्घाटन किया। यह कहाँ उद्घाटित की गई? / ",
+    "options": [
+      "Tarapur, Maharashtra / तारापुर, महाराष्ट्र",
+      "Kudankulam, Tamil Nadu / कुडनकुलम, तमिलनाडु",
+      "Kalpakkam, Tamil Nadu / कल्पक्कम, तमिलनाडु",
+      "Narora, Uttar Pradesh / नरोरा, उत्तर प्रदेश"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** India commissioned the world's first hydrogen production facility based on nuclear process heat. It was inaugurated by the Department of Atomic Energy Secretary Ajit Kumar Mohanty. This facility is at **Kalpakkam, Tamil Nadu**, home to IGCAR (Indira Gandhi Centre for Atomic Research) and India's PFBR (Prototype Fast Breeder Reactor). / **व्याख्या (हिंदी):** भारत ने परमाणु प्रक्रिया ताप पर आधारित विश्व की पहली हाइड्रोजन उत्पादन सुविधा स्थापित की। इसका उद्घाटन परमाणु ऊर्जा विभाग सचिव अजीत कुमार मोहंती ने किया। यह सुविधा **कल्पक्कम, तमिलनाडु** में है — जहाँ IGCAR और PFBR भी स्थित हैं।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-92",
+    "text": "India conducted its first satellite-based landing system approach on a jet engine aircraft at which airport in June 2026? जून 2026 में भारत ने किस हवाई अड्डे पर जेट इंजन विमान पर पहली उपग्रह-आधारित लैंडिंग प्रणाली परीक्षण किया? / ",
+    "options": [
+      "Jaipur Airport / जयपुर हवाई अड्डा",
+      "Udaipur Airport / उदयपुर हवाई अड्डा",
+      "Dehradun Airport / देहरादून हवाई अड्डा",
+      "Srinagar Airport / श्रीनगर हवाई अड्डा"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** India conducted its first satellite-based landing system approach on a jet engine aircraft on 27 June 2026 at Udaipur airport. The Directorate General of Civil Aviation used this system. This milestone advances India's aviation safety and all-weather landing capabilities. / **व्याख्या (हिंदी):** 27 जून 2026 को भारत ने उदयपुर हवाई अड्डे पर जेट इंजन विमान पर पहली उपग्रह-आधारित लैंडिंग प्रणाली का परीक्षण किया। नागरिक उड्डयन महानिदेशालय (DGCA) ने यह प्रणाली उपयोग की।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-93",
+    "text": "In the Padma Awards 2026 conferred by President Murmu, how many total awards were given? राष्ट्रपति मुर्मू द्वारा 2026 में प्रदान किए गए पद्म पुरस्कारों में कुल कितने पुरस्कार दिए गए? / ",
+    "options": [
+      "55",
+      "60",
+      "65",
+      "70"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** President Murmu conferred 65 Padma Awards; Rohit Sharma, Mammootty, R Madhavan were among the recipients. / **व्याख्या (हिंदी):** राष्ट्रपति मुर्मू ने 65 पद्म पुरस्कार प्रदान किए; रोहित शर्मा, मम्मूटी, आर माधवन इनमें से प्रमुख प्राप्तकर्ता थे।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-94",
+    "text": "Statement I / कथन I: India defeated Pakistan by 61 runs in the T20 World Cup 2026 group stage. Statement II / कथन II: This was India's biggest ever T20I win over Pakistan. Both statements together relate to which match venue? दोनों कथन एक साथ किस मैच स्थल से संबंधित हैं? / ",
+    "options": [
+      "Narendra Modi Stadium, Ahmedabad",
+      "Wankhede Stadium, Mumbai",
+      "R. Premadasa Stadium, Colombo / आर. प्रेमदासा स्टेडियम, कोलंबो",
+      "Eden Gardens, Kolkata"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** India thrashed Pakistan by 61 runs in their T20 World Cup 2026 clash at the R Premadasa Stadium, registering their biggest-ever T20I win over their arch-rivals as Ishan Kishan and the bowlers starred on a tricky surface. / **व्याख्या (हिंदी):** भारत ने T20 विश्व कप 2026 में आर. प्रेमदासा स्टेडियम में पाकिस्तान को 61 रन से हराया — यह पाकिस्तान के खिलाफ भारत की अब तक की सबसे बड़ी T20I जीत थी।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-95",
+    "text": "The 'Nasha Mukt Bharat Saptah 2026' was observed from June 17 to 26 under which Ministry? 'नशा मुक्त भारत सप्ताह 2026' 17 से 26 जून तक किस मंत्रालय के अंतर्गत मनाया गया? / ",
+    "options": [
+      "Ministry of Home Affairs / गृह मंत्रालय",
+      "Ministry of Social Justice and Empowerment / सामाजिक न्याय और अधिकारिता मंत्रालय",
+      "Ministry of Health and Family Welfare / स्वास्थ्य और परिवार कल्याण मंत्रालय",
+      "Ministry of Education / शिक्षा मंत्रालय"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** Nasha Mukt Bharat Saptah 2026 was observed across India from 17 June to 26 June 2026 under the Ministry of Social Justice and Empowerment, Government of India. / **व्याख्या (हिंदी):** नशा मुक्त भारत सप्ताह 2026 सामाजिक न्याय और अधिकारिता मंत्रालय, भारत सरकार के अंतर्गत 17 से 26 जून 2026 तक मनाया गया।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-96",
+    "text": "S&P Global forecasted India's GDP growth at what percentage for FY 2026–27? S&P ग्लोबल ने FY 2026–27 के लिए भारत की GDP वृद्धि दर कितने प्रतिशत अनुमानित की? / ",
+    "options": [
+      "6.2%",
+      "6.4%",
+      "6.6%",
+      "7.0%"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** S&P forecasted India's GDP Growth at 6.6% in FY27 amid energy stress and weak monsoon concerns. The RBI MPC also projected 6.6% GDP growth for FY27 in its June 2026 monetary policy. / **व्याख्या (हिंदी):** RBI MPC ने FY27 के लिए 6.6% GDP वृद्धि और 5.1% CPI मुद्रास्फीति अनुमानित की। S&P ग्लोबल ने भी ऊर्जा तनाव और कमजोर मानसून की चिंताओं के बावजूद FY27 के लिए 6.6% GDP वृद्धि का अनुमान लगाया।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-97",
+    "text": "RBI Repo Rate as of June 2026 stands at: जून 2026 तक RBI की रेपो दर कितनी है? / ",
+    "options": [
+      "5.00%",
+      "5.25%",
+      "5.50%",
+      "6.00%"
+    ],
+    "correctIndex": 1,
+    "explanation": "**Explanation (English):** RBI MPC held the Repo Rate at 5.25% and projected 6.6% GDP Growth and 5.1% CPI Inflation for FY27. The RBI reduced rates from the earlier 6.50% level through a series of rate cuts in 2025–26 to support growth. / **व्याख्या (हिंदी):** RBI MPC ने रेपो दर 5.25% पर बनाए रखी और FY27 के लिए 6.6% GDP वृद्धि तथा 5.1% CPI मुद्रास्फीति का अनुमान लगाया।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-98",
+    "text": "In Budget 2026–27, the Public Capital Expenditure was enhanced to what amount for FY 2026–27? बजट 2026–27 में, FY 2026–27 के लिए सार्वजनिक पूँजीगत व्यय को कितना बढ़ाया गया? / ",
+    "options": [
+      "₹10.2 trillion / ₹10.2 ट्रिलियन",
+      "₹11.2 trillion / ₹11.2 ट्रिलियन",
+      "₹12.2 trillion / ₹12.2 ट्रिलियन",
+      "₹13.2 trillion / ₹13.2 ट्रिलियन"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** Public capital expenditure has been enhanced from ₹11.2 trillion in BE 2025–26 to ₹12.2 trillion in FY 2026–27. This increase aims to boost infrastructure development and stimulate economic growth. / **व्याख्या (हिंदी):** सार्वजनिक पूँजीगत व्यय BE 2025–26 के ₹11.2 ट्रिलियन से बढ़ाकर FY 2026–27 में ₹12.2 ट्रिलियन किया गया।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-99",
+    "text": "Which Indian cricket captain led the team to win the ICC Men's T20 World Cup 2026? ICC पुरुष T20 विश्व कप 2026 में जीत के समय भारतीय क्रिकेट टीम का कप्तान कौन था? / ",
+    "options": [
+      "Rohit Sharma / रोहित शर्मा",
+      "Virat Kohli / विराट कोहली",
+      "Hardik Pandya / हार्दिक पंड्या",
+      "Suryakumar Yadav / सूर्यकुमार यादव"
+    ],
+    "correctIndex": 3,
+    "explanation": "**Explanation (English):** Suryakumar Yadav became the fourth Indian captain to win a major ICC event after Kapil Dev in 1983, MS Dhoni in 2007, 2011 and 2013, and Rohit Sharma in 2024 and 2025. / **व्याख्या (हिंदी):** सूर्यकुमार यादव प्रमुख ICC इवेंट जीतने वाले चौथे भारतीय कप्तान बने — कपिल देव (1983), एम.एस. धोनी (2007, 2011, 2013) और रोहित शर्मा (2024, 2025) के बाद।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  },
+  {
+    "id": "q-hssc-cet-m5-100",
+    "text": "'Bharat Taxi', a cooperation-based taxi service, was launched in which state of India in June 2026? जून 2026 में सहकारिता-आधारित टैक्सी सेवा 'भारत टैक्सी' किस भारतीय राज्य में शुरू की गई? / ",
+    "options": [
+      "Maharashtra / महाराष्ट्र",
+      "Rajasthan / राजस्थान",
+      "Gujarat / गुजरात",
+      "Karnataka / कर्नाटक"
+    ],
+    "correctIndex": 2,
+    "explanation": "**Explanation (English):** Union Home Minister Amit Shah launched the cooperation-based taxi service Bharat Taxi in Gujarat on 27 June 2026. The launch took place at the event organized under the cooperation sector. / **व्याख्या (हिंदी):** केंद्रीय गृह मंत्री अमित शाह ने 27 जून 2026 को गुजरात में सहकारिता-आधारित टैक्सी सेवा 'भारत टैक्सी' का शुभारंभ किया।",
+    "sectionName": "Haryana GK",
+    "testId": "test-hssc-cet-full-5"
+  }
 ]
 
 };

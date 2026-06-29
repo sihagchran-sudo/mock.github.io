@@ -185,6 +185,7 @@ const BASE_MOCK_TESTS: Test[] = [
   { id: 'test-hssc-cet-full-2', title: 'HSSC CET (Group D) - Full Mock Test 2', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Hard' },
   { id: 'test-hssc-cet-full-3', title: 'HSSC CET (Group D) - Full Mock Test 3', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Hard' },
   { id: 'test-hssc-cet-full-4', title: 'HSSC CET (Group D) - Full Mock Test 4', duration: 105, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-hssc-cet-full-5', title: 'HSSC CET (Group D) - Full Mock Test 5 (Expert)', duration: 105, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Hard' },
 ];
 
 // Dynamically generate mock test suites for all 31 exams
