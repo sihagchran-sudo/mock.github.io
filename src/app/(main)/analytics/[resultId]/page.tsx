@@ -26,6 +26,73 @@ export default function AnalyticsPage() {
   const [totalCandidates, setTotalCandidates] = useState(12450);
   const [userRank, setUserRank] = useState(1);
 
+  const [loadingAiExplanation, setLoadingAiExplanation] = useState<Record<string, boolean>>({});
+  const [aiExplanations, setAiExplanations] = useState<Record<string, string>>({});
+  const [localExplanations, setLocalExplanations] = useState<Record<string, string>>({});
+  const [savingExplanation, setSavingExplanation] = useState<Record<string, boolean>>({});
+
+  const handleGenerateAiExplanation = async (q: any) => {
+    setLoadingAiExplanation(prev => ({ ...prev, [q.id]: true }));
+    try {
+      const res = await fetch('/api/ai/explain', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          questionText: q.text,
+          options: q.options,
+          correctIndex: q.correctIndex,
+          sectionName: q.sectionName
+        })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success && data.explanation) {
+          setAiExplanations(prev => ({ ...prev, [q.id]: data.explanation }));
+        } else {
+          alert('API Error: ' + (data.error || 'Failed to generate explanation.'));
+        }
+      } else {
+        alert('Server returned an error generating solution.');
+      }
+    } catch (err: any) {
+      alert('Error: ' + err.message);
+    } finally {
+      setLoadingAiExplanation(prev => ({ ...prev, [q.id]: false }));
+    }
+  };
+
+  const handleSaveDefaultExplanation = async (qId: string, explanation: string) => {
+    setSavingExplanation(prev => ({ ...prev, [qId]: true }));
+    try {
+      const res = await fetch('/api/admin/update-explanation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ questionId: qId, newExplanation: explanation })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success) {
+          setLocalExplanations(prev => ({ ...prev, [qId]: explanation }));
+          // Clear generated view
+          setAiExplanations(prev => {
+            const next = { ...prev };
+            delete next[qId];
+            return next;
+          });
+          alert('सफलता: व्याख्या को डेटाबेस में डिफ़ॉल्ट के रूप में सहेज लिया गया है!');
+        } else {
+          alert('त्रुटि: ' + data.error);
+        }
+      } else {
+        alert('डेटाबेस अपडेट करने में विफल रहा।');
+      }
+    } catch (err: any) {
+      alert('त्रुटि: ' + err.message);
+    } finally {
+      setSavingExplanation(prev => ({ ...prev, [qId]: false }));
+    }
+  };
+
   useEffect(() => {
     let isMounted = true;
 
@@ -637,12 +704,67 @@ export default function AnalyticsPage() {
 
                   {/* Solution block */}
                   {isOpen && (
-                    <div className="mt-3.5 p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-600 leading-relaxed shadow-inner">
-                      <p className="font-bold text-slate-800 mb-1.5">Detailed Answer Explanation:</p>
-                      <p className="mb-2.5 whitespace-pre-wrap">{renderFormattedText(q.explanation)}</p>
-                      <p className="text-[10px] text-slate-400 font-medium">
-                        Section topic tags: {q.sectionName} &gt; {idx % 2 === 0 ? 'Algebra Arithmetic' : 'Reasoning Aptitude'}
-                      </p>
+                    <div className="mt-3.5 space-y-4">
+                      {/* Default Solution */}
+                      <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-600 leading-relaxed shadow-inner">
+                        <div className="flex justify-between items-center mb-1.5">
+                          <p className="font-bold text-slate-800">Detailed Answer Explanation:</p>
+                          <button
+                            onClick={() => handleGenerateAiExplanation(q)}
+                            disabled={loadingAiExplanation[q.id]}
+                            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-[10px] px-2.5 py-1 rounded font-bold shadow-sm disabled:opacity-50 transition-all flex items-center gap-1 active:scale-95 cursor-pointer"
+                          >
+                            {loadingAiExplanation[q.id] ? (
+                              <>
+                                <span className="animate-spin">⏳</span> Generating...
+                              </>
+                            ) : (
+                              <>
+                                <span>✨ Explain with AI</span>
+                              </>
+                            )}
+                          </button>
+                        </div>
+                        <p className="mb-2.5 whitespace-pre-wrap">
+                          {renderFormattedText(localExplanations[q.id] || q.explanation)}
+                        </p>
+                        <p className="text-[10px] text-slate-400 font-medium">
+                          Section topic tags: {q.sectionName} &gt; {idx % 2 === 0 ? 'Algebra Arithmetic' : 'Reasoning Aptitude'}
+                        </p>
+                      </div>
+
+                      {/* AI Generated View */}
+                      {aiExplanations[q.id] && (
+                        <div className="p-4 bg-blue-50/50 border border-blue-200 rounded-xl text-xs text-slate-700 leading-relaxed shadow-sm space-y-3">
+                          <div className="flex items-center gap-1 text-blue-800 font-bold">
+                            <span>💡</span> AI-Generated Detailed Solution:
+                          </div>
+                          <div className="whitespace-pre-wrap bg-white/70 p-3 rounded-lg border border-blue-100 shadow-inner">
+                            {renderFormattedText(aiExplanations[q.id])}
+                          </div>
+                          <div className="flex gap-2">
+                            <button
+                              onClick={() => handleSaveDefaultExplanation(q.id, aiExplanations[q.id])}
+                              disabled={savingExplanation[q.id]}
+                              className="bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] px-3 py-1.5 rounded font-bold transition-all disabled:opacity-50 flex items-center gap-1 active:scale-95 cursor-pointer"
+                            >
+                              {savingExplanation[q.id] ? 'Saving...' : '💾 Use as Default (डेटाबेस में सहेजें)'}
+                            </button>
+                            <button
+                              onClick={() => {
+                                setAiExplanations(prev => {
+                                  const next = { ...prev };
+                                  delete next[q.id];
+                                  return next;
+                                });
+                              }}
+                              className="border border-slate-300 hover:bg-slate-100 text-slate-600 text-[10px] px-3 py-1.5 rounded font-bold transition-all active:scale-95 cursor-pointer"
+                            >
+                              ✕ Dismiss
+                            </button>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
