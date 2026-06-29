@@ -9,6 +9,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isBannerVisible, setIsBannerVisible] = useState(true);
+  const [bannerText, setBannerText] = useState("SSC Stenographer & HSSC Police Constable syllabus guides & mock tests are live!");
+  const [bannerLink, setBannerLink] = useState("/blog/ssc-stenographer-syllabus-pattern");
   const [isNotifDropdownOpen, setIsNotifDropdownOpen] = useState(false);
   const [hasUnreadNotifs, setHasUnreadNotifs] = useState(false);
   const [isMobileNotifsOpen, setIsMobileNotifsOpen] = useState(false);
@@ -45,11 +47,33 @@ export default function Navbar() {
   ]);
 
   useEffect(() => {
-    // Check if top banner has been dismissed
-    const bannerDismissed = localStorage.getItem('mockmaster_banner_dismissed_2026_06_28');
-    if (bannerDismissed === 'true') {
-      setIsBannerVisible(false);
+    // Fetch dynamic banner config
+    async function loadBannerConfig() {
+      try {
+        const res = await fetch("/api/admin/config");
+        if (res.ok) {
+          const data = await res.json();
+          if (data.config) {
+            if (data.config.banner_text) {
+              setBannerText(data.config.banner_text);
+            }
+            if (data.config.banner_link) {
+              setBannerLink(data.config.banner_link);
+            }
+            const isVisible = data.config.banner_visible !== "false";
+            const bannerDismissed = localStorage.getItem('mockmaster_banner_dismissed_2026_06_28');
+            if (bannerDismissed === 'true' || !isVisible) {
+              setIsBannerVisible(false);
+            } else {
+              setIsBannerVisible(true);
+            }
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load banner config:", err);
+      }
     }
+    loadBannerConfig();
 
     // Fetch dynamic notifications
     async function loadNotifications() {
@@ -130,15 +154,17 @@ export default function Navbar() {
               New
             </span>
             <span>
-              SSC Stenographer & HSSC Police Constable syllabus guides & mock tests are live!
+              {bannerText}
             </span>
-            <Link 
-              href="/blog/ssc-stenographer-syllabus-pattern" 
-              onClick={handleDismissBanner}
-              className="text-amber-400 hover:text-amber-300 underline font-bold transition-colors ml-1"
-            >
-              Read Guide Now &rarr;
-            </Link>
+            {bannerLink && (
+              <Link 
+                href={bannerLink} 
+                onClick={handleDismissBanner}
+                className="text-amber-400 hover:text-amber-300 underline font-bold transition-colors ml-1"
+              >
+                Learn More &rarr;
+              </Link>
+            )}
           </div>
           <button 
             onClick={handleDismissBanner}

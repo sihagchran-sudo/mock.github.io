@@ -7,6 +7,7 @@ export async function GET() {
   try {
     let dbBlogs: any[] = [];
     let dbResources: any[] = [];
+    let dbCustomNotifs: any[] = [];
 
     // Attempt database fetches
     try {
@@ -21,6 +22,15 @@ export async function GET() {
     try {
       dbResources = await prisma.freeResource.findMany({
         where: { isApproved: true },
+        orderBy: { createdAt: "desc" },
+        take: 5
+      });
+    } catch (e) {
+      // Database offline/unmigrated
+    }
+
+    try {
+      dbCustomNotifs = await prisma.customNotification.findMany({
         orderBy: { createdAt: "desc" },
         take: 5
       });
@@ -50,6 +60,18 @@ export async function GET() {
       badge: "Free PDF",
       icon: "📥",
       createdAt: r.createdAt ? new Date(r.createdAt).getTime() : Date.now()
+    }));
+
+    // Process DB Custom Notifications
+    const processedDbCustomNotifs = dbCustomNotifs.map(n => ({
+      id: `custom-${n.id}`,
+      title: n.title,
+      desc: n.desc,
+      link: n.link || "/",
+      date: new Date(n.createdAt).toLocaleDateString(undefined, { dateStyle: "medium" }),
+      badge: n.badge || "Update",
+      icon: n.icon || "🔔",
+      createdAt: new Date(n.createdAt).getTime()
     }));
 
     // Process Static Blogs (only if not already in DB list)
@@ -84,6 +106,7 @@ export async function GET() {
 
     // Combine everything
     const combined = [
+      ...processedDbCustomNotifs,
       ...processedDbBlogs,
       ...processedDbResources,
       ...processedStaticBlogs,

@@ -155,3 +155,18 @@ model FreeResource {
   updatedAt   DateTime @updatedAt
 }
 
+model SystemSetting {
+  key   String @id
+  value String
+}
+
+model CustomNotification {
+  id        String   @id @default(uuid())
+  title     String
+  desc      String
+  link      String   @default("/")
+  badge     String   @default("Update")
+  icon      String   @default("🔔")
+  createdAt DateTime @default(now())
+}
+

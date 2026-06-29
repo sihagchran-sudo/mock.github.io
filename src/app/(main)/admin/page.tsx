@@ -30,7 +30,29 @@ export default function AdminDashboardPage() {
   const [resetError, setResetError] = useState("");
 
   // Tabs state
-  const [activeTab, setActiveTab] = useState<"users" | "blogs" | "resources">("users");
+  const [activeTab, setActiveTab] = useState<"users" | "blogs" | "resources" | "settings">("users");
+
+  // Analytics states
+  const [analytics, setAnalytics] = useState<{ totalUsers: number; activePasses: number; testsTakenToday: number; totalDownloads: number } | null>(null);
+  const [analyticsLoading, setAnalyticsLoading] = useState(false);
+
+  // Platform Settings states
+  const [bannerTextSetting, setBannerTextSetting] = useState("");
+  const [bannerLinkSetting, setBannerLinkSetting] = useState("");
+  const [bannerVisibleSetting, setBannerVisibleSetting] = useState("true");
+  const [bannerSaveLoading, setBannerSaveLoading] = useState(false);
+
+  // Custom Notification states
+  const [notifTitle, setNotifTitle] = useState("");
+  const [notifDesc, setNotifDesc] = useState("");
+  const [notifLink, setNotifLink] = useState("/");
+  const [notifBadge, setNotifBadge] = useState("Update");
+  const [notifIcon, setNotifIcon] = useState("🔔");
+  const [notifPushLoading, setNotifPushLoading] = useState(false);
+
+  // User Pro pass states
+  const [passExpiryDaysMap, setPassExpiryDaysMap] = useState<Record<string, string>>({}); // userId -> days
+  const [passActionLoading, setPassActionLoading] = useState<Record<string, boolean>>({}); // userId -> loading
 
   // Blog Editor states
   const [selectedExamSlug, setSelectedExamSlug] = useState("");
@@ -394,6 +416,151 @@ export default function AdminDashboardPage() {
     }
   };
 
+  const fetchAnalytics = async () => {
+    setAnalyticsLoading(true);
+    setError("");
+    try {
+      const secretKey = sessionStorage.getItem("admin_access_code") || ADMIN_SECRET;
+      const res = await fetch(`/api/admin/analytics?secret=${encodeURIComponent(secretKey)}`);
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error || "Failed to load analytics.");
+      } else {
+        setAnalytics(data.stats || null);
+      }
+    } catch (err) {
+      setError("An unexpected error occurred while loading analytics.");
+    } finally {
+      setAnalyticsLoading(false);
+    }
+  };
+
+  const fetchBannerSettings = async () => {
+    try {
+      const res = await fetch("/api/admin/config");
+      if (res.ok) {
+        const data = await res.json();
+        if (data.config) {
+          setBannerTextSetting(data.config.banner_text || "");
+          setBannerLinkSetting(data.config.banner_link || "");
+          setBannerVisibleSetting(data.config.banner_visible || "true");
+        }
+      }
+    } catch (err) {
+      console.error("Failed to load banner settings:", err);
+    }
+  };
+
+  const handleSaveBannerSettings = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setBannerSaveLoading(true);
+    setError("");
+    setSuccess("");
+    try {
+      const secretKey = sessionStorage.getItem("admin_access_code") || ADMIN_SECRET;
+      
+      const saveSetting = async (key: string, value: string) => {
+        const res = await fetch("/api/admin/config?secret=" + encodeURIComponent(secretKey), {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ key, value })
+        });
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || "Failed to save key: " + key);
+        }
+      };
+
+      await saveSetting("banner_text", bannerTextSetting);
+      await saveSetting("banner_link", bannerLinkSetting);
+      await saveSetting("banner_visible", bannerVisibleSetting);
+
+      setSuccess("Announcement banner settings updated successfully!");
+    } catch (err: any) {
+      setError(err.message || "Failed to save banner settings.");
+    } finally {
+      setBannerSaveLoading(false);
+    }
+  };
+
+  const handlePushNotification = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!notifTitle || !notifDesc) return;
+    setNotifPushLoading(true);
+    setError("");
+    setSuccess("");
+    try {
+      const secretKey = sessionStorage.getItem("admin_access_code") || ADMIN_SECRET;
+      const res = await fetch(`/api/admin/notifications?secret=${encodeURIComponent(secretKey)}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title: notifTitle,
+          desc: notifDesc,
+          link: notifLink,
+          badge: notifBadge,
+          icon: notifIcon
+        })
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error || "Failed to push notification.");
+      } else {
+        setSuccess("Global user notification pushed successfully!");
+        setNotifTitle("");
+        setNotifDesc("");
+        setNotifLink("/");
+        setNotifBadge("Update");
+        setNotifIcon("🔔");
+      }
+    } catch (err) {
+      setError("Failed to push notification.");
+    } finally {
+      setNotifPushLoading(false);
+    }
+  };
+
+  const handleToggleProPass = async (userId: string, currentPassState: boolean) => {
+    setPassActionLoading(prev => ({ ...prev, [userId]: true }));
+    setError("");
+    setSuccess("");
+    try {
+      const secretKey = sessionStorage.getItem("admin_access_code") || ADMIN_SECRET;
+      const targetState = !currentPassState;
+      const days = targetState ? passExpiryDaysMap[userId] || "365" : "0";
+
+      const res = await fetch(`/api/admin/users?secret=${encodeURIComponent(secretKey)}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userId,
+          isPassActive: targetState,
+          passExpiryDays: days
+        })
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error || "Failed to update user Pro pass.");
+      } else {
+        setSuccess(`User Pro Pass ${targetState ? "activated" : "deactivated"} successfully!`);
+        // Update user state locally
+        setUsers(prev => prev.map(u => u.id === userId ? { ...u, isPassActive: targetState } : u));
+      }
+    } catch (err) {
+      setError("Failed to update user Pro pass status.");
+    } finally {
+      setPassActionLoading(prev => ({ ...prev, [userId]: false }));
+    }
+  };
+
+  // Load initial dashboard metrics and banner settings when authenticated
+  useEffect(() => {
+    if (isAuthenticated) {
+      fetchAnalytics();
+      fetchBannerSettings();
+    }
+  }, [isAuthenticated]);
+
   const filteredUsers = users.filter(u => {
     const q = searchQuery.toLowerCase();
     return (
@@ -476,11 +643,42 @@ export default function AdminDashboardPage() {
           </div>
         </div>
 
+        {/* KPI Metrics Dashboard Grid */}
+        {analyticsLoading ? (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            {[...Array(4)].map((_, idx) => (
+              <div key={idx} className="bg-white border border-slate-100 p-5 rounded-2xl animate-pulse flex flex-col gap-2">
+                <div className="w-1/2 h-3 bg-slate-100 rounded"></div>
+                <div className="w-3/4 h-6 bg-slate-200 rounded"></div>
+              </div>
+            ))}
+          </div>
+        ) : analytics ? (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="bg-white border border-slate-200/80 p-5 rounded-2xl shadow-sm flex flex-col justify-between">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Total Users</span>
+              <span className="text-xl sm:text-2xl font-extrabold text-slate-800 mt-1">{analytics.totalUsers}</span>
+            </div>
+            <div className="bg-white border border-slate-200/80 p-5 rounded-2xl shadow-sm flex flex-col justify-between">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Active passes</span>
+              <span className="text-xl sm:text-2xl font-extrabold text-indigo-650 mt-1">{analytics.activePasses}</span>
+            </div>
+            <div className="bg-white border border-slate-200/80 p-5 rounded-2xl shadow-sm flex flex-col justify-between">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Tests Taken Today</span>
+              <span className="text-xl sm:text-2xl font-extrabold text-emerald-600 mt-1">{analytics.testsTakenToday}</span>
+            </div>
+            <div className="bg-white border border-slate-200/80 p-5 rounded-2xl shadow-sm flex flex-col justify-between">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">PDF Downloads</span>
+              <span className="text-xl sm:text-2xl font-extrabold text-amber-600 mt-1">{analytics.totalDownloads}</span>
+            </div>
+          </div>
+        ) : null}
+
         {/* Tabs Selection Bar */}
-        <div className="flex gap-4 border-b border-slate-200 mb-8">
+        <div className="flex gap-4 border-b border-slate-200 mb-8 overflow-x-auto scrollbar-none">
           <button
             onClick={() => setActiveTab("users")}
-            className={`pb-3 text-sm font-bold border-b-2 transition-all ${
+            className={`pb-3 text-sm font-bold border-b-2 transition-all whitespace-nowrap ${
               activeTab === "users"
                 ? "border-blue-600 text-blue-600"
                 : "border-transparent text-slate-400 hover:text-slate-600"
@@ -490,7 +688,7 @@ export default function AdminDashboardPage() {
           </button>
           <button
             onClick={() => setActiveTab("blogs")}
-            className={`pb-3 text-sm font-bold border-b-2 transition-all ${
+            className={`pb-3 text-sm font-bold border-b-2 transition-all whitespace-nowrap ${
               activeTab === "blogs"
                 ? "border-blue-600 text-blue-600"
                 : "border-transparent text-slate-400 hover:text-slate-600"
@@ -500,13 +698,23 @@ export default function AdminDashboardPage() {
           </button>
           <button
             onClick={() => setActiveTab("resources")}
-            className={`pb-3 text-sm font-bold border-b-2 transition-all ${
+            className={`pb-3 text-sm font-bold border-b-2 transition-all whitespace-nowrap ${
               activeTab === "resources"
                 ? "border-blue-600 text-blue-600"
                 : "border-transparent text-slate-400 hover:text-slate-600"
             }`}
           >
             📂 Free Resources
+          </button>
+          <button
+            onClick={() => setActiveTab("settings")}
+            className={`pb-3 text-sm font-bold border-b-2 transition-all whitespace-nowrap ${
+              activeTab === "settings"
+                ? "border-blue-600 text-blue-600"
+                : "border-transparent text-slate-400 hover:text-slate-600"
+            }`}
+          >
+            ⚙️ Platform Settings
           </button>
         </div>
 
@@ -589,18 +797,47 @@ export default function AdminDashboardPage() {
                               {user.isPassActive ? "Pro Premium" : "Free Pass"}
                             </span>
                           </td>
-                          <td className="py-4 px-6 text-right flex justify-end gap-2.5">
+                          <td className="py-4 px-6 text-right flex justify-end items-center flex-wrap gap-2 pt-5">
+                            {user.isPassActive ? (
+                              <button
+                                disabled={passActionLoading[user.id]}
+                                onClick={() => handleToggleProPass(user.id, true)}
+                                className="bg-amber-50 hover:bg-amber-100 disabled:opacity-50 text-amber-700 text-[10px] font-bold px-3 py-1.5 rounded-lg border border-amber-200 transition-all cursor-pointer"
+                              >
+                                {passActionLoading[user.id] ? "Updating..." : "Revoke Pro Pass"}
+                              </button>
+                            ) : (
+                              <div className="flex items-center gap-1.5">
+                                <select
+                                  value={passExpiryDaysMap[user.id] || "365"}
+                                  onChange={(e) => setPassExpiryDaysMap(prev => ({ ...prev, [user.id]: e.target.value }))}
+                                  className="px-2 py-1 text-[10px] border border-slate-200 rounded bg-white text-slate-700 font-semibold focus:outline-none"
+                                >
+                                  <option value="30">30 Days</option>
+                                  <option value="90">90 Days</option>
+                                  <option value="180">180 Days</option>
+                                  <option value="365">1 Year</option>
+                                </select>
+                                <button
+                                  disabled={passActionLoading[user.id]}
+                                  onClick={() => handleToggleProPass(user.id, false)}
+                                  className="bg-emerald-50 hover:bg-emerald-100 disabled:opacity-50 text-emerald-700 text-[10px] font-bold px-3 py-1.5 rounded-lg border border-emerald-150 transition-all cursor-pointer"
+                                >
+                                  {passActionLoading[user.id] ? "Updating..." : "Grant Pro Pass"}
+                                </button>
+                              </div>
+                            )}
                             <button
                               onClick={() => setResettingUser(user)}
-                              className="bg-blue-50 hover:bg-blue-100 text-blue-700 text-[10px] font-bold px-3 py-1.5 rounded-lg shadow-sm border border-blue-100 transition-all"
+                              className="bg-blue-50 hover:bg-blue-100 text-blue-700 text-[10px] font-bold px-3 py-1.5 rounded-lg border border-blue-100 transition-all cursor-pointer"
                             >
-                              Reset Password
+                              Reset
                             </button>
                             <button
                               onClick={() => handleDeleteUser(user.id, user.name || user.email)}
-                              className="bg-red-50 hover:bg-red-100 text-red-600 text-[10px] font-bold px-3 py-1.5 rounded-lg shadow-sm border border-red-100 transition-all"
+                              className="bg-red-50 hover:bg-red-100 text-red-650 text-[10px] font-bold px-3 py-1.5 rounded-lg border border-red-100 transition-all cursor-pointer"
                             >
-                              Delete User
+                              Delete
                             </button>
                           </td>
                         </tr>
@@ -743,7 +980,7 @@ export default function AdminDashboardPage() {
               )}
             </form>
           </div>
-        ) : (
+        ) : activeTab === "resources" ? (
           /* Free Resources Manager Tab */
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Add Resource Form (Left) */}
@@ -914,6 +1151,129 @@ export default function AdminDashboardPage() {
                   📭 No resources added yet. Submissions will appear here.
                 </div>
               )}
+            </div>
+          </div>
+        ) : (
+          /* Platform Settings Tab */
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Announcement Banner Panel */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm h-fit">
+              <h2 className="text-sm font-extrabold text-slate-800 border-b border-slate-100 pb-3 mb-4 flex items-center gap-1.5">
+                <span>📢 Announcement Banner Control</span>
+              </h2>
+              <form onSubmit={handleSaveBannerSettings} className="space-y-4">
+                <div>
+                  <label className="block text-[10px] uppercase font-bold text-slate-400 mb-1">Banner Status</label>
+                  <select
+                    value={bannerVisibleSetting}
+                    onChange={(e) => setBannerVisibleSetting(e.target.value)}
+                    className="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-xs bg-white focus:outline-none focus:border-blue-500 font-semibold"
+                  >
+                    <option value="true">Visible (बैनर दिखाएं)</option>
+                    <option value="false">Hidden (बैनर छिपाएं)</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-[10px] uppercase font-bold text-slate-400 mb-1">Banner Alert Message *</label>
+                  <textarea
+                    required
+                    rows={3}
+                    placeholder="Enter announcement text to show on top of the website..."
+                    value={bannerTextSetting}
+                    onChange={(e) => setBannerTextSetting(e.target.value)}
+                    className="w-full border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-blue-500 font-medium resize-none"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[10px] uppercase font-bold text-slate-400 mb-1">Destination link / URL</label>
+                  <input
+                    type="text"
+                    placeholder="e.g. /blog/ssc-stenographer-syllabus-pattern"
+                    value={bannerLinkSetting}
+                    onChange={(e) => setBannerLinkSetting(e.target.value)}
+                    className="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-blue-500 font-medium"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={bannerSaveLoading}
+                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white font-bold text-xs py-2.5 rounded-xl shadow-md transition-all active:scale-98"
+                >
+                  {bannerSaveLoading ? "Saving Settings..." : "💾 Update Banner Announcement"}
+                </button>
+              </form>
+            </div>
+
+            {/* Dynamic Notification Pusher */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm h-fit">
+              <h2 className="text-sm font-extrabold text-slate-800 border-b border-slate-100 pb-3 mb-4 flex items-center gap-1.5">
+                <span>🔔 Broadcast Global Notification</span>
+              </h2>
+              <form onSubmit={handlePushNotification} className="space-y-4">
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-[10px] uppercase font-bold text-slate-400 mb-1">Badge Title</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="e.g. Live Test, Update"
+                      value={notifBadge}
+                      onChange={(e) => setNotifBadge(e.target.value)}
+                      className="w-full border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[10px] uppercase font-bold text-slate-400 mb-1">Icon (Emoji)</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="e.g. 🔔, 🏆, ⚡"
+                      value={notifIcon}
+                      onChange={(e) => setNotifIcon(e.target.value)}
+                      className="w-full border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-blue-500"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-[10px] uppercase font-bold text-slate-400 mb-1">Notification Title *</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. HSSC Group D Exam date released!"
+                    value={notifTitle}
+                    onChange={(e) => setNotifTitle(e.target.value)}
+                    className="w-full border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-blue-500 font-bold text-slate-800"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[10px] uppercase font-bold text-slate-400 mb-1">Short Description *</label>
+                  <textarea
+                    required
+                    rows={3}
+                    placeholder="Enter short details for users..."
+                    value={notifDesc}
+                    onChange={(e) => setNotifDesc(e.target.value)}
+                    className="w-full border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-blue-500 resize-none"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[10px] uppercase font-bold text-slate-400 mb-1">Redirection Link</label>
+                  <input
+                    type="text"
+                    placeholder="e.g. /dashboard or /free-resources"
+                    value={notifLink}
+                    onChange={(e) => setNotifLink(e.target.value)}
+                    className="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-blue-500"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={notifPushLoading}
+                  className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white font-bold text-xs py-2.5 rounded-xl shadow-md transition-all active:scale-98"
+                >
+                  {notifPushLoading ? "Broadcasting..." : "🚀 Push Global Notification"}
+                </button>
+              </form>
             </div>
           </div>
         )}
