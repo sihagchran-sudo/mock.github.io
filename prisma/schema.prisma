@@ -149,6 +149,8 @@ model FreeResource {
   fileSize    String?  // e.g. "1.2 MB"
   source      String?  // e.g. "NCERT Official", "Official Board", "Internet Archive"
   isApproved  Boolean  @default(false)
+  downloads   Int      @default(0)
+  rating      Float?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }

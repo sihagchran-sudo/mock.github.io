@@ -49,6 +49,8 @@ export default function AdminDashboardPage() {
     fileSize?: string;
     source?: string;
     isApproved: boolean;
+    downloads?: number;
+    rating?: number;
     createdAt?: string;
   }
   const [resources, setResources] = useState<FreeResource[]>([]);

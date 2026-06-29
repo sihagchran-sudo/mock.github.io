@@ -7,6 +7,8 @@ export interface FreeResource {
   fileSize?: string;
   source?: string;
   isApproved: boolean;
+  downloads?: number;
+  rating?: number;
   createdAt?: string;
 }
 

@@ -150,3 +150,32 @@ export async function DELETE(req: Request) {
     return NextResponse.json({ error: error.message || "Failed to delete resource." }, { status: 500 });
   }
 }
+
+export async function PUT(req: Request) {
+  try {
+    const body = await req.json();
+    const { id } = body;
+
+    if (!id) {
+      return NextResponse.json({ error: "Resource ID is required." }, { status: 400 });
+    }
+
+    let updated = null;
+    try {
+      updated = await prisma.freeResource.update({
+        where: { id },
+        data: {
+          downloads: {
+            increment: 1
+          }
+        }
+      });
+    } catch (e) {
+      // Database offline/unmigrated
+    }
+
+    return NextResponse.json({ success: true, resource: updated });
+  } catch (error: any) {
+    return NextResponse.json({ error: error.message || "Failed to increment downloads." }, { status: 500 });
+  }
+}
