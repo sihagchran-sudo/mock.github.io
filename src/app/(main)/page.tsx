@@ -191,60 +191,65 @@ const EXAM_CATEGORIES = [
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column */}
             <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6">
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-white/5 backdrop-blur-md text-blue-300 border border-white/10 shadow-lg">
-                🚀 Powered by AI Exam Analytics
-              </span>
+              {/* Chips Showcase */}
+              <div className="flex flex-wrap gap-2.5 mb-2 w-full">
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-bold bg-white/5 backdrop-blur-md text-slate-200 border border-white/10 shadow-lg select-none">
+                  🎯 99th percentile
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-bold bg-white/5 backdrop-blur-md text-slate-200 border border-white/10 shadow-lg select-none">
+                  📈 +95% accuracy
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-bold bg-white/5 backdrop-blur-md text-slate-200 border border-white/10 shadow-lg select-none">
+                  ⏱️ Real timer
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-bold bg-white/5 backdrop-blur-md text-slate-200 border border-white/10 shadow-lg select-none">
+                  🚀 AI exam analytics
+                </span>
+              </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-white">
-                Leave Exam Fear Behind. Practice in a{' '}
+                Leave exam fear behind.<br className="hidden sm:inline" />{' '}
                 <span className="bg-gradient-to-r from-amber-400 to-amber-500 bg-clip-text text-transparent">
-                  Real Test Environment.
+                  Practice for real.
                 </span>
               </h1>
               
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal max-w-2xl">
-                Feeling nervous about the final exam day is normal, but it shouldn't lower your score. Our platform gives you the exact feel of the real exam hall. Practice with the same screen layout, manage the real countdown timer, and test your speed before the actual day. We show you exactly where you are making mistakes so you can fix them fast. Build your confidence, manage your time better, and get ready to clear the cut-off.
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal max-w-xl">
+                Same screen layout, real countdown, instant mistake analysis — built to help you clear the cut-off with confidence.
               </p>
 
-              {/* Mobile/Tablet Badges Showcase */}
-              <div className="flex flex-wrap gap-2 py-2 lg:hidden w-full">
-                <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-3 py-1.5 shadow-sm text-white text-[10px] sm:text-xs font-semibold flex items-center gap-1.5">
-                  <span>🎯</span> 99th Percentile
-                </div>
-                <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-3 py-1.5 shadow-sm text-white text-[10px] sm:text-xs font-semibold flex items-center gap-1.5">
-                  <span>📈</span> Accuracy: +95%
-                </div>
-                <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-3 py-1.5 shadow-sm text-white text-[10px] sm:text-xs font-semibold flex items-center gap-1.5">
-                  <span>⏱️</span> Real-time Timer
-                </div>
-                <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-3 py-1.5 shadow-sm text-white text-[10px] sm:text-xs font-semibold flex items-center gap-1.5">
-                  <span>🏆</span> Cut-off Cleared
-                </div>
-              </div>
-
-              {/* Primary CTA Button */}
-              <div className="pt-2">
+              {/* Primary CTA Buttons Row */}
+              <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
                   href="#exams-grid"
                   className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-extrabold text-xs px-8 py-3.5 rounded-xl shadow-lg shadow-amber-500/10 hover:shadow-amber-500/25 active:scale-98 transition-all inline-flex items-center gap-2 cursor-pointer"
                 >
-                  🚀 Start Free Practice
+                  Start free mock test →
+                </Link>
+                <Link
+                  href="#simulator-section"
+                  className="bg-white/5 hover:bg-white/10 text-white border border-white/10 font-extrabold text-xs px-8 py-3.5 rounded-xl transition-all active:scale-98 cursor-pointer flex items-center justify-center"
+                >
+                  Watch how it works
                 </Link>
               </div>
 
               {/* Exam Search Bar */}
               <div className="w-full max-w-lg relative pt-4">
-                <div className="flex shadow-2xl shadow-blue-950/20 rounded-xl overflow-hidden bg-white/5 backdrop-blur-md text-white border border-white/10 focus-within:ring-2 focus-within:ring-blue-500/30 focus-within:border-blue-500/40 transition-all">
-                  <span className="flex items-center justify-center pl-4 text-base">
+                <div className="flex items-center shadow-2xl shadow-blue-950/20 rounded-xl overflow-hidden bg-white/5 backdrop-blur-md text-white border border-white/10 focus-within:ring-2 focus-within:ring-blue-500/30 focus-within:border-blue-500/40 transition-all p-1">
+                  <span className="flex items-center justify-center pl-3 text-slate-400 text-sm">
                     🔍
                   </span>
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search exams (e.g. SBI PO, SSC CGL, RRB)..."
-                    className="w-full px-4 py-3.5 focus:outline-none bg-transparent text-white font-semibold placeholder:text-slate-500 text-sm sm:text-base text-left"
+                    placeholder="Search by exam name, e.g. SSC CGL, HSSC CET..."
+                    className="w-full px-3 py-2.5 focus:outline-none bg-transparent text-white font-semibold placeholder:text-slate-500 text-sm text-left"
                   />
+                  <button className="bg-slate-800 hover:bg-slate-750 text-white font-bold text-xs px-5 py-2.5 rounded-lg transition-colors cursor-pointer mr-1">
+                    Search
+                  </button>
                 </div>
 
                 {/* Live Search Suggestions Dropdown */}
@@ -273,9 +278,16 @@ const EXAM_CATEGORIES = [
               {/* Quick exam tags */}
               <div className="flex flex-wrap items-center gap-2.5 pt-2">
                 <span className="text-xs text-slate-500 font-bold">Popular:</span>
-                {popularExams.map(exam => (
+                {[
+                  { name: 'SBI PO', slug: 'sbi-po' },
+                  { name: 'SBI Clerk', slug: 'sbi-clerk' },
+                  { name: 'IBPS PO', slug: 'ibps-po' },
+                  { name: 'SSC CGL', slug: 'ssc-cgl' },
+                  { name: 'HSSC CET', slug: 'hssc-cet' },
+                  { name: 'RRB NTPC', slug: 'rrb-ntpc' },
+                ].map(exam => (
                   <Link
-                    key={exam.id}
+                    key={exam.slug}
                     href={`/exam/${exam.slug}`}
                     className="text-[11px] bg-white/5 hover:bg-white/10 hover:text-amber-400 text-slate-300 border border-white/8 font-semibold px-3.5 py-1.5 rounded-full transition-all"
                   >
@@ -285,50 +297,40 @@ const EXAM_CATEGORIES = [
               </div>
             </div>
 
-            {/* Right Column (Desktop Only Stats Card) */}
+            {/* Right Column (Desktop Only Stats Card - 2x2 layout) */}
             <div className="lg:col-span-5 hidden lg:flex flex-col items-center justify-center">
               <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-6 shadow-2xl w-full max-w-sm flex flex-col gap-6 relative overflow-hidden">
                 {/* Glow behind the stats card */}
                 <div className="absolute -top-10 -right-10 w-24 h-24 rounded-full bg-blue-500/20 blur-xl pointer-events-none"></div>
                 
-                {/* Mock Tests Count */}
-                <div className="flex items-center gap-4">
-                  <span className="p-3.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-2xl flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
-                  </span>
-                  <div className="text-left">
-                    <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Mock Tests Available</div>
-                    <div className="text-xl font-black text-white mt-1.5">{mockTestsCount}+ Tests</div>
+                {/* 2x2 Grid of Stats */}
+                <div className="grid grid-cols-2 gap-x-6 gap-y-6">
+                  {/* Stat 1: 10M+ Tests Attempted */}
+                  <div className="flex flex-col items-start text-left">
+                    <span className="text-xl mb-1.5">🏆</span>
+                    <span className="text-xl sm:text-2xl font-black text-white leading-none">10M+</span>
+                    <span className="text-[10px] text-slate-400 font-bold mt-1 uppercase tracking-wide">Tests attempted</span>
                   </div>
-                </div>
 
-                {/* Selections This Year */}
-                <div className="flex items-center gap-4">
-                  <span className="p-3.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-2xl flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v5m-3 0h6m-6-14h6m-6 4h6m.5-4a2.5 2.5 0 110 5h-.5m-6-5a2.5 2.5 0 100 5h.5M12 3a9 9 0 00-9 9m18 0a9 9 0 00-9-9" />
-                    </svg>
-                  </span>
-                  <div className="text-left">
-                    <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Selections This Year</div>
-                    <div className="text-xl font-black text-amber-400 mt-1.5">{siteConfig.selectionsThisYear}+ Candidates</div>
+                  {/* Stat 2: 500+ Govt Exams */}
+                  <div className="flex flex-col items-start text-left">
+                    <span className="text-xl mb-1.5">🎓</span>
+                    <span className="text-xl sm:text-2xl font-black text-white leading-none">500+</span>
+                    <span className="text-[10px] text-slate-400 font-bold mt-1 uppercase tracking-wide">Govt exams covered</span>
                   </div>
-                </div>
 
-                {/* Active practicing users */}
-                <div className="flex items-center gap-4">
-                  <span className="p-3.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-2xl flex items-center justify-center relative shrink-0">
-                    <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span>
-                    <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-emerald-500 rounded-full"></span>
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </span>
-                  <div className="text-left">
-                    <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Practicing Right Now</div>
-                    <div className="text-xl font-black text-emerald-400 mt-1.5">{activeStudents} Students</div>
+                  {/* Stat 3: 4.8/5 User Rating */}
+                  <div className="flex flex-col items-start text-left">
+                    <span className="text-xl mb-1.5">⚡</span>
+                    <span className="text-xl sm:text-2xl font-black text-amber-400 leading-none">4.8/5</span>
+                    <span className="text-[10px] text-slate-400 font-bold mt-1 uppercase tracking-wide">User rating</span>
+                  </div>
+
+                  {/* Stat 4: 95% Avg Accuracy */}
+                  <div className="flex flex-col items-start text-left">
+                    <span className="text-xl mb-1.5">✅</span>
+                    <span className="text-xl sm:text-2xl font-black text-emerald-400 leading-none">95%</span>
+                    <span className="text-[10px] text-slate-400 font-bold mt-1 uppercase tracking-wide">Avg. accuracy gain</span>
                   </div>
                 </div>
 
@@ -342,7 +344,7 @@ const EXAM_CATEGORIES = [
                   </div>
                   <div className="text-left">
                     <div className="text-[11px] font-black text-white leading-tight">Trusted by 10M+ Aspirants</div>
-                    <div className="text-[9px] text-slate-400 leading-none mt-0.5">Across India</div>
+                    <div className="text-[9px] text-slate-400 leading-none mt-0.5">Nationwide</div>
                   </div>
                 </div>
               </div>
@@ -354,45 +356,40 @@ const EXAM_CATEGORIES = [
       {/* 2. STATS STRIP */}
       <div className="max-w-5xl mx-auto px-4 -mt-10 sm:-mt-12 relative z-20 select-none">
         <div className="bg-gradient-to-r from-slate-900 to-blue-950 border border-white/10 rounded-2xl p-5 shadow-2xl backdrop-blur-md">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 divide-y md:divide-y-0 md:divide-x divide-white/5">
-            {/* Stat 1: Mock Tests */}
-            <div className="flex items-center justify-center gap-3.5 py-2.5 md:py-0 md:px-6">
-              <span className="p-2.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-xl flex items-center justify-center shrink-0">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 divide-y-0 divide-x-0 md:divide-x divide-white/5">
+            {/* Stat 1: 10M+ Tests Attempted */}
+            <div className="flex items-center justify-center gap-3 py-2 md:px-4">
+              <span className="text-lg">🏆</span>
               <div className="text-left">
-                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Mock Tests Available</div>
-                <div className="text-base font-extrabold text-white mt-1">{mockTestsCount}+ Tests</div>
+                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Tests attempted</div>
+                <div className="text-base font-extrabold text-white mt-1">10M+</div>
               </div>
             </div>
 
-            {/* Stat 2: Selections */}
-            <div className="flex items-center justify-center gap-3.5 py-3.5 md:py-0 md:px-6">
-              <span className="p-2.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-xl flex items-center justify-center shrink-0">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v5m-3 0h6m-6-14h6m-6 4h6m.5-4a2.5 2.5 0 110 5h-.5m-6-5a2.5 2.5 0 100 5h.5M12 3a9 9 0 00-9 9m18 0a9 9 0 00-9-9" />
-                </svg>
-              </span>
+            {/* Stat 2: 500+ Govt Exams */}
+            <div className="flex items-center justify-center gap-3 py-2 md:px-4">
+              <span className="text-lg">🎓</span>
               <div className="text-left">
-                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Selections This Year</div>
-                <div className="text-base font-extrabold text-amber-400 mt-1">{siteConfig.selectionsThisYear}+ Candidates</div>
+                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Govt exams covered</div>
+                <div className="text-base font-extrabold text-white mt-1">500+</div>
               </div>
             </div>
 
-            {/* Stat 3: Active Students */}
-            <div className="flex items-center justify-center gap-3.5 py-2.5 md:py-0 md:px-6">
-              <span className="p-2.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-xl flex items-center justify-center relative shrink-0">
-                <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping"></span>
-                <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </span>
+            {/* Stat 3: 4.8/5 User Rating */}
+            <div className="flex items-center justify-center gap-3 py-2 md:px-4">
+              <span className="text-lg">⚡</span>
               <div className="text-left">
-                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Practicing Right Now</div>
-                <div className="text-base font-extrabold text-emerald-400 mt-1">{activeStudents} Students</div>
+                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">User rating</div>
+                <div className="text-base font-extrabold text-amber-400 mt-1">4.8/5</div>
+              </div>
+            </div>
+
+            {/* Stat 4: 95% Avg Accuracy */}
+            <div className="flex items-center justify-center gap-3 py-2 md:px-4">
+              <span className="text-lg">✅</span>
+              <div className="text-left">
+                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Avg. accuracy gain</div>
+                <div className="text-base font-extrabold text-emerald-400 mt-1">95%</div>
               </div>
             </div>
           </div>
