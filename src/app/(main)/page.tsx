@@ -356,40 +356,45 @@ const EXAM_CATEGORIES = [
       {/* 2. STATS STRIP */}
       <div className="max-w-5xl mx-auto px-4 -mt-10 sm:-mt-12 relative z-20 select-none">
         <div className="bg-gradient-to-r from-slate-900 to-blue-950 border border-white/10 rounded-2xl p-5 shadow-2xl backdrop-blur-md">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 divide-y-0 divide-x-0 md:divide-x divide-white/5">
-            {/* Stat 1: 10M+ Tests Attempted */}
-            <div className="flex items-center justify-center gap-3 py-2 md:px-4">
-              <span className="text-lg">🏆</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 divide-y md:divide-y-0 md:divide-x divide-white/5">
+            {/* Stat 1: Mock Tests */}
+            <div className="flex items-center justify-center gap-3.5 py-2.5 md:py-0 md:px-6">
+              <span className="p-2.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-xl flex items-center justify-center shrink-0">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </span>
               <div className="text-left">
-                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Tests attempted</div>
-                <div className="text-base font-extrabold text-white mt-1">10M+</div>
+                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Mock Tests Available</div>
+                <div className="text-base font-extrabold text-white mt-1">{mockTestsCount}+ Tests</div>
               </div>
             </div>
 
-            {/* Stat 2: 500+ Govt Exams */}
-            <div className="flex items-center justify-center gap-3 py-2 md:px-4">
-              <span className="text-lg">🎓</span>
+            {/* Stat 2: Selections */}
+            <div className="flex items-center justify-center gap-3.5 py-3.5 md:py-0 md:px-6">
+              <span className="p-2.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-xl flex items-center justify-center shrink-0">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v5m-3 0h6m-6-14h6m-6 4h6m.5-4a2.5 2.5 0 110 5h-.5m-6-5a2.5 2.5 0 100 5h.5M12 3a9 9 0 00-9 9m18 0a9 9 0 00-9-9" />
+                </svg>
+              </span>
               <div className="text-left">
-                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Govt exams covered</div>
-                <div className="text-base font-extrabold text-white mt-1">500+</div>
+                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Selections This Year</div>
+                <div className="text-base font-extrabold text-amber-400 mt-1">{siteConfig.selectionsThisYear}+ Candidates</div>
               </div>
             </div>
 
-            {/* Stat 3: 4.8/5 User Rating */}
-            <div className="flex items-center justify-center gap-3 py-2 md:px-4">
-              <span className="text-lg">⚡</span>
+            {/* Stat 3: Active Students */}
+            <div className="flex items-center justify-center gap-3.5 py-2.5 md:py-0 md:px-6">
+              <span className="p-2.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-xl flex items-center justify-center relative shrink-0">
+                <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping"></span>
+                <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </span>
               <div className="text-left">
-                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">User rating</div>
-                <div className="text-base font-extrabold text-amber-400 mt-1">4.8/5</div>
-              </div>
-            </div>
-
-            {/* Stat 4: 95% Avg Accuracy */}
-            <div className="flex items-center justify-center gap-3 py-2 md:px-4">
-              <span className="text-lg">✅</span>
-              <div className="text-left">
-                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Avg. accuracy gain</div>
-                <div className="text-base font-extrabold text-emerald-400 mt-1">95%</div>
+                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Practicing Right Now</div>
+                <div className="text-base font-extrabold text-emerald-400 mt-1">{activeStudents} Students</div>
               </div>
             </div>
           </div>
