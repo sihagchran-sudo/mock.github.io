@@ -313,7 +313,7 @@ const EXAM_CATEGORIES = [
                   </span>
                   <div className="text-left">
                     <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Selections This Year</div>
-                    <div className="text-xl font-black text-amber-450 mt-1.5">{siteConfig.selectionsThisYear}+ Candidates</div>
+                    <div className="text-xl font-black text-amber-400 mt-1.5">{siteConfig.selectionsThisYear}+ Candidates</div>
                   </div>
                 </div>
 
@@ -328,7 +328,7 @@ const EXAM_CATEGORIES = [
                   </span>
                   <div className="text-left">
                     <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Practicing Right Now</div>
-                    <div className="text-xl font-black text-emerald-450 mt-1.5">{activeStudents} Students</div>
+                    <div className="text-xl font-black text-emerald-400 mt-1.5">{activeStudents} Students</div>
                   </div>
                 </div>
 
@@ -336,7 +336,7 @@ const EXAM_CATEGORIES = [
                 <div className="border-t border-white/5 pt-4 flex items-center gap-3 w-full">
                   <div className="flex -space-x-2 shrink-0">
                     <div className="w-8 h-8 rounded-full border border-slate-950 bg-blue-500 flex items-center justify-center text-[10px] font-bold text-white shadow-md select-none">A</div>
-                    <div className="w-8 h-8 rounded-full border border-slate-950 bg-emerald-550 flex items-center justify-center text-[10px] font-bold text-white shadow-md select-none">S</div>
+                    <div className="w-8 h-8 rounded-full border border-slate-950 bg-emerald-500 flex items-center justify-center text-[10px] font-bold text-white shadow-md select-none">S</div>
                     <div className="w-8 h-8 rounded-full border border-slate-950 bg-amber-500 flex items-center justify-center text-[10px] font-bold text-white shadow-md select-none">R</div>
                     <div className="w-8 h-8 rounded-full border border-slate-950 bg-purple-500 flex items-center justify-center text-[10px] font-bold text-white shadow-md select-none">P</div>
                   </div>
@@ -377,7 +377,7 @@ const EXAM_CATEGORIES = [
               </span>
               <div className="text-left">
                 <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Selections This Year</div>
-                <div className="text-base font-extrabold text-amber-450 mt-1">{siteConfig.selectionsThisYear}+ Candidates</div>
+                <div className="text-base font-extrabold text-amber-400 mt-1">{siteConfig.selectionsThisYear}+ Candidates</div>
               </div>
             </div>
 
@@ -392,7 +392,7 @@ const EXAM_CATEGORIES = [
               </span>
               <div className="text-left">
                 <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Practicing Right Now</div>
-                <div className="text-base font-extrabold text-emerald-450 mt-1">{activeStudents} Students</div>
+                <div className="text-base font-extrabold text-emerald-400 mt-1">{activeStudents} Students</div>
               </div>
             </div>
           </div>
