@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { CATEGORIES, EXAMS, MOCK_TESTS } from '@/mockData';
 import { BLOGS } from '@/blogData';
 import TestCard from '@/components/TestCard';
+import { siteConfig } from '@/siteConfig';
 
 const SYLLABUS_CATEGORIES = [
   { key: 'ALL', label: 'All Exams' },
@@ -24,8 +25,11 @@ export default function HomePage() {
   const [selectedExamCategory, setSelectedExamCategory] = useState('ALL');
   const [activeDetailsExam, setActiveDetailsExam] = useState<any | null>(null);
 
-  // Fetch updated blogs list from database
+  const [mockTestsCount, setMockTestsCount] = useState(MOCK_TESTS.length);
+  const [activeStudents, setActiveStudents] = useState(siteConfig.baseActiveStudents);
+
   useEffect(() => {
+    // Fetch updated blogs list from database
     const fetchBlogs = async () => {
       try {
         const res = await fetch("/api/admin/blog");
@@ -38,6 +42,38 @@ export default function HomePage() {
       }
     };
     fetchBlogs();
+
+    // Fetch mock test count dynamically
+    const fetchStats = async () => {
+      try {
+        const res = await fetch("/api/stats");
+        if (res.ok) {
+          const data = await res.json();
+          if (data.mockTestsCount) {
+            setMockTestsCount(data.mockTestsCount);
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load test count stats:", err);
+      }
+    };
+    fetchStats();
+
+    // Cosmetic animation for active students count (not a real analytics feed)
+    const interval = setInterval(() => {
+      setActiveStudents((prev) => {
+        const minBound = siteConfig.baseActiveStudents - 15;
+        const maxBound = siteConfig.baseActiveStudents + 15;
+        // Random drift between -8 and +8
+        const drift = Math.floor(Math.random() * 17) - 8;
+        let nextVal = prev + drift;
+        if (nextVal < minBound) nextVal = minBound + Math.floor(Math.random() * 5);
+        if (nextVal > maxBound) nextVal = maxBound - Math.floor(Math.random() * 5);
+        return nextVal;
+      });
+    }, 30000); // every 30 seconds
+
+    return () => clearInterval(interval);
   }, []);
 
   const EXAM_ICONS: Record<string, string> = {
@@ -120,149 +156,251 @@ const EXAM_CATEGORIES = [
 
   return (
     <div className="min-h-screen">
-       <section className="relative bg-hero text-white overflow-hidden py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-blue-950/50">
-        {/* Background Decorative Elements (Sleek light blue/indigo blur reflections) */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none -mr-40 -mt-40"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none -ml-20 -mb-20"></div>
+      {/* 1. HERO SECTION */}
+      <section className="relative bg-slate-950 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-950/50 via-slate-950 to-slate-950 text-white overflow-hidden py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-blue-950/40">
+        {/* Radial Glow Accents */}
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] rounded-full bg-blue-600/10 blur-[130px] pointer-events-none -mr-40 -mt-40"></div>
+        <div className="absolute bottom-10 left-1/3 w-[450px] h-[450px] rounded-full bg-amber-500/5 blur-[120px] pointer-events-none -ml-20 -mb-20"></div>
         
-        {/* Sleek diagonal grid pattern using pure CSS SVG to look highly premium on dark background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)] pointer-events-none"></div>
+        {/* Sleek diagonal grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)] pointer-events-none"></div>
 
         {/* Subtle 2D Motion Overlays (Absolute floating badges in background) */}
-        <div className="hidden lg:block absolute top-[18%] left-[6%] animate-float-slow pointer-events-none select-none z-0">
-          <div className="bg-white/8 border border-white/15 rounded-xl px-3.5 py-2.5 shadow-md text-white text-xs font-bold flex items-center gap-2">
+        <div className="hidden lg:block absolute top-[15%] left-[4%] animate-float-slow pointer-events-none select-none z-0">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 shadow-lg text-white text-xs font-semibold flex items-center gap-2">
             <span>🎯</span> 99th Percentile
           </div>
         </div>
-        <div className="hidden lg:block absolute bottom-[22%] left-[8%] animate-float-delay pointer-events-none select-none z-0">
-          <div className="bg-white/8 border border-white/15 rounded-xl px-4 py-2.5 shadow-md text-white text-xs font-bold flex items-center gap-2">
+        <div className="hidden lg:block absolute bottom-[25%] left-[5%] animate-float-delay pointer-events-none select-none z-0">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 shadow-lg text-white text-xs font-semibold flex items-center gap-2">
             <span>📈</span> Accuracy: +95%
           </div>
         </div>
-        <div className="hidden lg:block absolute top-[22%] right-[6%] animate-float-delay pointer-events-none select-none z-0">
-          <div className="bg-white/8 border border-white/15 rounded-xl px-4 py-2.5 shadow-md text-white text-xs font-bold flex items-center gap-2">
+        <div className="hidden lg:block absolute top-[18%] right-[40%] animate-float-delay pointer-events-none select-none z-0">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 shadow-lg text-white text-xs font-semibold flex items-center gap-2">
             <span>⏱️</span> Real-time Timer
           </div>
         </div>
-        <div className="hidden lg:block absolute bottom-[26%] right-[8%] animate-float-slow pointer-events-none select-none z-0">
-          <div className="bg-white/8 border border-white/15 rounded-xl px-4 py-2.5 shadow-md text-white text-xs font-bold flex items-center gap-2">
+        <div className="hidden lg:block absolute bottom-[28%] right-[38%] animate-float-slow pointer-events-none select-none z-0">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 shadow-lg text-white text-xs font-semibold flex items-center gap-2">
             <span>🏆</span> Cut-off Cleared
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 text-blue-300 border border-blue-500/20 mb-6 shadow-sm">
-            🚀 Powered by AI Exam Analytics
-          </span>
-          
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight max-w-3xl text-white">
-            Leave Exam Fear Behind. Practice in a{' '}
-            <span className="bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">
-              Real Test Environment.
-            </span>
-          </h1>
-          
-          <p className="text-base sm:text-lg text-[#cfe0ff] max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
-            Feeling nervous about the final exam day is normal, but it shouldn't lower your score. Our platform gives you the exact feel of the real exam hall. Practice with the same screen layout, manage the real countdown timer, and test your speed before the actual day. We show you exactly where you are making mistakes so you can fix them fast. Build your confidence, manage your time better, and get ready to clear the cut-off.
-          </p>
-
-          {/* Mobile/Tablet Badges Showcase */}
-          <div className="flex flex-wrap justify-center gap-2.5 mb-8 lg:hidden max-w-2xl mx-auto z-10">
-            <div className="bg-white/8 border border-white/15 rounded-xl px-3 py-2 shadow-sm text-white text-[10px] sm:text-xs font-bold flex items-center gap-1.5">
-              <span>🎯</span> 99th Percentile
-            </div>
-            <div className="bg-white/8 border border-white/15 rounded-xl px-3 py-2 shadow-sm text-white text-[10px] sm:text-xs font-bold flex items-center gap-1.5">
-              <span>📈</span> Accuracy: +95%
-            </div>
-            <div className="bg-white/8 border border-white/15 rounded-xl px-3 py-2 shadow-sm text-white text-[10px] sm:text-xs font-bold flex items-center gap-1.5">
-              <span>⏱️</span> Real-time Timer
-            </div>
-            <div className="bg-white/8 border border-white/15 rounded-xl px-3 py-2 shadow-sm text-white text-[10px] sm:text-xs font-bold flex items-center gap-1.5">
-              <span>🏆</span> Cut-off Cleared
-            </div>
-          </div>
-
-          {/* Exam Search Bar */}
-          <div className="w-full max-w-lg relative mb-8">
-            <div className="flex shadow-2xl shadow-blue-950/50 rounded-xl overflow-hidden bg-white text-slate-800 border border-slate-200/50 focus-within:ring-2 focus-within:ring-blue-500/40 transition-all">
-              <span className="flex items-center justify-center pl-4 bg-white text-base">
-                🔍
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Column */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-white/5 backdrop-blur-md text-blue-300 border border-white/10 shadow-lg">
+                🚀 Powered by AI Exam Analytics
               </span>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search exams (e.g. SBI PO, SSC CGL, RRB)..."
-                className="w-full px-4 py-3.5 focus:outline-none text-slate-800 font-semibold placeholder:text-slate-400 text-sm sm:text-base text-left"
-              />
-            </div>
+              
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-white">
+                Leave Exam Fear Behind. Practice in a{' '}
+                <span className="bg-gradient-to-r from-amber-400 to-amber-500 bg-clip-text text-transparent">
+                  Real Test Environment.
+                </span>
+              </h1>
+              
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal max-w-2xl">
+                Feeling nervous about the final exam day is normal, but it shouldn't lower your score. Our platform gives you the exact feel of the real exam hall. Practice with the same screen layout, manage the real countdown timer, and test your speed before the actual day. We show you exactly where you are making mistakes so you can fix them fast. Build your confidence, manage your time better, and get ready to clear the cut-off.
+              </p>
 
-            {/* Live Search Suggestions Dropdown */}
-            {searchQuery && (
-              <div className="absolute left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-slate-100 z-50 text-slate-800 max-h-60 overflow-y-auto text-left divide-y divide-slate-50">
-                {filteredExams.length > 0 ? (
-                  filteredExams.map((exam) => (
-                    <Link
-                      key={exam.id}
-                      href={`/exam/${exam.slug}`}
-                      className="block px-5 py-3.5 hover:bg-slate-50 transition-colors"
-                    >
-                      <div className="font-semibold text-slate-800 text-sm">{exam.name}</div>
-                      <div className="text-xs text-slate-500 mt-0.5">{exam.description}</div>
-                    </Link>
-                  ))
-                ) : (
-                  <div className="px-5 py-4 text-sm text-slate-400 italic text-center">
-                    No exams found matching your search.
+              {/* Mobile/Tablet Badges Showcase */}
+              <div className="flex flex-wrap gap-2 py-2 lg:hidden w-full">
+                <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-3 py-1.5 shadow-sm text-white text-[10px] sm:text-xs font-semibold flex items-center gap-1.5">
+                  <span>🎯</span> 99th Percentile
+                </div>
+                <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-3 py-1.5 shadow-sm text-white text-[10px] sm:text-xs font-semibold flex items-center gap-1.5">
+                  <span>📈</span> Accuracy: +95%
+                </div>
+                <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-3 py-1.5 shadow-sm text-white text-[10px] sm:text-xs font-semibold flex items-center gap-1.5">
+                  <span>⏱️</span> Real-time Timer
+                </div>
+                <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-3 py-1.5 shadow-sm text-white text-[10px] sm:text-xs font-semibold flex items-center gap-1.5">
+                  <span>🏆</span> Cut-off Cleared
+                </div>
+              </div>
+
+              {/* Primary CTA Button */}
+              <div className="pt-2">
+                <Link
+                  href="#exams-grid"
+                  className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-extrabold text-xs px-8 py-3.5 rounded-xl shadow-lg shadow-amber-500/10 hover:shadow-amber-500/25 active:scale-98 transition-all inline-flex items-center gap-2 cursor-pointer"
+                >
+                  🚀 Start Free Practice
+                </Link>
+              </div>
+
+              {/* Exam Search Bar */}
+              <div className="w-full max-w-lg relative pt-4">
+                <div className="flex shadow-2xl shadow-blue-950/20 rounded-xl overflow-hidden bg-white/5 backdrop-blur-md text-white border border-white/10 focus-within:ring-2 focus-within:ring-blue-500/30 focus-within:border-blue-500/40 transition-all">
+                  <span className="flex items-center justify-center pl-4 text-base">
+                    🔍
+                  </span>
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search exams (e.g. SBI PO, SSC CGL, RRB)..."
+                    className="w-full px-4 py-3.5 focus:outline-none bg-transparent text-white font-semibold placeholder:text-slate-500 text-sm sm:text-base text-left"
+                  />
+                </div>
+
+                {/* Live Search Suggestions Dropdown */}
+                {searchQuery && (
+                  <div className="absolute left-0 right-0 mt-2 bg-slate-900 border border-white/10 rounded-xl shadow-2xl z-50 text-white max-h-60 overflow-y-auto text-left divide-y divide-white/5">
+                    {filteredExams.length > 0 ? (
+                      filteredExams.map((exam) => (
+                        <Link
+                          key={exam.id}
+                          href={`/exam/${exam.slug}`}
+                          className="block px-5 py-3.5 hover:bg-white/5 transition-colors"
+                        >
+                          <div className="font-semibold text-white text-sm">{exam.name}</div>
+                          <div className="text-xs text-slate-400 mt-0.5">{exam.description}</div>
+                        </Link>
+                      ))
+                    ) : (
+                      <div className="px-5 py-4 text-sm text-slate-500 italic text-center">
+                        No exams found matching your search.
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
-            )}
-          </div>
 
-          {/* Trust Ticker (Above the Fold, Centered) */}
-          <div className="w-full max-w-2xl flex flex-wrap justify-center gap-3 sm:gap-4 mb-8">
-            <div className="bg-white/8 border border-white/15 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
-              <span className="text-base sm:text-lg shrink-0">🏆</span>
-              <div>
-                <div className="text-[10px] text-[#cfe0ff] uppercase font-bold tracking-wider leading-none">Attempted</div>
-                <div className="text-sm sm:text-base font-extrabold text-amber-400 mt-0.5">10M+ Tests</div>
+              {/* Quick exam tags */}
+              <div className="flex flex-wrap items-center gap-2.5 pt-2">
+                <span className="text-xs text-slate-500 font-bold">Popular:</span>
+                {popularExams.map(exam => (
+                  <Link
+                    key={exam.id}
+                    href={`/exam/${exam.slug}`}
+                    className="text-[11px] bg-white/5 hover:bg-white/10 hover:text-amber-400 text-slate-300 border border-white/8 font-semibold px-3.5 py-1.5 rounded-full transition-all"
+                  >
+                    {exam.name}
+                  </Link>
+                ))}
               </div>
             </div>
-            <div className="bg-white/8 border border-white/15 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
-              <span className="text-base sm:text-lg shrink-0">🎓</span>
-              <div>
-                <div className="text-[10px] text-[#cfe0ff] uppercase font-bold tracking-wider leading-none">Exams Covered</div>
-                <div className="text-sm sm:text-base font-extrabold text-blue-300 mt-0.5">500+ Govt</div>
-              </div>
-            </div>
-            <div className="bg-white/8 border border-white/15 rounded-xl px-4 py-2.5 flex items-center gap-2.5 backdrop-blur-md shadow-sm hover:border-white/20 transition-all hover:bg-white/10 text-left">
-              <span className="text-base sm:text-lg shrink-0">⚡</span>
-              <div>
-                <div className="text-[10px] text-[#cfe0ff] uppercase font-bold tracking-wider leading-none">User Rating</div>
-                <div className="text-sm sm:text-base font-extrabold text-emerald-400 mt-0.5">4.8 / 5.0</div>
-              </div>
-            </div>
-          </div>
 
-          {/* Quick exam tags */}
-          <div className="flex flex-wrap justify-center items-center gap-2.5">
-            <span className="text-xs text-slate-400 font-bold">Popular:</span>
-            {popularExams.map(exam => (
-              <Link
-                key={exam.id}
-                href={`/exam/${exam.slug}`}
-                className="text-xs bg-white/10 hover:bg-white/20 hover:text-amber-300 text-slate-200 border border-white/10 font-semibold px-3.5 py-1.5 rounded-full transition-all"
-              >
-                {exam.name}
-              </Link>
-            ))}
+            {/* Right Column (Desktop Only Stats Card) */}
+            <div className="lg:col-span-5 hidden lg:flex flex-col items-center justify-center">
+              <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-6 shadow-2xl w-full max-w-sm flex flex-col gap-6 relative overflow-hidden">
+                {/* Glow behind the stats card */}
+                <div className="absolute -top-10 -right-10 w-24 h-24 rounded-full bg-blue-500/20 blur-xl pointer-events-none"></div>
+                
+                {/* Mock Tests Count */}
+                <div className="flex items-center gap-4">
+                  <span className="p-3.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-2xl flex items-center justify-center shrink-0">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </span>
+                  <div className="text-left">
+                    <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Mock Tests Available</div>
+                    <div className="text-xl font-black text-white mt-1.5">{mockTestsCount}+ Tests</div>
+                  </div>
+                </div>
+
+                {/* Selections This Year */}
+                <div className="flex items-center gap-4">
+                  <span className="p-3.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-2xl flex items-center justify-center shrink-0">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v5m-3 0h6m-6-14h6m-6 4h6m.5-4a2.5 2.5 0 110 5h-.5m-6-5a2.5 2.5 0 100 5h.5M12 3a9 9 0 00-9 9m18 0a9 9 0 00-9-9" />
+                    </svg>
+                  </span>
+                  <div className="text-left">
+                    <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Selections This Year</div>
+                    <div className="text-xl font-black text-amber-450 mt-1.5">{siteConfig.selectionsThisYear}+ Candidates</div>
+                  </div>
+                </div>
+
+                {/* Active practicing users */}
+                <div className="flex items-center gap-4">
+                  <span className="p-3.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-2xl flex items-center justify-center relative shrink-0">
+                    <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span>
+                    <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-emerald-500 rounded-full"></span>
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </span>
+                  <div className="text-left">
+                    <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Practicing Right Now</div>
+                    <div className="text-xl font-black text-emerald-450 mt-1.5">{activeStudents} Students</div>
+                  </div>
+                </div>
+
+                {/* Overlapping trust indicators */}
+                <div className="border-t border-white/5 pt-4 flex items-center gap-3 w-full">
+                  <div className="flex -space-x-2 shrink-0">
+                    <div className="w-8 h-8 rounded-full border border-slate-950 bg-blue-500 flex items-center justify-center text-[10px] font-bold text-white shadow-md select-none">A</div>
+                    <div className="w-8 h-8 rounded-full border border-slate-950 bg-emerald-550 flex items-center justify-center text-[10px] font-bold text-white shadow-md select-none">S</div>
+                    <div className="w-8 h-8 rounded-full border border-slate-950 bg-amber-500 flex items-center justify-center text-[10px] font-bold text-white shadow-md select-none">R</div>
+                    <div className="w-8 h-8 rounded-full border border-slate-950 bg-purple-500 flex items-center justify-center text-[10px] font-bold text-white shadow-md select-none">P</div>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-[11px] font-black text-white leading-tight">Trusted by 10M+ Aspirants</div>
+                    <div className="text-[9px] text-slate-400 leading-none mt-0.5">Across India</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* 2. STATS STRIP */}
+      <div className="max-w-5xl mx-auto px-4 -mt-10 sm:-mt-12 relative z-20 select-none">
+        <div className="bg-gradient-to-r from-slate-900 to-blue-950 border border-white/10 rounded-2xl p-5 shadow-2xl backdrop-blur-md">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 divide-y md:divide-y-0 md:divide-x divide-white/5">
+            {/* Stat 1: Mock Tests */}
+            <div className="flex items-center justify-center gap-3.5 py-2.5 md:py-0 md:px-6">
+              <span className="p-2.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-xl flex items-center justify-center shrink-0">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </span>
+              <div className="text-left">
+                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Mock Tests Available</div>
+                <div className="text-base font-extrabold text-white mt-1">{mockTestsCount}+ Tests</div>
+              </div>
+            </div>
+
+            {/* Stat 2: Selections */}
+            <div className="flex items-center justify-center gap-3.5 py-3.5 md:py-0 md:px-6">
+              <span className="p-2.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-xl flex items-center justify-center shrink-0">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v5m-3 0h6m-6-14h6m-6 4h6m.5-4a2.5 2.5 0 110 5h-.5m-6-5a2.5 2.5 0 100 5h.5M12 3a9 9 0 00-9 9m18 0a9 9 0 00-9-9" />
+                </svg>
+              </span>
+              <div className="text-left">
+                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Selections This Year</div>
+                <div className="text-base font-extrabold text-amber-450 mt-1">{siteConfig.selectionsThisYear}+ Candidates</div>
+              </div>
+            </div>
+
+            {/* Stat 3: Active Students */}
+            <div className="flex items-center justify-center gap-3.5 py-2.5 md:py-0 md:px-6">
+              <span className="p-2.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-xl flex items-center justify-center relative shrink-0">
+                <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping"></span>
+                <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </span>
+              <div className="text-left">
+                <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-none">Practicing Right Now</div>
+                <div className="text-base font-extrabold text-emerald-450 mt-1">{activeStudents} Students</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* 2. Exams Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <section id="exams-grid" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="text-center md:text-left mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Target Your Exam Goal
