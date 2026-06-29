@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { prisma } from '@/lib/db';
 import fs from 'fs';
 import path from 'path';
 
@@ -54,6 +55,19 @@ export async function POST(req: Request) {
 
     if (!questionId || !newExplanation) {
       return NextResponse.json({ success: false, error: 'Missing questionId or newExplanation' }, { status: 400 });
+    }
+
+    // 1. Save override to the database SystemSetting table for instant production persistence
+    try {
+      const key = `exp_override_${questionId}`;
+      await prisma.systemSetting.upsert({
+        where: { key },
+        update: { value: newExplanation },
+        create: { key, value: newExplanation }
+      });
+      console.log(`Saved explanation override to database for question ${questionId}`);
+    } catch (dbErr) {
+      console.error('Failed to save override to database:', dbErr);
     }
 
     const dataFiles = [

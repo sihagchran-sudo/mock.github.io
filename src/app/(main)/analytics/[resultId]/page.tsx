@@ -30,6 +30,7 @@ export default function AnalyticsPage() {
   const [aiExplanations, setAiExplanations] = useState<Record<string, string>>({});
   const [localExplanations, setLocalExplanations] = useState<Record<string, string>>({});
   const [savingExplanation, setSavingExplanation] = useState<Record<string, boolean>>({});
+  const [dbOverrides, setDbOverrides] = useState<Record<string, string>>({});
 
   const handleGenerateAiExplanation = async (q: any) => {
     setLoadingAiExplanation(prev => ({ ...prev, [q.id]: true }));
@@ -92,6 +93,24 @@ export default function AnalyticsPage() {
       setSavingExplanation(prev => ({ ...prev, [qId]: false }));
     }
   };
+
+  // Load database explanation overrides on mount
+  useEffect(() => {
+    async function fetchOverrides() {
+      try {
+        const res = await fetch('/api/questions/overrides');
+        if (res.ok) {
+          const data = await res.json();
+          if (data.success && data.overrides) {
+            setDbOverrides(data.overrides);
+          }
+        }
+      } catch (err) {
+        console.error('Failed to load explanation overrides:', err);
+      }
+    }
+    fetchOverrides();
+  }, []);
 
   useEffect(() => {
     let isMounted = true;
@@ -726,7 +745,7 @@ export default function AnalyticsPage() {
                           </button>
                         </div>
                         <p className="mb-2.5 whitespace-pre-wrap">
-                          {renderFormattedText(localExplanations[q.id] || q.explanation)}
+                          {renderFormattedText(localExplanations[q.id] || dbOverrides[q.id] || q.explanation)}
                         </p>
                         <p className="text-[10px] text-slate-400 font-medium">
                           Section topic tags: {q.sectionName} &gt; {idx % 2 === 0 ? 'Algebra Arithmetic' : 'Reasoning Aptitude'}
