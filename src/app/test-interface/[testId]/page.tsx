@@ -5,6 +5,17 @@ import { useEffect, useState, use, useRef } from 'react';
 import { getTestById, getQuestionsForTest, gradeTestAttempt, UserResponse } from '@/mockData';
 import { useSession } from 'next-auth/react';
 
+const renderFormattedText = (text: string) => {
+  if (!text) return '';
+  const parts = text.split('**');
+  return parts.map((part, index) => {
+    if (index % 2 === 1) {
+      return <strong key={index} className="font-extrabold text-slate-900">{part}</strong>;
+    }
+    return part;
+  });
+};
+
 export default function TestInterfacePage() {
   const params = useParams();
   const router = useRouter();
@@ -382,7 +393,7 @@ export default function TestInterfacePage() {
 
               {/* Question Text */}
               <div className="text-slate-800 text-sm sm:text-base font-semibold leading-relaxed mb-6 sm:mb-8 whitespace-pre-wrap">
-                {currentQuestion.text}
+                {renderFormattedText(currentQuestion.text)}
               </div>
 
               {/* Options List */}

@@ -5,6 +5,17 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { getTestById, getQuestionsForTest, TestAttempt, INITIAL_ATTEMPTS } from '@/mockData';
 
+const renderFormattedText = (text: string) => {
+  if (!text) return '';
+  const parts = text.split('**');
+  return parts.map((part, index) => {
+    if (index % 2 === 1) {
+      return <strong key={index} className="font-extrabold text-slate-900">{part}</strong>;
+    }
+    return part;
+  });
+};
+
 export default function AnalyticsPage() {
   const params = useParams();
   const router = useRouter();
@@ -575,7 +586,7 @@ export default function AnalyticsPage() {
 
                 {/* Question text */}
                 <p className="text-slate-800 text-sm font-semibold mb-4 leading-relaxed whitespace-pre-wrap">
-                  {q.text}
+                  {renderFormattedText(q.text)}
                 </p>
 
                 {/* User choices options list visualizer */}
@@ -628,7 +639,7 @@ export default function AnalyticsPage() {
                   {isOpen && (
                     <div className="mt-3.5 p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-600 leading-relaxed shadow-inner">
                       <p className="font-bold text-slate-800 mb-1.5">Detailed Answer Explanation:</p>
-                      <p className="mb-2.5 whitespace-pre-wrap">{q.explanation}</p>
+                      <p className="mb-2.5 whitespace-pre-wrap">{renderFormattedText(q.explanation)}</p>
                       <p className="text-[10px] text-slate-400 font-medium">
                         Section topic tags: {q.sectionName} &gt; {idx % 2 === 0 ? 'Algebra Arithmetic' : 'Reasoning Aptitude'}
                       </p>
