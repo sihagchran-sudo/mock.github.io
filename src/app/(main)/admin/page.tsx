@@ -41,6 +41,8 @@ export default function AdminDashboardPage() {
   const [bannerLinkSetting, setBannerLinkSetting] = useState("");
   const [bannerVisibleSetting, setBannerVisibleSetting] = useState("true");
   const [bannerSaveLoading, setBannerSaveLoading] = useState(false);
+  const [apiKeysConfigSetting, setApiKeysConfigSetting] = useState("");
+  const [apiKeysSaveLoading, setApiKeysSaveLoading] = useState(false);
 
   // Custom Notification states
   const [notifTitle, setNotifTitle] = useState("");
@@ -444,6 +446,7 @@ export default function AdminDashboardPage() {
           setBannerTextSetting(data.config.banner_text || "");
           setBannerLinkSetting(data.config.banner_link || "");
           setBannerVisibleSetting(data.config.banner_visible || "true");
+          setApiKeysConfigSetting(data.config.api_keys_config || "");
         }
       }
     } catch (err) {
@@ -480,6 +483,42 @@ export default function AdminDashboardPage() {
       setError(err.message || "Failed to save banner settings.");
     } finally {
       setBannerSaveLoading(false);
+    }
+  };
+
+  const handleSaveApiKeysSettings = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setApiKeysSaveLoading(true);
+    setError("");
+    setSuccess("");
+    try {
+      // Validate that it is a valid JSON array
+      try {
+        const parsed = JSON.parse(apiKeysConfigSetting);
+        if (!Array.isArray(parsed)) {
+          throw new Error("Must be a JSON Array [ ... ]");
+        }
+      } catch (err) {
+        throw new Error("Invalid JSON Array format. Please make sure the JSON structure is perfectly valid.");
+      }
+
+      const secretKey = sessionStorage.getItem("admin_access_code") || ADMIN_SECRET;
+      const res = await fetch("/api/admin/config?secret=" + encodeURIComponent(secretKey), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key: "api_keys_config", value: apiKeysConfigSetting })
+      });
+      
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Failed to save API keys config.");
+      }
+
+      setSuccess("AI API Keys Configuration updated successfully in the database!");
+    } catch (err: any) {
+      setError(err.message || "Failed to save AI keys configuration.");
+    } finally {
+      setApiKeysSaveLoading(false);
     }
   };
 
@@ -1272,6 +1311,38 @@ export default function AdminDashboardPage() {
                   className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white font-bold text-xs py-2.5 rounded-xl shadow-md transition-all active:scale-98"
                 >
                   {notifPushLoading ? "Broadcasting..." : "🚀 Push Global Notification"}
+                </button>
+              </form>
+            </div>
+
+            {/* AI API Keys Configuration */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm h-fit lg:col-span-2">
+              <h2 className="text-sm font-extrabold text-slate-800 border-b border-slate-100 pb-3 mb-4 flex items-center gap-1.5">
+                <span>🔑 AI API Keys Configuration (Failover Control)</span>
+              </h2>
+              <form onSubmit={handleSaveApiKeysSettings} className="space-y-4">
+                <div>
+                  <label className="block text-[10px] uppercase font-bold text-slate-400 mb-1">
+                    API Keys JSON Config List
+                  </label>
+                  <textarea
+                    required
+                    rows={6}
+                    placeholder='Enter API keys JSON list e.g. [{"provider":"openrouter","apiKey":"sk-...","baseUrl":"...","model":"..."}]'
+                    value={apiKeysConfigSetting}
+                    onChange={(e) => setApiKeysConfigSetting(e.target.value)}
+                    className="w-full border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-blue-500 font-mono resize-y"
+                  />
+                  <p className="text-[10px] text-slate-450 mt-1.5 leading-relaxed">
+                    💡 <strong>Tip:</strong> Provide a valid JSON array of API keys. The first key in the list will be used primarily, and if it fails or returns an error, the system will automatically failover and retry using the subsequent keys in the list.
+                  </p>
+                </div>
+                <button
+                  type="submit"
+                  disabled={apiKeysSaveLoading}
+                  className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white font-bold text-xs py-2.5 px-6 rounded-xl shadow-md transition-all active:scale-98"
+                >
+                  {apiKeysSaveLoading ? "Saving Config..." : "💾 Save AI Keys Config"}
                 </button>
               </form>
             </div>

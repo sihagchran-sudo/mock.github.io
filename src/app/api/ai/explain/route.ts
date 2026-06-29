@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { prisma } from '@/lib/db';
 
 interface ApiKeyConfig {
   provider: string;
@@ -11,17 +12,44 @@ export async function POST(req: Request) {
   try {
     const { questionText, options, correctIndex, sectionName } = await req.json();
 
-    // Parse the API keys configuration array from env
-    const configStr = process.env.API_KEYS_CONFIG;
+    // 1. Try to read from Database setting
+    let configStr = '';
+    try {
+      const dbSetting = await prisma.systemSetting.findUnique({
+        where: { key: 'api_keys_config' }
+      });
+      if (dbSetting) {
+        configStr = dbSetting.value;
+      }
+    } catch (e) {
+      console.error('Failed to read api_keys_config from database:', e);
+    }
+
+    // 2. If DB is empty, try environment variable
+    if (!configStr && process.env.API_KEYS_CONFIG) {
+      configStr = process.env.API_KEYS_CONFIG;
+      // Automatically seed it to database for production persistence
+      try {
+        await prisma.systemSetting.upsert({
+          where: { key: 'api_keys_config' },
+          update: { value: configStr },
+          create: { key: 'api_keys_config', value: configStr }
+        });
+        console.log('Successfully seeded api_keys_config to database from env');
+      } catch (e) {
+        console.error('Failed to seed api_keys_config to database:', e);
+      }
+    }
+
     let configs: ApiKeyConfig[] = [];
 
     if (configStr) {
       try {
-        // Strip single quotes if they wrap the JSON array in env
+        // Strip single quotes if they wrap the JSON array
         const cleanConfigStr = configStr.trim().replace(/^'|'$/g, '');
         configs = JSON.parse(cleanConfigStr);
       } catch (err) {
-        console.error('Failed to parse API_KEYS_CONFIG JSON:', err);
+        console.error('Failed to parse api_keys_config JSON:', err);
       }
     }
 
@@ -29,7 +57,7 @@ export async function POST(req: Request) {
     if (configs.length === 0) {
       return NextResponse.json({ 
         success: false, 
-        error: 'No valid API keys configured in environment variables.' 
+        error: 'No valid API keys configured in database settings or environment variables.' 
       }, { status: 500 });
     }
 
