@@ -76,7 +76,8 @@ Correct Answer: Option ${correctLetter} (${options[correctIndex] || ''})`;
               { role: 'system', content: systemPrompt },
               { role: 'user', content: userMessage }
             ],
-            temperature: 0.3
+            temperature: 0.3,
+            max_tokens: 2000
           })
         });
 
