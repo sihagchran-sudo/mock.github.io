@@ -35,6 +35,19 @@ export default function TestInterfacePage() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const [isStarted, setIsStarted] = useState(false);
+  const [selectedLang, setSelectedLang] = useState<'english' | 'hindi'>('english');
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+
+  const splitText = (text: string) => {
+    if (!text) return '';
+    const parts = text.split(' / ');
+    if (parts.length > 1) {
+      return selectedLang === 'english' ? parts[0].trim() : parts[1].trim();
+    }
+    return text;
+  };
+
   const isSubmittingRef = useRef(false);
 
   // Sync isSubmittingRef with isSubmitting state
@@ -133,6 +146,7 @@ export default function TestInterfacePage() {
 
   // Tick timer
   useEffect(() => {
+    if (!isStarted) return;
     if (timeLeft <= 0) return;
     const timer = setInterval(() => {
       setTimeLeft(prev => {
@@ -146,7 +160,7 @@ export default function TestInterfacePage() {
       setTimeUsed(prev => prev + 1);
     }, 1000);
     return () => clearInterval(timer);
-  }, [timeLeft]);
+  }, [timeLeft, isStarted]);
 
   if (!test || questions.length === 0) {
     return (
@@ -235,6 +249,7 @@ export default function TestInterfacePage() {
     }
     setIsSubmitting(true);
     const attempt = gradeTestAttempt(test.id, responses, timeUsed);
+    (attempt as any).language = selectedLang;
     if (session?.user?.email) {
       attempt.userId = session.user.email;
     }
@@ -301,6 +316,156 @@ export default function TestInterfacePage() {
     }
     return `${base} ${colors} ${border}`;
   };
+
+  if (!isStarted) {
+    return (
+      <div className="min-h-screen bg-slate-100 flex items-center justify-center p-4 sm:p-6 overflow-y-auto select-none font-sans">
+        <div className="w-full max-w-3xl bg-white border border-slate-200 rounded-3xl shadow-xl overflow-hidden animate-fade-in flex flex-col md:flex-row">
+          {/* Left Column: Test Details */}
+          <div className="md:w-2/5 bg-slate-905 bg-slate-900 text-white p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20">
+                Mock Exam Instructions
+              </span>
+              <h1 className="text-xl sm:text-2xl font-black mt-4 leading-tight bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+                {test.title}
+              </h1>
+              <p className="text-xs text-slate-400 mt-2 font-medium">
+                Please read the instructions carefully before starting the exam.
+              </p>
+            </div>
+
+            <div className="space-y-4 my-8">
+              <div className="flex items-center gap-3">
+                <span className="text-lg">⏱️</span>
+                <div>
+                  <p className="text-[10px] font-bold uppercase text-slate-500">Duration</p>
+                  <p className="text-sm font-extrabold text-slate-200">{test.duration} Minutes</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-lg">❓</span>
+                <div>
+                  <p className="text-[10px] font-bold uppercase text-slate-500">Questions</p>
+                  <p className="text-sm font-extrabold text-slate-200">{questions.length} Questions</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-lg">🏆</span>
+                <div>
+                  <p className="text-[10px] font-bold uppercase text-slate-500">Total Marks</p>
+                  <p className="text-sm font-extrabold text-slate-200">{test.totalMarks} Marks</p>
+                </div>
+              </div>
+            </div>
+
+            <button
+              onClick={() => router.push('/')}
+              className="text-xs text-slate-400 hover:text-white font-bold flex items-center gap-1 transition-colors outline-none cursor-pointer self-start"
+            >
+              ← Go back to Home
+            </button>
+          </div>
+
+          {/* Right Column: Instructions & Options */}
+          <div className="md:w-3/5 p-6 sm:p-8 flex flex-col justify-between bg-white">
+            <div className="space-y-6">
+              <div>
+                <h2 className="text-xs font-black uppercase text-slate-400 tracking-wider mb-2.5">
+                  General Instructions / सामान्य निर्देश:
+                </h2>
+                <div className="text-xs text-slate-600 leading-relaxed space-y-2 h-44 overflow-y-auto pr-2 border-b border-slate-100 pb-4">
+                  <p>1. The exam contains multiple choice questions (MCQs) with 4 options.</p>
+                  <p>2. Each correct answer carries <strong>+1 mark</strong>.</p>
+                  {test.examId !== 'exam-hssc-police' ? (
+                    <p className="text-red-600 font-semibold">
+                      3. There is a negative marking of <strong>-0.25 marks</strong> for each wrong answer.
+                    </p>
+                  ) : (
+                    <p>3. There is <strong>no negative marking</strong> for wrong answers in this exam.</p>
+                  )}
+                  <p>4. You can navigate between sections and questions at any time.</p>
+                  <p>5. Do not refresh the page or click back button, otherwise your test progress will be lost.</p>
+                  <hr className="my-2 border-slate-100" />
+                  <p>1. परीक्षा में 4 विकल्पों के साथ बहुविकल्पीय प्रश्न (MCQ) शामिल हैं।</p>
+                  <p>2. प्रत्येक सही उत्तर के लिए <strong>+1 अंक</strong> दिए जाएंगे।</p>
+                  {test.examId !== 'exam-hssc-police' ? (
+                    <p className="text-red-650 font-semibold">
+                      3. प्रत्येक गलत उत्तर के लिए <strong>-0.25 अंक</strong> की नकारात्मक अंकन (Negative Marking) है।
+                    </p>
+                  ) : (
+                    <p>3. इस परीक्षा में गलत उत्तरों के लिए <strong>कोई नकारात्मक अंकन नहीं</strong> है।</p>
+                  )}
+                  <p>4. आप किसी भी समय अनुभागों और प्रश्नों के बीच नेविगेट कर सकते हैं।</p>
+                  <p>5. पेज को रिफ्रेश न करें या बैक बटन न दबाएं, अन्यथा आपकी परीक्षा की प्रगति समाप्त हो जाएगी।</p>
+                </div>
+              </div>
+
+              {/* Language Selection Selection */}
+              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-3">
+                <h3 className="text-xs font-extrabold text-slate-800 flex items-center gap-1.5">
+                  <span>🌐</span> Choose Exam Language / परीक्षा की भाषा चुनें:
+                </h3>
+                <div className="grid grid-cols-2 gap-3">
+                  <button
+                    onClick={() => setSelectedLang('english')}
+                    className={`py-2.5 rounded-xl text-xs font-bold border-2 transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+                      selectedLang === 'english'
+                        ? 'border-blue-600 bg-blue-50/50 text-blue-900 shadow-sm'
+                        : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50/50'
+                    }`}
+                  >
+                    <span className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center ${
+                      selectedLang === 'english' ? 'border-blue-600 bg-blue-600 text-white' : 'border-slate-300'
+                    }`}>
+                      {selectedLang === 'english' && <span className="w-1.5 h-1.5 bg-white rounded-full"></span>}
+                    </span>
+                    English Only
+                  </button>
+                  <button
+                    onClick={() => setSelectedLang('hindi')}
+                    className={`py-2.5 rounded-xl text-xs font-bold border-2 transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+                      selectedLang === 'hindi'
+                        ? 'border-blue-600 bg-blue-50/50 text-blue-900 shadow-sm'
+                        : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50/50'
+                    }`}
+                  >
+                    <span className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center ${
+                      selectedLang === 'hindi' ? 'border-blue-600 bg-blue-600 text-white' : 'border-slate-300'
+                    }`}>
+                      {selectedLang === 'hindi' && <span className="w-1.5 h-1.5 bg-white rounded-full"></span>}
+                    </span>
+                    Hindi / हिंदी
+                  </button>
+                </div>
+              </div>
+
+              {/* Consent Agreement Checkbox */}
+              <label className="flex items-start gap-2.5 cursor-pointer select-none">
+                <input
+                  type="checkbox"
+                  checked={agreedToTerms}
+                  onChange={(e) => setAgreedToTerms(e.target.checked)}
+                  className="w-4 h-4 mt-0.5 border-slate-300 rounded text-blue-600 focus:ring-blue-500 cursor-pointer"
+                />
+                <span className="text-[10px] text-slate-500 font-semibold leading-normal">
+                  I have read and understood all the instructions and agree to follow them. / मैंने सभी निर्देशों को पढ़ और समझ लिया है और मैं उनका पालन करने के लिए सहमत हूँ।
+                </span>
+              </label>
+            </div>
+
+            <button
+              disabled={!agreedToTerms}
+              onClick={() => setIsStarted(true)}
+              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:from-slate-300 disabled:to-slate-300 disabled:opacity-50 text-white text-sm font-extrabold py-3.5 rounded-2xl shadow-lg disabled:shadow-none hover:shadow-xl transition-all disabled:cursor-not-allowed cursor-pointer tracking-wider uppercase mt-6 active:scale-98"
+            >
+              Start Test / टेस्ट शुरू करें 🚀
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-50 select-none flex flex-col h-screen overflow-hidden">
@@ -393,7 +558,7 @@ export default function TestInterfacePage() {
 
               {/* Question Text */}
               <div className="text-slate-800 text-sm sm:text-base font-semibold leading-relaxed mb-6 sm:mb-8 whitespace-pre-wrap">
-                {renderFormattedText(currentQuestion.text)}
+                {renderFormattedText(splitText(currentQuestion.text))}
               </div>
 
               {/* Options List */}
@@ -415,7 +580,7 @@ export default function TestInterfacePage() {
                       }`}>
                         {String.fromCharCode(65 + oIdx)}
                       </span>
-                      {opt}
+                      {splitText(opt)}
                     </button>
                   );
                 })}

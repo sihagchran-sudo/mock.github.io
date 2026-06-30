@@ -31,6 +31,26 @@ export default function AnalyticsPage() {
   const [localExplanations, setLocalExplanations] = useState<Record<string, string>>({});
   const [savingExplanation, setSavingExplanation] = useState<Record<string, boolean>>({});
   const [dbOverrides, setDbOverrides] = useState<Record<string, string>>({});
+  const [selectedLang, setSelectedLang] = useState<'english' | 'hindi' | 'bilingual'>('bilingual');
+
+  useEffect(() => {
+    if (attempt) {
+      const savedLang = (attempt as any).language;
+      if (savedLang === 'english' || savedLang === 'hindi') {
+        setSelectedLang(savedLang);
+      }
+    }
+  }, [attempt]);
+
+  const splitText = (text: string) => {
+    if (!text) return '';
+    if (selectedLang === 'bilingual') return text;
+    const parts = text.split(' / ');
+    if (parts.length > 1) {
+      return selectedLang === 'english' ? parts[0].trim() : parts[1].trim();
+    }
+    return text;
+  };
 
   const handleGenerateAiExplanation = async (q: any) => {
     setLoadingAiExplanation(prev => ({ ...prev, [q.id]: true }));
@@ -627,10 +647,36 @@ export default function AnalyticsPage() {
 
       {/* 5. Question & Explanation Accordion */}
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-        <div className="border-b border-slate-200 bg-slate-50/50 px-6 py-4">
+        <div className="border-b border-slate-200 bg-slate-50/50 px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <h3 className="font-bold text-slate-800 text-sm">
             Question Paper Review & Step-by-Step Solutions
           </h3>
+          <div className="flex bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-[10px] font-bold self-start sm:self-auto">
+            <button
+              onClick={() => setSelectedLang('bilingual')}
+              className={`px-2.5 py-1 rounded transition-all cursor-pointer ${
+                selectedLang === 'bilingual' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              Bilingual
+            </button>
+            <button
+              onClick={() => setSelectedLang('english')}
+              className={`px-2.5 py-1 rounded transition-all cursor-pointer ${
+                selectedLang === 'english' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              English
+            </button>
+            <button
+              onClick={() => setSelectedLang('hindi')}
+              className={`px-2.5 py-1 rounded transition-all cursor-pointer ${
+                selectedLang === 'hindi' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              हिंदी
+            </button>
+          </div>
         </div>
 
         <div className="divide-y divide-slate-100 p-4">
@@ -672,7 +718,7 @@ export default function AnalyticsPage() {
 
                 {/* Question text */}
                 <p className="text-slate-800 text-sm font-semibold mb-4 leading-relaxed whitespace-pre-wrap">
-                  {renderFormattedText(q.text)}
+                  {renderFormattedText(splitText(q.text))}
                 </p>
 
                 {/* User choices options list visualizer */}
@@ -705,7 +751,7 @@ export default function AnalyticsPage() {
                         }`}>
                           {String.fromCharCode(65 + oIdx)}
                         </span>
-                        <span className="text-slate-700">{opt}</span>
+                        <span className="text-slate-700">{splitText(opt)}</span>
                       </div>
                     );
                   })}
@@ -745,7 +791,7 @@ export default function AnalyticsPage() {
                           </button>
                         </div>
                         <p className="mb-2.5 whitespace-pre-wrap">
-                          {renderFormattedText(localExplanations[q.id] || dbOverrides[q.id] || q.explanation)}
+                          {renderFormattedText(splitText(localExplanations[q.id] || dbOverrides[q.id] || q.explanation))}
                         </p>
                         <p className="text-[10px] text-slate-400 font-medium">
                           Section topic tags: {q.sectionName} &gt; {idx % 2 === 0 ? 'Algebra Arithmetic' : 'Reasoning Aptitude'}
