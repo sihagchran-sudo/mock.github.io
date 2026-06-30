@@ -156,6 +156,28 @@ const BASE_MOCK_TESTS: Test[] = [
   { id: 'test-hssc-cet-full-4', title: 'HSSC CET (Group D) - Full Mock Test 4', duration: 105, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Medium' },
   { id: 'test-hssc-cet-full-5', title: 'HSSC CET (Group D) - Full Mock Test 5 (Expert)', duration: 105, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Hard' },
   { id: 'test-hssc-cet-full-6', title: 'HSSC CET (Group D) - Full Mock Test 6 (Premium)', duration: 105, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Hard', isExpert: true, isNew: true },
+
+  // SSC CGL Tier 1 Mock Tests from Pinnacle Book (20 Mocks)
+  { id: 'test-ssc-cgl-full-3201', title: 'SSC CGL Tier 1 - Mock Test 3201 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium', isExpert: true, isNew: true },
+  { id: 'test-ssc-cgl-full-3202', title: 'SSC CGL Tier 1 - Mock Test 3202 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium', isExpert: true },
+  { id: 'test-ssc-cgl-full-3203', title: 'SSC CGL Tier 1 - Mock Test 3203 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3204', title: 'SSC CGL Tier 1 - Mock Test 3204 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3205', title: 'SSC CGL Tier 1 - Mock Test 3205 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3209', title: 'SSC CGL Tier 1 - Mock Test 3209 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3211', title: 'SSC CGL Tier 1 - Mock Test 3211 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3216', title: 'SSC CGL Tier 1 - Mock Test 3216 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3218', title: 'SSC CGL Tier 1 - Mock Test 3218 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3264', title: 'SSC CGL Tier 1 - Mock Test 3264 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3267', title: 'SSC CGL Tier 1 - Mock Test 3267 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3272', title: 'SSC CGL Tier 1 - Mock Test 3272 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3273', title: 'SSC CGL Tier 1 - Mock Test 3273 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3278', title: 'SSC CGL Tier 1 - Mock Test 3278 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3279', title: 'SSC CGL Tier 1 - Mock Test 3279 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3280', title: 'SSC CGL Tier 1 - Mock Test 3280 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3283', title: 'SSC CGL Tier 1 - Mock Test 3283 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3287', title: 'SSC CGL Tier 1 - Mock Test 3287 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3288', title: 'SSC CGL Tier 1 - Mock Test 3288 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' },
+  { id: 'test-ssc-cgl-full-3294', title: 'SSC CGL Tier 1 - Mock Test 3294 (Pinnacle)', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100, difficulty: 'Medium' }
 ];
 
 // Dynamically generate mock test suites for only specified exams
