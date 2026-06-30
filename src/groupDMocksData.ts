@@ -446,7 +446,7 @@ export const GROUP_D_CUSTOM_MOCKS: Record<string, Question[]> = {
       "45 years / 45 वर्ष"
     ],
     "correctIndex": 1,
-    "explanation": "Correct Answer: B\n\nDetailed Explanation & Step-by-step Solution:\nTotal number of persons (24 students + 1 teacher) = 25\nAverage age of 25 persons = 16 years\nTotal age of 25 persons = 25 × 16 = 400 years\n\nWhen the teacher is excluded:\nRemaining number of persons = 24 students\nNew average age = 16 - 1 = 15 years\nTotal age of 24 students = 24 × 15 = 360 years\n\nTeacher's age = (Total age of 25 persons) - (Total age of 24 students)\nTeacher's age = 400 - 360 = 40 years.\n\nShortcut Method:\nTeacher's age = Old Average + (New strength × Decrease in Average)\nTeacher's age = 16 + (24 × 1) = 16 + 24 = 40 years.\n\nCommon Mistakes:\nMultiplying 24 by 16 instead of 25 when calculating the initial total age, or forgetting to decrease the average by 1 year.\n\nExtra Learning Point:\nWhen an individual leaves a group and the average decreases, the excluded individual's value is greater than the old average.\n\nPYQ Connection:\nAverage age inclusion/exclusion questions are a standard pattern in state government and central examinations.",
+    "explanation": "Correct Answer: B / सही उत्तर: B\n\nDetailed Explanation & Step-by-step Solution: / विस्तृत व्याख्या और चरण-दर-चरण समाधान:\nTotal number of persons (24 students + 1 teacher) = 25 / कुल व्यक्तियों की संख्या (24 छात्र + 1 शिक्षक) = 25\nAverage age of 25 persons = 16 years / 25 व्यक्तियों की औसत आयु = 16 वर्ष\nTotal age of 25 persons = 25 × 16 = 400 years / 25 व्यक्तियों की कुल आयु = 25 × 16 = 400 वर्ष\n\nWhen the teacher is excluded: / जब शिक्षक को बाहर रखा जाता है:\nRemaining number of persons = 24 students / शेष व्यक्तियों की संख्या = 24 छात्र\nNew average age = 16 - 1 = 15 years / नई औसत आयु = 16 - 1 = 15 वर्ष\nTotal age of 24 students = 24 × 15 = 360 years / 24 छात्रों की कुल आयु = 24 × 15 = 360 वर्ष\n\nTeacher's age = (Total age of 25 persons) - (Total age of 24 students) / शिक्षक की आयु = (25 व्यक्तियों की कुल आयु) - (24 छात्रों की कुल आयु)\nTeacher's age = 400 - 360 = 40 years / शिक्षक की आयु = 400 - 360 = 40 वर्ष\n\nShortcut Method: / त्वरित विधि:\nTeacher's age = Old Average + (New strength × Decrease in Average) / शिक्षक की आयु = पुराना औसत + (नई संख्या × औसत में कमी)\nTeacher's age = 16 + (24 × 1) = 16 + 24 = 40 years / शिक्षक की आयु = 16 + (24 × 1) = 16 + 24 = 40 वर्ष\n\nCommon Mistakes: / सामान्य गलतियाँ:\nMultiplying 24 by 16 instead of 25 when calculating the initial total age, or forgetting to decrease the average by 1 year. / प्रारंभिक कुल आयु की गणना करते समय 25 के बजाय 24 को 16 से गुणा करना, या औसत में 1 वर्ष की कमी करना भूल जाना।\n\nExtra Learning Point: / अतिरिक्त बिंदु:\nWhen an individual leaves a group and the average decreases, the excluded individual's value is greater than the old average. / जब कोई व्यक्ति समूह छोड़ता है और औसत घट जाता है, तो बाहर किए गए व्यक्ति का मान पुराने औसत से अधिक होता है।\n\nPYQ Connection: / विगत वर्षों के प्रश्न का संबंध:\nAverage age inclusion/exclusion questions are a standard pattern in state government and central examinations. / औसत आयु में शामिल होने/बाहर रखने से संबंधित प्रश्न राज्य सरकार और केंद्र की परीक्षाओं में एक मानक पैटर्न हैं।",
     "sectionName": "Quantitative Aptitude",
     "testId": "test-hssc-cet-full-6"
   },
@@ -1054,7 +1054,7 @@ export const GROUP_D_CUSTOM_MOCKS: Record<string, Question[]> = {
   },
   {
     "id": "q-hssc-cet-m6-76",
-    "text": "Which ancient site in Haryana has yielded evidence of a pre-Harappan settlement (Hakra Ware culture) dating back to the 8th-7th millennium BCE, making it the oldest discovered Indus Valley Civilisation site in the Indian subcontinent?\nहरियाणा के किस प्राचीन स्थल से 8वीं-7वीं सहस्राब्दी ईसा पूर्व की पूर्व-हड़प्पा बस्ती (हाकरा वेयर संस्कृति) के साक्ष्य मिले हैं, जो इसे भारतीय उपमहाद्वीप में खोजा गया सबसे पुराना सिंधु घाटी सभ्यता का स्थल बनाता है?",
+    "text": "Which ancient site in Haryana has yielded evidence of a pre-Harappan settlement (Hakra Ware culture) dating back to the 8th-7th millennium BCE, making it the oldest discovered Indus Valley Civilisation site in the Indian subcontinent? / हरियाणा के किस प्राचीन स्थल से 8वीं-7वीं सहस्राब्दी ईसा पूर्व की पूर्व-हड़प्पा बस्ती (हाकरा वेयर संस्कृति) के साक्ष्य मिले हैं, जो इसे भारतीय उपमहाद्वीप में खोजा गया सबसे पुराना सिंधु घाटी सभ्यता का स्थल बनाता है?",
     "options": [
       "Rakhigarhi / राखीगढ़ी",
       "Banawali / बनावली",
@@ -1068,7 +1068,7 @@ export const GROUP_D_CUSTOM_MOCKS: Record<string, Question[]> = {
   },
   {
     "id": "q-hssc-cet-m6-77",
-    "text": "Consider the following statements regarding the 1857 revolt in Haryana and select the correct option:\nStatement I: Rao Tula Ram led the revolt against the British from the Rewari-Ahirwal region.\nStatement II: Nawab Abdur Rahman Khan led the revolt from Jhajjar and was later hanged by the British in Delhi.\nStatement III: Raja Nahar Singh led the revolt from Ballabhgarh and was executed on his birthday in January 1858.\n\nनिम्नलिखित कथनों पर विचार कीजिए और सही विकल्प का चयन कीजिए:\nकथन I: राव तुलाराम ने रेवाड़ी-अहीरवाल क्षेत्र से अंग्रेजों के खिलाफ विद्रोह का नेतृत्व किया।\nकथन II: नवाब अब्दुर रहमान खान ने झज्जर से विद्रोह का नेतृत्व किया और बाद में अंग्रेजों द्वारा उन्हें दिल्ली में फांसी दे दी गई।\nकथन III: राजा नाहर सिंह ने बल्लभगढ़ से विद्रोह का नेतृत्व किया और जनवरी 1858 में उनके जन्मदिन पर उन्हें फांसी दी गई थी।",
+    "text": "Consider the following statements regarding the 1857 revolt in Haryana and select the correct option: / निम्नलिखित कथनों पर विचार कीजिए और सही विकल्प का चयन कीजिए:\nStatement I: Rao Tula Ram led the revolt against the British from the Rewari-Ahirwal region. / कथन I: राव तुलाराम ने रेवाड़ी-अहीरवाल क्षेत्र से अंग्रेजों के खिलाफ विद्रोह का नेतृत्व किया।\nStatement II: Nawab Abdur Rahman Khan led the revolt from Jhajjar and was later hanged by the British in Delhi. / कथन II: नवाब अब्दुर रहमान खान ने झज्जर से विद्रोह का नेतृत्व किया और बाद में अंग्रेजों द्वारा उन्हें दिल्ली में फांसी दे दी गई।\nStatement III: Raja Nahar Singh led the revolt from Ballabhgarh and was executed on his birthday in January 1858. / कथन III: राजा नाहर सिंह ने बल्लभगढ़ से विद्रोह का नेतृत्व किया और जनवरी 1858 में उनके जन्मदिन पर उन्हें फांसी दी गई थी।",
     "options": [
       "Only Statement I and II are correct / केवल कथन I और II सही हैं",
       "Only Statement II and III are correct / केवल कथन II और III सही हैं",
@@ -1082,7 +1082,7 @@ export const GROUP_D_CUSTOM_MOCKS: Record<string, Question[]> = {
   },
   {
     "id": "q-hssc-cet-m6-78",
-    "text": "The Battle of Karnal in 1739 was fought between Nadir Shah, the ruler of Persia, and which Mughal Emperor?\n1739 में करनाल की प्रसिद्ध लड़ाई फारस के शासक नादिर शाह और किस मुगल सम्राट के बीच लड़ी गई थी?",
+    "text": "The Battle of Karnal in 1739 was fought between Nadir Shah, the ruler of Persia, and which Mughal Emperor? / 1739 में करनाल की प्रसिद्ध लड़ाई फारस के शासक नादिर शाह और किस मुगल सम्राट के बीच लड़ी गई थी?",
     "options": [
       "Bahadur Shah I / बहादुर शाह प्रथम",
       "Muhammad Shah / मुहम्मद शाह",
@@ -1096,7 +1096,7 @@ export const GROUP_D_CUSTOM_MOCKS: Record<string, Question[]> = {
   },
   {
     "id": "q-hssc-cet-m6-79",
-    "text": "Who led the Revolt of Ladwa in 1845 against the British East India Company in Haryana?\n1845 में हरियाणा में ब्रिटिश ईस्ट इंडिया कंपनी के खिलाफ लाडवा विद्रोह का नेतृत्व किसने किया था?",
+    "text": "Who led the Revolt of Ladwa in 1845 against the British East India Company in Haryana? / 1845 में हरियाणा में ब्रिटिश ईस्ट इंडिया कंपनी के खिलाफ लाडवा विद्रोह का नेतृत्व किसने किया था?",
     "options": [
       "Raja Ajit Singh / राजा अजीत सिंह",
       "Pratap Singh / प्रताप सिंह",
@@ -1110,7 +1110,7 @@ export const GROUP_D_CUSTOM_MOCKS: Record<string, Question[]> = {
   },
   {
     "id": "q-hssc-cet-m6-80",
-    "text": "During the reign of King Harshavardhana, which Chinese traveler visited the city of Thanesar (Kurukshetra) and described its wealth and grandeur in his travelogues?\nराजा हर्षवर्धन के शासनकाल के दौरान, किस चीनी यात्री ने थानेसर (कुरुक्षेत्र) शहर का दौरा किया था और अपने यात्रा वृत्तांत में इसकी समृद्धि और भव्यता का वर्णन किया था?",
+    "text": "During the reign of King Harshavardhana, which Chinese traveler visited the city of Thanesar (Kurukshetra) and described its wealth and grandeur in his travelogues? / राजा हर्षवर्धन के शासनकाल के दौरान, किस चीनी यात्री ने थानेसर (कुरुक्षेत्र) शहर का दौरा किया था और अपने यात्रा वृत्तांत में इसकी समृद्धि और भव्यता का वर्णन किया था?",
     "options": [
       "Faxian / फाह्यान",
       "Xuanzang (Hiuen Tsang) / ह्वेन सांग",
