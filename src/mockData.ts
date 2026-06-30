@@ -152,9 +152,10 @@ const BASE_MOCK_TESTS: Test[] = [
   { id: 'test-hssc-police-sub-math-reasoning-2', title: 'Subject Test: Numerical Ability & Reasoning - Mock 2 (गणित एवं तर्कशक्ति)', duration: 25, totalMarks: 25, testType: 'SUBJECT', examId: 'exam-hssc-police', questionCount: 25, difficulty: 'Hard' },
   { id: 'test-hssc-police-sec-gk', title: 'Haryana General Knowledge - Sectional Mock', duration: 20, totalMarks: 25, testType: 'SECTIONAL', examId: 'exam-hssc-police', questionCount: 5 },
 
-  // HSSC CET (Group D) Custom Tests (Mocks 4 and 5 only)
+  // HSSC CET (Group D) Custom Tests (Mocks 4, 5, and 6)
   { id: 'test-hssc-cet-full-4', title: 'HSSC CET (Group D) - Full Mock Test 4', duration: 105, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Medium' },
   { id: 'test-hssc-cet-full-5', title: 'HSSC CET (Group D) - Full Mock Test 5 (Expert)', duration: 105, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Hard' },
+  { id: 'test-hssc-cet-full-6', title: 'HSSC CET (Group D) - Full Mock Test 6 (Premium)', duration: 105, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Hard', isExpert: true, isNew: true },
 ];
 
 // Dynamically generate mock test suites for only specified exams
