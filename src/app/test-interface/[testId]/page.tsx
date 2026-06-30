@@ -41,11 +41,15 @@ export default function TestInterfacePage() {
 
   const splitText = (text: string) => {
     if (!text) return '';
-    const parts = text.split(' / ');
-    if (parts.length > 1) {
-      return selectedLang === 'english' ? parts[0].trim() : parts[1].trim();
-    }
-    return text;
+    const lines = text.split('\n');
+    const processedLines = lines.map(line => {
+      const parts = line.split(' / ');
+      if (parts.length > 1) {
+        return selectedLang === 'english' ? parts[0].trim() : parts[1].trim();
+      }
+      return line;
+    });
+    return processedLines.join('\n');
   };
 
   const isSubmittingRef = useRef(false);
