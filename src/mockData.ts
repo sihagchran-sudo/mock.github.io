@@ -138,30 +138,7 @@ export const EXAMS: Exam[] = [
 
 // 3. Base Custom Tests
 const BASE_MOCK_TESTS: Test[] = [
-  // SSC CGL Custom Tests
-  { id: 'test-ssc-cgl-full-1', title: 'SSC CGL Tier I - Full Mock Test 1', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
-  { id: 'test-ssc-cgl-full-2', title: 'SSC CGL Tier I - Full Mock Test 2', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
-  { id: 'test-ssc-cgl-full-3', title: 'SSC CGL Tier I - Full Mock Test 3', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
-  { id: 'test-ssc-cgl-full-4', title: 'SSC CGL Tier I - Full Mock Test 4', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
-  { id: 'test-ssc-cgl-full-5', title: 'SSC CGL Tier I - Full Mock Test 5', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
-  { id: 'test-ssc-cgl-full-6', title: 'SSC CGL Tier I - Full Mock Test 6', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
-  { id: 'test-ssc-cgl-full-7', title: 'SSC CGL Tier I - Full Mock Test 7', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
-  { id: 'test-ssc-cgl-full-8', title: 'SSC CGL Tier I - Full Mock Test 8', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
-  { id: 'test-ssc-cgl-full-9', title: 'SSC CGL Tier I - Full Mock Test 9', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
-  { id: 'test-ssc-cgl-full-10', title: 'SSC CGL Tier I - Full Mock Test 10', duration: 60, totalMarks: 200, testType: 'FULL', examId: 'exam-ssc-cgl', questionCount: 100 },
-  { id: 'test-ssc-cgl-sub-english', title: 'English Comprehension - Subject Mock', duration: 15, totalMarks: 50, testType: 'SUBJECT', examId: 'exam-ssc-cgl', questionCount: 5 },
-  { id: 'test-ssc-cgl-chap-geo', title: 'Chapter Test: Geometry & Mensuration', duration: 15, totalMarks: 20, testType: 'CHAPTER', examId: 'exam-ssc-cgl', questionCount: 5 },
-
-  // HSSC Haryana Police Custom Tests
-  { id: 'test-hssc-police-full-1', title: 'HSSC Haryana Police Constable - Full Mock Test 1', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100 },
-  { id: 'test-hssc-police-full-2', title: 'HSSC Haryana Police Constable - Full Mock Test 2', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100 },
-  { id: 'test-hssc-police-full-3', title: 'HSSC Haryana Police Constable - Full Mock Test 3', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100 },
-  { id: 'test-hssc-police-full-4', title: 'HSSC Haryana Police Constable - Full Mock Test 4', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard' },
-  { id: 'test-hssc-police-full-5', title: 'HSSC Haryana Police Constable - Full Mock Test 5', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard' },
-  { id: 'test-hssc-police-full-6', title: 'HSSC Haryana Police Constable - Full Mock Test 6', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard' },
-  { id: 'test-hssc-police-full-7', title: 'HSSC Haryana Police Constable - Full Mock Test 7', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard' },
-  { id: 'test-hssc-police-full-8', title: 'HSSC Haryana Police Constable - Expert Full Mock (Syllabus-Aligned)', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard', isExpert: true, isNew: true },
-  { id: 'test-hssc-police-full-9', title: 'HSSC Haryana Police Constable - Expert Full Mock 2 (Latest Pattern)', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-police', questionCount: 100, difficulty: 'Hard', isExpert: true, isNew: true },
+  // HSSC Haryana Police Custom Tests (Sectional and Subject mocks only)
   { id: 'test-hssc-police-sub-haryana-gk-1', title: 'Subject Test: Haryana GK - Mock 1 (हरियाणा सामान्य ज्ञान)', duration: 25, totalMarks: 25, testType: 'SUBJECT', examId: 'exam-hssc-police', questionCount: 25, difficulty: 'Medium' },
   { id: 'test-hssc-police-sub-haryana-gk-2', title: 'Subject Test: Haryana GK - Mock 2 (हरियाणा सामान्य ज्ञान)', duration: 25, totalMarks: 25, testType: 'SUBJECT', examId: 'exam-hssc-police', questionCount: 25, difficulty: 'Hard' },
   { id: 'test-hssc-police-sub-haryana-gk-3', title: 'Subject Test: Haryana GK - Mock 3 (हरियाणा सामान्य ज्ञान - Practice Set 01)', duration: 25, totalMarks: 25, testType: 'SUBJECT', examId: 'exam-hssc-police', questionCount: 25, difficulty: 'Hard', isNew: true, isExpert: true },
@@ -174,84 +151,14 @@ const BASE_MOCK_TESTS: Test[] = [
   { id: 'test-hssc-police-sub-math-reasoning-1', title: 'Subject Test: Numerical Ability & Reasoning - Mock 1 (गणित एवं तर्कशक्ति)', duration: 25, totalMarks: 25, testType: 'SUBJECT', examId: 'exam-hssc-police', questionCount: 25, difficulty: 'Medium' },
   { id: 'test-hssc-police-sub-math-reasoning-2', title: 'Subject Test: Numerical Ability & Reasoning - Mock 2 (गणित एवं तर्कशक्ति)', duration: 25, totalMarks: 25, testType: 'SUBJECT', examId: 'exam-hssc-police', questionCount: 25, difficulty: 'Hard' },
   { id: 'test-hssc-police-sec-gk', title: 'Haryana General Knowledge - Sectional Mock', duration: 20, totalMarks: 25, testType: 'SECTIONAL', examId: 'exam-hssc-police', questionCount: 5 },
-  { id: 'test-hssc-police-chap-history', title: 'Chapter Test: History of Haryana (हरियाणा का इतिहास)', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 15, difficulty: 'Medium' },
-  { id: 'test-hssc-police-chap-geography', title: 'Chapter Test: Geography & Environment (हरियाणा का भूगोल एवं पर्यावरण)', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 15, difficulty: 'Hard' },
-  { id: 'test-hssc-police-chap-polity', title: 'Chapter Test: Polity & Panchayati Raj (राजव्यवस्था एवं पंचायती राज)', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 15, difficulty: 'Medium' },
-  { id: 'test-hssc-police-chap-culture', title: 'Chapter Test: Art, Culture & Heritage (कला, संस्कृति एवं विरासत)', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 15, difficulty: 'Hard' },
-  { id: 'test-hssc-police-chap-economy', title: 'Chapter Test: Economy, Agri & Livestock (अर्थव्यवस्था, कृषि एवं पशुपालन)', duration: 15, totalMarks: 15, testType: 'CHAPTER', examId: 'exam-hssc-police', questionCount: 15, difficulty: 'Medium' },
 
-  // HSSC CET (Group D) Custom Tests
-  { id: 'test-hssc-cet-full-1', title: 'HSSC CET (Group D) - Full Mock Test 1', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Medium' },
-  { id: 'test-hssc-cet-full-2', title: 'HSSC CET (Group D) - Full Mock Test 2', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Hard' },
-  { id: 'test-hssc-cet-full-3', title: 'HSSC CET (Group D) - Full Mock Test 3', duration: 90, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Hard' },
+  // HSSC CET (Group D) Custom Tests (Mocks 4 and 5 only)
   { id: 'test-hssc-cet-full-4', title: 'HSSC CET (Group D) - Full Mock Test 4', duration: 105, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Medium' },
   { id: 'test-hssc-cet-full-5', title: 'HSSC CET (Group D) - Full Mock Test 5 (Expert)', duration: 105, totalMarks: 100, testType: 'FULL', examId: 'exam-hssc-cet', questionCount: 100, difficulty: 'Hard' },
 ];
 
-// Dynamically generate mock test suites for all 31 exams
+// Dynamically generate mock test suites for only specified exams
 export const MOCK_TESTS: Test[] = [...BASE_MOCK_TESTS];
-
-// Fill in standard mocks for every exam that doesn't have custom ones
-EXAMS.forEach(exam => {
-  const hasTests = BASE_MOCK_TESTS.some(t => t.examId === exam.id);
-  if (!hasTests) {
-    let duration = 90;
-    let totalMarks = 105;
-    let questionCount = 100;
-
-    if (exam.slug === 'ssc-chsl' || exam.slug === 'ssc-cpo') {
-      duration = 60;
-      totalMarks = 200;
-      questionCount = 100;
-    } else if (exam.slug === 'up-police-constable') {
-      duration = 120;
-      totalMarks = 300;
-      questionCount = 150;
-    } else if (exam.slug === 'ssc-mts') {
-      duration = 90;
-      totalMarks = 270;
-      questionCount = 90;
-    } else if (exam.slug === 'rrb-ntpc' || exam.slug === 'rrb-group-d' || exam.slug === 'rrb-alp') {
-      duration = 90;
-      totalMarks = 100;
-      questionCount = 100;
-    } else if (exam.slug === 'ctet' || exam.slug === 'htet') {
-      duration = 150;
-      totalMarks = 150;
-      questionCount = 150;
-    }
-
-    MOCK_TESTS.push(
-      {
-        id: `test-${exam.slug}-full-1`,
-        title: `${exam.name} - Full Mock Test 1`,
-        duration,
-        totalMarks,
-        testType: 'FULL',
-        examId: exam.id,
-        questionCount
-      },
-      {
-        id: `test-${exam.slug}-sub-gk`,
-        title: `${exam.name} - General Studies Sectional Mock`,
-        duration: Math.round(duration * 0.25) || 15,
-        totalMarks: Math.round(totalMarks * 0.25) || 25,
-        testType: 'SECTIONAL',
-        examId: exam.id,
-        questionCount: Math.round(questionCount * 0.25) || 25
-      },
-      {
-        id: `test-${exam.slug}-chap-quant`,
-        title: `${exam.name} - Quant Chapter Practice Test`,
-        duration: 15,
-        totalMarks: 15,
-        testType: 'CHAPTER',
-        examId: exam.id,
-        questionCount: 15
-      }
-    );
-  }
-});
 
 // 4. Questions (Standard 10 questions per full mock, 5 per other)
 export const MOCK_QUESTIONS: Record<string, Question[]> = {
