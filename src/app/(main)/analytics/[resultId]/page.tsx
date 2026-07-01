@@ -30,7 +30,17 @@ export default function AnalyticsPage() {
   const [aiExplanations, setAiExplanations] = useState<Record<string, string>>({});
   const [localExplanations, setLocalExplanations] = useState<Record<string, string>>({});
   const [savingExplanation, setSavingExplanation] = useState<Record<string, boolean>>({});
-  const [dbOverrides, setDbOverrides] = useState<Record<string, string>>({});
+  const [dbOverrides, setDbOverrides] = useState<Record<string, any>>({});
+  const [isEditing, setIsEditing] = useState<any | null>(null);
+  const [editingFields, setEditingFields] = useState({
+    text: '',
+    optionA: '',
+    optionB: '',
+    optionC: '',
+    optionD: '',
+    correctIndex: 0,
+    explanation: ''
+  });
   const [selectedLang, setSelectedLang] = useState<'english' | 'hindi' | 'bilingual'>('bilingual');
 
   useEffect(() => {
@@ -115,6 +125,73 @@ export default function AnalyticsPage() {
       alert('त्रुटि: ' + err.message);
     } finally {
       setSavingExplanation(prev => ({ ...prev, [qId]: false }));
+    }
+  };
+
+  const handleStartEditQuestion = (q: any) => {
+    const resolvedText = (dbOverrides[q.id] && dbOverrides[q.id].text) || q.text;
+    const resolvedOptions = (dbOverrides[q.id] && dbOverrides[q.id].options) || q.options;
+    const resolvedCorrectIndex = (dbOverrides[q.id] && dbOverrides[q.id].correctIndex !== undefined) ? dbOverrides[q.id].correctIndex : q.correctIndex;
+    const resolvedExplanation = (dbOverrides[q.id] && typeof dbOverrides[q.id] === 'object' ? dbOverrides[q.id].explanation : dbOverrides[q.id]) || q.explanation;
+
+    setIsEditing(q);
+    setEditingFields({
+      text: resolvedText,
+      optionA: resolvedOptions[0] || '',
+      optionB: resolvedOptions[1] || '',
+      optionC: resolvedOptions[2] || '',
+      optionD: resolvedOptions[3] || '',
+      correctIndex: resolvedCorrectIndex,
+      explanation: resolvedExplanation || ''
+    });
+  };
+
+  const handleSaveQuestionEdit = async () => {
+    if (!isEditing) return;
+    try {
+      const updatedQ = {
+        questionId: isEditing.id,
+        text: editingFields.text,
+        options: [
+          editingFields.optionA,
+          editingFields.optionB,
+          editingFields.optionC,
+          editingFields.optionD
+        ],
+        correctIndex: Number(editingFields.correctIndex),
+        explanation: editingFields.explanation,
+        sectionName: isEditing.sectionName,
+        testId: isEditing.testId
+      };
+
+      const res = await fetch('/api/admin/update-question', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedQ)
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success) {
+          setDbOverrides(prev => ({
+            ...prev,
+            [isEditing.id]: {
+              text: updatedQ.text,
+              options: updatedQ.options,
+              correctIndex: updatedQ.correctIndex,
+              explanation: updatedQ.explanation
+            }
+          }));
+          alert('सफलता: प्रश्न को सफलतापूर्वक अपडेट कर दिया गया है!');
+          setIsEditing(null);
+        } else {
+          alert('त्रुटि: ' + data.error);
+        }
+      } else {
+        alert('सर्वर एरर: अपडेट करने में विफल।');
+      }
+    } catch (err: any) {
+      alert('एरर: ' + err.message);
     }
   };
 
@@ -687,7 +764,13 @@ export default function AnalyticsPage() {
           {questions.map((q, idx) => {
             const userRes = attempt.responses.find(r => r.questionId === q.id);
             const userSelection = userRes ? userRes.selectedIndex : -1;
-            const isCorrect = userSelection === q.correctIndex;
+            
+            // Resolve overridden fields
+            const resolvedText = (dbOverrides[q.id] && dbOverrides[q.id].text) || q.text;
+            const resolvedOptions = (dbOverrides[q.id] && dbOverrides[q.id].options) || q.options;
+            const resolvedCorrectIndex = (dbOverrides[q.id] && dbOverrides[q.id].correctIndex !== undefined) ? dbOverrides[q.id].correctIndex : q.correctIndex;
+            
+            const isCorrect = userSelection === resolvedCorrectIndex;
             const isUnattempted = userSelection === -1;
             const isOpen = !!openExplanation[q.id];
 
@@ -700,6 +783,12 @@ export default function AnalyticsPage() {
                     <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest bg-slate-100 px-2 py-0.5 rounded">
                       {q.sectionName}
                     </span>
+                    <button
+                      onClick={() => handleStartEditQuestion(q)}
+                      className="text-[9px] sm:text-[10px] font-bold text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 px-2 py-0.5 rounded border border-blue-200 transition-all flex items-center gap-1 active:scale-95 cursor-pointer outline-none"
+                    >
+                      🔧 Error Check
+                    </button>
                   </div>
 
                   {/* Status Badge */}
@@ -722,13 +811,13 @@ export default function AnalyticsPage() {
 
                 {/* Question text */}
                 <p className="text-slate-800 text-sm font-semibold mb-4 leading-relaxed whitespace-pre-wrap">
-                  {renderFormattedText(splitText(q.text))}
+                  {renderFormattedText(splitText(resolvedText))}
                 </p>
 
                 {/* User choices options list visualizer */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
-                  {q.options.map((opt, oIdx) => {
-                    const isCorrectOption = oIdx === q.correctIndex;
+                  {resolvedOptions.map((opt: string, oIdx: number) => {
+                    const isCorrectOption = oIdx === resolvedCorrectIndex;
                     const isUserSelected = oIdx === userSelection;
                     let optionBorder = 'border-slate-200';
                     let optionBg = 'bg-white';
@@ -795,7 +884,10 @@ export default function AnalyticsPage() {
                           </button>
                         </div>
                         <p className="mb-2.5 whitespace-pre-wrap">
-                          {renderFormattedText(splitText(localExplanations[q.id] || dbOverrides[q.id] || q.explanation))}
+                          {(() => {
+                            const resolvedExplanation = localExplanations[q.id] || (dbOverrides[q.id] && typeof dbOverrides[q.id] === 'object' ? dbOverrides[q.id].explanation : dbOverrides[q.id]) || q.explanation;
+                            return renderFormattedText(splitText(resolvedExplanation));
+                          })()}
                         </p>
                         <p className="text-[10px] text-slate-400 font-medium">
                           Section topic tags: {q.sectionName} &gt; {idx % 2 === 0 ? 'Algebra Arithmetic' : 'Reasoning Aptitude'}
@@ -842,6 +934,117 @@ export default function AnalyticsPage() {
           })}
         </div>
       </div>
+
+      {/* 5. Edit Modal Overlay */}
+      {isEditing && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto flex flex-col p-6 space-y-4">
+            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+              <h3 className="text-sm font-extrabold text-slate-800 flex items-center gap-1.5">
+                <span>🔧</span> Error Check / Edit Question (ID: {isEditing.id})
+              </h3>
+              <button
+                onClick={() => setIsEditing(null)}
+                className="text-slate-400 hover:text-slate-600 text-xs font-bold p-1 cursor-pointer"
+              >
+                ✕ Close
+              </button>
+            </div>
+
+            <div className="space-y-4 flex-grow text-xs text-slate-700">
+              <div className="space-y-1">
+                <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Question Text (Bilingual format: English / Hindi)</label>
+                <textarea
+                  value={editingFields.text}
+                  onChange={(e) => setEditingFields(prev => ({ ...prev, text: e.target.value }))}
+                  className="w-full min-h-[100px] p-3 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  placeholder="e.g. What is 2+2? / 2+2 क्या है?"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-1">
+                  <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Option A (English / Hindi)</label>
+                  <input
+                    type="text"
+                    value={editingFields.optionA}
+                    onChange={(e) => setEditingFields(prev => ({ ...prev, optionA: e.target.value }))}
+                    className="w-full p-2.5 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Option B (English / Hindi)</label>
+                  <input
+                    type="text"
+                    value={editingFields.optionB}
+                    onChange={(e) => setEditingFields(prev => ({ ...prev, optionB: e.target.value }))}
+                    className="w-full p-2.5 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Option C (English / Hindi)</label>
+                  <input
+                    type="text"
+                    value={editingFields.optionC}
+                    onChange={(e) => setEditingFields(prev => ({ ...prev, optionC: e.target.value }))}
+                    className="w-full p-2.5 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Option D (English / Hindi)</label>
+                  <input
+                    type="text"
+                    value={editingFields.optionD}
+                    onChange={(e) => setEditingFields(prev => ({ ...prev, optionD: e.target.value }))}
+                    className="w-full p-2.5 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-1">
+                  <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Correct Option</label>
+                  <select
+                    value={editingFields.correctIndex}
+                    onChange={(e) => setEditingFields(prev => ({ ...prev, correctIndex: Number(e.target.value) }))}
+                    className="w-full p-2.5 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  >
+                    <option value={0}>Option A</option>
+                    <option value={1}>Option B</option>
+                    <option value={2}>Option C</option>
+                    <option value={3}>Option D</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Detailed Solution Explanation (English / Hindi)</label>
+                <textarea
+                  value={editingFields.explanation}
+                  onChange={(e) => setEditingFields(prev => ({ ...prev, explanation: e.target.value }))}
+                  className="w-full min-h-[100px] p-3 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  placeholder="Explain the solution steps..."
+                />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-3 border-t border-slate-100 shrink-0">
+              <button
+                onClick={() => setIsEditing(null)}
+                className="px-4 py-2 text-xs font-bold text-slate-500 hover:bg-slate-100 rounded-xl transition-all cursor-pointer"
+              >
+                Cancel / रद्द करें
+              </button>
+              <button
+                onClick={handleSaveQuestionEdit}
+                className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-5 py-2.5 rounded-xl shadow-md transition-all active:scale-95 cursor-pointer"
+              >
+                Save Changes / सहेजें
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

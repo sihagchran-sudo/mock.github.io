@@ -1,20 +1,39 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 
+
 export async function GET() {
   try {
     const settings = await prisma.systemSetting.findMany({
       where: {
-        key: {
-          startsWith: 'exp_override_'
-        }
+        OR: [
+          {
+            key: {
+              startsWith: 'exp_override_'
+            }
+          },
+          {
+            key: {
+              startsWith: 'q_override_'
+            }
+          }
+        ]
       }
     });
 
-    const overrides: Record<string, string> = {};
+    const overrides: Record<string, any> = {};
     settings.forEach(s => {
-      const qId = s.key.replace('exp_override_', '');
-      overrides[qId] = s.value;
+      if (s.key.startsWith('exp_override_')) {
+        const qId = s.key.replace('exp_override_', '');
+        overrides[qId] = s.value;
+      } else if (s.key.startsWith('q_override_')) {
+        const qId = s.key.replace('q_override_', '');
+        try {
+          overrides[qId] = JSON.parse(s.value);
+        } catch {
+          overrides[qId] = s.value;
+        }
+      }
     });
 
     return NextResponse.json({ success: true, overrides });

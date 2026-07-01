@@ -23,9 +23,24 @@ export default function TestInterfacePage() {
   const { data: session } = useSession();
 
   const test = getTestById(testId);
-  const questions = getQuestionsForTest(testId);
-
+  
   // States
+  const [localQuestions, setLocalQuestions] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [dbOverrides, setDbOverrides] = useState<Record<string, any>>({});
+  const [isEditing, setIsEditing] = useState<any | null>(null);
+  const [editingFields, setEditingFields] = useState({
+    text: '',
+    optionA: '',
+    optionB: '',
+    optionC: '',
+    optionD: '',
+    correctIndex: 0,
+    explanation: ''
+  });
+
+  const questions = localQuestions;
+
   const [currentIdx, setCurrentIdx] = useState(0);
   const [timeLeft, setTimeLeft] = useState(0); // seconds
   const [timeUsed, setTimeUsed] = useState(0);
@@ -132,21 +147,126 @@ export default function TestInterfacePage() {
     }
   };
 
-  // Initialize timer and responses
+  // Initialize timer, load overrides, and setup responses
   useEffect(() => {
-    if (test && questions.length > 0) {
-      setTimeLeft(test.duration * 60);
-      const initialResponses = questions.map(q => ({
-        questionId: q.id,
-        selectedIndex: -1,
-        isMarkedForReview: false
-      }));
-      setResponses(initialResponses);
-      
-      // Mark first question as visited
-      setVisited({ [questions[0].id]: true });
+    if (test) {
+      async function fetchOverridesAndInit() {
+        setIsLoading(true);
+        let overrides: Record<string, any> = {};
+        try {
+          const res = await fetch('/api/questions/overrides');
+          if (res.ok) {
+            const data = await res.json();
+            if (data.success && data.overrides) {
+              overrides = data.overrides;
+              setDbOverrides(data.overrides);
+            }
+          }
+        } catch (err) {
+          console.error('Failed to load overrides:', err);
+        }
+
+        const baseQuestions = getQuestionsForTest(testId);
+        const mergedQuestions = baseQuestions.map(q => {
+          const over = overrides[q.id];
+          if (over) {
+            const merged = { ...q };
+            if (typeof over === 'object') {
+              if (over.text) merged.text = over.text;
+              if (over.options) merged.options = over.options;
+              if (over.correctIndex !== undefined) merged.correctIndex = over.correctIndex;
+              if (over.explanation) merged.explanation = over.explanation;
+            } else {
+              merged.explanation = over;
+            }
+            return merged;
+          }
+          return q;
+        });
+
+        setLocalQuestions(mergedQuestions);
+
+        setTimeLeft(test!.duration * 60);
+        const initialResponses = mergedQuestions.map(q => ({
+          questionId: q.id,
+          selectedIndex: -1,
+          isMarkedForReview: false
+        }));
+        setResponses(initialResponses);
+        if (mergedQuestions.length > 0) {
+          setVisited({ [mergedQuestions[0].id]: true });
+        }
+        setIsLoading(false);
+      }
+
+      fetchOverridesAndInit();
     }
   }, [testId]);
+
+  const handleStartEditQuestion = (q: any) => {
+    setIsEditing(q);
+    setEditingFields({
+      text: q.text,
+      optionA: q.options[0] || '',
+      optionB: q.options[1] || '',
+      optionC: q.options[2] || '',
+      optionD: q.options[3] || '',
+      correctIndex: q.correctIndex,
+      explanation: q.explanation || ''
+    });
+  };
+
+  const handleSaveQuestionEdit = async () => {
+    if (!isEditing) return;
+    try {
+      const updatedQ = {
+        questionId: isEditing.id,
+        text: editingFields.text,
+        options: [
+          editingFields.optionA,
+          editingFields.optionB,
+          editingFields.optionC,
+          editingFields.optionD
+        ],
+        correctIndex: Number(editingFields.correctIndex),
+        explanation: editingFields.explanation,
+        sectionName: isEditing.sectionName,
+        testId: isEditing.testId
+      };
+
+      const res = await fetch('/api/admin/update-question', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedQ)
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success) {
+          setLocalQuestions(prev => prev.map(q => {
+            if (q.id === isEditing.id) {
+              return {
+                ...q,
+                text: updatedQ.text,
+                options: updatedQ.options,
+                correctIndex: updatedQ.correctIndex,
+                explanation: updatedQ.explanation
+              };
+            }
+            return q;
+          }));
+          alert('सफलता: प्रश्न को सफलतापूर्वक अपडेट कर दिया गया है!');
+          setIsEditing(null);
+        } else {
+          alert('त्रुटि: ' + data.error);
+        }
+      } else {
+        alert('सर्वर एरर: अपडेट करने में विफल।');
+      }
+    } catch (err: any) {
+      alert('एरर: ' + err.message);
+    }
+  };
 
   // Tick timer
   useEffect(() => {
@@ -165,6 +285,17 @@ export default function TestInterfacePage() {
     }, 1000);
     return () => clearInterval(timer);
   }, [timeLeft, isStarted]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+        <div className="text-center space-y-3">
+          <div className="w-10 h-10 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
+          <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Loading questions...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!test || questions.length === 0) {
     return (
@@ -552,9 +683,17 @@ export default function TestInterfacePage() {
             <div>
               {/* Question Header & Section */}
               <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-4 sm:mb-6">
-                <span className="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-widest bg-slate-50 border border-slate-200 px-2 py-0.5 sm:px-3 sm:py-1 rounded-md">
-                  {currentQuestion.sectionName}
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-widest bg-slate-50 border border-slate-200 px-2 py-0.5 sm:px-3 sm:py-1 rounded-md">
+                    {currentQuestion.sectionName}
+                  </span>
+                  <button
+                    onClick={() => handleStartEditQuestion(currentQuestion)}
+                    className="text-[9px] sm:text-[10px] font-bold text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 px-2 py-0.5 rounded border border-blue-200 transition-all flex items-center gap-1 active:scale-95 cursor-pointer outline-none"
+                  >
+                    🔧 Error Check
+                  </button>
+                </div>
                 <span className="text-xs sm:text-sm font-bold text-blue-600 bg-blue-50 px-2 py-0.5 sm:px-3 sm:py-1 rounded-md border border-blue-100">
                   Question {currentIdx + 1} of {questions.length}
                 </span>
@@ -567,7 +706,7 @@ export default function TestInterfacePage() {
 
               {/* Options List */}
               <div className="space-y-2.5 sm:space-y-3.5">
-                {currentQuestion.options.map((opt, oIdx) => {
+                {currentQuestion.options.map((opt: string, oIdx: number) => {
                   const isSelected = currentResponse.selectedIndex === oIdx;
                   return (
                     <button
@@ -710,6 +849,117 @@ export default function TestInterfacePage() {
           </button>
         </div>
       </footer>
+
+      {/* 5. Edit Modal Overlay */}
+      {isEditing && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto flex flex-col p-6 space-y-4">
+            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+              <h3 className="text-sm font-extrabold text-slate-800 flex items-center gap-1.5">
+                <span>🔧</span> Error Check / Edit Question (ID: {isEditing.id})
+              </h3>
+              <button
+                onClick={() => setIsEditing(null)}
+                className="text-slate-400 hover:text-slate-600 text-xs font-bold p-1 cursor-pointer"
+              >
+                ✕ Close
+              </button>
+            </div>
+
+            <div className="space-y-4 flex-grow text-xs text-slate-700">
+              <div className="space-y-1">
+                <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Question Text (Bilingual format: English / Hindi)</label>
+                <textarea
+                  value={editingFields.text}
+                  onChange={(e) => setEditingFields(prev => ({ ...prev, text: e.target.value }))}
+                  className="w-full min-h-[100px] p-3 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  placeholder="e.g. What is 2+2? / 2+2 क्या है?"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-1">
+                  <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Option A (English / Hindi)</label>
+                  <input
+                    type="text"
+                    value={editingFields.optionA}
+                    onChange={(e) => setEditingFields(prev => ({ ...prev, optionA: e.target.value }))}
+                    className="w-full p-2.5 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Option B (English / Hindi)</label>
+                  <input
+                    type="text"
+                    value={editingFields.optionB}
+                    onChange={(e) => setEditingFields(prev => ({ ...prev, optionB: e.target.value }))}
+                    className="w-full p-2.5 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Option C (English / Hindi)</label>
+                  <input
+                    type="text"
+                    value={editingFields.optionC}
+                    onChange={(e) => setEditingFields(prev => ({ ...prev, optionC: e.target.value }))}
+                    className="w-full p-2.5 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Option D (English / Hindi)</label>
+                  <input
+                    type="text"
+                    value={editingFields.optionD}
+                    onChange={(e) => setEditingFields(prev => ({ ...prev, optionD: e.target.value }))}
+                    className="w-full p-2.5 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-1">
+                  <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Correct Option</label>
+                  <select
+                    value={editingFields.correctIndex}
+                    onChange={(e) => setEditingFields(prev => ({ ...prev, correctIndex: Number(e.target.value) }))}
+                    className="w-full p-2.5 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  >
+                    <option value={0}>Option A</option>
+                    <option value={1}>Option B</option>
+                    <option value={2}>Option C</option>
+                    <option value={3}>Option D</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <label className="font-extrabold text-slate-800 uppercase text-[10px] tracking-wider block">Detailed Solution Explanation (English / Hindi)</label>
+                <textarea
+                  value={editingFields.explanation}
+                  onChange={(e) => setEditingFields(prev => ({ ...prev, explanation: e.target.value }))}
+                  className="w-full min-h-[100px] p-3 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  placeholder="Explain the solution steps..."
+                />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-3 border-t border-slate-100 shrink-0">
+              <button
+                onClick={() => setIsEditing(null)}
+                className="px-4 py-2 text-xs font-bold text-slate-500 hover:bg-slate-100 rounded-xl transition-all cursor-pointer"
+              >
+                Cancel / रद्द करें
+              </button>
+              <button
+                onClick={handleSaveQuestionEdit}
+                className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-5 py-2.5 rounded-xl shadow-md transition-all active:scale-95 cursor-pointer"
+              >
+                Save Changes / सहेजें
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
